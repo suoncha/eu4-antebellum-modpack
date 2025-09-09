@@ -1,0 +1,371 @@
+wallachian_terror_purging_the_estate_elites = {
+	all_estate_loyalty_equilibrium = -0.2
+	all_estate_influence_modifier = -0.15
+	free_land_leader_pool = -1
+	allow_free_estate_privilege_revocation = yes
+	yearly_absolutism = 0.5
+}
+
+wallachian_terror_brutalize_the_enemy = {
+	infantry_shock = 0.3
+	siege_ability = 0.1
+	ae_impact = 0.05
+}
+
+wallachian_terror_warning_for_the_rest = {
+	local_defensiveness = 0.1
+	local_defender_dice_roll_bonus = 1
+	local_monthly_devastation = 0.01
+	local_development_cost = 0.1
+}
+
+wallachian_terror_garden_of_the_defeated = {
+	war_exhaustion = 0.02
+	local_monthly_devastation = 0.01
+	local_development_cost = 0.1
+}
+
+wallachian_terror_raze_mod = {
+	local_development_cost = 0.2
+	local_tax_modifier = -0.3
+	local_manpower_modifier = -0.3
+	local_production_efficiency = -0.3
+	improve_relation_modifier = -0.005
+}
+
+wallachian_terror_raze_mod_nerfed = {
+	local_development_cost = 0.15
+	local_tax_modifier = -0.25
+	local_manpower_modifier = -0.25
+	local_production_efficiency = -0.25
+	improve_relation_modifier = -0.002
+}
+
+wallachian_terror_impaled_ruler = {
+	diplomatic_reputation = -5
+	improve_relation_modifier = -0.05
+	reverse_relation_with_same_religion = -50
+	reverse_relation_with_heretic_religion = -50
+	reverse_relation_with_heathen_religion = -50
+	monthly_terror_power = 0.05
+	discipline = 0.025
+}
+
+wallachian_terror_severed_command = {
+	global_tax_modifier = -0.1
+	global_manpower_modifier = -0.1
+	military_tactics = -0.025
+}
+
+wallachian_terror_leadership_in_exile = {
+	global_tax_modifier = -0.15
+	global_manpower_modifier = -0.15
+	military_tactics = -0.04
+	land_morale = -0.05
+	legitimacy = -1
+	devotion = -1
+	republican_tradition = -0.3
+	meritocracy = -1
+	horde_unity = -1
+	war_exhaustion = 0.03
+}
+
+wallachian_terror_senseless_killing_of_our_men = {
+	global_unrest = 2
+	manpower_recovery_speed = -0.15
+	recover_army_morale_speed = -0.15
+}
+
+wallachian_terror_advisors_avoid_us = {
+	advisor_pool = -2
+	advisor_cost = 0.3
+}
+
+wallachian_terror_decapitated_monarchy = {
+	global_tax_modifier = -0.1
+	diplomatic_reputation = -1
+	global_unrest = 3
+	advisor_cost = 0.15
+	yearly_corruption = 0.2
+}
+
+wallachian_terror_humiliated_ruler = {
+	legitimacy = -1
+	devotion = -1
+	republican_tradition = -0.3
+	meritocracy = -1
+	horde_unity = -1
+	diplomatic_reputation = -1
+}
+
+wallachian_terror_failed_the_empire = {
+	diplomatic_reputation = -1
+	legitimacy = -1
+	reasons_to_elect = -15
+	prestige = -0.5
+}
+
+bulgaria_impaled_mod = {
+	morale_damage_received = 0.1
+	land_morale = -0.05
+}
+
+wallachia_impaled_bulgaria_mod = {
+	prestige_from_land = 0.5
+	prestige_decay = -0.01
+}
+
+magyars_impaled_mod = {
+	cavalry_power = -0.1
+	land_morale = -0.05
+}
+
+wallachia_impaled_magyars_mod = {
+	shock_damage_received = -0.1
+	cavalry_cost = -0.05
+}
+
+wallachia_impaled_venice_modifier = {
+	galley_power = 0.25
+	light_ship_cost = -0.25
+}
+
+sicily_impaled_mod = {
+	galley_power = -0.2
+	naval_morale = -0.1
+}
+
+wallachia_impaled_lombardy_mod = {
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
+}
+
+lombardy_impaled_mod = {
+	mercenary_manpower = -0.5
+	mercenary_cost = 0.5
+}
+
+wallachia_impaled_pyramids_bonus = {
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+}
+
+wallachia_impaled_pope_mission_bonus = {
+	global_heretic_missionary_strength = 0.02
+}
+
+adu_blind_fury = {
+	global_manpower_modifier = 1
+	manpower_recovery_speed = 0.5
+	discipline = 0.05
+	land_morale = 0.2
+	land_forcelimit_modifier = 1
+	naval_morale = 0.2
+	sunk_ship_morale_hit_recieved = -0.5
+	shock_damage_received = -0.1
+	morale_damage_received = -0.1
+	mil_advisor_cost = -0.5
+	leader_cost = -0.5
+	war_taxes_cost_modifier = -1
+	war_exhaustion = -10
+	warscore_from_battles_modifier = 0.5
+}
+
+adu_reprisals_against_christians = {
+	local_tax_modifier = -0.5
+	local_manpower_modifier = -0.5
+	local_unrest = 5
+	local_missionary_strength = -1
+	dhimmi_loyalty_modifier = -0.05
+}
+
+adu_istishhad = {
+	manpower_in_true_faith_provinces = 0.25
+	tolerance_own = 2
+	reverse_relation_with_same_religion = 25
+	reverse_relation_with_heretic_religion = 25
+}
+
+wallachia_impaled_andalusia = {
+	cb_on_religious_enemies = yes
+}
+
+wallachia_boiled_adu = {
+	cb_on_religious_enemies = yes
+	extra_manpower_at_religious_war = yes
+	diplomatic_reputation = -5
+	reverse_relation_with_same_religion = -10
+	reverse_relation_with_heretic_religion = -10
+	reverse_relation_with_heathen_religion = -10
+	yearly_patriarch_authority = 0.002
+}
+
+liberated_christains_from_adu = {
+	local_core_creation = -0.1
+	local_unrest = -5
+}
+
+wallachia_muslim_conquest_penalty = {
+	local_unrest = 5
+	local_missionary_strength = -0.08
+}
+
+wallachia_owned_muslim_province_penalty = {
+	local_unrest = 5
+	local_missionary_strength = -0.08
+}
+
+wallachia_i_am_the_state = {
+	max_absolutism = 5
+}
+
+frc_castrated_king = {
+	heir_chance = -90.01
+	prestige = -1
+	legitimacy = -1
+}
+
+wallachia_the_kings_balls = {
+	prestige = 0.5
+}
+
+wallachia_destroyed_the_wooden_wall = {
+	global_naval_engagement_modifier = 0.25
+	global_naval_barrage_cost = -0.25
+}
+
+eng_wooden_wall_destroyed = {
+	own_coast_naval_combat_bonus = -1
+}
+
+impaler_tier_1_tooltip = {
+	leader_land_shock = 2
+	max_general_shock = 1
+	global_unrest = -2
+	terror_power_gain_modifier = 0.25
+	diplomatic_reputation = -5
+	reverse_relation_with_same_religion = -25
+	reverse_relation_with_heretic_religion = -25
+	reverse_relation_with_heathen_religion = -25
+	tolerance_own = -1
+}
+
+impaler_tier_2_tooltip = {
+	leader_land_shock = 2
+	max_general_shock = 1
+	global_unrest = -2
+	terror_power_gain_modifier = 0.3
+	leader_siege = 1
+	max_general_siege = 1
+	siege_ability = 0.1
+	tolerance_own = -1
+	diplomatic_reputation = -10
+	reverse_relation_with_same_religion = -50
+	reverse_relation_with_heretic_religion = -50
+	reverse_relation_with_heathen_religion = -50
+	ae_impact = 0.1
+	yearly_patriarch_authority = -0.005
+	papal_influence = -1
+	church_power_modifier = -0.1
+	monthly_fervor_increase = -0.5
+}
+
+impaler_tier_3_tooltip = {
+	leader_land_shock = 2
+	max_general_shock = 1
+	global_unrest = -2
+	terror_power_gain_modifier = 0.4
+	leader_siege = 1
+	max_general_siege = 1
+	siege_ability = 0.1
+	stability_cost_to_declare_war = -3
+	fire_damage = 0.1
+	war_exhaustion = -0.08
+	tolerance_own = -1
+	improve_relation_modifier = -0.2
+	diplomatic_reputation = -15
+	reverse_relation_with_same_religion = -75
+	reverse_relation_with_heretic_religion = -75
+	reverse_relation_with_heathen_religion = -75
+	ae_impact = 0.1
+	yearly_patriarch_authority = -0.005
+	papal_influence = -1
+	church_power_modifier = -0.1
+	monthly_fervor_increase = -0.5
+	advisor_cost = 0.25
+}
+
+cossack_raiding_tactics = {
+	raze_power_gain = 0.25
+}
+
+reign_of_terror = {
+	drill_gain_modifier = 1
+	discipline = 0.05
+	terror_power_gain_modifier = 0.1
+}
+
+wallachia_absolute_control = {
+	max_absolutism = 5
+	free_concentrate_development = yes
+}
+
+wallachia_the_lesson = {
+	stability_cost_to_declare_war = -3
+	ae_impact = -0.1
+}
+
+catholic_avenge_pope_mod = {
+	global_manpower_modifier = 0.5
+	global_tax_modifier = 0.15
+	land_morale = 0.15
+	prestige = 1.5
+	papal_influence = 1.5
+	devotion = 0.5
+	morale_damage_received = -0.1
+	shock_damage_received = -0.1
+	fire_damage_received = -0.1
+}
+
+pope_martyr = {
+	manpower_in_true_faith_provinces = 0.3
+	devotion = 1
+	tolerance_own = 2
+	reverse_relation_with_same_religion = 25
+}
+
+catholic_fury = {
+	global_manpower_modifier = 1
+	manpower_recovery_speed = 0.5
+	discipline = 0.05
+	land_morale = 0.2
+	land_forcelimit = 60
+	land_maintenance_modifier = -0.75
+	naval_morale = 0.2
+	sunk_ship_morale_hit_recieved = -0.5
+	shock_damage_received = -0.1
+	morale_damage_received = -0.1
+	mil_advisor_cost = -0.5
+	leader_cost = -0.5
+	war_taxes_cost_modifier = -1
+	war_exhaustion = -5
+}
+
+wallachia_antathema = {
+	diplomatic_reputation = -50
+	reverse_relation_with_same_religion = -75
+	reverse_relation_with_heretic_religion = -75
+	improve_relation_modifier = -0.2
+	monthly_terror_power = 0.1
+	terror_power_gain_modifier = 0.5
+	cb_on_religious_enemies = yes
+	extra_manpower_at_religious_war = yes
+}
+
+resisting_the_antathema = {
+	local_unrest = 10
+	local_missionary_strength = -0.1
+	local_manpower_modifier = -0.9
+	local_sailors_modifier = -0.9
+	local_tax_modifier = -0.5
+}

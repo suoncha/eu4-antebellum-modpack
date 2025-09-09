@@ -1,0 +1,994 @@
+# Original Edict Selection Events (Refactored)
+namespace = global_edicts_commander_events
+country_event = {
+	id = global_edicts_commander_events.1
+	title = global_edicts_commander_events.1.t
+	desc = global_edicts_commander_events.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.1.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.1.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.2
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.1.c		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.2
+	title = global_edicts_commander_events.2.t
+	desc = global_edicts_commander_events.2.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.2.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.3
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.2.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.4
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.2.c		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.3
+	title = global_edicts_commander_events.3.t
+	desc = global_edicts_commander_events.3.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.5
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.b
+		custom_tooltip = global_edicts_commander_events.3.b.tt
+		hidden_effect = {
+			# This now calls the moved event 4 logic
+			country_event = {
+				id = global_edict_commander_option_events.6
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.7
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.dee		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+# Event 4 is removed from here and moved to the other file.
+country_event = {
+	id = global_edicts_commander_events.5
+	title = global_edicts_commander_events.5.t
+	desc = global_edicts_commander_events.5.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.8
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.9
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.10
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.11
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.e		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.6
+	title = global_edicts_commander_events.6.t
+	desc = global_edicts_commander_events.6.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.12
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.13
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.14
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.15
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.16
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.f
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.17
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.g
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.18
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.h		# Use Encourage Development instead
+		custom_tooltip = global_edicts_commander_events.6.h.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_events.5
+			}
+			# Calls another config event
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.i		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.7
+	title = global_edicts_commander_events.7.t
+	desc = global_edicts_commander_events.7.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.19
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.20
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.21
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.22
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.23
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.f		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.8
+	title = global_edicts_commander_events.8.t
+	desc = global_edicts_commander_events.8.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.24
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.25
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.26
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.27
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.28
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.f
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.29
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.g		# Advanced Config
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.8.h		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.9
+	title = global_edicts_commander_events.9.t
+	desc = global_edicts_commander_events.9.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.a
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.30
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.b
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.31
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.c
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.32
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.dee
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.33
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.e
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.34
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.f
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.35
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.g		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.10
+	title = global_edicts_commander_events.10.t
+	desc = global_edicts_commander_events.10.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.36
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.37
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.38
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.39
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.40
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.f		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.11
+	title = global_edicts_commander_events.11.t
+	desc = global_edicts_commander_events.11.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.41
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.42
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.c		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.12
+	title = global_edicts_commander_events.12.t
+	desc = global_edicts_commander_events.12.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.43
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.44
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.45
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.46
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.47
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.f		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.13
+	title = global_edicts_commander_events.13.t
+	desc = global_edicts_commander_events.13.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.48
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.49
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.50
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.51
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.e		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.14
+	title = global_edicts_commander_events.14.t
+	desc = global_edicts_commander_events.14.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.52
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.53
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.54
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.55
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.56
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.f		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.15
+	title = global_edicts_commander_events.15.t
+	desc = global_edicts_commander_events.15.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.57
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.58
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.59
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.60
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.e		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.16
+	title = global_edicts_commander_events.16.t
+	desc = global_edicts_commander_events.16.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.61
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.62
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.c		# Advanced Options
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.dee		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.17
+	title = global_edicts_commander_events.17.t
+	desc = global_edicts_commander_events.17.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.63
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.64
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.65
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.66
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.e
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.67
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.f
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.68
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.g		# Advanced Config
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.h		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.18
+	title = global_edicts_commander_events.18.t
+	desc = global_edicts_commander_events.18.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.a
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.69
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.70
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.c
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.71
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.dee
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.72
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.e		# Nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+#sneaky missionary_edict
+country_event = {
+	id = global_edicts_commander_events.19
+	title = global_edicts_commander_events.19.t
+	desc = global_edicts_commander_events.19.d
+	picture = BIG_BOOK_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		edict_commander_enforce_religious_unity_states_with_missionary = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}

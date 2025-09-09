@@ -1,0 +1,125 @@
+# Encourage Economic Growth
+defined_text = {
+	name = quick_select_encourage_economic_growth_tooltip_loc # Matches button name: global_edicts_encourage_economic_growth
+	text = {
+		localisation_key = quick_select_encourage_economic_growth_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_encourage_economic_growth_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_encourage_economic_growth_quick_select = no
+			}
+		}
+	}
+}
+
+# Disrupt Local Infrastructure
+defined_text = {
+	name = quick_select_disrupt_local_infrastructure_tooltip_loc # Matches button name: global_edicts_disrupt_local_infrastructure
+	text = {
+		localisation_key = quick_select_disrupt_local_infrastructure_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_disrupt_local_infrastructure_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_disrupt_local_infrastructure_quick_select = no
+			}
+		}
+	}
+}
+
+# Strengthen Local Shipbuilding Tradition
+defined_text = {
+	name = quick_select_shipbuilding_time_tooltip_loc # Matches button name: global_edicts_shipbuilding_time
+	text = {
+		localisation_key = quick_select_strengthen_local_shipbuilding_tradition_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_strengthen_local_shipbuilding_tradition_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_strengthen_local_shipbuilding_tradition_quick_select = no
+			}
+		}
+	}
+}
+
+# Improved Gold Mining
+defined_text = {
+	name = quick_select_improved_gold_mining_tooltip_loc # Matches button name: global_edicts_improved_gold_mining
+	text = {
+		localisation_key = quick_select_improved_gold_mining_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_improved_gold_mining_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_improved_gold_mining_quick_select = no
+			}
+		}
+	}
+}
+
+# Colonial Development
+defined_text = {
+	name = quick_select_colonial_development_tooltip_loc # Matches button name: global_edicts_colonial_development
+	text = {
+		localisation_key = quick_select_colonial_development_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_colonial_development_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_colonial_development_quick_select = no
+			}
+		}
+	}
+}
+
+# Modernized Local Administration
+defined_text = {
+	name = quick_select_modernized_local_administration_tooltip_loc # Matches button name: global_edicts_modernized_local_administration
+	text = {
+		localisation_key = quick_select_modernized_local_administration_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_modernized_local_administration_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_modernized_local_administration_quick_select = no
+			}
+		}
+	}
+}

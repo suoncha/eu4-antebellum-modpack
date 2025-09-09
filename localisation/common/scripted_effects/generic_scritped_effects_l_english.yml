@@ -1,0 +1,9 @@
+﻿l_english:
+ reduce_stability_less_than_neg_3_tooltip: "We will lose §R-50§! £adm£ for each point of Stability below §R-3§!."
+ add_permanent_claim_on_all_neighboring_provinces_tooltip: "We will gain §Ypermanent claims§! on all neighboring provinces!"
+ free_up_bad_ruler_personality_if_full_tooltip: "If our ruler has §Y3§! personality traits, and one of them is bad, it will be removed."
+ remove_all_buildings_tooltip: "The province will have all of its buildings §Rremoved§!."
+ halve_province_base_tax_tooltip: "§Y[This.GetName]§! will have its tax development §Rhalved§!."
+ halve_province_base_production_tooltip: "§Y[This.GetName]§! will have its base production development §Rhalved§!."
+ halve_province_base_manpower_tooltip: "§Y[This.GetName]§! will have its base manpower development §Rhalved§!."
+  

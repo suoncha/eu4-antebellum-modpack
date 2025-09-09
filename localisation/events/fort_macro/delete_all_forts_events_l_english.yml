@@ -1,0 +1,5 @@
+﻿l_english:
+ delete_all_forts_events.1.t:0 "Are You Sure?"
+ delete_all_forts_events.1.d:0 "This will delete all the forts in your country that aren't marked as whitelisted.\n\nTHIS CANNOT BE UNDONE."
+ delete_all_forts_event.1.a:0 "Yes, I want to delete all of my forts"
+ delete_all_forts_event.1.b:0 "Nevermind"

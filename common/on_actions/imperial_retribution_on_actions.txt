@@ -1,0 +1,46 @@
+#ROOT = WINNER
+#FROM = LOSER
+on_war_ended = {
+	if = {
+		limit = {
+			has_saved_global_event_target = retribution_leader
+			OR = {
+				tag = event_target:impaler_country
+				tag = event_target:retribution_leader
+			}
+			is_imperial_retribution_war_ongoing = yes
+			event_target:impaler_country = {
+				NOT = {
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
+				}
+			}
+			event_target:retribution_leader = {
+				NOT = {
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
+				}
+			}
+		}
+		clr_global_flag = imperial_retibution_war_ongoing
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = imperial_retribution_impaler_victory
+				}
+				NOT = {
+					has_global_flag = imperial_retribution_imperial_victory
+				}
+			}
+			set_global_flag = imperial_retribution_status_quo
+			event_target:retribution_leader = {
+				country_event = {
+					id = imperial_retribution_events.7
+				}
+			}
+		}
+		clear_global_event_target = retribution_leader
+	}
+}

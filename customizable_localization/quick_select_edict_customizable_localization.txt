@@ -1,0 +1,796 @@
+# Advancement Effort
+defined_text = {
+	name = quick_select_advancement_effort_loc
+	text = {
+		localisation_key = global_edicts_commander_events.1.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_advancement_effort_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.1.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_advancement_effort_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_advancement_effort_quick_select = no
+			}
+		}
+	}
+}
+
+# Centralization Effort
+defined_text = {
+	name = quick_select_centralization_effort_loc
+	text = {
+		localisation_key = global_edicts_commander_events.2.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_centralization_effort_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.2.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_centralization_effort_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_centralization_effort_quick_select = no
+			}
+		}
+	}
+}
+
+# Defensive Edict
+defined_text = {
+	name = quick_select_defensive_edict_loc
+	text = {
+		localisation_key = global_edicts_commander_events.3.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_defensive_edict_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.3.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_defensive_edict_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.3.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_defensive_edict_3
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_defensive_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# Encourage Development
+defined_text = {
+	name = quick_select_encourage_development_loc
+	text = {
+		localisation_key = global_edicts_commander_events.5.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_development_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.5.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_development_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.5.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_development_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.5.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_development_4
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_encourage_development_quick_select = no
+			}
+		}
+	}
+}
+
+# Rapid Industrialization
+defined_text = {
+	name = quick_select_rapid_industrialization_loc
+	text = {
+		localisation_key = global_edicts_commander_events.6.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_5
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.f
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_6
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.6.g
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_rapid_industrialization_7
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_rapid_industrialization_quick_select = no
+			}
+		}
+	}
+}
+
+# Increased Enlistment
+defined_text = {
+	name = quick_select_increased_enlistment_loc
+	text = {
+		localisation_key = global_edicts_commander_events.7.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_increased_enlistment_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.7.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_increased_enlistment_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.7.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_increased_enlistment_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.7.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_increased_enlistment_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.7.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_increased_enlistment_5
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_increased_enlistment_quick_select = no
+			}
+		}
+	}
+}
+
+# Protect Trade
+defined_text = {
+	name = quick_select_protect_trade_loc
+	text = {
+		localisation_key = global_edicts_commander_events.8.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.8.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.8.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.8.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.8.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_5
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.8.f
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_protect_trade_6
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_protect_trade_quick_select = no
+			}
+		}
+	}
+}
+
+# Enforce Religious Unity
+defined_text = {
+	name = quick_select_enforce_religious_unity_loc
+	text = {
+		localisation_key = global_edicts_commander_events.9.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.9.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.9.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.9.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.9.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_5
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.9.f
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_enforce_religious_unity_6
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_enforce_religious_unity_quick_select = no
+			}
+		}
+	}
+}
+
+# Feudal De Jure Law
+defined_text = {
+	name = quick_select_feudal_de_jure_law_loc
+	text = {
+		localisation_key = global_edicts_commander_events.10.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_de_jure_law_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.10.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_de_jure_law_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.10.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_de_jure_law_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.10.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_de_jure_law_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.10.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_de_jure_law_5
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_feudal_de_jure_law_quick_select = no
+			}
+		}
+	}
+}
+
+# Religion Enforced
+defined_text = {
+	name = quick_select_religion_enforced_loc
+	text = {
+		localisation_key = global_edicts_commander_events.11.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_religion_enforced_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.11.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_religion_enforced_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_religion_enforced_quick_select = no
+			}
+		}
+	}
+}
+
+# Edict of Absolutism
+defined_text = {
+	name = quick_select_edict_of_absolutism_loc
+	text = {
+		localisation_key = global_edicts_commander_events.12.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_absolutism_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.12.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_absolutism_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.12.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_absolutism_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.12.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_absolutism_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.12.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_absolutism_5
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_edict_of_absolutism_quick_select = no
+			}
+		}
+	}
+}
+
+# Feudal Taxes Edict
+defined_text = {
+	name = quick_select_feudal_taxes_edict_loc
+	text = {
+		localisation_key = global_edicts_commander_events.13.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_taxes_edict_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.13.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_taxes_edict_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.13.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_taxes_edict_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.13.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_feudal_taxes_edict_4
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_feudal_taxes_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# State Integration Edict
+defined_text = {
+	name = quick_select_state_integration_edict_loc
+	text = {
+		localisation_key = global_edicts_commander_events.14.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_state_integration_edict_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.14.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_state_integration_edict_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.14.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_state_integration_edict_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.14.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_state_integration_edict_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.14.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_state_integration_edict_5
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_state_integration_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# Urbanization Edict
+defined_text = {
+	name = quick_select_urbanization_edict_loc
+	text = {
+		localisation_key = global_edicts_commander_events.15.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_urbanization_edict_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.15.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_urbanization_edict_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.15.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_urbanization_edict_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.15.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_urbanization_edict_4
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_urbanization_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# French Infrastructure Network
+defined_text = {
+	name = quick_select_french_infrastructure_network_loc
+	text = {
+		localisation_key = global_edicts_commander_events.16.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_french_infrastructure_network_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.16.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_french_infrastructure_network_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_french_infrastructure_network_quick_select = no
+			}
+		}
+	}
+}
+
+# Promote Trade
+defined_text = {
+	name = quick_select_promote_trade_loc
+	text = {
+		localisation_key = global_edicts_commander_events.17.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.17.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.17.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.17.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_4
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.17.e
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_5
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.17.f
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_promote_trade_6
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_promote_trade_quick_select = no
+			}
+		}
+	}
+}
+
+# Edict of Governance
+defined_text = {
+	name = quick_select_edict_of_governance_loc
+	text = {
+		localisation_key = global_edicts_commander_events.18.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_governance_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.18.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_governance_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.18.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_governance_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_commander_events.18.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_edict_of_governance_4
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_edict_of_governance_quick_select = no
+			}
+		}
+	}
+}

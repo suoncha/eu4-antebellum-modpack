@@ -1,0 +1,47 @@
+on_culture_demoted = {
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = serbian
+			}
+			has_country_modifier = free_slot_for_serbian
+		}
+		remove_country_modifier = free_slot_for_serbian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = greek
+			}
+			has_country_modifier = free_slot_for_greek
+		}
+		remove_country_modifier = free_slot_for_greek
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = english
+			}
+			has_country_modifier = free_slot_for_english
+		}
+		remove_country_modifier = free_slot_for_english
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = english_new
+			}
+			has_country_modifier = free_slot_for_english_new
+		}
+		remove_country_modifier = free_slot_for_english_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = ruthenian
+			}
+			has_country_modifier = free_slot_for_ruthenian
+		}
+		remove_country_modifier = free_slot_for_ruthenian
+	}
+}

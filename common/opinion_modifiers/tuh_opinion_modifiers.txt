@@ -1,0 +1,5 @@
+tuh_charmed_by_the_bibescus = {
+	opinion = 10
+	max = 100
+	yearly_decay = 2
+}

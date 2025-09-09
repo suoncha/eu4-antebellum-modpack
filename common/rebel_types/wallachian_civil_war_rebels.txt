@@ -1,0 +1,1590 @@
+# --- Racovita Rebels ---
+wallachia_civil_war_racovita_refused_ultimatum_rebels = {
+	color = {
+		60
+		179
+		113
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = racovita
+		}
+	}
+}
+
+wallachia_civil_war_racovita_butchered_rebels = {
+	color = {
+		60
+		179
+		113
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = racovita
+		}
+	}
+}
+
+# --- Movilesti Rebels ---
+wallachia_civil_war_movilesti_refused_ultimatum_rebels = {
+	color = {
+		70
+		130
+		180
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = movilesti
+		}
+	}
+}
+
+wallachia_civil_war_movilesti_butchered_rebels = {
+	color = {
+		70
+		130
+		180
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = movilesti
+		}
+	}
+}
+
+# --- Mavrocordatos Rebels ---
+wallachia_civil_war_mavrocordatos_refused_ultimatum_rebels = {
+	color = {
+		189
+		183
+		107
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = mavrocordatos
+		}
+	}
+}
+
+wallachia_civil_war_mavrocordatos_butchered_rebels = {
+	color = {
+		189
+		183
+		107
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = mavrocordatos
+		}
+	}
+}
+
+# --- Brancoveanu Rebels ---
+wallachia_civil_war_brancoveanu_refused_ultimatum_rebels = {
+	color = {
+		173
+		31
+		120
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = brancoveanu
+		}
+	}
+}
+
+wallachia_civil_war_brancoveanu_butchered_rebels = {
+	color = {
+		173
+		31
+		120
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = brancoveanu
+		}
+	}
+}
+
+# --- Ghica Rebels ---
+wallachia_civil_war_ghica_refused_ultimatum_rebels = {
+	color = {
+		147
+		112
+		219
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = ghica
+		}
+	}
+}
+
+wallachia_civil_war_ghica_butchered_rebels = {
+	color = {
+		147
+		112
+		219
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = ghica
+		}
+	}
+}
+
+# --- Cantacuzino Rebels ---
+wallachia_civil_war_cantacuzino_refused_ultimatum_rebels = {
+	color = {
+		0
+		128
+		128
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = cantacuzino
+		}
+	}
+}
+
+wallachia_civil_war_cantacuzino_butchered_rebels = {
+	color = {
+		0
+		128
+		128
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = cantacuzino
+		}
+	}
+}
+
+# --- Bibescu Rebels ---
+wallachia_civil_war_bibescu_refused_ultimatum_rebels = {
+	color = {
+		205
+		92
+		92
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = bibescu
+		}
+	}
+}
+
+wallachia_civil_war_bibescu_butchered_rebels = {
+	color = {
+		205
+		92
+		92
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = bibescu
+		}
+	}
+}
+
+# --- Draculesti Rebels ---
+wallachia_civil_war_draculesti_refused_ultimatum_rebels = {
+	color = {
+		105
+		105
+		105
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = draculesti
+		}
+	}
+}
+
+wallachia_civil_war_draculesti_butchered_rebels = {
+	color = {
+		105
+		105
+		105
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = draculesti
+		}
+	}
+}
+
+# --- Danesti Rebels ---
+wallachia_civil_war_danesti_refused_ultimatum_rebels = {
+	color = {
+		240
+		230
+		140
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = danesti
+		}
+	}
+}
+
+wallachia_civil_war_danesti_butchered_rebels = {
+	color = {
+		240
+		230
+		140
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = danesti
+		}
+	}
+}
+
+# --- Basarab Rebels ---
+wallachia_civil_war_basarab_refused_ultimatum_rebels = {
+	color = {
+		139
+		0
+		0
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.4
+	infantry = 0.5
+	cavalry = 0.1
+	morale = 1.05
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = basarab
+		}
+	}
+}
+
+wallachia_civil_war_basarab_butchered_rebels = {
+	color = {
+		139
+		0
+		0
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_owner
+	will_relocate = yes
+	resilient = no
+	reinforcing = no
+	general = yes
+	disband_on_leader_death = no
+	smart = no
+	artillery = 0
+	infantry = 0.8
+	cavalry = 0.2
+	morale = 0.95
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+		is_capital = yes
+	}
+	siege_won_effect = {
+		custom_tooltip = wallachian_civil_war_rebels_on_siege_won_tooltip
+		FROM = {
+			set_country_flag = wallachian_civil_war_voivode_was_captured
+		}
+	}
+	can_negotiate_trigger = {
+		can_negotiate_with_wallachian_civil_war_rebels = yes
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = wallachian_civil_war_rebels_demands_butchered
+	demands_enforced_effect = {
+		wallachian_civil_war_rebels_enforce_demands_effect = {
+			victorious_house = basarab
+		}
+	}
+}
+

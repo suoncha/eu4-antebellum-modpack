@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_AB_wallachia_events.4"
+		texturefile = "gfx/interface/events/wallachia/AB_wallachia_events.4.dds"
+	}
+	spriteType = {
+		name = "GFX_AB_wallachia_events.31"
+		texturefile = "gfx/interface/events/wallachia/AB_wallachia_events.31.dds"
+	}
+	spriteType = {
+		name = "GFX_AB_wallachia_events.33"
+		texturefile = "gfx/interface/events/wallachia/AB_wallachia_events.33.dds"
+	}
+}

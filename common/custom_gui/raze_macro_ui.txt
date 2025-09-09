@@ -1,0 +1,153 @@
+custom_button = {
+	name = raze_button
+	tooltip = raze_button_tooltip
+	potential = {
+		FROM = {
+			has_government_attribute = raze_province
+		}
+	}
+	trigger = {
+		can_province_be_razed = yes
+	}
+	effect = {
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				has_province_flag = block_razing
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_province_flag = block_razing
+		}
+	}
+}
+
+custom_button = {
+	name = scripted_raze_button
+	tooltip = raze_button_tooltip
+	potential = {
+		owned_by = FROM
+		FROM = {
+			NOT = {
+				#If player has a reform that allows them to raze provinces then use the existing button from PDX rather than the scripted one.
+				has_government_attribute = raze_province
+			}
+			has_country_flag = can_raze_provinces
+		}
+	}
+	trigger = {
+		can_province_be_razed = yes
+	}
+	effect = {
+		hidden_effect = {
+			loot_province = yes
+			raze_province = yes
+			FROM = {
+				play_sound = burncolony
+			}
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				has_province_flag = block_razing
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_province_flag = block_razing
+		}
+	}
+}
+
+custom_button = {
+	name = raze_all_button
+	tooltip = blank
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = {
+				has_government_attribute = raze_province
+				has_country_flag = can_raze_provinces
+			}
+		}
+	}
+	trigger = {
+		can_province_be_razed = yes
+		FROM = {
+			any_owned_province = {
+				can_province_be_razed = yes
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				every_owned_province = {
+					limit = {
+						can_province_be_razed = yes
+					}
+					loot_province = yes
+					raze_province = yes
+					FROM = {
+						play_sound = burncolony
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = whitelist_raze_province_button
+	tooltip = blank
+	potential = {
+	}
+	trigger = {
+		owned_by = FROM
+		controlled_by = FROM
+		NOT = {
+			is_core = FROM
+		}
+		OR = {
+			base_tax = 2
+			base_production = 2
+			base_manpower = 2
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_reform = holy_horde_reform
+				}
+			}
+			NOT = {
+				religion = catholic
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_province_flag = block_razing
+			}
+			FROM = {
+				play_sound = unlock_mapmode
+			}
+			clr_province_flag = block_razing
+		}
+		else = {
+			FROM = {
+				play_sound = lock_mapmode
+			}
+			set_province_flag = block_razing
+		}
+	}
+}

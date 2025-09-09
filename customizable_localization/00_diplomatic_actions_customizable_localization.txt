@@ -1,0 +1,15 @@
+defined_text = {
+	name = form_coalition_customizable_localization
+	random = no
+	text = {
+		localisation_key = min_aggresive_expansion_75
+		trigger = {
+			FROM = {
+				has_country_flag = wal_increased_coalition_threshold
+			}
+		}
+	}
+	text = {
+		localisation_key = MINAGGRESSIVEEXPANSION
+	}
+}

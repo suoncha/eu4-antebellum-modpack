@@ -1,0 +1,32 @@
+can_province_be_razed = {
+	NOT = {
+		has_province_modifier = province_razed
+	}
+	custom_trigger_tooltip = {
+		tooltip = is_razing_blocked_tooltip
+		NOT = {
+			has_province_flag = block_razing
+		}
+	}
+	owned_by = FROM
+	controlled_by = FROM
+	is_colony = no
+	NOT = {
+		is_core = FROM
+	}
+	OR = {
+		base_tax = 2
+		base_production = 2
+		base_manpower = 2
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_reform = holy_horde_reform
+			}
+		}
+		NOT = {
+			religion = catholic
+		}
+	}
+}

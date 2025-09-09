@@ -1,0 +1,223 @@
+#Checks if targetA has more prestige than targetB
+has_more_prestige_than = {
+	variable_arithmetic_trigger = {
+		[[tooltip]
+		custom_tooltip = $tooltip$
+		]
+		export_to_variable = {
+			which = target_a_prestige
+			value = prestige
+			who = $targetA$
+		}
+		export_to_variable = {
+			which = target_b_prestige
+			value = prestige
+			who = $targetB$
+		}
+		NOT = {
+			check_variable = {
+				which = target_b_prestige
+				which = target_a_prestige
+			}
+		}
+	}
+}
+
+has_more_legitimacy_or_equivalent_than = {
+	variable_arithmetic_trigger = {
+		[[tooltip]
+		custom_tooltip = $tooltip$
+		]
+		export_to_variable = {
+			which = target_a_legit
+			value = trigger_value:legitimacy_equivalent
+			who = $targetA$
+		}
+		export_to_variable = {
+			which = target_b_legit
+			value = trigger_value:legitimacy_equivalent
+			who = $targetB$
+		}
+		NOT = {
+			check_variable = {
+				which = target_b_legit
+				which = target_a_legit
+			}
+		}
+	}
+}
+
+is_great_project_destroyed = {
+	custom_trigger_tooltip = {
+		tooltip = is_great_project_destroyed_tooltip
+		has_province_flag = destroyed_great_project
+	}
+}
+
+can_use_bulgarian_great_projects = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_bulgarian_great_projects_tooltip
+		OR = {
+			has_country_flag = can_use_bulgarian_great_projects_flag
+			has_country_flag = mva_unlocked_preslav_project
+		}
+	}
+}
+
+eastern_roman_empire_province_cb_trigger = {
+	OR = {
+		region = anatolia_region
+		region = egypt_region
+		region = mashriq_region
+		region = balkan_region
+		area = transdanubia_area
+		#Eastern Half of North Africa
+		area = tripolitania_area
+		area = fezzan_area
+		area = north_saharan_area
+		area = djerba_area
+		area = tunisia_area
+	}
+}
+
+western_roman_empire_province_cb_trigger = {
+	OR = {
+		region = italy_region
+		region = france_region
+		region = iberia_region
+		#England
+		area = east_midlands_area
+		area = west_midlands_area
+		area = yorkshire_area
+		area = wessex_area
+		area = home_counties_area
+		area = east_anglia_area
+		area = wales_area
+		area = scottish_marches_area
+		area = cornwall_area
+		#Areas within South Germany
+		area = romandie_area
+		area = upper_rhineland_area
+		area = romandie_area
+		area = alsace_area
+		area = palatinate_area
+		area = lower_rhineland_area
+		area = carinthia_area
+		province_id = 85		#cologne
+		area = north_brabant_area
+		area = brabant_area
+		area = flanders_area
+		area = wallonia_area
+		province_id = 96		#zeeland
+		area = inner_austria_area
+		area = austria_proper_area
+		area = tirol_area
+		area = east_bavaria_area
+		area = lower_bavaria_area
+		area = upper_bavaria_area
+		area = upper_swabia_area
+		area = lower_swabia_area
+		area = switzerland_area
+		AND = {
+			region = maghreb_region
+			NOT = {
+				area = macaronesia_area
+			}
+		}
+	}
+	NOT = {
+		area = tripolitania_area
+	}
+	NOT = {
+		area = fezzan_area
+	}
+	NOT = {
+		area = north_saharan_area
+	}
+	NOT = {
+		area = djerba_area
+	}
+	NOT = {
+		area = tunisia_area
+	}
+}
+
+is_heretic_hre_prince = {
+	hre_religion_treaty = no
+	OR = {
+		AND = {
+			hre_religion = catholic
+			NOT = {
+				religion = catholic
+			}
+		}
+		AND = {
+			hre_religion = protestant
+			NOT = {
+				religion = protestant
+			}
+		}
+		AND = {
+			hre_religion = reformed
+			NOT = {
+				religion = reformed
+			}
+		}
+		AND = {
+			hre_religion = hussite
+			NOT = {
+				religion = hussite
+			}
+		}
+		AND = {
+			hre_religion = anglican
+			NOT = {
+				religion = anglican
+			}
+		}
+		AND = {
+			hre_religion = gaelic_ab
+			NOT = {
+				religion = gaelic_ab
+			}
+		}
+		AND = {
+			hre_religion = orthodox
+			NOT = {
+				religion = orthodox
+			}
+		}
+		AND = {
+			hre_religion = nestorian
+			NOT = {
+				religion = nestorian
+			}
+		}
+		AND = {
+			hre_religion = coptic
+			NOT = {
+				religion = coptic
+			}
+		}
+	}
+}
+
+#Scope - Province
+is_most_developed_orthodox_province = {
+	custom_trigger_tooltip = {
+		tooltip = is_most_developed_orthodox_province_tooltip
+		NOT = {
+			any_province = {
+				religion = orthodox
+				higher_development_than = PREV
+			}
+		}
+	}
+}
+
+#Scope - Province
+can_province_be_given_a_parliament_seat = {
+	is_core = ROOT
+	is_state = yes
+	has_seat_in_parliament = no
+}

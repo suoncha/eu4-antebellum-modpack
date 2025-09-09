@@ -1,0 +1,141 @@
+provoke_coalition = {
+	category = alliance
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_country_flag = enable_provoke_coalition
+		FROM = {
+			coalition_target = ROOT
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = not_already_in_coaltion_war
+			NOT = {
+				is_in_war = {
+					attackers = FROM
+					defenders = ROOT
+					casus_belli = cb_super_badboy
+				}
+			}
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		OR = {
+			is_neighbor_of = FROM
+			any_subject_country = {
+				is_neighbor_of = FROM
+			}
+		}
+		has_government_power = {
+			mechanic_type = wallachian_terror_mechanic
+			power_type = terror_power
+			value = 30
+		}
+	}
+	on_accept = {
+		change_terror = {
+			value = -30
+			scaled_with_gain_modifier = no
+		}
+		FROM = {
+			declare_war_with_cb = {
+				casus_belli = cb_super_badboy
+				who = ROOT
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+roman_claim_throne = {
+	category = dynasty
+	require_acceptance = no
+	is_visible = {
+		has_government_attribute = romanian_elective_monarchy
+		FROM = {
+			government = monarchy
+			is_subject = no
+			OR = {
+				is_or_was_tag = {
+					tag = BYZ					#Byzantium
+				}
+				is_or_was_tag = {
+					tag = NCI					#Nicaea
+				}
+				is_or_was_tag = {
+					tag = LAE					#Latin Empire
+				}
+				is_or_was_tag = {
+					tag = EPI					#Epirus
+				}
+				is_or_was_tag = {
+					tag = ACH					#Achaea
+				}
+				is_or_was_tag = {
+					tag = MOE					#Morea
+				}
+				is_or_was_tag = {
+					tag = ATH					#Athens
+				}
+				is_or_was_tag = {
+					tag = NAX					#Naxos
+				}
+				is_or_was_tag = {
+					tag = CEP					#Corfu
+				}
+				is_or_was_tag = {
+					tag = CYP					#Cyprus
+				}
+				is_or_was_tag = {
+					tag = KNI					#Knights Hospitaller
+				}
+				is_or_was_tag = {
+					tag = CRT					#Crete
+				}
+				is_or_was_tag = {
+					tag = FEO					#Theodoro
+				}
+				is_or_was_tag = {
+					tag = TRE					#Trebizond
+				}
+				tag = GRE				#Greece
+				tag = WRE				#Western Roman Empire
+				tag = ROM				#Roman Empire
+			}
+		}
+	}
+	is_allowed = {
+		dynasty = "Cantacuzino"
+		FROM = {
+			has_heir = no
+		}
+		has_more_prestige_than = {
+			targetA = ROOT
+			targetB = FROM
+			tooltip = has_more_prestige_than_default_tooltip
+		}
+		custom_trigger_tooltip = {
+			tooltip = roman_claim_throne_already_has_cb_trigger_tooltp
+			NOT = {
+				has_casus_belli = {
+					type = cb_restore_personal_union
+					target = FROM
+				}
+			}
+		}
+	}
+	on_accept = {
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			target = FROM
+			months = 180
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}

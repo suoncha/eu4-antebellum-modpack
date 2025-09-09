@@ -1,0 +1,39 @@
+has_reactive_advancement_effort_cleanup_enabled = {
+	has_country_flag = reactive_edict_advancement_cleanup
+}
+
+has_reactive_enforce_religious_unity_setter_enabled = {
+	has_country_flag = reactive_edict_religious_setter
+}
+
+has_reactive_enforce_religious_unity_cleanup_enabled = {
+	has_country_flag = reactive_edict_religious_cleanup
+}
+
+has_reactive_defensive_edict_setter_enabled = {
+	has_country_flag = reactive_edict_defensive_setter
+}
+
+has_reactive_defensive_edict_cleanup_enabled ={
+	has_country_flag = reactive_edict_defensive_cleanup
+}
+
+has_reactive_encourage_development_setter_enabled ={
+	has_country_flag = reactive_edict_development_setter
+}
+
+has_reactive_attrition_edict_setter_enabled = {
+	has_country_flag = reactive_edict_attrition_setter
+}
+
+has_reactive_attrition_edict_cleanup_enabled ={
+	has_country_flag = reactive_edict_attrition_cleanup
+}
+
+has_reactive_colonial_edict_setter_enabled = {
+	has_country_flag = reactive_edict_colonial_setter
+}
+
+has_reactive_colonial_edict_cleanup_enabled ={
+	has_country_flag = reactive_edict_colonial_cleanup
+}

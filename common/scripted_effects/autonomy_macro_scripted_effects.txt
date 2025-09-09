@@ -1,0 +1,366 @@
+setup_autonomy_macro = {
+	set_variable = {
+		which = minimum_autonomy_difference
+		value = 25
+	}
+	set_variable = {
+		which = provinces_that_can_lower_autonomy
+		value = -1
+	}
+	set_variable = {
+		which = autonomy_macro_minimum_development
+		value = 3
+	}
+}
+
+calculate_all_province_autonomy = {
+	export_to_variable = {
+		which = minimum_autonomy
+		value = modifier:min_autonomy
+	}
+	export_to_variable = {
+		which = minimum_autonomy_in_territories
+		value = modifier:min_autonomy_in_territories
+	}
+	every_owned_province = {
+		limit = {
+			NOT = {
+				has_province_modifier = autonomy_decreased
+			}
+			NOT = {
+				has_province_modifier = autonomy_increased
+			}
+		}
+		set_variable = {
+			which = autonomy_floor
+			value = 90
+		}
+		#Check for state
+		if = {
+			limit = {
+				is_state = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						is_state_core = owner
+						NOT = {
+							is_core = FROM
+						}
+					}
+				}
+				set_variable = {
+					which = autonomy_floor
+					value = 0
+				}
+			}
+			else = {
+				#half state
+				set_variable = {
+					which = autonomy_floor
+					value = 50
+				}
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy_in_territories
+			which = ROOT
+		}
+		multiply_variable = {
+			which = minimum_autonomy_in_territories
+			value = 100
+		}
+		change_variable = {
+			which = autonomy_floor
+			which = minimum_autonomy_in_territories
+		}
+		#If autonomy floor is <0, set it to 0.
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = autonomy_floor
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				value = 0
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy
+			which = PREV
+		}
+		#If country minimum autonomy is > our current floor, set the current floor to the minimum autonomy
+		if = {
+			limit = {
+				check_variable = {
+					which = minimum_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = minimum_autonomy
+			}
+		}
+		export_to_variable = {
+			which = min_local_autonomy
+			value = modifier:min_local_autonomy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = min_local_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = min_local_autonomy
+			}
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_difference
+			which = curr_autonomy
+		}
+		subtract_variable = {
+			which = autonomy_difference
+			which = autonomy_floor
+		}
+		set_province_flag = calculated_autonomy
+	}
+}
+
+calculate_which_provinces_can_lower_autonomy = {
+	set_variable = {
+		which = provinces_that_can_lower_autonomy
+		value = 0
+	}
+	every_owned_province = {
+		limit = {
+			check_variable = {
+				which = autonomy_difference
+				value = 0.01
+			}
+			check_variable = {
+				which = curr_autonomy
+				value = 10
+			}
+			has_province_flag = calculated_autonomy
+			NOT = {
+				has_province_modifier = autonomy_decreased
+			}
+			NOT = {
+				has_province_modifier = autonomy_increased
+			}
+		}
+		export_to_variable = {
+			which = province_development
+			value = development
+		}
+		set_variable = {
+			which = minimum_autonomy_difference
+			which = FROM
+		}
+		set_variable = {
+			which = autonomy_macro_minimum_development
+			which = FROM
+		}
+		#log = "Minimum autonomy difference = [This.minimum_autonomy_difference.GetValue]"
+		if = {
+			limit = {
+				check_variable = {
+					which = province_development
+					which = autonomy_macro_minimum_development
+				}
+				check_variable = {
+					which = autonomy_difference
+					which = minimum_autonomy_difference
+				}
+			}
+			set_province_flag = can_lower_autonomy
+			FROM = {
+				change_variable = {
+					which = provinces_that_can_lower_autonomy
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+calculate_average_autonomy_reduction = {
+	set_variable = {
+		which = total_reduction
+		value = 0
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = can_lower_autonomy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = autonomy_difference
+					value = 25.001
+				}
+			}
+			set_variable = {
+				which = total_reduction
+				value = 25
+			}
+		}
+		else = {
+			set_variable = {
+				which = total_reduction
+				which = autonomy_difference
+			}
+		}
+		PREV = {
+			change_variable = {
+				which = total_reduction
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = average_autonomy_reduction
+		which = total_reduction
+	}
+	divide_variable = {
+		which = average_autonomy_reduction
+		which = provinces_that_can_lower_autonomy
+	}
+}
+
+reduce_autonomy_globally = {
+	set_variable = {
+		which = num_of_times_autonomy_lowered
+		value = 0
+	}
+	set_variable = {
+		which = absolutism_gain
+		value = 0
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = can_lower_autonomy
+			NOT = {
+				has_province_modifier = autonomy_decreased
+			}
+			NOT = {
+				has_province_modifier = autonomy_increased
+			}
+		}
+		export_to_variable = {
+			which = province_development
+			value = development
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_development
+					which = autonomy_macro_minimum_development
+				}
+			}
+			add_local_autonomy = -25
+			export_to_variable = {
+				which = autonomy_cooldown_modifier
+				value = modifier:autonomy_change_time
+				who = FROM
+			}
+			change_variable = {
+				which = autonomy_cooldown_modifier
+				value = 1
+			}
+			set_variable = {
+				which = autonomy_decreased_duration
+				value = 10950
+			}
+			multiply_variable = {
+				which = autonomy_decreased_duration
+				which = autonomy_cooldown_modifier
+			}
+			#Check if negative number, we can't have a negative duration. 
+			#Well we can, but you wouldn't use this if you wanted that.
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = autonomy_decreased_duration
+							value = 0
+						}
+					}
+				}
+				multiply_variable = {
+					which = autonomy_decreased_duration
+					value = -1
+				}
+			}
+			variable_province_modifier = {
+				var = autonomy_decreased_duration
+				modifier = autonomy_decreased
+			}
+			FROM = {
+				change_variable = {
+					which = num_of_times_autonomy_lowered
+					value = 1
+				}
+			}
+			set_variable = {
+				which = absolutism_gain
+				which = province_development
+			}
+			divide_variable = {
+				which = absolutism_gain
+				value = 20
+			}
+			FROM = {
+				change_variable = {
+					which = absolutism_gain
+					which = PREV
+				}
+			}
+		}
+	}
+	variable_effect = {
+		var = absolutism_gain
+		effect = add_absolutism
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = num_of_times_autonomy_lowered
+				value = 1
+			}
+		}
+		play_sound = lower_autonomy
+	}
+	else = {
+		play_sound = diplomaticfailure
+	}
+	set_variable = {
+		which = provinces_that_can_lower_autonomy
+		value = -1
+	}
+}
+
+clear_autonomy_macro_flags = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_province_flag = calculated_autonomy
+				has_province_flag = can_lower_autonomy
+			}
+		}
+		clr_province_flag = calculated_autonomy
+		clr_province_flag = can_lower_autonomy
+	}
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+ po_enforce_imperial_unity: "Enforce Imperial Unity"
+ po_enforce_imperial_unity_desc: "We shall restore order to the §YHoly Roman Empire§!, and punish the secessionist §Rtraitors§!!"
+ CB_ALLOWED_po_enforce_imperial_unity: "Enforce Imperial Unity"
+ PEACE_po_enforce_imperial_unity: "Enforce Imperial Unity"

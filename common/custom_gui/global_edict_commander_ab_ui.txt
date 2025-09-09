@@ -1,0 +1,429 @@
+custom_button = {
+	name = global_edicts_encourage_economic_growth
+	tooltip = global_edicts_encourage_economic_growth_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_encourage_economic_growth_1
+					}
+					edict_commander_all_non_prospering_states = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_encourage_economic_growth_2
+					}
+					edict_commander_prosperity_every_state = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.1
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_disrupt_local_infrastructure
+	tooltip = global_edicts_disrupt_local_infrastructure_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_disrupt_local_infrastructure_1
+					}
+					edict_commander_attrition_every_state_with_fort_siege = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_disrupt_local_infrastructure_2
+					}
+					edict_commander_attrition_every_state_with_fort = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_disrupt_local_infrastructure_3
+					}
+					edict_commander_attrition_every_state = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.2
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_shipbuilding_time
+	tooltip = global_edicts_shipbuilding_time_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_1
+					}
+					edict_commander_fastest_shipbuilding_province = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_2
+					}
+					edict_commander_fastest_shipbuilding_province_top_n_provinces = {
+						n = 5
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_3
+					}
+					edict_commander_fastest_shipbuilding_province_top_n_provinces = {
+						n = 10
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_4
+					}
+					edict_commander_shipbuilding_all_with_ports = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_5
+					}
+					edict_commander_shipbuilding_all_states = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.3
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_improved_gold_mining
+	tooltip = global_edicts_improved_gold_mining_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		FROM = {
+			any_owned_province = {
+				custom_trigger_tooltip = {
+					tooltip = global_edicts_improved_gold_mining_trigger_tt
+					trade_goods = gold
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_improved_gold_mining_1
+					}
+					edict_commander_gold_mining_highest_production = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_improved_gold_mining_2
+					}
+					edict_commander_gold_mining_top_3_production = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_improved_gold_mining_3
+					}
+					edict_commander_gold_mining_all_with_gold = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.4
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_colonial_development
+	tooltip = global_edicts_colonial_development_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+			}
+		}
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_colonial_development_1
+					}
+					edict_commander_colonial_only_state_with_colony = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_colonial_development_2
+					}
+					edict_commander_colonial_every_state = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.5
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_modernized_local_administration
+	tooltip = global_edicts_modernized_local_administration_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						has_mission = per_government_modern
+						has_mission = perm_government_modern
+						has_mission = perc_government_modern
+						has_mission = mper_government_modern
+						has_mission = grg_government_modern
+					}
+				}
+				OR = {
+					full_idea_group = state_governance_ideas
+					custom_trigger_tooltip = {
+						tooltip = completed_mission_government_modern
+						OR = {
+							mission_completed = per_government_modern
+							mission_completed = perm_government_modern
+							mission_completed = perc_government_modern
+							mission_completed = mper_government_modern
+							mission_completed = grg_government_modern
+						}
+					}
+				}
+			}
+			else = {
+				full_idea_group = state_governance_ideas
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_modernized_local_administration_1
+					}
+					edict_commander_modernized_local_administration_highest_gov_cost = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_modernized_local_administration_2
+					}
+					edict_commander_modernized_local_administration_top_n_gov_cost = {
+						n = 5
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_modernized_local_administration_3
+					}
+					edict_commander_modernized_local_administration_top_n_gov_cost = {
+						n = 10
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_modernized_local_administration_4
+					}
+					edict_commander_modernized_local_administration_every_state = yes
+				}
+				else = {
+					country_event = {
+						id = global_edict_commander_events_ab.6
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_4_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_encourage_economic_growth_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_4_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_disrupt_local_infrastructure_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_4_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_strengthen_local_shipbuilding_tradition_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_4_slot_4_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			any_owned_province = {
+				trade_goods = gold
+			}
+			has_improved_gold_mining_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_5_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+			}
+			has_colonial_development_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_5_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			if = {
+				limit = {
+					OR = {
+						has_mission = per_government_modern
+						has_mission = perm_government_modern
+						has_mission = perc_government_modern
+						has_mission = mper_government_modern
+						has_mission = grg_government_modern
+					}
+				}
+				OR = {
+					full_idea_group = state_governance_ideas
+					OR = {
+						mission_completed = per_government_modern
+						mission_completed = perm_government_modern
+						mission_completed = perc_government_modern
+						mission_completed = mper_government_modern
+						mission_completed = grg_government_modern
+					}
+				}
+			}
+			else = {
+				full_idea_group = state_governance_ideas
+			}
+			has_modernized_local_administration_quick_select = yes
+		}
+	}
+}

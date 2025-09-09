@@ -1,0 +1,185 @@
+on_adm_development = {
+	romanian_elective_monarchy_on_dev_effect = yes
+}
+
+on_dip_development = {
+	romanian_elective_monarchy_on_dev_effect = yes
+}
+
+on_mil_development = {
+	romanian_elective_monarchy_on_dev_effect = yes
+}
+
+on_rebels_break_country = {
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		THIS = {
+			tuh_set_current_ruling_house_variable_effect = yes
+		}
+	}
+}
+
+on_enforce_rebel_demands = {
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		tuh_set_current_ruling_house_variable_effect = yes
+	}
+}
+
+on_institution_embracement = {
+	if = {
+		limit = {
+			dynasty = "Mavrocordatos"
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		change_innovativeness = 5
+	}
+}
+
+on_battle_won_country = {
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+			dynasty = "Danesti"
+		}
+		set_variable = {
+			which = soldiers_we_killed
+			which = land_units_lost
+		}
+		set_variable = {
+			which = debug
+			which = soldiers_we_killed
+		}
+		divide_variable = {
+			which = soldiers_we_killed
+			value = 1000
+		}
+		round_variable = {
+			which = soldiers_we_killed
+			value = -1
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = soldiers_we_killed
+					value = 1
+				}
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = 1
+			}
+			subtract_variable = {
+				which = soldiers_we_killed
+				value = 1
+			}
+		}
+	}
+}
+
+on_parliament_debate_succeeded = {
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		change_variable = {
+			which = rem_parliament_issues_passed
+			value = 1
+		}
+		if = {
+			limit = {
+				has_country_flag = legitimacy_on_parliament_issue_passed
+			}
+			add_legitimacy_or_mil_power = {
+				amount = 5
+			}
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_nobles_integrate_german_nobility
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+		}
+		add_province_modifier = {
+			name = tuh_integrated_germanic_nobility
+			duration = -1
+		}
+		hidden_effect = {
+			export_to_variable = {
+				which = province_dev_var
+				value = development
+			}
+			multiply_variable = {
+				which = province_dev_var
+				value = 0.05
+			}
+			owner = {
+				set_variable = {
+					which = province_dev_var
+					which = PREV
+				}
+				variable_change_estate_land_share = {
+					estate = estate_nobles
+					var = province_dev_var
+				}
+			}
+		}
+	}
+}
+
+on_adm_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_tax = 1
+		}
+	}
+}
+on_dip_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_production = 1
+		}
+	}
+}
+on_mil_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_manpower = 1
+		}
+	}
+}

@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_imperial_retribution_empire_rally"
+		texturefile = "gfx/interface/events/wallachia/hre/imperial_retribution_empire_rally.dds"
+	}
+	spriteType = {
+		name = "gfx_imperial_retribution_imperial_victory"
+		texturefile = "gfx/interface/events/wallachia/hre/imperial_retribution_imperial_victory.dds"
+	}
+}

@@ -1,0 +1,537 @@
+restrict_silk_exports_issue = {
+	category = 2
+	allow = {
+		has_issue_unlocked = {
+			issue = restrict_silk_exports_issue
+		}
+	}
+	effect = {
+		change_price = {
+			trade_goods = silk
+			key = restrict_silk_exports_key
+			value = 0.1
+			duration = -1
+		}
+		add_mercantilism = 3
+		custom_tooltip = restrict_silk_exports_province_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_silk_production_restrictions
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = silk
+				}
+				add_province_modifier = {
+					name = tuh_silk_production_restrictions
+					duration = 3650
+				}
+			}
+		}
+	}
+	modifier = {
+		mercantilism_cost = -0.1
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			mercantilism = 25
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 50
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 75
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 100
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+expand_silk_production_issue = {
+	category = 2
+	allow = {
+		has_issue_unlocked = {
+			issue = expand_silk_production_issue
+		}
+		wool = 1
+	}
+	effect = {
+		change_price = {
+			trade_goods = silk
+			key = expand_silk_production_key
+			value = -0.1
+			duration = -1
+		}
+		custom_tooltip = expand_silk_production_issue_tooltip
+		tooltip = {
+			change_trade_goods = silk
+			add_base_production = 1
+			add_province_modifier = {
+				name = tuh_fledgling_silk_industry
+				duration = 7300
+			}
+		}
+		custom_tooltip = expand_silk_production_extra_provinces_tooltip
+		hidden_effect = {
+			tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+		}
+		if = {
+			limit = {
+				wool = 8
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 16
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 24
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 32
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+	}
+	modifier = {
+		expand_infrastructure_cost_modifier = -0.1
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			wool = 16
+		}
+		modifier = {
+			factor = 2
+			wool = 24
+		}
+		modifier = {
+			factor = 2
+			wool = 32
+		}
+		modifier = {
+			factor = 2
+			wool = 40
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+finance_dacian_india_company_issue = {
+	category = 2
+	allow = {
+		has_issue_unlocked = {
+			issue = finance_dacian_india_company_issue
+		}
+	}
+	effect = {
+		define_advisor_scaling_with_estate_attribute = {
+			tooltip = advisor_quality_scales_with_bresele_loyalty_tooltip
+			advisor_type = trader
+			estate = estate_burghers
+			attribute = loyalty
+		}
+	}
+	modifier = {
+		trade_company_investment_cost = -0.35
+		center_of_trade_upgrade_cost = -0.35
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+deus_vult_parliament_issue = {
+	category = 1
+	allow = {
+		has_issue_unlocked = {
+			issue = deus_vult_parliament_issue
+		}
+	}
+	modifier = {
+		cb_on_religious_enemies = yes
+		extra_manpower_at_religious_war = yes
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_neighbor_country = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+wine_parliament_issue = {
+	category = 3
+	allow = {
+		has_issue_unlocked = {
+			issue = wine_parliament_issue
+		}
+	}
+	effect = {
+		custom_tooltip = wine_parliament_issue_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_french_wine_production_techniques
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = {
+					name = tuh_french_wine_production_techniques
+					duration = 3650
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 2
+			wine = 20
+		}
+		modifier = {
+			factor = 2
+			wine = 30
+		}
+		modifier = {
+			factor = 2
+			wine = 40
+		}
+		modifier = {
+			factor = 2
+			wine = 50
+		}
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+tuh_the_tea_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_tea_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_tea_act
+		}
+		tea = 2
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_tea_act
+		}
+		change_price = {
+			trade_goods = tea
+			key = the_tea_act
+			value = 0.5
+			duration = -1
+		}
+		add_mercantilism = 5
+	}
+	modifier = {
+		trade_efficiency = 0.33
+	}
+	effect_duration = 5
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_witchcraft_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = the_witchcraft_act
+		}
+		religion_group = christian
+		has_issue_unlocked = {
+			issue = tuh_the_witchcraft_act
+		}
+		NOT = {
+			current_age = age_of_discovery
+		}
+		NOT = {
+			current_age = age_of_revolutions
+		}
+		NOT = {
+			current_age = age_of_imperialism
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = the_witchcraft_act
+		}
+	}
+	modifier = {
+		tolerance_own = 2
+		global_heretic_missionary_strength = 0.05
+		missionaries = 1
+	}
+	effect_duration = 20
+	chance = {
+		factor = 2
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_black_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = the_black_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_black_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = the_black_act
+		}
+		add_stability_or_adm_power = yes
+	}
+	modifier = {
+		harsh_treatment_cost = -0.5
+		stability_cost_modifier = -0.33
+		global_rebel_suppression_efficiency = 0.5
+	}
+	effect_duration = 20
+	chance = {
+		factor = 2
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_act_of_representation = {
+	category = 4
+	allow = {
+		has_issue_unlocked = {
+			issue = tuh_act_of_representation
+		}
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_act_of_representation
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_act_of_representation
+		}
+		add_country_modifier = {
+			name = act_of_representation_parliament
+			duration = -1
+		}
+	}
+	backing_percentage = 0
+	modifier = {
+		diplomatic_reputation = 2
+		diplomatic_annexation_cost = -0.15
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_sugar_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_sugar_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_sugar_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_sugar_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = sugar
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_gold_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_gold_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_gold_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_gold_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = gold
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_spice_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_spice_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_spice_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_spice_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = spices
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = cloves
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+land_reclamation_issue = {
+	category = 3
+	allow = {
+		has_issue_unlocked = {
+			issue = land_reclamation_issue
+		}
+	}
+	effect = {
+		add_years_of_income = -0.33
+		define_advisor_scaling_with_estate_attribute = {
+			tooltip = advisor_quality_scales_with_bresele_loyalty_tooltip
+			advisor_type = planner
+			estate = estate_burghers
+			attribute = loyalty
+		}
+		custom_tooltip = land_reclamation_issue_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_land_reclamation_project
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_port = yes
+						has_terrain = marsh
+					}
+				}
+				add_province_modifier = {
+					name = tuh_land_reclamation_project
+					duration = 3650
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

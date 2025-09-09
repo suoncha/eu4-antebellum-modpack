@@ -1,0 +1,248 @@
+namespace = global_edict_commander_events_ab
+country_event = {
+	id = global_edict_commander_events_ab.1
+	title = global_edict_commander_events_ab.1.t
+	desc = global_edict_commander_events_ab.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.1.a
+		hidden_effect = {
+			edict_commander_all_non_prospering_states = yes
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		hidden_effect = {
+			edict_commander_prosperity_every_state = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edict_commander_events_ab.2
+	title = global_edict_commander_events_ab.2.t
+	desc = global_edict_commander_events_ab.2.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.2.a
+		hidden_effect = {
+			edict_commander_attrition_every_state_with_fort_siege = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.2.b
+		hidden_effect = {
+			edict_commander_attrition_every_state_with_fort = yes
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		hidden_effect = {
+			edict_commander_attrition_every_state = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edict_commander_events_ab.3
+	title = global_edict_commander_events_ab.3.t
+	desc = global_edict_commander_events_ab.3.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.a
+		hidden_effect = {
+			edict_commander_fastest_shipbuilding_province = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.b
+		hidden_effect = {
+			edict_commander_fastest_shipbuilding_province_top_n_provinces = {
+				n = 5
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.c
+		hidden_effect = {
+			edict_commander_fastest_shipbuilding_province_top_n_provinces = {
+				n = 10
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.dee
+		hidden_effect = {
+			edict_commander_shipbuilding_all_with_ports = yes
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		hidden_effect = {
+			edict_commander_shipbuilding_all_states = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edict_commander_events_ab.4
+	title = global_edict_commander_events_ab.4.t
+	desc = global_edict_commander_events_ab.4.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.a
+		hidden_effect = {
+			edict_commander_gold_mining_highest_production = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.b
+		hidden_effect = {
+			edict_commander_gold_mining_top_3_production = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.c
+		hidden_effect = {
+			edict_commander_gold_mining_all_with_gold = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edict_commander_events_ab.5
+	title = global_edict_commander_events_ab.5.t
+	desc = global_edict_commander_events_ab.5.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.5.a
+		hidden_effect = {
+			edict_commander_colonial_only_state_with_colony = yes
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		hidden_effect = {
+			edict_commander_colonial_every_state = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edict_commander_events_ab.6
+	title = global_edict_commander_events_ab.6.t
+	desc = global_edict_commander_events_ab.6.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.a
+		hidden_effect = {
+			edict_commander_modernized_local_administration_highest_gov_cost = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.b
+		hidden_effect = {
+			edict_commander_modernized_local_administration_top_n_gov_cost = {
+				n = 5
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.c
+		hidden_effect = {
+			edict_commander_modernized_local_administration_top_n_gov_cost = {
+				n = 10
+			}
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		hidden_effect = {
+			edict_commander_modernized_local_administration_every_state = yes
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}

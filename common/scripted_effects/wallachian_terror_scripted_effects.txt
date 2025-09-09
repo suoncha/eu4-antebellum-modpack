@@ -1,0 +1,2763 @@
+enable_terror_gain_from_battles = {
+	set_country_flag = wallachian_terror_gain_terror_from_dead_enemies
+}
+
+disable_terror_gain_from_battles = {
+	clr_country_flag = wallachian_terror_gain_terror_from_dead_enemies
+}
+
+#ROOT = location of battle
+#FROM = winner country
+apply_wallachian_terror_battle_won_enemy_province_modifier = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 0
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 25
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_garden_of_the_defeated
+			duration = 182
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 25
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_garden_of_the_defeated
+			duration = 365
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 75
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_garden_of_the_defeated
+			duration = 547
+		}
+	}
+	else = {
+		add_province_modifier = {
+			name = wallachian_terror_garden_of_the_defeated
+			duration = 730
+		}
+	}
+}
+
+#ROOT = location of battle
+#FROM = winner country
+apply_wallachian_terror_battle_won_own_province_modifier = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 0
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 25
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_warning_for_the_rest
+			duration = 182
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 25
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_warning_for_the_rest
+			duration = 365
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 75
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_warning_for_the_rest
+			duration = 547
+		}
+	}
+	else = {
+		add_province_modifier = {
+			name = wallachian_terror_warning_for_the_rest
+			duration = 730
+		}
+	}
+}
+
+apply_wallachian_terror_battle_won_owner_penalty = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 0
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 25
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 25
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.5
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 75
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 75
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 1
+		}
+	}
+}
+
+change_terror = {
+	add_government_power = {
+		mechanic_type = wallachian_terror_mechanic
+		power_type = terror_power
+		value = $value$
+		scaled_with_gain_modifier = $scaled_with_gain_modifier$
+	}
+}
+
+#Changes Terror using a variable
+change_terror_var = {
+	variable_government_power_effect = {
+		var = $var$
+		mechanic_type = wallachian_terror_mechanic
+		power_type = terror_power
+		scaled_with_gain_modifier = $scaled_with_gain_modifier$
+	}
+}
+
+wallachian_terror_on_raze_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_government_mechanic = wallachian_terror_mechanic
+				has_country_modifier = wallachian_terror_brutalize_the_enemy
+			}
+		}
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = wal_number_of_provinces_razed
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = wallachian_terror_reduced_raze_penalty
+				}
+			}
+			add_province_modifier = {
+				name = wallachian_terror_raze_mod_nerfed
+				duration = 3650
+			}
+			add_nationalism = 10
+		}
+		else = {
+			add_province_modifier = {
+				name = wallachian_terror_raze_mod
+				duration = 5475
+			}
+			add_nationalism = 15
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = wal_more_terror_from_razing
+				}
+			}
+			multiply_variable = {
+				which = dev
+				value = 0.05
+			}
+		}
+		else = {
+			multiply_variable = {
+				which = dev
+				value = 0.025
+			}
+		}
+		owner = {
+			set_variable = {
+				which = dev
+				which = PREV
+			}
+			change_terror_var = {
+				var = dev
+				scaled_with_gain_modifier = yes
+			}
+		}
+	}
+}
+
+sell_crownland_modified_by_purges = {
+	if = {
+		limit = {
+			check_variable = {
+				which = estate_purges_amount
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				current_age = age_of_discovery
+			}
+			add_years_of_estate_land_income = 0.625
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_years_of_estate_land_income = 0.5
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+			}
+			add_years_of_estate_land_income = 0.375
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+			}
+			add_years_of_estate_land_income = 0.25
+		}
+		else = {
+			add_years_of_estate_land_income = 0.625
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = estate_purges_amount
+				value = 4
+			}
+		}
+		if = {
+			limit = {
+				current_age = age_of_discovery
+			}
+			add_years_of_estate_land_income = 1.25
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_years_of_estate_land_income = 1
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+			}
+			add_years_of_estate_land_income = 0.75
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+			}
+			add_years_of_estate_land_income = 0.5
+		}
+		else = {
+			add_years_of_estate_land_income = 1.25
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = estate_purges_amount
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				current_age = age_of_discovery
+			}
+			add_years_of_estate_land_income = 1.75
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_years_of_estate_land_income = 1.4
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+			}
+			add_years_of_estate_land_income = 1.05
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+			}
+			add_years_of_estate_land_income = 0.7
+		}
+		else = {
+			add_years_of_estate_land_income = 1.75
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = estate_purges_amount
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				current_age = age_of_discovery
+			}
+			add_years_of_estate_land_income = 2.125
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_years_of_estate_land_income = 1.7
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+			}
+			add_years_of_estate_land_income = 1.275
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+			}
+			add_years_of_estate_land_income = 0.85
+		}
+		else = {
+			add_years_of_estate_land_income = 2.125
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				current_age = age_of_discovery
+			}
+			add_years_of_estate_land_income = 2.375
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_years_of_estate_land_income = 1.9
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+			}
+			add_years_of_estate_land_income = 1.425
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+			}
+			add_years_of_estate_land_income = 0.95
+		}
+		else = {
+			add_years_of_estate_land_income = 2.125
+		}
+	}
+}
+
+wallachian_terror_spawn_rebels_from_purge = {
+	if = {
+		limit = {
+			has_estate = estate_church
+		}
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			owner = {
+				trigger_switch = {
+					on_trigger = religion
+					anglican = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = anglican_rebels
+							}
+						}
+					}
+					hussite = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = hussite_rebels
+							}
+						}
+					}
+					animism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = animism_rebels
+							}
+						}
+					}
+					buddhism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = buddhism_rebels
+							}
+						}
+					}
+					catholic = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = catholic_rebels
+							}
+						}
+					}
+					confucianism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = confucianism_rebels
+							}
+						}
+					}
+					coptic = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = coptic_rebels
+							}
+						}
+					}
+					hinduism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = hinduism_rebels
+							}
+						}
+					}
+					ibadi = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = ibadi_rebels
+							}
+						}
+					}
+					inti = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = inti_rebels
+							}
+						}
+					}
+					jewish = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = jewish_rebels
+							}
+						}
+					}
+					mahayana = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = mahayana_rebels
+							}
+						}
+					}
+					mesoamerican_religion = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = maya_rebels
+							}
+						}
+					}
+					nahuatl = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = nahuatl_rebels
+							}
+						}
+					}
+					norse_pagan_reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = norse_pagan_reformed_rebels
+							}
+						}
+					}
+					orthodox = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = orthodox_rebels
+							}
+						}
+					}
+					protestant = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = protestant_rebels
+							}
+						}
+					}
+					reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = reformed_rebels
+							}
+						}
+					}
+					shamanism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shamanism_rebels
+							}
+						}
+					}
+					shiite = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shiite_rebels
+							}
+						}
+					}
+					shinto = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shinto_rebels
+							}
+						}
+					}
+					sikhism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = sikhism_rebels
+							}
+						}
+					}
+					sunni = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = sunni_rebels
+							}
+						}
+					}
+					tengri_pagan_reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = tengri_pagan_reformed_rebels
+							}
+						}
+					}
+					totemism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = totemism_rebels
+							}
+						}
+					}
+					vajrayana = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = vajrayana_rebels
+							}
+						}
+					}
+					zoroastrian = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = zoroastrian_rebels
+							}
+						}
+					}
+					dreamtime = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = dreamtime_rebels
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_nobles
+		}
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				no_defined_leader = yes
+				type = noble_rebels
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_burghers
+		}
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				no_defined_leader = yes
+				type = particularist_rebels
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_cossacks
+		}
+		random_owned_province = {
+			limit = {
+				has_terrain = steppe
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				no_defined_leader = yes
+				type = cossack_rebels
+			}
+		}
+	}
+}
+
+wallachian_terror_calculate_ruler_mana_sum = {
+	export_to_variable = {
+		which = ruler_adm_var
+		value = ADM
+		who = event_target:impaled_country
+	}
+	export_to_variable = {
+		which = ruler_dip_var
+		value = DIP
+		who = event_target:impaled_country
+	}
+	export_to_variable = {
+		which = ruler_mil_var
+		value = MIL
+		who = event_target:impaled_country
+	}
+	set_variable = {
+		which = mana_sum
+		which = ruler_adm_var
+	}
+	change_variable = {
+		which = mana_sum
+		which = ruler_dip_var
+	}
+	change_variable = {
+		which = mana_sum
+		which = ruler_mil_var
+	}
+}
+
+wallachian_terror_convert_impaled_ruler_to_mana = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	multiply_variable = {
+		which = mana_sum
+		value = 2.5
+	}
+	set_variable = {
+		which = rounded_mana_sum
+		which = mana_sum
+	}
+	round_variable = {
+		which = rounded_mana_sum
+		value = 0
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_adm_power
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_dip_power
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_mil_power
+	}
+}
+
+wallachian_terror_convert_impaled_ruler_to_terror = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	multiply_variable = {
+		which = mana_sum
+		value = 2.5
+	}
+	change_terror_var = {
+		var = mana_sum
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_impaled_our_ruler_effect = {
+	custom_tooltip = wallachian_terror_impaled_our_ruler_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			add_opinion = {
+				who = event_target:impaler_country
+				modifier = impaled_our_ruler_opinion
+			}
+		}
+	}
+}
+
+wallachian_terror_impaled_our_relative_effect = {
+	custom_tooltip = wallachian_terror_impaled_our_relative_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_known_country = {
+				limit = {
+					NOT = {
+						tag = PREV
+					}
+					OR = {
+						dynasty = PREV
+						PREV = {
+							is_origin_of_consort = PREV
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = impaled_our_relative_opinion
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_impaled_our_subject_effect = {
+	if = {
+		limit = {
+			hidden_trigger = {
+				event_target:impaled_country = {
+					is_subject = yes
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_impaled_our_subject_effect_tooltip
+		hidden_effect = {
+			event_target:impaled_country = {
+				every_country = {
+					limit = {
+						overlord_of = event_target:impaled_country
+					}
+					add_opinion = {
+						who = event_target:impaler_country
+						modifier = impaled_our_subject_opinion
+					}
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_impaled_our_ally_effect = {
+	custom_tooltip = wallachian_terror_impaled_our_ally_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_ally = {
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = impaled_our_ally_opinion
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_impaled_our_enemy_effect = {
+	custom_tooltip = wallachian_terror_impaled_our_enemy_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_country = {
+				limit = {
+					NOT = {
+						is_rival = event_target:impaled_country
+					}
+					OR = {
+						is_enemy = event_target:impaled_country
+						war_with = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = impaled_our_enemy_opinion
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_impaled_our_rival_effect = {
+	custom_tooltip = wallachian_terror_impaled_our_rival_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_country = {
+				limit = {
+					OR = {
+						is_rival = event_target:impaled_country
+						historical_rival_with = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = impaled_our_rival_opinion
+				}
+				add_trust = {
+					value = 5
+					who = event_target:impaler_country
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_impalement_variable_opinion_effect = {
+	custom_tooltip = wallachian_terror_impalement_variable_opinion_effect
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_known_country = {
+				limit = {
+					knows_country = event_target:impaler_country
+					NOT = {
+						tag = event_target:impaler_country
+					}
+					NOT = {
+						tag = event_target:impaled_country
+					}
+					NOT = {
+						alliance_with = event_target:impaled_country
+					}
+					NOT = {
+						overlord_of = event_target:impaled_country
+					}
+					NOT = {
+						is_rival = event_target:impaled_country
+					}
+					NOT = {
+						historical_rival_with = event_target:impaled_country
+					}
+					NOT = {
+						is_enemy = event_target:impaled_country
+					}
+					NOT = {
+						war_with = event_target:impaled_country
+					}
+					NOT = {
+						dynasty = event_target:impaled_country
+					}
+					NOT = {
+						event_target:impaled_country = {
+							is_origin_of_consort = PREV
+						}
+					}
+				}
+				export_to_variable = {
+					which = opinion_of_impaled
+					value = opinion
+					who = event_target:impaled_country
+				}
+				wallachian_terror_variable_opinion_loss_effect = {
+					opinion_var = opion_of_impaled
+					opinion_loss_divisor = 3					#33% of opinion is lost opinion, if the result is positive
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_variable_opinion_loss_effect = {
+	set_variable = {
+		which = opinion_loss
+		which = $opinion_var$
+	}
+	divide_variable = {
+		which = opinion_loss
+		value = $opinion_loss_divisor$
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = opinion_loss
+				value = 1
+			}
+		}
+		variable_add_opinion = {
+			var = opinion_loss
+			modifier = variable_disgusted_by_impalement_opinion
+			who = event_target:impaler_country
+		}
+	}
+}
+
+wallachian_terror_impalement_impaled_country_ae_effect = {
+	custom_tooltip = wallachian_terror_impalement_impaled_country_ae_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			add_aggressive_expansion = {
+				who = PREV
+				value = 25
+				apply_calc = no
+			}
+		}
+	}
+}
+
+wallachian_terror_impalement_variable_ae_gain_effect = {
+	custom_tooltip = wallachian_terror_impalement_variable_ae_gain_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			every_known_country = {
+				limit = {
+					knows_country = event_target:impaler_country
+					NOT = {
+						tag = event_target:impaler_country
+					}
+					NOT = {
+						is_rival = event_target:impaled_country
+					}
+					NOT = {
+						historical_rival_with = event_target:impaled_country
+					}
+					NOT = {
+						is_enemy = event_target:impaled_country
+					}
+					NOT = {
+						war_with = event_target:impaled_country
+					}
+				}
+				export_to_variable = {
+					which = opinion_of_impaled
+					value = opinion
+					who = event_target:impaled_country
+				}
+				wallachian_terror_variable_ae_gain_effect = {
+					opinion_var = opinion_of_impaled
+					ae_gain_multiplier = 0.1					#10% of opinion is gained as AE, if the result is positive
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_variable_ae_gain_effect = {
+	set_variable = {
+		which = ae_gain
+		which = $opinion_var$
+	}
+	multiply_variable = {
+		which = ae_gain
+		value = $ae_gain_multiplier$
+	}
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_part_of_hre = yes
+			}
+			is_part_of_hre = yes
+		}
+		multiply_variable = {
+			which = ae_gain
+			value = 1.5
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = ae_gain
+				value = 1
+			}
+		}
+		variable_add_agressive_expansion = {
+			var = ae_gain
+			who = event_target:impaler_country
+			apply_calc = no
+		}
+	}
+}
+
+wallachian_terror_country_reaction_effect = {
+	wallachian_terror_impaled_our_ruler_effect = yes
+	wallachian_terror_impaled_our_relative_effect = yes
+	wallachian_terror_impaled_our_subject_effect = yes
+	wallachian_terror_impaled_our_ally_effect = yes
+	wallachian_terror_impaled_our_enemy_effect = yes
+	wallachian_terror_impaled_our_rival_effect = yes
+	wallachian_terror_impalement_variable_opinion_effect = yes
+	wallachian_terror_impalement_impaled_country_ae_effect = yes
+	wallachian_terror_impalement_variable_ae_gain_effect = yes
+}
+
+wallachian_terror_hre_reaction_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				event_target:impaled_country = {
+					is_part_of_hre = yes
+					is_emperor = no
+				}
+			}
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					NOT = {
+						tag = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = hre_prince_outraged_at_impalement_opinion
+				}
+			}
+			event_target:Emperor = {
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = hre_emperor_outraged_at_impalement_opinion
+				}
+				country_event = {
+					id = wallachian_terror_events.9
+				}
+			}
+			wallachian_terror_convert_impaled_ruler_to_prestige_or_monarch_power = yes
+		}
+	}
+}
+
+wallachian_terror_international_reaction_effect = {
+	wallachian_terror_country_reaction_effect = yes
+	wallachian_terror_hre_reaction_effect = yes
+}
+
+wallachian_terror_hre_emperor_failed_to_protect_effect = {
+	every_country = {
+		limit = {
+			is_part_of_hre = yes
+			is_emperor = no
+		}
+		add_trust = {
+			who = event_target:Emperor
+			value = -5
+		}
+		add_opinion = {
+			who = event_target:Emperor
+			modifier = hre_emperor_failed_to_prevent_impalement_opinion
+		}
+	}
+	add_imperial_influence = -5
+	add_prestige = -10
+	add_legitimacy = -10
+	add_country_modifier = {
+		name = wallachian_terror_failed_the_empire
+		duration = 3650
+	}
+	add_casus_belli = {
+		type = cb_insult
+		target = event_target:impaler_country
+		months = 240
+	}
+}
+
+wallachian_terror_convert_impaled_ruler_to_prestige_or_monarch_power = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	variable_add_prestige_or_monarch_power = {
+		var = mana_sum
+	}
+}
+
+wallachian_terror_impaled_escape_effect = {
+	custom_tooltip = wallachian_terror_events_impaled_escape_tooltip
+	capital_scope = {
+		add_province_modifier = {
+			name = wallachian_terror_leadership_in_exile
+			duration = -1
+		}
+	}
+	custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+}
+
+wallachian_terror_remove_severed_command_modifier = {
+	if = {
+		limit = {
+			has_province_modifier = wallachian_terror_severed_command
+		}
+		remove_province_modifier = wallachian_terror_severed_command
+	}
+}
+
+wallachian_terror_remove_leadership_in_exile_modifier = {
+	if = {
+		limit = {
+			has_province_modifier = wallachian_terror_leadership_in_exile
+		}
+		remove_province_modifier = wallachian_terror_leadership_in_exile
+	}
+}
+
+wallachian_terror_convert_impaled_ruler_to_pp = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	set_variable = {
+		which = count
+		which = mana_sum
+	}
+	divide_variable = {
+		which = count
+		value = 3
+	}
+	round_variable = {
+		which = count
+		value = 0
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = count
+				value = 1
+			}
+		}
+		add_power_projection = {
+			type = wallachian_terror_impaled_pp
+			amount = 1
+		}
+		subtract_variable = {
+			which = count
+			value = 1
+		}
+	}
+}
+
+wallachian_terror_convert_impaled_rival_to_pp = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	set_variable = {
+		which = count
+		which = mana_sum
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = count
+				value = 1
+			}
+		}
+		add_power_projection = {
+			type = wallachian_terror_impaled_rival_pp
+			amount = 1
+		}
+		subtract_variable = {
+			which = count
+			value = 1
+		}
+	}
+}
+
+wallachian_terror_convert_humiliated_ruler_to_terror = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	divide_variable = {
+		which = mana_sum
+		value = 3
+	}
+	change_terror_var = {
+		var = mana_sum
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_convert_humiliated_rival_to_terror = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	divide_variable = {
+		which = mana_sum
+		value = 2
+	}
+	change_terror_var = {
+		var = mana_sum
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_convert_humiliated_ruler_to_prestige = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	variable_effect = {
+		var = mana_sum
+		effect = add_prestige
+	}
+}
+
+wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	multiply_variable = {
+		which = mana_sum
+		value = 1.5
+	}
+	variable_add_prestige_or_monarch_power = {
+		var = mana_sum
+	}
+}
+
+wallachian_terror_convert_humiliated_ruler_to_legitimacy_or_equivalent = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	if = {
+		limit = {
+			government = monarchy
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 1.5
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_legitimacy
+		}
+	}
+	else_if = {
+		limit = {
+			government = republic
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_republican_tradition
+		}
+	}
+	else_if = {
+		limit = {
+			government = theocracy
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 1.5
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_devotion
+		}
+	}
+	else_if = {
+		limit = {
+			uses_meritocracy = yes
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 1.5
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_meritocracy
+		}
+	}
+	else_if = {
+		limit = {
+			uses_horde_unity = yes
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 1.5
+		}
+		variable_effect = {
+			var = add_horde_unity
+			effect = add_meritocracy
+		}
+	}
+}
+
+wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	if = {
+		limit = {
+			government = monarchy
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 2
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_legitimacy
+		}
+	}
+	else_if = {
+		limit = {
+			government = republic
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 1.5
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_republican_tradition
+		}
+	}
+	else_if = {
+		limit = {
+			government = theocracy
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 2
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_devotion
+		}
+	}
+	else_if = {
+		limit = {
+			uses_meritocracy = yes
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 2
+		}
+		variable_effect = {
+			var = mana_sum
+			effect = add_meritocracy
+		}
+	}
+	else_if = {
+		limit = {
+			uses_horde_unity = yes
+		}
+		multiply_variable = {
+			which = mana_sum
+			value = 2
+		}
+		variable_effect = {
+			var = add_horde_unity
+			effect = add_meritocracy
+		}
+	}
+}
+
+wallachian_terror_impalement_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = number_of_rulers_impaled
+			value = 1
+		}
+	}
+	custom_tooltip = wallachian_terror_events_impale_family_tooltip
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = wallachian_terror_events_convert_ruler_to_mana_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_ruler_to_mana = yes
+	}
+	custom_tooltip = wallachian_terror_events_convert_ruler_to_terror_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_ruler_to_terror = yes
+	}
+	if = {
+		limit = {
+			is_rival = event_target:impaled_country
+		}
+		custom_tooltip = wallachian_terror_rival_converted_to_pp_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_impaled_rival_to_pp = yes
+		}
+	}
+	else = {
+		custom_tooltip = wallachian_terror_ruler_converted_to_pp_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_impaled_ruler_to_pp = yes
+		}
+	}
+	wallachian_terror_international_reaction_effect = yes
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_subject = yes
+			}
+		}
+		custom_tooltip = wallachian_terror_events_overlord_reaction_tooltip
+	}
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_part_of_hre = yes
+			}
+		}
+		custom_tooltip = wallachian_terror_events_hre_reaction_tooltip
+	}
+	custom_tooltip = tooltip_line_divider
+	hidden_effect = {
+		event_target:impaled_country = {
+			kill_consort = yes
+			kill_heir = {
+				allow_new_heir = yes
+			}
+			kill_ruler = yes
+			country_event = {
+				id = wallachian_terror_events.7
+			}
+		}
+	}
+	custom_tooltip = wallachian_terror_kingslayer_tooltip
+	hidden_effect = {
+		add_country_modifier = {
+			name = wallachian_terror_impaled_ruler
+			duration = 3650
+		}
+	}
+	wallachian_terror_special_country_impalement_effects = yes
+}
+
+wallachian_terror_pope_impalement_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = number_of_rulers_impaled
+			value = 1
+		}
+		PAP = {
+			country_event = {
+				id = pope_impalement.0
+			}
+		}
+		every_country = {
+			limit = {
+				religion = catholic
+				NOT = {
+					tag = PAP
+				}
+			}
+			country_event = {
+				id = pope_impalement.1
+			}
+		}
+		set_country_flag = wallachia_impaled_pope
+	}
+	if = {
+		limit = {
+			is_ruler_impaler = yes
+		}
+		custom_tooltip = wallachian_terror_pope_execution_impaler_tooltip
+		add_manpower = -0.025
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+	else = {
+		custom_tooltip = wallachian_terror_pope_execution_tooltip
+	}
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = wallachian_terror_events_convert_ruler_to_mana_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_ruler_to_mana = yes
+	}
+	custom_tooltip = wallachian_terror_events_convert_ruler_to_terror_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_ruler_to_terror = yes
+	}
+	if = {
+		limit = {
+			is_rival = event_target:impaled_country
+		}
+		custom_tooltip = wallachian_terror_rival_converted_to_pp_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_impaled_rival_to_pp = yes
+		}
+	}
+	else = {
+		custom_tooltip = wallachian_terror_ruler_converted_to_pp_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_impaled_ruler_to_pp = yes
+		}
+	}
+	custom_tooltip = wallachian_terror_pope_reaction_tooltip
+	custom_tooltip = wallachian_terror_catholic_reaction_tooltip
+	wallachian_terror_impaled_our_relative_effect = yes
+	wallachian_terror_impaled_our_subject_effect = yes
+	wallachian_terror_impaled_our_ally_effect = yes
+	wallachian_terror_impaled_our_enemy_effect = yes
+	wallachian_terror_impaled_our_rival_effect = yes
+	wallachian_terror_impalement_variable_opinion_effect = yes
+	wallachian_terror_impalement_impaled_country_ae_effect = yes
+	wallachian_terror_impalement_variable_ae_gain_effect = yes
+	wallachian_terror_hre_reaction_effect = yes
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_subject = yes
+			}
+		}
+		custom_tooltip = wallachian_terror_events_overlord_reaction_tooltip
+	}
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_part_of_hre = yes
+			}
+		}
+		custom_tooltip = wallachian_terror_events_hre_reaction_tooltip
+	}
+	custom_tooltip = tooltip_line_divider
+	hidden_effect = {
+		PAP = {
+			kill_consort = yes
+			kill_heir = {
+				allow_new_heir = yes
+			}
+			kill_ruler = yes
+		}
+	}
+	country_event = {
+		id = pope_impalement.2
+	}
+}
+
+#Effect that handles the effects of impalement on certain tags.
+wallachian_terror_special_country_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = BUL
+				}
+			}
+			has_impaled_bulgaria_ruler = no
+		}
+		wallachian_terror_bulgaria_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_bulgaria_impaled_effects = yes
+		set_country_flag = wallachia_impaled_bulgaria
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = MGY
+				}
+			}
+			has_impaled_magyars_ruler = no
+		}
+		wallachian_terror_magyars_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_magyars_impaled_effects = yes
+		set_country_flag = wallachia_impaled_magyars
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = GLH
+				}
+			}
+			has_impaled_golden_horde_ruler = no
+		}
+		wallachian_terror_golden_horde_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_golden_horde_impaled_effects = yes
+		set_country_flag = wallachia_impaled_golden_horde
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = BYZ
+				}
+			}
+			has_impaled_byzantium_ruler = no
+		}
+		wallachian_terror_byzantium_impaler_effects = yes
+		wallachian_terror_byzantium_impaled_effects = yes
+		set_country_flag = wallachia_impaled_byzantium
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = event_target:retribution_leader
+				}
+			}
+			has_impaled_retribution_leader = no
+		}
+		wallachian_terror_retribution_leader_impaler_effect = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_retribution_leader_impaled_effect = yes
+		set_country_flag = wallachia_impaled_retribution_leader
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = SEL
+				}
+			}
+			has_impaled_seljuks_ruler = no
+		}
+		wallachian_terror_seljuk_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_seljuk_impaled_effects = yes
+		set_country_flag = wallachia_impaled_seljuks
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = VEN
+				}
+			}
+			has_impaled_venice_ruler = no
+		}
+		wallachian_terror_venice_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_venice_impaled_effects = yes
+		set_country_flag = wallachia_impaled_venice
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = SIC
+				}
+			}
+			has_impaled_sicily_ruler = no
+		}
+		wallachian_terror_sicily_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_sicily_impaled_effects = yes
+		set_country_flag = wallachia_impaled_sicily
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = LOM
+				}
+			}
+			has_impaled_lombardy_ruler = no
+		}
+		wallachian_terror_lombardy_impaler_effects = yes
+		wallachian_terror_lombardy_impaled_effects = yes
+		set_country_flag = wallachia_impaled_lombardy
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = NAZ
+				}
+			}
+			has_impaled_nizzarids_ruler = no
+			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
+		}
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
+		set_country_flag = wallachia_impaled_nizzarids
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = EGY
+				}
+			}
+			has_impaled_nizzarids_ruler = no
+			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
+		}
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
+		set_country_flag = wallachia_impaled_egypt
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ABS
+				}
+			}
+			has_impaled_nizzarids_ruler = no
+			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
+		}
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
+		set_country_flag = wallachia_abbasids_egypt
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				OR = {
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
+				}
+			}
+		}
+		wallachian_terror_persia_impaler_effects = yes
+		wallachian_terror_persia_impaled_effects = yes
+		set_country_flag = wallachia_impaled_persia
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ADU
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_ruler_impaler = no
+			}
+			wallachian_terror_andalusia_impaler_effects = yes
+			wallachian_terror_andalusia_impaled_effects = yes
+		}
+		set_country_flag = wallachia_impaled_andalusia
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = FRC
+			}
+		}
+		wallachian_terror_francia_impaler_effects = yes
+		wallachian_terror_francia_impaled_effects = yes
+		set_country_flag = wallachia_impaled_francia
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = FRA
+				}
+			}
+		}
+		wallachian_terror_francia_impaler_effects = yes
+		wallachian_terror_francia_impaled_effects = yes
+		set_country_flag = wallachia_impaled_france
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+			}
+			has_impaled_england_ruler = no
+		}
+		wallachian_terror_england_impaler_effects = yes
+		wallachian_terror_england_impaled_effects = yes
+		set_country_flag = wallachia_impaled_england
+	}
+}
+
+wallachian_terror_bulgaria_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_country_modifier = {
+			name = bulgaria_impaled_mod
+			duration = 7300
+		}
+	}
+}
+
+wallachian_terror_bulgaria_impaler_effects = {
+	add_country_modifier = {
+		name = wallachia_impaled_bulgaria_mod
+		duration = 7300
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_magyars_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_country_modifier = {
+			name = magyars_impaled_mod
+			duration = 7300
+		}
+	}
+}
+
+wallachian_terror_magyars_impaler_effects = {
+	add_country_modifier = {
+		name = wallachia_impaled_magyars_mod
+		duration = 7300
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_golden_horde_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		custom_tooltip = golden_horde_impalement_effects_crimean_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = crimean
+					controlled_by = GLH
+				}
+				add_core = CRI
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_nogaybak_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = nogaybak
+					controlled_by = GLH
+				}
+				add_core = NOG
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_astrakhani_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = astrakhani
+					controlled_by = GLH
+				}
+				add_core = AST
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_kazani_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = kazani
+					controlled_by = GLH
+				}
+				add_core = KAZ
+				add_unrest = 20
+			}
+		}
+	}
+}
+
+wallachian_terror_golden_horde_impaler_effects = {
+	add_ruler_modifier = {
+		name = aln_bane
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_byzantium_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_legitimacy = -100
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+	}
+}
+
+wallachian_terror_byzantium_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	custom_tooltip = AB_EMPTY
+	add_legitimacy = 10
+	add_adm_power = 25
+	add_dip_power = 25
+	add_mil_power = 25
+	custom_tooltip = AB_EMPTY
+	complex_dynamic_effect = {
+		first_custom_tooltip = if_ruler_has_impaler_trait
+		first_limit = "is_ruler_impaler = yes"
+		first_effect = "add_country_modifier = {
+				name = byzantium_greekfire
+				duration = -1
+			}"
+	}
+}
+
+wallachian_terror_retribution_leader_impaled_effect = {
+	event_target:impaled_country = {
+		custom_tooltip = retribution_leader_impaled_tooltip
+		tooltip = {
+			add_war_exhaustion = 10
+			add_country_modifier = {
+				name = retribution_leader_was_impaled
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
+				}
+				add_war_exhaustion = 10
+				add_country_modifier = {
+					name = retribution_leader_was_impaled
+					duration = 1825
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_retribution_leader_impaler_effect = {
+	add_war_exhaustion = -10
+	add_army_tradition_or_mil_power = {
+		amount = 10
+	}
+}
+
+wallachian_terror_seljuk_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 5
+				type = orthodox_rebels
+				friend = event_target:impaler_country
+			}
+		}
+	}
+}
+
+wallachian_terror_seljuk_impaler_effects = {
+	add_ruler_modifier = {
+		name = byz_avenger
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_venice_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_mercantilism = -10
+		add_navy_tradition = -20
+	}
+}
+
+wallachian_terror_venice_impaler_effects = {
+	add_ruler_modifier = {
+		name = wallachia_impaled_venice_modifier
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	custom_tooltip = AB_EMPTY
+	add_mercantilism = 4
+	add_navy_tradition = 10
+}
+
+wallachian_terror_sicily_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_navy_tradition = -20
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = sicily_impaled_mod
+			duration = 7300
+		}
+	}
+}
+
+wallachian_terror_sicily_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+	custom_tooltip = AB_EMPTY
+	add_navy_tradition = 10
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = wallachia_block_pirate_raids_tooltip
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = wallachia_pirates_bane
+				duration = -1
+			}
+		}
+	}
+}
+
+wallachian_terror_emperor_impalement_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = number_of_rulers_impaled
+			value = 1
+		}
+	}
+	custom_tooltip = wallachian_terror_emperor_impaled_tooltip
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = wallachian_terror_events_convert_emperor_to_mana_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_emperor_to_mana = yes
+	}
+	custom_tooltip = wallachian_terror_events_convert_emperor_to_terror_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_emperor_to_terror = yes
+	}
+	custom_tooltip = wallachian_terror_rival_converted_to_pp_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_impaled_rival_to_pp = yes
+	}
+	custom_tooltip = wallachian_terror_emperor_converted_to_prestige_tooltip
+	hidden_effect = {
+		wallachian_terror_convert_humiliated_ruler_to_prestige = yes
+	}
+	wallachian_terror_country_reaction_effect = yes
+	custom_tooltip = hre_emperor_impaled_empire_reaction
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			if = {
+				limit = {
+					is_emperor = no
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = wallachian_terror_impaled_the_emperor
+				}
+			}
+			add_aggressive_expansion = {
+				who = event_target:impaler_country
+				value = 100
+				apply_calc = no
+			}
+			add_trust = {
+				who = event_target:impaler_country
+				value = -100
+			}
+		}
+	}
+	custom_tooltip = tooltip_line_divider
+	hidden_effect = {
+		event_target:impaled_country = {
+			kill_consort = yes
+			kill_heir = {
+				allow_new_heir = yes
+			}
+			kill_ruler = yes
+			country_event = {
+				id = wallachian_terror_events.7
+			}
+		}
+	}
+	add_ruler_modifier = {
+		name = antichrist
+		duration = -1
+	}
+	add_country_modifier = {
+		name = legacy_of_the_antichrist
+		duration = -1
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = FRC
+			}
+		}
+		set_country_flag = wallachia_impaled_francia
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_or_was_tag = {
+					tag = FRA
+				}
+			}
+		}
+		set_country_flag = wallachia_impaled_france
+	}
+}
+
+wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = {
+	custom_tooltip = impaling_on_pyramids_cost_tooltip
+	add_treasury = -500
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = pyramids_monument_bonus_tooltip
+}
+
+wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_legitimacy = -100
+		if = {
+			limit = {
+				event_target:impaler_country = {
+					is_ruler_impaler = yes
+				}
+			}
+			if = {
+				limit = {
+					tag = NAZ
+				}
+				custom_tooltip = pillage_naz_cities_tooltips
+			}
+			else_if = {
+				limit = {
+					tag = EGY
+				}
+				custom_tooltip = pillage_egy_cities_tooltips
+			}
+			tooltip = {
+				add_devastation = 50
+				add_base_tax = -1
+				add_base_manpower = -1
+				add_base_production = -1
+				event_target:impaler_country = {
+					add_treasury = 25
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						controlled_by = event_target:impaler_country
+						owned_by = event_target:impaled_country
+					}
+					add_devastation = 50
+					add_base_tax = -1
+					add_base_manpower = -1
+					add_base_production = -1
+					event_target:impaler_country = {
+						add_treasury = 25
+					}
+				}
+			}
+		}
+	}
+}
+
+wallachian_terror_lombardy_impaler_effects = {
+	add_army_tradition_or_mil_power = {
+		amount = 10
+	}
+	add_ruler_modifier = {
+		name = wallachia_impaled_lombardy_mod
+		duration = -1
+	}
+}
+
+wallachian_terror_lombardy_impaled_effects = {
+	event_target:impaled_country = {
+		add_country_modifier = {
+			name = lombardy_impaled_mod
+			duration = 7300
+		}
+	}
+}
+
+wallachian_terror_persia_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+	if = {
+		limit = {
+			is_ruler_impaler = yes
+		}
+		change_terror = {
+			value = 15
+			scaled_with_gain_modifier = yes
+		}
+	}
+	add_country_modifier = {
+		name = wallachia_monster_of_the_west
+		duration = 7300
+	}
+}
+
+wallachian_terror_persia_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige_or_monarch_power = {
+			amount = -20
+		}
+		add_stability = -6
+		add_legitimacy = -100
+	}
+}
+
+wallachian_terror_andalusia_impaler_effects = {
+	add_ruler_modifier = {
+		name = wallachia_impaled_andalusia
+		duration = -1
+	}
+	custom_tooltip = muslims_countries_angry_impaled_caliph_tooltip
+	hidden_effect = {
+		every_country = {
+			limit = {
+				religion_group = muslim
+			}
+			add_opinion = {
+				who = PREV
+				modifier = wallachia_impaled_the_caliph
+			}
+			add_trust = {
+				who = PREV
+				value = -50
+			}
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				religion_group = muslim
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = muslim_provinces_angry_impaled_caliph_tooltip
+		tooltip = {
+			add_unrest = 10
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion_group = muslim
+				}
+				add_unrest = 10
+			}
+		}
+	}
+}
+
+wallachian_terror_andalusia_impaled_effects = {
+	event_target:impaled_country = {
+		custom_tooltip = muslim_volunteers_adu_tooltip
+		add_yearly_manpower = 7
+		add_prestige = -20
+	}
+}
+
+wallachian_terror_francia_impaler_effects = {
+	clean_add_country_modifier = {
+		name = wallachia_i_am_the_state
+		duration = 10950
+	}
+	add_prestige_or_monarch_power = {
+		amount = 25
+	}
+}
+
+wallachian_terror_francia_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -25
+		add_stability = -3
+		add_legitimacy = -50
+	}
+}
+
+wallachian_terror_england_impaler_effects = {
+	if = {
+		limit = {
+			is_ruler_impaler = yes
+		}
+		change_terror = {
+			value = 20
+			scaled_with_gain_modifier = yes
+		}
+	}
+	add_navy_tradition = 25
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	add_country_modifier = {
+		name = wallachia_destroyed_the_wooden_wall
+		duration = 10950
+	}
+}
+
+wallachian_terror_england_impaled_effects = {
+	event_target:impaled_country = {
+		if = {
+			limit = {
+				PREV = {
+					is_ruler_impaler = yes
+				}
+			}
+			add_sailors = -100
+			add_stability = -1
+		}
+		add_navy_tradition = -25
+		add_prestige = -20
+		add_country_modifier = {
+			name = eng_wooden_wall_destroyed
+			duration = 10950
+		}
+	}
+}
+
+wallachian_terror_convert_impaled_emperor_to_mana = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	multiply_variable = {
+		which = mana_sum
+		value = 5
+	}
+	set_variable = {
+		which = rounded_mana_sum
+		which = mana_sum
+	}
+	round_variable = {
+		which = rounded_mana_sum
+		value = 0
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_adm_power
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_dip_power
+	}
+	variable_effect = {
+		var = rounded_mana_sum
+		effect = add_mil_power
+	}
+}
+
+wallachian_terror_convert_impaled_emperor_to_terror = {
+	wallachian_terror_calculate_ruler_mana_sum = yes
+	multiply_variable = {
+		which = mana_sum
+		value = 5
+	}
+	change_terror_var = {
+		var = mana_sum
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_humiliation_effect = {
+	wallachian_terror_special_humiliation_effects = yes
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				is_rival = event_target:impaled_country
+			}
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_terror = yes
+		}
+		if = {
+			limit = {
+				is_rival = event_target:impaled_country
+			}
+			add_humiliation_reward = yes
+		}
+	}
+	else = {
+		custom_tooltip = wallachian_terror_events_humiliated_ruler_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_prestige = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_ruler_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_terror = yes
+		}
+	}
+	hidden_effect = {
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.8
+			}
+		}
+	}
+}
+
+wallachian_terror_andalusia_christian_reprisals = {
+	custom_tooltip = adu_christians_scapegoat_tooltip
+	custom_tooltip = every_owned_and_controlled_christian_province_tooltip
+	tooltip = {
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+		add_devastation = 50
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = -10
+		}
+		add_province_modifier = {
+			name = adu_reprisals_against_christians
+			duration = 7300
+		}
+		custom_tooltip = adu_christian_liberator_bonus_tooltip
+		add_province_modifier = {
+			name = liberated_christains_from_adu
+			duration = -1
+		}
+	}
+	hidden_effect = {
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = -10
+		}
+		every_owned_province = {
+			limit = {
+				controlled_by = owner
+				religion_group = christian
+			}
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_devastation = 50
+			add_province_modifier = {
+				name = adu_reprisals_against_christians
+				duration = 7300
+			}
+			set_province_flag = adu_reprisals_against_christians_flag
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_dhimmi
+					loyalty = -10
+				}
+			}
+		}
+	}
+}
+
+impaled_andalusia_mission_bonus_effect = {
+	change_terror = {
+		value = 20
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_special_humiliation_effects = {
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = FRC
+				is_female = no
+			}
+		}
+		custom_tooltip = francia_castration_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_francia_impaler_humiliation_effects = yes
+		wallachian_terror_francia_impaled_humiliation_effects = yes
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+			}
+		}
+		custom_tooltip = england_dunked_in_channel_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_england_impaler_humiliation_effects = yes
+		wallachian_terror_england_impaled_humiliation_effects = yes
+		custom_tooltip = AB_EMPTY
+	}
+}
+
+wallachian_terror_francia_impaler_humiliation_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = wallachia_the_kings_balls
+				}
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = wallachia_the_kings_balls
+				duration = -1
+			}
+		}
+		custom_tooltip = kings_balls_tooltip
+	}
+}
+
+wallachian_terror_francia_impaled_humiliation_effects = {
+	event_target:impaled_country = {
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			remove_heir = {
+				allow_new_heir = no
+			}
+		}
+		add_opinion = {
+			who = event_target:impaler_country
+			modifier = wallachia_castrated_our_king
+		}
+		add_trust = {
+			who = event_target:impaler_country
+			value = -100
+		}
+		add_prestige = -50
+		add_legitimacy = -50
+		add_ruler_modifier = {
+			name = frc_castrated_king
+			duration = -1
+		}
+	}
+}
+
+wallachian_terror_england_impaler_humiliation_effects = {
+	add_navy_tradition = 5
+	add_prestige_or_monarch_power = {
+		amount = 5
+	}
+}
+
+wallachian_terror_england_impaled_humiliation_effects = {
+	event_target:impaled_country = {
+		add_navy_tradition = 5
+		add_prestige = -10
+		add_legitimacy = -25
+	}
+}
+
+upgrade_impaler_personality_reward = {
+	custom_tooltip = upgrade_impaler_personality_reward_tooltip
+	if = {
+		limit = {
+			is_ruler_impaler = no
+		}
+		change_terror = {
+			value = 30
+			scaled_with_gain_modifier = no
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler_personality
+		}
+		remove_ruler_personality = impaler_personality
+		add_ruler_personality = impaler2_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler2_personality
+		}
+		remove_ruler_personality = impaler2_personality
+		add_ruler_personality = impaler3_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler3_personality
+		}
+		change_terror = {
+			value = 75
+			scaled_with_gain_modifier = no
+		}
+	}
+}
+
+refund_terror_effect = {
+	if = {
+		limit = {
+			has_country_flag = refund_terror
+		}
+		change_terror = {
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+	}
+}

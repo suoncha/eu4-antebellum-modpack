@@ -1,0 +1,6 @@
+defined_text = {
+	name = tooltip_line_divider
+	text = {
+		localisation_key =  tooltip_line_divider
+	}
+}

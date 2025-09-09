@@ -1,0 +1,118 @@
+defined_text = {
+	name = roman_claim_throne_desc_loc
+	random = no
+	text = {
+		localisation_key = roman_claim_throne_desc_byz_angelids
+		trigger = {
+			FROM = {
+				is_or_was_tag = {
+					tag = BYZ					#Byzantium
+				}
+				dynasty = "Angelos"
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_byz_generic
+		trigger = {
+			FROM = {
+				is_or_was_tag = {
+					tag = BYZ					#Byzantium
+				}
+				NOT = {
+					dynasty = "Angelos"
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_nci_gabras
+		trigger = {
+			FROM = {
+				is_or_was_tag = {
+					tag = NCI					#Nicaea
+				}
+				dynasty = "Gabras"
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_nci_generic
+		trigger = {
+			FROM = {
+				is_or_was_tag = {
+					tag = NCI					#Nicaea
+				}
+				NOT = {
+					dynasty = "Gabras"
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_latin_states
+		trigger = {
+			FROM = {
+				OR = {
+					is_or_was_tag = {
+						tag = LAE						#Latin Empire
+					}
+					is_or_was_tag = {
+						tag = EPI						#Epirus
+					}
+					is_or_was_tag = {
+						tag = ACH						#Achaea
+					}
+					is_or_was_tag = {
+						tag = MOE						#Morea
+					}
+					is_or_was_tag = {
+						tag = ATH						#Athens
+					}
+					is_or_was_tag = {
+						tag = NAX						#Naxos
+					}
+					is_or_was_tag = {
+						tag = CEP						#Corfu
+					}
+					is_or_was_tag = {
+						tag = CYP						#Cyprus
+					}
+					is_or_was_tag = {
+						tag = KNI						#Knights Hospitaller
+					}
+					is_or_was_tag = {
+						tag = CRT						#Crete
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_komnenos
+		trigger = {
+			FROM = {
+				dynasty = "Komnenos"
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_wre
+		trigger = {
+			FROM = {
+				tag = WRE
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_desc_rom
+		trigger = {
+			FROM = {
+				tag = ROM
+			}
+		}
+	}
+	text = {
+		localisation_key = roman_claim_throne_generic
+	}
+}

@@ -1,0 +1,7 @@
+custom_button = {
+	name = "listboxSliderButton"
+	tooltip = scrollbar_tooltip
+	potential = { }
+	trigger = { }
+	effect = { }
+}

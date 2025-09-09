@@ -1,0 +1,21 @@
+defined_text = {
+	name = edict_commander_lock_button_tooltip_loc
+	text = {
+		localisation_key = global_edicts_unlocked_tt
+		trigger = {
+			any_province_in_state = {
+				has_province_flag = edict_commander_locked_state
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edicts_locked_tt
+		trigger = {
+			all_province_in_state = {
+				NOT = {
+					has_province_flag = edict_commander_locked_state
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+﻿l_english:
+ impaler_personality: "Impaler"
+ desc_impaler_personality: "§VImpaler Tier§!: §YTier I§!\nOur ruler is a sadistic tyrant who responds to even the smallest slight with unspeakable cruelty. While such fearsome brutality can crush rebellions and terrorize our enemies, it also isolates us diplomatically and risks tearing our own court apart. Those who displease the Impaler rarely get a second chance."
+ impaler_personality_die_desc: "[Root.Monarch.GetSheHeCap] was the spawn of Satan. Thank God they have returned to their creator in the fiery pits of Hell. May God forgive [Root.GetName] for the things our state has done..."
+ impaler2_personality: "§OImpaler§!"
+ desc_impaler2_personality: "§VImpaler Tier§!: §OTier II§!\nOur ruler is a sadistic tyrant who responds to even the smallest slight with unspeakable cruelty. While such fearsome brutality can crush rebellions and terrorize our enemies, it also isolates us diplomatically and risks tearing our own court apart. Those who displease the Impaler rarely get a second chance."
+ impaler2_personality_die_desc: "[Root.Monarch.GetSheHeCap] was the spawn of Satan. Thank God they have returned to their creator in the fiery pits of Hell. May God forgive [Root.GetName] for the things our state has done..."
+ impaler3_personality: "§RImpaler§!"
+ desc_impaler3_personality: "§VImpaler Tier§!: §RTier III§!\nOur ruler is a sadistic tyrant who responds to even the smallest slight with unspeakable cruelty. While such fearsome brutality can crush rebellions and terrorize our enemies, it also isolates us diplomatically and risks tearing our own court apart. Those who displease the Impaler rarely get a second chance."
+ impaler3_personality_die_desc: "[Root.Monarch.GetSheHeCap] was the spawn of Satan. Thank God they have returned to their creator in the fiery pits of Hell. May God forgive [Root.GetName] for the things our state has done..."
+ augustus_personality: "Augustus"
+ desc_augustus_personality: "They are a master of statecraft and conquest. Their leadership echoes the legacy of Rome's first Emperor—unshakable in ambition, unmatched in control."
+ augustus_personality_die_desc: "[Root.Monarch.GetName] leaves behind a realm forged in conquest and ruled through discipline. Their legacy endures in the order they imposed and the empire they shaped. The world will remember their reign as the dawn of a new era."

@@ -1,0 +1,11 @@
+toggle_country_flag = {
+	if = {
+		limit = {
+			has_country_flag = $flag$
+		}
+		clr_country_flag = $flag$
+	}
+	else = {
+		set_country_flag = $flag$
+	}
+}

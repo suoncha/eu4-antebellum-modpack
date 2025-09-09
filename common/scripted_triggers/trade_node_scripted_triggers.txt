@@ -1,0 +1,1096 @@
+province_is_in_great_lakes_trade_node = {
+	same_trade_node_as = 4064
+}
+
+province_is_in_congo_trade_node = {
+	same_trade_node_as = 4097
+}
+
+province_is_in_zambezi_trade_node = {
+	same_trade_node_as = 1191
+}
+
+province_is_in_katsina_trade_node = {
+	same_trade_node_as = 1149
+}
+
+province_is_in_ethiopia_trade_node = {
+	same_trade_node_as = 2772
+}
+
+province_is_in_gulf_of_aden_trade_node = {
+	same_trade_node_as = 4346
+}
+
+province_is_in_zanzibar_trade_node = {
+	same_trade_node_as = 1448
+}
+
+province_is_in_cape_of_good_hope_trade_node = {
+	same_trade_node_as = 1460
+}
+
+province_is_in_alexandria_trade_node = {
+	same_trade_node_as = 358
+}
+
+province_is_in_timbuktu_trade_node = {
+	same_trade_node_as = 1132
+}
+
+province_is_in_ivory_coast_trade_node = {
+	same_trade_node_as = 1466
+}
+
+province_is_in_tunis_trade_node = {
+	same_trade_node_as = 341
+}
+
+province_is_in_safi_trade_node = {
+	same_trade_node_as = 1110
+}
+
+province_is_in_girin_trade_node = {
+	same_trade_node_as = 730
+}
+
+province_is_in_lhasa_trade_node = {
+	same_trade_node_as = 677
+}
+
+province_is_in_chengdu_trade_node = {
+	same_trade_node_as = 679
+}
+
+province_is_in_burma_trade_node = {
+	same_trade_node_as = 584
+}
+
+province_is_in_siam_trade_node = {
+	same_trade_node_as = 1365
+}
+
+province_is_in_canton_trade_node = {
+	same_trade_node_as = 1371
+}
+
+province_is_in_philippines_trade_node = {
+	same_trade_node_as = 4358
+}
+
+province_is_in_nippon_trade_node = {
+	same_trade_node_as = 1376
+}
+
+province_is_in_hangzhou_trade_node = {
+	same_trade_node_as = 684
+}
+
+province_is_in_xian_trade_node = {
+	same_trade_node_as = 700
+}
+
+province_is_in_beijing_trade_node = {
+	same_trade_node_as = 4233
+}
+
+province_is_in_the_moluccas_trade_node = {
+	same_trade_node_as = 1357
+}
+
+province_is_in_siberia_trade_node = {
+	same_trade_node_as = 1064
+}
+
+province_is_in_yumen_trade_node = {
+	same_trade_node_as = 707
+}
+
+province_is_in_malacca_trade_node = {
+	same_trade_node_as = 1361
+}
+
+province_is_in_bengal_trade_node = {
+	same_trade_node_as = 1343
+}
+
+province_is_in_doab_trade_node = {
+	same_trade_node_as = 524
+}
+
+province_is_in_lahore_trade_node = {
+	same_trade_node_as = 507
+}
+
+province_is_in_deccan_trade_node = {
+	same_trade_node_as = 1948
+}
+
+province_is_in_coromandel_trade_node = {
+	same_trade_node_as = 1340
+}
+
+province_is_in_gujarat_trade_node = {
+	same_trade_node_as = 504
+}
+
+province_is_in_hormuz_trade_node = {
+	same_trade_node_as = 1334
+}
+
+province_is_in_basra_trade_node = {
+	same_trade_node_as = 1335
+}
+
+province_is_in_samarkand_trade_node = {
+	same_trade_node_as = 454
+}
+
+province_is_in_persia_trade_node = {
+	same_trade_node_as = 4341
+}
+
+province_is_in_aleppo_trade_node = {
+	same_trade_node_as = 377
+}
+
+province_is_in_astrakhan_trade_node = {
+	same_trade_node_as = 464
+}
+
+province_is_in_crimea_trade_node = {
+	same_trade_node_as = 1322
+}
+
+province_is_in_constantinople_trade_node = {
+	same_trade_node_as = 1320
+}
+
+province_is_in_kiev_trade_node = {
+	same_trade_node_as = 280
+}
+
+province_is_in_kazan_trade_node = {
+	same_trade_node_as = 1082
+}
+
+province_is_in_novgorod_trade_node = {
+	same_trade_node_as = 33
+}
+
+province_is_in_ragusa_trade_node = {
+	same_trade_node_as = 137
+}
+
+province_is_in_pest_trade_node = {
+	same_trade_node_as = 153
+}
+
+province_is_in_krakow_trade_node = {
+	same_trade_node_as = 262
+}
+
+province_is_in_wien_trade_node = {
+	same_trade_node_as = 134
+}
+
+province_is_in_saxony_trade_node = {
+	same_trade_node_as = 61
+}
+
+province_is_in_baltic_sea_trade_node = {
+	same_trade_node_as = 1926
+}
+
+province_is_in_rheinland_trade_node = {
+	same_trade_node_as = 1876
+}
+
+province_is_in_white_sea_trade_node = {
+	same_trade_node_as = 1652
+}
+
+province_is_in_north_sea_trade_node = {
+	same_trade_node_as = 1975
+}
+
+province_is_in_lubeck_trade_node = {
+	same_trade_node_as = 45
+}
+
+province_is_in_bordeaux_trade_node = {
+	same_trade_node_as = 1276
+}
+
+province_is_in_sevilla_trade_node = {
+	same_trade_node_as = 1293
+}
+
+province_is_in_champagne_trade_node = {
+	same_trade_node_as = 186
+}
+
+province_is_in_valencia_trade_node = {
+	same_trade_node_as = 1295
+}
+
+province_is_in_genoa_trade_node = {
+	same_trade_node_as = 1298
+}
+
+province_is_in_venice_trade_node = {
+	same_trade_node_as = 1308
+}
+
+province_is_in_english_channel_trade_node = {
+	same_trade_node_as = 1269
+}
+
+province_is_in_rio_grande_trade_node = {
+	same_trade_node_as = 2499
+}
+
+province_is_in_hudson_bay_trade_node = {
+	same_trade_node_as = 1486
+}
+
+province_is_in_california_trade_node = {
+	same_trade_node_as = 2021
+}
+
+province_is_in_mississippi_river_trade_node = {
+	same_trade_node_as = 1507
+}
+
+province_is_in_ohio_trade_node = {
+	same_trade_node_as = 2526
+}
+
+province_is_in_mexico_trade_node = {
+	same_trade_node_as = 1551
+}
+
+province_is_in_panama_trade_node = {
+	same_trade_node_as = 835
+}
+
+province_is_in_caribbean_trade_node = {
+	same_trade_node_as = 1516
+}
+
+province_is_in_chesapeake_trade_node = {
+	same_trade_node_as = 1500
+}
+
+province_is_in_gulf_of_st_lawrence_trade_node = {
+	same_trade_node_as = 1490
+}
+
+province_is_in_patagonia_trade_node = {
+	same_trade_node_as = 2868
+}
+
+province_is_in_amazonas_trade_node = {
+	same_trade_node_as = 2935
+}
+
+province_is_in_cuiaba_trade_node = {
+	same_trade_node_as = 800
+}
+
+province_is_in_lima_trade_node = {
+	same_trade_node_as = 809
+}
+
+province_is_in_rio_de_la_plata_trade_node = {
+	same_trade_node_as = 1536
+}
+
+province_is_in_brazil_trade_node = {
+	same_trade_node_as = 1531
+}
+
+province_is_in_polynesian_triangle_trade_node = {
+	same_trade_node_as = 1997
+}
+
+province_is_in_australia_trade_node = {
+	same_trade_node_as = 1411
+}
+
+province_is_in_european_trade_node = {
+	OR = {
+		province_is_in_astrakhan_trade_node = yes
+		province_is_in_crimea_trade_node = yes
+		province_is_in_constantinople_trade_node = yes
+		province_is_in_kiev_trade_node = yes
+		province_is_in_kazan_trade_node = yes
+		province_is_in_novgorod_trade_node = yes
+		province_is_in_ragusa_trade_node = yes
+		province_is_in_pest_trade_node = yes
+		province_is_in_krakow_trade_node = yes
+		province_is_in_wien_trade_node = yes
+		province_is_in_saxony_trade_node = yes
+		province_is_in_baltic_sea_trade_node = yes
+		province_is_in_rheinland_trade_node = yes
+		province_is_in_white_sea_trade_node = yes
+		province_is_in_north_sea_trade_node = yes
+		province_is_in_lubeck_trade_node = yes
+		province_is_in_bordeaux_trade_node = yes
+		province_is_in_sevilla_trade_node = yes
+		province_is_in_champagne_trade_node = yes
+		province_is_in_valencia_trade_node = yes
+		province_is_in_genoa_trade_node = yes
+		province_is_in_venice_trade_node = yes
+		province_is_in_english_channel_trade_node = yes
+	}
+}
+
+province_is_in_african_trade_node = {
+	OR = {
+		province_is_in_great_lakes_trade_node = yes
+		province_is_in_congo_trade_node = yes
+		province_is_in_zambezi_trade_node = yes
+		province_is_in_katsina_trade_node = yes
+		province_is_in_ethiopia_trade_node = yes
+		province_is_in_gulf_of_aden_trade_node = yes
+		province_is_in_zanzibar_trade_node = yes
+		province_is_in_cape_of_good_hope_trade_node = yes
+		province_is_in_alexandria_trade_node = yes
+		province_is_in_timbuktu_trade_node = yes
+		province_is_in_ivory_coast_trade_node = yes
+		province_is_in_tunis_trade_node = yes
+		province_is_in_safi_trade_node = yes
+	}
+}
+
+province_is_in_asian_trade_node = {
+	OR = {
+		province_is_in_girin_trade_node = yes
+		province_is_in_lhasa_trade_node = yes
+		province_is_in_chengdu_trade_node = yes
+		province_is_in_burma_trade_node = yes
+		province_is_in_siam_trade_node = yes
+		province_is_in_canton_trade_node = yes
+		province_is_in_philippines_trade_node = yes
+		province_is_in_nippon_trade_node = yes
+		province_is_in_hangzhou_trade_node = yes
+		province_is_in_xian_trade_node = yes
+		province_is_in_beijing_trade_node = yes
+		province_is_in_the_moluccas_trade_node = yes
+		province_is_in_siberia_trade_node = yes
+		province_is_in_yumen_trade_node = yes
+		province_is_in_malacca_trade_node = yes
+		province_is_in_bengal_trade_node = yes
+		province_is_in_doab_trade_node = yes
+		province_is_in_lahore_trade_node = yes
+		province_is_in_deccan_trade_node = yes
+		province_is_in_coromandel_trade_node = yes
+		province_is_in_gujarat_trade_node = yes
+		province_is_in_hormuz_trade_node = yes
+		province_is_in_basra_trade_node = yes
+		province_is_in_samarkand_trade_node = yes
+		province_is_in_persia_trade_node = yes
+		province_is_in_aleppo_trade_node = yes
+	}
+}
+
+province_is_in_north_american_trade_node = {
+	OR = {
+		province_is_in_rio_grande_trade_node = yes
+		province_is_in_hudson_bay_trade_node = yes
+		province_is_in_california_trade_node = yes
+		province_is_in_mississippi_river_trade_node = yes
+		province_is_in_ohio_trade_node = yes
+		province_is_in_mexico_trade_node = yes
+		province_is_in_panama_trade_node = yes
+		province_is_in_caribbean_trade_node = yes
+		province_is_in_chesapeake_trade_node = yes
+		province_is_in_gulf_of_st_lawrence_trade_node = yes
+	}
+}
+
+province_is_in_south_american_trade_node = {
+	OR = {
+		province_is_in_patagonia_trade_node = yes
+		province_is_in_amazonas_trade_node = yes
+		province_is_in_cuiaba_trade_node = yes
+		province_is_in_lima_trade_node = yes
+		province_is_in_rio_de_la_plata_trade_node = yes
+		province_is_in_brazil_trade_node = yes
+	}
+}
+
+province_is_in_oceania_trade_node = {
+	OR = {
+		province_is_in_polynesian_triangle_trade_node = yes
+		province_is_in_australia_trade_node = yes
+	}
+}
+
+is_province_in_enabled_trade_node = {
+	OR = {
+		AND = {
+			province_is_in_great_lakes_trade_node = yes
+			has_global_flag = edict_commander_great_lakes_trade_edicts
+		}
+		AND = {
+			province_is_in_congo_trade_node = yes
+			has_global_flag = edict_commander_congo_trade_edicts 
+		}
+		AND = {
+			province_is_in_zambezi_trade_node = yes
+			has_global_flag = edict_commander_zambezi_trade_edicts
+		}
+		AND = {
+			province_is_in_katsina_trade_node = yes
+			has_global_flag = edict_commander_katsina_trade_edicts
+		}
+		AND = {
+			province_is_in_ethiopia_trade_node = yes
+			has_global_flag = edict_commander_ethiopia_trade_edicts
+		}
+		AND = {
+			province_is_in_gulf_of_aden_trade_node = yes
+			has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+		}
+		AND = {
+			province_is_in_zanzibar_trade_node = yes
+			has_global_flag = edict_commander_zanzibar_trade_edicts
+		}
+		AND = {
+			province_is_in_cape_of_good_hope_trade_node = yes
+			has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+		}
+		AND = {
+			province_is_in_alexandria_trade_node = yes
+			has_global_flag = edict_commander_alexandria_trade_edicts
+		}
+		AND = {
+			province_is_in_timbuktu_trade_node = yes
+			has_global_flag = edict_commander_timbuktu_trade_edicts
+		}
+		AND = {
+			province_is_in_ivory_coast_trade_node = yes
+			has_global_flag = edict_commander_ivory_coast_trade_edicts
+		}
+		AND = {
+			province_is_in_tunis_trade_node = yes
+			has_global_flag = edict_commander_tunis_trade_edicts
+		}
+		AND = {
+			province_is_in_safi_trade_node = yes
+			has_global_flag = edict_commander_safi_trade_edicts
+		}
+		AND = {
+			province_is_in_girin_trade_node = yes
+			has_global_flag = edict_commander_girin_trade_edicts
+		}
+		AND = {
+			province_is_in_lhasa_trade_node = yes
+			has_global_flag = edict_commander_lhasa_trade_edicts
+		}
+		AND = {
+			province_is_in_chengdu_trade_node = yes
+			has_global_flag = edict_commander_chengdu_trade_edicts
+		}
+		AND = {
+			province_is_in_burma_trade_node = yes
+			has_global_flag = edict_commander_burma_trade_edicts
+		}
+		AND = {
+			province_is_in_siam_trade_node = yes
+			has_global_flag = edict_commander_siam_trade_edicts
+		}
+		AND = {
+			province_is_in_canton_trade_node = yes
+			has_global_flag = edict_commander_canton_trade_edicts
+		}
+		AND = {
+			province_is_in_philippines_trade_node = yes
+			has_global_flag = edict_commander_philippines_trade_edicts
+		}
+		AND = {
+			province_is_in_nippon_trade_node = yes
+			has_global_flag = edict_commander_nippon_trade_edicts
+		}
+		AND = {
+			province_is_in_hangzhou_trade_node = yes
+			has_global_flag = edict_commander_hangzhou_trade_edicts
+		}
+		AND = {
+			province_is_in_xian_trade_node = yes
+			has_global_flag = edict_commander_xian_trade_edicts
+		}
+		AND = {
+			province_is_in_beijing_trade_node = yes
+			has_global_flag = edict_commander_beijing_trade_edicts
+		}
+		AND = {
+			province_is_in_the_moluccas_trade_node = yes
+			has_global_flag = edict_commander_the_moluccas_trade_edicts
+		}
+		AND = {
+			province_is_in_siberia_trade_node = yes
+			has_global_flag = edict_commander_siberia_trade_edicts
+		}
+		AND = {
+			province_is_in_yumen_trade_node = yes
+			has_global_flag = edict_commander_yumen_trade_edicts
+		}
+		AND = {
+			province_is_in_malacca_trade_node = yes
+			has_global_flag = edict_commander_malacca_trade_edicts
+		}
+		AND = {
+			province_is_in_bengal_trade_node = yes
+			has_global_flag = edict_commander_bengal_trade_edicts
+		}
+		AND = {
+			province_is_in_doab_trade_node = yes
+			has_global_flag = edict_commander_doab_trade_edicts
+		}
+		AND = {
+			province_is_in_lahore_trade_node = yes
+			has_global_flag = edict_commander_lahore_trade_edicts
+		}
+		AND = {
+			province_is_in_deccan_trade_node = yes
+			has_global_flag = edict_commander_deccan_trade_edicts
+		}
+		AND = {
+			province_is_in_coromandel_trade_node = yes
+			has_global_flag = edict_commander_coromandel_trade_edicts
+		}
+		AND = {
+			province_is_in_gujarat_trade_node = yes
+			has_global_flag = edict_commander_gujarat_trade_edicts
+		}
+		AND = {
+			province_is_in_hormuz_trade_node = yes
+			has_global_flag = edict_commander_hormuz_trade_edicts
+		}
+		AND = {
+			province_is_in_basra_trade_node = yes
+			has_global_flag = edict_commander_basra_trade_edicts
+		}
+		AND = {
+			province_is_in_samarkand_trade_node = yes
+			has_global_flag = edict_commander_samarkand_trade_edicts
+		}
+		AND = {
+			province_is_in_persia_trade_node = yes
+			has_global_flag = edict_commander_persia_trade_edicts
+		}
+		AND = {
+			province_is_in_aleppo_trade_node = yes
+			has_global_flag = edict_commander_aleppo_trade_edicts
+		}
+		AND = {
+			province_is_in_astrakhan_trade_node = yes
+			has_global_flag = edict_commander_astrakhan_trade_edicts
+		}
+		AND = {
+			province_is_in_crimea_trade_node = yes
+			has_global_flag = edict_commander_crimea_trade_edicts
+		}
+		AND = {
+			province_is_in_constantinople_trade_node = yes
+			has_global_flag = edict_commander_constantinople_trade_edicts
+		}
+		AND = {
+			province_is_in_kiev_trade_node = yes
+			has_global_flag = edict_commander_kiev_trade_edicts
+		}
+		AND = {
+			province_is_in_kazan_trade_node = yes
+			has_global_flag = edict_commander_kazan_trade_edicts
+		}
+		AND = {
+			province_is_in_novgorod_trade_node = yes
+			has_global_flag = edict_commander_novgorod_trade_edicts
+		}
+		AND = {
+			province_is_in_ragusa_trade_node = yes
+			has_global_flag = edict_commander_ragusa_trade_edicts
+		}
+		AND = {
+			province_is_in_pest_trade_node = yes
+			has_global_flag = edict_commander_pest_trade_edicts
+		}
+		AND = {
+			province_is_in_krakow_trade_node = yes
+			has_global_flag = edict_commander_krakow_trade_edicts
+		}
+		AND = {
+			province_is_in_wien_trade_node = yes
+			has_global_flag = edict_commander_wien_trade_edicts
+		}
+		AND = {
+			province_is_in_saxony_trade_node = yes
+			has_global_flag = edict_commander_saxony_trade_edicts
+		}
+		AND = {
+			province_is_in_baltic_sea_trade_node = yes
+			has_global_flag = edict_commander_baltic_sea_trade_edicts
+		}
+		AND = {
+			province_is_in_rheinland_trade_node = yes
+			has_global_flag = edict_commander_rheinland_trade_edicts
+		}
+		AND = {
+			province_is_in_white_sea_trade_node = yes
+			has_global_flag = edict_commander_white_sea_trade_edicts
+		}
+		AND = {
+			province_is_in_north_sea_trade_node = yes
+			has_global_flag = edict_commander_north_sea_trade_edicts
+		}
+		AND = {
+			province_is_in_lubeck_trade_node = yes
+			has_global_flag = edict_commander_lubeck_trade_edicts
+		}
+		AND = {
+			province_is_in_bordeaux_trade_node = yes
+			has_global_flag = edict_commander_bordeaux_trade_edicts
+		}
+		AND = {
+			province_is_in_sevilla_trade_node = yes
+			has_global_flag = edict_commander_sevilla_trade_edicts
+		}
+		AND = {
+			province_is_in_champagne_trade_node = yes
+			has_global_flag = edict_commander_champagne_trade_edicts
+		}
+		AND = {
+			province_is_in_valencia_trade_node = yes
+			has_global_flag = edict_commander_valencia_trade_edicts
+		}
+		AND = {
+			province_is_in_genoa_trade_node = yes
+			has_global_flag = edict_commander_genoa_trade_edicts
+		}
+		AND = {
+			province_is_in_venice_trade_node = yes
+			has_global_flag = edict_commander_venice_trade_edicts
+		}
+		AND = {
+			province_is_in_english_channel_trade_node = yes
+			has_global_flag = edict_commander_english_channel_trade_edicts
+		}
+		AND = {
+			province_is_in_rio_grande_trade_node = yes
+			has_global_flag = edict_commander_rio_grande_trade_edicts
+		}
+		AND = {
+			province_is_in_hudson_bay_trade_node = yes
+			has_global_flag = edict_commander_hudson_bay_trade_edicts
+		}
+		AND = {
+			province_is_in_california_trade_node = yes
+			has_global_flag = edict_commander_california_trade_edicts
+		}
+		AND = {
+			province_is_in_mississippi_river_trade_node = yes
+			has_global_flag = edict_commander_mississippi_river_trade_edicts
+		}
+		AND = {
+			province_is_in_ohio_trade_node = yes
+			has_global_flag = edict_commander_ohio_trade_edicts
+		}
+		AND = {
+			province_is_in_mexico_trade_node = yes
+			has_global_flag = edict_commander_mexico_trade_edicts
+		}
+		AND = {
+			province_is_in_panama_trade_node = yes
+			has_global_flag = edict_commander_panama_trade_edicts
+		}
+		AND = {
+			province_is_in_caribbean_trade_node = yes
+			has_global_flag = edict_commander_caribbean_trade_edicts
+		}
+		AND = {
+			province_is_in_chesapeake_trade_node = yes
+			has_global_flag = edict_commander_chesapeake_trade_edicts
+		}
+		AND = {
+			province_is_in_gulf_of_st_lawrence_trade_node = yes
+			has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+		}
+		AND = {
+			province_is_in_patagonia_trade_node = yes
+			has_global_flag = edict_commander_patagonia_trade_edicts
+		}
+		AND = {
+			province_is_in_amazonas_trade_node = yes
+			has_global_flag = edict_commander_amazonas_trade_edicts
+		}
+		AND = {
+			province_is_in_cuiaba_trade_node = yes
+			has_global_flag = edict_commander_cuiaba_trade_edicts
+		}
+		AND = {
+			province_is_in_lima_trade_node = yes
+			has_global_flag = edict_commander_lima_trade_edicts
+		}
+		AND = {
+			province_is_in_rio_de_la_plata_trade_node = yes
+			has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+		}
+		AND = {
+			province_is_in_brazil_trade_node = yes
+			has_global_flag = edict_commander_brazil_trade_edicts
+		}
+		AND = {
+			province_is_in_polynesian_triangle_trade_node = yes
+			has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+		}
+		AND = {
+			province_is_in_australia_trade_node = yes
+			has_global_flag = edict_commander_australia_trade_edicts
+		}
+	}
+}
+
+has_all_of_europe_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_english_channel_trade_edicts
+		has_global_flag = edict_commander_champagne_trade_edicts
+		has_global_flag = edict_commander_north_sea_trade_edicts
+		has_global_flag = edict_commander_lubeck_trade_edicts
+		has_global_flag = edict_commander_baltic_sea_trade_edicts
+		has_global_flag = edict_commander_bordeaux_trade_edicts
+		has_global_flag = edict_commander_sevilla_trade_edicts
+		has_global_flag = edict_commander_valencia_trade_edicts
+		has_global_flag = edict_commander_genoa_trade_edicts
+		has_global_flag = edict_commander_venice_trade_edicts
+		has_global_flag = edict_commander_ragusa_trade_edicts
+		has_global_flag = edict_commander_rheinland_trade_edicts
+		has_global_flag = edict_commander_saxony_trade_edicts
+		has_global_flag = edict_commander_krakow_trade_edicts
+		has_global_flag = edict_commander_pest_trade_edicts
+		has_global_flag = edict_commander_constantinople_trade_edicts
+		has_global_flag = edict_commander_crimea_trade_edicts
+		has_global_flag = edict_commander_kiev_trade_edicts
+		has_global_flag = edict_commander_novgorod_trade_edicts
+		has_global_flag = edict_commander_white_sea_trade_edicts
+		has_global_flag = edict_commander_kazan_trade_edicts
+		has_global_flag = edict_commander_astrakhan_trade_edicts
+	}
+}
+
+has_some_of_europe_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_english_channel_trade_edicts
+		has_global_flag = edict_commander_champagne_trade_edicts
+		has_global_flag = edict_commander_north_sea_trade_edicts
+		has_global_flag = edict_commander_lubeck_trade_edicts
+		has_global_flag = edict_commander_baltic_sea_trade_edicts
+		has_global_flag = edict_commander_bordeaux_trade_edicts
+		has_global_flag = edict_commander_sevilla_trade_edicts
+		has_global_flag = edict_commander_valencia_trade_edicts
+		has_global_flag = edict_commander_genoa_trade_edicts
+		has_global_flag = edict_commander_venice_trade_edicts
+		has_global_flag = edict_commander_ragusa_trade_edicts
+		has_global_flag = edict_commander_rheinland_trade_edicts
+		has_global_flag = edict_commander_saxony_trade_edicts
+		has_global_flag = edict_commander_krakow_trade_edicts
+		has_global_flag = edict_commander_kiev_trade_edicts
+		has_global_flag = edict_commander_pest_trade_edicts
+		has_global_flag = edict_commander_constantinople_trade_edicts
+		has_global_flag = edict_commander_crimea_trade_edicts
+		has_global_flag = edict_commander_novgorod_trade_edicts
+		has_global_flag = edict_commander_white_sea_trade_edicts
+		has_global_flag = edict_commander_kazan_trade_edicts
+		has_global_flag = edict_commander_astrakhan_trade_edicts
+	}
+}
+
+has_none_of_europe_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_english_channel_trade_edicts
+			has_global_flag = edict_commander_champagne_trade_edicts
+			has_global_flag = edict_commander_north_sea_trade_edicts
+			has_global_flag = edict_commander_lubeck_trade_edicts
+			has_global_flag = edict_commander_baltic_sea_trade_edicts
+			has_global_flag = edict_commander_bordeaux_trade_edicts
+			has_global_flag = edict_commander_sevilla_trade_edicts
+			has_global_flag = edict_commander_valencia_trade_edicts
+			has_global_flag = edict_commander_genoa_trade_edicts
+			has_global_flag = edict_commander_venice_trade_edicts
+			has_global_flag = edict_commander_ragusa_trade_edicts
+			has_global_flag = edict_commander_rheinland_trade_edicts
+			has_global_flag = edict_commander_saxony_trade_edicts
+			has_global_flag = edict_commander_krakow_trade_edicts
+			has_global_flag = edict_commander_kiev_trade_edicts
+			has_global_flag = edict_commander_pest_trade_edicts
+			has_global_flag = edict_commander_constantinople_trade_edicts
+			has_global_flag = edict_commander_crimea_trade_edicts
+			has_global_flag = edict_commander_novgorod_trade_edicts
+			has_global_flag = edict_commander_white_sea_trade_edicts
+			has_global_flag = edict_commander_kazan_trade_edicts
+			has_global_flag = edict_commander_astrakhan_trade_edicts
+		}
+	}
+}
+
+has_all_of_asia_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_samarkand_trade_edicts
+		has_global_flag = edict_commander_aleppo_trade_edicts
+		has_global_flag = edict_commander_basra_trade_edicts
+		has_global_flag = edict_commander_persia_trade_edicts
+		has_global_flag = edict_commander_hormuz_trade_edicts
+		has_global_flag = edict_commander_lahore_trade_edicts
+		has_global_flag = edict_commander_gujarat_trade_edicts
+		has_global_flag = edict_commander_doab_trade_edicts
+		has_global_flag = edict_commander_deccan_trade_edicts
+		has_global_flag = edict_commander_coromandel_trade_edicts
+		has_global_flag = edict_commander_bengal_trade_edicts
+		has_global_flag = edict_commander_burma_trade_edicts
+		has_global_flag = edict_commander_siam_trade_edicts
+		has_global_flag = edict_commander_malacca_trade_edicts
+		has_global_flag = edict_commander_the_moluccas_trade_edicts
+		has_global_flag = edict_commander_philippines_trade_edicts
+		has_global_flag = edict_commander_siberia_trade_edicts
+		has_global_flag = edict_commander_yumen_trade_edicts
+		has_global_flag = edict_commander_girin_trade_edicts
+		has_global_flag = edict_commander_nippon_trade_edicts
+		has_global_flag = edict_commander_beijing_trade_edicts
+		has_global_flag = edict_commander_xian_trade_edicts
+		has_global_flag = edict_commander_hangzhou_trade_edicts
+		has_global_flag = edict_commander_canton_trade_edicts
+		has_global_flag = edict_commander_chengdu_trade_edicts
+		has_global_flag = edict_commander_lhasa_trade_edicts
+	}
+}
+
+has_some_of_asia_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_samarkand_trade_edicts
+		has_global_flag = edict_commander_aleppo_trade_edicts
+		has_global_flag = edict_commander_basra_trade_edicts
+		has_global_flag = edict_commander_persia_trade_edicts
+		has_global_flag = edict_commander_hormuz_trade_edicts
+		has_global_flag = edict_commander_lahore_trade_edicts
+		has_global_flag = edict_commander_gujarat_trade_edicts
+		has_global_flag = edict_commander_doab_trade_edicts
+		has_global_flag = edict_commander_deccan_trade_edicts
+		has_global_flag = edict_commander_coromandel_trade_edicts
+		has_global_flag = edict_commander_bengal_trade_edicts
+		has_global_flag = edict_commander_burma_trade_edicts
+		has_global_flag = edict_commander_siam_trade_edicts
+		has_global_flag = edict_commander_malacca_trade_edicts
+		has_global_flag = edict_commander_the_moluccas_trade_edicts
+		has_global_flag = edict_commander_philippines_trade_edicts
+		has_global_flag = edict_commander_siberia_trade_edicts
+		has_global_flag = edict_commander_yumen_trade_edicts
+		has_global_flag = edict_commander_girin_trade_edicts
+		has_global_flag = edict_commander_nippon_trade_edicts
+		has_global_flag = edict_commander_beijing_trade_edicts
+		has_global_flag = edict_commander_xian_trade_edicts
+		has_global_flag = edict_commander_hangzhou_trade_edicts
+		has_global_flag = edict_commander_canton_trade_edicts
+		has_global_flag = edict_commander_chengdu_trade_edicts
+		has_global_flag = edict_commander_lhasa_trade_edicts
+	}
+}
+
+has_none_of_asia_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_samarkand_trade_edicts
+			has_global_flag = edict_commander_aleppo_trade_edicts
+			has_global_flag = edict_commander_basra_trade_edicts
+			has_global_flag = edict_commander_persia_trade_edicts
+			has_global_flag = edict_commander_hormuz_trade_edicts
+			has_global_flag = edict_commander_lahore_trade_edicts
+			has_global_flag = edict_commander_gujarat_trade_edicts
+			has_global_flag = edict_commander_doab_trade_edicts
+			has_global_flag = edict_commander_deccan_trade_edicts
+			has_global_flag = edict_commander_coromandel_trade_edicts
+			has_global_flag = edict_commander_bengal_trade_edicts
+			has_global_flag = edict_commander_burma_trade_edicts
+			has_global_flag = edict_commander_siam_trade_edicts
+			has_global_flag = edict_commander_malacca_trade_edicts
+			has_global_flag = edict_commander_the_moluccas_trade_edicts
+			has_global_flag = edict_commander_philippines_trade_edicts
+			has_global_flag = edict_commander_siberia_trade_edicts
+			has_global_flag = edict_commander_yumen_trade_edicts
+			has_global_flag = edict_commander_girin_trade_edicts
+			has_global_flag = edict_commander_nippon_trade_edicts
+			has_global_flag = edict_commander_beijing_trade_edicts
+			has_global_flag = edict_commander_xian_trade_edicts
+			has_global_flag = edict_commander_hangzhou_trade_edicts
+			has_global_flag = edict_commander_canton_trade_edicts
+			has_global_flag = edict_commander_chengdu_trade_edicts
+			has_global_flag = edict_commander_lhasa_trade_edicts
+		}
+	}
+}
+
+# --- Oceania ---
+has_all_of_oceania_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_australia_trade_edicts
+		has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+	}
+}
+
+has_some_of_oceania_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_australia_trade_edicts
+		has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+	}
+}
+
+has_none_of_oceania_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_australia_trade_edicts
+			has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+		}
+	}
+}
+
+# --- Africa ---
+has_all_of_africa_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_alexandria_trade_edicts
+		has_global_flag = edict_commander_tunis_trade_edicts
+		has_global_flag = edict_commander_safi_trade_edicts
+		has_global_flag = edict_commander_ivory_coast_trade_edicts
+		has_global_flag = edict_commander_timbuktu_trade_edicts
+		has_global_flag = edict_commander_katsina_trade_edicts
+		has_global_flag = edict_commander_ethiopia_trade_edicts
+		has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+		has_global_flag = edict_commander_zanzibar_trade_edicts
+		has_global_flag = edict_commander_great_lakes_trade_edicts
+		has_global_flag = edict_commander_congo_trade_edicts
+		has_global_flag = edict_commander_zambezi_trade_edicts
+		has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+	}
+}
+
+has_some_of_africa_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_alexandria_trade_edicts
+		has_global_flag = edict_commander_tunis_trade_edicts
+		has_global_flag = edict_commander_safi_trade_edicts
+		has_global_flag = edict_commander_ivory_coast_trade_edicts
+		has_global_flag = edict_commander_timbuktu_trade_edicts
+		has_global_flag = edict_commander_katsina_trade_edicts
+		has_global_flag = edict_commander_ethiopia_trade_edicts
+		has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+		has_global_flag = edict_commander_zanzibar_trade_edicts
+		has_global_flag = edict_commander_great_lakes_trade_edicts
+		has_global_flag = edict_commander_congo_trade_edicts
+		has_global_flag = edict_commander_zambezi_trade_edicts
+		has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+	}
+}
+
+has_none_of_africa_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_alexandria_trade_edicts
+			has_global_flag = edict_commander_tunis_trade_edicts
+			has_global_flag = edict_commander_safi_trade_edicts
+			has_global_flag = edict_commander_ivory_coast_trade_edicts
+			has_global_flag = edict_commander_timbuktu_trade_edicts
+			has_global_flag = edict_commander_katsina_trade_edicts
+			has_global_flag = edict_commander_ethiopia_trade_edicts
+			has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+			has_global_flag = edict_commander_zanzibar_trade_edicts
+			has_global_flag = edict_commander_great_lakes_trade_edicts
+			has_global_flag = edict_commander_congo_trade_edicts
+			has_global_flag = edict_commander_zambezi_trade_edicts
+			has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+		}
+	}
+}
+
+# --- North America ---
+has_all_of_north_america_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_california_trade_edicts
+		has_global_flag = edict_commander_hudson_bay_trade_edicts
+		has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+		has_global_flag = edict_commander_mississippi_river_trade_edicts
+		has_global_flag = edict_commander_ohio_trade_edicts
+		has_global_flag = edict_commander_chesapeake_trade_edicts
+		has_global_flag = edict_commander_rio_grande_trade_edicts
+		has_global_flag = edict_commander_mexico_trade_edicts
+		has_global_flag = edict_commander_caribbean_trade_edicts
+		has_global_flag = edict_commander_panama_trade_edicts
+	}
+}
+
+has_some_of_north_america_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_california_trade_edicts
+		has_global_flag = edict_commander_hudson_bay_trade_edicts
+		has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+		has_global_flag = edict_commander_mississippi_river_trade_edicts
+		has_global_flag = edict_commander_ohio_trade_edicts
+		has_global_flag = edict_commander_chesapeake_trade_edicts
+		has_global_flag = edict_commander_rio_grande_trade_edicts
+		has_global_flag = edict_commander_mexico_trade_edicts
+		has_global_flag = edict_commander_caribbean_trade_edicts
+		has_global_flag = edict_commander_panama_trade_edicts
+	}
+}
+
+has_none_of_north_america_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_california_trade_edicts
+			has_global_flag = edict_commander_hudson_bay_trade_edicts
+			has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+			has_global_flag = edict_commander_mississippi_river_trade_edicts
+			has_global_flag = edict_commander_ohio_trade_edicts
+			has_global_flag = edict_commander_chesapeake_trade_edicts
+			has_global_flag = edict_commander_rio_grande_trade_edicts
+			has_global_flag = edict_commander_mexico_trade_edicts
+			has_global_flag = edict_commander_caribbean_trade_edicts
+			has_global_flag = edict_commander_panama_trade_edicts
+		}
+	}
+}
+
+has_all_of_south_america_trade_config_flags = {
+	AND = {
+		has_global_flag = edict_commander_lima_trade_edicts
+		has_global_flag = edict_commander_amazonas_trade_edicts
+		has_global_flag = edict_commander_cuiaba_trade_edicts
+		has_global_flag = edict_commander_brazil_trade_edicts
+		has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+		has_global_flag = edict_commander_patagonia_trade_edicts
+	}
+}
+
+has_some_of_south_america_trade_config_flags = {
+	OR = {
+		has_global_flag = edict_commander_lima_trade_edicts
+		has_global_flag = edict_commander_amazonas_trade_edicts
+		has_global_flag = edict_commander_cuiaba_trade_edicts
+		has_global_flag = edict_commander_brazil_trade_edicts
+		has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+		has_global_flag = edict_commander_patagonia_trade_edicts
+	}
+}
+
+has_none_of_south_america_trade_config_flags = {
+	NOT = {
+		OR = {
+			has_global_flag = edict_commander_lima_trade_edicts
+			has_global_flag = edict_commander_amazonas_trade_edicts
+			has_global_flag = edict_commander_cuiaba_trade_edicts
+			has_global_flag = edict_commander_brazil_trade_edicts
+			has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+			has_global_flag = edict_commander_patagonia_trade_edicts
+		}
+	}
+}

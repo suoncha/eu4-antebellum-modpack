@@ -1,0 +1,5 @@
+﻿l_english:
+ po_imperial_retribution_annihilate: "Annihilate the Antichrist"
+ po_imperial_retribution_annihilate_desc: "§Y[From.GetName]§! will pay dearly for what they have done to the Empire!"
+ CB_ALLOWED_po_imperial_retribution_annihilate: "Annihilate the Antichrist"
+ PEACE_po_imperial_retribution_annihilate: "Annihilate the Antichrist"

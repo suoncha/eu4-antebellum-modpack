@@ -1,0 +1,47 @@
+custom_button = {
+	name = core_all_full_toggle
+	potential = {
+		#has_country_flag = overex_manage_window_open
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "If this toggle is unchecked, only non-cores will be able to be cored."
+			any_owned_province = {
+				OR = {
+					AND = {
+						NOT = { is_state_core = ROOT }
+						is_state = yes
+					}
+					NOT = { is_core = ROOT }
+				}
+				is_city = yes
+			}
+		}
+	}
+	frame = {
+        number = 1
+        trigger = { 
+			has_country_flag = ME_toggle_no_full_cores
+		}
+    }
+	frame = {
+        number = 2
+        trigger = { 
+			NOT = { has_country_flag = ME_toggle_no_full_cores }
+		}
+    }
+	effect = { 
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = ME_toggle_no_full_cores
+				}
+				clr_country_flag = ME_toggle_no_full_cores
+			}
+			else = {
+				set_country_flag = ME_toggle_no_full_cores
+			}
+		}
+	}
+	tooltip = ME_toggle_full_coring
+}

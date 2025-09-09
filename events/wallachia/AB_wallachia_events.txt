@@ -1,0 +1,3788 @@
+namespace = AB_wallachia_events
+#Give ruler impaler trait
+country_event = {
+	id = AB_wallachia_events.1
+	title = AB_wallachia_events.1.t
+	desc = AB_wallachia_events.1.d
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ruler_impaler = no
+			}
+			add_ruler_personality = impaler_personality
+		}
+		else_if = {
+			limit = {
+				ruler_has_personality = impaler_personality
+			}
+			remove_ruler_personality = impaler_personality
+			add_ruler_personality = impaler2_personality
+		}
+		else_if = {
+			limit = {
+				ruler_has_personality = impaler2_personality
+			}
+			remove_ruler_personality = impaler2_personality
+			add_ruler_personality = impaler3_personality
+		}
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
+
+#Disable razing
+country_event = {
+	id = AB_wallachia_events.2
+	title = AB_wallachia_events.2.t
+	desc = AB_wallachia_events.2.d
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		disable_razing = yes
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
+
+#Disable terror gain from battles.
+country_event = {
+	id = AB_wallachia_events.3
+	title = AB_wallachia_events.3.t
+	desc = AB_wallachia_events.3.d
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		clr_country_flag = wallachian_terror_gain_terror_from_dead_enemies
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
+
+#The Banquet of Blood - Via Terror Interaction
+country_event = {
+	id = AB_wallachia_events.4
+	title = AB_wallachia_banquet_of_blood_title
+	desc = AB_wallachia_events.4.d
+	picture = GFX_AB_wallachia_events.4
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = THIS
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.5
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.5
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.5.d
+	picture = GFX_AB_wallachia_events.4
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.4
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.6
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page2_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.6
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.6.d
+	picture = GFX_AB_wallachia_events.4
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.5
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.7
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page3_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.7
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.7.d
+	picture = GFX_AB_wallachia_events.4
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.6
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.8
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page4_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.8
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.8.d
+	picture = GFX_AB_wallachia_events.4
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.7
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page5_tldr
+		highlight = yes
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Fate of the Moldavian Nobles
+country_event = {
+	id = AB_wallachia_events.9
+	title = AB_wallachia_events.9.t
+	desc = AB_wallachia_events.9.d
+	picture = GFX_AB_wallachia_events.9
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.9.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 5
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = Moldavian
+		}
+		custom_tooltip = AB_wallachia_events.9_province_bonus_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_moldavian_nobility
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_moldavian_nobility
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.9.b
+		trigger = {
+			is_ruler_impaler = no
+		}
+		add_country_modifier = {
+			name = wallachia_cut_a_deal_with_the_cossacks
+			duration = -1
+		}
+		change_estate_land_share = {
+			estate = estate_cossacks
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_cossacks
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		set_country_flag = wal_empowered_cossacks
+	}
+	option = {
+		name = AB_wallachia_events.9.c
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -2
+		}
+		custom_tooltip = AB_wallachia_events.9_province_bonus_tooltip
+		tooltip = {
+			add_devastation = 15
+			add_base_tax = -1
+			add_local_autonomy = -30
+			add_province_modifier = {
+				name = wallachia_cut_down_the_moldavian_nobility
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				add_devastation = 15
+				add_base_tax = -1
+				add_local_autonomy = -30
+				add_province_modifier = {
+					name = wallachia_cut_down_the_moldavian_nobility
+					duration = -1
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#New traditions and ambitions for Dacia
+country_event = {
+	id = AB_wallachia_events.10
+	title = AB_wallachia_events.10.t
+	desc = AB_wallachia_events.10.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#When the player takes the Roma eco reform. For some reason, the game crashes if you try to remove
+#idea groups from governemnt reforms. Very stupid.
+country_event = {
+	id = AB_wallachia_events.11
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = AB_EMPTY
+		if = {
+			limit = {
+				humanist_ideas = 7
+			}
+			add_adm_power = 280
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 6
+			}
+			add_adm_power = 240
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 5
+			}
+			add_adm_power = 200
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 4
+			}
+			add_adm_power = 160
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 3
+			}
+			add_adm_power = 120
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 2
+			}
+			add_adm_power = 80
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 1
+			}
+			add_adm_power = 40
+		}
+		remove_idea_group = humanist_ideas
+	}
+}
+
+#New traditions and ambitions for The United Houses
+country_event = {
+	id = AB_wallachia_events.12
+	title = AB_wallachia_events.10.t
+	desc = AB_wallachia_events.12.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#Romanianization of Hungary & Transylvania
+province_event = {
+	id = AB_wallachia_events.20
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_hungary
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_hungary_recently
+				}
+				if = {
+					limit = {
+						has_country_flag = panonic_spread_extra
+					}
+					had_country_flag = {
+						flag = wal_romanianized_hungary_recently
+						days = 730
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_hungary_recently
+						days = 1460
+					}
+				}
+			}
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		religion = ROOT
+		region = carpathia_region
+		OR = {
+			culture_group = carpathian
+			AND = {
+				owner = {
+					has_country_flag = panonic_spread_extra
+				}
+				OR = {
+					culture = Pannonian
+					culture = slovak
+				}
+			}
+		}
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_hungary_recently
+		}
+		if = {
+			limit = {
+				OR = {
+					area = transylvania_area
+					area = southern_transylvania_area
+				}
+			}
+			change_culture = transylvanian
+		}
+		else = {
+			change_culture = panonic
+		}
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.21
+	title = AB_wallachia_events.21.t
+	desc = AB_wallachia_events.21.d
+	picture = CONSTANTINOPLE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.21.a
+		151 = {
+			move_capital_effect = yes
+			change_culture = owner
+			add_core = ROOT
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = wallachia_rebuilding_the_great_city
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_the_worlds_desire
+			duration = -1
+		}
+		custom_tooltip = cantacuzino_constantinople_bonus_tooltip
+		custom_tooltip = AB_EMPTY
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "capital_scope = {
+			add_province_modifier = {
+				name = tuh_less_oversight_on_the_boieri
+				duration = -1
+			}
+		}"
+		}
+	}
+	option = {
+		name = AB_wallachia_events.21.b
+		trigger = {
+			capital = 161
+		}
+		capital_scope = {
+			change_province_name = "Cetatea de Scaun"
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = wallachia_rome_on_the_danube
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_new_roman_identity
+			duration = -1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.21.c
+		trigger = {
+			NOT = {
+				capital = 161
+			}
+		}
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			add_province_modifier = {
+				name = capital_expansion_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+#The Bulgarian Question
+country_event = {
+	id = AB_wallachia_events.22
+	title = AB_wallachia_events.22.t
+	desc = AB_wallachia_events.22.d
+	picture = GFX_AB_wallachia_events.22
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.22.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		country_event = {
+			id = AB_wallachia_events.23
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.impaler
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		country_event = {
+			id = AB_wallachia_events.23
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.c
+		trigger = {
+			is_ruler_impaler = no
+		}
+		set_country_flag = wal_bulgarian_underclass
+		custom_tooltip = bulgarian_underclass_every_province_tooltip
+		tooltip = {
+			add_unrest = 10
+			add_nationalism = 30
+			add_province_modifier = {
+				name = wallachia_bulgar_underclass
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_bulgar_underclass
+					duration = -1
+				}
+				add_unrest = 10
+				add_nationalism = 30
+			}
+		}
+		custom_tooltip = bulgarian_underclass_culture_tooltip
+		if = {
+			limit = {
+				accepted_culture = bulgarian
+			}
+			remove_accepted_culture = bulgarian
+		}
+		custom_tooltip = bulgarian_underclass_parliament_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+					has_seat_in_parliament = yes
+				}
+				set_seat_in_parliament = no
+			}
+		}
+		custom_tooltip = bulgarian_underclass_advisors_tooltip
+		every_country = {
+			limit = {
+				culture = bulgarian
+			}
+			add_opinion = {
+				who = PREV
+				modifier = bulgarian_underclass_opinion
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.humanist
+		highlight = yes
+		trigger = {
+			full_idea_group = humanist_ideas
+			hidden_trigger = {
+				NOT = {
+					is_ruler_impaler = yes
+				}
+			}
+		}
+		add_legitimacy = -10
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_angry_no_justice
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = wallachia_reconcile_with_the_bulgars
+			duration = -1
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = bulgarian
+		}
+		custom_tooltip = reconcile_bulgarians_every_province_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_bulgars
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_bulgars
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = can_use_bulgarian_great_projects_flag
+		custom_tooltip = wal_drive_out_the_bulgars_monuments_tooltip
+	}
+	option = {
+		name = AB_wallachia_events.22.religious
+		highlight = yes
+		trigger = {
+			full_idea_group = religious_ideas
+			hidden_trigger = {
+				NOT = {
+					is_ruler_impaler = yes
+				}
+			}
+		}
+		add_legitimacy = -10
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_angry_no_justice
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = wallachia_turn_the_other_cheek
+			duration = -1
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = bulgarian
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		custom_tooltip = reconcile_bulgarians_every_province_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_bulgars
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_bulgars
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = can_use_bulgarian_great_projects_flag
+		custom_tooltip = wal_drive_out_the_bulgars_monuments_tooltip
+	}
+}
+
+#Bulgarian Genocide (Yikes)
+country_event = {
+	id = AB_wallachia_events.23
+	title = AB_wallachia_events.23.t
+	desc = AB_wallachia_events.23.d
+	picture = VILLAGE_BURNING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_neighbor_country = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+				}
+				save_event_target_as = krushenieto_province
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.23.a
+		custom_tooltip = bulgarian_genocide_every_province_tooltip
+		tooltip = {
+			custom_tooltip = bulgarian_genocide_loot_tooltip
+			add_nationalism = -30
+			add_unrest = -20
+			add_local_autonomy = -25
+			remove_core = BUL
+			add_province_modifier = {
+				name = wallachia_vlach_resettlement
+				duration = 36500
+			}
+			add_devastation = 100
+			custom_tooltip = bulgarian_genocide_lose_patriarchal_authority
+			custom_tooltip = bulgarian_genocide_dev_loss_tooltip
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = bulgarian_genocide_terror_per_dev_tooltip"
+			}
+			add_province_modifier = {
+				name = wallachia_aftermath_of_the_krushenieto
+				duration = 36500
+			}
+			remove_all_buildings_effect = yes
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_nationalism = -30
+				add_unrest = -20
+				add_local_autonomy = -25
+				add_devastation = 90
+				remove_core = BUL
+				owner = {
+					add_patriarch_authority = -0.1
+				}
+				loot_province = yes
+				export_to_variable = {
+					which = province_dev_var
+					value = trigger_value:development
+				}
+				owner = {
+					set_variable = {
+						which = province_dev_var
+						which = PREV
+					}
+					change_terror_var = {
+						var = province_dev_var
+						scaled_with_gain_modifier = yes
+					}
+				}
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement
+					duration = 36500
+				}
+				add_province_modifier = {
+					name = wallachia_aftermath_of_the_krushenieto
+					duration = 36500
+				}
+				remove_all_buildings_effect = yes
+			}
+		}
+		custom_tooltip = bulgarian_genocide_bulgarian_great_projects
+		hidden_effect = {
+			if = {
+				limit = {
+					4704 = {
+						owned_by = PREV
+						has_great_project = {
+							type = tsarevets
+						}
+					}
+				}
+				4704 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = tsarevets
+					}
+				}
+			}
+			if = {
+				limit = {
+					4704 = {
+						owned_by = PREV
+						has_great_project = {
+							type = preslav_literary_school
+						}
+					}
+				}
+				4704 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = preslav_literary_school
+					}
+				}
+			}
+			if = {
+				limit = {
+					4703 = {
+						owned_by = PREV
+						has_great_project = {
+							type = rila_monasteries
+						}
+					}
+				}
+				4703 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = rila_monasteries
+					}
+				}
+			}
+		}
+		custom_tooltip = bulgarian_genocide_bulgarian_culture_reaction
+		hidden_effect = {
+			every_country = {
+				limit = {
+					culture = bulgarian
+				}
+				add_opinion = {
+					who = PREV
+					modifier = krushenieto_bul_opinion
+				}
+				add_trust = {
+					who = PREV
+					value = -100
+				}
+			}
+		}
+		custom_tooltip = bulgarian_genocide_neighbor_reaction
+		hidden_effect = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						culture = bulgarian
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = krushenieto_other_opinion
+				}
+				add_trust = {
+					who = PREV
+					value = -10
+				}
+			}
+		}
+	}
+}
+
+#Bulgar ADM Advisor Event
+country_event = {
+	id = AB_wallachia_events.24
+	title = AB_wallachia_events.24.t
+	desc = AB_wallachia_events.24.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = ADM
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			ADM = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+#Bulgar DIP Advisor Event
+country_event = {
+	id = AB_wallachia_events.25
+	title = AB_wallachia_events.25.t
+	desc = AB_wallachia_events.25.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = DIP
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			DIP = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+#Bulgar MIL Advisor Event
+country_event = {
+	id = AB_wallachia_events.26
+	title = AB_wallachia_events.26.t
+	desc = AB_wallachia_events.26.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = MIL
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			MIL = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.27
+	title = AB_wallachia_events.27.t
+	desc = AB_wallachia_events.27.d
+	picture = GFX_AB_wallachia_events.27
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.27.a
+		add_patriarch_authority = 0.2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_country_modifier = {
+			name = wallachia_subsumed_the_serbian_patriarch
+			duration = -1
+		}
+		custom_tooltip = AB_wallachia_events_27_province_bonus_tooltip
+		tooltip = {
+			add_unrest = 10
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = serbian
+					religion = orthodox
+				}
+				add_unrest = 10
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.27.b
+		add_accepted_culture_or_dip_power_stated = {
+			culture = serbian
+			dip_reward = yes
+			free = yes
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		custom_tooltip = AB_wallachia_events_27_province_bonus_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_respected_serbian_patriarch
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = serbian
+					religion = orthodox
+				}
+				add_province_modifier = {
+					name = wallachia_respected_serbian_patriarch
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Romanianization of Slavic Balkan Provinces, Except Bulgarian
+province_event = {
+	id = AB_wallachia_events.28
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_illyria
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_illyria_recently
+				}
+				if = {
+					limit = {
+						has_country_flag = wal_faster_balkan_romanianization
+					}
+					had_country_flag = {
+						flag = wal_romanianized_illyria_recently
+						days = 913
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_illyria_recently
+						days = 1825
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = south_slavic
+		NOT = {
+			culture = bulgarian
+		}
+		OR = {
+			region = balkan_region
+			area = inner_austria_area
+			area = carinthia_area
+		}
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_illyria_recently
+		}
+		change_culture = morlaci
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.29
+	title = AB_wallachia_events.29.t
+	desc = AB_wallachia_events.29.d
+	picture = GFX_AB_wallachia_events.29
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.29.a
+		custom_tooltip = western_roman_ambition_cb_tooltip
+		set_country_flag = western_roman_ambition
+		custom_tooltip = depose_hre_emperor_cb_tooltip
+		set_country_flag = depose_hre_emperor_cb
+		add_country_modifier = {
+			name = wallachia_western_ambitions
+			duration = 36500
+		}
+		define_advisor = {
+			type = ae_advisor
+			skill = 3
+			cost_multiplier = 0.3333
+			religion = ROOT
+			culture = ROOT
+		}
+	}
+	option = {
+		name = AB_wallachia_events.29.b
+		custom_tooltip = eastern_roman_ambition_cb_tooltip
+		set_country_flag = eastern_roman_ambition
+		custom_tooltip = persian_campaign_cb_tooltip
+		set_country_flag = persian_campaign_cb
+		add_country_modifier = {
+			name = wallachia_eastern_ambitions
+			duration = 36500
+		}
+		define_advisor = {
+			type = inquisitor
+			skill = 3
+			cost_multiplier = 0.333
+			religion = ROOT
+			culture = ROOT
+		}
+	}
+}
+
+#Greek Resettlement of Anatolia, Requires Mavrocordatos or Cantacuzino
+province_event = {
+	id = AB_wallachia_events.30
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_government_attribute = romanian_elective_monarchy
+			has_country_flag = tuh_anatolia_greek_resettlement
+			OR = {
+				dynasty = "Cantacuzino"
+				dynasty = "Mavrocordatos"
+			}
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = byzantine
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = tuh_greeks_settled_recently
+				}
+				had_country_flag = {
+					flag = tuh_greeks_settled_recently
+					days = 1825
+				}
+			}
+		}
+		region = anatolia_region
+		religion = ROOT
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = tuh_greeks_settled_recently
+		}
+		change_culture = greek
+	}
+}
+
+#The Fate of Venice
+country_event = {
+	id = AB_wallachia_events.31
+	title = AB_wallachia_events.31.t
+	desc = AB_wallachia_events.31.d
+	picture = GFX_AB_wallachia_events.31
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.31.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		112 = {
+			custom_tooltip = sack_of_venice_tooltip
+			hidden_effect = {
+				export_to_variable = {
+					which = BYZ_amount_of_dev
+					value = trigger_value:development
+				}
+				multiply_variable = {
+					which = BYZ_amount_of_dev
+					value = 0.75
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = BYZ_amount_of_dev
+							value = 1
+						}
+						OR = {
+							base_tax = 2
+							base_production = 2
+							base_manpower = 2
+						}
+					}
+					random_list = {
+						1 = {
+							trigger = {
+								base_tax = 2
+							}
+							add_base_tax = -1
+							ROOT = {
+								add_treasury = 75
+								add_adm_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_production = 2
+							}
+							add_base_production = -1
+							ROOT = {
+								add_treasury = 75
+								add_dip_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_manpower = 2
+							}
+							add_base_manpower = -1
+							ROOT = {
+								add_treasury = 75
+								add_mil_power = 10
+							}
+						}
+					}
+					change_variable = {
+						which = BYZ_amount_of_dev
+						value = -1
+					}
+				}
+				set_variable = {
+					which = BYZ_amount_of_dev
+					value = 0
+				}
+			}
+			hidden_effect = {
+				remove_all_buildings_effect = yes
+				destroy_great_project = {
+					type = doges_palace
+				}
+				destroy_great_project = {
+					type = venetian_arsenal_gp
+				}
+				owner = {
+					set_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_devastation = 75
+			add_permanent_province_modifier = {
+				name = BYZ_chastening_of_venice
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = burghers_not_happy_with_sack_tooltip
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		if = {
+			limit = {
+				exists = VEN
+			}
+			custom_tooltip = AB_EMPTY
+			VEN = {
+				add_opinion = {
+					who = PREV
+					modifier = razed_venice
+				}
+			}
+		}
+		play_sound = burncolony
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.31.a_impaler
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		112 = {
+			custom_tooltip = sack_of_venice_tooltip
+			hidden_effect = {
+				export_to_variable = {
+					which = BYZ_amount_of_dev
+					value = trigger_value:development
+				}
+				multiply_variable = {
+					which = BYZ_amount_of_dev
+					value = 0.75
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = BYZ_amount_of_dev
+							value = 1
+						}
+						OR = {
+							base_tax = 2
+							base_production = 2
+							base_manpower = 2
+						}
+					}
+					random_list = {
+						1 = {
+							trigger = {
+								base_tax = 2
+							}
+							add_base_tax = -1
+							ROOT = {
+								add_treasury = 75
+								add_adm_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_production = 2
+							}
+							add_base_production = -1
+							ROOT = {
+								add_treasury = 75
+								add_dip_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_manpower = 2
+							}
+							add_base_manpower = -1
+							ROOT = {
+								add_treasury = 75
+								add_mil_power = 10
+							}
+						}
+					}
+					change_variable = {
+						which = BYZ_amount_of_dev
+						value = -1
+					}
+				}
+				set_variable = {
+					which = BYZ_amount_of_dev
+					value = 0
+				}
+			}
+			hidden_effect = {
+				remove_all_buildings_effect = yes
+				destroy_great_project = {
+					type = doges_palace
+				}
+				destroy_great_project = {
+					type = venetian_arsenal_gp
+				}
+				owner = {
+					set_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_devastation = 75
+			add_permanent_province_modifier = {
+				name = BYZ_chastening_of_venice
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = burghers_not_happy_with_sack_tooltip
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		if = {
+			limit = {
+				exists = VEN
+			}
+			custom_tooltip = AB_EMPTY
+			VEN = {
+				add_opinion = {
+					who = PREV
+					modifier = razed_venice
+				}
+			}
+		}
+		play_sound = burncolony
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.31.b
+		trigger = {
+			is_ruler_impaler = no
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = 7300
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = 7300
+				}
+			}
+		}
+		custom_tooltip = pissed_at_no_revenge_tooltip
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 2
+				type = orthodox_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_patriarch_authority = -0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_legitimacy = -10
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = wal_every_italian_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					culture_group = latin
+					if = {
+						limit = {
+							exists = VEN
+						}
+						NOT = {
+							is_rival = VEN
+						}
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = italian_spared_the_venetians
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		custom_tooltip = wal_every_catholic_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = catholic
+					if = {
+						limit = {
+							exists = VEN
+						}
+						NOT = {
+							is_rival = VEN
+						}
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = catholic_spared_the_venetians
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		custom_tooltip = wal_italian_adriatic_romanianization_tooltip
+		set_country_flag = wal_romanianization_of_adriatic_italians
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		custom_tooltip = AB_EMPTY
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "custom_tooltip = tuh_galleass_gift_tooltip"
+		}
+		set_country_flag = tuh_galleass_gift
+	}
+}
+
+#Romanianization of Italy
+province_event = {
+	id = AB_wallachia_events.32
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				has_country_flag = wal_romanianization_of_adriatic_italians
+				has_country_flag = wal_romanianization_of_italy
+			}
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = tuh_romanianized_italians_recently
+				}
+				if = {
+					limit = {
+						#If player spared Venice, culture spreads faster
+						has_country_flag = wal_romanianization_of_adriatic_italians
+					}
+					had_country_flag = {
+						flag = tuh_romanianized_italians_recently
+						days = 1095
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = wal_romanianization_of_italy
+					}
+					had_country_flag = {
+						flag = tuh_romanianized_italians_recently
+						days = 2190
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		OR = {
+			is_adriaticii_romanianization_province = yes
+			is_amiaza_romanianization_province = yes
+			is_cisalpini_romanianization_province = yes
+			is_latini_romanianization_province = yes
+		}
+		OR = {
+			any_neighbor_province = {
+				culture_group = romanian_culture_group
+			}
+			area = corsica_sardinia_area
+			province_id = 126
+			province_id = 112
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = tuh_romanianized_italians_recently
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = wal_romanianization_of_adriatic_italians
+						has_country_flag = wal_romanianization_of_italy
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_adriaticii_romanianization_province = yes
+				}
+				change_culture = adriaticii
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = wal_romanianization_of_italy
+				}
+			}
+			if = {
+				limit = {
+					is_amiaza_romanianization_province = yes
+				}
+				change_culture = amiaza
+			}
+			else_if = {
+				limit = {
+					is_cisalpini_romanianization_province = yes
+				}
+				change_culture = cisalpini
+			}
+			else_if = {
+				limit = {
+					is_latini_romanianization_province = yes
+				}
+				change_culture = latini
+			}
+		}
+	}
+}
+
+#The fate of the slaves of Sicily
+country_event = {
+	id = AB_wallachia_events.33
+	title = AB_wallachia_events.33.t
+	desc = AB_wallachia_events.33.d
+	picture = GFX_AB_wallachia_events.33
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.33.a
+		trigger = {
+			any_country = {
+				any_owned_province = {
+					has_province_flag = SIC_raided_province
+					NOT = {
+						had_province_flag = {
+							flag = SIC_raided_province
+							days = 14600
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				any_owned_province = {
+					has_province_flag = SIC_raided_province
+					NOT = {
+						had_province_flag = {
+							flag = SIC_raided_province
+							days = 14600
+						}
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = freed_our_enslaved_people
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = return_slaves_home_tooltip
+		custom_tooltip = AB_EMPTY
+		add_ruler_modifier = {
+			name = wallachia_great_liberator
+			duration = 7300
+		}
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		custom_tooltip = AB_EMPTY
+		add_years_of_income = -1
+	}
+	option = {
+		name = AB_wallachia_events.33.b
+		custom_tooltip = let_the_slaves_loose_tooltip
+		tooltip = {
+			125 = {
+				remove_core = SIC
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
+				remove_all_buildings_effect = yes
+				add_devastation = 75
+				add_province_modifier = {
+					name = wallachia_aftermath_of_slave_reprisals
+					duration = 7300
+				}
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement_of_sicily
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = sicilian
+						culture = Italiyyan
+						AND = {
+							region = italy_region
+							religion = shiite
+						}
+					}
+				}
+				remove_core = SIC
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
+				remove_all_buildings_effect = yes
+				add_devastation = 75
+				add_province_modifier = {
+					name = wallachia_aftermath_of_slave_reprisals
+					duration = 7300
+				}
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement_of_sicily
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+	}
+	option = {
+		name = AB_wallachia_events.33.c
+		add_country_modifier = {
+			name = wallachia_appropriated_sicilian_slaves
+			duration = 14600
+		}
+		add_patriarch_authority = -0.25
+		add_prestige = -25
+	}
+}
+
+#Return of the Copts
+country_event = {
+	id = AB_wallachia_events.34
+	title = AB_wallachia_events.34.t
+	desc = AB_wallachia_events.34.d
+	picture = COPTIC_CITY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.34.a
+		set_country_flag = wal_allow_copts_return_egypt
+		if = {
+			limit = {
+				any_country = {
+					religion = coptic
+					knows_country = ROOT
+				}
+			}
+			every_country = {
+				limit = {
+					religion = coptic
+					knows_country = ROOT
+				}
+				add_opinion = {
+					who = PREV
+					modifier = allowed_the_copts_to_return_to_egypt
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = copts_will_never_forget_kindness_tooltip
+			custom_tooltip = AB_EMPTY
+		}
+		add_country_modifier = {
+			name = wallachia_tolerating_the_copts
+			duration = -1
+		}
+		if = {
+			limit = {
+				358 = {
+					owned_by = ROOT
+				}
+			}
+			custom_tooltip = not_affect_pentarchy_tooltip
+			358 = {
+				change_religion = coptic
+				add_reform_center = coptic
+				add_province_modifier = {
+					name = wallachia_coptic_pope
+					duration = -1
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = wallachia_coptic_administrators
+						duration = -1
+					}
+					add_province_modifier = {
+						name = wallachia_coptic_tolerance
+						duration = -1
+					}
+				}
+			}
+		}
+		custom_tooltip = coptic_spread_egypt_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_coptic_administrators
+				duration = -1
+			}
+			add_province_modifier = {
+				name = wallachia_coptic_tolerance
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = egypt_region
+					religion = coptic
+				}
+				add_province_modifier = {
+					name = wallachia_coptic_administrators
+					duration = -1
+				}
+				add_province_modifier = {
+					name = wallachia_coptic_tolerance
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = clergy_reaction_copts_egypt_tooltip
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -30
+		}
+		add_patriarch_authority = -0.1
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 2
+				type = orthodox_rebels
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.34.b
+		custom_tooltip = coptic_properties_seized_tooltip
+		add_years_of_income = 0.66
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = copts_will_rebel_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = coptic
+					NOT = {
+						has_rebel_faction = coptic_rebels
+					}
+				}
+				spawn_rebels = {
+					size = 2
+					type = coptic_rebels
+				}
+			}
+			random_list = {
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				any_country = {
+					religion = coptic
+					knows_country = ROOT
+				}
+			}
+			custom_tooltip = copts_not_happy_tooltip
+			custom_tooltip = AB_EMPTY
+			every_country = {
+				limit = {
+					religion = coptic
+					knows_country = ROOT
+				}
+				add_opinion = {
+					who = PREV
+					modifier = persecuted_the_copts_of_egypt
+				}
+			}
+			custom_tooltip = AB_EMPTY
+		}
+		358 = {
+			add_province_modifier = {
+				name = wallachia_patriarchate_of_alexandria
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_not_tolerating_the_copts
+			duration = -1
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+	}
+}
+
+#Move capital to Rome?
+country_event = {
+	id = AB_wallachia_events.35
+	title = AB_wallachia_events.35.t
+	desc = AB_wallachia_events.35.d
+	picture = GFX_AB_wallachia_events.35
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				118 = {
+					previous_owner = PREV
+				}
+			}
+			save_event_target_as = previous_owner_of_rome
+		}
+	}
+	option = {
+		name = AB_wallachia_events.35.a
+		118 = {
+			move_capital_effect = yes
+			change_culture = ROOT
+			add_core = ROOT
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			custom_tooltip = AB_EMPTY
+			add_province_modifier = {
+				name = wallachia_rebuilding_rome
+				duration = 7300
+			}
+		}
+		set_country_flag = wal_moved_capital_to_rome
+		custom_tooltip = wal_moved_capital_to_rome_romanianization_tooltip
+	}
+	option = {
+		name = AB_wallachia_events.35.b
+		highlight = yes
+		trigger = {
+			capital = 151
+		}
+		#Keep in constantinople
+		151 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = wallachia_queen_of_all_cities
+				duration = -1
+			}
+		}
+		custom_tooltip = theodosian_walls_tooltip
+		set_country_flag = byzantine_monument_flag
+	}
+	option = {
+		name = AB_wallachia_events.35.c
+		highlight = yes
+		trigger = {
+			capital = 161
+		}
+		161 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			custom_tooltip = rome_on_the_danube_upgrade_tooltip
+			tooltip = {
+				capital_scope = {
+					add_province_modifier = {
+						name = wallachia_rome_on_the_danube_upgraded
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				ROOT = {
+					every_owned_province = {
+						limit = {
+							has_province_modifier = wallachia_rome_on_the_danube
+						}
+						remove_province_modifier = wallachia_rome_on_the_danube
+					}
+				}
+				add_province_modifier = {
+					name = wallachia_rome_on_the_danube_upgraded
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = new_roman_identity_upgrade_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = wallachia_new_roman_identity_upgraded
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = wallachia_new_roman_identity
+				}
+				remove_country_modifier = wallachia_new_roman_identity
+			}
+			add_country_modifier = {
+				name = wallachia_new_roman_identity_upgraded
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.35_im_fine_thanks
+		trigger = {
+			NOT = {
+				capital = 151
+			}
+			NOT = {
+				capital = 161
+			}
+		}
+		capital_scope = {
+			add_base_manpower = 4
+			add_base_production = 4
+			add_base_tax = 4
+			add_province_modifier = {
+				name = capital_boom
+				duration = -1
+			}
+		}
+	}
+}
+
+#Study foreign navy event
+country_event = {
+	id = AB_wallachia_events.36
+	title = AB_wallachia_events.36.t
+	desc = AB_wallachia_events.36.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.36.a
+		trigger = {
+			num_of_marines = 40
+		}
+		add_country_modifier = {
+			name = wallachia_buffed_marines
+			duration = -1
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		custom_tooltip = AB_EMPTY
+		capital_scope = {
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		add_army_professionalism = 0.05
+	}
+	option = {
+		name = AB_wallachia_events.36.ven
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = VEN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_venice
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = VEN
+					}
+				}
+				save_event_target_as = ven_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:ven_target
+			religion = event_target:ven_target
+			skill = 3
+			name = "Andrea Foscari"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.gen
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = GEN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_genoa
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = GEN
+					}
+				}
+				save_event_target_as = gen_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:gen_target
+			religion = event_target:gen_target
+			skill = 3
+			name = "Francesco di Fornari"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.adu
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = ADU
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_andalusia
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = ADU
+					}
+				}
+				save_event_target_as = adu_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:adu_target
+			religion = event_target:adu_target
+			skill = 3
+			name = "Sa'd Ibn Ishaq"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.sic
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = SIC
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_sicily
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = SIC
+					}
+				}
+				save_event_target_as = sic_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:sic_target
+			religion = event_target:sic_target
+			skill = 3
+			name = "Yunus Saber"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.has
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = HAS
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_hansa
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = HAS
+					}
+				}
+				save_event_target_as = has_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:has_target
+			religion = event_target:has_target
+			skill = 3
+			name = "Hermann Assman"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.dan
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = DAN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_denmark
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = DAN
+					}
+				}
+				save_event_target_as = dan_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:dan_target
+			religion = event_target:dan_target
+			skill = 3
+			name = "Rikissa Pallesen"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.eng
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_england
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = ENG
+					}
+				}
+				save_event_target_as = eng_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:eng_target
+			religion = event_target:eng_target
+			skill = 3
+			name = "Cuthred Eastseaxe"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.dutch
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = HOL
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_dutch
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = HOL
+					}
+				}
+				save_event_target_as = hol_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:hol_target
+			religion = event_target:hol_target
+			skill = 3
+			name = "Frans Haag"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+}
+
+#Romanianization of Southern French
+province_event = {
+	id = AB_wallachia_events.37
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_southern_french
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_southern_france_recently
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 201
+							has_great_project = {
+								type = royal_palace_of_arles
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_southern_france_recently
+						days = 1460
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_southern_france_recently
+						days = 2920
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		OR = {
+			culture = gascon
+			culture = occitain
+			culture = aquitaine
+			culture = french_culture
+			culture = basque
+		}
+		OR = {
+			area = provence_area
+			area = savoy_dauphine_area
+			area = languedoc_area
+			area = massif_central_area
+			area = pyrenees_area
+			area = guyenne_area
+		}
+		OR = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				culture_group = romanian_culture_group
+			}
+			province_id = 4696
+			province_id = 201
+			province_id = 200
+			province_id = 2753
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_southern_france_recently
+		}
+		change_culture = provinciali
+	}
+}
+
+#Romanianization of Iberia
+province_event = {
+	id = AB_wallachia_events.38
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_iberia
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_iberia_recently
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 223
+							has_great_project = {
+								type = alhambra
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_iberia_recently
+						days = 1642
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_iberia_recently
+						days = 3285
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		region = iberia_region
+		culture_group = iberian
+		OR = {
+			area = baleares_area
+			province_id = 213
+			any_neighbor_province = {
+				owned_by = ROOT
+				culture_group = romanian_culture_group
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_iberia_recently
+		}
+		if = {
+			limit = {
+				is_lusitanii_romanianization_province = yes
+			}
+			change_culture = lusitanii
+		}
+		else_if = {
+			limit = {
+				is_hispani_romanianization_province = yes
+			}
+			change_culture = hispani
+		}
+	}
+}
+
+#Romanianization of Northern France
+province_event = {
+	id = AB_wallachia_events.39
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_france
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_france_recently
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 183
+							has_great_project = {
+								type = versailles
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_france_recently
+						days = 1825
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_france_recently
+						days = 3650
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = french
+		NOT = {
+			culture = occitain
+		}
+		NOT = {
+			culture = gascon
+		}
+		NOT = {
+			culture = aquitaine
+		}
+		region = france_region
+		OR = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				OR = {
+					culture = provinciali
+					culture = galici
+				}
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_france_recently
+		}
+		change_culture = galici
+	}
+}
+
+#Remove personality for Augustus
+country_event = {
+	id = AB_wallachia_events.40
+	title = wallachian_terror_events.10.t
+	desc = AB_wallachia_events.40.d
+	picture = GFX_AB_wallachia_events.40
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.10.nevermind
+	}
+	option = {
+		name = humane_personality
+		trigger = {
+			ruler_has_personality = humane_personality
+		}
+		remove_ruler_personality = humane_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = petty_personality
+		trigger = {
+			ruler_has_personality = petty_personality
+		}
+		remove_ruler_personality = petty_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = legendary_conqueror_personality
+		trigger = {
+			ruler_has_personality = legendary_conqueror_personality
+		}
+		remove_ruler_personality = legendary_conqueror_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = great_engineer_personality
+		trigger = {
+			ruler_has_personality = great_engineer_personality
+		}
+		remove_ruler_personality = great_engineer_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = patron_of_arts_personality
+		trigger = {
+			ruler_has_personality = patron_of_arts_personality
+		}
+		remove_ruler_personality = patron_of_arts_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = peasant_revolt_leader_personality
+		trigger = {
+			ruler_has_personality = peasant_revolt_leader_personality
+		}
+		remove_ruler_personality = peasant_revolt_leader_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = papal_puppetmaster_personality
+		trigger = {
+			ruler_has_personality = papal_puppetmaster_personality
+		}
+		remove_ruler_personality = papal_puppetmaster_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = iron_crowned_personality
+		trigger = {
+			ruler_has_personality = iron_crowned_personality
+		}
+		remove_ruler_personality = iron_crowned_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = merchant_basileus_personality
+		trigger = {
+			ruler_has_personality = merchant_basileus_personality
+		}
+		remove_ruler_personality = merchant_basileus_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = orangist_stadholder_personality
+		trigger = {
+			ruler_has_personality = orangist_stadholder_personality
+		}
+		remove_ruler_personality = orangist_stadholder_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = reaver_personality
+		trigger = {
+			ruler_has_personality = reaver_personality
+		}
+		remove_ruler_personality = reaver_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = last_knight_personality
+		trigger = {
+			ruler_has_personality = last_knight_personality
+		}
+		remove_ruler_personality = last_knight_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = maidenless_personality
+		trigger = {
+			ruler_has_personality = maidenless_personality
+		}
+		remove_ruler_personality = maidenless_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = thunderer_personality
+		trigger = {
+			ruler_has_personality = thunderer_personality
+		}
+		remove_ruler_personality = thunderer_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = just_personality
+		trigger = {
+			ruler_has_personality = just_personality
+		}
+		remove_ruler_personality = just_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = righteous_personality
+		trigger = {
+			ruler_has_personality = righteous_personality
+		}
+		remove_ruler_personality = righteous_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = tolerant_personality
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		remove_ruler_personality = tolerant_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = kind_hearted_personality
+		trigger = {
+			ruler_has_personality = kind_hearted_personality
+		}
+		remove_ruler_personality = kind_hearted_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = free_thinker_personality
+		trigger = {
+			ruler_has_personality = free_thinker_personality
+		}
+		remove_ruler_personality = free_thinker_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = well_connected_personality
+		trigger = {
+			ruler_has_personality = well_connected_personality
+		}
+		remove_ruler_personality = well_connected_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = calm_personality
+		trigger = {
+			ruler_has_personality = calm_personality
+		}
+		remove_ruler_personality = calm_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = careful_personality
+		trigger = {
+			ruler_has_personality = careful_personality
+		}
+		remove_ruler_personality = careful_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = secretive_personality
+		trigger = {
+			ruler_has_personality = secretive_personality
+		}
+		remove_ruler_personality = secretive_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = intricate_web_weaver_personality
+		trigger = {
+			ruler_has_personality = intricate_web_weaver_personality
+		}
+		remove_ruler_personality = intricate_web_weaver_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = fertile_personality
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+		remove_ruler_personality = fertile_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = well_advised_personality
+		trigger = {
+			ruler_has_personality = well_advised_personality
+		}
+		remove_ruler_personality = well_advised_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = benevolent_personality
+		trigger = {
+			ruler_has_personality = benevolent_personality
+		}
+		remove_ruler_personality = benevolent_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = zealot_personality
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		remove_ruler_personality = zealot_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = pious_personality
+		trigger = {
+			ruler_has_personality = pious_personality
+		}
+		remove_ruler_personality = pious_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = lawgiver_personality
+		trigger = {
+			ruler_has_personality = lawgiver_personality
+		}
+		remove_ruler_personality = lawgiver_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = midas_touched_personality
+		trigger = {
+			ruler_has_personality = midas_touched_personality
+		}
+		remove_ruler_personality = midas_touched_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = incorruptible_personality
+		trigger = {
+			ruler_has_personality = incorruptible_personality
+		}
+		remove_ruler_personality = incorruptible_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = architectural_visionary_personality
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		remove_ruler_personality = architectural_visionary_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = scholar_personality
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+		remove_ruler_personality = scholar_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = entrepreneur_personality
+		trigger = {
+			ruler_has_personality = entrepreneur_personality
+		}
+		remove_ruler_personality = entrepreneur_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = industrious_personality
+		trigger = {
+			ruler_has_personality = industrious_personality
+		}
+		remove_ruler_personality = industrious_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = expansionist_personality
+		trigger = {
+			ruler_has_personality = expansionist_personality
+		}
+		remove_ruler_personality = expansionist_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = charismatic_negotiator_personality
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
+		remove_ruler_personality = charismatic_negotiator_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = silver_tongue_personality
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		remove_ruler_personality = silver_tongue_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = conqueror_personality
+		trigger = {
+			ruler_has_personality = conqueror_personality
+		}
+		remove_ruler_personality = conqueror_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = tactical_genius_personality
+		trigger = {
+			ruler_has_personality = tactical_genius_personality
+		}
+		remove_ruler_personality = tactical_genius_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = bold_fighter_personality
+		trigger = {
+			ruler_has_personality = bold_fighter_personality
+		}
+		remove_ruler_personality = bold_fighter_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = strict_personality
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+		remove_ruler_personality = strict_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = inspiring_leader_personality
+		trigger = {
+			ruler_has_personality = inspiring_leader_personality
+		}
+		remove_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = martial_educator_personality
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		remove_ruler_personality = martial_educator_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = navigator_personality
+		trigger = {
+			ruler_has_personality = navigator_personality
+		}
+		remove_ruler_personality = navigator_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = fierce_negotiator_personality
+		trigger = {
+			ruler_has_personality = fierce_negotiator_personality
+		}
+		remove_ruler_personality = fierce_negotiator_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = babbling_buffoon_personality
+		trigger = {
+			ruler_has_personality = babbling_buffoon_personality
+		}
+		remove_ruler_personality = babbling_buffoon_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = embezzler_personality
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		remove_ruler_personality = embezzler_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = infertile_personality
+		trigger = {
+			ruler_has_personality = infertile_personality
+		}
+		remove_ruler_personality = infertile_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = drunkard_personality
+		trigger = {
+			ruler_has_personality = drunkard_personality
+		}
+		remove_ruler_personality = drunkard_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = sinner_personality
+		trigger = {
+			ruler_has_personality = sinner_personality
+		}
+		remove_ruler_personality = sinner_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = greedy_personality
+		trigger = {
+			ruler_has_personality = greedy_personality
+		}
+		remove_ruler_personality = greedy_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = cruel_personality
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		remove_ruler_personality = cruel_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = naive_personality
+		trigger = {
+			ruler_has_personality = naive_personality
+		}
+		remove_ruler_personality = naive_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = craven_personality
+		trigger = {
+			ruler_has_personality = craven_personality
+		}
+		remove_ruler_personality = craven_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = loose_lips_personality
+		trigger = {
+			ruler_has_personality = loose_lips_personality
+		}
+		remove_ruler_personality = loose_lips_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = obsessive_perfectionist_personality
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		remove_ruler_personality = obsessive_perfectionist_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = malevolent_personality
+		trigger = {
+			ruler_has_personality = malevolent_personality
+		}
+		remove_ruler_personality = malevolent_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = immortal_personality
+		trigger = {
+			ruler_has_personality = immortal_personality
+		}
+		remove_ruler_personality = immortal_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = reformist_personality
+		trigger = {
+			ruler_has_personality = reformist_personality
+		}
+		remove_ruler_personality = reformist_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = legendary_pirate_personality
+		trigger = {
+			ruler_has_personality = legendary_pirate_personality
+		}
+		remove_ruler_personality = legendary_pirate_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = impaler_personality
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		remove_ruler_personality = impaler_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = impaler2_personality
+		trigger = {
+			ruler_has_personality = impaler2_personality
+		}
+		remove_ruler_personality = impaler2_personality
+		add_ruler_personality = augustus_personality
+	}
+	option = {
+		name = impaler3_personality
+		trigger = {
+			ruler_has_personality = impaler3_personality
+		}
+		remove_ruler_personality = impaler3_personality
+		add_ruler_personality = augustus_personality
+	}
+}
+
+#New traditions and ambitions for Dacia
+country_event = {
+	id = AB_wallachia_events.41
+	title = AB_wallachia_events.41.t
+	desc = {
+		desc = AB_wallachia_events.41_rem_desc
+		trigger = {
+			has_country_flag = wal_elective_monarchy
+		}
+	}
+	desc = {
+		desc = AB_wallachia_events.41_terror_desc
+		trigger = {
+			NOT = {
+				has_country_flag = wal_elective_monarchy
+			}
+		}
+	}
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Rome Mania timed mission failed
+country_event = {
+	id = AB_wallachia_events.42
+	title = AB_wallachia_events.42.t
+	desc = AB_wallachia_events.42.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	trigger = {
+		has_country_flag = wal_unlocked_timed
+		is_year = 1600
+		NOT = {
+			mission_completed = wal_rome_mania
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = wal_unlocked_timed
+			set_country_flag = wal_failed_timed
+			swap_non_generic_missions = yes
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = AB_wallachia_events.42.a
+	}
+}
+
+province_event = {
+	id = AB_wallachia_events.43
+	title = AB_wallachia_events.43.t
+	desc = AB_wallachia_events.43.d
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = monthly_income_var
+				value = trigger_value:monthly_income
+				who = owner
+			}
+			set_variable = {
+				which = establish_mine_cost
+				which = monthly_income_var
+			}
+			multiply_variable = {
+				which = establish_mine_cost
+				value = 0.6				# 5% of yearly income = monthly_income * 12 * 0.05. 0.6 = 12 * 0.05
+			}
+			set_variable = {
+				which = salt_money_collected
+				which = monthly_income_var
+			}
+			multiply_variable = {
+				which = salt_money_collected
+				value = 0.3				# 2.5% of yearly income = monthly_income * 12 * 0.025. 0.3 = 12 * 0.025
+			}
+			set_province_flag = salt_event_fired
+		}
+	}
+	option = {
+		name = AB_wallachia_events.43.a
+		change_trade_goods = salt
+		add_province_modifier = {
+			name = wallachia_newly_established_salt_mine
+			duration = 1825
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = five_percent_yearly_income
+					value = 200
+				}
+			}
+			owner = {
+				add_treasury = -200
+			}
+		}
+		else = {
+			owner = {
+				add_years_of_income = -0.05
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.43.b
+		if = {
+			limit = {
+				check_variable = {
+					which = salt_money_collected
+					value = 100
+				}
+			}
+			owner = {
+				add_treasury = 100
+			}
+		}
+		else = {
+			owner = {
+				add_years_of_income = 0.025
+			}
+		}
+		custom_tooltip = no_more_salt_events_tooltip
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.44
+	title =  AB_wallachia_events.44.t
+	desc =  AB_wallachia_events.44.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+		}
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		set_estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+	}
+	option = {
+		name = monopoly_privileges.1.b
+	}
+}

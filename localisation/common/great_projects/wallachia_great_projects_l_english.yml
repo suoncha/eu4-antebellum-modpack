@@ -1,0 +1,12 @@
+﻿l_english:
+ sfatul_tarii: "Sfatul Tarii"
+ tirgoviste_princely_court: "Tîrgoviste Princely Court"
+ tirgoviste_princely_court_terror_bonus_tooltip: "§YTerror§! now grants up to §G+2.5%§! §YDiscipline§! at §Y100 Terror§!."
+ st_pauls_basilica: "Saint Paul's Basilica"
+ st_pauls_basilica_relations_boost_tooltip: "Every §YOrthodox§! country will gain §G+25§! opinion of us."
+ st_pauls_basilica_catholic_reaction_tooltip: "Every §YCatholic§! country will gain §R-75§! opinion of us, and the @PAP §Y[PAP.GetName]§! will gain §R-200§! opinion of us. §RThis is permanent!§!\n§REvery owned §YCatholic§! province will revolt against us.§!"
+ unlock_icon_of_st_paul_tooltip: "Unlocks the §YIcon of St. Paul§! for every §YOrthodox§! country."
+ faster_romanianization_of_iberia_tooltip: "Provinces in the §YIberia§! region will be §YRomanianized§! twice as quickly."
+ faster_romanianization_of_southern_france_tooltip: "Provinces in §YSouthern France§! will be §YRomanianized§! twice as quickly."
+ faster_romanianization_of_france_tooltip: "Provinces in §YFrance§! (excluding §YSouthern France§!) will be §YRomanianized§! twice as quickly."
+ rem_SCHONBRUNN_CONDITION: "Completed Mission §YThe Danubian Frontier§!"

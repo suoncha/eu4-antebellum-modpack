@@ -1,0 +1,75 @@
+﻿l_english:
+ global_edict_commander_quick_select_settings_event.1.t: "Quick Select Edict Settings"
+ global_edict_commander_quick_select_settings_event.1.d: "Instead of going through an event prompt every time you want to set an edict, you can pre-select an option here. Your choice will then be applied immediately when you click that edict's button.\nIf an edict below is §Ghighlighted green§!, a quick select option is currently enabled for it."
+ global_edict_commander_quick_select_settings_event.go_back: "Go Back"
+ global_edict_commander_quick_select_settings_event.1.advancement: "Advancement Effort"
+ global_edict_commander_quick_select_settings_event.1.centralization: "Centralization Effort"
+ global_edict_commander_quick_select_settings_event.1.defensive: "Defensive Edict"
+ global_edict_commander_quick_select_settings_event.1.dev: "Encourage Development"
+ global_edict_commander_quick_select_settings_event.1.manpower: "Increased Enlistment"
+ global_edict_commander_quick_select_settings_event.1.trade: "Protect Trade"
+ global_edict_commander_quick_select_settings_event.1.missionary_str: "Enforce Religious Unity"
+ global_edict_commander_quick_select_settings_event.1.feudal_de_jure: "Feudal De Jure Law"
+ global_edict_commander_quick_select_settings_event.1.religion_enforced: "Religion Enforced"
+ global_edict_commander_quick_select_settings_event.1.absolutism: "Edict of Absolutism"
+ global_edict_commander_quick_select_settings_event.1.feudal_taxes: "Feudal Taxes Edict"
+ global_edict_commander_quick_select_settings_event.1.local_separatism: "State Integration Edict"
+ global_edict_commander_quick_select_settings_event.1.goods_produced: "Urbanization Edict"
+ global_edict_commander_quick_select_settings_event.1.movement: "French Infrastructure Network"
+ global_edict_commander_quick_select_settings_event.1.french_trade: "Promote Trade"
+ global_edict_commander_quick_select_settings_event.1.china_industrial: "Rapid Industrialization"
+ global_edict_commander_quick_select_settings_event.1.governance: "Edict of Governance"
+
+ global_edict_commander_quick_select_settings_events.disable_quick_select: "Disable quick select for this edict."
+ global_edict_commander_quick_select_settings_events.disable_quick_select.tt: "We will have to go through the event every time we select this edict."
+
+ global_edict_commander_quick_select_settings_event.2.t: "Advancement Effort"
+ global_edict_commander_quick_select_settings_event.2.d: "Select which event option you want to run whenever you click the Advancement Effort button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.3.t: "Centralization Effort"
+ global_edict_commander_quick_select_settings_event.3.d: "Select which event option you want to run whenever you click the Centralization Effort button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.4.t: "Defensive Edict"
+ global_edict_commander_quick_select_settings_event.4.d: "Select which event option you want to run whenever you click the Defensive Edict button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.5.t: "Encourage Development"
+ global_edict_commander_quick_select_settings_event.5.d: "Select which event option you want to run whenever you click the Encourage Development button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.6.t: "Rapid Industrialization"
+ global_edict_commander_quick_select_settings_event.6.d: "Select which event option you want to run whenever you click the Rapid Industrialization button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.7.t: "Increased Enlistment"
+ global_edict_commander_quick_select_settings_event.7.d: "Select which event option you want to run whenever you click the Increased Enlistment button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.8.t: "Protect Trade"
+ global_edict_commander_quick_select_settings_event.8.d: "Select which event option you want to run whenever you click the Protect Trade button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.9.t: "Enforce Religious Unity"
+ global_edict_commander_quick_select_settings_event.9.d: "Select which event option you want to run whenever you click the Enforce Religious Unity button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.10.t: "Feudal De Jure Law"
+ global_edict_commander_quick_select_settings_event.10.d: "Select which event option you want to run whenever you click the Feudal De Jure Law button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.11.t: "Religion Enforced"
+ global_edict_commander_quick_select_settings_event.11.d: "Select which event option you want to run whenever you click the Religion Enforced button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.12.t: "Edict of Absolutism"
+ global_edict_commander_quick_select_settings_event.12.d: "Select which event option you want to run whenever you click the Edict of Absolutism button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.13.t: "Feudal Taxes Edict"
+ global_edict_commander_quick_select_settings_event.13.d: "Select which event option you want to run whenever you click the Feudal Taxes Edict button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.14.t: "State Integration Edict"
+ global_edict_commander_quick_select_settings_event.14.d: "Select which event option you want to run whenever you click the State Integration Edict button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.15.t: "Urbanization Edict"
+ global_edict_commander_quick_select_settings_event.15.d: "Select which event option you want to run whenever you click the Urbanization Edict button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.16.t: "French Infrastructure Network"
+ global_edict_commander_quick_select_settings_event.16.d: "Select which event option you want to run whenever you click the French Infrastructure Network button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.17.t: "Promote Trade"
+ global_edict_commander_quick_select_settings_event.17.d: "Select which event option you want to run whenever you click the Promote Trade button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_settings_event.18.t: "Edict of Governance"
+ global_edict_commander_quick_select_settings_event.18.d: "Select which event option you want to run whenever you click the Edict of Governance button.\nThe currently enabled option is §Ghighlighted green§!."

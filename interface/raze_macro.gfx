@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_raze_button_new"
+		texturefile = "gfx/interface/buttons/raze_macro/raze_province_new.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+	}
+}

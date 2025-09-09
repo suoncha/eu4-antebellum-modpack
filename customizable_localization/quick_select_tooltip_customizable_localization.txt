@@ -1,0 +1,356 @@
+# Advancement Effort
+defined_text = {
+	name = quick_select_advancement_tooltip_loc
+	text = {
+		localisation_key = quick_select_advancement_effort_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_advancement_effort_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_advancement_effort_quick_select = no
+			}
+		}
+	}
+}
+
+# Centralization Effort
+defined_text = {
+	name = quick_select_centralization_tooltip_loc
+	text = {
+		localisation_key = quick_select_centralization_effort_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_centralization_effort_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_centralization_effort_quick_select = no
+			}
+		}
+	}
+}
+
+# Defensive Edict
+defined_text = {
+	name = quick_select_defensive_tooltip_loc
+	text = {
+		localisation_key = quick_select_defensive_edict_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_defensive_edict_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_defensive_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# Encourage Development
+defined_text = {
+	name = quick_select_development_tooltip_loc
+	text = {
+		localisation_key = quick_select_encourage_development_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_encourage_development_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_encourage_development_quick_select = no
+			}
+		}
+	}
+}
+
+# Rapid Industrialization
+defined_text = {
+	name = quick_select_made_in_china_tooltip_loc	# Matches button name: global_edicts_made_in_china_button
+	text = {
+		localisation_key = quick_select_rapid_industrialization_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_rapid_industrialization_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_rapid_industrialization_quick_select = no
+			}
+		}
+	}
+}
+
+# Increased Enlistment
+defined_text = {
+	name = quick_select_enlistment_tooltip_loc
+	text = {
+		localisation_key = quick_select_increased_enlistment_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_increased_enlistment_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_increased_enlistment_quick_select = no
+			}
+		}
+	}
+}
+
+# Protect Trade
+defined_text = {
+	name = quick_select_trade_tooltip_loc
+	text = {
+		localisation_key = quick_select_protect_trade_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_protect_trade_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_protect_trade_quick_select = no
+			}
+		}
+	}
+}
+
+# Enforce Religious Unity
+defined_text = {
+	name = quick_select_missionary_strength_tooltip_loc
+	text = {
+		localisation_key = quick_select_enforce_religious_unity_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_enforce_religious_unity_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_enforce_religious_unity_quick_select = no
+			}
+		}
+	}
+}
+
+# Feudal De Jure Law
+defined_text = {
+	name = quick_select_unrest_tooltip_loc	# Matches button name: global_edicts_unrest_button
+	text = {
+		localisation_key = quick_select_feudal_de_jure_law_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_feudal_de_jure_law_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_feudal_de_jure_law_quick_select = no
+			}
+		}
+	}
+}
+
+# Religion Enforced
+defined_text = {
+	name = quick_select_resist_reformation_tooltip_loc	# Matches button name: global_edicts_resist_reformation_button
+	text = {
+		localisation_key = quick_select_religion_enforced_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_religion_enforced_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_religion_enforced_quick_select = no
+			}
+		}
+	}
+}
+
+# Edict of Absolutism
+defined_text = {
+	name = quick_select_devastation_tooltip_loc	# Matches button name: global_edicts_devastation_button
+	text = {
+		localisation_key = quick_select_edict_of_absolutism_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_edict_of_absolutism_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_edict_of_absolutism_quick_select = no
+			}
+		}
+	}
+}
+
+# Feudal Taxes Edict
+defined_text = {
+	name = quick_select_taxes_tooltip_loc	# Matches button name: global_edicts_taxes_button
+	text = {
+		localisation_key = quick_select_feudal_taxes_edict_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_feudal_taxes_edict_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_feudal_taxes_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# State Integration Edict
+defined_text = {
+	name = quick_select_local_separatism_tooltip_loc	# Matches button name: global_edicts_local_separatism_button
+	text = {
+		localisation_key = quick_select_state_integration_edict_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_state_integration_edict_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_state_integration_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# Urbanization Edict
+defined_text = {
+	name = quick_select_goods_produced_tooltip_loc	# Matches button name: global_edicts_goods_produced_button
+	text = {
+		localisation_key = quick_select_urbanization_edict_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_urbanization_edict_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_urbanization_edict_quick_select = no
+			}
+		}
+	}
+}
+
+# French Infrastructure Network
+defined_text = {
+	name = quick_select_movement_tooltip_loc	# Matches button name: global_edicts_movement_button
+	text = {
+		localisation_key = quick_select_french_infrastructure_network_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_french_infrastructure_network_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_french_infrastructure_network_quick_select = no
+			}
+		}
+	}
+}
+
+# Promote Trade
+defined_text = {
+	name = quick_select_french_trade_tooltip_loc	# Matches button name: global_edicts_french_trade_button
+	text = {
+		localisation_key = quick_select_promote_trade_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_promote_trade_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_promote_trade_quick_select = no
+			}
+		}
+	}
+}
+
+# Edict of Governance
+defined_text = {
+	name = quick_select_edict_of_governance_tooltip_loc	# Matches button name: global_edicts_edict_of_governance_button
+	text = {
+		localisation_key = quick_select_edict_of_governance_tooltip_enabled_loc
+		trigger = {
+			FROM = {
+				has_edict_of_governance_quick_select = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_quick_select_tooltip_loc
+		trigger = {
+			FROM = {
+				has_edict_of_governance_quick_select = no
+			}
+		}
+	}
+}

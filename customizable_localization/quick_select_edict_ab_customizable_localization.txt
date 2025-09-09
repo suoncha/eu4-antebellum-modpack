@@ -1,0 +1,229 @@
+# Encourage Economic Growth
+defined_text = {
+	name = quick_select_encourage_economic_growth_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.1.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_economic_growth_1
+			}
+		}
+	}
+	text = {
+		localisation_key = apply_to_every_state
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_encourage_economic_growth_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_encourage_economic_growth_quick_select = no
+			}
+		}
+	}
+}
+
+# Disrupt Local Infrastructure
+defined_text = {
+	name = quick_select_disrupt_local_infrastructure_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.2.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.2.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_2
+			}
+		}
+	}
+	text = {
+		localisation_key = apply_to_every_state
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_3
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_disrupt_local_infrastructure_quick_select = no
+			}
+		}
+	}
+}
+
+# Strengthen Local Shipbuilding Tradition
+defined_text = {
+	name = quick_select_strengthen_local_shipbuilding_tradition_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.3.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.3.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.3.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_3
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.3.dee
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_4
+			}
+		}
+	}
+	text = {
+		localisation_key = apply_to_every_state
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_5
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_strengthen_local_shipbuilding_tradition_quick_select = no
+			}
+		}
+	}
+}
+
+# Improved Gold Mining
+defined_text = {
+	name = quick_select_improved_gold_mining_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.4.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_improved_gold_mining_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.4.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_improved_gold_mining_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.4.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_improved_gold_mining_3
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_improved_gold_mining_quick_select = no
+			}
+		}
+	}
+}
+
+# Colonial Development
+defined_text = {
+	name = quick_select_colonial_development_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.5.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_colonial_development_1
+			}
+		}
+	}
+	text = {
+		localisation_key = apply_to_every_state
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_colonial_development_2
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_colonial_development_quick_select = no
+			}
+		}
+	}
+}
+
+# Modernized Local Administration
+defined_text = {
+	name = quick_select_modernized_local_administration_loc
+	text = {
+		localisation_key = global_edict_commander_events_ab.6.a
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_modernized_local_administration_1
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.6.b
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_modernized_local_administration_2
+			}
+		}
+	}
+	text = {
+		localisation_key = global_edict_commander_events_ab.6.c
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_modernized_local_administration_3
+			}
+		}
+	}
+	text = {
+		localisation_key = apply_to_every_state
+		trigger = {
+			FROM = {
+				has_country_flag = quick_select_modernized_local_administration_4
+			}
+		}
+	}
+	text = {
+		localisation_key = empty_loc
+		trigger = {
+			FROM = {
+				has_modernized_local_administration_quick_select = no
+			}
+		}
+	}
+}

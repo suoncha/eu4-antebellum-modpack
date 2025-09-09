@@ -1,0 +1,9 @@
+﻿l_english:
+ fort_macro_button_tt:0 "Click here to open the §YGlobal Fort Remover§! window."
+ fort_macro_close_button_tt:0 "Close this window."
+ fort_macro_button_blacklisted_tt:0 "This fort is currently not whitelisted, and §Rwill be deleted§! if you click the §YDelete All Forts§! button."
+ fort_macro_button_whitelisted_tt:0 "This fort is currently whitelisted, and §Gwill not be deleted§! if you click the §YDelete All Forts§! button."
+ fort_macro_button_delete_all_forts_tt:0 "This will delete all the forts in your country that are not whitelisted."
+ fort_macro_title_text:0 "Global Fort Remover"
+ fort_macro_whitelist_text:0 "Whitelist Fort"
+ fort_macro_delete_all_forts_text:0 "Delete All Forts"

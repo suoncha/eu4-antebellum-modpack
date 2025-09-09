@@ -1,0 +1,265 @@
+WAL_ideas = {
+	start = {
+		defensiveness = 0.2
+		discipline = 0.05
+	}
+	bonus = {
+		manpower_recovery_speed = 0.2
+	}
+	trigger = {
+		tag = WAL
+	}
+	free = yes
+	WAL_terror_state = {
+		monthly_terror_power = 0.05
+		shock_damage = 0.1
+	}
+	foreign_trade_restrictions = {
+		global_prov_trade_power_modifier = 0.2
+	}
+	WAL_state_of_paranoia = {
+		global_spy_defence = 0.5
+		global_unrest = -0.5
+	}
+	w_foreign_advisors = {
+		advisor_cost = -0.1
+	}
+	WAL_lessons_from_the_invaders = {
+		cavalry_power = 0.1
+		cav_to_inf_ratio = 0.15
+	}
+	WAL_boier_regime = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+		nobles_loyalty_modifier = 0.05
+	}
+	abolition_of_serfdom = {
+		global_manpower_modifier = 0.2
+	}
+}
+
+TUH_ideas = {
+	free = yes
+	start = {
+		land_morale = 0.15
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+		nobles_loyalty_modifier = 0.1
+	}
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	trigger = {
+		tag = TUH
+	}
+	TUH_great_council = {
+		advisor_cost = -0.2
+		num_of_parliament_issues = 2
+	}
+	TUH_bibescu_diplomatic_corps = {
+		diplomatic_reputation = 1
+		diplomatic_annexation_cost = -0.1
+	}
+	TUH_patronage_of_the_brancoveanu = {
+		development_cost_modifier = -0.075
+	}
+	TUH_household_regiments = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.25
+	}
+	TUH_noble_self_governance = {
+		state_governing_cost = -0.15
+		global_prosperity_growth = 0.1
+	}
+	TUH_danubian_compact = {
+		improve_relation_modifier = 0.1
+		global_trade_power = 0.1
+	}
+	TUH_boieri_strongholds = {
+		defensiveness = 0.25
+		establish_order_cost = -0.25
+	}
+}
+
+DAC_ideas = {
+	free = yes
+	start = {
+		discipline = 0.05
+		global_regiment_cost = -0.1
+	}
+	bonus = {
+		governing_capacity_modifier = 0.15
+	}
+	trigger = {
+		tag = DAC
+	}
+	DAC_restore = {
+		core_creation = -0.1
+		prestige = 0.5
+	}
+	DAC_cossacks_of_moldavia = {
+		cavalry_shock = 0.75
+		allowed_cossack_fraction = 0.2
+	}
+	DAC_granary_of_the_danube = {
+	    global_trade_goods_size_modifier = 0.05
+		global_manpower_modifier = 0.15
+	}
+	DAC_reign_of_terror = {
+		shock_damage = 0.1
+	    monthly_terror_power = 0.06
+		harsh_treatment_cost = -0.1
+	}
+	DAC_bulwark_of_orthodoxy = {
+		tolerance_own = 3
+	}
+	DAC_draco_legions = {
+		land_forcelimit_modifier = 0.1
+		infantry_power = 0.1
+	}
+	DAC_citadels_of_faith = {
+		defensiveness = 0.2
+		global_missionary_strength = 0.015
+	}
+}
+
+AQA_ideas = {
+	free = yes
+	trigger = {
+		tag = AQA
+	}
+	start = {
+		discipline = 0.05
+		global_tax_modifier = 0.25
+	}
+	bonus = {
+		military_tactics = 0.1
+	}
+	AQA_first = {
+		yearly_patriarch_authority = 0.005
+		global_heretic_missionary_strength = 0.02
+	}
+	AQA_second = {
+		production_efficiency = 0.2
+	}
+	AQA_third = {
+		land_morale = 0.15
+	}
+	AQA_fourth = {
+		infantry_cost = -0.1
+		global_manpower_modifier = 0.2
+	}
+	AQA_fifth = {
+		dip_advisor_cost = -0.25
+		improve_relation_modifier = 0.1
+	}
+	AQA_sixth = {
+		core_creation = -0.1
+	}
+	AQA_seventh = {
+		light_ship_cost = -0.25
+		global_trade_power = 0.05
+	}
+}
+ROD_ideas = {
+	start = {
+		discipline = 0.05
+		global_regiment_cost = -0.15
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.33
+	}
+	
+	trigger = {
+		tag = ROD
+		NOT = {
+			has_country_flag = wal_elective_monarchy
+		}
+	}
+	free = yes
+	
+	ROD_first = {
+		core_creation = -0.25
+		harsh_treatment_cost = -0.25
+	}
+	ROD_second = {
+		cavalry_shock = 1
+		shock_damage = 0.1
+	}
+	ROD_third = {
+		governing_capacity_modifier = 0.2
+	}
+	ROD_fourth = {
+		infantry_power = 0.10
+		land_forcelimit_modifier = 0.15
+	}
+	ROD_fifth = {
+		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
+	}
+	ROD_sixth = {
+		administrative_efficiency = 0.05
+		monthly_terror_power = 0.08
+	}
+	ROD_seventh = {
+		tolerance_own = 3
+		global_missionary_strength = 0.02
+	}
+}
+
+ROD_rem_ideas = {
+	start = {
+		land_morale = 0.2
+		legitimacy = 1.5
+		devotion = 1.5
+		republican_tradition = 0.5
+		meritocracy = 1.5
+		horde_unity = 1.5
+		nobles_loyalty_modifier = 0.25
+	}
+	bonus = {
+		stability_cost_modifier = -0.25
+	}
+	trigger = {
+		has_country_flag = wal_elective_monarchy
+		tag = ROD
+	}
+	free = yes
+	ROD_rem_first = {
+		advisor_cost = -0.25
+		num_of_parliament_issues = 2
+	}
+	ROD_rem_second = {
+		diplomatic_reputation = 1
+		diplomatic_annexation_cost = -0.15
+		num_of_pronoiars = 1
+	}
+	ROD_rem_third = {
+		cavalry_power = 0.25
+		cavalry_cost = -0.25
+		establish_order_cost = -0.25
+	}
+	ROD_rem_fourth = {
+		core_creation = -0.10
+		land_forcelimit_modifier = 0.10
+	}
+	ROD_rem_fifth = {
+		production_efficiency = 0.1
+		development_cost_modifier = -0.05
+	}
+	ROD_rem_sixth = {
+		state_governing_cost = -0.15
+		administrative_efficiency = 0.025
+	}
+	ROD_rem_seventh = {
+		improve_relation_modifier = 0.15
+		global_trade_power = 0.15
+	}
+}

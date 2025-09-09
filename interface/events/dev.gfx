@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "dev"
+		texturefile = "gfx/interface/events/in_dev.dds"
+	}
+}

@@ -1,0 +1,38 @@
+delete_all_forts_effect = {
+	every_owned_province = {
+		limit = {
+			NOT = {
+				has_province_flag = whitelisted_fort
+			}
+			fort_level = 2
+			controlled_by = owner
+			NOT = {
+				has_siege = yes
+			}
+		}
+		if = {
+			limit = {
+				has_building = fort_15th
+			}
+			remove_building = fort_15th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_16th
+			}
+			remove_building = fort_16th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_17th
+			}
+			remove_building = fort_17th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_18th
+			}
+			remove_building = fort_18th
+		}
+	}
+}

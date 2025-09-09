@@ -1,0 +1,34 @@
+guiTypes = {
+	windowType = {
+		name = "wallachian_terror_gov_mech"
+		size = { x = 300 y = 72 }
+		moveable = 0
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_wallachian_terror_progress_bar"
+			position = { x = 26 y = 49 }
+		}	
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_wallachian_terror_frame"
+			position = { x = 10 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "wallachian_terror_gov_interaction"
+		size = { x = 105 y = 50 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+}

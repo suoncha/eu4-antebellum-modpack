@@ -1,0 +1,47 @@
+wal_hired_bulgar_adm_advisor = {
+	potential = {
+		are_bulgars_an_underclass = yes
+	}
+	trigger = {
+		employed_advisor = {
+			category = ADM
+			culture = bulgarian
+		}
+	}
+
+	legitimacy = -1
+	global_unrest = 2
+	nobles_loyalty_modifier = -0.1
+}
+
+wal_hired_bulgar_dip_advisor = {
+	potential = {
+		are_bulgars_an_underclass = yes
+	}
+	trigger = {
+		employed_advisor = {
+			category = DIP
+			culture = bulgarian
+		}
+	}
+
+	legitimacy = -1
+	global_unrest = 2
+	nobles_loyalty_modifier = -0.1
+}
+
+wal_hired_bulgar_mil_advisor = {
+	potential = {
+		are_bulgars_an_underclass = yes
+	}
+	trigger = {
+		employed_advisor = {
+			category = MIL
+			culture = bulgarian
+		}
+	}
+
+	legitimacy = -1
+	global_unrest = 2
+	nobles_loyalty_modifier = -0.1
+}

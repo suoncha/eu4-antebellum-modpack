@@ -1,0 +1,161 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_global_edicts_window_background"
+		texturefile = "gfx/interface/global_edict_commander_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_open_global_edicts_window_button"
+		texturefile = "gfx/interface/global_edicts_tab.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_no_edicts_button"
+		texturefile = "gfx/interface/buttons/no_edicts_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_advancement_button"
+		texturefile = "gfx/interface/buttons/advancement_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_centralization_button"
+		texturefile = "gfx/interface/buttons/centralization_effort.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_defensive_button"
+		texturefile = "gfx/interface/buttons/defensive_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_development_button"
+		texturefile = "gfx/interface/buttons/encourage_development.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_enlistment_button"
+		texturefile = "gfx/interface/buttons/increased_enlistment.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_trade_button"
+		texturefile = "gfx/interface/buttons/protect_trade.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_missionary_strength_button"
+		texturefile = "gfx/interface/buttons/enforce_religious_unity.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_unrest_button"
+		texturefile = "gfx/interface/buttons/feudal_de_jure_law.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_resist_reformation_button"
+		texturefile = "gfx/interface/buttons/religion_enforced.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_devastation_button"
+		texturefile = "gfx/interface/buttons/edict_of_absolutism.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_taxes_button"
+		texturefile = "gfx/interface/buttons/feudal_taxes_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_local_religious_unity_button"
+		texturefile = "gfx/interface/buttons/religious_tolerances_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_local_separatism_button"
+		texturefile = "gfx/interface/buttons/state_integration_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_goods_produced_button"
+		texturefile = "gfx/interface/buttons/urbanization_edict.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_movement_button"
+		texturefile = "gfx/interface/buttons/french_infrastructure_network.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_french_trade_button"
+		texturefile = "gfx/interface/buttons/promote_trade.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_made_in_china_button"
+		texturefile = "gfx/interface/buttons/rapid_industrialization.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_edict_of_governance"
+		texturefile = "gfx/interface/buttons/edict_of_governance.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_global_edicts_lock_state_button"
+		texturefile = "gfx/interface/buttons/lock_button.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_global_edicts_settings_button"
+		texturefile = "gfx/interface/buttons/edict_settings.dds"
+		loadType = "INGAME"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow"
+		texturefile = "gfx/interface/buttons/animated_edict_frame.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_fra"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_fra.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_hab"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_hab.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_qng"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_qng.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+}

@@ -1,0 +1,224 @@
+on_startup = {
+	edict_commander_set_all_trade_node_flags = yes
+	set_all_movement_edict_flags = yes
+	setup_autonomy_macro = yes
+}
+
+on_institution_embracement = {
+	if = {
+		limit = {
+			ai = no
+			has_reactive_advancement_effort_cleanup_enabled = yes
+			is_lacking_institutions = no
+		}
+		every_owned_province = {
+			limit = {
+				is_state = yes
+				has_state_edict = edict_advancement_effort
+				can_change_state_edict = yes
+			}
+			set_state_edict = no_edict
+		}
+	}
+}
+
+on_province_religion_converted = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					has_reactive_enforce_religious_unity_setter_enabled = yes
+				}
+				country_event = {
+					id = global_edicts_commander_events.19
+					days = 30
+				}
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					has_reactive_enforce_religious_unity_cleanup_enabled = yes
+				}
+				every_owned_province = {
+					limit = {
+						is_state = yes
+						has_state_edict = edict_religious_unity
+						can_change_state_edict = yes
+						all_province_in_state = {
+							OR = {
+								religion = owner
+								owner = {
+									has_harmonized_with = PREV
+								}
+								owner = {
+									secondary_religion = PREV
+								}
+							}
+						}
+					}
+					set_state_edict = no_edict
+				}
+			}
+		}
+	}
+}
+
+on_siege_lost_province = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_reactive_defensive_edict_setter_enabled = yes
+				}
+				NOT = {
+					has_state_edict = edict_defensive_edict
+				}
+			}
+			if = {
+				limit = {
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+						controlled_by = owner
+					}
+				}
+				edict_commander_set_edict_for_state = {
+					edict = edict_defensive_edict
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_state_edict = edict_defensive_edict
+				owner = {
+					has_reactive_defensive_edict_cleanup_enabled = yes
+				}
+				NOT = {
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+						controlled_by = owner
+					}
+				}
+			}
+			set_state_edict = no_edict
+		}
+	}
+}
+
+on_adm_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_encourage_development_setter_enabled = yes
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = enable_industrialisation_flag
+					is_emperor_of_china = yes
+				}
+			}
+			edict_commander_set_edict_for_state = {
+				edict = chinese_industrialization
+			}
+		}
+		else = {
+			edict_commander_set_edict_for_state = {
+				edict = edict_encourage_development
+			}
+		}
+	}
+}
+
+on_dip_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_encourage_development_setter_enabled = yes
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = enable_industrialisation_flag
+					is_emperor_of_china = yes
+				}
+			}
+			edict_commander_set_edict_for_state = {
+				edict = chinese_industrialization
+			}
+		}
+		else = {
+			edict_commander_set_edict_for_state = {
+				edict = edict_encourage_development
+			}
+		}
+	}
+}
+
+on_mil_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_encourage_development_setter_enabled = yes
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = enable_industrialisation_flag
+					is_emperor_of_china = yes
+				}
+			}
+			edict_commander_set_edict_for_state = {
+				edict = chinese_industrialization
+			}
+		}
+		else = {
+			edict_commander_set_edict_for_state = {
+				edict = edict_encourage_development
+			}
+		}
+	}
+}
+
+on_adm_exploited = {
+	set_province_flag = province_exploited
+}
+
+on_dip_exploited = {
+	set_province_flag = province_exploited
+}
+
+on_mil_exploited = {
+	set_province_flag = province_exploited
+}

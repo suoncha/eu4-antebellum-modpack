@@ -1,0 +1,6 @@
+﻿l_english:
+ icon_paul: "Icon of St. Paul"
+ icon_paul_desc: "Saint Paul, the Apostle to the Gentiles, is one of the most influential figures in the Church. Through his tireless missionary journeys, he brought the teachings of Christ to the nations of the Roman world. His ministry culminated in his martyrdom in Rome itself, the very heart of the Empire he sought to convert. The establishment of his great basilica in the city of his martyrdom signifies the restoration of the true Roman See to the Orthodox world, a testament to the universal faith he championed over the claims of a single bishop."
+ st_pauls_has_been_constructed_tooltip: "§YSaint Paul's Basilica§! has been constructed in §Y[118.GetName]§! and is at least §YTier 1§!"
+ rome_is_orthodox_toolip: "§Y[118.GetName]§! is §YOrthodox§!"
+ rome_owner_is_orthodox_toolip: "§Y[118.GetName]§! is owned by an §YOrthodox§! country"

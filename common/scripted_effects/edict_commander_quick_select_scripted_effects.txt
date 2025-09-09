@@ -1,0 +1,227 @@
+# Advancement Effort
+clear_advancement_effort_quick_select = {
+	clr_country_flag = quick_select_advancement_effort_1
+	clr_country_flag = quick_select_advancement_effort_2
+}
+
+set_advancement_effort_quick_select = {
+	clear_advancement_effort_quick_select = yes
+	set_country_flag = quick_select_advancement_effort_$n$
+}
+
+# Centralization Effort
+clear_centralization_effort_quick_select = {
+	clr_country_flag = quick_select_centralization_effort_1
+	clr_country_flag = quick_select_centralization_effort_2
+}
+
+set_centralization_effort_quick_select = {
+	clear_centralization_effort_quick_select = yes
+	set_country_flag = quick_select_centralization_effort_$n$
+}
+
+# Defensive Edict
+clear_defensive_edict_quick_select = {
+	clr_country_flag = quick_select_defensive_edict_1
+	clr_country_flag = quick_select_defensive_edict_2
+	clr_country_flag = quick_select_defensive_edict_3
+}
+
+set_defensive_edict_quick_select = {
+	clear_defensive_edict_quick_select = yes
+	set_country_flag = quick_select_defensive_edict_$n$
+}
+
+# Encourage Development
+clear_encourage_development_quick_select = {
+	clr_country_flag = quick_select_encourage_development_1
+	clr_country_flag = quick_select_encourage_development_2
+	clr_country_flag = quick_select_encourage_development_3
+	clr_country_flag = quick_select_encourage_development_4
+}
+
+set_encourage_development_quick_select = {
+	clear_encourage_development_quick_select = yes
+	set_country_flag = quick_select_encourage_development_$n$
+}
+
+# Rapid Industrialization
+clear_rapid_industrialization_quick_select = {
+	clr_country_flag = quick_select_rapid_industrialization_1
+	clr_country_flag = quick_select_rapid_industrialization_2
+	clr_country_flag = quick_select_rapid_industrialization_3
+	clr_country_flag = quick_select_rapid_industrialization_4
+	clr_country_flag = quick_select_rapid_industrialization_5
+	clr_country_flag = quick_select_rapid_industrialization_6
+	clr_country_flag = quick_select_rapid_industrialization_7
+}
+
+set_rapid_industrialization_quick_select = {
+	clear_rapid_industrialization_quick_select = yes
+	set_country_flag = quick_select_rapid_industrialization_$n$
+}
+
+# Increased Enlistment
+clear_increased_enlistment_quick_select = {
+	clr_country_flag = quick_select_increased_enlistment_1
+	clr_country_flag = quick_select_increased_enlistment_2
+	clr_country_flag = quick_select_increased_enlistment_3
+	clr_country_flag = quick_select_increased_enlistment_4
+	clr_country_flag = quick_select_increased_enlistment_5
+}
+
+set_increased_enlistment_quick_select = {
+	clear_increased_enlistment_quick_select = yes
+	set_country_flag = quick_select_increased_enlistment_$n$
+}
+
+# Protect Trade
+clear_protect_trade_quick_select = {
+	clr_country_flag = quick_select_protect_trade_1
+	clr_country_flag = quick_select_protect_trade_2
+	clr_country_flag = quick_select_protect_trade_3
+	clr_country_flag = quick_select_protect_trade_4
+	clr_country_flag = quick_select_protect_trade_5
+	clr_country_flag = quick_select_protect_trade_6
+	clr_country_flag = quick_select_protect_trade_7
+}
+
+set_protect_trade_quick_select = {
+	clear_protect_trade_quick_select = yes
+	set_country_flag = quick_select_protect_trade_$n$
+}
+
+# Enforce Religious Unity
+clear_enforce_religious_unity_quick_select = {
+	clr_country_flag = quick_select_enforce_religious_unity_1
+	clr_country_flag = quick_select_enforce_religious_unity_2
+	clr_country_flag = quick_select_enforce_religious_unity_3
+	clr_country_flag = quick_select_enforce_religious_unity_4
+	clr_country_flag = quick_select_enforce_religious_unity_5
+	clr_country_flag = quick_select_enforce_religious_unity_6
+}
+
+set_enforce_religious_unity_quick_select = {
+	clear_enforce_religious_unity_quick_select = yes
+	set_country_flag = quick_select_enforce_religious_unity_$n$
+}
+
+# Feudal De Jure Law
+clear_feudal_de_jure_law_quick_select = {
+	clr_country_flag = quick_select_feudal_de_jure_law_1
+	clr_country_flag = quick_select_feudal_de_jure_law_2
+	clr_country_flag = quick_select_feudal_de_jure_law_3
+	clr_country_flag = quick_select_feudal_de_jure_law_4
+	clr_country_flag = quick_select_feudal_de_jure_law_5
+}
+
+set_feudal_de_jure_law_quick_select = {
+	clear_feudal_de_jure_law_quick_select = yes
+	set_country_flag = quick_select_feudal_de_jure_law_$n$
+}
+
+# Religion Enforced
+clear_religion_enforced_quick_select = {
+	clr_country_flag = quick_select_religion_enforced_1
+	clr_country_flag = quick_select_religion_enforced_2
+}
+
+set_religion_enforced_quick_select = {
+	clear_religion_enforced_quick_select = yes
+	set_country_flag = quick_select_religion_enforced_$n$
+}
+
+# Edict of Absolutism
+clear_edict_of_absolutism_quick_select = {
+	clr_country_flag = quick_select_edict_of_absolutism_1
+	clr_country_flag = quick_select_edict_of_absolutism_2
+	clr_country_flag = quick_select_edict_of_absolutism_3
+	clr_country_flag = quick_select_edict_of_absolutism_4
+	clr_country_flag = quick_select_edict_of_absolutism_5
+}
+
+set_edict_of_absolutism_quick_select = {
+	clear_edict_of_absolutism_quick_select = yes
+	set_country_flag = quick_select_edict_of_absolutism_$n$
+}
+
+# Feudal Taxes Edict
+clear_feudal_taxes_edict_quick_select = {
+	clr_country_flag = quick_select_feudal_taxes_edict_1
+	clr_country_flag = quick_select_feudal_taxes_edict_2
+	clr_country_flag = quick_select_feudal_taxes_edict_3
+	clr_country_flag = quick_select_feudal_taxes_edict_4
+}
+
+set_feudal_taxes_edict_quick_select = {
+	clear_feudal_taxes_edict_quick_select = yes
+	set_country_flag = quick_select_feudal_taxes_edict_$n$
+}
+
+# State Integration Edict
+clear_state_integration_edict_quick_select = {
+	clr_country_flag = quick_select_state_integration_edict_1
+	clr_country_flag = quick_select_state_integration_edict_2
+	clr_country_flag = quick_select_state_integration_edict_3
+	clr_country_flag = quick_select_state_integration_edict_4
+	clr_country_flag = quick_select_state_integration_edict_5
+}
+
+set_state_integration_edict_quick_select = {
+	clear_state_integration_edict_quick_select = yes
+	set_country_flag = quick_select_state_integration_edict_$n$
+}
+
+# Urbanization Edict
+clear_urbanization_edict_quick_select = {
+	clr_country_flag = quick_select_urbanization_edict_1
+	clr_country_flag = quick_select_urbanization_edict_2
+	clr_country_flag = quick_select_urbanization_edict_3
+	clr_country_flag = quick_select_urbanization_edict_4
+}
+
+set_urbanization_edict_quick_select = {
+	clear_urbanization_edict_quick_select = yes
+	set_country_flag = quick_select_urbanization_edict_$n$
+}
+
+# French Infrastructure Network
+clear_french_infrastructure_network_quick_select = {
+	clr_country_flag = quick_select_french_infrastructure_network_1
+	clr_country_flag = quick_select_french_infrastructure_network_2
+	clr_country_flag = quick_select_french_infrastructure_network_3
+}
+
+set_french_infrastructure_network_quick_select = {
+	clear_french_infrastructure_network_quick_select = yes
+	set_country_flag = quick_select_french_infrastructure_network_$n$
+}
+
+# Promote Trade
+clear_promote_trade_quick_select = {
+	clr_country_flag = quick_select_promote_trade_1
+	clr_country_flag = quick_select_promote_trade_2
+	clr_country_flag = quick_select_promote_trade_3
+	clr_country_flag = quick_select_promote_trade_4
+	clr_country_flag = quick_select_promote_trade_5
+	clr_country_flag = quick_select_promote_trade_6
+	clr_country_flag = quick_select_promote_trade_7
+}
+
+set_promote_trade_quick_select = {
+	clear_promote_trade_quick_select = yes
+	set_country_flag = quick_select_promote_trade_$n$
+}
+
+# Edict of Governance
+clear_edict_of_governance_quick_select = {
+	clr_country_flag = quick_select_edict_of_governance_1
+	clr_country_flag = quick_select_edict_of_governance_2
+	clr_country_flag = quick_select_edict_of_governance_3
+	clr_country_flag = quick_select_edict_of_governance_4
+}
+
+set_edict_of_governance_quick_select = {
+	clear_edict_of_governance_quick_select = yes
+	set_country_flag = quick_select_edict_of_governance_$n$
+}

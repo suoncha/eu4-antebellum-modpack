@@ -1,0 +1,141 @@
+defined_text = {
+	name = reactive_edict_advancement_cleanup_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_advancement_effort_cleanup_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_advancement_effort_cleanup_enabled = no
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = reactive_edict_religious_setter_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_enforce_religious_unity_setter_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_enforce_religious_unity_setter_enabled = no
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = reactive_edict_religious_cleanup_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_enforce_religious_unity_cleanup_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_enforce_religious_unity_cleanup_enabled = no
+			}
+		}
+	}
+}
+defined_text = {
+	name = reactive_edict_defensive_setter_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_defensive_edict_setter_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_defensive_edict_setter_enabled = no
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = reactive_edict_defensive_cleanup_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_defensive_edict_cleanup_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_defensive_edict_cleanup_enabled = no
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = reactive_edict_development_setter_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			FROM = {
+				has_reactive_encourage_development_setter_enabled = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			FROM = {
+				has_reactive_encourage_development_setter_enabled = no
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = reactive_edict_which_dev_edict_loc
+	text = {
+		localisation_key = reactive_edicts_rapid_industrialization
+		trigger = {
+			FROM = {
+				has_country_flag = enable_industrialisation_flag
+				is_emperor_of_china = yes
+			}
+		}
+	}
+	text = {
+		localisation_key =  reactive_edicts_encourage_development
+		trigger = {
+			NOT ={
+				FROM = {
+					has_country_flag = enable_industrialisation_flag
+				}
+			}
+		}
+	}
+}

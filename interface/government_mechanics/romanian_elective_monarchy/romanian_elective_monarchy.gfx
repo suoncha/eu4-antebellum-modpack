@@ -1,0 +1,33 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_rem_bg"
+		texturefile = "gfx/interface/government_mechanics/romanian_elective_monarchy/romanian_elective_monarchy_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rem_interaction_1_button"
+		texturefile = "gfx/interface/government_mechanics/romanian_elective_monarchy/rem_interaction_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rem_interaction_2_button"
+		texturefile = "gfx/interface/government_mechanics/romanian_elective_monarchy/rem_interaction_2.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rem_interaction_3_button"
+		texturefile = "gfx/interface/government_mechanics/romanian_elective_monarchy/rem_interaction_3.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_rem_alert_icon"
+		texturefile = "gfx/interface/alert_icons/rem_alert_icon.dds"
+		noOfFrames = 1
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+}

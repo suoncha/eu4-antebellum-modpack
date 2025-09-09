@@ -1,0 +1,14 @@
+spriteTypes = { 
+    spriteType = {
+        name = "GFX_great_project_sfatul_tarii"	
+        texturefile = "gfx//interface//great_projects//great_project_sfatul_tarii.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_tirgoviste_princely_court"	
+        texturefile = "gfx//interface//great_projects//great_project_tirgoviste_princely_court.dds"
+    }
+	spriteType = {
+		name = "GFX_great_project_st_pauls_basilica"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_peters_cathedral.dds"
+	}
+}

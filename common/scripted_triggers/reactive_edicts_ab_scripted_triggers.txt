@@ -1,0 +1,15 @@
+has_reactive_attrition_edict_setter_enabled = {
+	has_country_flag = reactive_edict_attrition_setter
+}
+
+has_reactive_attrition_edict_cleanup_enabled ={
+	has_country_flag = reactive_edict_attrition_cleanup
+}
+
+has_reactive_colonial_edict_setter_enabled = {
+	has_country_flag = reactive_edict_colonial_setter
+}
+
+has_reactive_colonial_edict_cleanup_enabled ={
+	has_country_flag = reactive_edict_colonial_cleanup
+}

@@ -1,0 +1,919 @@
+namespace = global_edict_commander_quick_select_ab_settings_duplicate_event
+# Encourage Economic Growth Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.1	# Corresponds to global_edict_commander_events_ab.1
+	title = global_edict_commander_quick_select_ab_settings_event.1.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.1.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.1.a) - Not Selected
+	option = {
+		name = global_edict_commander_events_ab.1.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_encourage_economic_growth_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_encourage_economic_growth_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 1 (ab.1.a) - Selected
+	option = {
+		name = global_edict_commander_events_ab.1.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_encourage_economic_growth_1
+			}
+		}
+		hidden_effect = {
+			set_encourage_economic_growth_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (apply_to_every_state) - Not Selected
+	option = {
+		name = apply_to_every_state
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_encourage_economic_growth_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_encourage_economic_growth_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 2 (apply_to_every_state) - Selected
+	option = {
+		name = apply_to_every_state
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_encourage_economic_growth_2
+			}
+		}
+		hidden_effect = {
+			set_encourage_economic_growth_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Disable Option - Currently Enabled
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_encourage_economic_growth_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt		# Use tooltip key
+		hidden_effect = {
+			clear_encourage_economic_growth_quick_select = yes
+		}
+	}
+	# Disable Option - Currently Disabled
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_encourage_economic_growth_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt		# Use tooltip key
+		hidden_effect = {
+			clear_encourage_economic_growth_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.1
+			}			# Call duplicate
+		}
+	}
+}
+
+# Disrupt Local Infrastructure Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.2	# Corresponds to global_edict_commander_events_ab.2
+	title = global_edict_commander_quick_select_ab_settings_event.2.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.2.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.2.a) - Not Selected
+	option = {
+		name = global_edict_commander_events_ab.2.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_disrupt_local_infrastructure_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 1 (ab.2.a) - Selected
+	option = {
+		name = global_edict_commander_events_ab.2.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_1
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (ab.2.b) - Not Selected
+	option = {
+		name = global_edict_commander_events_ab.2.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_disrupt_local_infrastructure_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 2 (ab.2.b) - Selected
+	option = {
+		name = global_edict_commander_events_ab.2.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_2
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 3 (apply_to_every_state) - Not Selected
+	option = {
+		name = apply_to_every_state
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_disrupt_local_infrastructure_3
+				}
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 3
+			}
+		}
+	}
+	# Option 3 (apply_to_every_state) - Selected
+	option = {
+		name = apply_to_every_state
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_disrupt_local_infrastructure_3
+			}
+		}
+		hidden_effect = {
+			set_disrupt_local_infrastructure_quick_select = {
+				n = 3
+			}
+		}
+	}
+	# Disable Option - Currently Enabled
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_disrupt_local_infrastructure_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt		# Use tooltip key
+		hidden_effect = {
+			clear_disrupt_local_infrastructure_quick_select = yes
+		}
+	}
+	# Disable Option - Currently Disabled
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_disrupt_local_infrastructure_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt		# Use tooltip key
+		hidden_effect = {
+			clear_disrupt_local_infrastructure_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.2
+			}			# Call duplicate
+		}
+	}
+}
+
+# Strengthen Local Shipbuilding Tradition Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.3	# Corresponds to global_edict_commander_events_ab.3
+	title = global_edict_commander_quick_select_ab_settings_event.3.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.3.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.3.a) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.3.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_1
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (ab.3.b) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.3.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 2
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_2
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 3 (ab.3.c) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.3.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_3
+				}
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 3
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.c
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_3
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 3
+			}
+		}
+	}
+	# Option 4 (ab.3.dee) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.3.dee
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_4
+				}
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 4
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.3.dee
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_4
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 4
+			}
+		}
+	}
+	# Option 5 (apply_to_every_state) - Not Selected / Selected Pair
+	option = {
+		name = apply_to_every_state
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_5
+				}
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 5
+			}
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_strengthen_local_shipbuilding_tradition_5
+			}
+		}
+		hidden_effect = {
+			set_strengthen_local_shipbuilding_tradition_quick_select = {
+				n = 5
+			}
+		}
+	}
+	# Disable Option Pair
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_strengthen_local_shipbuilding_tradition_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_strengthen_local_shipbuilding_tradition_quick_select = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_strengthen_local_shipbuilding_tradition_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_strengthen_local_shipbuilding_tradition_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.3
+			}			# Call duplicate
+		}
+	}
+}
+
+# Improved Gold Mining Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.4	# Corresponds to global_edict_commander_events_ab.4
+	title = global_edict_commander_quick_select_ab_settings_event.4.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.4.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.4.a) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.4.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_improved_gold_mining_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_improved_gold_mining_1
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (ab.4.b) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.4.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_improved_gold_mining_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 2
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_improved_gold_mining_2
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 3 (ab.4.c) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.4.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_improved_gold_mining_3
+				}
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 3
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.4.c
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_improved_gold_mining_3
+			}
+		}
+		hidden_effect = {
+			set_improved_gold_mining_quick_select = {
+				n = 3
+			}
+		}
+	}
+	# Disable Option Pair
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_improved_gold_mining_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_improved_gold_mining_quick_select = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_improved_gold_mining_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_improved_gold_mining_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.4
+			}			# Call duplicate
+		}
+	}
+}
+
+# Colonial Development Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.5	# Corresponds to global_edict_commander_events_ab.5
+	title = global_edict_commander_quick_select_ab_settings_event.5.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.5.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.5.a) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.5.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_colonial_development_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_colonial_development_quick_select = {
+				n = 1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.5.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_colonial_development_1
+			}
+		}
+		hidden_effect = {
+			set_colonial_development_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (apply_to_every_state) - Not Selected / Selected Pair
+	option = {
+		name = apply_to_every_state
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_colonial_development_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_colonial_development_quick_select = {
+				n = 2
+			}
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_colonial_development_2
+			}
+		}
+		hidden_effect = {
+			set_colonial_development_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Disable Option Pair
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_colonial_development_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_colonial_development_quick_select = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_colonial_development_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_colonial_development_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.5
+			}			# Call duplicate
+		}
+	}
+}
+
+# Modernized Local Administration Quick Select Settings
+country_event = {
+	id = global_edict_commander_quick_select_ab_settings_duplicate_event.6	# Corresponds to global_edict_commander_events_ab.6
+	title = global_edict_commander_quick_select_ab_settings_event.6.t	
+	desc = global_edict_commander_quick_select_ab_settings_event.6.d	
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_quick_select_settings
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_event.go_back
+		hidden_effect = {
+			clr_country_flag = remain_in_quick_select_settings
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1				# Main quick select menu
+			}
+		}
+	}
+	# Option 1 (ab.6.a) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.6.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_modernized_local_administration_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_modernized_local_administration_1
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 1
+			}
+		}
+	}
+	# Option 2 (ab.6.b) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.6.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_modernized_local_administration_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 2
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_modernized_local_administration_2
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 2
+			}
+		}
+	}
+	# Option 3 (ab.6.c) - Not Selected / Selected Pair
+	option = {
+		name = global_edict_commander_events_ab.6.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_modernized_local_administration_3
+				}
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 3
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_events_ab.6.c
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_modernized_local_administration_3
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 3
+			}
+		}
+	}
+	# Option 4 (apply_to_every_state) - Not Selected / Selected Pair
+	option = {
+		name = apply_to_every_state
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = quick_select_modernized_local_administration_4
+				}
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 4
+			}
+		}
+	}
+	option = {
+		name = apply_to_every_state
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = quick_select_modernized_local_administration_4
+			}
+		}
+		hidden_effect = {
+			set_modernized_local_administration_quick_select = {
+				n = 4
+			}
+		}
+	}
+	# Disable Option Pair
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		trigger = {
+			hidden_trigger = {
+				has_modernized_local_administration_quick_select = yes
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_modernized_local_administration_quick_select = yes
+		}
+	}
+	option = {
+		name = global_edict_commander_quick_select_settings_events.disable_quick_select
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_modernized_local_administration_quick_select = no
+			}
+		}
+		custom_tooltip = global_edict_commander_quick_select_settings_events.disable_quick_select.tt
+		hidden_effect = {
+			clear_modernized_local_administration_quick_select = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_quick_select_settings
+			}
+			country_event = {
+				id = global_edict_commander_quick_select_ab_settings_event.6
+			}			# Call duplicate
+		}
+	}
+}

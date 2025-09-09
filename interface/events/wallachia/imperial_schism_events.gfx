@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType ={
+		name = "gfx_imperial_schism_events.0"
+		texturefile = "gfx/interface/events/wallachia/hre/gfx_imperial_schism_events.0.dds"
+	}
+}

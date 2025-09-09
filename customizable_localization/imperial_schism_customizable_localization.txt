@@ -1,0 +1,32 @@
+defined_text = {
+	name = imperial_schism_incident_member_alert
+	random = no
+	text = {
+		localisation_key = incident_emperor_deposed_member_alert_regular
+		trigger = {
+			has_neither_side_won_in_imperial_retribution_war = no
+		}
+	}
+	text = {
+		localisation_key = incident_emperor_deposed_member_alert_retribution
+		trigger = {
+			has_neither_side_won_in_imperial_retribution_war = yes
+		}
+	}
+}
+defined_text = {
+	name = imperial_schism_incident_emperor_alert
+	random = no
+	text = {
+		localisation_key = incident_emperor_deposed_emperor_alert_regular
+		trigger = {
+			has_neither_side_won_in_imperial_retribution_war = no
+		}
+	}
+	text = {
+		localisation_key = incident_emperor_deposed_emperor_alert_retribution
+		trigger = {
+			has_neither_side_won_in_imperial_retribution_war = yes
+		}
+	}
+}

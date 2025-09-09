@@ -1,0 +1,50 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_autonomy_macro_lower_autonomy_button_glow"
+		texturefile = "gfx/interface/buttons/autonomy_macro/lower_autonomy_button_glow.dds"
+		noOfFrames = 60
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_tab"
+		texturefile = "gfx/interface/autonomy_macro_tab.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_background"
+		texturefile = "gfx/interface/autonomy_macro_bg.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_lower_autonomy_button"
+		texturefile = "gfx/interface/buttons/autonomy_macro/lower_autonomy_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_lower_button"
+		texturefile = "gfx/interface/buttons/autonomy_macro/lower_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_raise_button"
+		texturefile = "gfx/interface/buttons/autonomy_macro/raise_button.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_calculate_button"
+		texturefile = "gfx/interface/buttons/autonomy_macro/calculate.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_autonomy_macro_empty_button"
+		texturefile = "gfx/interface/buttons/autonomy_macro/empty_button.dds"
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+}

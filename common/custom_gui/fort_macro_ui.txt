@@ -1,0 +1,93 @@
+custom_button = {
+	name = fort_macro_button
+	tooltip = fort_macro_button_tt
+	potential = {
+		owned_by = FROM
+		fort_level = 2
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					has_country_flag = fort_macro_window_open
+				}
+				clr_country_flag = fort_macro_window_open
+			}
+			else = {
+				set_country_flag = fort_macro_window_open
+			}
+		}
+	}
+}
+
+custom_window = {
+	name = fort_macro_window
+	potential = {
+		fort_level = 2
+		owned_by = FROM
+		FROM = {
+			has_country_flag = fort_macro_window_open
+		}
+	}
+}
+
+custom_button = {
+	name = fort_macro_close_button
+	tooltip = fort_macro_close_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = fort_macro_window_open
+		}
+	}
+}
+
+custom_button = {
+	name = fort_macro_button_blacklisted
+	tooltip = fort_macro_button_blacklisted_tt
+	potential = {
+		NOT = {
+			has_province_flag = whitelisted_fort
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		set_province_flag = whitelisted_fort
+	}
+}
+
+custom_button = {
+	name = fort_macro_button_whitelisted
+	tooltip = fort_macro_button_whitelisted_tt
+	potential = {
+		has_province_flag = whitelisted_fort
+	}
+	trigger = {
+	}
+	effect = {
+		clr_province_flag = whitelisted_fort
+	}
+}
+
+custom_button = {
+	name = fort_macro_button_delete_all_forts
+	tooltip = fort_macro_button_delete_all_forts_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_country_flag = run_delete_fort_confirmation_event
+			country_event = {
+				id = delete_all_forts_events.1
+			}
+		}
+	}
+}

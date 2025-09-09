@@ -1,0 +1,969 @@
+banquet_of_blood_ruler_modifier = {
+	diplomatic_reputation = -5
+	improve_relation_modifier = -0.5
+	diplomats = -1
+	country_diplomatic_power = -1
+	ae_impact = 0.5
+	prestige = -1
+	tolerance_own = -2
+	legitimacy = -0.5
+	nobles_influence_modifier = -0.1
+	nobles_loyalty_modifier = -0.4
+	monthly_terror_power = 0.1
+}
+
+banquet_of_blood_permanent_modifier = {
+	diplomatic_reputation = -4
+	prestige = -0.5
+	nobles_loyalty_modifier = -0.1
+	nobles_influence_modifier = -0.1
+	monthly_terror_power = 0.03
+	terror_power_gain_modifier = 0.15
+	max_absolutism = 5
+	max_absolutism_effect = 0.1
+}
+
+banquet_of_blood_well_read = {
+	technology_cost = -0.005
+}
+
+peasants_cave_to_traitors = {
+	local_tax_modifier = -1
+	local_manpower_modifier = -1
+}
+
+destroyed_the_serfs = {
+	local_development_cost = 0.4
+	local_tax_modifier = -0.6
+	local_manpower_modifier = -0.6
+	local_production_efficiency = -0.6
+	improve_relation_modifier = -0.005
+}
+
+wallachia_civil_war_advisors_avoid_us = {
+	advisor_pool = -2
+	advisor_cost = 0.3
+}
+
+wallachia_civil_war_murdered_heir = {
+	heir_chance = -0.75
+	legitimacy = -0.5
+	prestige = -0.5
+	diplomatic_reputation = -1
+	tolerance_own = -1
+}
+
+wallachia_civil_war_murdered_the_queen = {
+	legitimacy = -0.5
+	prestige = -0.5
+	diplomatic_reputation = -2
+	tolerance_own = -1
+}
+
+wallachia_civil_war_merchants_detest_us = {
+	global_trade_power = -0.15
+	merchants = -1
+	burghers_loyalty_modifier = -0.2
+	burghers_privilege_slots = -1
+	interest = 1
+}
+
+wallachian_civil_war_diplomats_fear_us = {
+	diplomats = -1
+	diplomatic_reputation = -2
+	improve_relation_modifier = -0.1
+	diplomatic_upkeep = -1
+}
+
+wallachian_civil_war_administrators_executed = {
+	administrative_efficiency = -0.025
+	core_creation = 0.05
+	state_maintenance_modifier = 0.25
+	global_tax_modifier = -0.2
+}
+
+wallachian_civil_war_impaled_beloved_bard = {
+	global_unrest = 2
+	culture_conversion_cost = 0.25
+	prestige = -1
+}
+
+wallachian_civil_war_victory_refused_ultimatum = {
+	legitimacy = 1
+	stability_cost_modifier = -0.15
+	nobles_loyalty_modifier = -0.05
+	nobles_influence_modifier = -0.1
+	yearly_absolutism = 1
+	diplomatic_reputation = 2
+}
+
+wallachian_civil_war_victory_butcher = {
+	stability_cost_modifier = -0.2
+	nobles_loyalty_modifier = -0.1
+	nobles_influence_modifier = -0.15
+	max_general_shock = 1
+	terror_power_gain_modifier = 0.1
+	yearly_absolutism = 1
+}
+
+wallachian_civil_war_tied_down_voivode = {
+	prestige = -0.5
+}
+
+wallachian_civil_war_voivode_backed_down = {
+	nobles_influence_modifier = 0.1
+	nobles_loyalty_modifier = 0.05
+	prestige = -0.5
+	monthly_terror_power = -0.25
+}
+
+wallachia_securing_the_homeland = {
+	land_morale = 0.05
+	land_forcelimit_modifier = 0.1
+}
+
+wallachia_establish_mountain_monasteries = {
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.25
+}
+
+wallachia_liberated_bretheren = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -10
+	local_unrest = -2
+}
+
+wallachia_integrating_the_moldavian_nobility = {
+	local_development_cost_modifier = -0.1
+	nobles_loyalty_modifier = 0.01
+	local_manpower_modifier = 0.33
+}
+
+wallachia_cut_a_deal_with_the_cossacks = {
+	allowed_cossack_fraction = 0.1
+	cossacks_loyalty_modifier = 0.15
+	cossacks_influence_modifier = 0.05
+	cavalry_shock = 0.1
+}
+
+wallachia_cut_down_the_moldavian_nobility = {
+	local_core_creation = -0.25
+	years_of_nationalism = -15
+	local_development_cost_modifier = 0.1
+}
+
+wallachia_unifier_of_the_vlachs = {
+	core_creation = -0.1
+	prestige = 1
+	heir_chance = 0.5
+}
+
+wallachia_placating_the_boieri = {
+	estate_interaction_cooldown_modifier = -0.2
+	nobles_loyalty_modifier = 0.05
+	prestige = -0.5
+}
+
+boier_compact = {
+	estate_interaction_cooldown_modifier = -0.2
+	nobles_loyalty_modifier = 0.05
+}
+
+wallachia_build_the_black_sea_fleet = {
+	global_ship_cost = -0.25
+	ship_recruit_speed = -0.25
+	admiral_cost = -0.5
+}
+
+wallachia_the_worlds_desire = {
+	prestige = 1
+}
+
+wallachia_new_roman_identity = {
+	culture_conversion_cost = -0.05
+	culture_conversion_time = -0.1
+}
+
+wallachia_rebuilding_the_great_city = {
+	local_tax_modifier = -0.9
+	local_monthly_devastation = -0.1
+	local_development_cost_modifier = -0.05
+}
+
+wallachia_patriarchate_of_constantinople = {
+	yearly_patriarch_authority = 0.001
+	legitimacy = 0.5
+	prestige_decay = -0.01
+	local_great_project_upgrade_cost = -0.1
+	religion = yes
+}
+
+wallachia_rome_on_the_danube = {
+	local_development_cost_modifier = -0.1
+	province_trade_power_modifier = 0.5
+	local_manpower_modifier = 0.5
+	local_tax_modifier = 0.5
+	nobles_loyalty_modifier = 0.1
+	local_great_project_upgrade_cost = -0.1
+}
+
+wallachia_vlach_resettlement = {
+	local_culture_conversion_cost = -0.75
+	local_culture_conversion_time = -0.25
+	local_core_creation = -0.2
+}
+
+wallachia_aftermath_of_the_krushenieto = {
+	local_tax_modifier = -0.95
+	local_manpower_modifier = -0.95
+	local_production_efficiency = -0.95
+	local_development_cost_modifier = 0.75
+	diplomatic_reputation = -0.25
+	tolerance_own = -0.2
+	yearly_patriarch_authority = -0.001
+	monthly_terror_power = 0.01
+	local_unrest = -10
+}
+
+wallachia_bulgar_underclass = {
+	local_build_cost = -0.1
+	local_development_cost = -0.1
+	land_forcelimit = 0.5
+	local_unrest = 6
+	stability_cost_modifier = 0.025
+}
+
+wallachia_angry_no_justice = {
+	global_unrest = 3
+	nobles_loyalty_modifier = -0.2
+	stability_cost_modifier = 0.25
+	legitimacy = -0.5
+}
+
+wallachia_reconcile_with_the_bulgars = {
+	num_accepted_cultures = 1
+	improve_relation_modifier = 0.05
+}
+
+wallachia_turn_the_other_cheek = {
+	num_accepted_cultures = 1
+	yearly_patriarch_authority = 0.002
+}
+
+wallachia_integrating_the_bulgars = {
+	local_unrest = -1
+	core_creation = -0.1
+	local_manpower_modifier = 0.5
+	land_forcelimit_modifier = 0.25
+}
+
+wallachia_subsumed_the_serbian_patriarch = {
+	yearly_patriarch_authority = 0.001
+	church_loyalty_modifier = 0.05
+}
+
+wallachia_respected_serbian_patriarch = {
+	local_unrest = -1
+	local_manpower_modifier = 0.1
+}
+
+wallachia_develop_kosovo_gold = {
+	local_gold_depletion_chance_modifier = -0.25
+	local_development_cost = -0.05
+}
+
+wallachia_construct_the_adriatic_fleet = {
+	light_ship_cost = -0.25
+	sailors_recovery_speed = 0.25
+	global_sailors_modifier = 0.25
+}
+
+wallachia_liberated_orthodox_bretheren_from_heretics = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+
+wallachia_liberated_orthodox_bretheren_from_heathens = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+
+wallachia_liberated_orthodox_bretheren_from_devil_worshipers = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+
+wallachia_convert_illyria = {
+	local_missionary_strength = 0.03
+	local_tax_modifier = -0.333
+}
+
+wallachia_balkan_hegemon = {
+	prestige = 1
+	core_creation = -0.05
+	land_morale = 0.05
+	morale_damage_received = -0.1
+}
+
+wallachia_western_ambitions = {
+	ae_impact = -0.15
+	improve_relation_modifier = 0.15
+	core_creation = -0.05
+}
+
+wallachia_eastern_ambitions = {
+	core_creation = -0.1
+	warscore_cost_vs_other_religion = -0.1
+	global_heathen_missionary_strength = 0.03
+}
+
+wallachia_carpathian_defenses = {
+	local_fort_maintenance_modifier = -0.25
+	local_hostile_attrition = 1
+	local_defensiveness = 0.2
+	local_assault_fort_ability = -0.5
+}
+
+wallachia_ionian_company_investments = {
+	trade_company_investment_cost = -0.5
+	trade_company_governing_cost = -0.25
+	global_trade_power = 0.1
+}
+
+wallachia_imperial_maratime_hub = {
+	block_slave_raid = yes
+	local_ship_cost = -0.15
+	local_sailors_modifier = 0.5
+	ship_recruit_speed = -0.15
+	province_trade_power_modifier = 0.15
+	trade_value_modifier = 0.15
+	local_center_of_trade_upgrade_cost = -0.1
+}
+
+wallachia_reintroduce_the_theme_system = {
+	manpower_recovery_speed = 0.1
+	state_maintenance_modifier = -0.1
+}
+
+wallachia_gate_of_the_caucasus = {
+	local_defender_dice_roll_bonus = 1
+	local_defensiveness = 0.25
+	local_hostile_attrition = 2
+	local_garrison_size = 0.25
+}
+
+wallachia_build_narikala_fortress = {
+	local_great_project_upgrade_cost = -0.5
+	local_great_project_upgrade_time = -0.5
+}
+
+wallachia_patriarchate_of_antiohia = {
+	yearly_patriarch_authority = 0.001
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_missionary_strength = 0.03
+	religion = yes
+}
+
+wallachia_patriarchate_of_ierusalim = {
+	yearly_patriarch_authority = 0.001
+	local_missionary_strength = 0.04
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+	religion = yes
+}
+
+wallachia_prepare_persia_invasion = {
+	global_regiment_recruit_speed = -0.25
+	siege_ability = 0.1
+	warscore_cost_vs_other_religion = -0.1
+}
+
+wallachia_develop_bagdad = {
+	local_development_cost = -0.15
+	local_great_project_upgrade_cost = -0.25
+	build_cost = -0.1
+}
+
+wallachia_prepare_to_land_in_sicily = {
+	naval_tradition_from_battle = 1
+	global_ship_recruit_speed = -0.25
+	galley_cost = -0.5
+	landing_penalty = -1
+}
+
+wallachia_great_liberator = {
+	improve_relation_modifier = 0.1
+	diplomatic_reputation = 1
+}
+
+wallachia_aftermath_of_slave_reprisals = {
+	local_manpower_modifier = -1
+	local_production_efficiency = -1
+	local_tax_modifier = -1
+	local_development_cost_modifier = 1
+	local_build_cost = 1
+}
+
+wallachia_vlach_resettlement_of_sicily = {
+	local_culture_conversion_cost = -0.5
+	local_culture_conversion_time = -0.25
+	local_core_creation = -0.2
+	local_missionary_strength = 0.1
+}
+
+wallachia_appropriated_sicilian_slaves = {
+	build_cost = -0.1
+	build_time = -0.25
+	development_cost = -0.1
+	global_trade_goods_size_modifier = 0.2
+	diplomatic_reputation = -2
+	tolerance_own = -1
+}
+
+wallachia_pirates_bane = {
+	block_slave_raid = yes
+}
+
+wallachia_milanese_armaments = {
+	infantry_fire = 0.05
+	infantry_power = 0.05
+}
+
+wallachia_broke_the_iron_crown = {
+	local_core_creation = -0.1
+}
+
+wallachia_patriarchate_of_alexandria = {
+	tolerance_own = 1
+	local_missionary_strength = 0.05
+	yearly_patriarch_authority = 0.001
+	religion = yes
+}
+
+wallachia_granaries_of_egypt = {
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+}
+
+wallachia_coptic_administrators = {
+	local_governing_cost = -0.5
+	local_tax_modifier = 0.25
+}
+
+wallachia_coptic_tolerance = {
+	local_religious_unity_contribution = -1
+	local_tolerance_of_heretics = 10
+	local_missionary_strength = -1
+}
+
+wallachia_coptic_pope = {
+	tolerance_heretic = 1
+	num_accepted_cultures = 1
+}
+
+wallachia_tolerating_the_copts = {
+	tolerance_of_heretics_capacity = 1
+	tolerance_heretic = 1
+	yearly_patriarch_authority = -0.005
+	church_loyalty_modifier = -0.2
+	tolerance_own = -1
+	religion = yes
+}
+
+wallachia_not_tolerating_the_copts = {
+	global_heretic_missionary_strength = 0.01
+	yearly_patriarch_authority = 0.001
+	tolerance_own = 1
+	culture_conversion_cost = -0.05
+	tolerance_heretic = -2
+	religion = yes
+}
+
+wallachia_rebuilding_rome = {
+	local_tax_modifier = -0.9
+	local_monthly_devastation = -0.1
+	local_development_cost_modifier = -0.05
+	great_project_upgrade_cost = -0.1
+}
+
+wallachia_queen_of_all_cities = {
+	local_development_cost_modifier = -0.1
+	local_build_cost = -0.1
+	local_build_time = -0.25
+	local_great_project_upgrade_cost = -0.1
+	local_great_project_upgrade_time = -0.25
+	allowed_num_of_manufactories = 2
+}
+
+wallachia_new_roman_identity_upgraded = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.2
+}
+
+wallachia_rome_on_the_danube_upgraded = {
+	local_development_cost_modifier = -0.2
+	province_trade_power_modifier = 1
+	local_manpower_modifier = 1
+	local_tax_modifier = 1
+	allowed_num_of_manufactories = 2
+	all_estate_loyalty_equilibrium = 0.15
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+}
+
+wallachia_patriarchate_of_rome = {
+	yearly_patriarch_authority = 0.001
+	legitimacy = 0.5
+	local_great_project_upgrade_cost = -0.1
+	prestige = 0.5
+	religion = yes
+}
+
+wallachia_danubian_fortifications = {
+	local_fort_maintenance_modifier = -0.5
+	local_defender_dice_roll_bonus = 1
+}
+
+wallachia_carpathian_fort = {
+	local_fort_maintenance_modifier = -0.5
+	local_defender_dice_roll_bonus = 1
+	local_garrison_damage = 0.5
+}
+
+wallachia_carpathian_fortifications_ramparts_bonus = {
+	allowed_num_of_manufactories = 1
+}
+
+wallachia_shahanshahanshah = {
+	core_creation = -0.1
+	prestige = 1
+}
+
+wallachia_monster_of_the_west = {
+	province_warscore_cost = -0.05
+	fire_damage_received = -0.1
+}
+
+wallachia_pax_navalis = {
+	burghers_loyalty_modifier = 0.1
+	trade_efficiency = 0.1
+	global_naval_barrage_cost = -0.25
+}
+
+wallachia_into_the_unknown = {
+	colonists = 1
+	range = 0.5
+	may_explore = yes
+}
+
+wallachia_build_navy = {
+	global_ship_cost = -0.1
+	global_ship_recruit_speed = -0.25
+}
+
+wallachia_black_sea_fleet = {
+	galley_power = 0.1
+	light_ship_cost = -0.1
+}
+
+wallachia_buffed_marines = {
+	shock_damage_received = -0.1
+	is_marine_modifier = yes
+}
+
+wallachia_study_navy_venice = {
+	number_of_cannons_modifier = 0.075
+	sailor_maintenance_modifer = -0.05
+}
+
+wallachia_study_navy_genoa = {
+	light_ship_cost = -0.1
+	global_foreign_trade_power = 0.05
+}
+
+wallachia_study_navy_andalusia = {
+	heavy_ship_cost = -0.1
+	heavy_ship_power = 0.05
+}
+
+wallachia_study_navy_sicily = {
+	galley_cost = -0.1
+	galley_power = 0.05
+}
+
+wallachia_study_navy_hansa = {
+	global_ship_trade_power = 0.05
+	naval_tradition_from_trade = 0.1
+}
+
+wallachia_study_navy_denmark = {
+	global_naval_barrage_cost = -0.05
+	galley_power = 0.05
+}
+
+wallachia_study_navy_england = {
+	own_coast_naval_combat_bonus = 1
+}
+
+wallachia_study_navy_dutch = {
+	global_ship_trade_power = 0.075
+	light_ship_cost = -0.05
+}
+
+wallachia_dacian_india_company = {
+	trade_company_governing_cost = -0.1
+	trade_efficiency = 0.05
+}
+
+wallachia_rise_of_the_dacian_india_company = {
+	trade_company_investment_cost = -0.25
+	global_trade_power = 0.1
+	global_heathen_missionary_strength = 0.03
+}
+
+wallachia_tirgoviste_metropolitan = {
+	local_tax_modifier = 0.25
+	tax_income = 6
+	yearly_patriarch_authority = 0.001
+	religion = yes
+}
+
+wallachia_tirgoviste_metropolitan_cathedral = {
+	local_tax_modifier = 0.5
+	tax_income = 12
+	local_development_cost = -0.1
+	yearly_patriarch_authority = 0.001
+	religion = yes
+}
+
+wallachia_pillar_of_the_faith = {
+	local_development_cost = -0.05
+	local_tax_modifier = 0.5
+	local_unrest = -2
+	religion = yes
+}
+
+buffed_estate_church_development_of_temples_mod = {
+	local_development_cost = -0.1
+	religion = yes
+}
+
+wallachia_church_buff = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.05
+	religion = yes
+}
+
+wallachia_basilica_buff = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.1
+	religion = yes
+}
+
+wallachia_italia_mare = {
+	administrative_efficiency = 0.05
+}
+
+wallachia_confront_franks = {
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+}
+
+wallachia_legacy_of_st_paul = {
+	cb_on_religious_enemies = yes
+	extra_manpower_at_religious_war = yes
+}
+
+wallachia_gate_of_the_alps = {
+	local_fort_maintenance_modifier = -0.25
+	local_hostile_attrition = 2
+	local_defender_dice_roll_bonus = 1
+}
+
+wallachia_consolidate_french_gains = {
+	core_creation = -0.1
+	global_missionary_strength = 0.02
+}
+
+wallachia_loyal_aqa = {
+	liberty_desire = -30
+}
+
+wallachia_restored_hispania = {
+	governing_capacity_modifier = 0.1
+	has_tercio = yes
+	has_caravel = yes
+	allowed_caravel_fraction = 0.1
+	allowed_tercio_fraction = 0.1
+}
+
+wallachia_conquest_of_gaul = {
+	core_creation = -0.1
+}
+
+wallachia_mare_nostrum = {
+	navy_tradition = 1
+	global_ship_trade_power = 0.25
+}
+
+wallachia_mare_nostrum_trade_post = {
+	province_trade_power_modifier = 0.5
+	local_center_of_trade_upgrade_cost = -0.5
+}
+
+wallachia_integrating_the_english = {
+	num_of_parliament_issues = 2
+	has_man_of_war = yes
+	allowed_man_of_war_fraction = 0.1
+}
+
+wallachia_integrating_the_english_province = {
+	amount_of_man_of_war = 0.25
+	local_unrest = -2
+	local_core_creation = -0.1
+}
+
+wallachia_architects_of_belgica = {
+	development_cost = -0.1
+}
+
+wallachia_pax_romana = {
+	all_power_cost = -0.05
+}
+
+augustus_personality_tooltip = {
+	core_creation = -0.2
+	province_warscore_cost = -0.1
+}
+
+wallachia_true_empire = {
+	legitimacy = 1
+	ae_impact = -0.05
+}
+
+wallachia_germanic_legions = {
+	infantry_power = 0.05
+	mercenary_cost = -0.25
+	mercenary_manpower = 0.25
+}
+
+wallachia_german_printing_press = {
+	global_institution_spread = 0.1
+	embracement_cost = -0.1
+}
+
+wallachia_prospering = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
+	trade_goods_size = 0.5
+}
+
+wallachia_nexus_of_the_danube = {
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_governing_cost = -0.5
+	local_build_cost = -0.25
+	local_regiment_cost = -0.25
+}
+
+wallachia_finest_wine_in_the_east = {
+	prestige = 0.25
+	diplomatic_reputation = 0.5
+}
+
+wallachia_moldavian_winery = {
+	local_production_efficiency = 0.25
+	trade_goods_size_modifier = 0.25
+	local_manpower_modifier = 0.25
+}
+
+wallachia_moldavian_wine_monopolies = {
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.25
+}
+
+wallachia_thriving_carpathian_settlement = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
+}
+
+wallachia_mountain_expansion = {
+	local_development_cost = -0.35
+}
+
+wallachia_highlands_expansion = {
+	local_development_cost = -0.2
+}
+
+wallachia_hills_expansion = {
+	local_development_cost = -0.25
+}
+
+wallachia_renaissance = {
+	institution_spread_from_true_faith = 0.25
+}
+
+wallachia_patriarchate_of_dacia = {
+	yearly_patriarch_authority = 0.001
+	local_great_project_upgrade_cost = -0.25
+	prestige = 0.25
+	development_cost_in_primary_culture = -0.1
+	religion = yes
+}
+
+wallachia_pillar_of_the_realm = {
+	local_governing_cost = -0.1
+	local_governing_cost_increase = -10
+	local_prosperity_growth = 1
+}
+
+wallachia_road_1_bonus = {
+	local_build_cost = -0.05
+	local_build_time = -0.05
+}
+
+wallachia_road_2_bonus = {
+	local_build_cost = -0.1
+	local_build_time = -0.1
+}
+
+wallachia_road_3_bonus = {
+	local_build_cost = -0.15
+	local_build_time = -0.15
+}
+
+wallachia_road_4_bonus = {
+	local_build_cost = -0.2
+	local_build_time = -0.2
+}
+
+wallachia_road_5_bonus = {
+	local_build_cost = -0.25
+	local_build_time = -0.25
+}
+
+wallachia_thriving_balkan_community = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
+}
+
+wallachia_white_gold_mine = {
+	local_production_efficiency = 0.25
+	trade_goods_size = 0.25
+	trade_goods_size_modifier = 0.25
+	province_trade_power_modifier = 0.25
+}
+
+wallachia_imperial_logistics_system = {
+	land_attrition = -0.1
+	global_supply_limit_modifier = 0.25
+}
+
+wallachia_newly_established_salt_mine = {
+	trade_goods_size_modifier = -0.5
+	local_production_efficiency = -0.5
+}
+
+wallachia_industrial_boom = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+wallachia_industrial_empire = {
+	development_cost_modifier = -0.05
+	expand_infrastructure_cost_modifier = -0.1
+}
+
+wallachia_naval_infrastructure = {
+	naval_forcelimit_modifier = 0.1
+}
+
+wallachia_productive_port = {
+	local_sailors_modifier = 0.1
+	local_ship_cost = -0.1
+	ship_recruit_speed = -0.1
+}
+
+wallachia_a_princely_court = {
+	advisor_cost = -0.25
+	monthly_splendor = 1
+}
+
+wallachia_vlach_supremacy = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.1
+}
+
+wallachia_reforms = {
+	min_autonomy_in_territories = -0.1
+	monthly_reform_progress_modifier = 0.1
+}
+
+wallachia_academia_vasiliana = {
+	idea_cost = -0.05
+	technology_cost = -0.05
+}
+
+wallachia_professional_army = {
+	yearly_army_professionalism = 0.005
+	army_tradition_decay = -0.005
+}
+
+wallachia_integrating_the_cossacks = {
+	can_recruit_cossacks = yes
+}
+
+wallachia_cavalry_mod = {
+	cavalry_flanking = 0.5
+	cav_to_inf_ratio = 0.2
+}
+
+wallachia_disciplined_cossacks = {
+	drill_gain_modifier = 0.5
+	drill_decay_modifier = -0.25
+	is_cossack_modifier = yes
+}
+
+wallachia_local_military_infrastructure = {
+	local_manpower_modifier = 0.3
+}
+
+wallachia_gunpowder = {
+	backrow_artillery_damage = 0.1
+	fire_damage = 0.1
+}
+
+wallachia_draco_legions = {
+	manpower_in_culture_group_provinces = 0.25
+	discipline = 0.05
+}
+
+wallachia_thriving_steppe = {
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+	local_development_cost = -0.05
+}
+
+estate_cossacks_monopoly_on_steppe_herds_mod = {
+	local_production_efficiency = -100
+}
+
+estate_cossacks_monopoly_on_steppe_herds_mod_bonus = {
+	trade_goods_size_modifier = 0.2
+	trade_goods_size = 0.25
+}
+
+wallachia_integrated_cossacks = {
+	can_recruit_cossacks = yes
+	cossacks_privilege_slots = 1
+	cossacks_loyalty_modifier = 0.1
+	allowed_cossack_fraction = 0.1
+}
+
+wallachia_buffed_cossacks = {
+	cavalry_flanking = 0.5
+	is_cossack_modifier = yes
+}

@@ -1,0 +1,56 @@
+defined_text = {
+	name = wal_rome_mission_full_desc
+	random = no
+	text = {
+		localisation_key = wal_rome_desc_completed
+		trigger = {
+			owns = 118
+		}
+	}
+	text = {
+		localisation_key = wal_rome_desc_pope
+		trigger = {
+			118 = {
+				owned_by = PAP
+			}
+		}
+	}
+	text = {
+		localisation_key = wal_rome_desc_infidel
+		trigger = {
+			118 = {
+				owner = {
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wal_rome_desc_heretic
+		trigger = {
+			118 = {
+				owner = {
+					AND = {
+						religion_group = christian
+						NOT = {
+							religion = orthodox
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wal_rome_desc_orthodox
+		trigger = {
+			118 = {
+				owner = {
+					religion = orthodox
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wal_rome_desc_generic
+	}
+}

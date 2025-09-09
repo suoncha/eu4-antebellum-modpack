@@ -1,0 +1,142 @@
+namespace = global_edict_commander_reactive_edicts_settings_event
+country_event = {
+	id = global_edict_commander_reactive_edicts_settings_event.1
+	title = global_edict_commander_reactive_edicts_settings_event.1.t
+	desc = global_edict_commander_reactive_edicts_settings_event.1.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = remain_in_reactive_edicts_settings
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.go_back
+		clr_country_flag = remain_in_reactive_edicts_settings
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_settings_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.advancement_effort_cleanup
+		custom_tooltip = advancement_effort_cleanup_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_advancement_cleanup
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.enforce_religious_unity_setter
+		custom_tooltip = religious_unity_setter_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_religious_setter
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.enforce_religious_unity_cleanup
+		custom_tooltip = religious_unity_cleanup_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_religious_cleanup
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.defensive_edict_setter
+		custom_tooltip = defensive_setter_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = reactive_edict_attrition_setter
+					NOT = {
+						has_country_flag = reactive_edict_defensive_setter
+					}
+				}
+				toggle_country_flag = {
+					flag = reactive_edict_attrition_setter
+				}
+			}
+			toggle_country_flag = {
+				flag = reactive_edict_defensive_setter
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.defensive_edict_cleanup
+		custom_tooltip = defensive_cleanup_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_defensive_cleanup
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.encourage_development_setter
+		custom_tooltip = development_setter_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_development_setter
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.attrition_setter
+		custom_tooltip = attrition_setter_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = reactive_edict_defensive_setter
+					NOT = {
+						has_country_flag = reactive_edict_attrition_setter
+					}
+				}
+				toggle_country_flag = {
+					flag = reactive_edict_defensive_setter
+				}
+			}
+			toggle_country_flag = {
+				flag = reactive_edict_attrition_setter
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.attrition_cleanup
+		custom_tooltip = attrition_cleanup_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_attrition_cleanup
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.colonial_setter
+		custom_tooltip = colonial_setter_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_colonial_setter
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_reactive_edicts_settings_event.1.colonial_cleanup
+		custom_tooltip = colonial_cleanup_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = reactive_edict_colonial_cleanup
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_reactive_edicts_settings
+			}
+			country_event = {
+				id = global_edict_commander_reactive_edicts_settings_duplicate_event.1
+			}
+		}
+	}
+}

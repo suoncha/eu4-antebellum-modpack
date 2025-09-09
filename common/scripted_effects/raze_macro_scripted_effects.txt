@@ -1,0 +1,435 @@
+#on_raze on actions must go here as well if you want them to be executed when using the raze utility.
+execute_razed_province_on_actions = {
+	add_permanent_province_modifier = {
+		name = province_razed
+		duration = 7300
+	}
+	owner = {
+		change_variable = {
+			which = HordeProvincesRazed
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_tax_building_trigger = yes
+			owner = {
+				has_country_flag = tatars_curch_raze_flag
+			}
+		}
+		owner = {
+			add_treasury = 10
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = hordes_unlock_tribes_loyalty_through_razing_flag
+			}
+		}
+		owner = {
+			add_estate_loyalty = {
+				estate = estate_nomadic_tribes
+				loyalty = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			province_id = 105
+		}
+		set_country_flag = ab_achiev_razed_parma
+	}
+	ab_on_raze_effect = yes
+	wallachian_terror_on_raze_effect = yes
+}
+
+#Basically remove_loot effect gives a province's loot to anyone except the owner... So we have to do the following:
+#1 find another tag
+#2 loot the province and give them the money
+#3 do some math to figure out how much money they received
+#4 add twice that amount to own own treasury (the effect is so fucking janky that not only is your province looted but somehow so is your treasury)
+#5 remove that amount from the transfer country's treasury
+#TODO: Figure out a solution for when the player is the last tag alive...
+loot_province = {
+	custom_tooltip = loot_province_effect_tooltip
+	hidden_effect = {
+		owner = {
+			set_variable = {
+				which = before_treasury
+				value = 0
+			}
+			random_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				save_event_target_as = temp_transfer_country
+				export_to_variable = {
+					which = before_treasury
+					value = treasury
+				}
+				PREV = {
+					change_variable = {
+						which = before_treasury
+						which = PREV
+					}
+				}
+			}
+		}
+		remove_loot = {
+			who = event_target:temp_transfer_country
+			amount = 999
+		}
+		owner = {
+			set_variable = {
+				which = after_treasury
+				value = 0
+			}
+			event_target:temp_transfer_country = {
+				export_to_variable = {
+					which = after_treasury
+					value = treasury
+				}
+				PREV = {
+					change_variable = {
+						which = after_treasury
+						which = PREV
+					}
+				}
+			}
+			set_variable = {
+				which = difference_after_loot
+				which = after_treasury
+			}
+			subtract_variable = {
+				which = difference_after_loot
+				which = before_treasury
+			}
+			#Remove ducats that were transfered to temp country
+			event_target:temp_transfer_country = {
+				set_variable = {
+					which = difference_after_loot
+					which = PREV
+				}
+				multiply_variable = {
+					which = difference_after_loot
+					value = -1
+				}
+				variable_effect = {
+					var = difference_after_loot
+					effect = add_treasury
+				}
+			}
+			multiply_variable = {
+				which = difference_after_loot
+				value = 2
+			}
+			variable_effect = {
+				var = difference_after_loot
+				effect = add_treasury
+			}
+		}
+	}
+}
+
+raze_province = {
+	set_variable = {
+		which = was_province_razed
+		value = -1
+	}
+	export_to_variable = {
+		which = raze_power_modifier
+		value = modifier:raze_power_gain
+		who = FROM
+	}
+	change_variable = {
+		which = raze_power_modifier
+		value = 1
+	}
+	export_to_variable = {
+		which = owners_mil_tech
+		value = mil_tech
+		who = FROM
+	}
+	export_to_variable = {
+		which = total_dev_pre_raze
+		value = development
+	}
+	#Razing according to wiki:
+	# Provides 25 monarch points in the respective category for every point of development razed,
+	# reduced by 1 for every level in military technology above 3, capped at  military technology 23
+	# Therefore, if mil tech > 23, set the variable to 23.
+	if = {
+		limit = {
+			check_variable = {
+				which = owners_mil_tech
+				value = 24
+			}
+		}
+		set_variable = {
+			which = owners_mil_tech
+			value = 23
+		}
+	}
+	change_variable = {
+		which = owners_mil_tech
+		value = -3
+	}
+	set_variable = {
+		which = per_point_mana_gain
+		value = 25
+	}
+	subtract_variable = {
+		which = per_point_mana_gain
+		which = owners_mil_tech
+	}
+	#Tax dev calculations
+	export_to_variable = {
+		which = tax
+		value = trigger_value:base_tax
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = tax
+				value = 2
+			}
+		}
+		change_variable = {
+			which = was_province_razed
+			value = 1
+		}
+		raze_for_tax_dev = yes
+	}
+	#Production dev calculations
+	export_to_variable = {
+		which = production
+		value = trigger_value:base_production
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = production
+				value = 2
+			}
+		}
+		change_variable = {
+			which = was_province_razed
+			value = 1
+		}
+		raze_for_production_dev = yes
+	}
+	#Manpower dev calculations
+	export_to_variable = {
+		which = manpower
+		value = trigger_value:base_manpower
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = manpower
+				value = 2
+			}
+		}
+		change_variable = {
+			which = was_province_razed
+			value = 1
+		}
+		raze_for_manpower_dev = yes
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = was_province_razed
+				value = 0
+			}
+		}
+		FROM = {
+			save_global_event_target_as = tag_that_razed
+		}
+		every_country = {
+			limit = {
+				PREV = {
+					previous_owner = PREV
+				}
+			}
+			add_opinion = {
+				who = event_target:tag_that_razed
+				modifier = razed_province
+			}
+		}
+		clear_global_event_target = tag_that_razed
+		FROM = {
+			set_variable = {
+				which = total_dev_pre_raze
+				which = PREV
+			}
+			divide_variable = {
+				which = total_dev_pre_raze
+				value = 2
+			}
+			variable_effect = {
+				var = total_dev_pre_raze
+				effect = add_horde_unity
+			}
+		}
+		execute_razed_province_on_actions = yes
+	}
+}
+
+raze_for_tax_dev = {
+	divide_variable = {
+		which = tax
+		value = 3
+	}
+	round_variable = {
+		which = tax
+		value = 0
+	}
+	set_variable = {
+		which = tax_dev_reduction
+		which = tax
+	}
+	multiply_variable = {
+		which = tax_dev_reduction
+		value = -1
+	}
+	variable_effect = {
+		var = tax_dev_reduction
+		effect = add_base_tax
+	}
+	set_variable = {
+		which = adm_power_gained
+		which = tax
+	}
+	multiply_variable = {
+		which = adm_power_gained
+		which = per_point_mana_gain
+	}
+	multiply_variable = {
+		which = adm_power_gained
+		which = raze_power_modifier
+	}
+	round_variable = {
+		which = adm_power_gained
+		value = -1
+	}
+	FROM = {
+		set_variable = {
+			which = adm_power_gained
+			which = PREV
+		}
+		variable_effect = {
+			var = adm_power_gained
+			effect = add_adm_power
+		}
+	}
+}
+
+raze_for_production_dev = {
+	divide_variable = {
+		which = production
+		value = 3
+	}
+	round_variable = {
+		which = production
+		value = 0
+	}
+	set_variable = {
+		which = production_dev_reduction
+		which = production
+	}
+	multiply_variable = {
+		which = production_dev_reduction
+		value = -1
+	}
+	variable_effect = {
+		var = production_dev_reduction
+		effect = add_base_production
+	}
+	set_variable = {
+		which = dip_power_gained
+		which = production
+	}
+	multiply_variable = {
+		which = dip_power_gained
+		which = per_point_mana_gain
+	}
+	multiply_variable = {
+		which = dip_power_gained
+		which = raze_power_modifier
+	}
+	round_variable = {
+		which = dip_power_gained
+		value = -1
+	}
+	FROM = {
+		set_variable = {
+			which = dip_power_gained
+			which = PREV
+		}
+		variable_effect = {
+			var = dip_power_gained
+			effect = add_dip_power
+		}
+	}
+}
+
+raze_for_manpower_dev = {
+	divide_variable = {
+		which = manpower
+		value = 3
+	}
+	round_variable = {
+		which = manpower
+		value = 0
+	}
+	set_variable = {
+		which = mil_power_gained
+		which = manpower
+	}
+	set_variable = {
+		which = manpower_dev_reduction
+		which = manpower
+	}
+	multiply_variable = {
+		which = manpower_dev_reduction
+		value = -1
+	}
+	variable_effect = {
+		var = manpower_dev_reduction
+		effect = add_base_manpower
+	}
+	multiply_variable = {
+		which = mil_power_gained
+		which = per_point_mana_gain
+	}
+	multiply_variable = {
+		which = mil_power_gained
+		which = raze_power_modifier
+	}
+	round_variable = {
+		which = mil_power_gained
+		value = -1
+	}
+	FROM = {
+		set_variable = {
+			which = mil_power_gained
+			which = PREV
+		}
+		variable_effect = {
+			var = mil_power_gained
+			effect = add_mil_power
+		}
+	}
+}
+
+enable_razing = {
+	set_country_flag = can_raze_provinces
+}
+
+disable_razing = {
+	clr_country_flag = can_raze_provinces
+}

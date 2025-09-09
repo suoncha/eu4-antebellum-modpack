@@ -1,0 +1,475 @@
+basarab_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Basarab"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	core_creation = -0.037
+	stability_cost_modifier = -0.075
+	legitimacy = 0.375
+}
+
+bibescu_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Bibescu"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	diplomats = 1
+	diplomatic_annexation_cost = -0.037
+	diplomatic_reputation = 0.75
+}
+
+draculesti_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Draculesti"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	discipline = 0.022
+	shock_damage = 0.037
+	siege_ability = 0.037
+}
+
+brancoveanu_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Brancoveanu"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	advisor_cost = -0.075
+	development_cost_modifier = -0.037
+	build_cost = -0.037
+}
+
+movilesti_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Movilesti"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	global_trade_power = 0.075
+	trade_efficiency = 0.075
+	improve_relation_modifier = 0.075
+}
+
+danesti_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Danesti"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	defensiveness = 0.112
+	fort_maintenance_modifier = -0.112
+	land_morale = 0.037
+}
+
+ghica_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Ghica"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	administrative_efficiency = 0.015
+	governing_capacity_modifier = 0.037
+	state_maintenance_modifier = -0.075
+}
+
+racovita_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Racovita"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	ae_impact = -0.05
+	dip_advisor_cost = -0.1
+	province_warscore_cost = -0.05
+}
+
+cantacuzino_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Cantacuzino"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	global_manpower_modifier = 0.112
+	manpower_recovery_speed = 0.075
+	global_regiment_cost = -0.037
+}
+
+mavrocordatos_dynastic_prerogative = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Mavrocordatos"
+		hidden_trigger = {
+			has_country_modifier = hidden_prerogative_trigger_modifier
+		}
+	}
+	technology_cost = -0.075
+	idea_cost = -0.037
+	innovativeness_gain = 0.075
+}
+
+coalition_with_basarab = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Basarab"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_basarab_coalition_trigger
+		}
+	}
+	core_creation = -0.025
+	stability_cost_modifier = -0.05
+	legitimacy = 0.25
+}
+
+coalition_with_bibescu = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Bibescu"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_bibescu_coalition_trigger
+		}
+	}
+	diplomats = 1
+	diplomatic_annexation_cost = -0.025
+	diplomatic_reputation = 0.5
+}
+
+coalition_with_draculesti = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Draculesti"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_draculesti_coalition_trigger
+		}
+	}
+	discipline = 0.015
+	shock_damage = 0.025
+	siege_ability = 0.025
+}
+
+coalition_with_brancoveanu = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Brancoveanu"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_brancoveanu_coalition_trigger
+		}
+	}
+	advisor_cost = -0.05
+	development_cost_modifier = -0.025
+	build_cost = -0.025
+}
+
+coalition_with_movilesti = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Movilesti"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_movilesti_coalition_trigger
+		}
+	}
+	global_trade_power = 0.05
+	trade_efficiency = 0.05
+	improve_relation_modifier = 0.05
+}
+
+coalition_with_danesti = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Danesti"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_danesti_coalition_trigger
+		}
+	}
+	defensiveness = 0.075
+	fort_maintenance_modifier = -0.075
+	land_morale = 0.025
+}
+
+coalition_with_ghica = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Ghica"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_ghica_coalition_trigger
+		}
+	}
+	administrative_efficiency = 0.01
+	governing_capacity_modifier = 0.025
+	state_maintenance_modifier = -0.05
+}
+
+coalition_with_racovita = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Racovita"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_racovita_coalition_trigger
+		}
+	}
+	ae_impact = -0.025
+	dip_advisor_cost = -0.05
+	province_warscore_cost = -0.025
+}
+
+coalition_with_cantacuzino = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Cantacuzino"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_cantacuzino_coalition_trigger
+		}
+	}
+	global_manpower_modifier = 0.075
+	manpower_recovery_speed = 0.05
+	global_regiment_cost = -0.025
+}
+
+coalition_with_mavrocordatos = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Mavrocordatos"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_mavrocordatos_coalition_trigger
+		}
+	}
+	technology_cost = -0.05
+	idea_cost = -0.025
+	innovativeness_gain = 0.05
+}
+
+revive_public_punishments = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		NOT = {
+			dynasty = "Draculesti"
+		}
+		hidden_trigger = {
+			has_country_modifier = hidden_revive_public_punishments
+		}
+	}
+	global_unrest = -2
+	years_of_nationalism = -3
+	harsh_treatment_cost = -0.5
+	max_absolutism = 5
+}
+
+revive_public_punishments_draculesti = {
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+	trigger = {
+		dynasty = "Draculesti"
+		hidden_trigger = {
+			has_country_modifier = hidden_revive_public_punishments
+		}
+	}
+	global_unrest = -3
+	years_of_nationalism = -5
+	harsh_treatment_cost = -0.75
+	max_absolutism = 7
+}
+
+dominance_of_basarab = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Basarab"
+	}
+	basarab_faction_influence = 0.05
+}
+
+dominance_of_bibescu = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Bibescu"
+	}
+	bibescu_faction_influence = 0.05
+}
+
+dominance_of_draculesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Draculesti"
+	}
+	draculesti_faction_influence = 0.05
+}
+
+dominance_of_brancoveanu = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Brancoveanu"
+	}
+	brancoveanu_faction_influence = 0.05
+}
+
+dominance_of_movilesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Movilesti"
+	}
+	movilesti_faction_influence = 0.05
+}
+
+dominance_of_danesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Danesti"
+	}
+	danesti_faction_influence = 0.05
+}
+
+dominance_of_ghica = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Ghica"
+	}
+	ghica_faction_influence = 0.05
+}
+
+dominance_of_racovita = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Racovita"
+	}
+	racovita_faction_influence = 0.05
+}
+
+dominance_of_cantacuzino = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Cantacuzino"
+	}
+	cantacuzino_faction_influence = 0.05
+}
+
+dominance_of_mavrocordatos = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Mavrocordatos"
+	}
+	mavrocordatos_faction_influence = 0.05
+}
+
+return_of_the_emperor = {
+	potential = {
+		has_country_flag = cantacuzino_constantinople_bonus
+	}
+	trigger = {
+		capital = 151
+		OR = {
+			dynasty = "Cantacuzino"
+			AND = {
+				OR = {
+					has_regency = yes
+					has_consort_regency = yes
+				}
+				heir_dynasty = "Cantacuzino"
+			}
+		}
+	}
+	cantacuzino_faction_influence = 0.05
+	unjustified_demands = -0.2
+	diplomatic_reputation = 1
+}

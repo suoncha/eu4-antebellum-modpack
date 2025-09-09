@@ -1,0 +1,92 @@
+patriarch = {
+	monarch_power = ADM
+	yearly_patriarch_authority = 0.005
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				uses_meritocracy = yes
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_constantinople
+			}
+		}
+		modifier = {
+			tolerance_own = 0.5
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_antioch
+			}
+		}
+		modifier = {
+			missionary_maintenance_cost = -0.05
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_jersualem
+			}
+		}
+		modifier = {
+			reverse_relation_with_same_religion = 5
+			reverse_relation_with_heretic_religion = 5
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_alexandria
+			}
+		}
+		modifier = {
+			global_heathen_missionary_strength = 0.005
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_rome
+			}
+		}
+		modifier = {
+			global_heretic_missionary_strength = 0.005
+		}
+	}
+	allow_only_male = yes
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					religion = nestorian
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				religion = orthodox
+			}
+			NOT = {
+				religion = nestorian
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

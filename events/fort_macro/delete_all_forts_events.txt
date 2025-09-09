@@ -1,0 +1,24 @@
+namespace = delete_all_forts_events
+country_event = {
+	id = delete_all_forts_events.1
+	title = delete_all_forts_events.1.t
+	desc = delete_all_forts_events.1.d
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = run_delete_fort_confirmation_event
+	}
+	immediate = {
+		clr_country_flag = run_delete_fort_confirmation_event
+	}
+	option = {
+		name = delete_all_forts_event.1.a
+		highlight = yes
+		hidden_effect = {
+			delete_all_forts_effect = yes
+		}
+	}
+	option = {
+		name = delete_all_forts_event.1.b
+	}
+}

@@ -1,0 +1,1059 @@
+namespace = global_edicts_commander_trade_config_events
+country_event = {
+	id = global_edicts_commander_trade_config_events.1
+	title = global_edicts_commander_trade_config_events.1.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_trade_config_menu
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = fra_improve_trade_power_state_edict_flag
+				}
+				country_event = {
+					id = global_edicts_commander_events.17
+				}
+			}
+			else = {
+				country_event = {
+					id = global_edicts_commander_events.8
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_all_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_all_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.c
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.2
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.dee
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.3
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.e
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.4
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.f
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.5
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.g
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.6
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.1.h
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.7
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.2
+	title = global_edicts_commander_trade_config_events.2.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_europe_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_europe_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_europe_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_europe_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_english_channel
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_english_channel_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_champagne
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_champagne_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_north_sea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_north_sea_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_lubeck
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_lubeck_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_baltic_sea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_baltic_sea_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_bordeaux
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_bordeaux_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_sevilla
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_sevilla_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_valencia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_valencia_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_genoa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_genoa_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_venice
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_venice_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_wien
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_wien_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_ragusa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ragusa_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_rheinland
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_rheinland_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_saxony
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_saxony_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_krakow
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_krakow_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_pest
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_pest_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_constantinople
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_constantinople_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_kiev
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_kiev_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_crimea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_crimea_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_novgorod
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_novgorod_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_white_sea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_white_sea_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_kazan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_kazan_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.2.opt_astrakhan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_astrakhan_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_europe_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.3
+	title = global_edicts_commander_trade_config_events.3.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_asia_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_asia_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_asia_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_asia_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_samarkand
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_samarkand_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_aleppo
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_aleppo_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_basra
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_basra_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_persia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_persia_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_hormuz
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_hormuz_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_lahore
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_lahore_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_gujarat
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_gujarat_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_doab
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_doab_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_deccan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_deccan_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_coromandel
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_coromandel_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_bengal
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_bengal_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_burma
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_burma_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_siam
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_siam_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_malacca
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_malacca_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_the_moluccas
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_the_moluccas_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_philippines
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_philippines_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_siberia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_siberia_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_yumen
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_yumen_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_girin
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_girin_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_nippon
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_nippon_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_beijing
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_beijing_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_xian
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_xian_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_hangzhou
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_hangzhou_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_canton
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_canton_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_chengdu
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_chengdu_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.3.opt_lhasa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_lhasa_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_asia_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.4
+	title = global_edicts_commander_trade_config_events.4.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_africa_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_africa_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_africa_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_africa_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_alexandria
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_alexandria_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_tunis
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_tunis_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_safi
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_safi_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_ivory_coast
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ivory_coast_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_timbuktu
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_timbuktu_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_katsina
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_katsina_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_ethiopia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ethiopia_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_gulf_of_aden
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_gulf_of_aden_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_zanzibar
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_zanzibar_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_great_lakes
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_great_lakes_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_congo
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_congo_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_zambezi
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_zambezi_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.4.opt_cape_of_good_hope
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_cape_of_good_hope_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_africa_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.5
+	title = global_edicts_commander_trade_config_events.5.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_north_america_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_north_america_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_north_america_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_north_america_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_california
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_california_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_hudson_bay
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_hudson_bay_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_gulf_of_st_lawrence
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_mississippi_river
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mississippi_river_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_ohio
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ohio_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_chesapeake
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_chesapeake_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_rio_grande
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_rio_grande_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_mexico
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mexico_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_caribbean
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_caribbean_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.5.opt_panama
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_panama_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_north_america_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.6
+	title = global_edicts_commander_trade_config_events.6.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_south_america_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_south_america_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_south_america_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_south_america_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_lima
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_lima_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_amazonas
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_amazonas_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_cuiba
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_cuiaba_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_brazil
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_brazil_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_rio_de_la_plata
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_rio_de_la_plata_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.6.opt_patagonia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_patagonia_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_south_america_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_trade_config_events.7
+	title = global_edicts_commander_trade_config_events.7.t
+	desc = global_edicts_commander_trade_config_events.1.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_oceania_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.7.back
+		highlight = yes
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_oceania_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.7.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_set_oceania_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.7.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_clear_oceania_trade_node_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.7.opt_australia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_australia_trade_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_trade_config_events.7.opt_polynesian_triangle
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_polynesian_triangle_trade_edicts
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = remain_in_trade_config_oceania_menu
+			}
+			country_event = {
+				id = global_edicts_commander_trade_config_duplicate_events.7
+			}
+		}
+	}
+}

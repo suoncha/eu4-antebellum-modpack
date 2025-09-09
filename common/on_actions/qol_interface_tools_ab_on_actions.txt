@@ -1,0 +1,142 @@
+on_colony_established = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_colonial_edict_setter_enabled = yes
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_settler_growth
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_settler_growth
+		}
+	}
+}
+
+on_colony_finished = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_colonial_edict_cleanup_enabled = yes
+			}
+		}
+		owner = {
+			every_owned_province = {
+				limit = {
+					is_state = yes
+					can_change_state_edict = yes
+					has_state_edict = edict_settler_growth
+					NOT = {
+						any_province_in_state = {
+							is_colony = yes
+						}
+					}
+				}
+				set_state_edict = no_edict
+			}
+		}
+	}
+}
+
+on_colony_finished = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_colonial_edict_cleanup_enabled = yes
+			}
+		}
+		owner = {
+			every_owned_province = {
+				limit = {
+					is_state = yes
+					can_change_state_edict = yes
+					has_state_edict = edict_settler_growth
+					NOT = {
+						any_province_in_state = {
+							is_colony = yes
+						}
+					}
+				}
+				set_state_edict = no_edict
+			}
+		}
+	}
+}
+
+on_abandon_colony = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+				has_reactive_colonial_edict_cleanup_enabled = yes
+			}
+		}
+		owner = {
+			every_owned_province = {
+				limit = {
+					is_state = yes
+					can_change_state_edict = yes
+					has_state_edict = edict_settler_growth
+					NOT = {
+						any_province_in_state = {
+							is_colony = yes
+						}
+					}
+				}
+				set_state_edict = no_edict
+			}
+		}
+	}
+}
+
+on_siege_lost_province = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_reactive_attrition_edict_setter_enabled = yes
+				}
+				NOT = {
+					has_state_edict = edict_attrition_edict
+				}
+			}
+			if = {
+				limit = {
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+						controlled_by = owner
+					}
+				}
+				edict_commander_set_edict_for_state = {
+					edict = edict_attrition_edict
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_state_edict = edict_attrition_edict
+				owner = {
+					has_reactive_attrition_edict_cleanup_enabled = yes
+				}
+				NOT = {
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+						controlled_by = owner
+					}
+				}
+			}
+			set_state_edict = no_edict
+		}
+	}
+}

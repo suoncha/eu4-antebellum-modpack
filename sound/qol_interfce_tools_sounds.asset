@@ -1,0 +1,5 @@
+sound = {
+	name = calculate_autonomy
+	file = "old/unused/techadvance.wav"
+	volume = 1
+}

@@ -1,0 +1,17 @@
+river_wolves_doctrine = {
+	can_select = {
+		is_primitive = no
+		culture_group = romanian_culture_group
+	}
+	cost = 0.1
+	country_modifier = {
+		has_marines = yes
+		landing_penalty = -1
+		allowed_marine_fraction = 0.20
+		regiment_disembark_speed = 0.15
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 29 
+}

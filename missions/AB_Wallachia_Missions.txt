@@ -1,0 +1,6534 @@
+ab_wal_boier_compromise_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_wallachia_purged_the_estates = no
+	}
+	wal_placate_the_boieri = {
+		icon = mission_noble_council
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 2
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_placating_the_boieri
+				duration = 10950
+			}
+			custom_tooltip = wal_placate_the_boieri_effect_tooltip
+		}
+	}
+	wal_compromise_with_the_boieri = {
+		icon = gfx_wal_compromise_with_the_boieri
+		position = 2
+		required_missions = {
+			wal_placate_the_boieri
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 3
+				}
+				has_reform = maintain_nobles_status_quo_reform
+				num_of_estate_privileges = {
+					estate = estate_nobles
+					value = 5
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			custom_tooltip = wal_compromise_with_the_boieri_increased_levies_bonus_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_advisor_privilege_bonus_tooltip
+			hidden_effect = {
+				set_country_flag = wal_compromised_with_the_boieri
+			}
+			add_prestige = -10
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 5
+			}
+			custom_tooltip = wal_compromise_with_the_boieri_can_no_longer_seize_from_boieri_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_dont_panic_tooltip
+		}
+	}
+	wal_the_great_feast = {
+		icon = gfx_wal_the_great_feast
+		position = 3
+		required_missions = {
+			wal_compromise_with_the_boieri
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 5
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 90
+				}
+				crown_land_share = 30
+			}
+		}
+		effect = {
+			custom_tooltip = cant_form_dacia_tooltip
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					tag = WAL
+				}
+				custom_tooltip = form_tuh_tooltip
+			}
+			if = {
+				limit = {
+					has_country_modifier = wallachia_placating_the_boieri
+				}
+				custom_tooltip = wal_the_great_feast_mod_bonus_tooltip_yes
+				hidden_effect = {
+					remove_country_modifier = wallachia_placating_the_boieri
+				}
+				add_country_modifier = {
+					name = boier_compact
+					duration = 36500
+				}
+			}
+			else = {
+				custom_tooltip = wal_the_great_feast_mod_bonus_tooltip_no
+				tooltip = {
+					add_country_modifier = {
+						name = boier_compact
+						duration = 36500
+					}
+				}
+			}
+			hidden_effect = {
+				remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+			}
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -20
+			}
+			hidden_effect = {
+				set_estate_privilege = estate_nobles_dominance_of_the_boierime
+			}
+			set_country_flag = wal_elective_monarchy
+			if = {
+				limit = {
+					tag = ROD
+				}
+				country_event = {
+					id = AB_wallachia_events.41
+				}
+				add_government_reform = roman_elective_monarchy
+			}
+			else_if = {
+				limit = {
+					tag = DAC
+				}
+				set_country_flag = formed_the_united_houses
+				change_tag = TUH
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+						}
+					}
+					set_government_rank = 2
+				}
+				country_event = {
+					id = AB_wallachia_events.12
+				}
+				add_government_reform = dacian_elective_monarchy
+			}
+			else = {
+				add_government_reform = wallachian_elective_monarchy
+			}
+			hidden_effect = {
+				tuh_faction_initialization_effect = yes
+			}
+		}
+	}
+	wal_foundation_for_the_union = {
+		icon = gfx_wal_foundation_for_the_union
+		position = 4
+		required_missions = {
+			wal_the_great_feast
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				is_or_was_tag = {
+					tag = TUH
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_sfatul_tarii_has_elected_new_candidate_tooltip
+					check_variable = {
+						which = rem_num_elected
+						value = 1
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_sfatul_tarii_parliament_issues_tooltip
+					check_variable = {
+						which = rem_parliament_issues_passed
+						value = 3
+					}
+				}
+				legitimacy = 90
+			}
+		}
+		effect = {
+			custom_tooltip = can_construct_sfatul_tarii_tooltip
+			set_country_flag = can_construct_sfatul_tarii
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = statesman
+				skill = 1
+				cost_multiplier = 0.5
+				location = 161
+			}
+			custom_tooltip = AB_EMPTY
+			add_legitimacy_or_mil_power = {
+				amount = 20
+			}
+			custom_tooltip = AB_EMPTY
+			tuh_clear_government_mechanic_cooldowns = yes
+		}
+	}
+	wal_union_ascendant = {
+		icon = gfx_wal_union_ascendant
+		position = 5
+		required_missions = {
+			wal_foundation_for_the_union
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				is_great_power = yes
+				government_rank = 3
+				stability = 3
+				custom_trigger_tooltip = {
+					tooltip = rem_has_elected_3_rulers_tooltip
+					check_variable = {
+						which = rem_num_elected
+						value = 3
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = rem_has_passed_10_parliament_issues_tooltip
+					check_variable = {
+						which = rem_parliament_issues_passed
+						value = 10
+					}
+				}
+				161 = {
+					has_great_project = {
+						type = sfatul_tarii
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = wal_union_ascendant_parliament_legit_bonus
+			set_country_flag = legitimacy_on_parliament_issue_passed
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_union_ascendant_initial_legit_bonus_tooltip
+			set_country_flag = wal_union_ascendant_initial_legit_bonus
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = tuh_union_ascendant
+				duration = -1
+			}
+		}
+	}
+}
+
+ab_wal_slayed_the_boieri_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_wallachia_purged_the_estates = yes
+		has_voivode_lost_wallachian_civil_war = no
+	}
+	wal_war_of_the_ten_houses = {
+		icon = gfx_wal_war_of_the_ten_houses
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				has_won_wallachian_civil_war = yes
+			}
+		}
+		effect = {
+			add_yearly_manpower = 1
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_devastation_post_civil_war_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						devastation = 1
+					}
+					add_devastation = -25
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			unlock_government_reform = {
+				government_reform = abolition_of_the_boiermiea
+				tooltip = yes
+			}
+		}
+	}
+	wal_take_control = {
+		icon = gfx_wal_take_control
+		position = 2
+		required_missions = {
+			wal_war_of_the_ten_houses
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				crown_land_share = 50
+				NOT = {
+					average_autonomy_above_min = 10
+				}
+				stability = 3
+				OR = {
+					NOT = {
+						has_estate = estate_nobles
+					}
+					custom_trigger_tooltip = {
+						tooltip = no_privileges_granted_to_nobles_trigger_tooltip
+						NOT = {
+							num_of_estate_privileges = {
+								estate = estate_nobles
+								value = 1
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_purged_the_elites_3_times_tooltip
+					has_purged_the_elites_n_times = {
+						n = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = reign_of_terror
+				duration = 7300
+			}
+			unlock_government_reform = {
+				government_reform = superiority_of_the_state_reform
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_take_control_princely_court_bonus
+			custom_tooltip = wal_take_control_princely_court_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			upgrade_impaler_personality_reward = yes
+		}
+	}
+	wal_the_butcher = {
+		icon = gfx_wal_the_butcher
+		position = 3
+		required_missions = {
+			wal_take_control
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = ruler_has_second_or_third_tier_impaler_trigger_tooltip
+					OR = {
+						ruler_has_personality = impaler2_personality
+						ruler_has_personality = impaler3_personality
+					}
+				}
+				OR = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 60
+					}
+					has_butchered_the_boiermiea = yes
+				}
+				NOT = {
+					diplomatic_reputation = -10
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_impaled_10_rulers_tooltip
+					has_impaled_n_rulers = {
+						n = 10
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_razed_50_provinces_tooltip
+					has_razed_n_provinces_using_terror_mechanics = {
+						n = 50
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = refund_terror
+			custom_tooltip = refund_terror_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_more_terror_from_razing
+			custom_tooltip = wal_more_terror_from_razing_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = enable_provoke_coalition
+			custom_tooltip = enable_provoke_coalition_tooltip
+		}
+	}
+	wal_absolute_control = {
+		icon = gfx_wal_absolute_control
+		position = 4
+		required_missions = {
+			wal_the_butcher
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				absolutism = 100
+				crown_land_share = 95
+				legitimacy = 100
+				stability = 3
+				NOT = {
+					average_autonomy_above_min = 5
+				}
+			}
+		}
+		effect = {
+			add_country_modifier_until_end_of_current_age = {
+				name = wallachia_absolute_control
+			}
+			custom_tooltip = wal_absolute_control_princely_court_bonus_tooltip
+			set_country_flag = wal_absolute_control_princely_court_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = terror_on_exploit_tooltip
+			set_country_flag = terror_on_exploit
+			custom_tooltip = AB_EMPTY
+			unlock_government_reform = {
+				government_reform = absolute_control_reform
+				tooltip = yes
+			}
+		}
+	}
+	wal_the_final_lesson = {
+		icon = gfx_wal_the_final_lesson
+		position = 5
+		required_missions = {
+			wal_absolute_control
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				NOT = {
+					great_power_rank = 2
+				}
+				government_rank = 3
+				ruler_has_personality = impaler3_personality
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 80
+				}
+				OR = {
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = has_impaled_25_rulers_tooltip
+							has_impaled_n_rulers = {
+								n = 25
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = has_razed_125_provinces_tooltip
+							has_razed_n_provinces_using_terror_mechanics = {
+								n = 125
+							}
+						}
+					}
+					has_defeated_imperial_retribution_coalition = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_the_lesson
+				duration = -1
+			}
+			set_country_flag = wal_the_final_lesson_coalition_threshold
+			custom_tooltip = wal_increased_coalition_threshold_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = winning_coalition_war_ae_reduced
+			custom_tooltip = winning_coalition_war_ae_reduced_tooltip
+		}
+	}
+}
+
+ab_wal_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+	}
+	wal_conquer_southern_italy = {
+		icon = king_of_naples
+		position = 6
+		required_missions = {
+			wal_conquer_illyria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = apulia_area
+				area = calabria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = sicily_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = western_sicily_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = naples_area
+			}
+			2986 = {
+				add_permanent_claim = ROOT
+			}
+			120 = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_prepare_to_land_in_sicily
+				duration = 9125
+			}
+			add_navy_tradition = 20
+			add_yearly_sailors = 2
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = naval_reformer
+				skill = 2
+				culture = venetian
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_conquer_sicily = {
+		icon = arb_sicily
+		position = 7
+		required_missions = {
+			wal_conquer_southern_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = naples_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = naples_area
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = lazio_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = corsica_sardinia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_italy_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = inquisitor
+				skill = 1
+				religion = ROOT
+				culture = adriaticii
+				cost_multiplier = 0.5
+				location = 122
+			}
+			custom_tooltip = AB_EMPTY
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = danesti_no_raids
+				custom_tooltip = danesti_raid_coast_tooltip"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			custom_tooltip = AB_EMPTY
+			country_event = {
+				id = AB_wallachia_events.33
+			}
+		}
+	}
+	wal_the_true_see_of_rome = {
+		icon = new_st_peters_basilica
+		position = 10
+		required_missions = {
+			wal_rome
+		}
+		provinces_to_highlight = {
+			province_id = 151
+			OR = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			118 = {
+				owned_by = ROOT
+				is_core = ROOT
+				religion = orthodox
+				has_great_project = {
+					type = st_pauls_basilica
+					tier = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_legacy_of_st_paul
+				duration = 9125
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					118 = {
+						has_great_project = {
+							type = st_pauls_basilica
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 1000
+				add_manpower = 50
+			}
+			else = {
+				118 = {
+					add_great_project_tier = {
+						type = st_pauls_basilica
+						tier = 1
+					}
+				}
+			}
+		}
+	}
+	wal_switzerland = {
+		icon = reorganize_the_confederacy
+		position = 11
+		required_missions = {
+			wal_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = switzerland_area
+				area = romandie_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			switzerland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			romandie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = wal_switzerland_swiss_fort_bonus_tooltip
+			tooltip = {
+				custom_tooltip = upgraded_fort_tooltip
+				add_province_modifier = {
+					name = wallachia_gate_of_the_alps
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = romandie_area
+							area = switzerland_area
+						}
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_gate_of_the_alps
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = swiss_religion
+					value = 0
+				}
+				165 = {
+					export_to_variable = {
+						which = swiss_religion
+						value = religion
+					}
+					PREV = {
+						set_variable = {
+							which = swiss_religion
+							which = PREV
+						}
+					}
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				religion = variable:swiss_religion
+				culture = swiss
+				location = 165
+				cost_multiplier = 0.5
+				skill = 2
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = fort_advisor_garrsion_damage_buff
+			custom_tooltip = fort_advisor_garrsion_damage_buff_tooltip
+		}
+	}
+	wal_lowlands = {
+		icon = mission_lowlands
+		position = 13
+		required_missions = {
+			wal_france
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+				province_id = 96
+				area = lower_rhineland_area
+				area = wallonia_area
+				area = flanders_area
+				area = brabant_area
+				area = north_brabant_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			85 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			96 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				OR = {
+					area = lower_rhineland_area
+					area = wallonia_area
+					area = flanders_area
+					area = brabant_area
+					area = north_brabant_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = low_countries_region
+			}
+			add_country_modifier = {
+				name = wallachia_architects_of_belgica
+				duration = -1
+			}
+			set_country_flag = ven_scaling_planner
+			custom_tooltip = VEN_SCALING_PLANNER
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = planner
+				skill = 3
+				cost_multiplier = 0.5
+				culture = wallonian
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "simple_unlock_issue = {
+				issue = land_reclamation_issue
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_consecrate_dacia = {
+		icon = gfx_wal_consecrate_dacia
+		position = 16
+		required_missions = {
+			wal_seat_of_the_metropolitan
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = moldavia_area
+				area = bessarabia_area
+				area = southern_transylvania_area
+				area = transylvania_area
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				has_state_patriach = no
+				is_state = no
+			}
+		}
+		trigger = {
+			stability = 1
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			bessarabia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					stability = 3
+				}
+				add_adm_power = 100
+			}
+			else = {
+				add_stability = 1
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				southern_transylvania_area = {
+					add_prosperity = 100
+					add_unrest = -10
+					add_nationalism = -10
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = wallachia_area
+							area = moldavia_area
+							area = bessarabia_area
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+					}
+					add_prosperity = 100
+					add_unrest = -10
+					add_nationalism = -10
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = theologian
+				skill = 2
+				cost_multiplier = 0.5
+				location = 161
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_consecrate_bonus
+			custom_tooltip = wal_consecrate_bonus_tooltip
+		}
+	}
+	wal_mantle_of_constantine = {
+		icon = gfx_wal_mantle_of_constantine
+		position = 17
+		required_missions = {
+			wal_consecrate_dacia
+			wal_romanian_churches
+		}
+		trigger = {
+			is_defender_of_faith = yes
+			patriarch_authority = 0.8
+			government_rank = 3
+			151 = {
+				owned_by = root
+				has_great_project = {
+					type = hagia_sophia
+					tier = 3
+				}
+			}
+			calc_true_if = {
+				amount = 50
+				all_owned_province = {
+					custom_trigger_tooltip = {
+						tooltip = has_consecrated_metropolitan_trigger_tooltip
+						has_state_patriach = yes
+					}
+				}
+			}
+			calc_true_if = {
+				amount = 25
+				all_owned_province = {
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.2
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_mantle_of_constantine_church_buff_tooltip
+			set_country_flag = wal_church_buff
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_tax_building_trigger = yes
+					}
+					if = {
+						limit = {
+							has_building = temple
+						}
+						add_province_modifier = {
+							name = wallachia_church_buff
+							duration = -1
+						}
+					}
+					else_if = {
+						limit = {
+							has_building = cathedral
+						}
+						add_province_modifier = {
+							name = wallachia_basilica_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_religious_state_buff
+			custom_tooltip = wal_religious_state_buff_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "simple_unlock_issue = {
+				issue = deus_vult_parliament_issue
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_curtea_domneasca = {
+		icon = gfx_wal_curtea_domneasca
+		position = 18
+		trigger = {
+			has_institution = renaissance
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			OR = {
+				prestige = 30
+				has_government_power = {
+					value = 30
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+				}
+			}
+			legitimacy = 100
+		}
+		effect = {
+			change_government_reform_progress = 30
+			add_country_modifier = {
+				name = wallachia_a_princely_court
+				duration = 7300
+			}
+		}
+	}
+	wal_reform_admin = {
+		icon = gfx_wal_reform_admin
+		position = 19
+		required_missions = {
+			wal_curtea_domneasca
+		}
+		trigger = {
+			reform_level = 7
+			monthly_adm = 12
+			OR = {
+				government_reform_progress = 120
+				AND = {
+					dynasty = "Ghica"
+					has_country_modifier = ghica_in_power
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				has_courthouse_building_trigger = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							dynasty = "Ghica"
+						}
+						NOT = {
+							has_country_modifier = ghica_in_power
+						}
+					}
+				}
+				change_government_reform_progress = -120
+			}
+			add_country_modifier = {
+				name = wallachia_reforms
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
+			}
+		}
+	}
+	wal_education = {
+		icon = gfx_wal_education
+		position = 20
+		required_missions = {
+			wal_reform_admin
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = ROOT
+					NOT = {
+						has_building = university
+					}
+				}
+				AND = {
+					province_id = 4529
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							has_building = university
+						}
+						NOT = {
+							development = 25
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			4529 = {
+				owned_by = ROOT
+				has_building = university
+				development = 25
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				has_building = university
+			}
+		}
+		effect = {
+			change_innovativeness = 5
+			4529 = {
+				add_province_modifier = {
+					name = wallachia_academia_vasiliana
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_in_advisor_bonus_tooltip
+			set_country_flag = wal_in_advisor_bonus
+		}
+	}
+}
+
+ab_wal_locked_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		NOT = {
+			has_country_flag = wal_unlocked_timed
+		}
+		NOT = {
+			has_country_flag = wal_failed_timed
+		}
+	}
+	wal_rome_mania_locked_mission = {
+		icon = mission_timed
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = wal_rome_mania_locked_mission_desc
+				has_country_flag = crn_you_cant_get_this
+			}
+		}
+		effect = {
+			custom_tooltip = wal_rome_mania_locked_mission_desc
+		}
+	}
+}
+
+ab_wal_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_country_flag = wal_unlocked_timed
+		NOT = {
+			has_country_flag = wal_failed_timed
+		}
+	}
+	wal_rome_mania = {
+		icon = gfx_wal_rome_mania
+		position = 1
+		trigger = {
+			mission_completed = wal_roman_empire
+			NOT = {
+				is_year = 1600
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						ruler_has_personality = augustus_personality
+					}
+				}
+				hidden_effect = {
+					set_variable = {
+						which = num_of_ruler_personalities
+						value = 0
+					}
+					get_number_of_ruler_personalities = {
+						var_name = num_of_ruler_personalities
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = num_of_ruler_personalities
+							value = 3
+						}
+					}
+					tooltip = {
+						add_ruler_personality = augustus_personality
+						custom_tooltip = augustus_personality_explained_tooltip
+						add_ruler_modifier = {
+							name = augustus_personality_tooltip
+							duration = -1
+						}
+					}
+					hidden_effect = {
+						country_event = {
+							id = AB_wallachia_events.40
+						}
+					}
+				}
+				else = {
+					add_ruler_personality = augustus_personality
+					custom_tooltip = augustus_personality_explained_tooltip
+					tooltip = {
+						add_ruler_modifier = {
+							name = augustus_personality_tooltip
+							duration = -1
+						}
+					}
+				}
+			}
+			set_country_flag = always_augustus
+			custom_tooltip = always_augustus_tooltip
+			custom_tooltip = AB_EMPTY
+			clean_add_country_modifier = {
+				name = wallachia_pax_romana
+				duration = -1
+			}
+		}
+	}
+}
+
+ab_wal_failed_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_country_flag = wal_failed_timed
+	}
+}
+
+ab_wal_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+	}
+	wal_unite_the_principalities = {
+		icon = gfx_wal_unite_the_principalities
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = bessarabia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bessarabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = yedisan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = zaporizhia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = crimea_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = azov_area
+			}
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = mil
+						amount = 1
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
+			country_event = {
+				id = AB_wallachia_events.9
+			}
+		}
+	}
+	wal_pontic_dominion = {
+		icon = gfx_wal_pontic_dominion
+		position = 3
+		required_missions = {
+			wal_unite_the_principalities
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yedisan_area
+				area = zaporizhia_area
+				area = crimea_area
+				area = azov_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			yedisan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			zaporizhia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			azov_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = astrakhan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_don_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = circassia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = dagestan_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_build_the_black_sea_fleet
+				duration = 10950
+			}
+			if = {
+				limit = {
+					has_government_mechanic = wallachian_terror_mechanic
+				}
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_pontic_dominion_impale_tooltip
+				first_limit = "has_country_flag = wallachia_impaled_golden_horde"
+				effect = "change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}"
+			}
+			set_country_flag = wallachian_terror_reduced_raze_penalty
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wallachian_terror_reduced_raze_penalty_tooltip"
+			}
+			custom_tooltip = AB_EMPTY
+			#TUH
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
+			}
+			add_mil_power = 50
+		}
+	}
+	wal_conquer_the_serbs = {
+		icon = defeat_the_serbs
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = serbia_area
+				area = rascia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rascia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = croatia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = east_adriatic_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = slavonia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_a_master_of_the_mint_tooltip
+				first_limit = "employed_advisor = {
+					type = master_of_mint
+				}"
+				first_effect = "1766 = {
+			add_province_modifier = {
+				name = wallachia_develop_kosovo_gold
+				duration = -1
+			}
+		}"
+			}
+			add_mil_power = 50
+			set_country_flag = dof_liberation_mechanic
+			custom_tooltip = dof_liberation_mechanic_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_liberated_orthodox_bretheren_from_heretics
+					duration = 7300
+				}
+			}
+			country_event = {
+				id = AB_wallachia_events.27
+			}
+		}
+	}
+	wal_conquer_illyria = {
+		icon = secure_the_sava
+		position = 5
+		required_missions = {
+			wal_conquer_the_serbs
+			wal_drive_out_the_bulgars
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bosnia_area
+				area = east_adriatic_coast_area
+				area = croatia_area
+				area = slavonia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bosnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			croatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = carinthia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = venetia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = apulia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = calabria_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_construct_the_adriatic_fleet
+				duration = 5475
+			}
+			custom_tooltip = wal_conquer_illyria_conversion_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_convert_illyria
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = bosnia_area
+							area = east_adriatic_coast_area
+							area = croatia_area
+							area = slavonia_area
+						}
+						religion = catholic
+					}
+					add_province_modifier = {
+						name = wallachia_convert_illyria
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = romanization_of_illyria_tooltip
+			set_country_flag = wal_romanianization_of_illyria
+		}
+	}
+	wal_conquer_venice = {
+		icon = mission_raid_on_venice
+		position = 6
+		required_missions = {
+			wal_conquer_illyria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = venetia_area
+				area = carinthia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			112 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = venetia_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				area = carinthia_area
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = po_valley_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lombardy_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = piedmont_area
+			}
+			custom_tooltip = tooltip_line_divider
+			112 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = lom_venice_control
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 3
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_venice_tooltip
+				first_limit = "has_impaled_venice_ruler = yes"
+				first_effect = "change_terror = {
+				value = 5
+				scaled_with_gain_modifier = yes
+			}
+			add_mercantilism = 3"
+			}
+			custom_tooltip = AB_EMPTY
+			country_event = {
+				id = AB_wallachia_events.31
+			}
+		}
+	}
+	wal_conquer_north_italy = {
+		icon = kingdom_of_lombardy
+		position = 7
+		required_missions = {
+			wal_conquer_venice
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = po_valley_area
+				area = lombardy_area
+				area = piedmont_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = liguria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = emilia_romagna_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tuscany_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = corsica_sardinia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_milanese_armaments
+				duration = -1
+			}
+			#CDE blocks tooltip for some reason...
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_the_lombard_ruler_tooltip
+				first_limit = "has_impaled_lombardy_ruler = yes"
+				first_effect = ""
+			}
+			custom_tooltip = wal_conquer_north_italy_impale_bonus_tooltip
+			#So we have to do it like this...
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_broke_the_iron_crown
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_impaled_lombardy_ruler = yes
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = po_valley_area
+								area = lombardy_area
+								area = piedmont_area
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_province_modifier = {
+							name = wallachia_broke_the_iron_crown
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = ghica_lombard_banking
+			custom_tooltip = ghica_lombard_banking_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = ghica_lombard_banking
+					duration = -1
+				}
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			add_mil_power = 100
+		}
+	}
+	wal_break_the_republics = {
+		icon = conquer_tuscany
+		position = 8
+		required_missions = {
+			wal_conquer_north_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+				area = liguria_area
+				area = corsica_sardinia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			emilia_romagna_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = lazio_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_italy_area
+			}
+			custom_tooltip = tooltip_line_divider
+			101 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = genoa_trade_node_power_title
+				}
+			}
+			add_mercantilism = 5
+			custom_tooltip = PER_TRADER_SCALING
+			set_country_flag = ab_trader_advisor_gives_trade_steering
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = artist
+				skill = 2
+				cost_multiplier = 0.5
+				culture = tuscan
+				religion = catholic
+				location = 116
+			}
+		}
+	}
+	wal_rome = {
+		icon = gfx_wal_rome
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = lazio_area
+				area = central_italy_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				mission_completed = wal_break_the_republics
+				mission_completed = wal_conquer_sicily
+			}
+			if = {
+				limit = {
+					OR = {
+						mission_completed = wal_break_the_republics
+						mission_completed = wal_conquer_sicily
+					}
+				}
+				lazio_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				central_italy_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = italy_region
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = umbrian
+				location = 118
+				min_age = 40
+			}
+			add_patriarch_authority = 0.2
+			set_country_flag = patriarch_of_rome
+			custom_tooltip = patriarch_of_rome_tooltip
+			custom_tooltip = AB_EMPTY
+			118 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_rome
+					duration = -1
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_the_pope_tooltip
+				first_limit = "has_impaled_pope = yes"
+				first_effect = "add_country_modifier = {
+				name = wallachia_impaled_pope_mission_bonus
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = basarab_rome_bonus_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = basarab_augustan_legacy
+					duration = -1
+				}
+			}
+			set_country_flag = basarab_augustan_bonus"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			country_event = {
+				id = AB_wallachia_events.35
+			}
+		}
+	}
+	wal_italy = {
+		icon = mission_rule_italy
+		position = 10
+		required_missions = {
+			wal_rome
+		}
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = switzerland_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = romandie_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = provence_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = savoy_dauphine_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = languedoc_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = massif_central_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = pyrenees_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = guyenne_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_italia_mare
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_confront_franks
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 40
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_moved_our_capital_to_rome_in_event_tooltip
+				first_limit = "has_country_flag = wal_moved_capital_to_rome"
+				first_effect = "custom_tooltip = wal_romanianization_of_italy_tooltip
+			set_country_flag = wal_romanianization_of_italy"
+			}
+		}
+	}
+	wal_southern_france = {
+		icon = mission_invade_occitania
+		position = 11
+		required_missions = {
+			wal_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				area = savoy_dauphine_area
+				area = languedoc_area
+				area = massif_central_area
+				area = pyrenees_area
+				area = guyenne_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = provence_area
+					area = savoy_dauphine_area
+					area = languedoc_area
+					area = massif_central_area
+					area = pyrenees_area
+					area = guyenne_area
+				}
+				value = 22
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = france_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = iberia_region
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_consolidate_french_gains
+				duration = 7300
+			}
+			add_adm_power = 100
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_romanianization_of_southern_french
+			custom_tooltip = wal_romanianization_of_southern_french_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = allow_aqa_pu_decision
+				custom_tooltip = allow_aqt_pu_decision_tooltip"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_france = {
+		icon = centralize_france
+		position = 12
+		required_missions = {
+			wal_southern_france
+		}
+		provinces_to_highlight = {
+			region = france_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 63
+				region = france_region
+			}
+		}
+		effect = {
+			85 = {
+				add_permanent_claim = ROOT
+			}
+			96 = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_rhineland_area
+			}
+			custom_tooltip = wal_perm_claim_belgium_tooltip
+			hidden_effect = {
+				add_permanent_claim_multi_provinces = {
+					target = wallonia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = flanders_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = brabant_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = north_brabant_area
+				}
+			}
+			custom_tooltip = wal_perm_claim_england_tooltip
+			hidden_effect = {
+				add_permanent_claim_multi_provinces = {
+					target = east_midlands_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = west_midlands_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = cornwall_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = yorkshire_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = wessex_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = home_counties_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = east_anglia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = wales_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = scottish_marches_area
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			change_ruler_stat = {
+				type = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				type = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_conquest_of_gaul
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_romanianization_of_france
+			custom_tooltip = wal_romanianization_of_france_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_french_ruler_tooltip
+				first_limit = "OR = {
+						has_impaled_francia_ruler = yes
+						has_impaled_france_ruler = yes
+					}"
+				first_effect = "clean_add_country_modifier = {
+				name = wallachia_i_am_the_state
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "simple_unlock_issue = {
+				issue = wine_parliament_issue
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_england = {
+		icon = mission_londres
+		position = 13
+		required_missions = {
+			wal_france
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = wales_area
+				area = scottish_marches_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 27
+				OR = {
+					area = east_midlands_area
+					area = west_midlands_area
+					area = yorkshire_area
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
+					area = wales_area
+					area = scottish_marches_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = british_isles_region
+			}
+			custom_tooltip = claims_on_british_overseas_territories_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_or_was_tag = {
+							tag = ENG
+						}
+					}
+					save_event_target_as = england_tag
+				}
+				every_province = {
+					limit = {
+						NOT = {
+							continent = europe
+						}
+						OR = {
+							owned_by = event_target:england_tag
+							owner = {
+								has_colonial_parent = event_target:england_tag
+							}
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			add_navy_tradition = 20
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = english
+					}
+				}
+				add_accepted_culture_or_dip_power_stated = {
+					culture = english
+					dip_reward = yes
+					free = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_province = {
+						culture = english_new
+					}
+				}
+				add_accepted_culture_or_dip_power_stated = {
+					culture = english_new
+					dip_reward = yes
+					free = yes
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_integrating_the_english
+				duration = -1
+			}
+			custom_tooltip = every_owned_english_province_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_integrating_the_english_province
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = english
+							culture = english_new
+						}
+					}
+					add_province_modifier = {
+						name = wallachia_integrating_the_english_province
+						duration = -1
+					}
+				}
+				set_country_flag = integrating_the_english_flag
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_largest_navy_in_europe_tooltip
+				first_limit = "NOT = {
+			any_country = {
+				capital_scope = {
+					continent = europe
+				}
+				navy_size = ROOT
+			}
+		}"
+				first_effect = "add_country_modifier = {
+				name = thalassocracy
+				duration = -1
+			}
+			unlock_government_reform = {
+				government_reform = thalassocracy_reform
+			}
+			change_government_reform_progress = 50"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_english_ruler_tooltip
+				first_limit = "has_impaled_england_ruler = yes"
+				first_effect = "clean_add_country_modifier = {
+				name = wallachia_destroyed_the_wooden_wall
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "halves_parliament_bribe_costs = yes
+			simple_unlock_issue = {
+				issue = tuh_the_tea_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_witchcraft_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_black_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_act_of_representation
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_sugar_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_gold_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_spice_act
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_seat_of_the_metropolitan = {
+		icon = gfx_wal_seat_of_the_metropolitan
+		position = 15
+		provinces_to_highlight = {
+			province_id = 161
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					num_of_times_improved = 3
+				}
+				NOT = {
+					has_tax_building_trigger = yes
+				}
+				has_state_patriach = no
+			}
+		}
+		trigger = {
+			owns_core_province = 161
+			161 = {
+				has_state_patriach = yes
+				has_tax_building_trigger = yes
+				num_of_times_improved = 3
+			}
+		}
+		effect = {
+			161 = {
+				add_province_modifier = {
+					name = wallachia_tirgoviste_metropolitan
+					duration = 5475
+				}
+			}
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+	}
+	wal_romanian_churches = {
+		icon = gfx_wal_romanian_churches
+		position = 16
+		required_missions = {
+			wal_seat_of_the_metropolitan
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+			OR = {
+				has_tax_building_trigger = no
+				NOT = {
+					num_of_times_improved = 6
+				}
+			}
+		}
+		trigger = {
+			161 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+				num_of_times_improved = 6
+			}
+			calc_true_if = {
+				amount = 6
+				all_owned_province = {
+					culture_group = romanian_culture_group
+					has_tax_building_trigger = yes
+					num_of_times_improved = 6
+				}
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
+			}
+			161 = {
+				upgrade_tax_building = yes
+				add_province_modifier = {
+					name = wallachia_tirgoviste_metropolitan_cathedral
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_romanian_churches_province_reward_tooltip
+			tooltip = {
+				add_patriarch_authority = 0.01
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_faith
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = {
+							province_id = 161
+						}
+						culture_group = romanian_culture_group
+						has_tax_building_trigger = yes
+						num_of_times_improved = 6
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_faith
+						duration = -1
+					}
+					owner = {
+						add_patriarch_authority = 0.01
+					}
+				}
+			}
+			set_country_flag = buffed_development_of_temples
+			custom_tooltip = buffed_development_of_temples_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_modifier = estate_church_development_of_temples_mod
+					}
+					remove_province_modifier = estate_church_development_of_temples_mod
+					add_province_modifier = {
+						name = buffed_estate_church_development_of_temples_mod
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	wal_vlach_culture = {
+		icon = gfx_wal_vlach_culture
+		position = 19
+		required_missions = {
+			wal_curtea_domneasca
+		}
+		trigger = {
+			prestige = 80
+			num_of_owned_provinces_with = {
+				value = 50
+				culture_group = romanian_culture_group
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_vlach_supremacy
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+		}
+	}
+	wal_civilize_the_steppe = {
+		icon = mission_lit_harness_steppes
+		position = 21
+		required_missions = {
+			wal_cossacks
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_terrain = steppe
+			OR = {
+				NOT = {
+					religion = ROOT
+				}
+				NOT = {
+					development = 15
+				}
+				NOT = {
+					is_state_core = THIS
+				}
+				has_tax_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_terrain = steppe
+				religion = ROOT
+				development = 15
+				is_state_core = THIS
+				has_tax_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 20
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_thriving_steppe
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_terrain = steppe
+						region = ROOT
+						development = 15
+						is_state_core = THIS
+						has_tax_building_trigger = yes
+						has_road_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_thriving_steppe
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = hun_upgrade_cossack_priv
+			custom_tooltip = hun_upgrade_cossack_priv_tt
+			unlock_estate_privilege = {
+				estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+			}
+		}
+	}
+}
+
+ab_wal_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+	}
+	wal_call_to_arms = {
+		icon = mission_landsknecht_soldier
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				OR = {
+					army_size_percentage = 0.8
+					manpower_percentage = 1
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_on_all_neighboring_provinces = yes
+			add_permanent_claim_multi_provinces = {
+				target = moldavia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bessarabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = southern_transylvania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = transylvania_area
+			}
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				define_ruler_to_general = {
+					fire = 3
+					shock = 4
+					manuever = 3
+					siege = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				create_general = {
+					tradition = 40
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_securing_the_homeland
+				duration = 5475
+			}
+		}
+	}
+	wal_strike_the_bulgars = {
+		icon = push_on_to_bulgaria
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4706
+				province_id = 159
+				province_id = 4704
+				province_id = 150
+				province_id = 2746
+				province_id = 4957
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4706 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					province_id = 159
+					province_id = 4704
+					province_id = 150
+					province_id = 2746
+					province_id = 4957
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = thrace_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bulgaria_area
+			}
+			add_core = 4706
+			custom_tooltip = tooltip_line_divider
+			4706 = {
+				add_nationalism = -30
+				add_unrest = -20
+			}
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = dip
+						amount = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_rival = BUL
+				}
+				custom_tooltip = wal_strike_the_bulgars_bul_rival_tooltip_yes
+				add_splendor = 100
+			}
+			else = {
+				custom_tooltip = wal_strike_the_bulgars_bul_rival_tooltip_no
+				tooltip = {
+					add_splendor = 100
+				}
+			}
+			if = {
+				limit = {
+					has_impaled_bulgaria_ruler = yes
+				}
+				custom_tooltip = wal_strike_the_bulgars_impale_tooltip_yes
+				change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}
+			}
+			else = {
+				custom_tooltip = wal_strike_the_bulgars_impale_tooltip_no
+				tooltip = {
+					change_terror = {
+						value = 5
+						scaled_with_gain_modifier = yes
+					}
+				}
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_adm_power = 50
+		}
+	}
+	wal_unite_the_vlachs = {
+		icon = gfx_wal_unite_the_vlachs
+		position = 3
+		required_missions = {
+			wal_liberate_transylvania
+			wal_strike_the_bulgars
+			wal_unite_the_principalities
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
+			}
+			NOT = {
+				AND = {
+					is_core = ROOT
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			transylvania_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			southern_transylvania_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			moldavia_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			bessarabia_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			4706 = {
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = macedonia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = northern_greece_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = morea_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = albania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = rascia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = serbia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bosnia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = adm
+						amount = 1
+					}
+				}
+			}
+			add_ruler_modifier = {
+				name = wallachia_unifier_of_the_vlachs
+				duration = -1
+			}
+			free_up_bad_ruler_personality_if_full = yes
+			add_ruler_personality = conqueror_personality
+			add_power_projection = {
+				type = wallachia_unified_vlachs_pp
+				amount = 15
+			}
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			custom_tooltip = wal_unite_the_vlachs_autonomy_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = romanian_culture_group
+					}
+					add_local_autonomy = -10
+					add_nationalism = -5
+				}
+			}
+			custom_tooltip = wal_unite_the_vlachs_dacia_tooltip
+			hidden_effect = {
+				set_country_flag = early_form_dacia
+			}
+		}
+	}
+	wal_drive_out_the_bulgars = {
+		icon = gfx_wal_drive_out_the_bulgars
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			owned_by = BUL
+			OR = {
+				region = balkan_region
+				region = carpathia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				NOT = {
+					exists = BUL
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_drive_out_the_bulgars_trigger_tooltip
+					NOT = {
+						BUL = {
+							any_owned_province = {
+								OR = {
+									region = balkan_region
+									region = carpathia_region
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_power_projection = {
+				type = drove_out_the_bulgars_pp
+				amount = 20
+			}
+			country_event = {
+				id = AB_wallachia_events.22
+			}
+		}
+	}
+	wal_balkan_hegemony = {
+		icon = mission_balkan_conquest
+		position = 6
+		required_missions = {
+			wal_conquer_illyria
+			wal_drive_out_the_bulgars
+			wal_conquer_greece
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip
+				first_limit = "has_vlad_2nd_or_3rd_ruling = yes"
+				first_effect = "change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}"
+			}
+			custom_tooltip = AB_EMPTY
+			free_up_bad_ruler_personality_if_full = yes
+			add_ruler_personality = legendary_conqueror_personality
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_faster_balkan_romanianization
+			custom_tooltip = wal_faster_balkan_romanianization_tooltip
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_balkan_hegemon
+				duration = 36500
+			}
+			country_event = {
+				id = AB_wallachia_events.29
+			}
+		}
+	}
+	wal_dismantle_hre = {
+		icon = mission_dismantle_hre
+		position = 7
+		required_missions = {
+			wal_balkan_hegemony
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = hre_was_dismantled_trigger_tooltip
+				NOT = {
+					hre_size = 1
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = inner_austria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = austria_proper_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tirol_area
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = wal_dismantle_hre_ae_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = europe
+						}
+					}
+					add_aggressive_expansion = {
+						who = PREV
+						value = -15
+						apply_calc = no
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_dismantled_the_hre_the_old_fashioned_way_tooltip
+				first_limit = "has_country_flag = dismantled_hre_old_fashioned_way"
+				first_effect = "add_country_modifier = {
+				name = wallachia_true_empire
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_hre_dismantled_because_of_schism_tooltip
+				first_limit = "has_global_flag = imperial_schism_hre_dismantled"
+				first_effect = "add_power_projection = {
+				type = wallachia_caused_hre_collapse_pp
+				amount = 10
+			}
+			custom_tooltip = HAB_BUFF_DIPLOMAT_ADVISOR
+			set_country_flag = hab_diplomat_advisor_buff_flag
+			add_country_modifier = {
+				name = wallachia_true_empire
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_emperor_and_defeated_the_coalition_tooltip
+				first_limit = "has_defeated_imperial_retribution_coalition = yes"
+				first_effect = "custom_tooltip  = wallachian_terror_ae_bonus_tooltip
+			set_country_flag = wallachian_terror_ae_bonus
+			custom_tooltip = wal_increased_coalition_threshold_tooltip
+			set_country_flag = wal_increased_coalition_threshold"
+			}
+		}
+	}
+	wal_austria = {
+		icon = prosper_in_piedmont
+		position = 8
+		required_missions = {
+			wal_dismantle_hre
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+				area = tirol_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = inner_austria_area
+					area = austria_proper_area
+					area = tirol_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = east_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_swabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_swabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_rhineland_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = alsace_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = palatinate_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_army_tradition = 20
+			134 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = dominate_danubian_trade_key
+				}
+			}
+			add_country_modifier = {
+				name = "boh_borders"
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = unlock_schonbrunn_bonus_tooltip
+				set_country_flag = unlock_schonbrunn_bonus"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_south_germany = {
+		icon = mission_rhine
+		position = 9
+		required_missions = {
+			wal_austria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_bavaria_area
+				area = lower_bavaria_area
+				area = upper_bavaria_area
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = upper_rhineland_area
+				area = palatinate_area
+				area = alsace_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 23
+				OR = {
+					area = east_bavaria_area
+					area = lower_bavaria_area
+					area = upper_bavaria_area
+					area = lower_swabia_area
+					area = upper_swabia_area
+					area = upper_rhineland_area
+					area = palatinate_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = north_german_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = south_german_region
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_germanic_legions
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_printing_press_enabled_and_dont_have_tooltip
+				first_limit = "NOT = {
+				has_institution = printing_press
+				}"
+				first_effect = "custom_tooltip = printing_press_in_capital_area_tooltip
+				hidden_effect = {
+					random_owned_area = {
+						limit = {
+							is_capital = yes
+						}
+						add_institution_embracement = {
+							which = printing_press
+							value = 100
+						}
+					}
+				}"
+				second_custom_tooltip = if_already_embraced_printing_press_tooltip
+				second_limit = "has_institution = printing_press"
+				second_effect = "add_country_modifier = {
+				name = wallachia_german_printing_press
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = unlock_integrating_german_nobility_privilege_tooltip
+			set_country_flag = unlock_integrating_german_nobility_privilege"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			custom_tooltip = AB_EMPTY
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	wal_pentarchy = {
+		icon = mission_pope
+		position = 10
+		required_missions = {
+			wal_rome
+			wal_conquer_egypt
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 118
+				province_id = 151
+				province_id = 358
+				province_id = 379
+				province_id = 2313
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 118			#Rome
+			owns = 151			#Constantinople
+			owns = 358			#Alexandria
+			owns = 379			#Jerusalem
+			owns = 2313			#Antioch
+		}
+		effect = {
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 50
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = healing_the_schism
+				duration = -1
+			}
+			set_country_flag = wal_expansionist_zealotry_buff
+			custom_tooltip = wal_expansionist_zealotry_buff_tooltip
+		}
+	}
+	wal_iberia = {
+		icon = mission_reclaim_andalucia
+		position = 11
+		provinces_to_highlight = {
+			region = iberia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				mission_completed = wal_southern_france
+				mission_completed = wal_north_africa
+			}
+			if = {
+				limit = {
+					OR = {
+						mission_completed = wal_southern_france
+						mission_completed = wal_north_africa
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 60
+					region = iberia_region
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					mission_completed = wal_southern_france
+					mission_completed = wal_north_africa
+					NOT = {
+						mission_completed = wal_iberia
+					}
+				}
+				add_adm_power = 100
+			}
+			else_if = {
+				limit = {
+					mission_completed = wal_southern_france
+				}
+				add_permanent_claim_multi_provinces = {
+					target = maghreb_region
+				}
+			}
+			else_if = {
+				limit = {
+					mission_completed = wal_north_africa
+				}
+				add_permanent_claim_multi_provinces = {
+					target = france_region
+				}
+			}
+			else = {
+				custom_tooltip = wal_iberia_claims_tooltip
+			}
+			custom_tooltip = wal_iberia_claims_outside_europe_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owner = {
+							is_or_was_tag = {
+								tag = ADU
+							}
+						}
+						NOT = {
+							continent = europe
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim_multi_provinces = {
+				target = mexico_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = carribeans_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_america_region
+			}
+			custom_tooltip = tooltip_line_divider
+			set_country_flag = wal_romanianization_of_iberia
+			custom_tooltip = wal_romanianization_of_iberia_tooltip
+			custom_tooltip = AB_EMPTY
+			add_power_projection = {
+				type = wallachia_slayed_the_bane_of_christendom_pp
+				amount = 30
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_restored_hispania
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_andalusia_tooltip
+				first_limit = "has_impaled_andalusia_ruler = yes"
+				first_effect = "impaled_andalusia_mission_bonus_effect = yes"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_bibescu_colonists
+			custom_tooltip = tuh_bibescu_colonists_tooltip"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = wallachia_into_the_unknown
+					duration = -1
+				}
+			}
+		}
+	}
+	wal_roman_empire = {
+		icon = a_roman_empire
+		position = 14
+		required_missions = {
+			wal_iberia
+			wal_england
+			wal_lowlands
+		}
+		provinces_to_highlight = {
+			OR = {
+				eastern_roman_empire_province_cb_trigger = yes
+				western_roman_empire_province_cb_trigger = yes
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			#Only check triggers if mission isn't completed for performance.
+			mission_completed = wal_mare_nostrum
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_roman_empire
+					}
+				}
+				has_all_imperiul_roman_provinces = yes
+			}
+		}
+		effect = {
+			custom_tooltip = permanent_claim_on_europe_tooltip
+			hidden_effect = {
+				europe = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						is_wasteland = no
+						is_sea = no
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = AB_EMPTY
+			add_power_projection = {
+				type = wallachia_roman_empire_pp
+				amount = 30
+			}
+			custom_tooltip = PERMANENT_POWER_PROJECTION_TT
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_pax_romana
+				duration = 21900
+			}
+			hidden_effect = {
+				set_variable = {
+					which = num_of_ruler_personalities
+					value = 0
+				}
+				get_number_of_ruler_personalities = {
+					var_name = num_of_ruler_personalities
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = num_of_ruler_personalities
+						value = 3
+					}
+				}
+				tooltip = {
+					add_ruler_personality = augustus_personality
+					add_ruler_modifier = {
+						name = augustus_personality_tooltip
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = AB_wallachia_events.40
+					}
+				}
+			}
+			else = {
+				add_ruler_personality = augustus_personality
+				tooltip = {
+					add_ruler_modifier = {
+						name = augustus_personality_tooltip
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = allow_augustus_personality
+			custom_tooltip = allow_augustus_personality_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = allow_form_imperiul_roman
+			custom_tooltip = allow_form_imperiul_roman_tooltip
+		}
+	}
+	wal_renaissance = {
+		icon = gfx_wal_renaissance
+		position = 15
+		provinces_to_highlight = {
+			province_id = 161
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 20
+				}
+				renaissance = 75
+			}
+		}
+		trigger = {
+			161 = {
+				owned_by = ROOT
+				development = 20
+				renaissance = 70
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_renaissance
+				duration = 9125
+			}
+			custom_tooltip = church_prestige_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			161 = {
+				add_institution_embracement = {
+					which = renaissance
+					value = 30
+				}
+			}
+			change_innovativeness = 3
+		}
+	}
+	wal_scaunul_domnesc = {
+		icon = gfx_wal_scaunul_domnesc
+		position = 16
+		required_missions = {
+			wal_renaissance
+			wal_seat_of_the_metropolitan
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			province_id = 161
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_manpower_building_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			161 = {
+				owned_by = root
+				development = 30
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				province_has_center_of_trade_of_level = 2
+				num_of_times_expanded_infrastructure = 2
+			}
+		}
+		effect = {
+			161 = {
+				change_trade_goods = iron
+				custom_tooltip = bonus_development_on_dev_click_tirgoviste_tooltip
+				enable_bonus_development_on_dev_click_for_province = {
+					chance = 20
+				}
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					owner = {
+						add_treasury = 1000
+					}
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+				add_province_modifier = {
+					name = wallachia_nexus_of_the_danube
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = architect
+				skill = 2
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = brancoveanu_election_bonus
+								custom_tooltip = brancoveanu_election_bonus_tooltip
+								tooltip = {
+									add_ruler_modifier = {
+										name = tuh_brancoveanu_patronage
+										duration = -1
+									}
+									custom_tooltip = tuh_brancoveanu_patronage_tooltip
+								}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_heart_of_orthodox_world = {
+		icon = gfx_wal_heart_of_orthodox_world
+		position = 17
+		required_missions = {
+			wal_romanian_churches
+			wal_scaunul_domnesc
+		}
+		provinces_to_highlight = {
+			religion = orthodox
+			higher_development_than = 161
+		}
+		trigger = {
+			161 = {
+				development = 45
+				num_free_building_slots = 0
+				num_of_times_expanded_infrastructure = 3
+				has_building = cathedral
+				has_great_project = {
+					type = tirgoviste_princely_court
+					tier = 1
+				}
+				is_most_developed_orthodox_province = yes
+			}
+			has_orthodox_religious_icon_trigger = yes
+			patriarch_authority = 0.5
+		}
+		effect = {
+			161 = {
+				if = {
+					limit = {
+						has_great_project = {
+							type = tirgoviste_princely_court
+							tier = 3
+						}
+					}
+					owner = {
+						add_treasury = 3000
+					}
+				}
+				else = {
+					add_great_project_tier = {
+						type = tirgoviste_princely_court
+						tier = 1
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_dacia
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = patriarch
+				skill = 2
+				cost_multiplier = 0.25
+				location = 161
+			}
+		}
+	}
+	wal_salt_trade = {
+		icon = gfx_wal_salt_trade
+		position = 18
+		required_missions = {
+			wal_mare_dacia
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = salt
+			OR = {
+				NOT = {
+					base_production = 10
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					has_building = wharf
+				}
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			trading_part = {
+				trade_goods = salt
+				value = 0.1
+			}
+			natural_scientist = 3
+			num_of_owned_provinces_with = {
+				value = 10
+				trade_goods = salt
+				base_production = 10
+				num_of_times_expanded_infrastructure = 1
+				has_building = wharf
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_imperial_logistics_system
+				duration = -1
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = upgrade_production_building_generic_tooltip
+				add_province_modifier = {
+					name = wallachia_white_gold_mine
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = salt
+						base_production = 10
+						num_of_times_expanded_infrastructure = 1
+						has_building = wharf
+						has_production_building_trigger = yes
+						has_road_building_trigger = yes
+					}
+					upgrade_production_building = yes
+					add_province_modifier = {
+						name = wallachia_white_gold_mine
+						duration = -1
+					}
+				}
+			}
+			change_price = {
+				trade_goods = salt
+				key = dacian_salt_cartel_key
+				value = 0.25
+				duration = -1
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = can_discover_salt_mines
+			custom_tooltip = can_discover_salt_mines_tooltip
+		}
+	}
+	wal_cossacks = {
+		icon = mission_recruit_the_cossacks
+		position = 20
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				has_estate = estate_cossacks
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 60
+				}
+				OR = {
+					num_of_estate_agendas_completed = {
+						estate = estate_cossacks
+						value = 3
+					}
+					custom_trigger_tooltip = {
+						tooltip = wal_sided_with_cossacks_in_event_tooltip
+						has_country_flag = wal_empowered_cossacks
+					}
+				}
+				num_of_estate_privileges = {
+					estate = estate_cossacks
+					value = 3
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = add_25_mil_per_privilege_cossacks
+			hidden_effect = {
+				for_privilege_given_to_estate = {
+					estate = cossacks
+					max_privileges = 6
+					effect = "add_mil_power = 25"
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_integrating_the_cossacks
+				duration = -1
+			}
+			define_advisor = {
+				type = dragoon
+				skill = 1
+				culture = ruthenian
+				religion = orthodox
+				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_integrate_cossacks = {
+		icon = mission_raid_hosts
+		position = 22
+		required_missions = {
+			wal_civilize_the_steppe
+			wal_cavalry
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_cossacks = 50
+				num_of_estate_agendas_completed = {
+					estate = estate_cossacks
+					value = 6
+				}
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 80
+				}
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 20
+			}
+			remove_country_modifier = wallachia_integrating_the_cossacks
+			add_country_modifier = {
+				name = wallachia_integrated_cossacks
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_buffed_cossacks
+				duration = -1
+			}
+			add_accepted_culture_or_dip_power_stated = {
+				culture = ruthenian
+				free = yes
+				dip_reward = yes
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = cheaper_brutalize_the_enemy_tooltip
+								add_country_modifier = {
+									name = cossack_raiding_tactics
+									duration = -1
+								}
+								set_country_flag = cheaper_brutalize_the_enemy"
+			}
+		}
+	}
+}
+
+ab_wal_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+	}
+	wal_liberate_transylvania = {
+		icon = gfx_wal_liberate_transylvania
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = transylvania_area
+					area = southern_transylvania_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = alfold_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = centralhungary_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = eastslovakia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = adm
+						amount = 1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					has_impaled_magyars_ruler = yes
+				}
+				custom_tooltip = wal_liberate_transylvania_impale_tooltip_yes
+				change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}
+			}
+			else = {
+				custom_tooltip = wal_liberate_transylvania_impale_tooltip_no
+				tooltip = {
+					change_terror = {
+						value = 5
+						scaled_with_gain_modifier = yes
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 15
+			}
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = transylvanian
+			}
+			custom_tooltip = wal_liberate_transylvania_heathen_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_establish_mountain_monasteries
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = wal_liberate_transylvania_bretheren_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_liberated_bretheren
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	wal_crush_the_magyars = {
+		icon = gfx_wal_crush_the_magyars
+		position = 3
+		required_missions = {
+			wal_liberate_transylvania
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alfold_area
+				area = centralhungary_area
+				area = eastslovakia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			centralhungary_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastslovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = transdanubia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = slovakia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = moravia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			if = {
+				limit = {
+					exists = MGY
+				}
+				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = mil
+						amount = 1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_yes
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
+			custom_tooltip = wal_transylvania_romanianization_tooltip
+			custom_tooltip = wal_hungary_romanianization_tooltip
+			set_country_flag = wal_romanianization_of_hungary
+		}
+	}
+	wal_worlds_desire = {
+		icon = byz_city_of_worlds_desire
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = hudavendigar_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = aydin_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = aegean_archipelago_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = ionian_islands_area
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_impaled_byz_tooltip
+				first_limit = "has_impaled_byzantium_ruler = yes"
+				first_effect = "change_terror = {
+				value = 5
+				scaled_with_gain_modifier = yes
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			set_government_rank = 3
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			add_legitimacy_or_mil_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 1
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Constantinopol"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = patriarch_constantinople_buff
+			set_country_flag = patriarch_of_constantinople
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			151 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_constantinople
+					duration = -1
+				}
+			}
+			country_event = {
+				id = AB_wallachia_events.21
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_rome_mania_is_before_1600_tooltip
+				first_limit = "NOT = {
+				is_year = 1600
+			}"
+				first_effect = "custom_tooltip = wal_unlocked_rome_mania_tooltip
+			set_country_flag = wal_unlocked_timed
+			hidden_effect = {
+				swap_non_generic_missions = yes
+			}"
+			}
+		}
+	}
+	wal_conquer_greece = {
+		icon = mission_parthenon
+		position = 5
+		required_missions = {
+			wal_worlds_desire
+			wal_drive_out_the_bulgars
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = macedonia_area
+				area = northern_greece_area
+				area = morea_area
+				area = ionian_islands_area
+				area = aegean_archipelago_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ionian_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				area = aegean_archipelago_area
+				value = 4
+			}
+		}
+		effect = {
+			set_country_flag = artists_help_with_great_projects
+			custom_tooltip = artists_help_with_great_projects_tooltip
+			define_advisor = {
+				type = philosopher
+				skill = 3
+				cost_multiplier = 0.33333
+				culture = greek
+				religion = ROOT
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = mavrocordatos_ruler_tooltip
+				first_limit = "dynasty = Mavrocordatos"
+				first_effect = "tooltip = {
+				add_unrest = -5
+				add_nationalism = -5
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = greek
+					}
+					add_unrest = -5
+					add_nationalism = -5
+				}
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = mavrocordatos_candidate_buff
+			custom_tooltip = mavrocordatos_candidate_buff_tooltip"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power_stated = {
+				culture = greek
+				dip_reward = yes
+				free = yes
+			}
+		}
+	}
+	wal_secure_the_straits = {
+		icon = mission_the_bospborus
+		position = 5
+		required_missions = {
+			wal_conquer_greece
+			wal_conquer_nicaea
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 151
+						province_id = 317
+						province_id = 148
+						province_id = 318
+						province_id = 146
+						province_id = 163
+					}
+					has_trade_building_trigger = no
+					NOT = {
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+				}
+				AND = {
+					area = aegean_archipelago_area
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+		trigger = {
+			#Only check triggers if mission isn't completed for performance.
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_secure_the_straits
+					}
+				}
+				aegean_archipelago_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				151 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				317 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				148 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				318 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				146 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				163 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			custom_tooltip = wal_secure_the_straits_province_bonus_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_imperial_maratime_hub
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hudavendigar_area
+							area = aydin_area
+							area = thrace_area
+							area = macedonia_area
+							area = morea_area
+							area = northern_greece_area
+							area = aegean_archipelago_area
+						}
+						has_trade_building_trigger = yes
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = wallachia_imperial_maratime_hub
+						duration = -1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_ionian_company_investments
+				duration = 14600
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = movilesti_election_bonus
+				custom_tooltip = wal_secure_the_straits_movilesti_bonus_tooltip
+			tooltip = {
+				define_advisor = {
+					type = trader
+					skill = 2
+					cost_multiplier = 0.35
+					age = 20
+					culture = ROOT
+					religion = ROOT
+				}
+				add_mercantilism = 5
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			set_country_flag = movilesti_election_bonus
+		}
+	}
+	wal_conquer_antioch = {
+		icon = gfx_wal_conquer_antioch
+		position = 7
+		required_missions = {
+			wal_conquer_anatolia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				area = syrian_desert_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			2313 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syrian_desert_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = palestine_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = trans_jordan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = al_jazira_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = iraq_arabi_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = basra_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 2
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				location = 2313
+				age = 40
+				name = "The Patriarch of Antiohia"
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = patriarch_of_antioch
+			custom_tooltip = patriarch_of_antioch_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			2313 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_antiohia
+					duration = -1
+				}
+				rename_capital = "Antiohia"
+			}
+		}
+	}
+	wal_conquer_judea = {
+		icon = convert_the_holy_lands
+		position = 8
+		required_missions = {
+			wal_conquer_antioch
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = palestine_area
+				area = trans_jordan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			379 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			trans_jordan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = egypt_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = saharan_oases
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_suryah_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Ierusalim"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			set_country_flag = patriarch_of_jersualem
+			custom_tooltip = patriarch_of_jersualem_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			379 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_ierusalim
+					duration = -1
+				}
+			}
+		}
+	}
+	wal_conquer_egypt = {
+		icon = gfx_wal_conquer_egypt
+		position = 9
+		required_missions = {
+			wal_conquer_judea
+		}
+		provinces_to_highlight = {
+			region = egypt_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 28
+				region = egypt_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = tunisia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = djerba_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = north_saharan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tripolitania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = fezzan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = kabylia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = ouled_nail_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
+			}
+			add_patriarch_authority = 0.1
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_granaries_of_egypt
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_impaled_naz_abs_or_egy_tooltip
+				first_limit = "OR = {
+						has_impaled_egypt_ruler = yes
+						has_impaled_nizzarids_ruler = yes
+						has_impaled_abbasids_ruler = yes
+					}"
+				first_effect = "361 = {
+				add_province_modifier = {
+					name = wallachia_impaled_pyramids_bonus
+					duration = -1
+				}
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = racovita_mamluks_tooltip
+			tooltip = {
+				custom_tooltip = mamluk_cavalry_bonus_tooltip
+				add_ruler_modifier = {
+					name = racovita_mamluk_contacts
+					duration = -1
+				}		
+			}
+			set_country_flag = racovita_mamluks_bonus"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			country_event = {
+				id = AB_wallachia_events.34
+			}
+		}
+	}
+	wal_tunis = {
+		icon = mission_conquer_tunisia
+		position = 10
+		required_missions = {
+			wal_conquer_egypt
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = north_saharan_area
+				area = tripolitania_area
+				area = fezzan_area
+				area = kabylia_area
+				area = ouled_nail_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			djerba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_saharan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fezzan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ouled_nail_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = hautes_plaines_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = barbary_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = algiers_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tafilalt_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = marrekesh_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = northern_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = western_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = southern_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = sus_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = hautes_plaines_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_yearly_sailors = 1
+			add_navy_tradition = 15
+			define_admiral = {
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 4
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = 10950
+			}
+		}
+	}
+	wal_north_africa = {
+		icon = mission_moroccan_ports
+		position = 11
+		required_missions = {
+			wal_tunis
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hautes_plaines_area
+				area = barbary_coast_area
+				area = algiers_area
+				area = tafilalt_area
+				area = marrekesh_area
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = sus_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 28
+				OR = {
+					area = hautes_plaines_area
+					area = barbary_coast_area
+					area = algiers_area
+					area = tafilalt_area
+					area = marrekesh_area
+					area = northern_morocco_area
+					area = western_morocco_area
+					area = southern_morocco_area
+					area = sus_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = iberia_region
+			}
+			add_country_modifier = {
+				name = wallachia_into_the_unknown
+				duration = 7300
+			}
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 3
+			}
+			custom_tooltip = AB_EMPTY
+			1127 = {
+				add_siberian_construction = 0
+				hidden_effect = {
+					change_trade_goods = gold
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_the_pax_navalis_modifier
+				first_limit = "has_country_modifier = wallachia_pax_navalis"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_pax_navalis
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = -1
+			}"
+			}
+		}
+	}
+	wal_mare_nostrum = {
+		icon = mission_mare_nostrum
+		position = 12
+		required_missions = {
+			wal_southern_france
+			wal_iberia
+			wal_north_africa
+			wal_coast
+		}
+		provinces_to_highlight = {
+			is_mare_nostrum_province = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			#Only check triggers if mission isn't completed for performance.
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_mare_nostrum
+					}
+				}
+				owns_all_mare_nostrum_provinces = yes
+			}
+		}
+		effect = {
+			add_navy_tradition = 25
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_mare_nostrum
+				duration = -1
+			}
+			custom_tooltip = wallachia_mare_nostrum_trade_post_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_mare_nostrum_trade_post
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_mare_nostrum_province = yes
+					province_has_center_of_trade_of_level = 1
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = wallachia_mare_nostrum_trade_post
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = NED_HALVE_THE_NAVAL_HEGEMONY_REQUIREMENTS
+			set_country_flag = jap_halve_naval_hegemony_requirements
+		}
+	}
+	wal_naval_infrastructure = {
+		icon = mission_aragonese_navy
+		position = 13
+		required_missions = {
+			wal_fleet
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			has_dock_building_trigger = no
+			has_shipyard_building_trigger = no
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_naval_infrastructure
+				duration = 14600
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_productive_port
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_productive_port
+						duration = -1
+					}
+				}
+			}
+			add_navy_tradition = 10
+		}
+	}
+	wal_develop_wallachia = {
+		icon = gfx_wal_develop_wallachia
+		position = 15
+		provinces_to_highlight = {
+			area = wallachia_area
+			OR = {
+				NOT = {
+					num_of_times_improved = 5
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				devastation = 1
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+				num_of_times_improved = 5
+				NOT = {
+					devastation = 1
+				}
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			wallachia_area = {
+				add_prosperity = 25
+				add_province_modifier = {
+					name = wallachia_prospering
+					duration = 9125
+				}
+			}
+			define_advisor = {
+				type = planner
+				skill = 1
+				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_moldavian_wineries = {
+		icon = gfx_wal_moldavian_wineries
+		position = 16
+		required_missions = {
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4529
+				province_id = 4530
+				province_id = 4962
+				province_id = 2405
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					base_production = 8
+				}
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+			}
+		}
+		trigger = {
+			4529 = {
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			4530 = {
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			4962 = {
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			2405 = {
+				owned_by = ROOT
+				base_production = 8
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_finest_wine_in_the_east
+				duration = -1
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_moldavian_winery
+					duration = -1
+				}
+				custom_tooltip = upgrade_workshop_if_has_farm_estate_tooltip
+			}
+			hidden_effect = {
+				4529 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				4530 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				4962 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				2405 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_buffed_wine_monopoly
+			custom_tooltip = wal_buffed_wine_monopoly_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_moldavian_wine_monopolies
+					duration = 4380
+				}
+			}
+		}
+	}
+	wal_mare_dacia = {
+		icon = gfx_wal_mare_dacia
+		position = 17
+		required_missions = {
+			wal_moldavian_wineries
+			wal_mountain_infrastructure
+			wal_scaunul_domnesc
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 15
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			bessarabia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			4706 = {
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_adm_power = 5
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_realm
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = wallachia_area
+							area = transylvania_area
+							area = southern_transylvania_area
+							area = moldavia_area
+							area = bessarabia_area
+							province_id = 4706
+						}
+						development = 15
+						num_of_times_expanded_infrastructure = 1
+						num_of_buildings_in_province = 2
+						has_road_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_realm
+						duration = -1
+					}
+					owner = {
+						add_adm_power = 5
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_road_bonus_tooltip
+			set_country_flag = wal_road_bonus
+			hidden_effect = {
+				every_province = {
+					limit = {
+						has_road_building_trigger = yes
+					}
+					ab_building_road_effect = yes
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			156 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
+			}
+			1756 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
+			}
+			4706 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
+			}
+		}
+	}
+	wal_industrialize_the_empire = {
+		icon = mission_rb_central_belt_coal_mining
+		position = 19
+		required_missions = {
+			wal_mare_dacia
+			wal_balkan_infrastructure
+			wal_salt_trade
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				trade_goods = gold
+			}
+			OR = {
+				NOT = {
+					base_production = 12
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_manufactory_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				base_production = 12
+				num_of_times_expanded_infrastructure = 2
+				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_industrial_boom
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = wallachia_industrial_empire
+				duration = -1
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				custom_tooltip = earlier_coal_available_tt
+			}
+			set_country_flag = earlier_coal_available
+		}
+	}
+	wal_cavalry = {
+		icon = mission_cossack_cavalry
+		position = 21
+		required_missions = {
+			wal_armata
+			wal_cossacks
+		}
+		trigger = {
+			num_of_cavalry = 20
+			num_of_cossacks = 10
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.3
+			}
+			army_professionalism = 0.3
+			OR = {
+				army_tradition = 60
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 60
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_cavalry_mod
+				duration = 10950
+			}
+			add_country_modifier = {
+				name = wallachia_disciplined_cossacks
+				duration = -1
+			}
+			add_mil_power = 100
+			add_army_tradition_or_mil_power = {
+				amount = 5
+			}
+		}
+	}
+	wal_draco_legions = {
+		icon = gfx_wal_draco_legions
+		position = 23
+		required_missions = {
+			wal_cavalry
+			wal_adopt_gunpowder
+		}
+		trigger = {
+			monthly_mil = 12
+			army_size = 150
+			army_professionalism = 0.75
+			OR = {
+				army_tradition = 80
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 80
+				}
+			}
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				OR = {
+					holy_order = wal_order_of_the_dragon_order
+					holy_order = draculesti_stronghold
+					holy_order = danesti_stronghold
+					holy_order = cantacuzino_stronghold
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = boh_biggest_eu_army
+				NOT = {
+					any_country = {
+						capital_scope = {
+							continent = europe
+						}
+						army_size = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_draco_legions
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wal_draco_legions_terror_buff_tooltip
+			set_country_flag = wal_draco_legions_terror_buff"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_draculesti_election_bonus
+					custom_tooltip = tuh_draculesti_election_bonus_tooltip
+			tooltip = {
+				add_yearly_manpower = 0.5
+				create_general = {
+					tradition = 80
+				}
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+}
+
+ab_wal_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+	}
+	wal_danubian_fortifications = {
+		icon = protect_against_the_turks
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				has_fort_building_trigger = no
+				NOT = {
+					grown_by_development = 3
+				}
+			}
+			area = wallachia_area
+			owned_by = ROOT
+		}
+		trigger = {
+			161 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				grown_by_development = 3
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				area = wallachia_area
+				has_fort_building_trigger = yes
+				grown_by_development = 3
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_danubian_fortifications
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = wallachia_area
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+					}
+					add_province_modifier = {
+						name = wallachia_danubian_fortifications
+						duration = -1
+					}
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				skill = 1
+				cost_multiplier = 0.5
+				location = capital
+			}
+		}
+	}
+	wal_carpathian_fortifications = {
+		icon = gfx_wal_carpathian_fortifications
+		position = 3
+		required_missions = {
+			wal_danubian_fortifications
+			wal_liberate_transylvania
+		}
+		provinces_to_highlight = {
+			OR = {
+				has_fort_building_trigger = no
+				NOT = {
+					grown_by_development = 3
+				}
+			}
+			OR = {
+				area = southern_transylvania_area
+				area = transylvania_area
+			}
+			owned_by = ROOT
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					area = southern_transylvania_area
+					area = transylvania_area
+				}
+				has_fort_building_trigger = yes
+				grown_by_development = 3
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_carpathian_fort
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+					}
+					add_province_modifier = {
+						name = wallachia_carpathian_fort
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wallachia_carpathian_fortifications_ramparts_bonus_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_carpathian_fortifications_ramparts_bonus
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+						has_building = ramparts
+					}
+					owner = {
+						add_treasury = 50
+					}
+					add_province_modifier = {
+						name = wallachia_carpathian_fortifications_ramparts_bonus
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = buffed_bran_castle_reward_tooltip
+			set_country_flag = upgraded_bran_castle
+			custom_tooltip = AB_EMPTY
+		}
+	}
+	wal_seal_the_carpathians = {
+		icon = gfx_wal_seal_the_carpathians
+		position = 4
+		required_missions = {
+			wal_crush_the_magyars
+			wal_carpathian_fortifications
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = transdanubia_area
+						area = slovakia_area
+						area = moravia_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					OR = {
+						area = slovakia_area
+						area = eastslovakia_area
+					}
+					OR = {
+						has_fort_building_trigger = no
+						NOT = {
+							num_of_times_improved = 5
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			any_owned_province = {
+				area = slovakia_area
+				has_fort_building_trigger = yes
+				num_of_times_improved = 5
+			}
+			any_owned_province = {
+				area = eastslovakia_area
+				has_fort_building_trigger = yes
+				num_of_times_improved = 5
+			}
+		}
+		effect = {
+			set_country_flag = wal_buffed_carpathian_forts
+			custom_tooltip = wal_buffed_carpathian_forts_tooltip
+			tooltip = {
+				custom_tooltip = upgraded_fort_tooltip
+				hidden_effect = {
+					upgrade_fort_building = yes
+				}
+				add_province_modifier = {
+					name = wallachia_carpathian_defenses
+					duration = -1
+				}
+				custom_tooltip = this_will_apply_to_all_new_forts_constructed_tooltip
+				custom_tooltip = AB_EMPTY
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = carpathia_region
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_carpathian_defenses
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
+			set_country_flag = panonic_spread_extra
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				cost_multiplier = 0.5
+				culture = transylvanian
+				religion = root
+			}
+		}
+	}
+	wal_conquer_nicaea = {
+		icon = mission_nicaea
+		position = 5
+		required_missions = {
+			wal_worlds_desire
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hudavendigar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = anatolia_region
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_nicaea_dead_tooltip
+				first_limit = "NOT = {
+				exists = NCI
+			}"
+				first_effect = "custom_tooltip = wal_nicaea_lose_all_cores_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_core = NCI
+					}
+					remove_core = NCI
+				}
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = byzantium_pushing
+				duration = 5475
+			}
+			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
+			316 = {
+				add_unit_construction = {
+					type = galley
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+			}
+		}
+	}
+	wal_conquer_anatolia = {
+		icon = geo_turkoman
+		position = 6
+		required_missions = {
+			wal_conquer_nicaea
+		}
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 52
+				region = anatolia_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = aleppo_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = syria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = syrian_desert_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = samtskhe_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = imereti_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = kartli_kakheti_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = armenia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = shirvan_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_army_tradition_or_mil_power = {
+				amount = 25
+			}
+			add_country_modifier = {
+				name = wallachia_reintroduce_the_theme_system
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_seljuks_tooltip
+				first_limit = "has_impaled_seljuks_ruler = yes"
+				first_effect = "change_terror = {
+				value = 20
+				scaled_with_gain_modifier = yes
+			}
+			add_adm_power = 10
+			add_dip_power = 10
+			add_mil_power = 10"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_anatolia_greek_resettlement
+			custom_tooltip = tuh_greek_resettlement_anatolia"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_caucasus = {
+		icon = mission_the_caucasus_rus
+		position = 7
+		required_missions = {
+			wal_conquer_anatolia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = samtskhe_area
+				area = armenia_area
+				area = kartli_kakheti_area
+				area = imereti_area
+				area = shirvan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = samtskhe_area
+					area = armenia_area
+					area = kartli_kakheti_area
+					area = imereti_area
+					area = shirvan_area
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = wal_caucas_forts_tooltip
+			set_country_flag = wal_buffed_caucasian_forts
+			tooltip = {
+				423 = {
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_gate_of_the_caucasus
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_gate_of_the_caucasus
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					423 = {
+						owned_by = ROOT
+					}
+				}
+				423 = {
+					add_province_modifier = {
+						name = wallachia_build_narikala_fortress
+						duration = -1
+					}
+				}
+			}
+			add_accepted_culture_or_dip_power_stated = {
+				culture = georgian
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_fort_advisor_buff_flag_tooltip
+			set_country_flag = wal_fort_advisor_buff_flag
+		}
+	}
+	wal_conquer_iraq = {
+		icon = mission_cradle_of_civilization
+		position = 8
+		required_missions = {
+			wal_conquer_antioch
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = persia_region
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_prepare_persia_invasion
+				duration = 7300
+			}
+			410 = {
+				add_province_modifier = {
+					name = wallachia_develop_bagdad
+					duration = -1
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+		}
+	}
+	wal_persia = {
+		icon = per_reborn_in_fire
+		position = 9
+		required_missions = {
+			wal_conquer_iraq
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				region = persia_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = khorasan_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bahrain_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = pirate_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = oman_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = mascat_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_ruler_modifier = {
+				name = wallachia_shahanshahanshah
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_monster_of_the_west_tooltip
+				first_limit = "has_ruler_modifier = wallachia_monster_of_the_west"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_monster_of_the_west
+			}
+			add_country_modifier = {
+				name = wallachia_monster_of_the_west
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "simple_unlock_issue = {
+				issue = restrict_silk_exports_issue
+			}
+			simple_unlock_issue = {
+				issue = expand_silk_production_issue
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_khorasan = {
+		icon = mission_pertribes
+		position = 10
+		required_missions = {
+			wal_persia
+		}
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 32
+				region = khorasan_region
+			}
+		}
+		effect = {
+			add_claim_multi_provinces = {
+				target = sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = northern_sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = multan_area
+			}
+			add_claim_multi_provinces = {
+				target = sind_sagar_area
+			}
+			add_claim_multi_provinces = {
+				target = kashmir_area
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = YEARS_OF_TRADE_INCOME_1
+			add_years_of_trade_income = {
+				years = 1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_dacian_india_company
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_rise_of_the_dacian_india_company
+				duration = 7300
+			}
+			custom_tooltip = wallachia_rise_of_the_dacian_india_company_mechanics_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = movilesti_can_propagate_religion_bonus_tooltip
+			set_country_flag = movilesti_can_propagate_religion_bonus
+			simple_unlock_issue = {
+				issue = finance_dacian_india_company_issue
+			}"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+		}
+	}
+	wal_coast = {
+		icon = mission_northumberland_coast
+		position = 11
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		effect = {
+			add_sailors = 750
+			add_country_modifier = {
+				name = wallachia_build_navy
+				duration = 5475
+			}
+		}
+	}
+	wal_fleet = {
+		icon = overshadow_venice
+		position = 12
+		required_missions = {
+			wal_coast
+		}
+		trigger = {
+			if = {
+				limit = {
+					naval_forcelimit = 100
+				}
+				navy_size = 100
+			}
+			else = {
+				navy_size_percentage = 1
+			}
+			naval_forcelimit = 20
+		}
+		effect = {
+			add_navy_tradition = 15
+			add_country_modifier = {
+				name = wallachia_black_sea_fleet
+				duration = -1
+			}
+		}
+	}
+	wal_study_navy = {
+		icon = mission_establish_high_seas_navy
+		position = 13
+		required_missions = {
+			wal_fleet
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = impressment_offices
+			}
+			OR = {
+				num_of_marines = 25
+				any_country = {
+					OR = {
+						is_or_was_tag = {
+							tag = VEN
+						}
+						is_or_was_tag = {
+							tag = GEN
+						}
+						is_or_was_tag = {
+							tag = ADU
+						}
+						is_or_was_tag = {
+							tag = SIC
+						}
+						is_or_was_tag = {
+							tag = HAS
+						}
+						is_or_was_tag = {
+							tag = ENG
+						}
+						is_or_was_tag = {
+							tag = HOL
+						}
+						is_or_was_tag = {
+							tag = DAN
+						}
+					}
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_yearly_sailors = 2
+			add_navy_tradition = 20
+			country_event = {
+				id = AB_wallachia_events.36
+			}
+			custom_tooltip = wal_study_navy_event_insight_tooltip
+			custom_tooltip = wal_recruited_marines_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_buffed_marines
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_venice_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_venice
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_genoa_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_genoa
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_andalusia_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_andalusia
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_sicily_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_sicily
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_hansa_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_hansa
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_denmark_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_denmark
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_england_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_england
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_dutch_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_dutch
+					duration = -1
+				}
+			}
+		}
+	}
+	wal_mountain_infrastructure = {
+		icon = gfx_wal_mountain_infrastructure
+		position = 16
+		required_missions = {
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			OR = {
+				has_road_building_trigger = no
+				NOT = {
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				region = carpathia_region
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+				has_road_building_trigger = yes
+				development = 10
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = gain_25_prosperity
+				add_province_modifier = {
+					name = wallachia_thriving_carpathian_settlement
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = carpathia_region
+						OR = {
+							has_terrain = mountain
+							has_terrain = hills
+							has_terrain = highlands
+						}
+						has_road_building_trigger = yes
+						development = 10
+					}
+					add_prosperity = 25
+					add_province_modifier = {
+						name = wallachia_thriving_carpathian_settlement
+						duration = 10950
+					}
+				}
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_wal_mountain_expansion
+			}
+		}
+	}
+	wal_balkan_infrastructure = {
+		icon = gfx_wal_balkan_infrastructure
+		position = 18
+		required_missions = {
+			wal_mare_dacia
+			wal_mountain_infrastructure
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = balkan_region
+			OR = {
+				NOT = {
+					num_of_times_improved = 3
+				}
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				region = balkan_region
+				num_of_times_improved = 3
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = gain_25_prosperity
+				add_province_modifier = {
+					name = wallachia_thriving_balkan_community
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = balkan_region
+						num_of_times_improved = 3
+						has_road_building_trigger = yes
+					}
+					add_prosperity = 25
+					add_province_modifier = {
+						name = wallachia_thriving_balkan_community
+						duration = 10950
+					}
+				}
+			}
+			custom_tooltip = mountain_expansion_in_balkans_tooltip
+			set_country_flag = mountain_expansion_in_balkans
+			hidden_effect = {
+				if = {
+					limit = {
+						has_estate_privilege = estate_burghers_wal_mountain_expansion
+					}
+					every_owned_province = {
+						limit = {
+							region = balkan_region
+							OR = {
+								has_terrain = mountain
+								has_terrain = hills
+								has_terrain = highlands
+							}
+						}
+						if = {
+							limit = {
+								has_terrain = mountain
+							}
+							add_province_modifier = {
+								name = wallachia_mountain_expansion
+								duration = -1
+							}
+						}
+						else_if = {
+							limit = {
+								has_terrain = highlands
+							}
+							add_province_modifier = {
+								name = wallachia_highlands_expansion
+								duration = -1
+							}
+						}
+						else_if = {
+							limit = {
+								has_terrain = hills
+							}
+							add_province_modifier = {
+								name = wallachia_hills_expansion
+								duration = -1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	wal_armata = {
+		icon = gfx_wal_armata
+		position = 20
+		trigger = {
+			army_size = 30
+			army_professionalism = 0.1
+			OR = {
+				army_tradition = 40
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 40
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_vlad_iii_is_ruler_tooltip
+				first_limit = "has_ruler = \"Vlad III\""
+				first_effect = "define_ruler_to_general = {
+				fire = 3
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = cruel_tactician_personality
+			}
+			custom_tooltip = vlad_iii_brother_tooltip
+			define_radu_cel_frumos_advisor = yes"
+				second_custom_tooltip = if_vlad_iii_isnt_ruler_tooltip
+				second_limit = "NOT = { has_ruler = \"Vlad III\" }"
+				second_effect = "define_advisor = {
+				type = army_reformer
+				skill = 1
+				cost_multiplier = 0.75
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			add_country_modifier_for_age = {
+				name = wallachia_professional_army
+				age = age_of_discovery
+				else = "add_army_tradition = 10
+			add_army_professionalism = 0.05"
+			}
+		}
+	}
+	wal_military_infrastructure = {
+		icon = gfx_wal_military_infrastructure
+		position = 21
+		required_missions = {
+			wal_armata
+		}
+		provinces_to_highlight = {
+			owned_by = root
+			OR = {
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+				base_manpower = 5
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			add_yearly_manpower = 2
+			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = wallachia_local_military_infrastructure
+					duration = 10950
+				}
+				custom_tooltip = wal_soldiers_household_bonus_tooltip
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_manpower_building_trigger = yes
+						has_forcelimit_building_trigger = yes
+						base_manpower = 5
+					}
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = wallachia_local_military_infrastructure
+						duration = 10950
+					}
+					if = {
+						limit = {
+							has_building = soldier_households
+						}
+						upgrade_manpower_building = yes
+						add_base_manpower = 1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wal_unlock_order_of_dragon_tooltip
+			set_country_flag = wal_unlock_order_of_dragon"
+			}
+		}
+	}
+	wal_adopt_gunpowder = {
+		icon = gfx_wal_adopt_gunpowder
+		position = 22
+		required_missions = {
+			wal_military_infrastructure
+		}
+		trigger = {
+			num_of_artillery = 15
+			OR = {
+				army_tradition = 70
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 70
+				}
+			}
+			army_professionalism = 0.5
+			custom_trigger_tooltip = {
+				tooltip = employed_skill_3_army_reformer_tooltip
+				employed_advisor = {
+					type = army_reformer
+					skill = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_gunpowder
+				duration = 29200
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+		}
+	}
+}

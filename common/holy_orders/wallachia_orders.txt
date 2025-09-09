@@ -1,0 +1,32 @@
+wal_order_of_the_dragon_order = {
+    icon = GFX_holy_order_dragon_order
+    trigger = {
+        has_country_flag = wal_unlock_order_of_dragon
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+    }
+    color = { 220 40 30 }
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 1 
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_manpower = 1 } }
+                set_base_manpower = 1
+            }
+        }
+    }
+    modifier = {
+        local_garrison_damage = 0.25
+	    local_garrison_size = 0.25
+    }
+    ai_priority = {
+        factor = 10
+    }
+    localization = holy_order
+}

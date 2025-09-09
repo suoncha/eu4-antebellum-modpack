@@ -1,0 +1,389 @@
+on_battle_won_country = {
+	if = {
+		limit = {
+			has_government_mechanic = wallachian_terror_mechanic
+			has_country_modifier = wallachian_terror_brutalize_the_enemy
+		}
+		set_variable = {
+			which = land_units_killed_var
+			which = land_units_lost
+		}
+		divide_variable = {
+			which = land_units_killed_var
+			value = 6666.666			#that's not on purpose lol
+		}
+		change_terror_var = {
+			var = land_units_killed_var
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+on_battle_lost_province = {
+	FROM = {
+		save_global_event_target_as = battle_winner
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_government_mechanic = wallachian_terror_mechanic
+				has_country_modifier = wallachian_terror_brutalize_the_enemy
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					war_with = event_target:battle_winner
+				}
+			}
+			apply_wallachian_terror_battle_won_enemy_province_modifier = yes
+			apply_wallachian_terror_battle_won_owner_penalty = yes
+		}
+		else_if = {
+			limit = {
+				owned_by = event_target:battle_winner
+			}
+			apply_wallachian_terror_battle_won_own_province_modifier = yes
+		}
+	}
+}
+
+#ROOT = winner country
+#FROM = location
+on_siege_won_country = {
+	if = {
+		limit = {
+			has_government_mechanic = wallachian_terror_mechanic
+		}
+		save_global_event_target_as = impaler_country
+		if = {
+			limit = {
+				FROM = {
+					owner = {
+						war_with = event_target:impaler_country
+						OR = {
+							is_in_war = {
+								attacker_leader = THIS
+								defender_leader = event_target:impaler_country
+							}
+							is_in_war = {
+								attacker_leader = event_target:impaler_country
+								defender_leader = THIS
+							}
+						}
+					}
+					is_capital = yes
+				}
+			}
+			FROM = {
+				owner = {
+					save_global_event_target_as = impaled_country
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						owner = {
+							is_emperor = yes
+						}
+					}
+				}
+				country_event = {
+					id = wallachian_terror_events.11
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						owner = {
+							tag = PAP
+						}
+					}
+				}
+				country_event = {
+					id = wallachian_terror_events.21
+				}
+			}
+			else = {
+				country_event = {
+					id = wallachian_terror_events.0
+				}
+			}
+		}
+	}
+}
+
+on_war_lost = {
+	capital_scope = {
+		wallachian_terror_remove_severed_command_modifier = yes
+		wallachian_terror_remove_leadership_in_exile_modifier = yes
+	}
+	clr_country_flag = wallachian_terror_captured_hre_emperor
+}
+
+on_war_won = {
+	capital_scope = {
+		wallachian_terror_remove_severed_command_modifier = yes
+		wallachian_terror_remove_leadership_in_exile_modifier = yes
+	}
+	clr_country_flag = wallachian_terror_captured_hre_emperor
+}
+
+on_war_ended = {
+	capital_scope = {
+		wallachian_terror_remove_severed_command_modifier = yes
+		wallachian_terror_remove_leadership_in_exile_modifier = yes
+	}
+	FROM = {
+		capital_scope = {
+			wallachian_terror_remove_severed_command_modifier = yes
+			wallachian_terror_remove_leadership_in_exile_modifier = yes
+		}
+	}
+}
+
+on_siege_won_province = {
+	wallachian_terror_remove_severed_command_modifier = yes
+	wallachian_terror_remove_leadership_in_exile_modifier = yes
+}
+
+#Clear blind fury modifier from Andalusia when the war ends
+on_main_war_won = {
+	if = {
+		limit = {
+			has_country_modifier = adu_blind_fury
+			NOT = {
+				any_country = {
+					war_with = PREV
+					has_boiled_andalusia_ruler = yes
+				}
+			}
+		}
+		remove_country_modifier = adu_blind_fury
+	}
+	FROM = {
+		if = {
+			limit = {
+				has_country_modifier = adu_blind_fury
+				NOT = {
+					any_country = {
+						war_with = PREV
+						has_boiled_andalusia_ruler = yes
+					}
+				}
+			}
+			remove_country_modifier = adu_blind_fury
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			has_province_flag = adu_reprisals_against_christians_flag
+			owner = {
+				religion_group = christian
+			}
+		}
+		add_province_modifier = {
+			name = liberated_christains_from_adu
+			duration = -1
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_boiled_andalusia_ruler = yes
+			}
+			religion_group = muslim
+		}
+		add_province_modifier = {
+			name = wallachia_muslim_conquest_penalty
+			duration = 10950
+		}
+	}
+}
+
+on_new_heir = {
+	if = {
+		limit = {
+			has_ruler_modifier = frc_castrated_king
+		}
+		every_province = {
+			limit = {
+				has_province_modifier = wallachia_the_kings_balls
+			}
+			remove_province_modifier = wallachia_the_kings_balls
+		}
+	}
+}
+
+on_adm_exploited = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = terror_on_exploit
+			}
+		}
+		owner = {
+			change_terror = {
+				value = 0.1
+				scaled_with_gain_modifier = no
+			}
+		}
+	}
+}
+
+on_dip_exploited = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = terror_on_exploit
+			}
+		}
+		owner = {
+			change_terror = {
+				value = 0.1
+				scaled_with_gain_modifier = no
+			}
+		}
+	}
+}
+
+on_mil_exploited = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = terror_on_exploit
+			}
+		}
+		owner = {
+			change_terror = {
+				value = 0.1
+				scaled_with_gain_modifier = no
+			}
+		}
+	}
+}
+
+#ROOT = winner
+#FROM = loser
+on_main_war_won = {
+	if = {
+		limit = {
+			has_ae_reduced_from_winning_coalition_wars = yes
+		}
+		every_country = {
+			limit = {
+				has_country_flag = reduce_ae_with_coalition_target_if_lose
+			}
+			clr_country_flag = reduce_ae_with_coalition_target_if_lose
+			add_aggressive_expansion = {
+				who = ROOT
+				value = -50
+				apply_calc = no
+			}
+		}
+	}
+}
+
+on_main_war_won = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_modifier = catholic_fury
+					NOT = {
+						war_with = event_target:impaler_country
+					}
+				}
+				FROM = {
+					AND = {
+						has_country_modifier = catholic_fury
+						NOT = {
+							war_with = event_target:impaler_country
+						}
+					}
+				}
+			}
+		}
+		remove_country_modifier = catholic_fury
+		FROM = {
+			remove_country_modifier = catholic_fury
+		}
+	}
+}
+
+on_main_war_won = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_modifier = catholic_avenge_pope_mod
+					NOT = {
+						war_with = event_target:impaler_country
+					}
+				}
+				FROM = {
+					AND = {
+						has_country_modifier = catholic_avenge_pope_mod
+						NOT = {
+							war_with = event_target:impaler_country
+						}
+					}
+				}
+			}
+		}
+		remove_country_modifier = catholic_avenge_pope_mod
+		FROM = {
+			remove_country_modifier = catholic_avenge_pope_mod
+		}
+	}
+}
+
+on_monarch_death = {
+	if = {
+		limit = {
+			has_impaled_pope = yes
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = resisting_the_antathema
+			}
+			remove_province_modifier = resisting_the_antathema
+		}
+	}
+}
+
+on_province_religion_changed = {
+	if = {
+		limit = {
+			has_province_modifier = resisting_the_antathema
+			NOT = {
+				religion = catholic
+			}
+		}
+		remove_province_modifier = resisting_the_antathema
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			religion = catholic
+			owner = {
+				has_ruler_modifier = wallachia_antathema
+			}
+		}
+		add_nationalism = 10
+		add_unrest = 5
+		add_province_modifier = {
+			name = resisting_the_antathema
+			duration = -1
+			desc = resisting_the_antathema_province_desc
+		}
+	}
+}

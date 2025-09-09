@@ -1,0 +1,26 @@
+﻿l_english:
+ global_edict_commander_quick_select_ab_settings_event.1.t: "Encourage Economic Growth"
+ global_edict_commander_quick_select_ab_settings_event.1.d: "Select which event option you want to run whenever you click the Encourage Economic Growth button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_ab_settings_event.2.t: "Disrupt Local Infrastructure"
+ global_edict_commander_quick_select_ab_settings_event.2.d: "Select which event option you want to run whenever you click the Disrupt Local Infrastructure button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_ab_settings_event.3.t: "Strengthen Local Shipbuilding Tradition"
+ global_edict_commander_quick_select_ab_settings_event.3.d: "Select which event option you want to run whenever you click the Strengthen Local Shipbuilding Tradition button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_ab_settings_event.4.t: "Improved Gold Mining"
+ global_edict_commander_quick_select_ab_settings_event.4.d: "Select which event option you want to run whenever you click the Improved Gold Mining button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_ab_settings_event.5.t: "Colonial Development"
+ global_edict_commander_quick_select_ab_settings_event.5.d: "Select which event option you want to run whenever you click the Colonial Development button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ global_edict_commander_quick_select_ab_settings_event.6.t: "Modernized Local Administration"
+ global_edict_commander_quick_select_ab_settings_event.6.d: "Select which event option you want to run whenever you click the Modernized Local Administration button.\nThe currently enabled option is §Ghighlighted green§!."
+
+ #For the main quick settings event. I don't want to include this shit in the file itself because it makes merging changes from vanilla qol tools a pain...
+ global_edict_commander_quick_select_settings_event.1.economic_growth: "Encourage Economic Growth"
+ global_edict_commander_quick_select_settings_event.1.disrupt_infrastructure: "Disrupt Local Infrastructure"
+ global_edict_commander_quick_select_settings_event.1.shipbuilding: "Strengthen Local Shipbuilding Tradition"
+ global_edict_commander_quick_select_settings_event.1.gold_mining: "Improved Gold Mining"
+ global_edict_commander_quick_select_settings_event.1.colonial_dev: "Colonial Development"
+ global_edict_commander_quick_select_settings_event.1.modern_admin: "Modernized Local Administration"

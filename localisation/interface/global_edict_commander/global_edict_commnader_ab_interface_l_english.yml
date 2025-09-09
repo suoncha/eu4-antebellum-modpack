@@ -1,0 +1,8 @@
+﻿l_english:
+ global_edicts_improved_gold_mining_trigger_tt: "produces §YGold§!"
+ global_edicts_encourage_economic_growth_tt: "§YEncourage Economic Growth§!\nLocal Prosperity Growth: §G+0.25§![quick_select_encourage_economic_growth_tooltip_loc]"
+ global_edicts_disrupt_local_infrastructure_tt: "§YDisrupt Local Infrastructure§!\nMaximum Attrition: §R+1.00§!\nAttrition for Enemies: §G+1.00§![quick_select_disrupt_local_infrastructure_tooltip_loc]"
+ global_edicts_shipbuilding_time_tt: "§YStrengthen Local Shipbuilding Tradition§!\nLocal Shipbuilding Time: §G-25.0%§![quick_select_shipbuilding_time_tooltip_loc]"
+ global_edicts_improved_gold_mining_tt: "§YImproved Gold Mining§!\nLocal Gold Depletion Chance Modifier: §G-25.0%§![quick_select_improved_gold_mining_tooltip_loc]"
+ global_edicts_colonial_development_tt: "§YColonial Development§!\nLocal Settler Increase: §G+10.00§![quick_select_colonial_development_tooltip_loc]"
+ global_edicts_modernized_local_administration_tt: "§YModernized Local Administration§!\nProvince Governing Cost: §G-10.0%§![quick_select_modernized_local_administration_tooltip_loc]"

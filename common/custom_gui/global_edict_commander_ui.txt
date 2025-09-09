@@ -1,0 +1,1901 @@
+custom_window = {
+	name = global_edicts_window
+	potential = {
+		is_state = yes
+		owned_by = FROM
+		FROM = {
+			has_country_flag = global_edicts_window_open
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_close_button
+	tooltip = close_global_edict_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = global_edicts_window_open
+		}
+	}
+}
+
+custom_button = {
+	name = open_global_edict_button
+	tooltip = open_global_edict_button_tt
+	potential = {
+		is_state = yes
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							has_country_flag = global_edicts_window_open
+						}
+					}
+				}
+				set_country_flag = global_edicts_window_open
+			}
+			else = {
+				clr_country_flag = global_edicts_window_open
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_no_edicts_button
+	tooltip = global_edicts_no_edicts_button_tt
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_modifier = edict_commander_cooldown
+			}
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			edict_commander_clear_all_state_edicts = yes
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_advancement_button
+	tooltip = global_edicts_advancement_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_advancement_effort_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_advancement_effort_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.2
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.1
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_centralization_button
+	tooltip = global_edicts_centralization_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_centralization_effort_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.3
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_centralization_effort_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.4
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.2
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_defensive_button
+	tooltip = global_edicts_defensive_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_defensive_edict_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.5
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_defensive_edict_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.6
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_defensive_edict_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.7
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.3
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_development_button
+	tooltip = global_edicts_development_button_tt
+	potential = {
+		FROM = {
+			NOT = {
+				AND = {
+					has_country_flag = enable_industrialisation_flag
+					is_emperor_of_china = yes
+				}
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_encourage_development_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.8
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_encourage_development_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.9
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_encourage_development_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.10
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_encourage_development_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.11
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.5
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_enlistment_button
+	tooltip = global_edicts_enlistment_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_increased_enlistment_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.19
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_increased_enlistment_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.20
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_increased_enlistment_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.21
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_increased_enlistment_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.22
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_increased_enlistment_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.23
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.7
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_trade_button
+	tooltip = global_edicts_trade_button_tt
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = fra_improve_trade_power_state_edict_flag
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.24
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.25
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.26
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.27
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.28
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_protect_trade_6
+					}
+					country_event = {
+						id = global_edict_commander_option_events.29
+					}
+				}
+				# Option 7 (g) was Advanced Config, so no quick select
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.8
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_missionary_strength_button
+	tooltip = global_edicts_missionary_strength_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.30
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.31
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.32
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.33
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.34
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_enforce_religious_unity_6
+					}
+					country_event = {
+						id = global_edict_commander_option_events.35
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.9
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_unrest_button
+	tooltip = global_edicts_unrest_button_tt
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = global_edicts_unrest_button_trigger_tt
+			FROM = {
+				has_country_flag = feudal_de_jure_law
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_feudal_de_jure_law_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.36
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_de_jure_law_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.37
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_de_jure_law_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.38
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_de_jure_law_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.39
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_de_jure_law_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.40
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.10
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_resist_reformation_button
+	tooltip = global_edicts_resist_reformation_button_tt
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = global_edicts_resist_reformation_button_trigger_tt
+			FROM = {
+				has_country_flag = religion_enforced_edict
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_religion_enforced_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.41
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_religion_enforced_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.42
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.11
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_devastation_button
+	tooltip = global_edicts_devastation_button_tt
+	potential = {
+		current_age = age_of_absolutism
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = global_edicts_devastation_button_trigger_tt
+			FROM = {
+				has_country_flag = edict_of_absolutism
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_absolutism_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.43
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_absolutism_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.44
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_absolutism_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.45
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_absolutism_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.46
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_absolutism_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.47
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.12
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_taxes_button
+	tooltip = global_edicts_taxes_button_tt
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = regional_councils_trigger_tt
+			FROM = {
+				has_government_attribute = unlock_special_state_edicts
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_feudal_taxes_edict_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.48
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_taxes_edict_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.49
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_taxes_edict_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.50
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_feudal_taxes_edict_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.51
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.13
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_local_religious_unity_button
+	tooltip = global_edicts_local_religious_unity_button_tt
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = regional_councils_trigger_tt
+			FROM = {
+				has_government_attribute = unlock_special_state_edicts
+			}
+		}
+	}
+	effect = {
+		# This button directly applies an edict, no quick select logic applicable based on provided structure
+		FROM = {
+			edict_commander_set_edict_every_state = {
+				edict = religious_tolerance_state_edict
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_local_separatism_button
+	tooltip = global_edicts_local_separatism_button_tt
+	potential = {
+		current_age = age_of_absolutism
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = regional_councils_trigger_tt
+			FROM = {
+				has_government_attribute = unlock_special_state_edicts
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_state_integration_edict_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.52
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_state_integration_edict_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.53
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_state_integration_edict_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.54
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_state_integration_edict_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.55
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_state_integration_edict_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.56
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.14
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_goods_produced_button
+	tooltip = global_edicts_goods_produced_button_tt
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = regional_councils_trigger_tt
+			FROM = {
+				has_government_attribute = unlock_special_state_edicts
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_urbanization_edict_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.57
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_urbanization_edict_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.58
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_urbanization_edict_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.59
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_urbanization_edict_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.60
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.15
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_movement_button
+	tooltip = global_edicts_movement_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = fra_enable_infrastructure_network_flag
+		}
+		NOT = {
+			current_age = age_of_revolutions
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			FROM = {
+				tag = FRC
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				NOT = {
+					tag = FRC
+				}
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_french_infrastructure_network_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.61
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_french_infrastructure_network_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.62
+					}
+				}
+				# Option 3 (c) was Advanced Options, so no quick select
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.16
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_french_trade_button
+	tooltip = global_edicts_french_trade_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = fra_improve_trade_power_state_edict_flag
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			FROM = {
+				tag = FRC
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				NOT = {
+					tag = FRC
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.63
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.64
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.65
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.66
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.67
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_promote_trade_6
+					}
+					country_event = {
+						id = global_edict_commander_option_events.68
+					}
+				}
+				# Option 7 (g) was Advanced Config, so no quick select
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.17
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_made_in_china_button
+	tooltip = global_edicts_made_in_china_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = enable_industrialisation_flag
+			is_emperor_of_china = yes
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.12
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.13
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.14
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.15
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_5
+					}
+					country_event = {
+						id = global_edict_commander_option_events.16
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_6
+					}
+					country_event = {
+						id = global_edict_commander_option_events.17
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_rapid_industrialization_7
+					}
+					country_event = {
+						id = global_edict_commander_option_events.18
+					}
+				}
+				# Option 8 (h) was alternative edict, so no quick select
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.6
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_edict_of_governance_button
+	tooltip = global_edicts_edict_of_governance_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = hab_prosperity_edict
+		}
+		OR = {
+			AND = {
+				NOT = {
+					current_age = age_of_revolutions
+				}
+				NOT = {
+					FROM = {
+						has_country_flag = fra_enable_infrastructure_network_flag
+					}
+				}
+			}
+			AND = {
+				current_age = age_of_revolutions
+				FROM = {
+					has_country_flag = fra_enable_infrastructure_network_flag
+				}
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.69
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.70
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.71
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.72
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.18
+					}
+				}
+			}
+		}
+	}
+}
+
+# PDX couldn't come up with an edict to spend splendor on during
+# the age of revolutions, so the buttons gotta shift otherwise it looks
+# ugly :)
+# They don't shift here btw, they shift in provinceview.gui
+custom_button = {
+	name = global_edicts_movement_button_shifted
+	tooltip = global_edicts_movement_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = fra_enable_infrastructure_network_flag
+		}
+		current_age = age_of_revolutions
+	}
+	frame = {
+		number = 1
+		trigger = {
+			FROM = {
+				tag = FRC
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				NOT = {
+					tag = FRC
+				}
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_french_infrastructure_network_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.61
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_french_infrastructure_network_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.62
+					}
+				}
+				# Option 3 (c) was Advanced Options, so no quick select
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.16
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_edict_of_governance_button_slot1
+	tooltip = global_edicts_edict_of_governance_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = hab_prosperity_edict
+		}
+		current_age = age_of_revolutions
+		NOT = {
+			FROM = {
+				has_country_flag = fra_enable_infrastructure_network_flag
+			}
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.69
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.70
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.71
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.72
+					}
+				}
+				else = {
+					# Note: The original effect here pointed to event 16, which seems incorrect for governance.
+					# Assuming it should point to event 18 like the other governance buttons.
+					country_event = {
+						id = global_edicts_commander_events.18
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_edict_of_governance_button_slot3
+	tooltip = global_edicts_edict_of_governance_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = hab_prosperity_edict
+		}
+		NOT = {
+			current_age = age_of_revolutions
+		}
+		FROM = {
+			has_country_flag = fra_enable_infrastructure_network_flag
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.69
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.70
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_3
+					}
+					country_event = {
+						id = global_edict_commander_option_events.71
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_edict_of_governance_4
+					}
+					country_event = {
+						id = global_edict_commander_option_events.72
+					}
+				}
+				else = {
+					# Note: The original effect here pointed to event 16, which seems incorrect for governance.
+					# Assuming it should point to event 18 like the other governance buttons.
+					country_event = {
+						id = global_edicts_commander_events.18
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_lock_state_button
+	tooltip = global_edicts_lock_state_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	frame = {
+		number = 1
+		trigger = {
+			all_province_in_state = {
+				NOT = {
+					has_province_flag = edict_commander_locked_state
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			any_province_in_state = {
+				has_province_flag = edict_commander_locked_state
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				which = any_province_has_flag
+				value = 0
+			}
+			every_province_in_state = {
+				if = {
+					limit = {
+						has_province_flag = edict_commander_locked_state
+					}
+					clr_province_flag = edict_commander_locked_state
+					PREV = {
+						set_variable = {
+							which = any_province_has_flag
+							value = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = any_province_has_flag
+							value = 1
+						}
+					}
+				}
+				every_province_in_state = {
+					set_province_flag = edict_commander_locked_state
+				}
+				FROM = {
+					play_sound = unlock_mapmode
+				}
+			}
+			else = {
+				FROM = {
+					play_sound = lock_mapmode
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = global_edicts_settings_button
+	tooltip = global_edicts_settings_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = global_edict_commander_settings_events.1
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_advancement_effort_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_centralization_effort_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_defensive_edict_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_4_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_encourage_development_quick_select = yes
+			OR = {
+				NOT = {
+					has_country_flag = enable_industrialisation_flag
+				}
+				NOT = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_4_glow_qng
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_rapid_industrialization_quick_select = yes
+			has_country_flag = enable_industrialisation_flag
+			is_emperor_of_china = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_increased_enlistment_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_protect_trade_quick_select = yes
+			NOT = {
+				has_country_flag = fra_improve_trade_power_state_edict_flag
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_2_glow_fra
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			AND = {
+				has_promote_trade_quick_select = yes
+				has_country_flag = fra_improve_trade_power_state_edict_flag
+				NOT = {
+					tag = FRC
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_2_glow_francia
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			AND = {
+				has_promote_trade_quick_select = yes
+				has_country_flag = fra_improve_trade_power_state_edict_flag
+				tag = FRC
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_enforce_religious_unity_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_4_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					current_age = age_of_discovery
+					has_country_flag = feudal_de_jure_law
+					has_feudal_de_jure_law_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_reformation
+					has_country_flag = religion_enforced_edict
+					has_religion_enforced_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_absolutism
+					has_country_flag = edict_of_absolutism
+					has_edict_of_absolutism_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_revolutions
+					has_government_attribute = unlock_special_state_edicts
+					has_urbanization_edict_quick_select = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					current_age = age_of_discovery
+					has_government_attribute = unlock_special_state_edicts
+					has_feudal_taxes_edict_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_absolutism
+					has_government_attribute = unlock_special_state_edicts
+					has_state_integration_edict_quick_select = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_1_glow_fra
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			current_age = age_of_revolutions
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_french_infrastructure_network_quick_select = yes
+			NOT = {
+				tag = FRC
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_1_glow_francia
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			current_age = age_of_revolutions
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_french_infrastructure_network_quick_select = yes
+			tag = FRC
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_1_glow_hab
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			current_age = age_of_revolutions
+			has_country_flag = hab_prosperity_edict
+			NOT = {
+				has_country_flag = fra_enable_infrastructure_network_flag
+			}
+			has_edict_of_governance_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_2_glow_fra
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			NOT = {
+				current_age = age_of_revolutions
+			}
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_french_infrastructure_network_quick_select = yes
+			NOT = {
+				tag = FRC
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_2_glow_francia
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			NOT = {
+				current_age = age_of_revolutions
+			}
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_french_infrastructure_network_quick_select = yes
+			tag = FRC
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_2_glow_hab
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					NOT = {
+						current_age = age_of_revolutions
+					}
+					NOT = {
+						has_country_flag = fra_enable_infrastructure_network_flag
+					}
+					has_country_flag = hab_prosperity_edict
+					has_edict_of_governance_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_revolutions
+					has_country_flag = fra_enable_infrastructure_network_flag
+					has_country_flag = hab_prosperity_edict
+					has_edict_of_governance_quick_select = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_3_glow_hab
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			NOT = {
+				current_age = age_of_revolutions
+			}
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_country_flag = hab_prosperity_edict
+			has_edict_of_governance_quick_select = yes
+		}
+	}
+}

@@ -1,0 +1,392 @@
+basarab_stronghold = {
+	icon = GFX_basarab_stronghold
+	color = {
+		150
+		0
+		24
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		hidden_effect = {
+			owner = {
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 0.1
+				}
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		basarab_faction_influence = 0.01
+		local_autonomy = -0.03
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+bibescu_stronghold = {
+	icon = GFX_bibescu_stronghold
+	color = {
+		218
+		165
+		32
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = dip_power
+	per_province_effect = {
+		add_base_production = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_production = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		bibescu_faction_influence = 0.01
+		local_culture_conversion_cost = -0.1
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+draculesti_stronghold = {
+	icon = GFX_draculesti_stronghold
+	color = {
+		25
+		25
+		25
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		draculesti_faction_influence = 0.01
+		local_garrison_size = 0.25
+		local_garrison_damage = 0.25
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+brancoveanu_stronghold = {
+	icon = GFX_brancoveanu_stronghold
+	color = {
+		135
+		206
+		235
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		brancoveanu_faction_influence = 0.01
+		local_development_cost = -0.05
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+movilesti_stronghold = {
+	icon = GFX_movilesti_stronghold
+	color = {
+		65
+		105
+		225
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = dip_power
+	per_province_effect = {
+		add_base_production = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_production = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		movilesti_faction_influence = 0.01
+		trade_goods_size_modifier = 0.1
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+danesti_stronghold = {
+	icon = GFX_danesti_stronghold
+	color = {
+		34
+		139
+		34
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		danesti_faction_influence = 0.01
+		local_defender_dice_roll_bonus = 1
+		local_fort_maintenance_modifier = -0.1
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+ghica_stronghold = {
+	icon = GFX_ghica_stronghold
+	color = {
+		105
+		105
+		105
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.85
+		local_governing_cost = -0.25
+		local_state_maintenance_modifier = -0.75
+		ghica_faction_influence = 0.01
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+racovita_stronghold = {
+	icon = GFX_racovita_stronghold
+	color = {
+		204
+		85
+		0
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = dip_power
+	per_province_effect = {
+		add_base_production = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_production = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		racovita_faction_influence = 0.01
+		province_trade_power_modifier = 0.1
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+cantacuzino_stronghold = {
+	icon = GFX_cantacuzino_stronghold
+	color = {
+		128
+		0
+		128
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		cantacuzino_faction_influence = 0.01
+		local_manpower_modifier = 0.075
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}
+
+mavrocordatos_stronghold = {
+	icon = GFX_mavrocordatos_stronghold
+	color = {
+		0
+		128
+		128
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1
+		custom_tooltip = stronghold_crownland_effect_tooltip
+		owner = {
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 0.1
+			}
+		}
+		custom_tooltip = stronghold_on_dev_tooltip
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1
+	}
+	modifier = {
+		local_tax_modifier = -0.9
+		local_governing_cost = -0.15
+		local_state_maintenance_modifier = -0.5
+		mavrocordatos_faction_influence = 0.01
+		local_institution_spread = 0.75
+	}
+	ai_priority = {
+		factor = 2
+	}
+	localization = stronghold
+}

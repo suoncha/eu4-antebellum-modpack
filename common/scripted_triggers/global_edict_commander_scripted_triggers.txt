@@ -1,0 +1,21 @@
+has_rebels_in_province = {
+	num_of_units_in_province = {
+		who = REB
+		amount = 1
+	}
+}
+
+can_change_state_edict = {
+	NOT ={
+		has_province_flag = edict_commander_locked_state
+	}
+	OR = {
+		NOT = {
+			has_province_flag = edict_commander_cooldown
+		}
+		had_province_flag = {
+			flag = edict_commander_cooldown
+			days = 365
+		}
+	}
+}

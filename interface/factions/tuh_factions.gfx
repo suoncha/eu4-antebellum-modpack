@@ -1,0 +1,92 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_basarab_faction"
+		texturefile = "gfx/interface/faction/wallachia/basarab.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_basarab_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_basarab_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_draculesti_faction"
+		texturefile = "gfx/interface/faction/wallachia/draculesti.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_draculesti_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_draculesti_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_danesti_faction"
+		texturefile = "gfx/interface/faction/wallachia/danesti.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_danesti_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_danesti_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_bibescu_faction"
+		texturefile = "gfx/interface/faction/wallachia/bibescu.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_bibescu_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_bibescu_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_brancoveanu_faction"
+		texturefile = "gfx/interface/faction/wallachia/brancoveanu.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_brancoveanu_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_brancoveanu_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_movilesti_faction"
+		texturefile = "gfx/interface/faction/wallachia/movilesti.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_movilesti_faction"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_cantacuzino_faction"
+		texturefile = "gfx/interface/faction/wallachia/cantacuzino.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_cantacuzino_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_cantacuzino_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_ghica_faction"
+		texturefile = "gfx/interface/faction/wallachia/ghica.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_ghica_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_ghica_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_mavrocordatos_faction"
+		texturefile = "gfx/interface/faction/wallachia/mavrocordatos.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_mavrocordatos_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_mavrocordatos_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_racovita_faction"
+		texturefile = "gfx/interface/faction/wallachia/racovita.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_racovita_faction"
+		texturefile = "gfx/interface/faction/wallachia/faction_racovita_frame.dds"
+		transparencecheck = yes
+	}
+}

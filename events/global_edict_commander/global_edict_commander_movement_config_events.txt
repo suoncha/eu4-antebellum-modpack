@@ -1,0 +1,1016 @@
+namespace = global_edicts_commander_movement_config_events
+country_event = {
+	id = global_edicts_commander_movement_config_events.1
+	title = global_edicts_commander_movement_config_events.1.t
+	desc = global_edicts_commander_movement_config_events.1.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_movement_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_movement_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_events.16
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_all_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_all_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.europe_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.2
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.asia_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.3
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.africa_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.4
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.north_america_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.5
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.south_america_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.6
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.1.oceania_region
+		hidden_effect = {
+			safe_clr_country_flag = {
+				flag = remain_in_movement_config_menu
+			}
+			country_event = {
+				id = global_edicts_commander_movement_config_events.7
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_movement_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.2
+	title = global_edicts_commander_movement_config_events.2.t
+	desc = global_edicts_commander_movement_config_events.2.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_europe_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_europe_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_europe_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_europe_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.france
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_france_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.low_countries
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_low_countries_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.south_german
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_south_german_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.north_german
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_north_german_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.british_isles
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_british_isles_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.iberia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_iberia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.italy
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_italy_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.carpathia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_carpathia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.balkan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_balkan_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.poland
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_poland_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.baltic
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_baltic_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.scandinavia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_scandinavia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.ruthenia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ruthenia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.crimea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_crimea_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.russia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_russia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.ural
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_ural_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.anatolia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_anatolia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.2.caucasia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_caucasia_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_europe_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.3
+	title = global_edicts_commander_movement_config_events.3.t
+	desc = global_edicts_commander_movement_config_events.3.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_asia_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_asia_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_asia_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_asia_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.arabia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_arabia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.bengal
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_bengal_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.burma
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_burma_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.central_asia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_central_asia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.coromandel
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_coromandel_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.deccan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_deccan_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.east_siberia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_east_siberia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.hindusthan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_hindusthan_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.indo_china
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_indo_china_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.indonesia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_indonesia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.japan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_japan_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.khorasan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_khorasan_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.korea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_korea_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.malaya
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_malaya_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.manchuria
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_manchuria_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.mashriq
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mashriq_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.moluccas
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_moluccas_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.mongolia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mongolia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.north_china
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_north_china_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.persia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_persia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.south_china
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_south_china_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.tibet
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_tibet_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.west_india
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_west_india_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.west_siberia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_west_siberia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.3.xinan
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_xinan_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_asia_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.4
+	title = global_edicts_commander_movement_config_events.4.t
+	desc = global_edicts_commander_movement_config_events.4.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_africa_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_africa_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_africa_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_africa_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.central_africa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_central_africa_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.east_africa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_east_africa_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.egypt
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_egypt_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.guinea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_guinea_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.horn_of_africa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_horn_of_africa_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.kongo
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_kongo_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.maghreb
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_maghreb_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.niger
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_niger_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.sahel
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_sahel_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.4.south_africa
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_south_africa_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_africa_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.5
+	title = global_edicts_commander_movement_config_events.5.t
+	desc = global_edicts_commander_movement_config_events.5.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_north_america_config_menu
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_north_america_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_north_america_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_north_america_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.california
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_california_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.canada
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_canada_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.carribeans
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_carribeans_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.cascadia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_cascadia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.central_america
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_central_america_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.great_lakes
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_great_lakes_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.great_plains
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_great_plains_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.hudson_bay
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_hudson_bay_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.mexico
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mexico_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.mississippi
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_mississippi_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.northeast_america
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_northeast_america_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.rio_grande
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_rio_grande_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.southeast_america
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_southeast_america_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.5.random_new_world
+		trigger = {
+			is_random_new_world = yes
+		}
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_random_new_world_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_north_america_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.6
+	title = global_edicts_commander_movement_config_events.6.t
+	desc = global_edicts_commander_movement_config_events.6.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_south_america_config_menu
+		}
+	}
+
+	option = {
+		name = global_edicts_commander_movement_config_events.6.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_south_america_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_south_america_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_south_america_movement_edict_flags = yes
+		}
+	}
+
+	option = {
+		name = global_edicts_commander_movement_config_events.6.brazil
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_brazil_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.colombia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_colombia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.la_plata
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_la_plata_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.peru
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_peru_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.6.upper_peru
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_upper_peru_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_south_america_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_movement_config_events.7
+	title = global_edicts_commander_movement_config_events.7.t
+	desc = global_edicts_commander_movement_config_events.7.d
+	picture = GFX_global_edicts_commander_movement_config_events
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = remain_in_oceania_config_menu
+		}
+	}
+
+	option = {
+		name = global_edicts_commander_movement_config_events.7.back
+		highlight = yes
+		safe_clr_country_flag = {
+			flag = remain_in_oceania_config_menu
+		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.7.enable_all_regions
+		highlight = yes
+		hidden_effect = {
+			set_oceania_movement_edict_flags = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.7.disable_all_regions
+		highlight = yes
+		hidden_effect = {
+			clear_oceania_movement_edict_flags = yes
+		}
+	}
+
+	option = {
+		name = global_edicts_commander_movement_config_events.7.australia
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_australia_movement_edicts
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_movement_config_events.7.oceanea
+		hidden_effect = {
+			safe_toggle_global_flag = {
+				flag = edict_commander_oceanea_movement_edicts
+			}
+		}
+	}
+	after = {
+		if ={
+			limit ={
+				has_country_flag = remain_in_oceania_config_menu
+			}
+
+			country_event = {
+				id = global_edicts_commander_movement_config_duplicate_events.7
+			}
+		}
+	}
+}

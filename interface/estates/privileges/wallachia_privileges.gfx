@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_dominance_of_the_boierime"
+		texturefile = "gfx/interface/privileges/wallachia/dominance_of_the_boierime.dds"
+	}
+}

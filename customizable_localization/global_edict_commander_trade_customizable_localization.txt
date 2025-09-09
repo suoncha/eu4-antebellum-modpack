@@ -1,0 +1,1602 @@
+defined_text = {
+	name = edict_commander_english_channel_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_english_channel_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_english_channel_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_champagne_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_champagne_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_champagne_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_north_sea_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_north_sea_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_north_sea_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_lubeck_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_lubeck_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_lubeck_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_baltic_sea_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_baltic_sea_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_baltic_sea_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_bordeaux_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_bordeaux_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_bordeaux_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_sevilla_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_sevilla_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_sevilla_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_valencia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_valencia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_valencia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_genoa_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_genoa_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_genoa_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_venice_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_venice_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_venice_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_wien_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_wien_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_wien_trade_edicts
+			}
+		}
+	}
+}
+
+
+defined_text = {
+	name = edict_commander_ragusa_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_ragusa_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_ragusa_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_rheinland_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_rheinland_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_rheinland_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_saxony_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_saxony_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_saxony_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_krakow_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_krakow_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_krakow_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_pest_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_pest_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_pest_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_constantinople_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_constantinople_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_constantinople_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_kiev_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_kiev_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_kiev_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_crimea_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_crimea_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_crimea_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_novgorod_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_novgorod_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_novgorod_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_white_sea_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_white_sea_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_white_sea_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_kazan_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_kazan_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_kazan_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_astrakhan_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_astrakhan_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_astrakhan_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_samarkand_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_samarkand_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_samarkand_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_aleppo_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_aleppo_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_aleppo_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_basra_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_basra_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_basra_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_persia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_persia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_persia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_hormuz_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_hormuz_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_hormuz_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_lahore_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_lahore_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_lahore_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_gujarat_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_gujarat_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_gujarat_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_doab_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_doab_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_doab_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_deccan_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_deccan_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_deccan_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_coromandel_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_coromandel_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_coromandel_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_bengal_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_bengal_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_bengal_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_burma_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_burma_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_burma_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_siam_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_siam_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_siam_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_malacca_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_malacca_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_malacca_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_the_moluccas_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_the_moluccas_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_the_moluccas_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_philippines_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_philippines_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_philippines_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_australia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_australia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_australia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_polynesian_triangle_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_polynesian_triangle_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_siberia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_siberia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_siberia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_yumen_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_yumen_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_yumen_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_girin_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_girin_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_girin_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_nippon_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_nippon_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_nippon_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_beijing_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_beijing_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_beijing_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_xian_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_xian_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_xian_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_hangzhou_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_hangzhou_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_hangzhou_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_canton_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_canton_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_canton_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_chengdu_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_chengdu_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_chengdu_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_lhasa_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_lhasa_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_lhasa_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_alexandria_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_alexandria_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_alexandria_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_tunis_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_tunis_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_tunis_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_safi_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_safi_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_safi_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_ivory_coast_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_ivory_coast_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_ivory_coast_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_timbuktu_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_timbuktu_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_timbuktu_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_katsina_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_katsina_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_katsina_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_ethiopia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_ethiopia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_ethiopia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_gulf_of_aden_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_gulf_of_aden_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_zanzibar_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_zanzibar_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_zanzibar_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_great_lakes_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_great_lakes_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_great_lakes_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_congo_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_congo_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_congo_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_zambezi_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_zambezi_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_zambezi_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_cape_of_good_hope_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_cape_of_good_hope_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_california_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_california_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_california_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_hudson_bay_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_hudson_bay_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_hudson_bay_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_gulf_of_st_lawrence_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_mississippi_river_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_mississippi_river_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_mississippi_river_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_ohio_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_ohio_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_ohio_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_chesapeake_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_chesapeake_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_chesapeake_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_rio_grande_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_rio_grande_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_rio_grande_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_mexico_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_mexico_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_mexico_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_caribbean_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_caribbean_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_caribbean_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_panama_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_panama_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_panama_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_lima_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_lima_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_lima_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_amazonas_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_amazonas_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_amazonas_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_cuiba_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_cuiaba_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_cuiaba_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_brazil_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_brazil_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_brazil_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_rio_de_la_plata_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_rio_de_la_plata_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_patagonia_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_patagonia_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_patagonia_trade_edicts
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_europe_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_europe_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_europe_trade_config_flags = yes
+				NOT = {
+					has_all_of_europe_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_europe_trade_config_flags = yes
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_asia_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_asia_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_asia_trade_config_flags = yes
+				NOT = {
+					has_all_of_asia_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_asia_trade_config_flags = yes
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_oceania_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_oceania_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_oceania_trade_config_flags = yes
+				NOT = {
+					has_all_of_oceania_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_oceania_trade_config_flags = yes
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_africa_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_africa_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_africa_trade_config_flags = yes
+				NOT = {
+					has_all_of_africa_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_africa_trade_config_flags = yes
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_north_america_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_north_america_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_north_america_trade_config_flags = yes
+				NOT = {
+					has_all_of_north_america_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_north_america_trade_config_flags = yes
+		}
+	}
+}
+
+defined_text = {
+	name = edict_commander_south_america_trade_flags_status_loc
+	text = {
+		localisation_key = edict_commander.all_enabled
+		trigger = {
+			has_all_of_south_america_trade_config_flags = yes
+		}
+	}
+	text = {
+		localisation_key = edict_commander.some_enabled
+		trigger = {
+			AND = {
+				has_some_of_south_america_trade_config_flags = yes
+				NOT = {
+					has_all_of_south_america_trade_config_flags = yes
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = edict_commander.all_disabled
+		trigger = {
+			has_none_of_south_america_trade_config_flags = yes
+		}
+	}
+}

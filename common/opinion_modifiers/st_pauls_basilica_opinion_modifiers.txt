@@ -1,0 +1,17 @@
+constructed_st_pauls_basilica = {
+	opinion = 25
+	max = 100
+	yearly_decay = 1
+}
+
+evicted_papacy_from_st_peters = {
+	opinion = -75
+	min = -999
+	yearly_decay = 0
+}
+
+evicted_papacy_from_st_peters_pope = {
+	opinion = -200
+	min = -999
+	yearly_decay = 0
+}

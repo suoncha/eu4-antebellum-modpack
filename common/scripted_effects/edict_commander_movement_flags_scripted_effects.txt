@@ -1,0 +1,497 @@
+set_all_movement_edict_flags = {
+	set_europe_movement_edict_flags = yes
+	set_asia_movement_edict_flags = yes
+	set_africa_movement_edict_flags = yes
+	set_north_america_movement_edict_flags = yes
+	set_south_america_movement_edict_flags = yes
+	set_oceania_movement_edict_flags = yes
+}
+
+clear_all_movement_edict_flags = {
+	clear_europe_movement_edict_flags = yes
+	clear_asia_movement_edict_flags = yes
+	clear_africa_movement_edict_flags = yes
+	clear_north_america_movement_edict_flags = yes
+	clear_south_america_movement_edict_flags = yes
+	clear_oceania_movement_edict_flags = yes
+}
+
+set_europe_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_france_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_low_countries_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_south_german_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_north_german_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_british_isles_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_iberia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_italy_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_carpathia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_balkan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_poland_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_baltic_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_scandinavia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_ruthenia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_crimea_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_russia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_ural_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_anatolia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_caucasia_movement_edicts
+	}
+}
+
+clear_europe_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_france_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_low_countries_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_south_german_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_north_german_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_british_isles_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_iberia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_italy_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_carpathia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_balkan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_poland_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_baltic_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_scandinavia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_ruthenia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_crimea_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_russia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_ural_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_anatolia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_caucasia_movement_edicts
+	}
+}
+
+set_asia_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_persia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_khorasan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_central_asia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_west_siberia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_east_siberia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_mongolia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_manchuria_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_korea_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_tibet_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_hindusthan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_bengal_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_west_india_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_deccan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_coromandel_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_burma_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_japan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_south_china_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_xinan_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_north_china_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_malaya_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_moluccas_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_indonesia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_indo_china_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_mashriq_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_arabia_movement_edicts
+	}
+}
+
+clear_asia_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_persia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_khorasan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_central_asia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_west_siberia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_east_siberia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_mongolia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_manchuria_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_korea_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_tibet_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_hindusthan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_bengal_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_west_india_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_deccan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_coromandel_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_burma_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_japan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_south_china_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_xinan_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_north_china_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_malaya_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_moluccas_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_indonesia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_indo_china_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_mashriq_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_arabia_movement_edicts
+	}
+}
+
+set_africa_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_central_africa_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_east_africa_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_egypt_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_guinea_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_horn_of_africa_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_kongo_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_maghreb_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_niger_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_sahel_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_south_africa_movement_edicts
+	}
+}
+
+clear_africa_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_central_africa_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_east_africa_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_egypt_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_guinea_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_horn_of_africa_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_kongo_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_maghreb_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_niger_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_sahel_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_south_africa_movement_edicts
+	}
+}
+
+set_north_america_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_california_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_canada_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_carribeans_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_cascadia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_central_america_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_great_lakes_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_great_plains_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_hudson_bay_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_mexico_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_mississippi_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_northeast_america_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_rio_grande_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_southeast_america_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_random_new_world_movement_edicts
+	}
+}
+
+clear_north_america_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_california_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_canada_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_carribeans_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_cascadia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_central_america_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_great_lakes_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_great_plains_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_hudson_bay_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_mexico_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_mississippi_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_northeast_america_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_rio_grande_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_southeast_america_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_random_new_world_movement_edicts
+	}
+}
+
+set_south_america_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_brazil_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_colombia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_la_plata_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_peru_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_upper_peru_movement_edicts
+	}
+}
+
+clear_south_america_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_brazil_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_colombia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_la_plata_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_peru_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_upper_peru_movement_edicts
+	}
+}
+
+set_oceania_movement_edict_flags = {
+	safe_set_global_flag = {
+		flag = edict_commander_australia_movement_edicts
+	}
+	safe_set_global_flag = {
+		flag = edict_commander_oceanea_movement_edicts
+	}
+}
+
+clear_oceania_movement_edict_flags = {
+	safe_clr_global_flag = {
+		flag = edict_commander_australia_movement_edicts
+	}
+	safe_clr_global_flag = {
+		flag = edict_commander_oceanea_movement_edicts
+	}
+}

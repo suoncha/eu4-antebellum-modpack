@@ -1,0 +1,869 @@
+namespace = tuh_events
+country_event = {
+	id = tuh_events.0
+	title = tuh_events.0.t
+	desc = tuh_events.0.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = tuh_pretender_province
+			}
+			random_variable = {
+				which = random_house
+				value = 10
+			}
+			round_variable = {
+				which = random_house
+				value = -1
+			}
+			while = {
+				limit = {
+					is_variable_equal = {
+						which = random_house
+						which = tuh_current_house
+					}
+				}
+				random_variable = {
+					which = random_house
+					value = 10
+				}
+				round_variable = {
+					which = random_house
+					value = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = tuh_events.0.a
+		if = {
+			limit = {
+				is_var_basarab = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = basarab_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_bibescu = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = bibescu_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_draculesti = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = draculesti_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_brancoveanu = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = brancoveanu_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_movilesti = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = movilesti_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_danesti = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = danesti_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_ghica = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = ghica_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_racovita = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = racovita_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_cantacuzino = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = cantacuzino_pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_mavrocordatos = {
+					var = random_house
+				}
+			}
+			event_target:tuh_pretender_province = {
+				spawn_rebels = {
+					type = mavrocordatos_pretender_rebels
+					size = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = tuh_events.0.b
+		custom_tooltip = tuh_events.0_pretender_tooltip
+		if = {
+			limit = {
+				is_var_basarab = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_basarab
+		}
+		else_if = {
+			limit = {
+				is_var_bibescu = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_bibescu
+		}
+		else_if = {
+			limit = {
+				is_var_draculesti = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_draculesti
+		}
+		else_if = {
+			limit = {
+				is_var_brancoveanu = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_brancoveanu
+		}
+		else_if = {
+			limit = {
+				is_var_movilesti = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_movilesti
+		}
+		else_if = {
+			limit = {
+				is_var_danesti = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_danesti
+		}
+		else_if = {
+			limit = {
+				is_var_ghica = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_ghica
+		}
+		else_if = {
+			limit = {
+				is_var_racovita = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_racovita
+		}
+		else_if = {
+			limit = {
+				is_var_cantacuzino = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_cantacuzino
+		}
+		else_if = {
+			limit = {
+				is_var_mavrocordatos = {
+					var = random_house
+				}
+			}
+			set_ruler = tuh_elections_mavrocordatos
+		}
+		hidden_effect = {
+			add_legitimacy = -100
+			add_legitimacy = 35
+		}
+		add_prestige = -20
+		add_stability = -1
+		hidden_effect = {
+			tuh_set_current_ruling_house_variable_effect = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_var_basarab = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_basarab
+		}
+		else_if = {
+			limit = {
+				is_var_bibescu = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_bibescu
+		}
+		else_if = {
+			limit = {
+				is_var_draculesti = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_draculesti
+		}
+		else_if = {
+			limit = {
+				is_var_brancoveanu = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_brancoveanu
+		}
+		else_if = {
+			limit = {
+				is_var_movilesti = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_movilesti
+		}
+		else_if = {
+			limit = {
+				is_var_danesti = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_danesti
+		}
+		else_if = {
+			limit = {
+				is_var_ghica = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_ghica
+		}
+		else_if = {
+			limit = {
+				is_var_racovita = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_racovita
+		}
+		else_if = {
+			limit = {
+				is_var_cantacuzino = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_cantacuzino
+		}
+		else_if = {
+			limit = {
+				is_var_mavrocordatos = {
+					var = random_house
+				}
+			}
+			clear_exiled_ruler = tuh_elections_mavrocordatos
+		}
+	}
+}
+
+country_event = {
+	id = tuh_events.1
+	title = tuh_events.1.t
+	desc = tuh_events.1.d
+	picture = PARLIAMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = tuh_events.1.basarab_option
+		trigger = {
+			NOT = {
+				dynasty = "Basarab"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_basarab_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_basarab_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.basarab_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_basarab_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_basarab_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.bibescu_option
+		trigger = {
+			NOT = {
+				dynasty = "Bibescu"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_bibescu_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_bibescu_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.bibescu_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_bibescu_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_bibescu_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.draculesti_option
+		trigger = {
+			NOT = {
+				dynasty = "Draculesti"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_draculesti_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_draculesti_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.draculesti_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_draculesti_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_draculesti_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.brancoveanu_option
+		trigger = {
+			NOT = {
+				dynasty = "Brancoveanu"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_brancoveanu_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_brancoveanu_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.brancoveanu_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_brancoveanu_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_brancoveanu_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.movilesti_option
+		trigger = {
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_movilesti_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_movilesti_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.danesti_option
+		trigger = {
+			NOT = {
+				dynasty = "Danesti"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_danesti_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_danesti_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.danesti_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_danesti_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_danesti_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.ghica_option
+		trigger = {
+			NOT = {
+				dynasty = "Ghica"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_ghica_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_ghica_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.ghica_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_ghica_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_ghica_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.racovita_option
+		trigger = {
+			NOT = {
+				dynasty = "Racovita"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_racovita_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_racovita_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.racovita_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_racovita_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_racovita_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.cantacuzino_option
+		trigger = {
+			NOT = {
+				dynasty = "Cantacuzino"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_cantacuzino_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_cantacuzino_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.cantacuzino_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_cantacuzino_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_cantacuzino_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 10
+		}
+	}
+	option = {
+		name = tuh_events.1.mavrocordatos_option
+		trigger = {
+			NOT = {
+				dynasty = "Mavrocordatos"
+			}
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		add_country_modifier = {
+			name = hidden_mavrocordatos_coalition_trigger
+			duration = 7300
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_mavrocordatos_coalition
+				duration = 7300
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 20
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = tuh_events.1.mavrocordatos_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_country_modifier = {
+			name = hidden_mavrocordatos_coalition_trigger
+			duration = 10950
+			hidden = yes
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = tooltip_mavrocordatos_coalition
+				duration = 10950
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 10
+		}
+	}
+}
+
+country_event = {
+	id = tuh_events.2
+	title = tuh_events.2.t
+	desc = tuh_events.2.d
+	picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		capital = 151
+		dynasty = "Cantacuzino"
+		is_or_was_wallachia = yes
+		#TODO
+		#ADD CHECKS FOR MOLDAVIA
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	option = {
+		name = tuh_events.2.a
+		hidden_effect = {
+			set_country_flag = cantacuzino_constantinople_bonus
+		}
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "custom_tooltip = as_long_as_constantinople_is_our_capital_tooltip
+			custom_tooltip = cantacuzino_candidate_legitimacy_bonus_tooltip
+			custom_tooltip = cantacuzino_candidate_half_consecutive_election_penalty_tooltip
+			custom_tooltip = cantacuzino_candidate_no_low_influence_penalty_tooltip
+			custom_tooltip = cantacuzino_candidate_no_pretenders_tooltip"
+		}
+		custom_tooltip = tooltip_line_divider
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		add_legitimacy_or_mil_power = {
+			amount = 30
+		}
+		add_stability = 1
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = cantacuzino_modifier_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = return_of_the_emperor_tooltip_mod
+				duration = -1
+			}
+		}
+	}
+}

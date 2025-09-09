@@ -1,0 +1,6 @@
+﻿l_english:
+ edict_commander.enabled:0 "§GEnabled§!"
+ edict_commander.disabled:0 "§RDisabled§!"
+ edict_commander.all_enabled:0 "§GAll Enabled§!"
+ edict_commander.some_enabled:0 "§YSome Enabled§!"
+ edict_commander.all_disabled:0 "§RAll Disabled§!"

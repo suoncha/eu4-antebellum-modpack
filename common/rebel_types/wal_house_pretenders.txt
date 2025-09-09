@@ -1,0 +1,1027 @@
+basarab_pretender_rebels = {
+	color = {
+		179
+		51
+		51
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes	# Will not disband on defeat.
+	reinforcing = yes	# Will reinforce (double rate in rebel controlled provinces)
+	general = yes	# Does use generals. The 'define_ruler' effect with 'rebel' argument will pick the rebel leader as new King.
+	smart = yes
+	disband_on_leader_death = no	# Pretender rebels live forever!
+	will_relocate = yes	# Units will relocate if they have sieged all provinces nearby and has to move over sea.
+	dynasty = yes	#same dynasty for rebel uprising	
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_basarab_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels		#This is used in the event that triggers from the on_action to ensure that you don't get new pretenders if these pretenders are happening because of a succession crisis.
+		set_ruler = tuh_elections_basarab
+		hidden_effect = {
+			add_ruler_personality = righteous_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+bibescu_pretender_rebels = {
+	color = {
+		128
+		0
+		128
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_bibescu_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_bibescu
+		hidden_effect = {
+			add_ruler_personality = charismatic_negotiator_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+draculesti_pretender_rebels = {
+	color = {
+		54
+		69
+		79
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_draculesti_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_draculesti
+		hidden_effect = {
+			add_ruler_personality = bold_fighter_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+brancoveanu_pretender_rebels = {
+	color = {
+		0
+		100
+		0
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_brancoveanu_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_brancoveanu
+		hidden_effect = {
+			add_ruler_personality = architectural_visionary_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+	
+}
+
+movilesti_pretender_rebels = {
+	color = {
+		0
+		128
+		128
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_movilesti_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_movilesti
+		hidden_effect = {
+			add_ruler_personality = silver_tongue_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+danesti_pretender_rebels = {
+	color = {
+		70
+		130
+		180
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_danesti_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_danesti
+		hidden_effect = {
+			add_ruler_personality = strict_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+ghica_pretender_rebels = {
+	color = {
+		192
+		192
+		192
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_ghica_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_ghica
+		hidden_effect = {
+			add_ruler_personality = reformist_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+racovita_pretender_rebels = {
+	color = {
+		255
+		140
+		0
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_racovita_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_racovita
+		hidden_effect = {
+			add_ruler_personality = careful_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+cantacuzino_pretender_rebels = {
+	color = {
+		139
+		69
+		19
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_cantacuzino_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_cantacuzino
+		hidden_effect = {
+				add_ruler_personality = well_connected_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}
+
+mavrocordatos_pretender_rebels = {
+	color = {
+		0
+		0
+		139
+	}
+	area = nation
+	government = monarchy
+	defection = none
+	independence = none
+	unit_transfer = yes
+	gfx_type = culture_province
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	smart = yes
+	disband_on_leader_death = no
+	will_relocate = yes
+	dynasty = yes
+	artillery = 0.1
+	infantry = 0.5
+	cavalry = 0.4
+	morale = 1.25
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+	spawn_chance = {
+		factor = 0
+	}
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	siege_won_trigger = {
+	}
+	siege_won_effect = {
+	}
+	can_negotiate_trigger = {
+		always = no
+	}
+	can_enforce_trigger = {
+		always = yes
+	}
+	demands_description = install_mavrocordatos_pretender
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		if = {
+			limit = {
+				has_consort = yes
+			}
+			
+			kill_consort = yes
+		}
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels
+		set_ruler = tuh_elections_mavrocordatos
+		hidden_effect = {
+			add_ruler_personality = scholar_personality
+			tuh_set_current_ruling_house_variable_effect = yes
+			add_legitimacy = -100
+			add_legitimacy = 30
+		}
+	}
+}

@@ -1,0 +1,17 @@
+custom_button = {
+	name = dismantel_button_blocker
+	tooltip = dismantel_button_blocker_tooltip
+	potential = {
+		is_in_war = {
+			defender_leader = ROOT
+			casus_belli = cb_imperial_retribution
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			always = no
+		}
+	}
+	effect = {
+	}
+}

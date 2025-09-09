@@ -1,0 +1,1262 @@
+namespace = imperial_schism_events
+#Initial event to set the incident
+country_event = {
+	id = imperial_schism_events.0
+	title = imperial_schism_events.0.t
+	desc = imperial_schism_events.0.d
+	picture = gfx_imperial_schism_events.0
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_schism_events.0.a
+		emperor = {
+			add_imperial_influence = -100
+			add_stability = -1
+			add_legitimacy = -50
+			add_country_modifier = {
+				name = forcibly_deposed_by_outside_power
+				duration = 9125
+			}
+			set_country_flag = ignore_for_select_new_emperor_effect
+		}
+		custom_tooltip = deposed_emperor_tooltip
+		hidden_effect = {
+			depose_the_pretender_effect = yes
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+
+		add_country_modifier = {
+			name = true_roman_emperor
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_imperial_schism_incident_happened = no
+			}
+			custom_tooltip = deposed_emperor_start_incident_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
+			}
+		}
+	}
+}
+
+#Incident Event
+country_event = {
+	id = imperial_schism_events.1
+	title = imperial_schism_events.1.t
+	desc = incident_emperor_deposed_member_alert
+	picture = HRE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		set_global_flag = imperial_schism_incident_happened
+		hidden_effect = {
+			#Capture all of the AI votes using an event 1 day before the incident ends so we have some way of checking how the AI voted.
+			#And before you ask, no, PDX didn't include a method of checking how the AI voted during an incident. It would've made our lives a lot easier though, wouldn't it?
+			country_event = {
+				id = imperial_schism_events.2
+				days = 364
+			}
+			# Get human votes because we got no other way of checking how a human voted.
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					ai = no
+				}
+				country_event = {
+					id = imperial_schism_events.11
+				}
+			}
+		}
+	}
+	after = {
+		event_target:Emperor = {
+			set_variable = {
+				which = sum_of_votes
+				which = leave_votes
+			}
+			change_variable = {
+				which = sum_of_votes
+				which = stay_votes
+			}
+			set_variable = {
+				which = leave_percentage
+				which = leave_votes
+			}
+			divide_variable = {
+				which = leave_percentage
+				which = sum_of_votes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = leave_percentage
+						value = 0.67
+					}
+				}
+				#Leave majority event
+				country_event = {
+					id = imperial_schism_events.4
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = leave_percentage
+						value = 0.33
+					}
+				}
+				#No Clear Winner - Possible Civil War Event
+				country_event = {
+					id = imperial_schism_events.6
+				}
+			}
+			else = {
+				#Stay Majority Event
+				country_event = {
+					id = imperial_schism_events.9
+				}
+			}
+		}
+	}
+	option = {
+		name = imperial_schism_events.1.a
+		custom_tooltip = voting_system_tooltip
+		#Dissolve Vote
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = imperial_schism_events.1.b
+		custom_tooltip = voting_system_tooltip
+		#Stay vote
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Dispatcher of AI voting mechanism
+country_event = {
+	id = imperial_schism_events.2
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = AB_BATTLE_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		event_target:Emperor = {
+			set_variable = {
+				which = leave_votes
+				value = 0
+			}
+			set_variable = {
+				which = stay_votes
+				value = 0
+			}
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				ai = yes
+			}
+			country_event = {
+				id = imperial_schism_events.3
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
+
+#Sneaky Way of checking how AI votes
+country_event = {
+	id = imperial_schism_events.3
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = GFX_imperial_schism_events.3
+	is_triggered_only = yes
+	option = {
+		name = AB_EMPTY
+		#DISSOLVE EMPIRE
+		set_country_flag = wants_to_leave_hre
+		event_target:Emperor = {
+			change_variable = {
+				which = leave_votes
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10000
+				emperor = {
+					has_country_flag = debug_leave_majority
+				}
+			}
+			modifier = {
+				factor = 1000
+				is_emperor = no
+				event_target:Emperor = {
+					is_bankrupt = yes
+				}
+			}
+			modifier = {
+				factor = 1000
+				is_emperor = no
+				event_target:Emperor = {
+					has_country_modifier = dishonoured_alliance
+				}
+			}
+			modifier = {
+				factor = 100
+				is_emperor = no
+				is_heretic_hre_prince = yes
+			}
+			modifier = {
+				factor = 100
+				is_emperor = no
+				is_great_power = yes
+			}
+			modifier = {
+				factor = 100
+				is_emperor = no
+				military_strength = {
+					who = event_target:Emperor
+					value = 1
+				}
+			}
+			modifier = {
+				factor = 10
+				is_emperor = no
+				NOT = {
+					has_opinion = {
+						who = event_target:Emperor
+						value = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				is_emperor = no
+				num_of_allies = 4
+			}
+			modifier = {
+				factor = 5
+				is_emperor = no
+				OR = {
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				is_emperor = no
+				OR = {
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_rivalry
+					}
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_rebellious
+					}
+					ai_attitude = {
+						who = event_target:Emperor
+						attitude = attitude_disloyal
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				is_emperor = no
+				calc_true_if = {
+					all_province = {
+						is_part_of_hre = yes
+						OR = {
+							is_claim = PREV
+							is_permanent_claim = PREV
+						}
+					}
+					amount = 10
+				}
+			}
+			modifier = {
+				factor = 20
+				is_emperor = no
+				calc_true_if = {
+					all_province = {
+						is_part_of_hre = yes
+						OR = {
+							is_claim = PREV
+							is_permanent_claim = PREV
+						}
+					}
+					amount = 20
+				}
+			}
+			modifier = {
+				factor = 5
+				is_emperor = no
+				has_opinion = {
+					who = event_target:dude_who_deposed_emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 15
+				is_emperor = no
+				alliance_with = event_target:dude_who_deposed_emperor
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		#KEEP EMPIRE
+		set_country_flag = wants_to_keep_hre
+		event_target:Emperor = {
+			change_variable = {
+				which = stay_votes
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10000
+				emperor = {
+					has_country_flag = debug_stay_majority
+				}
+			}
+			modifier = {
+				factor = 1000
+				is_emperor = yes
+			}
+			modifier = {
+				factor = 5
+				is_elector = yes
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_rivalry
+					}
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_rebellious
+					}
+					ai_attitude = {
+						who = event_target:dude_who_deposed_emperor
+						attitude = attitude_disloyal
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				has_opinion = {
+					who = event_target:Emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 5
+				alliance_with = event_target:Emperor
+			}
+		}
+	}
+}
+
+#Leave Majority Event
+country_event = {
+	id = imperial_schism_events.4
+	title = imperial_schism_events.4.t
+	desc = {
+		desc = imperial_schism_events.4.desc_majority
+		trigger = {
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+	}
+	desc = {
+		desc = imperial_schism_events.4.desc_backed_down
+		trigger = {
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+	}
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = imperial_schism_hre_dismantled
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+				}
+				country_event = {
+					id = imperial_schism_events.5
+				}
+			}
+		}
+	}
+	after = {
+		event_target:Emperor = {
+			set_country_flag = was_hre_emperor
+			dismantle_hre = yes
+		}
+	}
+	option = {
+		name = imperial_schism_events.4.a
+		if = {
+			limit = {
+				has_country_flag = hremperor_backed_down
+			}
+			add_prestige = -50
+			add_country_modifier = {
+				name = legacy_of_failure
+				duration = 36500
+			}
+		}
+		else = {
+			add_prestige = -25
+			add_country_modifier = {
+				name = legacy_of_failure
+				duration = 18250
+			}
+		}
+	}
+}
+
+#Prince event for Leave Majority Event
+country_event = {
+	id = imperial_schism_events.5
+	title = imperial_schism_events.5.t
+	desc = {
+		desc = imperial_schism_events.5.desc_majority
+		trigger = {
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+	}
+	desc = {
+		desc = imperial_schism_events.5.desc_backed_down
+		trigger = {
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+	}
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.5.a
+		trigger = {
+			has_voted_to_stay_hre = yes
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+		add_prestige = -5
+		add_country_modifier = {
+			name = foolish_optimism
+			duration = 10950
+		}
+	}
+	option = {
+		name = imperial_schism_events.5.a_backed_down
+		trigger = {
+			has_voted_to_stay_hre = yes
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+		add_prestige = -5
+		add_country_modifier = {
+			name = foolish_optimism
+			duration = 10950
+		}
+	}
+	option = {
+		name = imperial_schism_events.5.b
+		trigger = {
+			has_voted_to_leave_hre = yes
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+		add_prestige = 5
+		add_country_modifier = {
+			name = on_the_right_side_of_history
+			duration = 10950
+		}
+	}
+	option = {
+		name = imperial_schism_events.5.b_backed_down
+		trigger = {
+			has_voted_to_leave_hre = yes
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+		add_prestige = 5
+		add_country_modifier = {
+			name = on_the_right_side_of_history
+			duration = 10950
+		}
+	}
+}
+
+#No clear majority for staying or leaving
+country_event = {
+	id = imperial_schism_events.6
+	title = imperial_schism_events.6.t
+	desc = imperial_schism_events.6.d
+	picture = DIET_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_schism_events.6.a
+		add_imperial_influence = 10
+		hidden_effect = {
+			find_strongest_country_that_voted_to_leave_hre = {
+				event_target_name_to_save_as = strongest_hre_prince
+			}
+		}
+		declare_war_with_cb = {
+			casus_belli = cb_enforce_imperial_unity
+			who = event_target:strongest_hre_prince
+		}
+		set_global_flag = hre_schism_war_active
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					is_subject = no
+					NOT = {
+						tag = event_target:strongest_hre_prince
+					}
+				}
+				country_event = {
+					id = imperial_schism_events.7
+					days = 1
+					random = 42
+				}
+			}
+		}
+		ai_chance = {
+			factor = 9
+		}
+	}
+	option = {
+		name = imperial_schism_events.6.b
+		set_country_flag = hremperor_backed_down
+		custom_tooltip = emperor_backs_down_dissolves_hre_tooltip
+		custom_tooltip = hremperor_backed_down_diplo_penalty_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_stay_hre = yes
+				}
+				add_opinion = {
+					who = event_target:Emperor
+					modifier = hre_emperor_backed_down
+				}
+				add_trust = {
+					who = event_target:Emperor
+					value = -15
+				}
+			}
+		}
+		country_event = {
+			id = imperial_schism_events.4
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#WAR PROPOSITION EVENT
+country_event = {
+	id = imperial_schism_events.7
+	title = imperial_schism_events.7.t
+	desc = imperial_schism_events.7.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.7.a
+		join_all_offensive_wars_of = emperor
+		set_country_flag = joined_war_with_emperor
+		custom_tooltip = loyalist_victory_header_tooltip
+		tooltip = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_legitimacy_equivalent = {
+				amount = 50
+				republican_tradition = 25
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = bled_for_the_empire
+				duration = -1
+			}
+		}
+		custom_tooltip = loyalist_victory_relations_tooltip
+		custom_tooltip = loyalist_defeat_header_tooltip
+		tooltip = {
+			add_prestige = -25
+			add_legitimacy_equivalent = {
+				amount = -25
+				republican_tradition = -10
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = failed_the_emperor
+				duration = 10950
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_voted_to_stay_hre = yes
+			}
+		}
+	}
+	option = {
+		name = imperial_schism_events.7.b
+		join_all_defensive_wars_of = event_target:strongest_hre_prince
+		set_country_flag = joined_war_with_secessionists
+		custom_tooltip = secessionist_victory_header_tooltip
+		tooltip = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			add_legitimacy_equivalent = {
+				amount = 50
+				republican_tradition = 25
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = bled_for_freedom
+				duration = -1
+			}
+		}
+		custom_tooltip = secessionist_victory_relations_tooltip
+		custom_tooltip = secessionist_defeat_header_tooltip
+		tooltip = {
+			add_prestige = -100
+			add_legitimacy_equivalent = {
+				amount = -100
+				republican_tradition = -50
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = legacy_of_treason
+				duration = -1
+			}
+		}
+		custom_tooltip = secessionist_defeat_shattered_realm_tooltip
+		custom_tooltip = secessionist_defeat_sanctioned_tooltip
+		custom_tooltip = secessionist_defeat_elector_tooltip
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_voted_to_leave_hre = yes
+			}
+		}
+	}
+	option = {
+		name = imperial_schism_events.7.c
+		add_ruler_personality = craven_personality
+		add_prestige = -25
+	}
+}
+
+#Secessionist Victory - Leader
+country_event = {
+	id = imperial_schism_events.8
+	title = imperial_schism_events.8.t
+	desc = imperial_schism_events.8.d
+	picture = DIET_eventPicture
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					has_joined_secessionists_in_imperial_schism_war = yes
+				}
+				country_event = {
+					id = imperial_schism_events.15
+				}
+			}
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					has_joined_emperor_in_imperial_schism_war = yes
+				}
+				country_event = {
+					id = imperial_schism_events.16
+				}
+			}
+			emperor = {
+				country_event = {
+					id = imperial_schism_events.17
+					days = 1					#Avoids race condition with empire dissolving
+				}
+			}
+		}
+	}
+	option = {
+		name = imperial_schism_events.8.a
+		add_country_modifier = {
+			name = architect_of_sovereignty
+			duration = -1
+		}
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_splendor = 200
+		add_power_projection = {
+			type = dismantled_the_hre
+			amount = 25
+		}
+		
+		custom_tooltip = imperial_schism_events.8_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_leave_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_led_us_to_victory
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+	}
+}
+
+#Majority Vote to Stay Event
+country_event = {
+	id = imperial_schism_events.9
+	title = imperial_schism_events.9.t
+	desc = imperial_schism_events.9.d
+	picture = DIET_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_leave_hre = yes
+				}
+				country_event = {
+					id = imperial_schism_events.10
+				}
+			}
+		}
+	}
+	major = yes
+	option = {
+		name = imperial_schism_events.9.a
+		add_imperial_influence = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_country_modifier = {
+			name = a_union_reaffirmed
+			duration = 7300
+		}
+	}
+}
+
+#Majority Vote to Stay Event (Prince who voted leave)
+country_event = {
+	id = imperial_schism_events.10
+	title = imperial_schism_events.10.t
+	desc = imperial_schism_events.10.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.10.a
+		custom_tooltip = lose_opinion_with_voted_to_stay_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_stay_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_dislike_secessionists
+				}
+				add_trust = {
+					who = PREV
+					value = -10
+				}
+			}
+		}
+		add_ruler_modifier = {
+			name = questionable_loyalty
+			duration = -1
+		}
+		add_country_modifier = {
+			name = imperial_dissident
+			duration = 7300
+		}
+		add_prestige = -10
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -5
+		}
+	}
+}
+
+#Human Cast Vote Event
+country_event = {
+	id = imperial_schism_events.11
+	title = imperial_schism_events.11.t
+	desc = imperial_schism_events.11.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.11.a
+		set_country_flag = wants_to_keep_hre
+		hidden_effect = {
+			event_target:Emperor = {
+				change_variable = {
+					which = stay_votes
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = voting_system_tooltip
+	}
+	option = {
+		name = imperial_schism_events.11.b
+		set_country_flag = wants_to_leave_hre
+		hidden_effect = {
+			event_target:Emperor = {
+				change_variable = {
+					which = leave_votes
+					value = 1
+				}
+			}
+		}
+		custom_tooltip = voting_system_tooltip
+	}
+}
+
+#War Won - Emperor Preserved HRE
+country_event = {
+	id = imperial_schism_events.12
+	title = imperial_schism_events.12.t
+	desc = imperial_schism_events.12.d
+	picture = AB_CHARLEMAGNE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						has_joined_secessionists_in_imperial_schism_war = yes
+						tag = event_target:strongest_hre_prince
+					}
+					is_part_of_hre = yes
+				}
+				country_event = {
+					id = imperial_schism_events.13
+				}
+			}
+			every_country = {
+				limit = {
+					has_joined_emperor_in_imperial_schism_war = yes
+					is_part_of_hre = yes
+				}
+				country_event = {
+					id = imperial_schism_events.14
+				}
+			}
+		}
+	}
+	option = {
+		name = imperial_schism_events.12.a
+		add_imperial_influence = 100
+		custom_tooltip = hremperor_victory_relation_bonus_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_stay_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_led_us_to_victory
+				}
+				add_trust = {
+					who = PREV
+					value = 10
+				}
+			}
+		}
+		add_country_modifier = {
+			name = savior_of_the_empire
+			duration = -1
+		}
+		custom_tooltip = all_the_traitors_tooltip
+		tooltip = {
+			event_target:strongest_hre_prince = {
+				add_legitimacy_equivalent = {
+					amount = -100
+					republican_tradition = -50
+				}
+				add_prestige = -100
+				add_country_modifier = {
+					name = legacy_of_treason
+					duration = -1
+				}
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+				custom_tooltip = cant_declare_war_emperor_tooltip
+			}
+		}
+		custom_tooltip = hremperor_victory_electors_tooltip
+		hidden_effect = {
+			every_elector = {
+				limit = {
+					has_joined_secessionists_in_imperial_schism_war = yes
+				}
+				elector = no
+			}
+		}
+	}
+}
+
+#Emperor Victory - Punishment for princes who fought in the war to leave
+country_event = {
+	id = imperial_schism_events.13
+	title = imperial_schism_events.13.t
+	desc = imperial_schism_events.13.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.13.a
+		add_legitimacy_equivalent = {
+			amount = -100
+			republican_tradition = -50
+		}
+		add_prestige = -100
+		add_country_modifier = {
+			name = legacy_of_treason
+			duration = -1
+		}
+		custom_tooltip = cant_declare_war_in_empire_tooltip
+		set_country_flag = hre_sanctioned_prince
+		release_all_possible_countries = yes
+		release_all_subjects = yes
+	}
+}
+
+#Emperor Victory - Reward for princes who fought in the war to preserve the empire
+country_event = {
+	id = imperial_schism_events.14
+	title = imperial_schism_events.14.t
+	desc = imperial_schism_events.14.d
+	picture = AB_CHARLEMAGNE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.14.a
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_legitimacy_equivalent = {
+			amount = 50
+			republican_tradition = 25
+		}
+		reverse_add_opinion = {
+			who = emperor
+			modifier = hre_honored_oath
+		}
+		emperor = {
+			add_trust = {
+				who = PREV
+				value = 10
+			}
+		}
+		add_country_modifier = {
+			name = bled_for_the_empire
+			duration = -1
+		}
+	}
+}
+
+#Secessionist Victory - Secessionist Princes Reward Event
+country_event = {
+	id = imperial_schism_events.15
+	title = imperial_schism_events.15.t
+	desc = imperial_schism_events.15.d
+	picture = DIET_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.15.a
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_legitimacy_equivalent = {
+			amount = 50
+			republican_tradition = 25
+		}
+		custom_tooltip = opinion_with_other_secessionist_princes_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_leave_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_fought_for_freedom
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		add_country_modifier = {
+			name = bled_for_freedom
+			duration = -1
+		}
+	}
+}
+
+#Secessionist Victory - Emperor's Supporters Punishment
+country_event = {
+	id = imperial_schism_events.16
+	title = imperial_schism_events.16.t
+	desc = imperial_schism_events.16.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.16.a
+		add_prestige = -25
+		add_legitimacy_equivalent = {
+			amount = -25
+			republican_tradition = -10
+		}
+		add_country_modifier = {
+			name = failed_the_emperor
+			duration = 10950
+		}
+	}
+}
+
+#Secessionist Victory - Emperor's Punishment
+country_event = {
+	id = imperial_schism_events.17
+	title = imperial_schism_events.17.t
+	desc = imperial_schism_events.17.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_schism_events.17.a
+		add_prestige = -50
+		add_legitimacy = -50
+		add_country_modifier = {
+			name = legacy_of_failure
+			duration = 36500
+		}
+		dismantle_hre = yes
+		hidden_effect = {
+			set_global_flag = imperial_schism_hre_dismantled
+		}
+	}
+}
+
+## White Peace/ Stupid AI Didn't Pick One of the Peace Options to Enforce Unity/Dissolve HRE ##
+#White Peace: Secessionist Event
+country_event = {
+	id = imperial_schism_events.18
+	title = imperial_schism_events.18.t
+	desc = imperial_schism_events.18.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.18.a
+		custom_tooltip = we_and_our_subjects_leave_hre_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				set_in_empire = no
+			}
+			set_in_empire = no
+			every_subject_country = {
+				every_owned_province = {
+					set_in_empire = no
+				}
+				set_in_empire = no
+			}
+		}
+		add_prestige = 5
+	}
+}
+
+#For the princes that sided with emperor when neither side could achieve victory
+country_event = {
+	id = imperial_schism_events.19
+	title = imperial_schism_events.19.t
+	desc = imperial_schism_events.19.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_schism_events.19.a
+		add_prestige = -5
+	}
+}
+
+#For the emperor when neither side could achieve victory
+country_event = {
+	id = imperial_schism_events.20
+	title = imperial_schism_events.19.t
+	desc = imperial_schism_events.19.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_schism_events.20.a
+		custom_tooltip = secessionists_leave_tooltip
+		add_imperial_influence = -25
+		add_prestige = -5
+	}
+}
+
+#If the player captures the emperor and humiliates them.
+country_event = {
+	id = imperial_schism_events.21
+	title = imperial_schism_events.21.t
+	desc = imperial_schism_events.21.d
+	picture = GFX_imperial_schism_events.21
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ignore_for_select_new_emperor_effect
+			depose_the_pretender_effect = yes
+		}
+	}
+	option = {
+		name = imperial_schism_events.21.a
+		add_imperial_influence = -100
+		add_stability = -1
+		add_prestige = -25
+		add_legitimacy = -50
+		add_country_modifier = {
+			name = forcibly_deposed_by_outside_power
+			duration = 9125
+		}
+		custom_tooltip = deposed_emperor_start_incident_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = imperial_schism_incident_happened
+					}
+				}
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
+			}
+		}
+	}
+}

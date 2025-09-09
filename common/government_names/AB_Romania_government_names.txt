@@ -1,0 +1,30 @@
+romanian_government_name = {
+	trigger = {
+		culture_group = romanian_culture_group
+	}
+	rank = {
+		1 = romanian_duchy
+		2 = romanian_kingdom
+		3 = romanian_empire
+	}
+	ruler_male = {
+		1 = romanian_duke
+		2 = romanian_king
+		3 = romanian_emperor
+	}
+	ruler_female = {
+		1 = romanian_duchess
+		2 = romanian_queen
+		3 = romanian_empress
+	}
+	heir_male = {
+		1 = romanian_duchy_heir_male
+		2 = romanian_kingdom_heir_male
+		3 = romanian_empire_heir_male
+	}
+	heir_female = {
+		1 = romanian_duchy_heir_female
+		2 = romanian_kingdom_heir_female
+		3 = romanian_empire_heir_female
+	}
+}

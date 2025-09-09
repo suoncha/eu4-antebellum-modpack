@@ -1,0 +1,57 @@
+government = monarchy
+government_rank = 1
+primary_culture = Wallachian
+religion = orthodox
+technology_group = eastern
+capital = 161# Tîrgoviste
+add_government_reform = wallachian_voivodate
+set_estate_privilege = estate_nobles_dominance_of_the_boierime
+set_estate_privilege = estate_nobles_nobility_primacy
+set_estate_privilege = estate_nobles_supremacy_over_crown
+set_variable = {
+	which = estate_purges_amount
+	value = 0
+}
+set_variable = {
+	which = rem_num_elected
+	value = 0
+}
+set_variable = {
+	which = rem_parliament_issues_passed
+	value = 0
+}
+set_variable = {
+	which = number_of_rulers_impaled
+	value = 0
+}
+set_variable = {
+	which = wal_number_of_provinces_razed
+	value = 0
+}
+1436.12.1 = {
+	monarch = {
+		name = "Vlad II"
+		dynasty = "Draculesti"
+		birth_date = 1390.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = bold_fighter_personality
+}
+
+1436.12.1 = {
+	heir = {
+		name = "Vlad"
+		monarch_name = "Vlad III"
+		dynasty = "Draculesti"
+		birth_date = 1434.5.5
+		death_date = 1470.8.8
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+	add_heir_personality = cruel_personality
+}

@@ -1,0 +1,2056 @@
+reduce_stability = {
+	tooltip = {
+		add_stability = -$amount$
+	}
+	custom_tooltip = reduce_stability_less_than_neg_3_tooltip
+	hidden_effect = {
+		for = {
+			amount = $amount$
+			effect = "reduce_stability_or_adm_power = yes"
+		}
+	}
+}
+
+remove_all_rebels_in_province = {
+	kill_units = {
+		who = REB
+		type = infantry
+		amount = 9001
+	}
+	kill_units = {
+		who = REB
+		type = cavalry
+		amount = 9001
+	}
+	kill_units = {
+		who = REB
+		type = artillery
+		amount = 9001
+	}
+}
+
+#Adds permanent claims on all neighboring provinces that can be crossed on land from our country.
+#Does not include sea tiles, wasteland provinces, or uncolonized provinces.
+add_permanent_claim_on_all_neighboring_provinces = {
+	custom_tooltip = add_permanent_claim_on_all_neighboring_provinces_tooltip
+	hidden_effect = {
+		every_neighbor_province = {
+			limit = {
+				is_sea = no
+				is_wasteland = no
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+free_up_bad_ruler_personality_if_full = {
+	custom_tooltip = free_up_bad_ruler_personality_if_full_tooltip
+	hidden_effect = {
+		get_number_of_ruler_personalities = {
+			var_name = num_of_ruler_personalities
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = num_of_ruler_personalities
+					value = 3
+				}
+			}
+			remove_one_bad_ruler_personality = yes
+		}
+	}
+}
+
+#Finds the number of personalities the ruler has, and saves it to the COUNTRY scope as variable "num_of_ruler_personalities"
+get_number_of_ruler_personalities = {
+	set_variable = {
+		which = $var_name$
+		value = 0
+	}
+	# Vanilla Personalities
+	check_for_personality = {
+		ruler_personality = just_personality
+	}
+	check_for_personality = {
+		ruler_personality = righteous_personality
+	}
+	check_for_personality = {
+		ruler_personality = tolerant_personality
+	}
+	check_for_personality = {
+		ruler_personality = kind_hearted_personality
+	}
+	check_for_personality = {
+		ruler_personality = free_thinker_personality
+	}
+	check_for_personality = {
+		ruler_personality = well_connected_personality
+	}
+	check_for_personality = {
+		ruler_personality = calm_personality
+	}
+	check_for_personality = {
+		ruler_personality = careful_personality
+	}
+	check_for_personality = {
+		ruler_personality = secretive_personality
+	}
+	check_for_personality = {
+		ruler_personality = intricate_web_weaver_personality
+	}
+	check_for_personality = {
+		ruler_personality = fertile_personality
+	}
+	check_for_personality = {
+		ruler_personality = well_advised_personality
+	}
+	check_for_personality = {
+		ruler_personality = benevolent_personality
+	}
+	check_for_personality = {
+		ruler_personality = zealot_personality
+	}
+	check_for_personality = {
+		ruler_personality = pious_personality
+	}
+	check_for_personality = {
+		ruler_personality = lawgiver_personality
+	}
+	check_for_personality = {
+		ruler_personality = midas_touched_personality
+	}
+	check_for_personality = {
+		ruler_personality = incorruptible_personality
+	}
+	check_for_personality = {
+		ruler_personality = architectural_visionary_personality
+	}
+	check_for_personality = {
+		ruler_personality = scholar_personality
+	}
+	check_for_personality = {
+		ruler_personality = entrepreneur_personality
+	}
+	check_for_personality = {
+		ruler_personality = industrious_personality
+	}
+	check_for_personality = {
+		ruler_personality = expansionist_personality
+	}
+	check_for_personality = {
+		ruler_personality = charismatic_negotiator_personality
+	}
+	check_for_personality = {
+		ruler_personality = silver_tongue_personality
+	}
+	check_for_personality = {
+		ruler_personality = conqueror_personality
+	}
+	check_for_personality = {
+		ruler_personality = tactical_genius_personality
+	}
+	check_for_personality = {
+		ruler_personality = bold_fighter_personality
+	}
+	check_for_personality = {
+		ruler_personality = strict_personality
+	}
+	check_for_personality = {
+		ruler_personality = inspiring_leader_personality
+	}
+	check_for_personality = {
+		ruler_personality = martial_educator_personality
+	}
+	check_for_personality = {
+		ruler_personality = navigator_personality
+	}
+	check_for_personality = {
+		ruler_personality = fierce_negotiator_personality
+	}
+	check_for_personality = {
+		ruler_personality = babbling_buffoon_personality
+	}
+	check_for_personality = {
+		ruler_personality = embezzler_personality
+	}
+	check_for_personality = {
+		ruler_personality = infertile_personality
+	}
+	check_for_personality = {
+		ruler_personality = drunkard_personality
+	}
+	check_for_personality = {
+		ruler_personality = sinner_personality
+	}
+	check_for_personality = {
+		ruler_personality = greedy_personality
+	}
+	check_for_personality = {
+		ruler_personality = cruel_personality
+	}
+	check_for_personality = {
+		ruler_personality = naive_personality
+	}
+	check_for_personality = {
+		ruler_personality = craven_personality
+	}
+	check_for_personality = {
+		ruler_personality = loose_lips_personality
+	}
+	check_for_personality = {
+		ruler_personality = obsessive_perfectionist_personality
+	}
+	check_for_personality = {
+		ruler_personality = malevolent_personality
+	}
+	check_for_personality = {
+		ruler_personality = immortal_personality
+	}
+	check_for_personality = {
+		ruler_personality = reformist_personality
+	}
+	check_for_personality = {
+		ruler_personality = legendary_pirate_personality
+	}
+	check_for_personality = {
+		ruler_personality = humane_personality
+	}
+	check_for_personality = {
+		ruler_personality = petty_personality
+	}
+	check_for_personality = {
+		ruler_personality = legendary_conqueror_personality
+	}
+	check_for_personality = {
+		ruler_personality = great_engineer_personality
+	}
+	check_for_personality = {
+		ruler_personality = patron_of_arts_personality
+	}
+	check_for_personality = {
+		ruler_personality = papal_puppetmaster_personality
+	}
+	check_for_personality = {
+		ruler_personality = iron_crowned_personality
+	}
+	check_for_personality = {
+		ruler_personality = peasant_revolt_leader_personality
+	}
+	check_for_personality = {
+		ruler_personality = merchant_basileus_personality
+	}
+	check_for_personality = {
+		ruler_personality = orangist_stadholder_personality
+	}
+	check_for_personality = {
+		ruler_personality = reaver_personality
+	}
+	check_for_personality = {
+		ruler_personality = last_knight_personality
+	}
+	#AB Personalities
+	check_for_personality = {
+		ruler_personality = maidenless_personality
+	}
+	check_for_personality = {
+		ruler_personality = thunderer_personality
+	}
+	#PotionSeller AB Personalities
+	check_for_personality = {
+		ruler_personality = impaler_personality
+	}
+	check_for_personality = {
+		ruler_personality = impaler2_personality
+	}
+	check_for_personality = {
+		ruler_personality = impaler3_personality
+	}
+	check_for_personality = {
+		ruler_personality = augustus_personality
+	}
+}
+
+# Checks for individual personalities
+check_for_personality = {
+	if = {
+		limit = {
+			ruler_has_personality = $ruler_personality$
+		}
+		change_variable = {
+			which = num_of_ruler_personalities
+			value = 1
+		}
+	}
+}
+
+# Scripted effect to remove ONE bad ruler personality.
+# It checks for bad personalities in sequence. The first one found is removed.
+remove_one_bad_ruler_personality = {
+	if = {
+		limit = {
+			ruler_has_personality = babbling_buffoon_personality
+		}
+		remove_ruler_personality = babbling_buffoon_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = embezzler_personality
+		}
+		remove_ruler_personality = embezzler_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = infertile_personality
+		}
+		remove_ruler_personality = infertile_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = drunkard_personality
+		}
+		remove_ruler_personality = drunkard_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = sinner_personality
+		}
+		remove_ruler_personality = sinner_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = greedy_personality
+		}
+		remove_ruler_personality = greedy_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = cruel_personality
+		}
+		remove_ruler_personality = cruel_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = naive_personality
+		}
+		remove_ruler_personality = naive_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = craven_personality
+		}
+		remove_ruler_personality = craven_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = loose_lips_personality
+		}
+		remove_ruler_personality = loose_lips_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		remove_ruler_personality = obsessive_perfectionist_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = malevolent_personality
+		}
+		remove_ruler_personality = malevolent_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = petty_personality
+		}
+		remove_ruler_personality = petty_personality
+	}
+	else_if = {
+		limit = {
+			# From 01_ante_bellum.txt
+			ruler_has_personality = maidenless_personality
+		}
+		remove_ruler_personality = maidenless_personality
+	}
+}
+
+# !! THIS SCRIPTED EFFECT MUST BE CALLED WITHIN A COUNTRY SCOPE !!
+#
+# Purpose:
+# Determines the exact amount of a specific government power for the current country
+# and stores this value in a variable. This is necessary because EU4 scripting
+# does not allow direct export of government power values to variables; it only
+# allows checking if the power is greater than or equal to a certain amount.
+#
+# Parameters:
+#   $mechanic_type$: The 'mechanic_type' associated with the government power.                
+#   $power_type$:    The specific 'power_type' within that mechanic.    
+#
+# Output:
+#   Sets a variable in the current country scope named "$power_type$_amount".
+#   For example, if $power_type$ is "mandate", the variable will be "mandate_amount".
+#
+export_government_power_to_variable = {
+	set_variable = {
+		which = $power_type$_amount
+		value = 0
+	}
+	if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 100
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 100
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 99
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 99
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 98
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 98
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 97
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 97
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 96
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 96
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 95
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 95
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 94
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 94
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 93
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 93
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 92
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 92
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 91
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 91
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 90
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 90
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 89
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 89
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 88
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 88
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 87
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 87
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 86
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 86
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 85
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 85
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 84
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 84
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 83
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 83
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 82
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 82
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 81
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 81
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 80
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 80
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 79
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 79
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 78
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 78
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 77
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 77
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 76
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 76
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 75
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 75
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 74
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 74
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 73
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 73
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 72
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 72
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 71
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 71
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 70
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 70
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 69
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 69
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 68
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 68
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 67
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 67
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 66
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 66
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 65
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 65
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 64
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 64
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 63
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 63
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 62
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 62
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 61
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 61
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 60
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 60
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 59
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 59
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 58
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 58
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 57
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 57
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 56
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 56
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 55
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 55
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 54
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 54
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 53
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 53
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 52
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 52
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 51
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 51
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 50
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 50
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 49
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 49
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 48
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 48
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 47
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 47
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 46
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 46
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 45
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 45
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 44
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 44
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 43
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 43
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 42
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 42
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 41
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 41
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 40
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 40
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 39
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 39
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 38
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 38
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 37
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 37
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 36
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 36
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 35
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 35
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 34
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 34
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 33
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 33
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 32
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 32
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 31
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 31
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 30
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 30
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 29
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 29
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 28
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 28
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 27
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 27
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 26
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 26
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 25
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 25
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 24
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 24
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 23
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 23
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 22
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 22
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 21
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 21
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 20
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 20
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 19
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 19
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 18
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 18
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 17
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 17
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 16
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 16
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 15
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 15
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 14
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 14
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 13
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 13
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 12
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 12
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 11
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 11
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 10
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 10
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 9
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 9
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 8
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 8
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 7
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 7
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 6
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 6
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 5
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 5
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 4
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 4
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 3
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 2
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 2
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 1
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_government_power = {
+				mechanic_type = $mechanic_type$
+				power_type = $power_type$
+				value = 0
+			}
+		}
+		set_variable = {
+			which = $power_type$_amount
+			value = 0
+		}
+	}
+	# If for some reason none of the above matched (e.g., power is negative, which shouldn't happen for gov power)
+	# the variable will retain its initial value of 0.
+}
+
+set_faction_influence_to_0_effect = {
+	while = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 10
+			}
+		}
+		add_faction_influence = {
+			faction = $faction$
+			influence = -10
+			perform_readjustment = no
+		}
+	}
+	while = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 1
+			}
+		}
+		add_faction_influence = {
+			faction = $faction$
+			influence = -1
+			perform_readjustment = no
+		}
+	}
+}
+
+remove_all_buildings_effect = {
+	custom_tooltip = remove_all_buildings_tooltip
+	hidden_effect = {
+		remove_building = temple
+		remove_building = cathedral
+		remove_building = marketplace
+		remove_building = trade_depot
+		remove_building = stock_exchange
+		remove_building = greatmarket
+		remove_building = workshop
+		remove_building = counting_house
+		remove_building = factory
+		remove_building = barracks
+		remove_building = training_fields
+		remove_building = shipyard
+		remove_building = grand_shipyard
+		remove_building = dock
+		remove_building = drydock
+		remove_building = regimental_camp
+		remove_building = conscription_center
+		remove_building = courthouse
+		remove_building = town_hall
+		remove_building = fort_15th
+		remove_building = fort_16th
+		remove_building = fort_17th
+		remove_building = fort_18th
+		remove_building = fort_19th
+		remove_building = coastal_defence
+		remove_building = naval_battery
+		remove_building = wharf
+		remove_building = weapons
+		remove_building = textile
+		remove_building = tradecompany
+		remove_building = farm_estate
+		remove_building = mills
+		remove_building = furnace
+		remove_building = plantations
+		remove_building = ramparts
+		remove_building = soldier_households
+		remove_building = impressment_offices
+		remove_building = state_house
+		remove_building = early_road
+		remove_building = gravel_road
+		remove_building = royal_road
+		remove_building = macadam_road
+		remove_building = rail_road
+	}
+}
+
+add_country_modifier_until_end_of_current_age = {
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_discovery
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_reformation
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_absolutism
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_revolutions
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_imperialism
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_imperialism
+		}
+	}
+}
+
+halve_province_base_tax = {
+	custom_tooltip = halve_province_base_tax_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_adm_var
+			value = trigger_value:base_tax
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_adm_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_adm_var
+				value = 2
+			}
+			round_variable = {
+				which = province_adm_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_adm_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_adm_var
+				effect = add_base_tax
+			}
+		}
+	}
+}
+
+halve_province_base_production = {
+	custom_tooltip = halve_province_base_production_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_dip_var
+			value = trigger_value:base_production
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_dip_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_dip_var
+				value = 2
+			}
+			round_variable = {
+				which = province_dip_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_dip_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_dip_var
+				effect = add_base_production
+			}
+		}
+	}
+}
+
+halve_province_base_manpower = {
+	custom_tooltip = halve_province_base_manpower_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_mil_var
+			value = trigger_value:base_manpower
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_mil_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_mil_var
+				value = 2
+			}
+			round_variable = {
+				which = province_mil_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_mil_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_mil_var
+				effect = add_base_manpower
+			}
+		}
+	}
+}
+
+clean_add_country_modifier = {
+	if = {
+		limit = {
+			has_country_modifier = $name$
+		}
+		hidden_effect = {
+			remove_country_modifier = $name$
+		}
+	}
+	add_country_modifier = {
+		name = $name$
+		duration = $duration$
+	}
+}
+clean_add_province_modifier = {
+	if = {
+		limit = {
+			has_province_modifier = $name$
+		}
+		hidden_effect = {
+			remove_province_modifier = $name$
+		}
+	}
+	add_province_modifier = {
+		name = $name$
+		duration = $duration$
+	}
+}
+
+simple_unlock_issue = {
+	custom_tooltip = unlock_issue_$issue$_tt
+	hidden_effect = {
+		set_country_flag = unlocked_issue_$issue$
+	}
+}
+
+define_advisor_scaling_with_estate_attribute = {
+	custom_tooltip = $tooltip$
+	if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 95
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 75
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 50
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 30
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 2
+			cost_multiplier = 0.75
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $advisor_type$
+			skill = 1
+		}
+	}
+}
+
+#Scope: Province
+enable_bonus_development_on_dev_click_for_province = {
+	hidden_effect = {
+		set_province_flag = bonus_dev_click_province
+		set_variable = {
+			which = bonus_chance
+			value = $chance$
+		}
+	}
+}

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_global_edicts_commander_movement_config_events"
+		texturefile = "gfx/interface/events/global_edicts_commander_movement_config_events.dds"
+	}
+}

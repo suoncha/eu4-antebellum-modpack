@@ -1,0 +1,427 @@
+estate_nobles_dominance_of_the_boierime = {
+	icon = gfx_dominance_of_the_boierime
+	max_absolutism = -20
+	loyalty = 0.05
+	influence = 0.15
+	is_valid = {
+		is_or_was_wallachia = yes
+	}
+	can_select = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	can_revoke = {
+		has_country_modifier = wallachian_terror_purging_the_estate_elites
+	}
+	benefits = {
+		global_regiment_cost = -0.15
+		general_cost = -0.25
+		global_manpower_modifier = 0.15
+		diplomatic_upkeep = 1
+	}
+	conditional_modifier = {
+		is_bad = yes
+		modifier = {
+			max_absolutism = -10
+			min_autonomy = 10
+			global_tax_modifier = -0.1
+			nobles_influence_modifier = 0.1
+		}
+		trigger = {
+			OR = {
+				has_voivode_lost_wallachian_civil_war = yes
+				AND = {
+					has_country_flag = wallachian_civil_war_voivode_backded_down
+					NOT = {
+						had_country_flag = {
+							flag = wallachian_civil_war_voivode_backded_down
+							days = 18250
+						}
+					}
+				}
+			}
+		}
+	}
+	conditional_modifier = {
+		is_bad = yes
+		trigger = {
+			NOT = {
+				has_government_attribute = romanian_elective_monarchy
+			}
+		}
+		modifier = {
+			yearly_absolutism = -0.5
+			min_autonomy = 15
+			global_tax_modifier = -0.15
+			autonomy_change_time = 1
+			yearly_army_professionalism = -0.005
+		}
+	}
+	conditional_modifier = {
+		is_bad = no
+		trigger = {
+			has_government_attribute = no_absolutism_from_boier_privileges
+		}
+		modifier = {
+			max_absolutism = 20
+			nobles_influence_modifier = -0.15
+		}
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = -1000
+	}
+}
+
+estate_nobles_integrate_german_nobility = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -15
+	loyalty = -0.05
+	influence = 0.1
+	is_valid = {
+		has_country_flag = unlock_integrating_german_nobility_privilege
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = every_owned_germanic_province_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_integrated_germanic_nobility
+				duration = -1
+			}
+			custom_tooltip = integrate_german_nobility_crownland_tooltip
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = this_will_apply_to_all_german_provinces_conquered_tooltip
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					culture_group = germanic
+					culture_group = united_germanic
+				}
+			}
+			add_province_modifier = {
+				name = tuh_integrated_germanic_nobility
+				duration = -1
+			}
+			hidden_effect = {
+				export_to_variable = {
+					which = province_dev_var
+					value = development
+				}
+				multiply_variable = {
+					which = province_dev_var
+					value = 0.05
+				}
+				owner = {
+					set_variable = {
+						which = province_dev_var
+						which = PREV
+					}
+					variable_change_estate_land_share = {
+						estate = estate_nobles
+						var = province_dev_var
+					}
+				}
+			}
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = tuh_integrated_germanic_nobility
+			}
+			remove_province_modifier = tuh_integrated_germanic_nobility
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boier_privileges
+		}
+		modifier = {
+			max_absolutism = 15
+		}
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_burghers_wal_mountain_expansion = {
+	icon = privilege_dev_cost
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.05
+	land_share = 5
+	is_valid = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_wal_mountain_expansion
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				region = carpathia_region
+				AND = {
+					region = balkan_region
+					is_wallachian_mountain_expansion_privilege_extended_to_balkans = yes
+				}
+			}
+			OR = {
+				has_terrain = highlands
+				has_terrain = mountain
+				has_terrain = hills
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				is_wallachian_mountain_expansion_privilege_extended_to_balkans = yes
+			}
+			custom_tooltip = carpathia_and_balkan_expansion_on_granted_tooltip
+		}
+		else = {
+			custom_tooltip = carpathian_expansion_on_granted_tooltip
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					region = carpathia_region
+					AND = {
+						region = balkan_region
+						owner = {
+							is_wallachian_mountain_expansion_privilege_extended_to_balkans = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_terrain = mountain
+				}
+				add_province_modifier = {
+					name = wallachia_mountain_expansion
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_terrain = highlands
+				}
+				add_province_modifier = {
+					name = wallachia_highlands_expansion
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_terrain = hills
+				}
+				add_province_modifier = {
+					name = wallachia_hills_expansion
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = carpathian_expansion_on_revoked_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = wallachia_mountain_expansion
+					has_province_modifier = wallachia_highlands_expansion
+					has_province_modifier = wallachia_hills_expansion
+				}
+			}
+			remove_province_modifier = wallachia_mountain_expansion
+			remove_province_modifier = wallachia_highlands_expansion
+			remove_province_modifier = wallachia_hills_expansion
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = wallachia_mountain_expansion
+					has_province_modifier = wallachia_highlands_expansion
+					has_province_modifier = wallachia_hills_expansion
+				}
+			}
+			remove_province_modifier = wallachia_mountain_expansion
+			remove_province_modifier = wallachia_highlands_expansion
+			remove_province_modifier = wallachia_hills_expansion
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = highlands
+					has_terrain = hills
+				}
+				region = carpathia_region
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_cossacks_monopoly_on_steppe_herds = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -5
+	loyalty = 0.1
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+		}
+		any_owned_province = {
+			has_terrain = steppe
+			continent = europe
+			OR = {
+				trade_goods = livestock
+				trade_goods = wool
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = {
+				has_disaster = revolution
+			}
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				any_owned_province = {
+					has_terrain = steppe
+					continent = europe
+					OR = {
+						trade_goods = livestock
+						trade_goods = wool
+					}
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				has_terrain = steppe
+				continent = europe
+				OR = {
+					trade_goods = livestock
+					trade_goods = wool
+				}
+			}
+			custom_tooltip = monopoly_income_steppe_herdes_desc
+		}
+		custom_tooltip = estate_cossacks_monopoly_on_steppe_herds_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = estate_cossacks_monopoly_on_steppe_herds_mod_bonus
+				duration = 4380
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_terrain = steppe
+				continent = europe
+				OR = {
+					trade_goods = livestock
+					trade_goods = wool
+				}
+			}
+			clean_add_province_modifier = {
+				name = estate_cossacks_monopoly_on_steppe_herds_mod
+				duration = -1
+			}
+			clean_add_province_modifier = {
+				name = estate_cossacks_monopoly_on_steppe_herds_mod_bonus
+				duration = 4380
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_cossacks_monopoly_on_steppe_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_monopoly_on_steppe_herds_mod
+			}
+			remove_province_modifier = estate_cossacks_monopoly_on_steppe_herds_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_cossacks_monopoly_on_steppe_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_monopoly_on_steppe_herds_mod
+			}
+			remove_province_modifier = estate_cossacks_monopoly_on_steppe_herds_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		cavalry_cost = -0.1
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = {
+			id = AB_wallachia_events.44
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

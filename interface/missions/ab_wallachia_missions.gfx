@@ -1,0 +1,170 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_wal_compromise_with_the_boieri"
+		texturefile = "gfx/interface/missions/wal/wal_compromise_with_the_boieri.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_unite_the_vlachs"
+		texturefile = "gfx/interface/missions/wal/wal_unite_the_vlachs.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_crush_the_magyars"
+		texturefile = "gfx/interface/missions/wal/wal_crush_the_magyars.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_the_great_feast"
+		texturefile = "gfx/interface/missions/wal/wal_the_great_feast.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_liberate_transylvania"
+		texturefile = "gfx/interface/missions/wal/wal_liberate_transylvania.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_unite_the_principalities"
+		texturefile = "gfx/interface/missions/wal/wal_unite_the_principalities.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_drive_out_the_bulgars"
+		texturefile = "gfx/interface/missions/wal/wal_drive_out_the_bulgars.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_pontic_dominion"
+		texturefile = "gfx/interface/missions/wal/wal_pontic_dominion.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_seal_the_carpathians"
+		texturefile = "gfx/interface/missions/wal/wal_seal_the_carpathians.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_conquer_antioch"
+		texturefile = "gfx/interface/missions/wal/wal_conquer_antioch.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_conquer_egypt"
+		texturefile = "gfx/interface/missions/wal/wal_conquer_egypt.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_rome"
+		texturefile = "gfx/interface/missions/wal/wal_rome.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_carpathian_fortifications"
+		texturefile = "gfx/interface/missions/wal/wal_carpathian_fortifications.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_foundation_for_the_union"
+		texturefile = "gfx/interface/missions/wal/wal_foundation_for_the_union.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_union_ascendant"
+		texturefile = "gfx/interface/missions/wal/wal_union_ascendant.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_seat_of_the_metropolitan"
+		texturefile = "gfx/interface/missions/wal/wal_seat_of_the_metropolitan.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_romanian_churches"
+		texturefile = "gfx/interface/missions/wal/wal_romanian_churches.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_consecrate_dacia"
+		texturefile = "gfx/interface/missions/wal/wal_consecrate_dacia.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_mantle_of_constantine"
+		texturefile = "gfx/interface/missions/wal/wal_mantle_of_constantine.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_rome_mania"
+		texturefile = "gfx/interface/missions/wal/wal_rome_mania.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_develop_wallachia"
+		texturefile = "gfx/interface/missions/wal/wal_develop_wallachia.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_scaunul_domnesc"
+		texturefile = "gfx/interface/missions/wal/wal_scaunul_domnesc.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_moldavian_wineries"
+		texturefile = "gfx/interface/missions/wal/wal_moldavian_wineries.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_mountain_infrastructure"
+		texturefile = "gfx/interface/missions/wal/wal_mountain_infrastructure.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_renaissance"
+		texturefile = "gfx/interface/missions/wal/wal_renaissance.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_heart_of_orthodox_world"
+		texturefile = "gfx/interface/missions/wal/wal_heart_of_orthodox_world.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_mare_dacia"
+		texturefile = "gfx/interface/missions/wal/wal_mare_dacia.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_balkan_infrastructure"
+		texturefile = "gfx/interface/missions/wal/wal_balkan_infrastructure.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_salt_trade"
+		texturefile = "gfx/interface/missions/wal/wal_salt_trade.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_curtea_domneasca"
+		texturefile = "gfx/interface/missions/wal/wal_curtea_domneasca.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_vlach_culture"
+		texturefile = "gfx/interface/missions/wal/wal_vlach_culture.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_reform_admin"
+		texturefile = "gfx/interface/missions/wal/wal_reform_admin.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_education"
+		texturefile = "gfx/interface/missions/wal/wal_education.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_armata"
+		texturefile = "gfx/interface/missions/wal/wal_armata.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_military_infrastructure"
+		texturefile = "gfx/interface/missions/wal/wal_military_infrastructure.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_adopt_gunpowder"
+		texturefile = "gfx/interface/missions/wal/wal_adopt_gunpowder.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_draco_legions"
+		texturefile = "gfx/interface/missions/wal/wal_draco_legions.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_war_of_the_ten_houses"
+		texturefile = "gfx/interface/missions/wal/wal_war_of_the_ten_houses.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_take_control"
+		texturefile = "gfx/interface/missions/wal/wal_take_control.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_the_butcher"
+		texturefile = "gfx/interface/missions/wal/wal_the_butcher.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_absolute_control"
+		texturefile = "gfx/interface/missions/wal/wal_absolute_control.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_the_final_lesson"
+		texturefile = "gfx/interface/missions/wal/wal_the_final_lesson.dds"
+	}
+}

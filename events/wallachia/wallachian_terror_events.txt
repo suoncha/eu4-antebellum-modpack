@@ -1,0 +1,1856 @@
+namespace = wallachian_terror_events
+#Initial capital fall event - impaler country
+country_event = {
+	id = wallachian_terror_events.0
+	title = wallachian_terror_events.0.t
+	desc = wallachian_terror_events.0.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_attempt_to_capture
+		trigger = {
+			is_ruler_impaler = no
+		}
+		#effect
+		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.1
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events_dont_capture
+		trigger = {
+			is_ruler_impaler = no
+		}
+		#effect
+		event_target:impaled_country = {
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_terror_severed_command
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+	option = {
+		#If ruler has Impaler personality, this is the only option lol
+		name = wallachian_terror_events_impaler_we_must_capture
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		highlight = yes
+		#effect
+		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.1
+				days = 1
+			}
+		}
+	}
+}
+
+#Capital captured - Impaled Country
+country_event = {
+	id = wallachian_terror_events.1
+	title = wallachian_terror_events.1.t
+	desc = wallachian_terror_events.1.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_run_away
+		ai_chance = {
+			factor = 10
+		}
+		if = {
+			limit = {
+				event_target:impaler_country = {
+					full_idea_group = spy_ideas
+				}
+			}
+			#Capture
+			event_target:impaler_country = {
+				country_event = {
+					id = wallachian_terror_events.2
+				}
+			}
+		}
+		else = {
+			random_list = {
+				10 = {
+					modifier = {
+						OR = {
+							ruler_has_personality = calm_personality
+							ruler_has_personality = careful_personality
+						}
+						factor = 1.5
+					}
+					modifier = {
+						ruler_has_personality = tactical_genius_personality
+						factor = 3
+					}
+					#Escape
+					hidden_effect = {
+						event_target:impaler_country = {
+							country_event = {
+								id = wallachian_terror_events.3
+								days = 1
+							}
+						}
+					}
+					country_event = {
+						id = wallachian_terror_events.4
+					}
+				}
+				90 = {
+					#Capture
+					event_target:impaler_country = {
+						country_event = {
+							id = wallachian_terror_events.2
+						}
+					}
+					modifier = {
+						OR = {
+							ruler_has_personality = loose_lips_personality
+							ruler_has_personality = babbling_buffoon_personality
+							ruler_has_personality = naive_personality
+						}
+						factor = 1.1
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events_go_down_fighting
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				ruler_has_personality = craven_personality
+			}
+		}
+		random_list = {
+			70 = {
+				#die fighting
+				country_event = {
+					id = wallachian_terror_events.5
+				}
+			}
+			30 = {
+				#Capture
+				event_target:impaler_country = {
+					country_event = {
+						id = wallachian_terror_events.2
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events_secret_passage
+		highlight = yes
+		trigger = {
+			ruler_has_personality = secretive_personality
+		}
+		#100% escape
+		hidden_effect = {
+			event_target:impaler_country = {
+				country_event = {
+					id = wallachian_terror_events.3
+					days = 1
+				}
+			}
+		}
+		country_event = {
+			id = wallachian_terror_events.6
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+#Captured - Impaler Event - Wallachia
+country_event = {
+	id = wallachian_terror_events.2
+	title = wallachian_terror_events.2.t
+	desc = wallachian_terror_events.2.d
+	picture = GFX_wallachian_terror_events.2
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.2.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		wallachian_terror_impalement_effect = yes
+	}
+	option = {
+		name = wallachian_terror_events.2.b
+		trigger = {
+			is_ruler_impaler = no
+			NOT = {
+				event_target:impaled_country = {
+					tag = event_target:retribution_leader
+				}
+			}
+		}
+		wallachian_terror_humiliation_effect = yes
+	}
+	option = {
+		name = wallachian_terror_events.2.c
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		highlight = yes
+		wallachian_terror_impalement_effect = yes
+		# Normally I'd just put the special flavor for impaling certain countries in wallachian_terror_special_country_impalement_effects,
+		# but the flavor I want to implement takes up so much space in a tooltip that I need to put it inside of an event. Unfortunately, calling an event
+		# from a scripted effect causes the game to shit itself. Maybe it's because I'm calling it like this: event -> scripted effect -> event? Anyway, I know
+		# this shit isn't an elegant solution but it's the only way it'll work lol.
+		if = {
+			limit = {
+				event_target:impaled_country = {
+					is_or_was_tag = {
+						tag = ADU
+					}
+				}
+			}
+			country_event = {
+				id = wallachian_terror_events.15
+			}
+			event_target:impaled_country = {
+				country_event = {
+					id = wallachian_terror_events.14
+				}
+			}
+		}
+	}
+}
+
+#Escaped - Impaler Event
+country_event = {
+	id = wallachian_terror_events.3
+	title = wallachian_terror_events.3.t
+	desc = wallachian_terror_events.3.d
+	picture = GFX_wallachian_terror_events.3
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_they_escaped
+		trigger = {
+			is_ruler_impaler = no
+		}
+		add_prestige = -10
+		change_terror = {
+			value = -2
+			scaled_with_gain_modifier = no
+		}
+	}
+	option = {
+		name = wallachian_terror_events_they_escaped_impaler
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		add_prestige = -10
+		add_manpower = -2
+		add_country_modifier = {
+			name = wallachian_terror_senseless_killing_of_our_men
+			duration = 1825
+		}
+		custom_tooltip = wallachian_terror_events_they_escaped_impaler_courtier_death_tooltip
+		add_manpower = -0.001
+		add_country_modifier = {
+			name = wallachian_terror_advisors_avoid_us
+			duration = 1825
+		}
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Escaped - Impaled Event
+country_event = {
+	id = wallachian_terror_events.4
+	title = wallachian_terror_events.4.t
+	desc = wallachian_terror_events.4.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_impaled_escaped
+		add_prestige = 10
+		capital_scope = {
+			add_province_modifier = {
+				name = wallachian_terror_leadership_in_exile
+				duration = -1
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+}
+
+#Fight to the death - Impaled Event
+country_event = {
+	id = wallachian_terror_events.5
+	title = wallachian_terror_events.5.t
+	desc = wallachian_terror_events.5.d
+	picture = WHITE_MOUNTAIN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_fight_to_the_death_option
+		kill_heir = {
+			allow_new_heir = no
+		}
+		kill_consort = yes
+		kill_ruler = yes
+		add_stability = -1
+		add_war_exhaustion = 3
+		add_prestige = 15
+		hidden_effect = {
+			event_target:impaler_country = {
+				country_event = {
+					id = wallachian_terror_events.51
+				}
+			}
+		}
+	}
+}
+
+#Fight to the death - Impaler Event
+country_event = {
+	id = wallachian_terror_events.51
+	title = wallachian_terror_events.51.t
+	desc = wallachian_terror_events.51.d
+	picture = WHITE_MOUNTAIN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_fight_to_the_death_impaler_option
+		add_prestige = 5
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = no
+		}
+	}
+}
+
+#Escaped - Impaled Event Secret Passage
+country_event = {
+	id = wallachian_terror_events.6
+	title = wallachian_terror_events.6.t
+	desc = wallachian_terror_events.6.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_impaled_escaped_secret_passage
+		add_adm_power = 20
+		add_dip_power = 20
+		add_mil_power = 20
+		add_prestige = 5
+		capital_scope = {
+			add_province_modifier = {
+				name = wallachian_terror_leadership_in_exile
+				duration = -1
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+}
+
+#Impaled event for impaled country
+country_event = {
+	id = wallachian_terror_events.7
+	title = wallachian_terror_events.7.t
+	desc = wallachian_terror_events.7.d
+	picture = IMPALED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_impaled_country_impaled
+		add_prestige = -20
+		add_legitimacy_equivalent = {
+			amount = -50
+			republican_tradition = -30
+		}
+		add_war_exhaustion = 5
+		add_stability = -2
+		add_country_modifier = {
+			name = wallachian_terror_decapitated_monarchy
+			duration = 3650
+		}
+	}
+}
+
+#Humiliation Event - Impaled Country
+country_event = {
+	id = wallachian_terror_events.8
+	title = wallachian_terror_events.8.t
+	desc = wallachian_terror_events.8.d
+	picture = GFX_wallachian_terror_events.8
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events_impaled_country_humiliated
+		add_prestige = -20
+		add_legitimacy_equivalent = {
+			amount = -20
+			republican_tradition = -10
+		}
+		if = {
+			limit = {
+				event_target:impaler_country = {
+					is_rival = PREV
+				}
+			}
+			add_power_projection = {
+				type = humiliated_by_rival
+				amount = -30
+			}
+		}
+		else = {
+			add_power_projection = {
+				type = wallachian_terror_ruler_humiliated
+				amount = -15
+			}
+		}
+		add_country_modifier = {
+			name = wallachian_terror_humiliated_ruler
+			duration = 3650
+		}
+		every_subject_country = {
+			add_liberty_desire = 15
+		}
+		add_opinion = {
+			who = event_target:impaler_country
+			modifier = wallachian_terror_humiliated_us_opinion
+		}
+	}
+}
+
+#Emperor failed the empire event.
+country_event = {
+	id = wallachian_terror_events.9
+	title = wallachian_terror_events.9.t
+	desc = wallachian_terror_events.9.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachian_terror_emperor_failed_to_protect_prince
+		wallachian_terror_hre_emperor_failed_to_protect_effect = yes
+	}
+}
+
+#Remove personality for Impaler
+country_event = {
+	id = wallachian_terror_events.10
+	title = wallachian_terror_events.10.t
+	desc = wallachian_terror_events.10.d
+	picture = GFX_wallachian_terror_events.10
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = replaced_ability
+				value = 1
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = replaced_ability
+					value = 1
+				}
+			}
+			change_terror = {
+				value = -30
+				scaled_with_gain_modifier = no
+			}
+			refund_terror_effect = yes
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.10.nevermind
+		hidden_effect = {
+			set_variable = {
+				which = replaced_ability
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = humane_personality
+		trigger = {
+			ruler_has_personality = humane_personality
+		}
+		remove_ruler_personality = humane_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = petty_personality
+		trigger = {
+			ruler_has_personality = petty_personality
+		}
+		remove_ruler_personality = petty_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = legendary_conqueror_personality
+		trigger = {
+			ruler_has_personality = legendary_conqueror_personality
+		}
+		remove_ruler_personality = legendary_conqueror_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = great_engineer_personality
+		trigger = {
+			ruler_has_personality = great_engineer_personality
+		}
+		remove_ruler_personality = great_engineer_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = patron_of_arts_personality
+		trigger = {
+			ruler_has_personality = patron_of_arts_personality
+		}
+		remove_ruler_personality = patron_of_arts_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = peasant_revolt_leader_personality
+		trigger = {
+			ruler_has_personality = peasant_revolt_leader_personality
+		}
+		remove_ruler_personality = peasant_revolt_leader_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = papal_puppetmaster_personality
+		trigger = {
+			ruler_has_personality = papal_puppetmaster_personality
+		}
+		remove_ruler_personality = papal_puppetmaster_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = iron_crowned_personality
+		trigger = {
+			ruler_has_personality = iron_crowned_personality
+		}
+		remove_ruler_personality = iron_crowned_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = merchant_basileus_personality
+		trigger = {
+			ruler_has_personality = merchant_basileus_personality
+		}
+		remove_ruler_personality = merchant_basileus_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = orangist_stadholder_personality
+		trigger = {
+			ruler_has_personality = orangist_stadholder_personality
+		}
+		remove_ruler_personality = orangist_stadholder_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = reaver_personality
+		trigger = {
+			ruler_has_personality = reaver_personality
+		}
+		remove_ruler_personality = reaver_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = last_knight_personality
+		trigger = {
+			ruler_has_personality = last_knight_personality
+		}
+		remove_ruler_personality = last_knight_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = maidenless_personality
+		trigger = {
+			ruler_has_personality = maidenless_personality
+		}
+		remove_ruler_personality = maidenless_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = thunderer_personality
+		trigger = {
+			ruler_has_personality = thunderer_personality
+		}
+		remove_ruler_personality = thunderer_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = just_personality
+		trigger = {
+			ruler_has_personality = just_personality
+		}
+		remove_ruler_personality = just_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = righteous_personality
+		trigger = {
+			ruler_has_personality = righteous_personality
+		}
+		remove_ruler_personality = righteous_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = tolerant_personality
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		remove_ruler_personality = tolerant_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = kind_hearted_personality
+		trigger = {
+			ruler_has_personality = kind_hearted_personality
+		}
+		remove_ruler_personality = kind_hearted_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = free_thinker_personality
+		trigger = {
+			ruler_has_personality = free_thinker_personality
+		}
+		remove_ruler_personality = free_thinker_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = well_connected_personality
+		trigger = {
+			ruler_has_personality = well_connected_personality
+		}
+		remove_ruler_personality = well_connected_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = calm_personality
+		trigger = {
+			ruler_has_personality = calm_personality
+		}
+		remove_ruler_personality = calm_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = careful_personality
+		trigger = {
+			ruler_has_personality = careful_personality
+		}
+		remove_ruler_personality = careful_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = secretive_personality
+		trigger = {
+			ruler_has_personality = secretive_personality
+		}
+		remove_ruler_personality = secretive_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = intricate_web_weaver_personality
+		trigger = {
+			ruler_has_personality = intricate_web_weaver_personality
+		}
+		remove_ruler_personality = intricate_web_weaver_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = fertile_personality
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+		remove_ruler_personality = fertile_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = well_advised_personality
+		trigger = {
+			ruler_has_personality = well_advised_personality
+		}
+		remove_ruler_personality = well_advised_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = benevolent_personality
+		trigger = {
+			ruler_has_personality = benevolent_personality
+		}
+		remove_ruler_personality = benevolent_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = zealot_personality
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		remove_ruler_personality = zealot_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = pious_personality
+		trigger = {
+			ruler_has_personality = pious_personality
+		}
+		remove_ruler_personality = pious_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = lawgiver_personality
+		trigger = {
+			ruler_has_personality = lawgiver_personality
+		}
+		remove_ruler_personality = lawgiver_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = midas_touched_personality
+		trigger = {
+			ruler_has_personality = midas_touched_personality
+		}
+		remove_ruler_personality = midas_touched_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = incorruptible_personality
+		trigger = {
+			ruler_has_personality = incorruptible_personality
+		}
+		remove_ruler_personality = incorruptible_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = architectural_visionary_personality
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		remove_ruler_personality = architectural_visionary_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = scholar_personality
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+		remove_ruler_personality = scholar_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = entrepreneur_personality
+		trigger = {
+			ruler_has_personality = entrepreneur_personality
+		}
+		remove_ruler_personality = entrepreneur_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = industrious_personality
+		trigger = {
+			ruler_has_personality = industrious_personality
+		}
+		remove_ruler_personality = industrious_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = expansionist_personality
+		trigger = {
+			ruler_has_personality = expansionist_personality
+		}
+		remove_ruler_personality = expansionist_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = charismatic_negotiator_personality
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
+		remove_ruler_personality = charismatic_negotiator_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = silver_tongue_personality
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		remove_ruler_personality = silver_tongue_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = conqueror_personality
+		trigger = {
+			ruler_has_personality = conqueror_personality
+		}
+		remove_ruler_personality = conqueror_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = tactical_genius_personality
+		trigger = {
+			ruler_has_personality = tactical_genius_personality
+		}
+		remove_ruler_personality = tactical_genius_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = bold_fighter_personality
+		trigger = {
+			ruler_has_personality = bold_fighter_personality
+		}
+		remove_ruler_personality = bold_fighter_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = strict_personality
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+		remove_ruler_personality = strict_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = inspiring_leader_personality
+		trigger = {
+			ruler_has_personality = inspiring_leader_personality
+		}
+		remove_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = martial_educator_personality
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		remove_ruler_personality = martial_educator_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = navigator_personality
+		trigger = {
+			ruler_has_personality = navigator_personality
+		}
+		remove_ruler_personality = navigator_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = fierce_negotiator_personality
+		trigger = {
+			ruler_has_personality = fierce_negotiator_personality
+		}
+		remove_ruler_personality = fierce_negotiator_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = babbling_buffoon_personality
+		trigger = {
+			ruler_has_personality = babbling_buffoon_personality
+		}
+		remove_ruler_personality = babbling_buffoon_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = embezzler_personality
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		remove_ruler_personality = embezzler_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = infertile_personality
+		trigger = {
+			ruler_has_personality = infertile_personality
+		}
+		remove_ruler_personality = infertile_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = drunkard_personality
+		trigger = {
+			ruler_has_personality = drunkard_personality
+		}
+		remove_ruler_personality = drunkard_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = sinner_personality
+		trigger = {
+			ruler_has_personality = sinner_personality
+		}
+		remove_ruler_personality = sinner_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = greedy_personality
+		trigger = {
+			ruler_has_personality = greedy_personality
+		}
+		remove_ruler_personality = greedy_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = cruel_personality
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		remove_ruler_personality = cruel_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = naive_personality
+		trigger = {
+			ruler_has_personality = naive_personality
+		}
+		remove_ruler_personality = naive_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = craven_personality
+		trigger = {
+			ruler_has_personality = craven_personality
+		}
+		remove_ruler_personality = craven_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = loose_lips_personality
+		trigger = {
+			ruler_has_personality = loose_lips_personality
+		}
+		remove_ruler_personality = loose_lips_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = obsessive_perfectionist_personality
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		remove_ruler_personality = obsessive_perfectionist_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = malevolent_personality
+		trigger = {
+			ruler_has_personality = malevolent_personality
+		}
+		remove_ruler_personality = malevolent_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = immortal_personality
+		trigger = {
+			ruler_has_personality = immortal_personality
+		}
+		remove_ruler_personality = immortal_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = reformist_personality
+		trigger = {
+			ruler_has_personality = reformist_personality
+		}
+		remove_ruler_personality = reformist_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+	option = {
+		name = legendary_pirate_personality
+		trigger = {
+			ruler_has_personality = legendary_pirate_personality
+		}
+		remove_ruler_personality = legendary_pirate_personality
+		add_ruler_personality = impaler_personality
+		change_dip = -1
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+	}
+}
+
+#--HRE Emperor Event Series--#
+#Capture of Imperial Capital
+country_event = {
+	id = wallachian_terror_events.11
+	title = wallachian_terror_events.11.t
+	desc = {
+		desc = wallachian_terror_events.11_catholic_emperor_desc
+		trigger = {
+			hre_religion = catholic
+		}
+	}
+	desc = {
+		desc = wallachian_terror_events.11_non_catholic_emperor_desc
+		trigger = {
+			NOT = {
+				hre_religion = catholic
+			}
+		}
+	}
+	picture = GFX_wallachian_terror_events.11
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.11.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_depose_the_pretender
+				}
+			}
+			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
+		}
+		country_event = {
+			id = wallachian_terror_events.12
+			days = 1
+		}
+	}
+	option = {
+		name = wallachian_terror_events.11.b
+		trigger = {
+			is_ruler_impaler = no
+		}
+		event_target:impaled_country = {
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_terror_severed_command
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+	option = {
+		name = wallachian_terror_events.11.c
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		highlight = yes
+		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_depose_the_pretender
+				}
+			}
+			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
+		}
+		country_event = {
+			id = wallachian_terror_events.12
+			days = 1
+		}
+	}
+}
+
+#Emperor is Captured
+country_event = {
+	id = wallachian_terror_events.12
+	title = wallachian_terror_events.12.t
+	desc = wallachian_terror_events.12.desc
+	picture = GFX_wallachian_terror_events.12
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = wallachian_terror_captured_hre_emperor
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.13
+		}
+	}
+}
+
+#Emperor is Captured (CONT'D)
+country_event = {
+	id = wallachian_terror_events.13
+	title = wallachian_terror_events.13.t
+	desc = wallachian_terror_events.13.desc
+	picture = GFX_wallachian_terror_events.12
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.12
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		wallachian_terror_emperor_impalement_effect = yes
+		custom_tooltip = emperor_impalement_concequences_tooltip
+		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
+		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
+		hidden_effect = {
+			imperial_retribution_find_strongest_hre_prince = yes
+			event_target:retribution_leader = {
+				country_event = {
+					id = imperial_retribution_events.0
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.b
+		trigger = {
+			is_ruler_impaler = no
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_terror = yes
+		}
+		if = {
+			limit = {
+				is_rival = emperor
+			}
+			add_humiliation_reward = yes
+		}
+		set_country_flag = deposed_hre_emperor
+		custom_tooltip = wallachian_terror_forcibly_deposed_emperor_tooltip
+		add_adm_power = 10
+		add_dip_power = 10
+		add_mil_power = 10
+		add_country_modifier = {
+			name = true_roman_emperor
+			duration = -1
+		}
+		emperor = {
+			country_event = {
+				id = imperial_schism_events.21
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.c
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		wallachian_terror_emperor_impalement_effect = yes
+		custom_tooltip = emperor_impalement_concequences_tooltip
+		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
+		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
+		hidden_effect = {
+			imperial_retribution_find_strongest_hre_prince = yes
+			event_target:retribution_leader = {
+				country_event = {
+					id = imperial_retribution_events.0
+				}
+			}
+		}
+	}
+}
+
+#Boiled Andalusia's Leader: Andalusia's Event
+country_event = {
+	id = wallachian_terror_events.14
+	title = wallachian_terror_events.14.t
+	desc = wallachian_terror_events.14.d
+	picture = GFX_event_boiling
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					controlled_by = event_target:impaled_country
+					if = {
+						limit = {
+							owner = {
+								any_owned_province = {
+									controlled_by = owner
+									continent = europe
+								}
+							}
+						}
+						continent = europe
+					}
+				}
+				save_event_target_as = adu_volunteer_spawn_province
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.14.a
+		add_stability = -1
+		add_prestige = -10
+		add_yearly_manpower = 10
+		add_piety = 2
+		custom_tooltip = adu_volunteers_spawn_tooltip
+		hidden_effect = {
+			event_target:adu_volunteer_spawn_province = {
+				for = {
+					amount = 10
+					effect = "janissary_infantry = owner"
+				}
+				for = {
+					amount = 10
+					effect = "mamluks_infantry = owner"
+				}
+				for = {
+					amount = 10
+					effect = "mamluks_cavalry = owner"
+				}
+				for = {
+					amount = 15
+					effect = "artillery = owner"
+				}
+			}
+		}
+		add_country_modifier = {
+			name = adu_istishhad
+			duration = -1
+		}
+		add_country_modifier = {
+			name = adu_blind_fury
+			duration = 10950
+		}
+		custom_tooltip = adu_blind_fury_ends_when_at_peace_with_wal_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_andalusia_christian_reprisals = yes
+	}
+}
+
+#Boiled Andalusia's Leader: Impaler's Event
+country_event = {
+	id = wallachian_terror_events.15
+	title = wallachian_terror_events.15.t
+	desc = wallachian_terror_events.15.d
+	picture = GFX_event_boiling
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachian_terror_events.15.a
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		change_terror = {
+			value = 30
+			scaled_with_gain_modifier = yes
+		}
+		add_country_modifier = {
+			name = wallachia_boiled_adu
+			duration = -1
+		}
+		event_target:impaled_country = {
+			add_opinion = {
+				who = PREV
+				modifier = wallachia_desecrated_the_caliph_adu
+			}
+			add_trust = {
+				who = PREV
+				value = -100
+			}
+		}
+		custom_tooltip = wal_pissed_off_islam_tooltip
+		custom_tooltip = AB_EMPTY
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = muslim
+					NOT = {
+						tag = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = wallachia_desecrated_the_caliph
+				}
+				add_trust = {
+					who = PREV
+					value = -100
+				}
+			}
+		}
+		set_country_flag = boiled_adu
+		custom_tooltip = jihad_against_dajjal_tooltip
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = muslim_conquest_penalty_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_muslim_conquest_penalty
+				duration = 10950
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					religion_group = muslim
+				}
+			}
+			custom_tooltip = owned_muslim_province_penalty_tooltip
+			tooltip = {
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = sunni
+				}
+				spawn_rebels = {
+					size = 1
+					type = sunni_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+			every_owned_province = {
+				limit = {
+					religion = shiite
+				}
+				spawn_rebels = {
+					size = 1
+					type = shiite_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+			every_owned_province = {
+				limit = {
+					religion = ibadi
+				}
+				spawn_rebels = {
+					size = 1
+					type = ibadi_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+		}
+	}
+}
+
+#Capture of Papal Capital Event
+country_event = {
+	id = wallachian_terror_events.16
+	title = wallachian_terror_events.16.t
+	desc = wallachian_terror_events.16.d
+	picture = GFX_wallachian_terror_events.16
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.16.a
+	}
+}
+
+#Execution of the Pope Event Page 1
+country_event = {
+	id = wallachian_terror_events.17
+	title = wallachian_terror_events.17.t
+	desc = wallachian_terror_events.17.d
+	picture = GFX_event_pope_impaler
+	is_triggered_only = yes
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.18
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
+	}
+}
+
+#Execution of the Pope Event Page 2
+country_event = {
+	id = wallachian_terror_events.18
+	title = wallachian_terror_events.18.t
+	desc = wallachian_terror_events.18.d
+	picture = GFX_event_pope_impaler
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.17
+		}
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.19
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
+	}
+}
+
+#Execution of the Pope Event Page 3
+country_event = {
+	id = wallachian_terror_events.19
+	title = wallachian_terror_events.19.t
+	desc = wallachian_terror_events.19.d
+	picture = GFX_event_pope_impaler
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.18
+		}
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.20
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
+	}
+}
+
+#Execution of the Pope Event Page 4
+country_event = {
+	id = wallachian_terror_events.20
+	title = wallachian_terror_events.20.t
+	desc = {
+		desc = wallachian_terror_events.20.desc_impaler
+		trigger = {
+			is_ruler_impaler = yes
+		}
+	}
+	desc = {
+		desc = wallachian_terror_events.20.desc_non_impaler
+		trigger = {
+			is_ruler_impaler = no
+		}
+	}
+	picture = GFX_event_pope_impaler
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.19
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_impaler_option
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
+		wallachian_terror_pope_impalement_effect = yes
+	}
+	option = {
+		name = wallachian_terror_events.pope_non_impaler_option
+		trigger = {
+			is_ruler_impaler = no
+		}
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
+		wallachian_terror_pope_impalement_effect = yes
+	}
+}
+
+#Capture of Papal Capital
+country_event = {
+	id = wallachian_terror_events.21
+	title = wallachian_terror_events.21.t
+	desc = wallachian_terror_events.21.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.21_capture_pope
+		trigger = {
+			is_ruler_impaler = no
+		}
+		custom_tooltip = wallachian_terror_impale_pope_consequences_tooltip
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = wallachian_terror_events.17
+			days = 1
+		}
+	}
+	option = {
+		name = wallachian_terror_events.21_dont_capture_pope
+		trigger = {
+			is_ruler_impaler = no
+		}
+		PAP = {
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_terror_severed_command
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+	option = {
+		#If ruler has Impaler personality, this is the only option lol
+		name = wallachian_terror_events.21_capture_pope_impaler
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		highlight = yes
+		custom_tooltip = wallachian_terror_impale_pope_consequences_tooltip
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = wallachian_terror_events.17
+			days = 1
+		}
+	}
+}

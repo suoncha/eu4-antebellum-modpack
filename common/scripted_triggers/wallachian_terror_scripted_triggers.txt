@@ -1,0 +1,276 @@
+is_ruler_impaler = {
+	custom_trigger_tooltip = {
+		tooltip = is_ruler_impaler_tooltip
+		hidden_trigger = {
+			OR = {
+				ruler_has_personality = impaler_personality
+				ruler_has_personality = impaler2_personality
+				ruler_has_personality = impaler3_personality
+			}
+		}
+	}
+}
+
+has_wallachia_purged_the_estates = {
+	custom_trigger_tooltip = {
+		tooltip = has_wallachia_purged_the_estates_tooltip
+		has_country_flag = wallachian_terror_purged_estates
+	}
+}
+
+is_special_impaled_country = {
+	event_target:impaled_country = {
+		OR = {
+			is_or_was_tag = {
+				tag = event_target:retribution_leader
+			}
+			is_or_was_tag = {
+				tag = BUL				#Bulgaria
+			}
+			is_or_was_tag = {
+				tag = MGY				#Magyars
+			}
+			is_or_was_tag = {
+				tag = GLH				#Golden Horde
+			}
+			is_or_was_tag = {
+				tag = BYZ				#Byzantium
+			}
+			is_or_was_tag = {
+				tag = SEL				#Seljuks
+			}
+			is_or_was_tag = {
+				tag = VEN				#Venice
+			}
+			is_or_was_tag = {
+				tag = SIC				#Sicily
+			}
+			is_or_was_tag = {
+				tag = LOM				#Lombardy
+			}
+			is_or_was_tag = {
+				tag = NAZ				#Nizzarids
+			}
+			is_or_was_tag = {
+				tag = EGY				#Egypt
+			}
+			is_or_was_tag = {
+				tag = ABS				#Abbasids
+			}
+			is_or_was_tag = {
+				tag = PER				#Persia (Zoroastrian)
+			}
+			is_or_was_tag = {
+				tag = PRZ				#Persia (Muslim)
+			}
+			is_or_was_tag = {
+				tag = PRC				#Persia (Christian)
+			}
+			is_or_was_tag = {
+				tag = PMN				#Persia (Mani)
+			}
+			is_or_was_tag = {
+				tag = ADU				#Andalusia
+			}
+			tag = FRC			#Francia
+			is_or_was_tag = {
+				tag = FRA				#France
+			}
+			is_or_was_tag = {
+				tag = ENG				#England
+			}
+		}
+	}
+}
+
+#Flavor text trigger for the style of execution
+is_special_execution_country = {
+	event_target:impaled_country = {
+		OR = {
+			is_or_was_tag = {
+				tag = BYZ				#Byzantium
+			}
+			is_or_was_tag = {
+				tag = VEN				#Venice
+			}
+			is_or_was_tag = {
+				tag = SIC				#Sicily
+			}
+			is_or_was_tag = {
+				tag = LOM				#Lombardy
+			}
+			is_or_was_tag = {
+				tag = NAZ				#Nizzarids
+			}
+			is_or_was_tag = {
+				tag = EGY				#Egypt
+			}
+			is_or_was_tag = {
+				tag = ABS				#Abbasids
+			}
+			is_or_was_tag = {
+				tag = PER				#Persia (Zoroastrian)
+			}
+			is_or_was_tag = {
+				tag = PRZ				#Persia (Muslim)
+			}
+			is_or_was_tag = {
+				tag = PRC				#Persia (Christian)
+			}
+			is_or_was_tag = {
+				tag = PMN				#Persia (Mani)
+			}
+			is_or_was_tag = {
+				tag = ADU				#Andalusia
+			}
+			tag = FRC			#Francia
+			is_or_was_tag = {
+				tag = ENG				#England
+			}
+		}
+	}
+}
+
+has_impaled_bulgaria_ruler = {
+	has_country_flag = wallachia_impaled_bulgaria
+}
+
+has_impaled_magyars_ruler = {
+	has_country_flag = wallachia_impaled_magyars
+}
+
+has_impaled_golden_horde_ruler = {
+	has_country_flag = wallachia_impaled_golden_horde
+}
+
+has_impaled_byzantium_ruler = {
+	has_country_flag = wallachia_impaled_byzantium
+}
+
+has_impaled_retribution_leader = {
+	has_country_flag = wallachia_impaled_retribution_leader
+}
+
+has_impaled_seljuks_ruler = {
+	has_country_flag = wallachia_impaled_seljuks
+}
+
+has_impaled_venice_ruler = {
+	has_country_flag = wallachia_impaled_venice
+}
+
+has_impaled_sicily_ruler = {
+	has_country_flag = wallachia_impaled_sicily
+}
+
+has_impaled_lombardy_ruler = {
+	has_country_flag = wallachia_impaled_lombardy
+}
+
+has_impaled_nizzarids_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_nizzarids_ruler_tooltip
+		has_country_flag = wallachia_impaled_nizzarids
+	}
+}
+
+has_impaled_egypt_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_egypt_ruler_tooltip
+		has_country_flag = wallachia_impaled_egypt
+	}
+}
+
+has_impaled_abbasids_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_abbasids_ruler_tooltip
+		has_country_flag = wallachia_impaled_abbasids
+	}
+}
+
+has_impaled_pope = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_pope_tooltip
+		has_country_flag = wallachia_impaled_pope
+	}
+}
+
+has_impaled_persia_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_persia_ruler_tooltip
+		has_country_flag = wallachia_impaled_persia
+	}
+}
+
+has_impaled_andalusia_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_andalusia_ruler_tooltip
+		has_country_flag = wallachia_impaled_andalusia
+	}
+}
+
+has_boiled_andalusia_ruler = {
+	has_country_flag = boiled_adu
+}
+
+has_impaled_francia_ruler = {
+	has_country_flag = wallachia_impaled_francia
+}
+
+has_impaled_france_ruler = {
+	has_country_flag = wallachia_impaled_france
+}
+
+has_impaled_england_ruler = {
+	has_country_flag = wallachia_impaled_england
+}
+
+has_purged_the_elites_n_times = {
+	check_variable = {
+		which = estate_purges_amount
+		value = $n$
+	}
+}
+
+has_tirgoviste_princely_court_take_control_bonus = {
+	custom_trigger_tooltip = {
+		tooltip = has_tirgoviste_princely_court_take_control_bonus_tooltip
+		has_country_flag = wal_take_control_princely_court_bonus
+	}
+}
+
+has_impaled_n_rulers = {
+	check_variable = {
+		which = number_of_rulers_impaled
+		value = $n$
+	}
+}
+
+has_razed_n_provinces_using_terror_mechanics = {
+	check_variable = {
+		which = wal_number_of_provinces_razed
+		value = $n$
+	}
+}
+
+
+has_tirgoviste_princely_court_absolute_control_bonus = {
+	custom_trigger_tooltip = {
+		tooltip = has_tirgoviste_princely_court_absolute_control_bonus_tooltip
+		has_country_flag = wal_absolute_control_princely_court_bonus
+	}
+}
+
+has_defeated_imperial_retribution_coalition = {
+	custom_trigger_tooltip = {
+		tooltip = has_defeated_imperial_retribution_coalition_trigger_tooltip
+		has_country_flag = antichrist_victorius
+	}
+}
+
+has_ae_reduced_from_winning_coalition_wars = {
+	custom_trigger_tooltip = {
+		tooltip = has_ae_reduced_from_winning_coalition_wars_tooltip
+		has_country_flag = winning_coalition_war_ae_reduced
+	}
+}

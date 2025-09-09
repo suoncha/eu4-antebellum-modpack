@@ -1,0 +1,397 @@
+edict_commander_all_non_prospering_states = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_prosperity_growth
+			}
+			any_province_in_state = {
+				is_prosperous = no
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_prosperity_growth
+		}
+	}
+}
+
+edict_commander_prosperity_every_state = {
+	edict_commander_set_edict_every_state = {
+		edict = edict_prosperity_growth
+	}
+}
+
+edict_commander_attrition_every_state_with_fort_siege = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_attrition_edict
+			}
+			any_province_in_state = {
+				has_siege = yes
+				has_fort_building_trigger = yes
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_attrition_edict
+		}
+	}
+}
+
+edict_commander_attrition_every_state_with_fort = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_attrition_edict
+			}
+			any_province_in_state = {
+				has_fort_building_trigger = yes
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_attrition_edict
+		}
+	}
+}
+
+edict_commander_attrition_every_state = {
+	edict_commander_set_edict_every_state = {
+		edict = edict_attrition_edict
+	}
+}
+
+edict_commander_fastest_shipbuilding_province = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			has_port = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_shipbuilding
+			}
+		}
+		export_to_variable = {
+			which = speed
+			value = modifier:ship_recruit_speed
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = fastest_shipbuilding_province
+				}
+			}
+			save_event_target_as = fastest_shipbuilding_province
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = speed
+							which = event_target:fastest_shipbuilding_province
+						}
+					}
+				}
+				save_global_event_target_as = fastest_shipbuilding_province
+			}
+		}
+	}
+	event_target:fastest_shipbuilding_province = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_shipbuilding
+		}
+	}
+	clear_global_event_target = fastest_shipbuilding_province
+}
+
+edict_commander_fastest_shipbuilding_province_top_n_provinces = {
+	set_variable = {
+		which = i
+		value = $n$
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = i
+				value = 1
+			}
+		}
+		edict_commander_fastest_shipbuilding_province = yes
+		subtract_variable = {
+			which = i
+			value = 1
+		}
+	}
+}
+
+edict_commander_shipbuilding_all_with_ports = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			has_port = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_shipbuilding
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_shipbuilding
+		}
+	}
+}
+
+edict_commander_shipbuilding_all_states = {
+	edict_commander_set_edict_every_state = {
+		edict = edict_shipbuilding
+	}
+}
+
+edict_commander_gold_mining_highest_production = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			trade_goods = gold
+			NOT = {
+				has_state_edict = edict_gold_depletion
+			}
+		}
+		export_to_variable = {
+			which = prod
+			value = base_production
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_base_prod
+				}
+			}
+			save_global_event_target_as = highest_base_prod
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = prod
+						which = event_target:highest_base_prod
+					}
+				}
+				save_event_target_as = highest_base_prod
+			}
+		}
+	}
+	event_target:highest_base_prod = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_gold_depletion
+		}
+	}
+	clear_global_event_target = highest_base_prod
+}
+
+edict_commander_gold_mining_top_3_production = {
+	#Can't be bothered writing a loop right now
+	edict_commander_gold_mining_highest_production = yes
+	edict_commander_gold_mining_highest_production = yes
+	edict_commander_gold_mining_highest_production = yes
+}
+
+edict_commander_gold_mining_all_with_gold = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			trade_goods = gold
+			NOT = {
+				has_state_edict = edict_gold_depletion
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_gold_depletion
+		}
+	}
+}
+
+edict_commander_colonial_only_state_with_colony = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_settler_growth
+			}
+			any_province_in_state = {
+				is_colony = yes
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_settler_growth
+		}
+	}
+}
+
+edict_commander_colonial_every_state = {
+	edict_commander_set_edict_every_state = {
+		edict = edict_settler_growth
+	}
+}
+edict_commander_edict_governing_cost_calculate_province_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_governing_cost
+			}
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		set_variable = {
+			which = local_governing_cost
+			which = dev
+		}
+		set_variable = {
+			which = local_governing_cost_modifier
+			value = 1
+		}
+		export_to_variable = {
+			which = local_governing_cost_modifier_raw
+			value = modifier:local_governing_cost
+		}
+		change_variable = {
+			which = local_governing_cost_modifier
+			which = local_governing_cost_modifier_raw
+		}
+		multiply_variable = {
+			which = local_governing_cost
+			which = local_governing_cost_modifier
+		}
+	}
+}
+
+edict_commander_edict_governing_cost_calculate_state_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_governing_cost
+			}
+			NOT = {
+				has_province_flag = calculated_gov_cost_already
+			}
+		}
+		set_variable = {
+			which = state_governing_cost
+			which = local_governing_cost
+		}
+		set_province_flag = calculated_gov_cost_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_gov_cost_already
+				}
+			}
+			set_variable = {
+				which = state_governing_cost
+				which = local_governing_cost
+			}
+			PREV = {
+				change_variable = {
+					which = state_governing_cost
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_gov_cost_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_governing_cost
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_gov_cost_already
+		}
+		clr_province_flag = calculated_gov_cost_already
+	}
+}
+
+edict_commander_edict_governing_cost_highest_governing_cost_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_governing_cost
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_governing_cost_province
+				}
+			}
+			save_global_event_target_as = highest_governing_cost_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_governing_cost
+						which = event_target:highest_governing_cost_province
+					}
+				}
+				save_global_event_target_as = highest_governing_cost_province
+			}
+		}
+	}
+	event_target:highest_governing_cost_province = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_governing_cost
+		}
+	}
+	clear_global_event_target = highest_governing_cost_province
+}
+
+edict_commander_modernized_local_administration_highest_gov_cost = {
+	edict_commander_edict_governing_cost_calculate_province_gov_cost = yes
+	edict_commander_edict_governing_cost_calculate_state_gov_cost = yes
+	edict_commander_edict_governing_cost_highest_governing_cost_state = yes
+}
+
+edict_commander_modernized_local_administration_top_n_gov_cost = {
+	edict_commander_edict_governing_cost_calculate_province_gov_cost = yes
+	edict_commander_edict_governing_cost_calculate_state_gov_cost = yes
+	set_variable = {
+		which = i
+		value = $n$
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = i
+				value = 1
+			}
+		}
+		edict_commander_edict_governing_cost_highest_governing_cost_state = yes
+		subtract_variable = {
+			which = i
+			value = 1
+		}
+	}
+}
+
+edict_commander_modernized_local_administration_every_state ={
+	edict_commander_set_edict_every_state = {
+		edict = edict_governing_cost
+	}
+}

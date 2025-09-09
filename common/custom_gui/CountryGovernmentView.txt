@@ -1,0 +1,6 @@
+custom_icon = {
+	name = romanian_elective_monarchy_bg
+	potential = {
+		has_government_mechanic = romanian_elective_monarchy_mechanic
+	}
+}

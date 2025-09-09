@@ -1,0 +1,16 @@
+is_romanian_tag = {
+	OR = {
+		is_or_was_tag = {
+			tag = WAL
+		}
+		is_or_was_tag = {
+			tag = MOL
+		}
+	}
+}
+
+is_moldavia ={
+	is_or_was_tag = {
+		tag = MOL
+	}
+}

@@ -1,0 +1,78 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.1"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.1.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.2"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.2.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.7"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.7.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.8"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.8.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_money_for_loyalty"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events_money_for_loyalty.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.28"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.28.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.29"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.29.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.30"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.30.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.31"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.31.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.32"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.32.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.33"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.33.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.34"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.34.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.35"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.35.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.36"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.36.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.38"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.38.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.39"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.39.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.40"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.40.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.41"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.41.dds"
+	}
+		spriteType = {
+		name = "GFX_wallachian_civil_war_events.43"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.43.dds"
+	}
+}

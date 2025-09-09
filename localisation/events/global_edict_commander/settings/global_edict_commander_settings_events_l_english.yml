@@ -1,0 +1,6 @@
+﻿l_english:
+ global_edict_commander_settings_events.1.t: "Global Edict Commander Settings"
+ global_edict_commander_settings_events.1.d: "Adjust how the Global Edict Commander functions. Access settings for Quick Select options or configure Reactive Edicts that automatically manage state edicts based on game events."
+ global_edict_commander_settings_events.1.exit: "Exit Settings"
+ global_edict_commander_settings_events.1.quick_select_settings: "Quick Select Settings"
+ global_edict_commander_settings_events.1.reactive_edicts_settings: "Reactive Edicts Settings"

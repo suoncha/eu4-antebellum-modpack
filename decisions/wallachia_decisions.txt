@@ -1,0 +1,110 @@
+country_decisions = {
+	release_aquitania_as_personal_union = {
+		major = yes
+		color = {
+			50
+			39
+			133
+		}
+		allow = {
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			massif_central_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = pyrenees_area
+				area = guyenne_area
+				area = languedoc_area
+				area = massif_central_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		potential = {
+			has_country_flag = allow_aqa_pu_decision
+			NOT = {
+				has_country_flag = released_aquitania_as_personal_union
+			}
+		}
+		effect = {
+			set_country_flag = released_aquitania_as_personal_union
+			custom_tooltip = release_aquitania_effect_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							owned_by = root
+							owner = {
+								is_subject_of = ROOT
+							}
+						}
+						OR = {
+							area = languedoc_area
+							area = massif_central_area
+							area = pyrenees_area
+							area = guyenne_area
+						}
+					}
+					add_core = AQA
+					remove_core = ROOT
+				}
+				release = AQA
+				create_subject = {
+					subject_type = personal_union
+					subject = AQA
+				}
+				every_province = {
+					limit = {
+						is_core = AQA
+					}
+					cede_province = AQA
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = france_region
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					add_permanent_claim = AQA
+				}
+			}
+			AQA = {
+				change_religion = orthodox
+				change_primary_culture = provinciali
+				add_country_modifier = {
+					name = wallachia_loyal_aqa
+					duration = -1
+					hidden = yes
+				}
+				set_country_flag = wal_romanianization_of_southern_french
+				set_capital = 174
+				add_accepted_culture = gascon
+				add_accepted_culture = occitain
+				add_government_reform = autocracy_reform
+				swap_non_generic_missions = yes
+			}
+			174 = {
+				change_religion = orthodox
+				change_culture = provinciali
+			}
+		}
+	}
+}

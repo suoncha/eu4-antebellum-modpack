@@ -1,0 +1,52 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_basarab_stronghold"
+		texturefile = "gfx/interface/holy_orders/basarab_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_draculesti_stronghold"
+		texturefile = "gfx/interface/holy_orders/draculesti_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_danesti_stronghold"
+		texturefile = "gfx/interface/holy_orders/danesti_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_bibescu_stronghold"
+		texturefile = "gfx/interface/holy_orders/bibescu_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_brancoveanu_stronghold"
+		texturefile = "gfx/interface/holy_orders/brancoveanu_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_movilesti_stronghold"
+		texturefile = "gfx/interface/holy_orders/movilesti_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_cantacuzino_stronghold"
+		texturefile = "gfx/interface/holy_orders/cantacuzino_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ghica_stronghold"
+		texturefile = "gfx/interface/holy_orders/ghica_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_mavrocordatos_stronghold"
+		texturefile = "gfx/interface/holy_orders/mavrocordatos_stronghold.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_racovita_stronghold"
+		texturefile = "gfx/interface/holy_orders/racovita_stronghold.dds"
+		noOfFrames = 4
+	}
+}

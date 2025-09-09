@@ -1,0 +1,6 @@
+var_greater_than_0 ={
+	check_variable = {
+		which = $var$
+		value = 0.001
+	}
+}

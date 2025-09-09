@@ -1,0 +1,5 @@
+﻿l_english:
+ form_coalition_tooltip: "[form_coalition_customizable_localization]"
+ min_aggresive_expansion_75: "You must have at least §Y75§! aggressive expansion opinion penalty towards §Y[From.GetName]§! to join a coalition against them."
+ tuh_root_cant_marry_tooltip: "The §YBoiermiea§! will not tolerate you marrying an outsider." 
+ tuh_from_cant_marry_tooltip: "Their nobility will not allow their ruler to marry an outsider."

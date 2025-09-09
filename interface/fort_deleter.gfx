@@ -1,0 +1,35 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fort_macro_tab"
+		texturefile = "gfx/interface/fort_macro_tab.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+    spriteType = {
+		name = "GFX_fort_macro_window_background"
+		texturefile = "gfx/interface/fort_macro_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+    spriteType = {
+		name = "GFX_fort_macro_button_whitelisted"
+		texturefile = "gfx/interface/fort_macro_whitelisted.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+    spriteType = {
+		name = "GFX_fort_macro_button_blacklisted"
+		texturefile = "gfx/interface/fort_macro_blacklisted.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+    spriteType = {
+		name = "GFX_fort_macro_button_delete_all_forts"
+		texturefile = "gfx/interface/fort_macro_button_delete_all_forts.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

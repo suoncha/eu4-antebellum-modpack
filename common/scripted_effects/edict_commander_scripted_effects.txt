@@ -1,0 +1,1956 @@
+edict_commander_add_country_cooldown = {
+	add_country_modifier = {
+		name = edict_commander_cooldown
+		duration = 365
+		hidden = yes
+	}
+}
+
+edict_commander_add_cooldown_to_state = {
+	every_province_in_state = {
+		limit = {
+			owned_by = ROOT
+		}
+		set_province_flag = edict_commander_cooldown
+	}
+}
+
+edict_commander_set_edict_for_state = {
+	set_state_edict = $edict$
+	edict_commander_add_cooldown_to_state = yes
+}
+
+edict_commander_set_edict_every_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = $edict$
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+}
+
+edict_commander_clear_all_state_edicts = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+		}
+		set_state_edict = no_edict
+	}
+}
+
+edict_commander_advancement_effort_only_with_growth = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			current_institution_growth = 0.001
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_advancement_effort
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_advancement_effort
+		}
+	}
+}
+
+edict_commander_centralization_effort_only_with_excess_autonomy = {
+	export_to_variable = {
+		which = minimum_autonomy
+		value = modifier:min_autonomy
+		who = ROOT
+	}
+	export_to_variable = {
+		which = minimum_autonomy_in_territories
+		value = modifier:min_autonomy_in_territories
+		who = ROOT
+	}
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_centralization_effort
+			}
+		}
+		set_variable = {
+			which = autonomy_floor
+			value = 0
+		}
+		#Check if it's a half state
+		if = {
+			limit = {
+				NOT = {
+					is_state_core = owner
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				value = 50
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy_in_territories
+			which = ROOT
+		}
+		multiply_variable = {
+			which = minimum_autonomy_in_territories
+			value = 100
+		}
+		change_variable = {
+			which = autonomy_floor
+			which = minimum_autonomy_in_territories
+		}
+		#If autonomy floor is <0, set it to 0.
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = autonomy_floor
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				value = 0
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy
+			which = ROOT
+		}
+		#If country minimum autonomy is > our current floor, set the current floor to the minimum autonomy
+		if = {
+			limit = {
+				check_variable = {
+					which = minimum_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = minimum_autonomy
+			}
+		}
+		export_to_variable = {
+			which = min_local_autonomy
+			value = modifier:min_local_autonomy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = min_local_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = min_local_autonomy
+			}
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_floor_to_check
+			which = autonomy_floor
+		}
+		change_variable = {
+			which = autonomy_floor_to_check
+			value = 0.001
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = curr_autonomy
+					which = autonomy_floor_to_check
+				}
+			}
+			edict_commander_set_edict_for_state = {
+				edict = edict_centralization_effort
+			}
+		}
+	}
+}
+
+edict_commander_defensive_edict_only_with_forts = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			has_fort_building_trigger = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_defensive_edict
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_defensive_edict
+		}
+	}
+}
+
+edict_commander_encourage_development_edict_cheapest_state = {
+	every_owned_province = {
+		limit = {
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_encourage_development
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+edict_commander_calculate_manpower_in_states = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_province_flag = calculated_manpower_already
+			}
+			NOT = {
+				has_state_edict = edict_promote_military_recruitment
+			}
+		}
+		set_variable = {
+			which = manpower_total
+			value = 0
+		}
+		export_to_variable = {
+			which = manpower_base
+			value = trigger_value:base_manpower
+			who = this
+		}
+		set_variable = {
+			which = manpower_total
+			value = 250
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_base
+		}
+		export_to_variable = {
+			which = manpower_mod
+			value = modifier:local_manpower_modifier
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = autonomy_to_multiply
+		}
+		set_province_flag = calculated_manpower_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_manpower_already
+				}
+			}
+			export_to_variable = {
+				which = manpower_base
+				value = trigger_value:base_manpower
+				who = this
+			}
+			set_variable = {
+				which = manpower_total
+				value = 250
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = manpower_base
+			}
+			export_to_variable = {
+				which = manpower_mod
+				value = modifier:local_manpower_modifier
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = manpower_mod
+			}
+			export_to_variable = {
+				which = curr_autonomy
+				value = local_autonomy
+			}
+			set_variable = {
+				which = autonomy_to_multiply
+				value = 100
+			}
+			subtract_variable = {
+				which = autonomy_to_multiply
+				which = curr_autonomy
+			}
+			divide_variable = {
+				which = autonomy_to_multiply
+				value = 100
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = autonomy_to_multiply
+			}
+			set_province_flag = calculated_manpower_already
+			PREV = {
+				change_variable = {
+					which = manpower_total
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = manpower_total
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_manpower_already
+		}
+		clr_province_flag = calculated_manpower_already
+	}
+}
+
+edict_commander_increase_enlistment_highest_manpower_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_promote_military_recruitment
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_manpower_state
+				}
+			}
+			save_global_event_target_as = highest_manpower_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = manpower_total
+						which = event_target:highest_manpower_state
+					}
+				}
+				save_global_event_target_as = highest_manpower_state
+			}
+		}
+	}
+	event_target:highest_manpower_state = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_promote_military_recruitment
+		}
+	}
+	clear_global_event_target = highest_manpower_state
+}
+
+edict_commander_calculate_trade_power_in_states = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			NOT = {
+				has_province_flag = trade_power_calculated_already
+			}
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = edict_protect_trade
+					has_state_edict = protect_trade_empowered
+				}
+			}
+			is_province_in_enabled_trade_node = yes
+		}
+		export_to_variable = {
+			which = local_trade_power
+			value = province_trade_power
+		}
+		set_variable = {
+			which = state_trade_power
+			which = local_trade_power
+		}
+		set_province_flag = trade_power_calculated_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = trade_power_calculated_already
+				}
+			}
+			export_to_variable = {
+				which = local_trade_power
+				value = province_trade_power
+			}
+			set_variable = {
+				which = state_trade_power
+				which = local_trade_power
+			}
+			set_province_flag = trade_power_calculated_already
+			PREV = {
+				change_variable = {
+					which = state_trade_power
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_trade_power
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		safe_clr_province_flag = {
+			flag = trade_power_calculated_already
+		}
+	}
+}
+
+edict_commander_protect_trade_highest_trade_power_state = {
+	every_owned_province = {
+		limit = {
+			[[single_node]
+			$node_trigger$ = yes
+			]
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = edict_protect_trade
+					has_state_edict = protect_trade_empowered
+				}
+			}
+			is_province_in_enabled_trade_node = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_trade_power_state
+				}
+			}
+			save_global_event_target_as = highest_trade_power_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_trade_power
+						which = event_target:highest_trade_power_state
+					}
+				}
+				save_global_event_target_as = highest_trade_power_state
+			}
+		}
+	}
+	event_target:highest_trade_power_state = {
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+	clear_global_event_target = highest_trade_power_state
+}
+
+edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_great_lakes_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_congo_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_zambezi_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_katsina_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_ethiopia_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_gulf_of_aden_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_zanzibar_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_cape_of_good_hope_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_alexandria_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_timbuktu_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_ivory_coast_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_tunis_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_safi_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_girin_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_lhasa_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_chengdu_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_burma_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_siam_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_canton_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_philippines_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_nippon_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_hangzhou_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_xian_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_beijing_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_the_moluccas_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_siberia_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_yumen_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_malacca_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_bengal_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_doab_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_lahore_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_deccan_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_coromandel_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_gujarat_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_hormuz_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_basra_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_samarkand_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_persia_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_aleppo_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_astrakhan_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_crimea_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_constantinople_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_kiev_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_kazan_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_novgorod_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_ragusa_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_pest_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_krakow_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_wien_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_saxony_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_baltic_sea_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_rheinland_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_white_sea_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_north_sea_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_lubeck_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_bordeaux_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_sevilla_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_champagne_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_valencia_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_genoa_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_venice_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_english_channel_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_rio_grande_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_hudson_bay_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_california_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_mississippi_river_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_ohio_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_mexico_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_panama_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_caribbean_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_chesapeake_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_gulf_of_st_lawrence_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_patagonia_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_amazonas_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_cuiaba_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_lima_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_rio_de_la_plata_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_brazil_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_polynesian_triangle_trade_node
+		edict = $edict$
+	}
+	edict_commander_protect_trade_highest_trade_power_state = {
+		single_node = yes
+		node_trigger = province_is_in_australia_trade_node
+		edict = $edict$
+	}
+}
+
+edict_commander_protect_trade_every_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = edict_protect_trade
+					has_state_edict = protect_trade_empowered
+				}
+			}
+			is_province_in_enabled_trade_node = yes
+		}
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+}
+
+edict_commander_calculate_religion_strength = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				religion = owner
+			}
+			NOT = {
+				owner = {
+					has_harmonized_with = PREV
+				}
+			}
+			NOT = {
+				owner = {
+					secondary_religion = PREV
+				}
+			}
+			NOT = {
+				has_state_edict = edict_religious_unity
+			}
+		}
+		export_to_variable = {
+			which = missionary_strength_ex
+			value = modifier:global_missionary_strength
+			who = owner
+		}
+		set_variable = {
+			which = missionary_strength
+			which = missionary_strength_ex
+		}
+		export_to_variable = {
+			which = province_missionary_strength
+			value = modifier:local_missionary_strength
+		}
+		if = {
+			limit = {
+				religion_group = owner
+			}
+			export_to_variable = {
+				which = heretic_missionary_strength
+				value = modifier:global_heretic_missionary_strength
+				who = owner
+			}
+			change_variable = {
+				which = missionary_strength
+				which = heretic_missionary_strength
+			}
+		}
+		else = {
+			export_to_variable = {
+				which = heathen_missionary_strength
+				value = modifier:global_heathen_missionary_strength
+				who = owner
+			}
+			change_variable = {
+				which = missionary_strength
+				which = heathen_missionary_strength
+			}
+		}
+		change_variable = {
+			which = missionary_strength
+			value = 0.01
+		}
+		change_variable = {
+			which = missionary_strength
+			which = province_missionary_strength
+		}
+		multiply_variable = {
+			which = missionary_strength
+			value = 10000
+		}
+	}
+}
+
+edict_commander_enforce_religious_unity_all_states_that_can_convert = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				religion = owner
+			}
+			NOT = {
+				owner = {
+					has_harmonized_with = PREV
+				}
+			}
+			NOT = {
+				owner = {
+					secondary_religion = PREV
+				}
+			}
+			NOT = {
+				has_state_edict = edict_religious_unity
+			}
+			check_variable = {
+				which = missionary_strength
+				value = 1
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_religious_unity
+		}
+	}
+}
+
+edict_commander_enforce_religious_unity_states_with_missionary = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			has_missionary = yes
+			NOT = {
+				religion = owner
+			}
+			NOT = {
+				owner = {
+					has_harmonized_with = PREV
+				}
+			}
+			NOT = {
+				owner = {
+					secondary_religion = PREV
+				}
+			}
+			NOT = {
+				has_state_edict = edict_religious_unity
+			}
+			check_variable = {
+				which = missionary_strength
+				value = 1
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_religious_unity
+		}
+	}
+}
+
+edict_commander_enforce_religious_unity_easiest_to_convert = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				religion = owner
+			}
+			NOT = {
+				owner = {
+					has_harmonized_with = PREV
+				}
+			}
+			NOT = {
+				owner = {
+					secondary_religion = PREV
+				}
+			}
+			NOT = {
+				has_state_edict = edict_religious_unity
+			}
+			check_variable = {
+				which = missionary_strength
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = easiest_province_to_convert
+				}
+			}
+			save_global_event_target_as = easiest_province_to_convert
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = missionary_strength
+						which = event_target:easiest_province_to_convert
+					}
+				}
+				save_global_event_target_as = easiest_province_to_convert
+			}
+		}
+	}
+	event_target:easiest_province_to_convert = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_religious_unity
+		}
+	}
+	clear_global_event_target = easiest_province_to_convert
+}
+
+edict_commander_feudal_de_jure_law_calculate_state_unrest = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+			NOT = {
+				has_province_flag = calculated_unrest_already
+			}
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
+		}
+		export_to_variable = {
+			which = local_unrest
+			value = unrest
+		}
+		set_variable = {
+			which = state_unrest
+			which = local_unrest
+		}
+		set_province_flag = calculated_unrest_already
+		every_province_in_state = {
+			limit = {
+				can_change_state_edict = yes
+				unrest = 0.001
+				NOT = {
+					has_province_flag = calculated_unrest_already
+				}
+			}
+			export_to_variable = {
+				which = local_unrest
+				value = unrest
+			}
+			set_variable = {
+				which = state_unrest
+				which = local_unrest
+			}
+			set_province_flag = calculated_unrest_already
+			PREV = {
+				change_variable = {
+					which = state_unrest
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_unrest
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		safe_clr_province_flag = {
+			flag = calculated_unrest_already
+		}
+	}
+}
+
+edict_commander_feudal_de_jure_law_any_with_unrest = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_feudal_de_jure_law
+		}
+	}
+}
+
+edict_commander_feudal_de_jure_law_highest_unrest_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_unrest_state
+				}
+			}
+			save_global_event_target_as = highest_unrest_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_unrest
+						which = event_target:highest_unrest_state
+					}
+				}
+				save_global_event_target_as = highest_unrest_state
+			}
+		}
+	}
+	event_target:highest_unrest_state = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_feudal_de_jure_law
+		}
+	}
+	clear_global_event_target = highest_unrest_state
+}
+
+edict_commander_religion_enforced_all_states_with_center = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			is_reformation_center = yes
+			NOT = {
+				has_state_edict = edict_religion_enforced
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_religion_enforced
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_any_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			devastation = 0.001
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_absolutism
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_calculate_state_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+			NOT = {
+				has_province_flag = calculated_devastation_already
+			}
+		}
+		export_to_variable = {
+			which = local_devastation
+			value = trigger_value:devastation
+		}
+		set_variable = {
+			which = state_devastation
+			which = local_devastation
+		}
+		set_province_flag = calculated_devastation_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_devastation_already
+				}
+			}
+			export_to_variable = {
+				which = local_devastation
+				value = trigger_value:devastation
+			}
+			set_variable = {
+				which = state_devastation
+				which = local_devastation
+			}
+			set_province_flag = calculated_devastation_already
+			PREV = {
+				change_variable = {
+					which = state_devastation
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_devastation
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		safe_clr_province_flag = {
+			flag = calculated_devastation_already
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_highest_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+			check_variable = {
+				which = state_devastation
+				value = 0.001
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_devastation_state
+				}
+			}
+			save_global_event_target_as = highest_devastation_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_devastation
+						which = event_target:highest_devastation_state
+					}
+				}
+				save_global_event_target_as = highest_devastation_state
+			}
+		}
+	}
+	event_target:highest_devastation_state = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_absolutism
+		}
+	}
+	clear_global_event_target = highest_devastation_state
+}
+
+edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+		}
+		export_to_variable = {
+			which = local_yearly_tax_income
+			value = modifier:tax_income
+		}
+		export_to_variable = {
+			which = local_base_tax
+			value = trigger_value:base_tax
+		}
+		set_variable = {
+			which = local_monthly_tax_income
+			which = local_yearly_tax_income
+		}
+		change_variable = {
+			which = local_monthly_tax_income
+			which = local_base_tax
+		}
+		divide_variable = {
+			which = local_monthly_tax_income
+			value = 12
+		}
+		export_to_variable = {
+			which = local_tax_mod
+			value = modifier:local_tax_modifier
+		}
+		export_to_variable = {
+			which = global_tax_mod
+			value = modifier:global_tax_modifier
+			who = ROOT
+		}
+		set_variable = {
+			which = tax_modifier
+			which = global_tax_mod
+		}
+		change_variable = {
+			which = tax_modifier
+			which = local_tax_mod
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = tax_modifier
+		}
+		export_to_variable = {
+			which = local_autonomy_raw
+			value = local_autonomy
+		}
+		set_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		subtract_variable = {
+			which = local_autonomy
+			which = local_autonomy_raw
+		}
+		divide_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = local_autonomy
+		}
+	}
+}
+
+edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+			NOT = {
+				has_province_flag = calculated_tax_already
+			}
+		}
+		set_variable = {
+			which = state_monthly_tax_income
+			which = local_monthly_tax_income
+		}
+		set_province_flag = calculated_tax_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_tax_already
+				}
+			}
+			set_variable = {
+				which = state_monthly_tax_income
+				which = local_monthly_tax_income
+			}
+			PREV = {
+				change_variable = {
+					which = state_monthly_tax_income
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_tax_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_monthly_tax_income
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_tax_already
+		}
+		clr_province_flag = calculated_tax_already
+	}
+}
+
+edict_commander_feudal_taxes_state_edict_find_highest_tax_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_tax_state
+				}
+			}
+			save_global_event_target_as = highest_tax_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_monthly_tax_income
+						which = event_target:highest_tax_state
+					}
+				}
+				save_global_event_target_as = highest_tax_state
+			}
+		}
+	}
+	event_target:highest_tax_state = {
+		edict_commander_set_edict_for_state = {
+			edict = feudal_taxes_state_edict
+		}
+	}
+	clear_global_event_target = highest_tax_state
+}
+
+edict_commander_state_integration_edict_any_with_separatism = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = state_integration_state_edict
+			}
+			nationalism = 1
+		}
+		edict_commander_set_edict_for_state = {
+			edict = state_integration_state_edict
+		}
+	}
+}
+
+edict_commander_state_integration_edict_calculate_state_nationalism = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = state_integration_state_edict
+			}
+			NOT = {
+				has_province_flag = calculated_separatism_already
+			}
+		}
+		export_to_variable = {
+			which = separatism
+			value = nationalism
+		}
+		set_variable = {
+			which = state_separatism
+			which = separatism
+		}
+		set_province_flag = calculated_separatism_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_separatism_already
+				}
+			}
+			export_to_variable = {
+				which = separatism
+				value = nationalism
+			}
+			set_variable = {
+				which = state_separatism
+				which = separatism
+			}
+			PREV = {
+				change_variable = {
+					which = state_separatism
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_separatism_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_separatism
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_separatism_already
+		}
+		clr_province_flag = calculated_separatism_already
+	}
+}
+
+edict_commander_state_integration_edict_highest_separatism_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = state_integration_state_edict
+			}
+			nationalism = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_separatism_state
+				}
+			}
+			save_global_event_target_as = highest_separatism_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_separatism
+						which = event_target:highest_separatism_state
+					}
+				}
+				save_global_event_target_as = highest_separatism_state
+			}
+		}
+	}
+	event_target:highest_separatism_state = {
+		edict_commander_set_edict_for_state = {
+			edict = state_integration_state_edict
+		}
+	}
+	clear_global_event_target = highest_separatism_state
+}
+
+edict_commander_calculate_province_production_score = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = chinese_industrialization
+					has_state_edict = urbanization_state_edict
+				}
+			}
+		}
+		export_to_variable = {
+			which = local_trade_goods_size
+			value = modifier:trade_goods_size
+		}
+		set_variable = {
+			which = local_production_score
+			which = local_trade_goods_size
+		}
+		export_to_variable = {
+			which = local_trade_goods_size_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+		change_variable = {
+			which = local_trade_goods_size_modifier
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_trade_goods_size_modifier
+		}
+	}
+}
+
+edict_commander_calculate_state_production_score = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = chinese_industrialization
+					has_state_edict = urbanization_state_edict
+				}
+			}
+			NOT = {
+				has_province_flag = calculated_production_score_already
+			}
+		}
+		set_variable = {
+			which = state_production_score
+			which = local_production_score
+		}
+		set_province_flag = calculated_production_score_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_production_score_already
+				}
+			}
+			set_variable = {
+				which = state_production_score
+				which = local_production_score
+			}
+			PREV = {
+				change_variable = {
+					which = state_production_score
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_production_score_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_production_score
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_production_score_already
+		}
+		clr_province_flag = calculated_production_score_already
+	}
+}
+
+edict_commander_find_highest_production_score = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				OR = {
+					has_state_edict = chinese_industrialization
+					has_state_edict = urbanization_state_edict
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_production_score
+				}
+			}
+			save_global_event_target_as = highest_production_score
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_production_score
+						which = event_target:highest_production_score
+					}
+				}
+				save_global_event_target_as = highest_production_score
+			}
+		}
+	}
+	event_target:highest_production_score = {
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+	clear_global_event_target = highest_production_score
+}
+
+edict_commander_french_infrastructure_network_all_enabled_regions = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = french_infrastructure_network
+			}
+			province_in_enabled_region_for_french_infrastructure_network = yes
+		}
+		edict_commander_set_edict_for_state = {
+			edict = french_infrastructure_network
+		}
+	}
+}
+
+edict_commander_find_cheapest_province_to_develop = {
+	every_owned_province = {
+		limit = {
+			can_change_state_edict = yes
+			is_state = yes
+			NOT = {
+				OR = {
+					has_state_edict = edict_encourage_development
+					has_state_edict = chinese_industrialization
+				}
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost
+			value = modifier:local_development_cost
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+edict_commander_edict_of_governance_calculate_province_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		set_variable = {
+			which = local_governing_cost
+			which = dev
+		}
+		set_variable = {
+			which = local_governing_cost_modifier
+			value = 1
+		}
+		export_to_variable = {
+			which = local_governing_cost_modifier_raw
+			value = modifier:local_governing_cost
+		}
+		change_variable = {
+			which = local_governing_cost_modifier
+			which = local_governing_cost_modifier_raw
+		}
+		multiply_variable = {
+			which = local_governing_cost
+			which = local_governing_cost_modifier
+		}
+	}
+}
+
+edict_commander_edict_of_governance_calculate_state_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+			NOT = {
+				has_province_flag = calculated_gov_cost_already
+			}
+		}
+		set_variable = {
+			which = state_governing_cost
+			which = local_governing_cost
+		}
+		set_province_flag = calculated_gov_cost_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_gov_cost_already
+				}
+			}
+			set_variable = {
+				which = state_governing_cost
+				which = local_governing_cost
+			}
+			PREV = {
+				change_variable = {
+					which = state_governing_cost
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_gov_cost_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_governing_cost
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_gov_cost_already
+		}
+		clr_province_flag = calculated_gov_cost_already
+	}
+}
+
+edict_commander_edict_of_governance_highest_governing_cost_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_governing_cost_province
+				}
+			}
+			save_global_event_target_as = highest_governing_cost_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_governing_cost
+						which = event_target:highest_governing_cost_province
+					}
+				}
+				save_global_event_target_as = highest_governing_cost_province
+			}
+		}
+	}
+	event_target:highest_governing_cost_province = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_governance
+		}
+	}
+	clear_global_event_target = highest_governing_cost_province
+}

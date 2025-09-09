@@ -1,0 +1,28 @@
+hre_led_us_to_victory = {
+	opinion = 50
+	max = 50
+	yearly_decay = 1
+}
+
+hre_emperor_backed_down = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
+
+hre_dislike_secessionists = {
+	opinion = -25
+	min = -25
+	yearly_decay = 1
+}
+hre_honored_oath = {
+	opinion = 25
+	max = 25
+	yearly_decay = 1
+}
+
+hre_fought_for_freedom = {
+	opinion = 25
+	max = 25
+	yearly_decay = 1
+}

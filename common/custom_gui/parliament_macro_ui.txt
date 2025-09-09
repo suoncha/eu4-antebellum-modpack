@@ -1,0 +1,21 @@
+custom_button = {
+	name = parliament_macro_button
+	potential = {
+		always = yes
+	}
+	trigger = {
+		FROM = {
+			NOT = {
+				has_country_flag = parliament_macro_event_open
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			set_country_flag = parliament_macro_event_open
+			country_event = {
+				id = parliament_macro.0
+			}
+		}
+	}
+}

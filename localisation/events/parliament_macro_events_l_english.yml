@@ -1,0 +1,13 @@
+﻿l_english:
+ parliament_button_tooltip: "Test"
+ parliament_macro.0.t: "Parliament Macro"
+ parliament_macro.0.d: "Welcome to the parliament macro! Here you can assign parliament seats to your country using these handy functions."
+ parliament_macro.0.every_province: "Assign a parliament seat to every possible province."
+ parliament_macro.0.ten_highest_dev: "Assign parliament seats to the top 10 most developed provinces."
+ parliament_macro.0.five_highest_dev: "Assign parliament seats to the top 5 most developed provinces."
+ parliament_macro.0.highest_dev: "Assign a parliament seat to the most developed province."
+ parliament_macro_every_province_effect_tooltip: "Every core province that is in a state that doesn't have a parliament seat will gain a parliament seat."
+ ten_highest_dev_tooltip: "Parliament seats will be assigned to the top §Y10§! highest development provinces that can be assigned parliament seats."
+ five_highest_dev_tooltip: "Parliament seats will be assigned to the top §Y5§! highest development provinces that can be assigned parliament seats."
+ highest_dev_tooltip: "Parliament seats will be assigned to the highest development province that can be assigned a parliament seat."
+ 

@@ -1,0 +1,156 @@
+defined_text = {
+	name = get_autonomy_macro_min_development
+	random = no
+	text = {
+		localisation_key = "[From.autonomy_macro_minimum_development.GetValue]"
+		trigger = {
+			check_variable = {
+				which = autonomy_macro_minimum_development
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = autonomy_macro_min_development_error
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = get_autonomy_macro_min_autonomy_difference
+	random = no
+	text = {
+		localisation_key = "[From.minimum_autonomy_difference.GetValue]"
+		trigger = {
+			check_variable = {
+				which = minimum_autonomy_difference
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = autonomy_macro_autonomy_difference_error
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = autonomy_macro_lower_button_trigger_tt_loc
+	random = no
+	text = {
+		localisation_key = autonomy_macro_lower_button_trigger_tt_loc_at_0
+		trigger = {
+			is_variable_equal = {
+				which = minimum_autonomy_difference
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			check_variable = {
+				which = minimum_autonomy_difference
+				value = 1
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = autonomy_macro_lower_autonomy_button_trigger_tt_loc
+	random = no
+	text = {
+		localisation_key = calculate_first_trigger_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = provinces_that_can_lower_autonomy
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = at_least_one_province_can_lower_autonomy_trigger_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = provinces_that_can_lower_autonomy
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = autonomy_macro_average_reduction_color_loc
+	random = no
+	text = {
+		localisation_key = green
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = average_autonomy_reduction
+					value = 20
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = yellow
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = average_autonomy_reduction
+					value = 15
+				}
+				NOT = {
+					check_variable = {
+						which = average_autonomy_reduction
+						value = 20
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = orange
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = average_autonomy_reduction
+					value = 10
+				}
+				NOT = {
+					check_variable = {
+						which = average_autonomy_reduction
+						value = 15
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = red
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = average_autonomy_reduction
+					value = 0
+				}
+				NOT = {
+					check_variable = {
+						which = average_autonomy_reduction
+						value = 10
+					}
+				}
+			}
+		}
+	}
+}

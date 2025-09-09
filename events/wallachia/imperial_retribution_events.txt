@@ -1,0 +1,443 @@
+namespace = imperial_retribution_events
+#Initial event announcing what has just happened.
+country_event = {
+	id = imperial_retribution_events.0
+	title = imperial_retribution_events.0.t
+	desc = imperial_retribution_events.0.d
+	picture = gfx_imperial_retribution_empire_rally
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			event_target:impaler_country = {
+				country_event = {
+					id = imperial_retribution_events.2
+				}
+			}
+		}
+	}
+	option = {
+		name = imperial_retribution_events.0.a
+		declare_war_with_cb = {
+			casus_belli = cb_imperial_retribution
+			who = event_target:impaler_country
+		}
+		set_global_flag = imperial_retibution_war_ongoing
+		custom_tooltip = every_hre_prince_invited_to_retribution_war_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = {
+						tag = event_target:retribution_leader
+					}
+				}
+				country_event = {
+					id = imperial_retribution_events.1
+				}
+			}
+		}
+		custom_tooltip = opportunistic_enemies_retribution_war_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						tag = event_target:impaler_country
+					}
+					OR = {
+						is_rival = event_target:impaler_country
+						is_great_power = yes
+						is_enemy = event_target:impaler_country
+					}
+					NOT = {
+						is_in_war = {
+							defender_leader = event_target:impaler_country
+						}
+					}
+					NOT = {
+						is_in_war = {
+							attacker_leader = event_target:impaler_country
+						}
+					}
+					capital_scope = {
+						continent = europe
+					}
+				}
+				country_event = {
+					id = imperial_retribution_events.3
+					days = 1
+					random = 90
+				}
+			}
+		}
+		add_country_modifier = {
+			name = imperial_fury
+			duration = 1825
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_legitimacy_equivalent = {
+			amount = 25
+			republican_tradition = 10
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = annihilate_the_antichrist_tooltip
+		tooltip = {
+			event_target:impaler_country = {
+				kill_consort = yes
+				kill_heir = {
+					allow_new_heir = no
+				}
+				kill_ruler = yes
+				release_all_subjects = yes
+				release_all_possible_countries = yes
+				custom_tooltip = imperial_retribution_every_province_tooltip
+				capital_scope = {
+					halve_province_base_tax = yes
+					halve_province_base_production = yes
+					halve_province_base_manpower = yes
+					add_devastation = 100
+					remove_all_buildings_effect = yes
+					remove_loot = {
+						who = event_target:retribution_leader
+						amount = 999
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				reduce_stability = {
+					amount = 6
+				}
+				add_legitimacy = -100
+				add_prestige = -200
+				set_government_rank = 1
+			}
+			if = {
+				limit = {
+					government = republic
+				}
+				add_country_modifier = {
+					name = slayer_of_the_antichrist_republic
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					government = theocracy
+				}
+				add_country_modifier = {
+					name = slayer_of_the_antichrist_theocracy
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = slayer_of_the_antichrist_monarchy
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Join War HRE Prince Event
+country_event = {
+	id = imperial_retribution_events.1
+	title = imperial_retribution_events.1.t
+	desc = imperial_retribution_events.1.d
+	picture = gfx_imperial_retribution_empire_rally
+	is_triggered_only = yes
+	option = {
+		name = imperial_retribution_events.1.a
+		join_all_offensive_wars_of = event_target:retribution_leader
+		add_country_modifier = {
+			name = imperial_fury
+			duration = 730
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_legitimacy_equivalent = {
+			amount = 25
+			republican_tradition = 10
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	option = {
+		name = imperial_retribution_events.1.b
+		add_prestige = -25
+		add_legitimacy_equivalent = {
+			amount = -25
+			republican_tradition = -10
+		}
+		add_ruler_personality = craven_personality
+		add_country_modifier = {
+			name = refused_to_join_retribution_war
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Dacia Event at the Start of the War
+country_event = {
+	id = imperial_retribution_events.2
+	title = imperial_retribution_events.2.t
+	desc = imperial_retribution_events.2.d
+	picture = gfx_imperial_retribution_empire_rally
+	is_triggered_only = yes
+	option = {
+		name = imperial_retribution_events.2.a
+		add_country_modifier = {
+			name = wrath_of_the_antichrist
+			duration = 1825
+		}
+		custom_tooltip = retribution_war_objective_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = wallachia_antichrist_victorius
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			change_terror = {
+				value = 50
+				scaled_with_gain_modifier = yes
+			}
+			emperor = {
+				dismantle_hre = yes
+			}
+		}
+	}
+}
+
+#Enemy/Rival/GP Opportunism
+country_event = {
+	id = imperial_retribution_events.3
+	title = imperial_retribution_events.3.t
+	desc = imperial_retribution_events.3.d
+	picture = gfx_imperial_retribution_empire_rally
+	is_triggered_only = yes
+	option = {
+		name = imperial_retribution_events.3.a
+		join_all_offensive_wars_of = event_target:retribution_leader
+		event_target:impaler_country = {
+			country_event = {
+				id = imperial_retribution_events.4
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = imperial_retribution_events.3.b
+		add_prestige = -5
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_bankrupt = yes
+			}
+			modifier = {
+				factor = 100
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+#Inform Dacia some dude joined
+country_event = {
+	id = imperial_retribution_events.4
+	title = imperial_retribution_events.4.t
+	desc = {
+		desc = imperial_retribution_events.4.d.rival
+		trigger = {
+			is_rival = FROM
+		}
+	}
+	desc = {
+		desc = imperial_retribution_events.4.d.enemy
+		trigger = {
+			NOT = {
+				is_rival = FROM
+			}
+			is_enemy = FROM
+		}
+	}
+	desc = {
+		desc = imperial_retribution_events.4.d.great_power
+		trigger = {
+			NOT = {
+				is_rival = FROM
+			}
+			NOT = {
+				is_enemy = FROM
+			}
+		}
+	}
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = imperial_retribution_events.4.a
+	}
+}
+
+#Dacian W
+country_event = {
+	id = imperial_retribution_events.5
+	title = imperial_retribution_events.5.t
+	desc = imperial_retribution_events.5.d
+	picture = IMPALED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = antichrist_victorius
+		}
+	}
+	option = {
+		name = imperial_retribution_events.5.a
+		custom_tooltip = antichrist_mil_hegemon_tooltip
+		add_country_modifier = {
+			name = wallachia_antichrist_victorius
+			duration = -1
+		}
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_splendor = 200
+		add_power_projection = {
+			type = dismantled_the_hre
+			amount = 25
+		}
+		change_terror = {
+			value = 50
+			scaled_with_gain_modifier = yes
+		}
+		emperor = {
+			dismantle_hre = yes
+		}
+	}
+}
+
+#Imperial victory
+country_event = {
+	id = imperial_retribution_events.6
+	title = imperial_retribution_events.6.t
+	desc = imperial_retribution_events.6.d
+	picture = gfx_imperial_retribution_imperial_victory
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_retribution_events.6.a
+		event_target:impaler_country = {
+			kill_consort = yes
+			kill_heir = {
+				allow_new_heir = no
+			}
+			kill_ruler = yes
+			release_all_subjects = yes
+			release_all_possible_countries = yes
+			custom_tooltip = imperial_retribution_every_province_tooltip
+			tooltip = {
+				capital_scope = {
+					halve_province_base_tax = yes
+					halve_province_base_production = yes
+					halve_province_base_manpower = yes
+					add_devastation = 100
+					remove_all_buildings_effect = yes
+					remove_loot = {
+						who = event_target:retribution_leader
+						amount = 999
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					halve_province_base_tax = yes
+					halve_province_base_production = yes
+					halve_province_base_manpower = yes
+					add_devastation = 100
+					remove_all_buildings_effect = yes
+					remove_loot = {
+						who = event_target:retribution_leader
+						amount = 999
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			reduce_stability = {
+				amount = 6
+			}
+			add_legitimacy = -100
+			add_prestige = -200
+			set_government_rank = 1
+		}
+		if = {
+			limit = {
+				government = republic
+			}
+			add_country_modifier = {
+				name = slayer_of_the_antichrist_republic
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				government = theocracy
+			}
+			add_country_modifier = {
+				name = slayer_of_the_antichrist_theocracy
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = slayer_of_the_antichrist_monarchy
+				duration = -1
+			}
+		}
+	}
+}
+
+#Neither Side Achieved Their Aims
+country_event = {
+	id = imperial_retribution_events.7
+	title = imperial_retribution_events.7.t
+	desc = imperial_retribution_events.7.d
+	picture = GFX_imperial_retribution_events.7
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_retribution_events.7.a
+		emperor = {
+			add_imperial_influence = -50
+		}
+		add_prestige = -25
+		add_legitimacy = -25
+		if = {
+			limit = {
+				has_imperial_schism_incident_happened = no
+			}
+			custom_tooltip = deposed_emperor_start_incident_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
+			}
+		}
+	}
+}

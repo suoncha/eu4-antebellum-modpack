@@ -1,0 +1,72 @@
+# Encourage Economic Growth
+clear_encourage_economic_growth_quick_select = {
+	clr_country_flag = quick_select_encourage_economic_growth_1
+	clr_country_flag = quick_select_encourage_economic_growth_2
+}
+
+set_encourage_economic_growth_quick_select = {
+	clear_encourage_economic_growth_quick_select = yes
+	set_country_flag = quick_select_encourage_economic_growth_$n$
+}
+
+# Disrupt Local Infrastructure
+clear_disrupt_local_infrastructure_quick_select = {
+	clr_country_flag = quick_select_disrupt_local_infrastructure_1
+	clr_country_flag = quick_select_disrupt_local_infrastructure_2
+	clr_country_flag = quick_select_disrupt_local_infrastructure_3
+}
+
+set_disrupt_local_infrastructure_quick_select = {
+	clear_disrupt_local_infrastructure_quick_select = yes
+	set_country_flag = quick_select_disrupt_local_infrastructure_$n$
+}
+
+# Strengthen Local Shipbuilding Tradition
+clear_strengthen_local_shipbuilding_tradition_quick_select = {
+	clr_country_flag = quick_select_strengthen_local_shipbuilding_tradition_1
+	clr_country_flag = quick_select_strengthen_local_shipbuilding_tradition_2
+	clr_country_flag = quick_select_strengthen_local_shipbuilding_tradition_3
+	clr_country_flag = quick_select_strengthen_local_shipbuilding_tradition_4
+	clr_country_flag = quick_select_strengthen_local_shipbuilding_tradition_5
+}
+
+set_strengthen_local_shipbuilding_tradition_quick_select = {
+	clear_strengthen_local_shipbuilding_tradition_quick_select = yes
+	set_country_flag = quick_select_strengthen_local_shipbuilding_tradition_$n$
+}
+
+# Improved Gold Mining
+clear_improved_gold_mining_quick_select = {
+	clr_country_flag = quick_select_improved_gold_mining_1
+	clr_country_flag = quick_select_improved_gold_mining_2
+	clr_country_flag = quick_select_improved_gold_mining_3
+}
+
+set_improved_gold_mining_quick_select = {
+	clear_improved_gold_mining_quick_select = yes
+	set_country_flag = quick_select_improved_gold_mining_$n$
+}
+
+# Colonial Development
+clear_colonial_development_quick_select = {
+	clr_country_flag = quick_select_colonial_development_1
+	clr_country_flag = quick_select_colonial_development_2
+}
+
+set_colonial_development_quick_select = {
+	clear_colonial_development_quick_select = yes
+	set_country_flag = quick_select_colonial_development_$n$
+}
+
+# Modernized Local Administration
+clear_modernized_local_administration_quick_select = {
+	clr_country_flag = quick_select_modernized_local_administration_1
+	clr_country_flag = quick_select_modernized_local_administration_2
+	clr_country_flag = quick_select_modernized_local_administration_3
+	clr_country_flag = quick_select_modernized_local_administration_4
+}
+
+set_modernized_local_administration_quick_select = {
+	clear_modernized_local_administration_quick_select = yes
+	set_country_flag = quick_select_modernized_local_administration_$n$
+}

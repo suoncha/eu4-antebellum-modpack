@@ -1,0 +1,30 @@
+urbanization_state_edict = {
+	potential = {
+		OR = {
+			current_age = age_of_revolutions
+			current_age = age_of_imperialism
+		}
+		has_government_attribute = unlock_special_state_edicts
+	}
+	
+	allow = {
+		has_government_attribute = unlock_special_state_edicts
+		OR = {
+			current_age = age_of_revolutions
+			current_age = age_of_imperialism
+		}
+	}
+	
+	modifier = {
+		trade_goods_size_modifier = 0.33
+	}
+	
+	color = { 255 255 128 }
+	
+	ai_will_do = {
+		factor = 5
+	}
+	on_state_edict_enacted = {
+		edict_commander_add_cooldown_to_state = yes
+	}
+}

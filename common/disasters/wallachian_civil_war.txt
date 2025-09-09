@@ -1,0 +1,80 @@
+wallachian_civil_war = {
+	potential = {
+		is_or_was_wallachia = yes
+		NOT = {
+			has_country_flag = complete_end_of_wallachian_civil_war
+		}
+		OR = {
+			has_butchered_the_boiermiea = yes
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	can_start = {
+		is_or_was_wallachia = yes
+		OR = {
+			has_butchered_the_boiermiea = yes
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	can_stop = {
+		has_any_disaster = yes
+	}
+	can_end = {
+		OR = {
+			AND = {
+				stability = 1
+				legitimacy = 90
+				NOT = {
+					num_of_rebel_controlled_provinces = 1
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = wallachian_civil_war_defeated_the_10_houses_tooltip
+					has_defeated_the_10_houses = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_voivode_was_captured_in_capital
+				has_voiovode_been_captured_wallachian_civil_war = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_voivode_surrendered
+				has_voiovode_surrendered_wallachian_civil_war = yes
+			}
+			hidden_trigger = {
+				has_country_flag = partial_end_of_wallachian_civil_war
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_refused_ultimatum_trigger_tooltip
+				has_refused_boiermiea_ultimatum = yes
+			}
+		}
+		modifier = {
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = wallchian_civil_war_slaughtered_guests_trigger_tooltip
+				has_butchered_the_boiermiea = yes
+			}
+		}
+	}
+	modifier = {
+		global_unrest = 10
+		stability_cost_modifier = 0.25
+		manpower_recovery_speed = -0.25
+	}
+	on_start = wallachian_civil_war_events.2
+	on_end = wallachian_civil_war_events.37
+	on_monthly = {
+		events = {
+			wallachian_civil_war_events.3			#Event dispatcher
+			wallachian_civil_war_events.18			#Rebel flag manager
+		}
+	}
+}

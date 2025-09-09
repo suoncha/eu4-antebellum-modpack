@@ -1,0 +1,456 @@
+custom_window = {
+	name = autonomy_macro_window
+	potential = {
+		owned_by = FROM
+		FROM = {
+			has_country_flag = autonomy_macro_window_open
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_tab
+	tooltip = autonomy_macro_tab_tt
+	potential = {
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					has_country_flag = autonomy_macro_window_open
+				}
+				clr_country_flag = autonomy_macro_window_open
+			}
+			else = {
+				set_country_flag = autonomy_macro_window_open
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_lower_button
+	tooltip = autonomy_macro_min_development_lower_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				check_variable = {
+					which = autonomy_macro_minimum_development
+					value = 1
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					is_variable_equal = {
+						which = autonomy_macro_minimum_development
+						value = 0
+					}
+				}
+			}
+			custom_tooltip = autonomy_macro_lower_button_trigger_tt
+		}
+		else = {
+			custom_tooltip = autonomy_macro_lower_button_effect_tt
+			hidden_effect = {
+				FROM = {
+					subtract_variable = {
+						which = autonomy_macro_minimum_development
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_lower_5_button
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_variable = {
+				which = diff
+				which = autonomy_macro_minimum_development
+			}
+			subtract_variable = {
+				which = diff
+				value = 5
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = diff
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = autonomy_macro_minimum_development
+					value = 5
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_lower_10_button
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_variable = {
+				which = diff
+				which = autonomy_macro_minimum_development
+			}
+			subtract_variable = {
+				which = diff
+				value = 10
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = diff
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = autonomy_macro_minimum_development
+					value = 10
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_raise_button
+	tooltip = autonomy_macro_min_development_raise_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					check_variable = {
+						which = autonomy_macro_minimum_development
+						value = 10000
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = autonomy_macro_min_development_raise_effect_tt
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = autonomy_macro_minimum_development
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_raise_5_button
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					check_variable = {
+						which = autonomy_macro_minimum_development
+						value = 10000
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = sum
+					which = autonomy_macro_minimum_development
+				}
+				change_variable = {
+					which = sum
+					value = 5
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = sum
+								value = 10001
+							}
+						}
+					}
+					change_variable = {
+						which = autonomy_macro_minimum_development
+						value = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_development_raise_10_button
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					check_variable = {
+						which = autonomy_macro_minimum_development
+						value = 10000
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				set_variable = {
+					which = sum
+					which = autonomy_macro_minimum_development
+				}
+				change_variable = {
+					which = sum
+					value = 10
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = sum
+								value = 10001
+							}
+						}
+					}
+					change_variable = {
+						which = autonomy_macro_minimum_development
+						value = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_difference_lower_button
+	tooltip = autonomy_macro_min_difference_lower_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				check_variable = {
+					which = minimum_autonomy_difference
+					value = 1
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						check_variable = {
+							which = minimum_autonomy_difference
+							value = 1
+						}
+					}
+				}
+			}
+			custom_tooltip = autonomy_macro_lower_button_trigger_tt
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = minimum_autonomy_difference
+					value = -5
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_min_difference_raise_button
+	tooltip = autonomy_macro_min_difference_raise_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					check_variable = {
+						which = minimum_autonomy_difference
+						value = 25
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					check_variable = {
+						which = minimum_autonomy_difference
+						value = 25
+					}
+				}
+			}
+			custom_tooltip = autonomy_macro_min_difference_raise_button_trigger_tt
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = minimum_autonomy_difference
+					value = 5
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_lower_autonomy_button
+	tooltip = autonomy_macro_lower_autonomy_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			is_at_war = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = autonomy_macro_lower_autonomy_button_trigger_tt
+			FROM = {
+				check_variable = {
+					which = provinces_that_can_lower_autonomy
+					value = 1
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					check_variable = {
+						which = provinces_that_can_lower_autonomy
+						value = 1
+					}
+				}
+			}
+			custom_tooltip = autonomy_macro_lower_autonomy_button_effect_tt
+		}
+		hidden_effect = {
+			FROM = {
+				clear_autonomy_macro_flags = yes
+				calculate_all_province_autonomy = yes
+				calculate_which_provinces_can_lower_autonomy = yes
+				reduce_autonomy_globally = yes
+				set_variable = {
+					which = provinces_that_can_lower_autonomy
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_calculate_button
+	tooltip = autonomy_macro_calculate_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = calculate_autonomy
+				set_variable = {
+					which = average_autonomy_reduction
+					value = 0
+				}
+				set_variable = {
+					which = provinces_that_can_lower_autonomy
+					value = 0
+				}
+				clear_autonomy_macro_flags = yes
+				calculate_all_province_autonomy = yes
+				calculate_which_provinces_can_lower_autonomy = yes
+				calculate_average_autonomy_reduction = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_close_button
+	tooltip = autonomy_macro_close_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = autonomy_macro_window_open
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = autonomy_macro_lower_autonomy_button_glow
+	potential = {
+		FROM = {
+			is_at_war = no
+			check_variable = {
+				which = provinces_that_can_lower_autonomy
+				value = 1
+			}
+		}
+	}
+}
+
+custom_text_box = {
+	name = autonomy_macro_min_difference_status_text
+	potential = {
+	}
+	tooltip = autonomy_macro_min_difference_explained_tt
+}
+
+custom_text_box = {
+	name = autonomy_macro_min_development_status_text
+	potential = {
+	}
+	tooltip = autonomy_macro_min_development_explained_tt
+}

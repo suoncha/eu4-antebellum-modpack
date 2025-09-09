@@ -1,0 +1,32 @@
+namespace = global_edict_commander_settings_events
+country_event = {
+	id = global_edict_commander_settings_events.1
+	title = global_edict_commander_settings_events.1.t
+	desc = global_edict_commander_settings_events.1.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edict_commander_settings_events.1.exit
+		highlight = yes
+		clr_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edict_commander_settings_events.1.quick_select_settings
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_quick_select_settings_event.1
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_settings_events.1.reactive_edicts_settings
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_reactive_edicts_settings_event.1
+			}
+		}
+	}
+}

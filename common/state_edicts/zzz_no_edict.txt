@@ -1,0 +1,15 @@
+no_edict = {
+    potential = {
+        always = no
+    }
+    allow = {
+        always = no
+    }
+    modifier = {
+    }
+    
+    ai_will_do = {
+        factor = 0
+    }
+    color = {255 255 255}
+}
