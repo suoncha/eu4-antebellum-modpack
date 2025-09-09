@@ -1,0 +1,1190 @@
+# Open Menu Button
+custom_button = {
+    name = ab_romanization_open_button
+    potential = {
+        culture_group = roman_g
+    }
+    trigger = {
+        hidden_trigger = {
+			NOT = { has_country_flag = byz_romanization_menu_opened }
+		}
+    }
+    effect = {
+        set_country_flag = byz_romanization_menu_opened
+    }
+    tooltip = AB_ROMANIZATION_INFO
+}
+
+# ========== Etc
+# Menu
+custom_window = {
+	name = ab_romanization_menu_window
+	potential = {
+        ai = no
+		has_country_flag = byz_romanization_menu_opened
+	}
+}
+
+# Background
+custom_icon = {
+	name = ab_romanization_image
+	potential = {
+	}
+	frame_variable = "tlw_romanization_page_var"
+}
+
+# Close Menu Button
+custom_button = {
+    name = ab_romanization_close_button
+    potential = {
+    }
+    trigger = {
+    }
+    effect = {
+        clr_country_flag = byz_romanization_menu_opened
+    }
+    tooltip = AB_CLOSE_ROMANIZATION_MENU
+}
+
+# Back to Previous Page Button
+custom_button = {
+    name = ab_romanization_page_back_button
+    potential = {
+    }
+    trigger = {
+	}
+    effect = {
+		hidden_effect = {
+			ab_romanization_back_page_effect = yes
+		}
+	}
+    tooltip = AB_ACHIEVEMENT_PREVIOUS_PAGE
+}
+
+# Go to Next Page Button
+custom_button = {
+    name = ab_romanization_page_next_button
+    potential = {
+    }
+    trigger = {
+	}
+    effect = {
+		hidden_effect = {
+			ab_romanization_next_page_effect = yes
+		}
+    }
+    tooltip = AB_ACHIEVEMENT_NEXT_PAGE
+}
+
+# Page Number
+custom_text_box = {
+    name = ab_romanization_page_number
+    potential = {
+	}
+}
+# ========== Etc
+
+# Page 1
+custom_window = {
+	name = ab_romanization_page1_window
+	potential = {
+		tlw_romanization_page = { page = 1 }
+	}
+}
+
+custom_button = {
+    name = ab_romanization_italy_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_italy }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = italy_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_italy
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_italy
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_iberia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_iberia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = iberia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_iberia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_iberia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_maghreb_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_maghreb }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = maghreb_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_maghreb
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_maghreb
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_france_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_france }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 45
+            culture_group = roman_g
+            region = france_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_france
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_france
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_britain_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_britain }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 45
+            culture_group = roman_g
+            region = british_isles_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_britain
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_britain
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_low_countries_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_low_countries }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 15
+            culture_group = roman_g
+            region = low_countries_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_low_countries
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_low_countries
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_germany_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_germany }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            OR = {
+                region = north_german_region
+                region = south_german_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_germany
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_germany
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_scandinavia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_scandinavia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 45
+            culture_group = roman_g
+            region = scandinavia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_scandinavia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_scandinavia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_carpathia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_carpathia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 30
+            culture_group = roman_g
+            region = carpathia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_carpathia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_carpathia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_balkan_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_balkan }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = balkan_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_balkan
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_balkan
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_anatolia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_anatolia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = anatolia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_anatolia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_anatolia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_arabia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_arabia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 80
+            culture_group = roman_g
+            OR = {
+                region = arabia_region
+                region = egypt_region
+                region = mashriq_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_arabia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_arabia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_caucasia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_caucasia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 20
+            culture_group = roman_g
+            region = caucasia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_caucasia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_caucasia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_persia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_persia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 65
+            culture_group = roman_g
+            OR = {
+                region = persia_region
+                region = khorasan_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_persia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_persia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_hindustan_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_hindustan }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 50
+            culture_group = roman_g
+            region = hindusthan_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_hindustan
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_hindustan
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_western_india_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_western_india }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 30
+            culture_group = roman_g
+            region = west_india_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_western_india
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_western_india
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_coromandel_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_coromandel }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 60
+            culture_group = roman_g
+            OR = {
+                region = coromandel_region
+                region = deccan_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_coromandel
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_coromandel
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_bengal_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_bengal }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 30
+            culture_group = roman_g
+            region = bengal_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_bengal
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_bengal
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_poland_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_poland }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 35
+            culture_group = roman_g
+            OR = {
+                region = wendia_region
+                region = poland_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_poland
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_poland
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_russia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_russia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 75
+            culture_group = roman_g
+            OR = {
+                region = ruthenia_region
+                region = russia_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_russia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_russia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_baltic_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_baltic }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 20
+            culture_group = roman_g
+            region = baltic_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_baltic
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_baltic
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_pontic_steppe_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_pontic_steppe }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            OR = {
+                region = crimea_region
+                region = ural_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_pontic_steppe
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_pontic_steppe
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_central_asia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_central_asia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 45
+            culture_group = roman_g
+            region = central_asia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_central_asia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_central_asia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_siberia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_siberia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 25
+            culture_group = roman_g
+            region = west_siberia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_siberia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_siberia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_mongolia_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_mongolia }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = mongolia_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_mongolia
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_mongolia
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_manchuria_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_manchuria }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 50
+            culture_group = roman_g
+            OR = {
+                region = manchuria_region
+                region = east_siberia_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_manchuria
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_manchuria
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_burma_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_burma }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 20
+            culture_group = roman_g
+            region = burma_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_burma
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_burma
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_tibet_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_tibet }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 35
+            culture_group = roman_g
+            OR = {
+                region = tibet_region
+                region = xinan_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_tibet
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_tibet
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+# Page 2
+custom_window = {
+	name = ab_romanization_page2_window
+	potential = {
+		tlw_romanization_page = { page = 2 }
+	}
+}
+
+custom_button = {
+    name = ab_romanization_china_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_china }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 75
+            culture_group = roman_g
+            OR = {
+                region = north_china_region
+                region = south_china_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_china
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_china
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_korea_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_korea }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 15
+            culture_group = roman_g
+            region = korea_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_korea
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_korea
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_japan_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_japan }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = japan_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_japan
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_japan
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_indochina_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_indochina }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 40
+            culture_group = roman_g
+            region = indo_china_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_indochina
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_indochina
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_malaya_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_malaya }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 100
+            culture_group = roman_g
+            OR = {
+                region = malaya_region
+                region = indonesia_region
+                region = moluccas_region
+            }
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_malaya
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_malaya
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}
+
+custom_button = {
+    name = ab_romanization_oceania_button
+    potential = {
+        NOT = { has_country_modifier = romanassimilation_oceania }
+    }
+    trigger = {
+        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+            value = 20
+            culture_group = roman_g
+            region = oceanea_region
+        }
+	}
+    effect = {
+        custom_tooltip = AB_LONGDASHLINE
+        tooltip = {
+            add_country_modifier = {
+                name = romanassimilation_oceania
+                duration = -1
+            }
+        }
+        hidden_effect = {
+            add_country_modifier = {
+                name = romanassimilation_oceania
+                duration = -1
+                hidden = yes
+            }
+        }
+    }
+    tooltip = AB_ROMANIZATION_BONUS
+}

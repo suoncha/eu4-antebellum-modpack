@@ -1,0 +1,14 @@
+# No previous file for Roanoke
+
+owner = PU7
+controller = PU7
+add_core = PU7
+culture = punic
+religion = canaanite
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = tobacco
+base_manpower = 4
+capital = "Roanoke"
+discovered_by = buniq_tech

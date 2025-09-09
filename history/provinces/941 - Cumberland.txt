@@ -1,0 +1,15 @@
+#941 - Cumberland
+
+culture = shawnee
+religion = totemism
+capital = "Ouasioto"
+trade_goods = fur
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 6
+
+discovered_by = north_american

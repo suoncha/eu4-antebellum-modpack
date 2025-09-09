@@ -99,6 +99,7 @@ monarchy = {
 				# irish_highkingdom_reform
 				# scottish_monarchy_reform
 				sharifate_reform
+				caliphate_reform
 				barbary_sultanate_reform
 				roman_empire_reform
 				persian_government_reform
@@ -110,7 +111,7 @@ monarchy = {
 				stadthalter_monarchy_reform
 				janissary_autocracy_reform
 				admiralty_regime_reform
-				system_of_councils_reform
+				# system_of_councils_reform
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
@@ -138,6 +139,7 @@ monarchy = {
 				chinawarlord
 				japanempire
 				frankish_crown
+				andalusian_caliphate
 				imperial_autocracy
 				wenceslas
 				caliphate_reform
@@ -198,19 +200,22 @@ monarchy = {
 				bav_south_german_confederation
 				rhl_confederation_reform
 				MIN_celestial_empire
+				# ]]]
 				# Baltic
 				prr_pruthenian_warchiefdom
 				est_council_of_chiefs
 				krz_tsardom_of_krievzeme
-				# 1.10
-				islamic_caliphate
-				fatimid_caliphate
-				sicromancaliphate
-				almohad_state
-				abbasid_caliphate
-				chorathi_kingdom
-				bedouin_monarchy
-				hsncaliphate_reform
+				# TLW [[[
+				rom_grand_diocese
+				byzromanempire
+				byzromancaliphate
+				visigothic_kingdom
+				visigothic_empire
+				nicene_hellenic_empire
+				nicene_absolute_hellenic_empire
+				nicene_diadochi
+				foederati_reform
+				cca_muskogean_kingdom_reform
 				# ]]]
 			}
 		}
@@ -338,15 +343,13 @@ monarchy = {
 				magdeburg_rights_reform
 				bav_council_of_eight
 				mgygyula
-				# 1.10
-				abbasid_second_golden_age
-				nazcaliph_naz
-				nazcaliph_abs
-				nazcaliph_co
-				xbh_arts_patronage_reform
-				pastoral_society
-				tribal_chief_authority
-				hsnatabegs_buffed
+				# ]]]
+				# TLW [[[
+				visigothic_nobles
+				capua_roman_bureaucracy
+				aldiraq_barbiri_pride_reform
+				aldiraq_barbiri_pride_upgrade_reform
+				cca_punic_patronage_reform
 				# ]]]
 			}
 		}
@@ -485,10 +488,12 @@ monarchy = {
 				# Blood and Iron
 				ger_state_captains_reform
 				# ]]]
-				# 1.10
-				xbh_temple_archivist_reform
-				contact_with_westerners
-				hsnwaqf_buffed
+				# TLW [[[
+				byzculturalsphere
+				visigothic_bureaucracy
+				nicene_islamization
+				cca_temple_archivist_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -652,16 +657,15 @@ monarchy = {
 				fkn_blitzkrieg
 				fkn_improved_blitzkrieg
 				rhl_imperial_guards
-				# Baltic
-				blt_forest_warfare
-				blt_pulka_system
-				# 1.10
-				xbh_bedouin_compact_reform
-				nnv_assyrian_chariots_reform
-				camel_cavalry
-				desert_corps
-				camel_cavalry_upgrade
-				otr_cavalry_buffed
+                # Baltic
+                blt_forest_warfare
+                blt_pulka_system
+				# ]]]
+				# TLW [[[
+				byzlegio
+				aldiraq_relentless_ambush_reform
+				aldiraq_relentless_ambush_upgrade_reform
+				cca_siouan_compact_reform
 				# ]]]
 			}
 		}
@@ -720,11 +724,14 @@ monarchy = {
 				polorganizefaith
 				# Blood and Iron
 				rhl_atheist_ideas
-				# Baltic
-				est_harmony
-				# 1.10
-				xbh_cult_yahweh_reform
-				travelling_scholars
+                # Baltic
+                est_harmony
+				# ]]]
+				# TLW [[[
+				byzcaesaropapism
+				visigothic_religion
+				aldiraq_syncretic_worship_reform
+				cca_cult_yahweh_reform
 				# ]]]
 			}
 		}
@@ -795,10 +802,10 @@ monarchy = {
 				polempowertribal
 				# Blood and Iron
 				reformed_landstande_reform
-				# 1.10
-				xbh_scribes_torah_reform
-				modernized_bedouin_federation
-				otr_muslim_court_reform
+				# ]]]
+				# TLW [[[
+				byzengineering
+				cca_scribes_torah_reform
 				# ]]]
 			}
 		}
@@ -859,9 +866,10 @@ monarchy = {
 				pacta_conventa
 				# pol
 				polestablishsejm
-				# 1.10
-				xbh_royal_assembly_reform
-				amh_mahdi
+				# ]]]
+				# TLW [[[
+				byzprofessionalism
+				cca_royal_assembly_reform
 				# ]]]
 			}
 		}
@@ -900,10 +908,11 @@ monarchy = {
 				croat_talian_reforms
 				# pol
 				poljews
-				# Baltic
-				blt_amber_trade_charter
-				# 1.10
-				xbh_forested_prosperity_reform
+                # Baltic
+                blt_amber_trade_charter
+				# ]]]
+				# TLW [[[
+				cca_forested_prosperity_reform
 				# ]]]
 			}
 		}
@@ -916,8 +925,9 @@ monarchy = {
 				the_social_contract_reform
 				# AB 1.9
 				slv_princes_stone_ceremony
-				# 1.10
-				xbh_crown_covenant_reform
+				# ]]]
+				# TLW [[[
+				cca_crown_covenant_reform
 				# ]]]
 			}
 		}
@@ -964,8 +974,9 @@ monarchy = {
 				lit_power_tsar
 				# 100k
 				croatian_absolutism
-				# 1.10
-				xbh_will_of_elyon_reform
+				# ]]]
+				# TLW [[[
+				cca_will_of_elyon_reform
 				# ]]]
 			}
 		}
@@ -1010,6 +1021,9 @@ monarchy = {
 				# pol
 				polthirdrome
 				polonenationunderthegods
+				# ]]]
+				# TLW [[[
+				cca_judicial_independence_reform
 				# ]]]
 			}
 		}
@@ -1092,6 +1106,9 @@ monarchy = {
 		noralthing
 		albadual
 		scomonarchy
+		# ]]]
+		# TLW [[[
+		byzromanempire
 		# ]]]
 	}
 	
@@ -1257,6 +1274,16 @@ republic = {
 				ab_tuscan_peasants_reform
 				rhl_confederation_reform
 				# ]]]
+				# TLW [[[
+				rom_diocese
+				rom_former_diocese
+				byzromanrepublic
+				ctg_punic_league_reform
+				ctg_punic_city_reform
+				ctg_carthaginian_empire_reform
+				aldiraq_barbaro_hylinian_republic_reform
+				hyl_symmachia_republic_reform
+				# ]]]
 			}
 		}
 		republican_virtues = {
@@ -1309,6 +1336,15 @@ republic = {
 				# Blood and Iron
 				bav_council_of_eight
 				# ]]]
+				# TLW [[[
+				byztheme
+				ctg_canaanite_oligarchy_reform
+				ctg_canaanite_oligarchy_upgrade_reform
+				hyl_honor_code_reform
+				hyl_virtues_of_courage_reform
+				aldiraq_barbiri_pride_reform
+				aldiraq_barbiri_pride_upgrade_reform
+				# ]]]
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -1330,6 +1366,12 @@ republic = {
 				# AB [[[
 				zangid_power
 				rustysyatsky
+				# ]]]
+				# TLW [[[
+				byzculturalsphere
+				ctg_supreme_council_reform
+				ctg_college_of_thoughts_reform
+				hyl_triennial_elections_reform
 				# ]]]
 			}
 		}
@@ -1482,6 +1524,17 @@ republic = {
 				ab_condottiero_reform
 				rhl_imperial_guards
 				# ]]]
+				# TLW [[[
+				byzlegio
+				rom_legio
+				ctg_merchant_fleet_reform
+				ctg_merchant_fleet_thapsus_reform
+				ctg_punic_cataphracts_reform
+				hyl_phalanx_formation_reform
+				hyl_hoplite_reserves_reform
+				aldiraq_relentless_ambush_reform
+				aldiraq_relentless_ambush_upgrade_reform
+				# ]]]
 			}
 		}
 		republic_and_religion = {
@@ -1531,6 +1584,14 @@ republic = {
 				# Blood and Iron
 				rhl_atheist_ideas
 				# ]]]
+				# TLW [[[
+				byzcaesaropapism
+				ctg_canaanite_pluralism_reform
+				ctg_universal_education_reform
+				hyl_secular_consensus_reform
+				hyl_philosopher_priest_reform
+				aldiraq_syncretic_worship_reform
+				# ]]]
 			}
 		}
 		parliamentary_vs_presidential = {
@@ -1554,6 +1615,14 @@ republic = {
 				enforced_autocracy_reform
 				#1.37
 				seven_provinces_reform
+				# TLW [[[
+				byzsenate
+				byzprofessionalism
+				ctg_carthage_first_reform
+				ctg_order_of_melqart_reform
+				hyl_military_tribunes_reform
+				hyl_military_tribunes_upgrade_reform
+				# ]]]
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -1571,6 +1640,11 @@ republic = {
 				ottoman_eyalets
 				ruskontsy
 				htm_kurin
+				# ]]]
+				# TLW [[[
+				byzengineering
+				ctg_council_of_people_reform
+				ctg_muskogean_councilor_reform
 				# ]]]
 			}
 		}
@@ -1605,6 +1679,10 @@ republic = {
 				# Blood and Iron
 				ab_customs_union
 				# ]]]
+				# TLW [[[
+				ctg_merchant_syndicate_reform
+				ctg_slave_economy_reform
+				# ]]]
 			}
 		}
 		consolidation_of_power_category = {
@@ -1629,6 +1707,10 @@ republic = {
 				# Blood and Iron
 				ab_regional_signora_reform
 				# ]]]
+				# TLW [[[
+				ctg_balance_of_cities_reform
+				hyl_supreme_judicial_assembly_reform
+				# ]]]
 			}
 		}
 		guiding_principle_of_administration = {
@@ -1641,6 +1723,10 @@ republic = {
 				equality_principle_reform
 				imperial_principle_reform
 				enlightened_principle_reform
+				# TLW [[[
+				ctg_meritocratic_rule_reform
+				hyl_civic_virtue_reform
+				# ]]]
 			}
 		}
 		electorate = {
@@ -1658,6 +1744,10 @@ republic = {
 				hansacolonial
 				htm_council
 				# ]]]
+				# TLW [[[
+				ctg_restricted_voting_reform
+				hyl_people_voice_reform
+				# ]]]
 			}
 		}
 		office_selection = {
@@ -1668,6 +1758,11 @@ republic = {
 				pirate_representation_reform
 				# AB [[[
 				ottoman_lodge
+				# ]]]
+				# TLW [[[
+				byzabsolutism
+				ctg_election_by_council_reform
+				hyl_elected_strategoi_reform
 				# ]]]
 			}
 		}
@@ -1684,6 +1779,10 @@ republic = {
 				scourge_of_the_seven_sea_reform
 				#1.35
 				peters_government_reform
+				# TLW [[[
+				byzconstitution
+				ctg_temporary_dictatorship_reform
+				# ]]]
 			}
 		}
 	}
@@ -1701,6 +1800,9 @@ republic = {
 		pirate_republic_reform
 		protectorate_parliament_reform
 		prussian_republic_reform
+		# TLW [[[
+		byzromanrepublic
+		# ]]]
 	}
 	exclusive_reforms = {
 		lottery_reform
@@ -1793,8 +1895,10 @@ tribal = {
 				ab_holy_horde_reform
 				grh_ashen_horde_reform
 				magyar_tribal_union
-				# 1.10
-				bedouin_tribal_monarchy
+				# ]]]
+				# TLW [[[
+				ctg_punic_tribe_reform
+				che_zoro_tribe_reform
 				# ]]]
 			}
 		}
@@ -1810,8 +1914,11 @@ tribal = {
 				cmnmongol
 				mgs_ferghana
 				mgygyula
-				pastoral_society
-				tribal_chief_authority
+				# ]]]
+				# TLW [[[
+				aldiraq_barbiri_pride_reform
+				aldiraq_barbiri_pride_upgrade_reform
+				ozo_seven_amesha_reform
 				# ]]]
 			}
 		}
@@ -1829,8 +1936,11 @@ tribal = {
 				mgs_untoheathens
 				mgs_footsteps
 				mgytaltos
-				mgygreek
-				travelling_scholars
+                mgygreek
+				# ]]]
+				# TLW [[[
+				aldiraq_syncretic_worship_reform
+				ozo_denunciation_reform
 				# ]]]
 			}
 		}
@@ -1903,13 +2013,14 @@ tribal = {
 				cuman_lancers_reform
 				#1.37 Bohemia
 				vozove_hradby_reform
-				russian_mercenary_guard_reform 
+				russian_mercenary_guard_reform
 				mgyslavic
-				mgyispan
-				# 1.10
-				camel_cavalry
-				desert_corps
-				camel_cavalry_upgrade
+                mgyispan
+				# TLW [[[
+				aldiraq_relentless_ambush_reform
+				aldiraq_relentless_ambush_upgrade_reform
+				ozo_swords_righteous_reform
+				# ]]]
 			}
 		}
 		tribal_modernization = {
@@ -1924,7 +2035,9 @@ tribal = {
 				glh_kurultai
 				cmncanon
 				mgs_patriarchate
-				contact_with_westerners
+				# ]]]
+				# TLW [[[
+				ozo_adapting_yasna_reform
 				# ]]]
 			}
 		}
@@ -1941,7 +2054,9 @@ tribal = {
 				# AB [[[
 				mch_jin
 				AB_SHH_Modernize_Tribal_Values
-				modernized_bedouin_federation
+				# ]]]
+				# TLW [[[
+				ozo_reformation_great_flame_reform
 				# ]]]
 			}
 		}
@@ -2057,11 +2172,17 @@ theocracy = {
 				bav_south_german_confederation
 				fkn_holy_knights
 				rhl_confederation_reform
-				teu_order_of_steppes
+                teu_order_of_steppes
                 ab_kingdom_of_god
 				# ]]]
-				# 1.10
-				jannabi_qarmatian_republic
+				# TLW [[[
+				byzromantheocracy
+				byzromancaliphate
+				che_zoro_order_reform
+				che_zoro_order_satrapy_reform
+				che_zoro_order_upgrade_reform
+				che_zoro_order_final_reform
+				# ]]]
 			}
 		}
 		internal_vs_external_mission = {
@@ -2095,10 +2216,13 @@ theocracy = {
 				# ]]]
 				# Blood and Iron
 				bav_council_of_eight
-				mission_expand_orders_buffed
+                mission_expand_orders_buffed
+				# ]]]
+				# TLW [[[
+				byztheme
+				ozo_sacred_border_reform
 				# ]]]
 			}
-
 		}
 		education_of_the_state = {
 			reforms = {
@@ -2114,7 +2238,13 @@ theocracy = {
 				# AB [[[
 				rusmetropolitanschools
 				# ]]]
-				QRM_education_of_the_nomads
+				# TLW [[[
+				byzculturalsphere
+				aldiraq_barbiri_pride_reform
+				aldiraq_barbiri_pride_upgrade_reform
+				ozo_seven_amesha_reform
+				ozo_wisdom_magi_reform
+				# ]]]
 			}
 		}
 		military_doctrines = {
@@ -2263,7 +2393,14 @@ theocracy = {
 				fkn_blitzkrieg
 				fkn_improved_blitzkrieg
 				rhl_imperial_guards
-				teu_hussars
+                teu_hussars
+				# ]]]
+				# TLW [[[
+				byzlegio
+				aldiraq_relentless_ambush_reform
+				aldiraq_relentless_ambush_upgrade_reform
+				ozo_swords_righteous_reform
+				ozo_protectors_flame_reform
 				# ]]]
 			}
 		}
@@ -2305,6 +2442,12 @@ theocracy = {
 				# Blood and Iron
 				rhl_atheist_ideas
 				# ]]]
+				# TLW [[[
+				byzcaesaropapism
+				aldiraq_syncretic_worship_reform
+				ozo_denunciation_reform
+				ozo_divine_ordainment_reform
+				# ]]]
 			}
 		}
 		clergy_in_administration = {
@@ -2320,6 +2463,10 @@ theocracy = {
 				#1.36
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
+				# TLW [[[
+				byzengineering
+				ozo_adapting_yasna_reform
+				# ]]]
 			}
 		}
 		secularization = {
@@ -2337,6 +2484,12 @@ theocracy = {
 				# AB [[[
 				ruscourtprinces
 				ruscrushprinces
+				# ]]]
+				# TLW [[[
+				byzsenate
+				byzprofessionalism
+				ozo_reformation_great_flame_reform
+				ozo_reformation_great_flame_upgrade_reform
 				# ]]]
 			}
 		}
@@ -2364,6 +2517,9 @@ theocracy = {
 				merchant_representation_reform
 				modern_economics_reform
 				chinampa_farms_reform
+				# TLW [[[
+				ozo_sanctified_trade_reform
+				# ]]]
 			}
 		}
 		divine_cause = {
@@ -2378,6 +2534,10 @@ theocracy = {
 				# AB [[[
 				akgunid_sufi
 				wee_pagan_fury
+				# ]]]
+				# TLW [[[
+				byzabsolutism
+				ozo_divine_cause_reform
 				# ]]]
 			}
 		}
@@ -2395,6 +2555,10 @@ theocracy = {
 				wee_adopt
 				rusheadorthodox
 				# ]]]
+				# TLW [[[
+				byzconstitution
+				ozo_secular_governance_reform
+				# ]]]
 			}
 		}
 		nature_of_faith = {
@@ -2405,6 +2569,9 @@ theocracy = {
 				organising_our_religion_reform
 				faith_and_power_reform
 				belief_and_unity_reform
+				# TLW [[[
+				ozo_eternal_truth_reform
+				# ]]]
 			}
 		}
 		culture_within_the_state = {
@@ -2413,6 +2580,9 @@ theocracy = {
 				harmonization_of_cultures_reform
 				cultural_safe_haven_reform
 				taxation_of_the_foreigners_reform
+				# TLW [[[
+				ozo_cultural_heritage_reform
+				# ]]]
 			}
 		}
 		faith_and_the_world = {
@@ -2429,6 +2599,9 @@ theocracy = {
 				peters_government_reform
 				# AB [[[
 				rusreligiouscharters
+				# ]]]
+				# TLW [[[
+				ozo_faith_over_all_reform
 				# ]]]
 			}
 		}

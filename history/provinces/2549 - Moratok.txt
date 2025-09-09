@@ -1,0 +1,22 @@
+# 2549 - Moratok
+
+latent_trade_goods = {
+	coal
+}
+
+owner = POW
+controller = POW
+add_core = POW
+culture = barbiri
+religion = zoroastrian
+capital = "Moratok"
+trade_goods = naval_supplies
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 2
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+discovered_by = buniq_tech

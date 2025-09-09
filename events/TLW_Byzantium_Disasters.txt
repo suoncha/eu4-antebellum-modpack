@@ -1,0 +1,5301 @@
+namespace = ab_byzantium_disaster
+
+## FALL OF THE ANGELIDS -----
+#Fall Of The Angelid Dynasty Start
+country_event = {
+	id = ab_byzantium_disaster.0
+	title = ab_byzantium_disaster.0.t
+	desc = ab_byzantium_disaster.0.d
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -1
+			add_manpower = -8
+			add_country_modifier = {
+				name = byz_revolt_mil
+				duration = -1
+			}
+			country_event = {
+				id = ab_byzantium_disaster.2
+				days = 30
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.0.a
+		tooltip = {
+			add_stability = -1
+			add_manpower = -8
+			add_country_modifier = {
+				name = byz_revolt_mil
+				duration = -1
+			}
+		}
+	}
+}
+
+#Fall Of The Angelid Dynasty End
+country_event = {
+	id = ab_byzantium_disaster.1
+	title = ab_byzantium_disaster.1.t
+	desc = ab_byzantium_disaster.1.d
+	picture = AB_JUSTINIAN_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { mission_completed = byzantium_court }
+				}
+				complete_mission = byzantium_court
+			}
+			if = {
+				limit = {
+					NOT = { mission_completed = byzantium_economy }
+				}
+				complete_mission = byzantium_economy
+			}
+			if = {
+				limit = {
+					NOT = { mission_completed = byzantium_imperial_army }
+				}
+				complete_mission = byzantium_imperial_army
+			}
+			if = {
+				limit = {
+					NOT = { mission_completed = byzantium_traitors }
+				}
+				complete_mission = byzantium_traitors
+			}
+			if = {
+				limit = {
+					NOT = { mission_completed = byzantium_crisis }
+				}
+				complete_mission = byzantium_crisis
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = had_fall_angelid
+			clr_country_flag = byz_angelid_great_rewards
+			clr_country_flag = epi_angelidrevolt_venicedeal
+			clr_country_flag = epi_angelidrevolt_nicaeadeal
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.1.a
+		custom_tooltip = BYZ_COMPLETE_CRISIS_MISSIONS
+		if = {
+			limit = {
+				has_country_flag = byz_angelid_great_rewards
+				NOT = { has_country_flag = epi_angelidrevolt_venicedeal }
+				NOT = { has_country_flag = epi_angelidrevolt_nicaeadeal }
+			}
+			custom_tooltip = BYZ_RESTORER_PP
+			hidden_effect = {
+				add_power_projection = {
+					type = BYZ_perma_pp
+					amount = 15
+				}
+			}
+			add_country_modifier = {
+				name = byz_restorer_angelid
+				duration = 18250
+			}
+			add_ruler_personality = augustus_personality
+		}
+		custom_tooltip = AB_EMPTY
+		remove_country_modifier = byz_revolt_mil
+		add_government_reform = imperial_autocracy
+	}
+}
+
+#Epirus Rebellion
+country_event = {
+	id = ab_byzantium_disaster.2
+	title = ab_byzantium_disaster.2.t
+	desc = ab_byzantium_disaster.2.d
+	picture = AB_CHARGE_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 142
+						province_id = 144
+						province_id = 4698
+						province_id = 4699
+					}
+				}
+				add_core = EPI
+			}
+			if = {
+				limit = {
+					NOT = { exists = EPI }
+				}
+				release = EPI
+			}
+			country_event = {
+				id = ab_byzantium_disaster.4
+				days = 60
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.2.a
+		hidden_effect = {
+			151 = {
+				add_claim = EPI
+			}
+			EPI = {
+				convert_ruler_to_general = 75
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						cavalry = 0.2
+					}
+				}
+			}
+		}
+		EPI = {
+			if = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				grant_independence = yes
+			}
+			declare_war_with_cb = {
+			    who = BYZ
+			    casus_belli = cb_conquest
+				war_goal_province = 151
+		    }
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_EPIRUS_FIGHT
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.2.b
+		add_stability = -2
+		custom_tooltip = BYZ_EPIRUS_SURRENDER
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium_disaster.3
+			}
+		}
+	}
+}
+
+#Epirote Victory
+country_event = {
+	id = ab_byzantium_disaster.3
+	title = ab_byzantium_disaster.3.t
+	desc = ab_byzantium_disaster.3.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = ab_byzantium_disaster.3.a
+		set_country_flag = had_fall_angelid
+		inherit = EPI
+		define_ruler = {
+			name = "Manuel III"
+			adm = 4
+			dip = 3
+			mil = 5
+			dynasty = "Palaiologos"
+			claim = 100
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {}
+		}
+		if = {
+			limit = {
+				war_with = VEN
+			}
+			add_prestige = -10
+			white_peace = VEN
+			146 = {
+				cede_province = VEN
+				add_core = VEN
+			}
+			5152 = {
+				cede_province = VEN
+				add_core = VEN
+			}
+		}
+	}
+}
+
+#Nobles Take Arms
+country_event = {
+	id = ab_byzantium_disaster.4
+	title = ab_byzantium_disaster.4.t
+	desc = ab_byzantium_disaster.4.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+			random_owned_province = {
+				noble_rebels = 1
+			}
+			random_owned_province = {
+				noble_rebels = 1
+			}
+			VEN = {
+				country_event = {
+					id = ab_byzantium_disaster.5
+					days = 60
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.11
+				days = 210
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.4.a
+		tooltip = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+			random_owned_province = {
+				noble_rebels = 1
+			}
+			random_owned_province = {
+				noble_rebels = 1
+			}
+		}
+	}
+}
+
+#Venice demands Athens and Thebes 1 - Venice threatens war
+country_event = {
+	id = ab_byzantium_disaster.5
+	title = ab_byzantium_disaster.5.t
+	desc = ab_byzantium_disaster.5.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		BYZ = {
+			has_disaster = byzantium_fall_angelid
+			owns = 146
+			owns = 5152
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.5.a
+		BYZ = {
+			country_event = {
+				id = ab_byzantium_disaster.6
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.5.b
+		add_prestige = -10
+	}
+}
+
+#Venice demands Athens and Thebes 2 - Byzantium receives Venice threat
+country_event = {
+	id = ab_byzantium_disaster.6
+	title = ab_byzantium_disaster.6.t
+	desc = ab_byzantium_disaster.6.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+		
+	option = {
+		name = ab_byzantium_disaster.6.a
+		add_prestige = -10
+		add_truce_with = VEN
+		146 = {
+			cede_province = VEN
+			add_core = VEN
+			remove_core = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		5152 = {
+			cede_province = VEN
+			add_core = VEN
+			remove_core = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		VEN = {
+			country_event = {
+				id = ab_byzantium_disaster.7
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.6.b
+		add_legitimacy = 10
+		VEN = {
+			country_event = {
+				id = ab_byzantium_disaster.8
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_VEN_WAR
+	}
+}
+
+#Venice demands Athens and Thebes 3 - Byzantium accepts
+country_event = {
+	id = ab_byzantium_disaster.7
+	title = ab_byzantium_disaster.7.t
+	desc = ab_byzantium_disaster.7.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+		
+	option = {
+		name = ab_byzantium_disaster.7.a
+		add_prestige = 10
+		tooltip = {
+			add_truce_with = BYZ
+			146 = {
+				cede_province = VEN
+				add_core = VEN
+				remove_core = BYZ
+			}
+			custom_tooltip = AB_EMPTY
+			5152 = {
+				cede_province = VEN
+				add_core = VEN
+				remove_core = BYZ
+			}
+		}
+	}
+}
+
+#Venice demands Athens and Thebes 4 - Byzantium refuses
+country_event = {
+	id = ab_byzantium_disaster.8
+	title = ab_byzantium_disaster.8.t
+	desc = ab_byzantium_disaster.8.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			146 = {
+				add_claim = VEN
+			}
+			5152 = {
+				add_claim = VEN
+			}
+			declare_war_with_cb = {
+				who = BYZ
+				casus_belli = cb_conquest
+				war_goal_province = 146
+			}
+			if = {
+				limit = {
+					exists = NCI
+				}
+				NCI = {
+					country_event = {
+						id = ab_byzantium_disaster.9
+						days = 90
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = BUL
+				}
+				BUL = {
+					country_event = {
+						id = ab_byzantium_disaster.9
+						days = 180
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.8.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = BYZ
+				casus_belli = cb_conquest
+				war_goal_province = 146
+			}
+		}
+	}
+}
+
+#Venice demands Athens and Thebes 5 - Nicaea/Bulgaria joins
+country_event = {
+	id = ab_byzantium_disaster.9
+	title = ab_byzantium_disaster.9.t
+	desc = ab_byzantium_disaster.9.d
+	picture = BYZ_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		BYZ = {
+			has_disaster = byzantium_fall_angelid
+			war_with = VEN
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.9.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				has_country_flag = bul_byzantium_refused
+			}
+		}
+		join_all_offensive_wars_of = VEN
+		BYZ = {
+			country_event = {
+				id = ab_byzantium_disaster.10
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.9.b
+		ai_chance = { factor = 30 }
+		add_prestige = -10
+	}
+}
+
+#Venice demands Athens and Thebes 6 - Nicaea/Bulgaria joins - Inform Byz
+country_event = {
+	id = ab_byzantium_disaster.10
+	title = ab_byzantium_disaster.10.t
+	desc = ab_byzantium_disaster.10.d
+	picture = BYZ_CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.10.a
+	}
+}
+
+#Ioannes Assassination
+country_event = {
+	id = ab_byzantium_disaster.11
+	title = ab_byzantium_disaster.11.t
+	desc = ab_byzantium_disaster.11.d
+	picture = ASSASSINATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_fall_angelid
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.11.a
+		change_monarch_points_or_power = {
+			points = 1
+			power = adm
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = dip
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = mil
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.11.b
+		hidden_effect = {
+			define_ruler = {
+				adm = 4
+				dip = 4
+				mil = 4
+				dynasty = "Laskaris"
+				claim = 50
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				kill_heir = {}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.11.c
+		hidden_effect = {
+			define_ruler = {
+				adm = 4
+				dip = 4
+				mil = 4
+				dynasty = "Doukas"
+				claim = 50
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				kill_heir = {}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.11.de
+		hidden_effect = {
+			define_ruler = {
+				adm = 4
+				dip = 4
+				mil = 4
+				dynasty = "Komnenos"
+				claim = 50
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				kill_heir = {}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.11.e
+		hidden_effect = {
+			define_ruler = {
+				adm = 4
+				dip = 4
+				mil = 4
+				claim = 30
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				kill_heir = {}
+			}
+		}
+	}
+}
+
+## CRISIS OF THE SIXTEENTH CENTURY -----
+#Crisis of the Sixteenth Century Start
+country_event = {
+	id = ab_byzantium_disaster.15
+	title = ab_byzantium_disaster.15.t
+	desc = ab_byzantium_disaster.15.d
+	picture = SIERRA_DE_LA_PLATA_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -3
+			every_province = {
+				limit = {
+					OR = {
+						area = aegean_archipelago_area
+						area = aydin_area
+						area = morea_area
+						area = northern_greece_area
+						area = macedonia_area
+						area = thrace_area
+						area = hudavendigar_area
+						area = cyrenaica_area
+					}
+				}
+				add_devastation = 50
+				add_province_modifier = {
+					name = byz_ashes_thera
+					duration = 3650
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.17
+				days = 30
+			}
+			country_event = {
+				id = ab_byzantium_disaster.18
+				days = 90
+			}
+			country_event = {
+				id = ab_byzantium_disaster.19
+				days = 180
+			}
+			country_event = {
+				id = ab_byzantium_disaster.21
+				days = 365
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.15.a
+		tooltip = {
+			add_stability = -3
+		}
+		custom_tooltip = BYZ_ASHES_THERA
+		tooltip = {
+			add_devastation = 50
+			add_province_modifier = {
+				name = byz_ashes_thera
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Crisis of the Sixteenth Century End
+country_event = {
+	id = ab_byzantium_disaster.16
+	title = ab_byzantium_disaster.16.t
+	desc = ab_byzantium_disaster.16.d
+	picture = AB_ROMAN_TRIUMPH_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_16th_crisis
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = byz_crisis_ayyubids
+			clr_country_flag = byz_crisis_italians
+			clr_country_flag = byz_occupied_roma
+			clear_global_event_target = italianLeagueLeader
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.16.a
+		add_stability_or_adm_power = yes
+	}
+}
+
+#Eruption Recovery
+country_event = {
+	id = ab_byzantium_disaster.17
+	title = ab_byzantium_disaster.17.t
+	desc = ab_byzantium_disaster.17.d
+	picture = FAMINE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.17.a
+		ai_chance = { factor = 50 }
+		add_years_of_income = -2
+		custom_tooltip = BYZ_THERA_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = byz_thera_funding_max
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = aegean_archipelago_area
+						area = aydin_area
+						area = morea_area
+						area = northern_greece_area
+						area = macedonia_area
+						area = thrace_area
+						area = hudavendigar_area
+						area = cyrenaica_area
+					}
+				}
+				add_province_modifier = {
+					name = byz_thera_funding_max
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.17.b
+		ai_chance = { factor = 30 }
+		add_years_of_income = -1
+		custom_tooltip = BYZ_THERA_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = byz_thera_funding_min
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = aegean_archipelago_area
+						area = aydin_area
+						area = morea_area
+						area = northern_greece_area
+						area = macedonia_area
+						area = thrace_area
+						area = hudavendigar_area
+						area = cyrenaica_area
+					}
+				}
+				add_province_modifier = {
+					name = byz_thera_funding_min
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.17.c
+		ai_chance = { factor = 20 }
+		add_prestige = -10
+	}
+}
+
+#Language of the Romans
+country_event = {
+	id = ab_byzantium_disaster.18
+	title = ab_byzantium_disaster.18.t
+	desc = ab_byzantium_disaster.18.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.18.a
+		ai_chance = { factor = 10 }
+		set_country_flag = byz_court_latin
+		custom_tooltip = BYZ_LANGUAGE_LATIN
+	}
+
+	option = {
+		name = ab_byzantium_disaster.18.b
+		ai_chance = { factor = 80 }
+		set_country_flag = byz_court_mixed
+		custom_tooltip = BYZ_LANGUAGE_MIXED
+	}
+
+	option = {
+		name = ab_byzantium_disaster.18.c
+		ai_chance = { factor = 10 }
+		set_country_flag = byz_court_greek
+		custom_tooltip = BYZ_LANGUAGE_GREEK
+	}
+}
+
+#Restoration of the Republic
+country_event = {
+	id = ab_byzantium_disaster.19
+	title = ab_byzantium_disaster.19.t
+	desc = ab_byzantium_disaster.19.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.19.a
+		ai_chance = { factor = 90 }
+		add_prestige = 10
+		for = {
+			amount = 5
+			effect = "
+				random_owned_province = {
+					limit = {
+						region = balkan_region
+					}
+					leadered_peasant_rebels = 2
+				}
+			"
+		}
+		149 = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 2
+				leader = "Ioannis Kapodistrias"
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium_disaster.20
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.19.b
+		ai_chance = { factor = 10 }
+		add_stability = -3
+		add_prestige = -10
+		custom_tooltip = AB_EMPTY
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+			desc = BYZ_SUPREMACY
+			influence = 20
+			duration = 7300
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = 15
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = byz_restore_republic
+		custom_tooltip = BYZ_RESTORE_REPUBLIC
+	}
+}
+
+#Eugeneis Deal
+country_event = {
+	id = ab_byzantium_disaster.20
+	title = ab_byzantium_disaster.20.t
+	desc = ab_byzantium_disaster.20.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.20.a
+		ai_chance = { factor = 20 }
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = BYZ_SUPREMACY
+			influence = 20
+			duration = 7300
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 15
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.20.b
+		ai_chance = { factor = 30 }
+		add_prestige = -5
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = BYZ_SUPREMACY
+			influence = 10
+			duration = 7300
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 5
+		}
+		for = {
+			amount = 2
+			effect = "
+				random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					noble_rebels = 2
+				}
+			"
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.20.c
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+		for = {
+			amount = 4
+			effect = "
+				random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					noble_rebels = 2
+				}
+			"
+		}
+	}
+}
+
+#Ayyubids Resurrection
+country_event = {
+	id = ab_byzantium_disaster.21
+	title = ab_byzantium_disaster.21.t
+	desc = ab_byzantium_disaster.21.d
+	picture = AB_CHARGE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = syria_area
+						area = aleppo_area
+						area = syrian_desert_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = RYB
+				cede_province = RYB
+			}
+			RYB = {
+				set_country_flag = disaster_tag_cannot_ally
+				change_primary_culture = al_suryah_arabic
+				change_religion = sunni
+				change_government = monarchy
+				add_government_reform = iqta
+				change_technology_group = muslim
+				change_unit_type = muslim
+				add_army_tradition = 50
+				add_prestige = 30
+				add_treasury = 250
+				set_capital = 382
+				define_ruler = {
+					dynasty = "Ayyubid"
+					ADM = 3
+					DIP = 4
+					MIL = 4
+				}
+				define_ruler_to_general = {
+					fire = 4
+					shock = 4
+					manuever = 2
+					siege = 3
+				}
+			}
+			RYB = {
+				capital_scope = {
+					if = {
+						limit = {
+							religion = sunni
+						}
+						build_to_forcelimit = {
+							infantry = 0.8
+							cavalry = 0.2
+						}
+					}
+					else = {
+						build_to_forcelimit = {
+							infantry = 0.4
+							cavalry = 0.1
+						}
+					}
+				}
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 7
+							OR = {
+								area = syria_area
+								area = aleppo_area
+								area = syrian_desert_area
+							}
+							religion = sunni
+						}
+					}
+					random_owned_province = {
+						for = {
+							amount = 20
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 20	
+				}
+				else = {
+					random_owned_province = {
+						for = {
+							amount = 10
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 10
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					build_to_forcelimit = {
+						galley = 0.7
+						light_ship = 0.2
+						transport = 0.1
+					}
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.22
+				days = 120
+			}
+			country_event = {
+				id = ab_byzantium_disaster.23
+				days = 240
+			}
+			country_event = {
+				id = ab_byzantium_disaster.24
+				days = 605
+			}
+			country_event = {
+				id = ab_byzantium_disaster.33
+				days = 3650
+			}
+			if = {
+				limit = {
+					any_country = {
+						culture_group = latin
+						is_part_of_hre = yes
+						NOT = { tag = PAP }
+					}
+				}
+				random_country = {
+					limit = {
+						culture_group = latin
+						is_part_of_hre = yes
+						NOT = { tag = PAP }
+					}
+					country_event = {
+						id = ab_byzantium_disaster.26
+						days = 180
+					}
+				}
+			}
+			else = {
+				set_country_flag = byz_crisis_italians
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.21.a
+		ai_chance = { factor = 95 }
+		declare_war_with_cb = {
+			who = RYB
+			casus_belli = cb_suppress_revolt
+		}
+		custom_tooltip = BYZ_WAR_AYYUBIDS
+	}
+
+	option = {
+		name = ab_byzantium_disaster.21.b
+		ai_chance = { factor = 5 }
+		set_country_flag = byz_crisis_ayyubids
+		add_truce_with = RYB
+		custom_tooltip = BYZ_SURRENDER_AYYUBIDS
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = palestine_area
+						area = trans_jordan_area
+						region = egypt_region
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = RYB
+				add_core = RYB
+			}
+			RYB = {
+				clr_country_flag = disaster_tag_cannot_ally
+				every_owned_province = {
+					limit = {
+						is_core = BYZ
+					}
+					remove_core = BYZ
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = HSN }
+			}
+			RYB = {
+				change_tag = HSN
+				override_country_name = AYUB
+				swap_non_generic_missions = yes
+			}
+		}
+		else = {
+			HSN = { 
+				inherit = RYB 
+				override_country_name = AYUB
+			}
+		}
+	}
+}
+
+#Palestine join Ayyubids
+country_event = {
+	id = ab_byzantium_disaster.22
+	title = ab_byzantium_disaster.22.t
+	desc = ab_byzantium_disaster.22.d
+	picture = muslimgfx_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_ayyubids }
+		any_province = {
+			OR = {
+				area = palestine_area
+				area = trans_jordan_area
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = palestine_area
+						area = trans_jordan_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = RYB
+				add_core = RYB
+			}
+			RYB = {
+				create_general = { tradition = 50 }
+				add_treasury = 100
+			}
+			RYB = {
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 3
+							OR = {
+								area = palestine_area
+								area = trans_jordan_area
+							}
+							religion = sunni
+						}
+					}
+					random_owned_province = {
+						limit = {
+							OR = {
+								area = palestine_area
+								area = trans_jordan_area
+							}
+						}
+						for = {
+							amount = 20
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 20	
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							OR = {
+								area = palestine_area
+								area = trans_jordan_area
+							}
+						}
+						for = {
+							amount = 10
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.22.a
+	}
+}
+
+#Egypt join Ayyubids 1
+country_event = {
+	id = ab_byzantium_disaster.23
+	title = ab_byzantium_disaster.23.t
+	desc = ab_byzantium_disaster.23.d
+	picture = muslimgfx_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_ayyubids }
+		any_province = {
+			OR = {
+				area = delta_area
+				area = bahari_area
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = delta_area
+						area = bahari_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = RYB
+				add_core = RYB
+			}
+			RYB = {
+				create_general = { tradition = 50 }
+				add_treasury = 100
+			}
+			RYB = {
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 4
+							OR = {
+								area = delta_area
+								area = bahari_area
+							}
+							religion = sunni
+						}
+					}
+					random_owned_province = {
+						limit = {
+							OR = {
+								area = delta_area
+								area = bahari_area
+							}
+						}
+						for = {
+							amount = 20
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 20	
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							OR = {
+								area = delta_area
+								area = bahari_area
+							}
+						}
+						for = {
+							amount = 10
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.23.a
+	}
+}
+
+#Egypt join Ayyubids 2
+country_event = {
+	id = ab_byzantium_disaster.24
+	title = ab_byzantium_disaster.24.t
+	desc = ab_byzantium_disaster.24.d
+	picture = muslimgfx_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_ayyubids }
+		any_province = {
+			region = egypt_region
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					region = egypt_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = RYB
+				add_core = RYB
+			}
+			RYB = {
+				create_general = { tradition = 50 }
+				add_treasury = 100
+			}
+			RYB = {
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 10
+							region = egypt_region
+							religion = sunni
+						}
+					}
+					random_owned_province = {
+						limit = {
+							region = egypt_region
+						}
+						for = {
+							amount = 20
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 20	
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							region = egypt_region
+						}
+						for = {
+							amount = 10
+							effect = "
+								infantry = RYB
+							"
+						}
+					}
+					add_manpower = 10
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.24.a
+	}
+}
+
+#Defeat the Ayyubids
+country_event = {
+	id = ab_byzantium_disaster.25
+	title = ab_byzantium_disaster.25.t
+	desc = ab_byzantium_disaster.25.d
+	picture = PHEONIX_ASCENDANT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_crisis_ayyubids
+			every_owned_province = {
+				limit = {
+					is_core = RYB
+				}
+				add_province_modifier = {
+					name = byz_pacified_levant
+					duration = 3650
+				}
+				remove_core = RYB
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.25.a
+		custom_tooltip = BYZ_PACIFIED_LEVANT
+		tooltip = {
+			add_province_modifier = {
+				name = byz_pacified_levant
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Italians demand Italy - Leader choice
+country_event = {
+	id = ab_byzantium_disaster.26
+	title = ab_byzantium_disaster.26.t
+	desc = ab_byzantium_disaster.26.d
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		BYZ = {
+			has_disaster = byzantium_16th_crisis
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.26.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			save_global_event_target_as = italianLeagueLeader
+			BYZ = {
+				country_event = {
+					id = ab_byzantium_disaster.27
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_flag = byz_refused_italian_leader
+				}
+				clr_country_flag = byz_refused_italian_leader
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.26.b
+		ai_chance = { factor = 50 }
+		trigger = {
+			any_country = {
+				culture_group = latin
+				is_part_of_hre = yes
+				NOT = { tag = ROOT }
+				NOT = { tag = PAP }
+				NOT = { has_country_flag = byz_refused_italian_leader }
+			}
+		}
+		set_country_flag = byz_refused_italian_leader
+		hidden_effect = {
+			random_country = {
+				limit = {
+					culture_group = latin
+					is_part_of_hre = yes
+					NOT = { tag = ROOT }
+					NOT = { tag = PAP }
+					NOT = { has_country_flag = byz_refused_italian_leader }
+				}
+				country_event = {
+					id = ab_byzantium_disaster.26
+				}
+			}
+		}
+	}
+}
+
+#Italians demand Italy - Byzantium response
+country_event = {
+	id = ab_byzantium_disaster.27
+	title = ab_byzantium_disaster.27.t
+	desc = ab_byzantium_disaster.27.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.27.a
+		ai_chance = { factor = 90 }
+		event_target:italianLeagueLeader = {
+			add_claim = 118
+			declare_war_with_cb = {
+			    who = BYZ
+			    casus_belli = cb_italian_league_to_byz
+				war_goal_province = 118
+		    }
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_WAR_ITALIANS
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.92
+			}
+			country_event = {
+				id = ab_byzantium_disaster.32
+				days = 3650
+			}
+			emperor = {
+				country_event = {
+					id = ab_byzantium_disaster.29
+					days = 30
+				}
+			}
+			every_country = {
+				limit = {
+					culture_group = latin
+					is_part_of_hre = yes
+					NOT = { tag = event_target:italianLeagueLeader }
+					NOT = { tag = PAP }
+				}
+				country_event = {
+					id = ab_byzantium_disaster.28
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.27.b
+		ai_chance = { factor = 10 }
+		set_country_flag = byz_crisis_italians
+		add_stability = -3
+		custom_tooltip = BYZ_SURRENDER_ITALIANS
+		hidden_effect = {
+			every_province = {
+				limit = {
+					region = italy_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = event_target:italianLeagueLeader
+				add_core = event_target:italianLeagueLeader
+				set_in_empire = yes
+			}
+			event_target:italianLeagueLeader = {
+				every_owned_province = {
+					limit = {
+						region = italy_region
+						is_core = BYZ
+					}
+					remove_core = BYZ
+				}
+			}
+		}
+	}
+}
+
+#Italian League - Join the war
+country_event = {
+	id = ab_byzantium_disaster.28
+	title = ab_byzantium_disaster.28.t
+	desc = ab_byzantium_disaster.28.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.28.a
+		ai_chance = { factor = 100 }
+		join_all_offensive_wars_of = event_target:italianLeagueLeader
+	}
+
+	option = {
+		name = ab_byzantium_disaster.28.b
+		ai_chance = { factor = 0 }
+		add_prestige = -20
+	}
+}
+
+#HRE Emperor intervene - HRE choice
+country_event = {
+	id = ab_byzantium_disaster.29
+	title = ab_byzantium_disaster.29.t
+	desc = ab_byzantium_disaster.29.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.29.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			BYZ = { 
+				country_event = {
+					id = ab_byzantium_disaster.30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.29.b
+		ai_chance = { factor = 0 }
+		add_prestige = -20
+	}
+}
+
+#HRE Emperor intervene - Byzantium response
+country_event = {
+	id = ab_byzantium_disaster.30
+	title = ab_byzantium_disaster.30.t
+	desc = ab_byzantium_disaster.30.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.30.a
+		ai_chance = { factor = 90 }
+		add_treasury = -1000
+		add_prestige = -10
+		emperor = {
+			add_treasury = 1000
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.30.b
+		ai_chance = { factor = 10 }
+		emperor = {
+			join_all_offensive_wars_of = event_target:italianLeagueLeader
+		}
+	}
+}
+
+#Defeat the Italians
+country_event = {
+	id = ab_byzantium_disaster.31
+	title = ab_byzantium_disaster.31.t
+	desc = ab_byzantium_disaster.31.d
+	picture = PHEONIX_ASCENDANT_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_crisis_italians
+			if = {
+				limit = {
+					NOT = { has_country_flag = byz_timed_mission_failed }
+				}
+				set_country_flag = byz_won_italians_5years
+			}
+			italy_region = {
+				limit = {
+					NOT = { owned_by = BYZ }
+				}
+				add_permanent_province_modifier = {
+					name = byz_cheaper_italy_conquest
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.31.a
+		custom_tooltip = BYZ_CHEAPER_ITALY_CONQUEST
+		tooltip = {
+			add_province_modifier = {
+				name = byz_cheaper_italy_conquest
+				duration = -1
+			}
+		}
+	}
+}
+
+#White peace with Italians
+country_event = {
+	id = ab_byzantium_disaster.32
+	title = ab_byzantium_disaster.32.t
+	desc = ab_byzantium_disaster.32.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_italians }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_crisis_italians
+			white_peace = event_target:italianLeagueLeader
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.32.a
+	}
+}
+
+#Ayyubids win
+country_event = {
+	id = ab_byzantium_disaster.33
+	title = ab_byzantium_disaster.33.t
+	desc = ab_byzantium_disaster.33.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_ayyubids }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_crisis_ayyubids
+			white_peace = RYB
+			if = {
+				limit = {
+					NOT = { exists = HSN }
+				}
+				RYB = {
+					change_tag = HSN
+					override_country_name = AYUB
+					swap_non_generic_missions = yes
+				}
+			}
+			else = {
+				HSN = { 
+					inherit = RYB 
+					override_country_name = AYUB
+				}
+			}
+			HSN = {
+				clr_country_flag = disaster_tag_cannot_ally
+				every_owned_province = {
+					limit = {
+						is_core = BYZ
+					}
+					remove_core = BYZ
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.33.a
+	}
+}
+
+#Italians win
+country_event = {
+	id = ab_byzantium_disaster.34
+	title = ab_byzantium_disaster.34.t
+	desc = ab_byzantium_disaster.34.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = byzantium_16th_crisis
+		NOT = { has_country_flag = byz_crisis_italians }
+		OR = {
+			AND = {
+				has_country_flag = byz_occupied_roma
+				had_country_flag = {
+					flag = byz_occupied_roma
+					days = 730
+				}
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 1
+					region = italy_region
+					controlled_by = owner
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_crisis_italians
+			white_peace = event_target:italianLeagueLeader
+			every_province = {
+				limit = {
+					region = italy_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				cede_province = event_target:italianLeagueLeader
+				add_core = event_target:italianLeagueLeader
+				set_in_empire = yes
+			}
+			event_target:italianLeagueLeader = {
+				every_owned_province = {
+					limit = {
+						region = italy_region
+						is_core = BYZ
+					}
+					remove_core = BYZ
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.34.a
+	}
+}
+
+#Rome sieged
+country_event = {
+	id = ab_byzantium_disaster.35
+	title = ab_byzantium_disaster.35.t
+	desc = ab_byzantium_disaster.35.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = byz_occupied_roma
+			country_event = {
+				id = ab_byzantium_disaster.34
+				days = 730
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.35.a
+	}
+}
+
+#Rome sieged 2
+country_event = {
+	id = ab_byzantium_disaster.36
+	title = ab_byzantium_disaster.36.t
+	desc = ab_byzantium_disaster.36.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_occupied_roma
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.36.a
+	}
+}
+
+## BIASED CULTURAL SPHERE -----
+#Biased Cultural Sphere Start
+country_event = {
+	id = ab_byzantium_disaster.37
+	title = ab_byzantium_disaster.37.t
+	desc = ab_byzantium_disaster.37.d
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -3
+			add_country_modifier = {
+				name = byz_culture_sphere_timer
+				duration = 365
+				hidden = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_faction = faction_byzpersian }
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzlatin
+								influence = 25
+							}
+						}
+					}
+					set_country_flag = byz_revolt_latinsphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzgreek
+								influence = 25
+							}
+						}
+					}
+					set_country_flag = byz_revolt_hellenosphere
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_faction = faction_byzchinese }
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzlatin
+								influence = 20
+							}
+						}
+					}
+					set_country_flag = byz_revolt_latinsphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzgreek
+								influence = 20
+							}
+						}
+					}
+					set_country_flag = byz_revolt_hellenosphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzpersian
+								influence = 20
+							}
+						}
+					}
+					set_country_flag = byz_revolt_persosphere
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzlatin
+								influence = 15
+							}
+						}
+					}
+					set_country_flag = byz_revolt_latinsphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzgreek
+								influence = 15
+							}
+						}
+					}
+					set_country_flag = byz_revolt_hellenosphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzpersian
+								influence = 15
+							}
+						}
+					}
+					set_country_flag = byz_revolt_persosphere
+				}
+				if = {
+					limit = {
+						NOT = {
+							faction_influence = {
+								faction = faction_byzchinese
+								influence = 15
+							}
+						}
+					}
+					set_country_flag = byz_revolt_sinosphere
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.41
+				days = 730
+			}
+			country_event = {
+				id = ab_byzantium_disaster.46
+				days = 730
+			}
+			country_event = {
+				id = ab_byzantium_disaster.50
+				days = 730
+			}
+			country_event = {
+				id = ab_byzantium_disaster.54
+				days = 730
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.37.a
+		tooltip = {
+			add_stability = -3
+		}
+		custom_tooltip = BYZ_FORMING_REVOLT_CENTRE
+	}
+}
+
+#Biased Cultural Sphere End
+country_event = {
+	id = ab_byzantium_disaster.38
+	title = ab_byzantium_disaster.38.t
+	desc = ab_byzantium_disaster.38.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = byz_culture_sphere_timer
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.38.a
+		add_stability = 1
+	}
+}
+
+#Center of Revolt Formed - Latin
+country_event = {
+	id = ab_byzantium_disaster.39
+	title = ab_byzantium_disaster.39.t
+	desc = ab_byzantium_disaster.39.d
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_latinsphere
+		has_country_modifier = byz_culture_sphere_timer
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 400
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 600
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 800
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1000
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1200
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.39.a
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				OR = {
+					superregion = europe_superregion
+					region = maghreb_region
+					region = carpathia_region
+				}
+				NOT = { area = carinthia_area }
+			}
+			add_permanent_province_modifier = {
+				name = byz_revolting_province_centre
+				duration = -1
+			}
+		}
+	}
+}
+
+#Spread of Revolt
+province_event = {
+	id = ab_byzantium_disaster.40
+	title = ab_byzantium_disaster.40.t
+	desc = ab_byzantium_disaster.40.d
+	picture = BYZ_COURT_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ROM = {
+			has_disaster = rome_biased_cultural_sphere
+		}
+		province_is_diocese_land_trigger = yes
+		OR = {
+			AND = {
+				ROM = {
+					has_country_flag = byz_revolt_latinsphere
+				}
+				OR = {
+					superregion = europe_superregion
+					region = maghreb_region
+					region = carpathia_region
+				}
+				NOT = { area = carinthia_area }
+			}
+			AND = {
+				ROM = {
+					has_country_flag = byz_revolt_hellenosphere
+				}
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = near_east_superregion
+					superregion = tartary_superregion
+					region = manchuria_region
+					area = circassia_area
+					area = dagestan_area
+					AND = {
+						OR = {
+							area = shirvan_area
+							area = armenia_area
+							area = imereti_area
+							area = samtskhe_area
+							area = kartli_kakheti_area
+						}
+						ROM = {
+							has_country_flag = rom_caucasia_isof_anatolia
+						}
+					}
+				}
+				NOT = { region = tibet_region }
+				NOT = { area = liaoning_area }
+			}
+			AND = {
+				ROM = {
+					has_country_flag = byz_revolt_persosphere
+				}
+				OR = {
+					superregion = india_superregion
+					region = khorasan_region
+					region = persia_region
+					AND = {
+						OR = {
+							area = shirvan_area
+							area = armenia_area
+							area = imereti_area
+							area = samtskhe_area
+							area = kartli_kakheti_area
+						}
+						ROM = {
+							has_country_flag = rom_caucasia_isof_persia
+						}
+					}
+				}
+			}
+			AND = {
+				ROM = {
+					has_country_flag = byz_revolt_sinosphere
+				}
+				OR = {
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = tibet_region
+					region = korea_region
+					region = japan_region
+					area = liaoning_area
+				}
+			}
+		}
+		NOT = { has_province_modifier = byz_revolting_province }
+		NOT = { has_province_modifier = byz_revolting_province_centre }
+		any_neighbor_province = {
+			OR = {
+				has_province_modifier = byz_revolting_province
+				has_province_modifier = byz_revolting_province_centre
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			any_neighbor_province = {
+				has_province_modifier = byz_revolting_province_centre
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.40.a
+		add_province_modifier = {
+			name = byz_revolting_province
+			duration = -1
+		}
+	}
+}
+
+#Revolt Faction War - Latin
+country_event = {
+	id = ab_byzantium_disaster.41
+	title = ab_byzantium_disaster.41.t
+	desc = ab_byzantium_disaster.41.d
+	picture = AB_BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_latinsphere
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_revolt_latinsphere
+			every_province = {
+				limit = {
+					province_is_diocese_land_trigger = yes
+					OR = {
+						superregion = europe_superregion
+						region = maghreb_region
+						region = carpathia_region
+					}
+					NOT = { area = carinthia_area }
+					OR = {
+						has_province_modifier = byz_revolting_province_centre
+						has_province_modifier = byz_revolting_province
+					}
+				}
+				add_core = RSL
+				cede_province = RSL
+			}
+			RSL = {
+				set_country_flag = disaster_tag_cannot_ally
+				change_primary_culture = roman_new
+				change_religion = ROOT
+				change_government = monarchy
+				change_technology_group = western
+				change_unit_type = western
+				add_manpower = 50
+				add_treasury = 500
+				every_owned_province = {
+					limit = {
+						has_province_modifier = byz_revolting_province_centre
+					}
+					for = {
+						amount = 20
+						effect = "
+							infantry = RSL
+						"
+					}
+					for = {
+						amount = 5
+						effect = "
+							cavalry = RSL
+						"
+					}
+					remove_province_modifier = byz_revolting_province_centre
+				}
+			}
+			declare_war_with_cb = {
+				who = RSL
+				casus_belli = cb_suppress_revolt
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.41.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = RSL
+				casus_belli = cb_suppress_revolt
+			}
+		}
+		custom_tooltip = BYZ_WAR_CULTURAL_SPHERE
+	}
+}
+
+#Diocese join the War - Hidden
+country_event = {
+	id = ab_byzantium_disaster.42
+	title = ab_byzantium_disaster.42.t
+	desc = ab_byzantium_disaster.42.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ROM = {
+			has_disaster = rome_biased_cultural_sphere
+		}
+		OR = {
+			is_subject_of_type = diocese_vassal
+			is_subject_of_type = grand_diocese_vassal
+		}
+		any_neighbor_country = {
+			OR = {
+				tag = RSL
+				tag = RSH
+				tag = RSP
+				tag = RSS
+			}
+			NOT = { war_with = ROOT }
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.42.a
+		join_all_offensive_wars_of = ROM
+	}
+}
+
+#Center of Revolt Formed - Hellenic
+country_event = {
+	id = ab_byzantium_disaster.44
+	title = ab_byzantium_disaster.44.t
+	desc = ab_byzantium_disaster.44.d
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_hellenosphere
+		has_country_modifier = byz_culture_sphere_timer
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 400
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 600
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 800
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1000
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1200
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.44.a
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = near_east_superregion
+					superregion = tartary_superregion
+					region = manchuria_region
+					area = circassia_area
+					area = dagestan_area
+					AND = {
+						OR = {
+							area = shirvan_area
+							area = armenia_area
+							area = imereti_area
+							area = samtskhe_area
+							area = kartli_kakheti_area
+						}
+						ROM = {
+							has_country_flag = rom_caucasia_isof_anatolia
+						}
+					}
+				}
+				NOT = { region = tibet_region }
+				NOT = { area = liaoning_area }
+			}
+			add_permanent_province_modifier = {
+				name = byz_revolting_province_centre
+				duration = -1
+			}
+		}
+	}
+}
+
+#Revolt Faction War - Hellenic
+country_event = {
+	id = ab_byzantium_disaster.46
+	title = ab_byzantium_disaster.46.t
+	desc = ab_byzantium_disaster.46.d
+	picture = AB_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_hellenosphere
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_revolt_hellenosphere
+			every_province = {
+				limit = {
+					province_is_diocese_land_trigger = yes
+					OR = {
+						superregion = eastern_europe_superregion
+						superregion = near_east_superregion
+						superregion = tartary_superregion
+						region = manchuria_region
+						area = circassia_area
+						area = dagestan_area
+						AND = {
+							OR = {
+								area = shirvan_area
+								area = armenia_area
+								area = imereti_area
+								area = samtskhe_area
+								area = kartli_kakheti_area
+							}
+							ROM = { has_country_flag = rom_caucasia_isof_anatolia }
+						}
+					}
+					NOT = { region = tibet_region }
+					NOT = { area = liaoning_area }
+					OR = {
+						has_province_modifier = byz_revolting_province_centre
+						has_province_modifier = byz_revolting_province
+					}
+				}
+				add_core = RSH
+				cede_province = RSH
+			}
+			RSH = {
+				set_country_flag = disaster_tag_cannot_ally
+				change_primary_culture = greco_roman
+				change_religion = ROOT
+				change_government = monarchy
+				change_technology_group = western
+				change_unit_type = western
+				add_manpower = 50
+				add_treasury = 500
+				every_owned_province = {
+					limit = {
+						has_province_modifier = byz_revolting_province_centre
+					}
+					for = {
+						amount = 20
+						effect = "
+							infantry = RSH
+						"
+					}
+					for = {
+						amount = 5
+						effect = "
+							cavalry = RSH
+						"
+					}
+					remove_province_modifier = byz_revolting_province_centre
+				}
+			}
+			declare_war_with_cb = {
+				who = RSH
+				casus_belli = cb_suppress_revolt
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.46.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = RSH
+				casus_belli = cb_suppress_revolt
+			}
+		}
+		custom_tooltip = BYZ_WAR_CULTURAL_SPHERE
+	}
+}
+
+#Center of Revolt Formed - Persic
+country_event = {
+	id = ab_byzantium_disaster.48
+	title = ab_byzantium_disaster.48.t
+	desc = ab_byzantium_disaster.48.d
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_persosphere
+		has_country_modifier = byz_culture_sphere_timer
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 400
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 600
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 800
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1000
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1200
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.48.a
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				OR = {
+					superregion = india_superregion
+					region = khorasan_region
+					region = persia_region
+					AND = {
+						OR = {
+							area = shirvan_area
+							area = armenia_area
+							area = imereti_area
+							area = samtskhe_area
+							area = kartli_kakheti_area
+						}
+						ROM = {
+							has_country_flag = rom_caucasia_isof_persia
+						}
+					}
+				}
+			}
+			add_permanent_province_modifier = {
+				name = byz_revolting_province_centre
+				duration = -1
+			}
+		}
+	}
+}
+
+#Revolt Faction War - Persic
+country_event = {
+	id = ab_byzantium_disaster.50
+	title = ab_byzantium_disaster.50.t
+	desc = ab_byzantium_disaster.50.d
+	picture = AB_BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_persosphere
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_revolt_persosphere
+			every_province = {
+				limit = {
+					province_is_diocese_land_trigger = yes
+					OR = {
+						superregion = india_superregion
+						region = khorasan_region
+						region = persia_region	
+						AND = {
+							OR = {
+								area = shirvan_area
+								area = armenia_area
+								area = imereti_area
+								area = samtskhe_area
+								area = kartli_kakheti_area
+							}
+							ROM = {
+								has_country_flag = rom_caucasia_isof_persia
+							}
+						}
+					}
+					OR = {
+						has_province_modifier = byz_revolting_province_centre
+						has_province_modifier = byz_revolting_province
+					}
+				}
+				add_core = RSP
+				cede_province = RSP
+			}
+			RSP = {
+				set_country_flag = disaster_tag_cannot_ally
+				change_primary_culture = perso_roman
+				change_religion = ROOT
+				change_government = monarchy
+				change_technology_group = western
+				change_unit_type = western
+				add_manpower = 50
+				add_treasury = 500
+				every_owned_province = {
+					limit = {
+						has_province_modifier = byz_revolting_province_centre
+					}
+					for = {
+						amount = 20
+						effect = "
+							infantry = RSP
+						"
+					}
+					for = {
+						amount = 5
+						effect = "
+							cavalry = RSP
+						"
+					}
+					remove_province_modifier = byz_revolting_province_centre
+				}
+			}
+			declare_war_with_cb = {
+				who = RSP
+				casus_belli = cb_suppress_revolt
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.50.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = RSP
+				casus_belli = cb_suppress_revolt
+			}
+		}
+		custom_tooltip = BYZ_WAR_CULTURAL_SPHERE
+	}
+}
+
+#Center of Revolt Formed - Sinic
+country_event = {
+	id = ab_byzantium_disaster.52
+	title = ab_byzantium_disaster.52.t
+	desc = ab_byzantium_disaster.52.d
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_sinosphere
+		has_country_modifier = byz_culture_sphere_timer
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 400
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 600
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 800
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1000
+			}
+		}
+		modifier = {
+			factor = 0.8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				province_is_diocese_land_trigger = yes
+				value = 1200
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.52.a
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				OR = {
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = tibet_region
+					region = korea_region
+					region = japan_region
+					area = liaoning_area
+				}
+			}
+			add_permanent_province_modifier = {
+				name = byz_revolting_province_centre
+				duration = -1
+			}
+		}
+	}
+}
+
+#Revolt Faction War - Sinic
+country_event = {
+	id = ab_byzantium_disaster.54
+	title = ab_byzantium_disaster.54.t
+	desc = ab_byzantium_disaster.54.d
+	picture = AB_BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = rome_biased_cultural_sphere
+		has_country_flag = byz_revolt_sinosphere
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_revolt_sinosphere
+			every_province = {
+				limit = {
+					province_is_diocese_land_trigger = yes
+					OR = {
+						superregion = china_superregion
+						superregion = east_indies_superregion
+						region = tibet_region
+						region = korea_region
+						region = japan_region
+						area = liaoning_area
+					}
+					OR = {
+						has_province_modifier = byz_revolting_province_centre
+						has_province_modifier = byz_revolting_province
+					}
+				}
+				add_core = RSS
+				cede_province = RSS
+			}
+			RSS = {
+				set_country_flag = disaster_tag_cannot_ally
+				change_primary_culture = sino_roman
+				change_religion = ROOT
+				change_government = monarchy
+				change_technology_group = western
+				change_unit_type = western
+				add_manpower = 50
+				add_treasury = 500
+				every_owned_province = {
+					limit = {
+						has_province_modifier = byz_revolting_province_centre
+					}
+					for = {
+						amount = 20
+						effect = "
+							infantry = RSS
+						"
+					}
+					for = {
+						amount = 5
+						effect = "
+							cavalry = RSS
+						"
+					}
+					remove_province_modifier = byz_revolting_province_centre
+				}
+			}
+			declare_war_with_cb = {
+				who = RSS
+				casus_belli = cb_suppress_revolt
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.54.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = RSS
+				casus_belli = cb_suppress_revolt
+			}
+		}
+		custom_tooltip = BYZ_WAR_CULTURAL_SPHERE
+	}
+}
+
+## ROMAN CIVIL WAR -----
+#Roman Civil War Start
+country_event = {
+	id = ab_byzantium_disaster.56
+	title = ab_byzantium_disaster.56.t
+	desc = ab_byzantium_disaster.56.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					liberty_desire = 50
+				}
+				save_global_event_target_as = dioceseLeader
+				set_country_flag = disaster_tag_cannot_ally
+			}
+			declare_war_with_cb = {
+				who = event_target:dioceseLeader
+				casus_belli = cb_roman_civil_war
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					liberty_desire = 50
+				}
+				set_country_flag = disaster_tag_cannot_ally
+				join_all_defensive_wars_of = event_target:dioceseLeader
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+				}
+				country_event = {
+					id = ab_byzantium_disaster.65
+					days = 30
+					random = 60
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.63
+				days = 180
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.56.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = event_target:dioceseLeader
+				casus_belli = cb_roman_civil_war
+			}
+		}
+		custom_tooltip = BYZ_CIVIL_WAR_INFO
+	}
+}
+
+#Roman Civil War End
+country_event = {
+	id = ab_byzantium_disaster.57
+	title = ab_byzantium_disaster.57.t
+	desc = ab_byzantium_disaster.57.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = ab_byzantium_disaster.57.a
+		add_country_modifier = {
+			name = byz_civil_war_timer
+			duration = 1825
+			hidden = yes
+		}
+		create_subject = {
+			subject_type = diocese_vassal
+			who = event_target:dioceseLeader
+		}
+		clear_global_event_target = dioceseLeader
+		clr_country_flag = byz_uncontested_emperor
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+			}
+			clr_country_flag = disaster_tag_cannot_ally
+		}
+	}
+}
+
+#Enemies Sieged - Hidden
+country_event = {
+	id = ab_byzantium_disaster.58
+	title = ab_byzantium_disaster.58.t
+	desc = ab_byzantium_disaster.58.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.58.a		
+		white_peace = ROM
+		kill_ruler = yes
+		add_ruler_modifier = {
+			name = byz_loyal_consul
+		}
+		ROM = { 
+			create_subject = {
+				subject_type = diocese_vassal
+				who = ROOT
+			}
+			country_event = {
+				id = ab_byzantium_disaster.59
+			}
+		}
+	}
+}
+
+#Enemies Sieged - Rome
+country_event = {
+	id = ab_byzantium_disaster.59
+	title = ab_byzantium_disaster.59.t
+	desc = ab_byzantium_disaster.59.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.59.a
+		tooltip = {
+			FROM = {
+				add_ruler_modifier = {
+					name = byz_loyal_consul
+				}
+			}
+		}
+	}
+}
+
+#Allies Sieged - Hidden
+country_event = {
+	id = ab_byzantium_disaster.60
+	title = ab_byzantium_disaster.60.t
+	desc = ab_byzantium_disaster.60.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.60.a
+		white_peace = event_target:dioceseLeader
+		kill_ruler = yes
+		add_ruler_modifier = {
+			name = byz_disloyal_consul
+		}
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.61
+			}
+		}
+	}
+}
+
+#Allies Sieged - Rome
+country_event = {
+	id = ab_byzantium_disaster.61
+	title = ab_byzantium_disaster.61.t
+	desc = ab_byzantium_disaster.61.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.61.a
+		tooltip = {
+			FROM = {
+				add_ruler_modifier = {
+					name = byz_disloyal_consul
+				}
+			}
+		}
+	}
+}
+
+#Rome Capital Captured - Civil War
+country_event = {
+	id = ab_byzantium_disaster.62
+	title = ab_byzantium_disaster.62.t
+	desc = ab_byzantium_disaster.62.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -1
+			event_target:dioceseLeader = {
+				exile_ruler_as = {
+					name = rom_diocese_civil_war_ruler
+				}
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				kill_heir = {}
+			}
+			white_peace = event_target:dioceseLeader
+			inherit = event_target:dioceseLeader
+			set_ruler = rom_diocese_civil_war_ruler
+			every_country = {
+				limit = {
+					has_reform = rom_former_diocese
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = diocese_vassal
+						who = PREV
+					}
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.69
+			}
+			country_event = {
+				id = ab_byzantium_disaster.70
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.62.a
+		tooltip = {
+			add_stability = -1
+		}
+		custom_tooltip = BYZ_NEW_EMPEROR_CIVIL_WAR
+	}
+}
+
+#Rus Offer
+country_event = {
+	id = ab_byzantium_disaster.63
+	title = ab_byzantium_disaster.63.t
+	desc = ab_byzantium_disaster.63.d
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = rome_roman_civil_war
+		is_in_war = {
+			casus_belli = cb_roman_civil_war
+		}
+		war_with = event_target:dioceseLeader
+		any_subject_country = {
+			is_subject_of_type = grand_diocese_vassal
+			NOT = {
+				is_in_war = {
+					casus_belli = cb_roman_civil_war
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.63.a
+		trigger = {
+			any_subject_country = {
+				is_subject_of_type = grand_diocese_vassal
+				owes_favors = {
+					who = ROOT
+					value = 30
+				}
+			}
+		}
+		add_years_of_income = -2
+		add_corruption = 2
+		grant_all_mana = {
+			mana = -200
+		}
+		custom_tooltip = AB_EMPTY
+		random_subject_country = {
+			limit = {
+				is_subject_of_type = grand_diocese_vassal
+			}
+			join_all_offensive_wars_of = ROM
+			ROOT = {
+				add_favors = {
+					who = PREV
+					amount = -30
+				}
+			}
+			hidden_effect = {
+				add_years_of_income = 4
+				add_corruption = -2
+				grant_all_mana = {
+					mana = 200
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium_disaster.64
+				days = 1095
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.63.b
+		trigger = {
+			any_subject_country = {
+				is_subject_of_type = grand_diocese_vassal
+				owes_favors = {
+					who = ROOT
+					value = 50
+				}
+			}
+		}
+		add_years_of_income = -4
+		add_corruption = 4
+		grant_all_mana = {
+			mana = -400
+		}
+		custom_tooltip = AB_EMPTY
+		random_subject_country = {
+			limit = {
+				is_subject_of_type = grand_diocese_vassal
+			}
+			join_all_offensive_wars_of = ROM
+			ROOT = {
+				add_favors = {
+					who = PREV
+					amount = -50
+				}
+			}
+			hidden_effect = {
+				add_years_of_income = 8
+				add_corruption = -4
+				grant_all_mana = {
+					mana = 400
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium_disaster.64
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.63.c
+		add_prestige = 10
+	}
+}
+
+#Rus Leaves The War
+country_event = {
+	id = ab_byzantium_disaster.64
+	title = ab_byzantium_disaster.64.t
+	desc = ab_byzantium_disaster.64.d
+	picture = muslimgfx_LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_disaster = rome_roman_civil_war
+		is_in_war = {
+			casus_belli = cb_roman_civil_war
+		}
+		war_with = event_target:dioceseLeader
+		any_subject_country = {
+			is_subject_of_type = grand_diocese_vassal
+			is_in_war = {
+				casus_belli = cb_roman_civil_war
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = grand_diocese_vassal
+				}
+				every_province = {
+					limit = {
+						controlled_by = PREV
+					}
+					change_controller = ROM
+				}
+				white_peace = event_target:dioceseLeader
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.64.a
+	}
+}
+
+#Neutral Dioceses Choose Side - Hidden
+country_event = {
+	id = ab_byzantium_disaster.65
+	title = ab_byzantium_disaster.65.t
+	desc = ab_byzantium_disaster.65.d
+	picture = DIPLOMACY_eventPicture
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		ROM = {
+			has_disaster = rome_roman_civil_war
+		}
+		NOT = {
+			is_in_war = {
+				casus_belli = cb_roman_civil_war
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.65.a
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.66
+			}
+		}
+	}
+}
+
+#Neutral Dioceses Choose Side
+country_event = {
+	id = ab_byzantium_disaster.66
+	title = ab_byzantium_disaster.66.t
+	desc = ab_byzantium_disaster.66.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.66.a
+		trigger = {
+			FROM = {
+				NOT = { liberty_desire = 30 }
+			}
+		}
+		add_years_of_income = -1
+		add_favors = {
+			who = FROM
+			amount = -50
+		}
+		add_corruption = 1
+		custom_tooltip = AB_EMPTY
+		FROM = {
+			join_all_offensive_wars_of = ROM
+			hidden_effect = {
+				add_years_of_income = 2
+				add_corruption = -1
+				grant_all_mana = {
+					mana = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.66.b
+		if = {
+			limit = {
+				FROM = {
+					liberty_desire = 50
+				}
+			}
+			add_years_of_income = -1
+			add_favors = {
+				who = FROM
+				amount = -25
+			}
+			add_corruption = 1
+			grant_all_mana = {
+				mana = 100
+			}
+			hidden_effect = {
+				FROM = {
+					add_years_of_income = 2
+					add_corruption = -1
+					grant_all_mana = {
+						mana = 100
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					liberty_desire = 30
+				}
+			}
+			add_years_of_income = -0.5
+			add_favors = {
+				who = FROM
+				amount = -10
+			}
+			add_corruption = 0.5
+			grant_all_mana = {
+				mana = -50
+			}
+			hidden_effect = {
+				FROM = {
+					add_years_of_income = 1
+					add_corruption = -0.5
+					grant_all_mana = {
+						mana = 50
+					}
+				}
+			}
+		}
+		else = {
+			add_absolutism = 1
+			add_prestige = 5
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.66.c
+		trigger = {
+			FROM = {
+				liberty_desire = 30
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = ROM
+				modifier = opinion_diocese_threatened
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = ab_byzantium_disaster.67
+				}
+			}
+		}
+		custom_tooltip = BYZ_DIOCESE_MIGHT_FIGHT
+	}
+}
+
+#Neutral Dioceses Choose Side - Rome Challenged Us
+country_event = {
+	id = ab_byzantium_disaster.67
+	title = ab_byzantium_disaster.67.t
+	desc = ab_byzantium_disaster.67.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.67.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 35 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { liberty_desire = 45 }
+			}
+		}
+		join_all_defensive_wars_of = event_target:dioceseLeader
+	}
+
+	option = {
+		name = ab_byzantium_disaster.67.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				liberty_desire = 55
+			}
+			modifier = {
+				factor = 0
+				liberty_desire = 65
+			}
+		}
+		add_liberty_desire = 10
+	}
+}
+
+#Peace With Diocese Leader
+country_event = {
+	id = ab_byzantium_disaster.68
+	title = ab_byzantium_disaster.68.t
+	desc = ab_byzantium_disaster.68.d
+	picture = AB_ROMAN_TRIUMPH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.68.a
+		set_country_flag = byz_uncontested_emperor
+		add_prestige = 100
+		add_country_modifier = {
+			name = byz_recent_civil_war
+			duration = 3650
+		}
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 50
+		}
+	}
+}
+
+#Nobles Challenge The New Emperor
+country_event = {
+	id = ab_byzantium_disaster.69
+	title = ab_byzantium_disaster.69.t
+	desc = ab_byzantium_disaster.69.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 10
+				effect = "
+					random_owned_province = {
+						spawn_rebels = {
+							type = noble_rebels
+							size = 1
+						}
+					}
+				"
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.69.a
+	}
+}
+
+#Other Dioceses Challenge The New Emperor
+country_event = {
+	id = ab_byzantium_disaster.70
+	title = ab_byzantium_disaster.70.t
+	desc = ab_byzantium_disaster.70.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+				}
+				add_liberty_desire = 10
+			}
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					liberty_desire = 50
+				}
+				save_global_event_target_as = dioceseLeader
+			}
+			declare_war_with_cb = {
+				who = event_target:dioceseLeader
+				casus_belli = cb_roman_civil_war
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					liberty_desire = 50
+				}
+				join_all_defensive_wars_of = event_target:dioceseLeader
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+				}
+				country_event = {
+					id = ab_byzantium_disaster.65
+					days = 30
+					random = 60
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.63
+				days = 180
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.70.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = event_target:dioceseLeader
+				casus_belli = cb_roman_civil_war
+			}
+		}
+	}
+}
+
+## PERSIAN WAR -----
+#Persian War Start
+country_event = {
+	id = ab_byzantium_disaster.71
+	title = ab_byzantium_disaster.71.t
+	desc = ab_byzantium_disaster.71.d
+	picture = AB_PERSIA_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = event_target:AB_Persia_target
+				}
+				event_target:AB_Persia_target = {
+					save_global_event_target_as = crisisPersia		
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						OR = {
+							has_reform = persianprince
+							has_reform = persianprincet
+						}
+						NOT = {
+							any_country = {
+								OR = {
+									has_reform = persianprince
+									has_reform = persianprincet
+								}
+								NOT = { tag = PREV }
+								total_development = PREV
+							}
+						}
+					}
+					save_global_event_target_as = crisisPersia
+				}
+			}
+			event_target:crisisPersia = {
+				country_event = {
+					id = ab_byzantium_disaster.74
+				}
+			}
+			add_historical_rival = event_target:crisisPersia
+			add_opinion = {
+				who = event_target:crisisPersia
+				modifier = opinion_superpowers_rivalry
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+				}
+				country_event = {
+					id = ab_byzantium_disaster.75
+					days = 180
+					random = 60
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.71.a
+		country_event = {
+			id = ab_byzantium_disaster.73
+		}
+		tooltip = {
+			add_historical_rival = event_target:crisisPersia
+			add_opinion = {
+				who = event_target:crisisPersia
+				modifier = opinion_superpowers_rivalry
+			}
+			custom_tooltip = AB_EMPTY
+			event_target:crisisPersia = {
+				add_country_modifier = {
+					name = byz_persia_defense
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+		custom_tooltip = BYZ_PERSIAN_WAR_INFO
+	}
+}
+
+#Persian War End
+country_event = {
+	id = ab_byzantium_disaster.72
+	title = ab_byzantium_disaster.72.t
+	desc = ab_byzantium_disaster.72.d
+	picture = AB_PERSIANWAR_eventPicture
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = ab_byzantium_disaster.72.a
+		remove_country_modifier = byz_disaster_debuff1
+		remove_country_modifier = byz_disaster_debuff2
+		remove_country_modifier = byz_disaster_debuff3
+		remove_country_modifier = byz_disaster_debuff4
+		if = {
+			limit = {
+				exists = event_target:crisisPersia
+			}
+			event_target:crisisPersia = {
+				remove_country_modifier = byz_persia_defense
+				clr_country_flag = byz_persian_war_persia_reconcile
+			}
+		}
+		clear_global_event_target = crisisPersia
+	}
+}
+
+#Roman Diplomatic Corps
+country_event = {
+	id = ab_byzantium_disaster.73
+	title = ab_byzantium_disaster.73.t
+	desc = ab_byzantium_disaster.73.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium_disaster.73.a
+		add_years_of_income = -2
+		add_dip_power = -200
+		add_country_modifier = {
+			name = byz_large_diplomatic_corps
+			duration = 1095
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.73.b
+		add_years_of_income = -1
+		add_dip_power = -100
+		add_country_modifier = {
+			name = byz_small_diplomatic_corps
+			duration = 1095
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.73.c
+	}
+}
+
+#Persian War Start - Persia Nof
+country_event = {
+	id = ab_byzantium_disaster.74
+	title = ab_byzantium_disaster.74.t
+	desc = ab_byzantium_disaster.74.d
+	picture = AB_PERSIA_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_historical_rival = ROM
+			add_opinion = {
+				who = ROM
+				modifier = opinion_superpowers_rivalry
+			}
+			add_country_modifier = {
+				name = byz_persia_defense
+				duration = -1
+				desc = "until the end of the disaster"
+			}
+			country_event = {
+				id = ab_byzantium_disaster.80
+				days = 730
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.74.a
+		tooltip = {
+			add_historical_rival = ROM
+			add_opinion = {
+				who = ROM
+				modifier = opinion_superpowers_rivalry
+			}
+			add_country_modifier = {
+				name = byz_persia_defense
+				duration = -1
+				desc = "until the end of the disaster"
+			}
+		}
+		custom_tooltip = BYZ_PERSIAN_WAR_INFO
+	}
+}
+
+#Western Dioceses Refuse to Join & Eastern Dioceses Choice - Hidden
+country_event = {
+	id = ab_byzantium_disaster.75
+	title = ab_byzantium_disaster.75.t
+	desc = ab_byzantium_disaster.75.d
+	picture = AB_PERSIA_eventPicture
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		is_at_war = no
+		ROM = {
+			has_disaster = rome_persian_war
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.75.a
+		trigger = {
+			capital_scope = {
+				NOT = {
+					OR = {
+						superregion = eastern_europe_superregion
+						superregion = near_east_superregion
+					}
+				}
+			}
+		}
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.76
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.75.b
+		trigger = {
+			capital_scope = {
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = near_east_superregion
+				}
+			}
+			NOT = { liberty_desire = 40 }
+		}
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.78
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.75.c
+		trigger = {
+			capital_scope = {
+				OR = {
+					superregion = eastern_europe_superregion
+					superregion = near_east_superregion
+				}
+			}
+			liberty_desire = 40
+		}
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.79
+			}
+		}
+	}
+}
+
+#Western Dioceses Refuse to Join - Rome Response
+country_event = {
+	id = ab_byzantium_disaster.76
+	title = ab_byzantium_disaster.76.t
+	desc = ab_byzantium_disaster.76.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.76.a
+		FROM = {
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Eastern Dioceses Choice - They will join
+country_event = {
+	id = ab_byzantium_disaster.78
+	title = ab_byzantium_disaster.78.t
+	desc = ab_byzantium_disaster.78.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.78.a
+		FROM = {
+			add_liberty_desire = -10
+			set_country_flag = byz_persian_war_romeside
+		}
+	}
+}
+
+#Eastern Dioceses Choice - They may join
+country_event = {
+	id = ab_byzantium_disaster.79
+	title = ab_byzantium_disaster.79.t
+	desc = ab_byzantium_disaster.79.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.79.a
+		add_dip_power = -100
+		add_years_of_income = -0.5
+		hidden_effect = {
+			FROM = {
+				add_dip_power = 100
+				add_years_of_income = 1
+				set_country_flag = byz_persian_war_romeside
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.79.b
+		FROM = {
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Persian War - A chance for reconciliation
+country_event = {
+	id = ab_byzantium_disaster.80
+	title = ab_byzantium_disaster.80.t
+	desc = ab_byzantium_disaster.80.d
+	picture = AB_PERSIANWAR_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.80.a
+		ai_chance = { factor = 95 }
+		set_country_flag = byz_persian_war_persia_reconcile
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.81
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.80.b
+		ai_chance = { factor = 5 }
+		ROM = {
+			country_event = {
+				id = ab_byzantium_disaster.81
+			}
+		}
+	}
+}
+
+#Persian War - Rome Surrender or War
+country_event = {
+	id = ab_byzantium_disaster.81
+	title = ab_byzantium_disaster.81.t
+	desc = {
+		trigger = {
+			event_target:crisisPersia = {
+				has_country_flag = byz_persian_war_persia_reconcile
+			}
+		}
+		desc = ab_byzantium_disaster.81.d1
+	}
+	desc = {
+		trigger = {
+			event_target:crisisPersia = {
+				NOT = { has_country_flag = byz_persian_war_persia_reconcile }
+			}
+		}
+		desc = ab_byzantium_disaster.81.d2
+	}
+	picture = AB_PERSIANWAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.81.a
+		set_country_flag = had_persian_war
+		add_absolutism = -50
+		add_prestige = -100
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_EASTERN_CONQUEST_LOST
+		add_truce_with =  event_target:crisisPersia
+		custom_tooltip = BYZ_SURRENDER_MESOPOTAMIA
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owned_by_subject_of = ROOT
+					}
+					OR = {
+						region = caucasia_region
+						area = iraq_arabi_area
+						area = basra_area
+						area = al_jazira_area
+					}
+					NOT = { area = circassia_area }
+					NOT = { area = dagestan_area }
+				}
+				cede_province = event_target:crisisPersia
+				add_core = event_target:crisisPersia
+				remove_core = ROM
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.81.b
+		trigger = {
+			event_target:crisisPersia = {
+				has_country_flag = byz_persian_war_persia_reconcile
+			}
+		}
+		set_country_flag = had_persian_war
+		set_country_flag = byz_persian_war_partners
+		custom_tooltip = BYZ_EASTERN_CONQUEST_LOST
+		add_truce_with =  event_target:crisisPersia	
+		add_historical_friend = event_target:crisisPersia
+		custom_tooltip = BYZ_BUFFER_ZONES
+		custom_tooltip = AB_EMPTY
+		add_opinion = {
+			who = event_target:crisisPersia
+			modifier = opinion_strategic_partners
+		}
+		hidden_effect = {
+			GEO = {
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					grant_independence = yes
+				}
+			}
+			JLR = {
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					grant_independence = yes
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owned_by_subject_of = ROOT
+						owned_by = event_target:crisisPersia
+						owned_by_subject_of = event_target:crisisPersia
+					}
+					OR = {
+						region = caucasia_region
+						area = iraq_arabi_area
+						area = basra_area
+						area = al_jazira_area
+					}
+					NOT = { area = circassia_area }
+					NOT = { area = dagestan_area }
+				}
+				if = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = GEO
+					add_core = GEO
+				}
+				else = {
+					cede_province = JLR
+					add_core = JLR
+				}
+				remove_core = ROM
+				remove_core = event_target:crisisPersia
+			}
+			remove_historical_rival = event_target:crisisPersia
+			remove_opinion = {
+				who = event_target:crisisPersia
+				modifier = opinion_superpowers_rivalry
+			}
+			event_target:crisisPersia = {
+				set_country_flag = byz_persian_war_partners
+				remove_historical_rival = ROOT
+				add_historical_friend = ROOT
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_superpowers_rivalry
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_strategic_partners
+				}
+				add_trust = {
+					who = ROOT
+					value = 50
+					mutual = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.81.c
+		declare_war_with_cb = {
+			who = event_target:crisisPersia
+			casus_belli = cb_roman_persian_war
+		}
+		custom_tooltip = BYZ_WAR_PERSIAN_WAR
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+					capital_scope = {
+						OR = {
+							superregion = persia_superregion
+							region = arabia_region
+							region = central_asia_region
+							region = west_india_region
+							region = hindusthan_region
+						}
+						NOT = { area = circassia_area }
+						NOT = { area = dagestan_area }
+					}
+				}
+				if = {
+					limit = {
+						has_opinion = {
+							who = ROM
+							value = 100
+						}
+						NOT = {
+							has_opinion = {
+								who = event_target:crisisPersia
+								value = 50
+							}
+						}
+					}
+					join_all_offensive_wars_of = ROM
+				}
+				else_if = {
+					limit = {
+						has_opinion = {
+							who = ROM
+							value = 100
+						}
+						has_opinion = {
+							who = event_target:crisisPersia
+							value = 50
+						}
+					}
+					add_truce_with = ROM
+					add_truce_with = event_target:crisisPersia
+				}
+				else = {
+					join_all_defensive_wars_of = event_target:crisisPersia
+				}
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					has_country_flag = byz_persian_war_romeside
+				}
+				join_all_offensive_wars_of = ROM
+				clr_country_flag = byz_persian_war_romeside
+			}
+			country_event = {
+				id = ab_byzantium_disaster.84
+				days = 548
+			}
+		}
+	}
+}
+
+#Persian Victory
+country_event = {
+	id = ab_byzantium_disaster.82
+	title = ab_byzantium_disaster.82.t
+	desc = ab_byzantium_disaster.82.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_persian_war
+			white_peace = event_target:crisisPersia
+			near_east_superregion = {
+				remove_core = ROM
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.82.a
+		custom_tooltip = BYZ_EASTERN_CONQUEST_LOST
+	}
+}
+
+#Establish Dioceses in Persia
+country_event = {
+	id = ab_byzantium_disaster.83
+	title = ab_byzantium_disaster.83.t
+	desc = ab_byzantium_disaster.83.d
+	picture = AB_PERSIA_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_persian_war
+			set_country_flag = byz_persian_war_victory
+			event_target:crisisPersia = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							superregion = persia_superregion
+						}
+					}
+					event_target:crisisPersia = {
+						inherit = PREV
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							is_core = ROOT
+							superregion = persia_superregion
+						}
+					}
+					cede_province = ROOT
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = persia_region
+						region = khorasan_region
+					}
+				}
+				add_permanent_province_modifier = {
+					name = byz_integrate_persia
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.83.a
+		swap_non_generic_missions = yes
+		custom_tooltip = BYZ_CHEAPER_PERSIA_CORE
+		custom_tooltip = AB_EMPTY
+		persia_superregion = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.83.b
+		trigger = {
+			OR = {
+				owns = 2218
+				owns = 445
+			}
+		}
+		swap_non_generic_missions = yes
+		custom_tooltip = BYZ_CHEAPER_PERSIA_CORE
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				owns = 2218
+			}
+			custom_tooltip = AB_DIOCESE_PERSIA
+			custom_tooltip = AB_EMPTY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = RDZ
+					remove_core = ROOT
+				}
+				create_subject = {
+					who = RDZ
+					subject_type = diocese_vassal
+				}
+				RDZ = {
+					add_core = 2218
+					change_primary_culture = perso_roman
+					change_religion = ROOT
+					change_government = republic
+					add_government_reform = rom_diocese
+					kill_ruler = yes
+					set_capital = 2218
+					capital_scope = {
+						province_event = {
+							id = ab_byzantium.71
+						}
+					}
+					add_country_modifier = {
+						name = byz_loyal_diocese
+						duration = -1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owns = 445
+			}
+			custom_tooltip = AB_DIOCESE_ARIANA
+			custom_tooltip = AB_EMPTY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = khorasan_region
+					}
+					cede_province = RDV
+					remove_core = ROOT
+				}
+				create_subject = {
+					who = RDV
+					subject_type = diocese_vassal
+				}
+				RDV = {
+					add_core = 445
+					change_primary_culture = perso_roman
+					change_religion = ROOT
+					change_government = republic
+					add_government_reform = rom_diocese
+					kill_ruler = yes
+					set_capital = 445
+					capital_scope = {
+						province_event = {
+							id = ab_byzantium.71
+						}
+					}
+					add_country_modifier = {
+						name = byz_loyal_diocese
+						duration = -1
+					}
+				}
+			}
+		}
+		persia_superregion = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#Persian War - Rome Debuff
+country_event = {
+	id = ab_byzantium_disaster.84
+	title = ab_byzantium_disaster.84.t
+	desc = ab_byzantium_disaster.84.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_in_war = {
+				casus_belli = cb_roman_persian_war
+			}
+			is_in_war = {
+				casus_belli = cb_roman_chinese_war
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = byz_disaster_debuff3
+				}
+				remove_country_modifier = byz_disaster_debuff3
+				add_country_modifier = {
+					name = byz_disaster_debuff4
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = byz_disaster_debuff2
+				}
+				remove_country_modifier = byz_disaster_debuff2
+				add_country_modifier = {
+					name = byz_disaster_debuff3
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = byz_disaster_debuff1
+				}
+				remove_country_modifier = byz_disaster_debuff1
+				add_country_modifier = {
+					name = byz_disaster_debuff2
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = byz_disaster_debuff1
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_modifier = byz_disaster_debuff4 }
+				}
+				country_event = {
+					id = ab_byzantium_disaster.84
+					days = 548
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.84.a
+		if = {
+			limit = {
+				has_country_modifier = byz_disaster_debuff4
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = byz_disaster_debuff4
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = byz_disaster_debuff3
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = byz_disaster_debuff3
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = byz_disaster_debuff2
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = byz_disaster_debuff2
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+		else = {
+			tooltip = {
+				add_country_modifier = {
+					name = byz_disaster_debuff1
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+	}
+}
+
+## THE DRAGON EMPEROR -----
+#Dragon Emperor Start
+country_event = {
+	id = ab_byzantium_disaster.88
+	title = ab_byzantium_disaster.88.t
+	desc = ab_byzantium_disaster.88.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = CLE
+				}
+				CLE = {
+					save_global_event_target_as = crisisChina
+				}
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = EmperorOfChina
+				}
+				event_target:EmperorOfChina = {
+					save_global_event_target_as = crisisChina
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						OR = {
+							has_reform = chinawarlord
+							tag = ROC
+						}
+						NOT = {
+							any_country = {
+								has_reform = chinawarlord
+								NOT = { tag = PREV }
+								total_development = PREV
+							}
+						}
+					}
+					save_global_event_target_as = crisisChina
+				}
+			}
+			event_target:crisisChina = {
+				country_event = {
+					id = ab_byzantium_disaster.90
+				}
+			}
+			add_historical_rival = event_target:crisisChina
+			add_opinion = {
+				who = event_target:crisisChina
+				modifier = opinion_superpowers_rivalry
+			}
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = diocese_vassal
+						NOT = {is_neighbor_of = event_target:crisisChina }
+					}
+				}
+				country_event = {
+					id = ab_byzantium_disaster.91
+					days = 30
+				}
+			}
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = diocese_vassal
+						is_neighbor_of = event_target:crisisChina
+						NOT = { liberty_desire = 50 }
+					}
+				}
+				country_event = {
+					id = ab_byzantium_disaster.92
+					days = 30
+				}
+			}
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = diocese_vassal
+						is_neighbor_of = event_target:crisisChina
+						liberty_desire = 50
+					}
+				}
+				country_event = {
+					id = ab_byzantium_disaster.93
+					days = 60
+				}
+			}
+			country_event = {
+				id = ab_byzantium_disaster.94
+				days = 90
+			}
+			country_event = {
+				id = ab_byzantium_disaster.95
+				days = 180
+			}
+			country_event = {
+				id = ab_byzantium_disaster.96
+				days = 270
+			}
+			country_event = {
+				id = ab_byzantium_disaster.98
+				days = 365
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.88.a
+		tooltip = {
+			add_historical_rival = event_target:crisisChina
+			add_opinion = {
+				who = event_target:crisisChina
+				modifier = opinion_superpowers_rivalry
+			}
+			custom_tooltip = AB_EMPTY
+			event_target:crisisChina = {
+				add_country_modifier = {
+					name = byz_china_defense
+					duration = -1
+					desc = "until the end of the disaster"
+				}
+			}
+		}
+		custom_tooltip = BYZ_CHINESE_WAR_INFO
+	}
+}
+
+#Dragon Emperor End
+country_event = {
+	id = ab_byzantium_disaster.89
+	title = ab_byzantium_disaster.89.t
+	desc = ab_byzantium_disaster.89.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = ab_byzantium_disaster.89.a
+		remove_country_modifier = byz_disaster_debuff1
+		remove_country_modifier = byz_disaster_debuff2
+		remove_country_modifier = byz_disaster_debuff3
+		remove_country_modifier = byz_disaster_debuff4
+		if = {
+			limit = {
+				exists = event_target:crisisChina
+			}
+			event_target:crisisChina = {
+				remove_country_modifier = byz_china_defense
+			}
+		}
+		clear_global_event_target = crisisChina
+		clear_global_event_target = romanChinaInvasionHorde
+		clear_global_event_target = romanChinaInvasionJapan
+		clear_global_event_target = romanChinaInvasionKorea
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = byz_chinese_war_romeside
+					has_country_flag = byz_chinese_war_chinaside
+					has_country_flag = byz_chinese_war_tributary
+				}
+			}
+			clr_country_flag = byz_chinese_war_romeside
+			clr_country_flag = byz_chinese_war_chinaside
+			clr_country_flag = byz_chinese_war_tributary
+		}
+	}
+}
+
+#Dragon Emperor - China Nof
+country_event = {
+	id = ab_byzantium_disaster.90
+	title = ab_byzantium_disaster.90.t
+	desc = ab_byzantium_disaster.90.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_historical_rival = ROM
+			add_opinion = {
+				who = ROM
+				modifier = opinion_superpowers_rivalry
+			}
+			add_country_modifier = {
+				name = byz_china_defense
+				duration = -1
+				desc = "until the end of the disaster"
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.90.a
+		tooltip = {
+			add_historical_rival = ROM
+			add_opinion = {
+				who = ROM
+				modifier = opinion_superpowers_rivalry
+			}
+			add_country_modifier = {
+				name = byz_china_defense
+				duration = -1
+				desc = "until the end of the disaster"
+			}
+		}
+		custom_tooltip = BYZ_CHINESE_WAR_INFO
+	}
+}
+
+#Dragon Emperor - Dioceses Refuse to Join
+country_event = {
+	id = ab_byzantium_disaster.91
+	title = ab_byzantium_disaster.91.t
+	desc = ab_byzantium_disaster.91.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.91.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+				NOT = { is_neighbor_of = event_target:crisisChina }
+			}
+			add_liberty_desire = 10
+		}
+	}
+}
+
+#Dragon Emperor - Dioceses Will Join
+country_event = {
+	id = ab_byzantium_disaster.92
+	title = ab_byzantium_disaster.92.t
+	desc = ab_byzantium_disaster.92.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.92.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+				is_neighbor_of = event_target:crisisChina
+				NOT = { liberty_desire = 50 }
+			}
+			add_liberty_desire = -10
+			set_country_flag = byz_chinese_war_romeside
+		}
+	}
+}
+
+#Dragon Emperor - Dioceses might Join
+country_event = {
+	id = ab_byzantium_disaster.93
+	title = ab_byzantium_disaster.93.t
+	desc = ab_byzantium_disaster.93.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium_disaster.93.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+				is_neighbor_of = event_target:crisisChina
+				liberty_desire = 50
+			}
+			set_country_flag = byz_chinese_war_romeside
+			add_liberty_desire = -10
+			add_years_of_income = 1
+			ROM = {
+				add_dip_power = -100
+				add_years_of_income = -0.5
+				add_corruption = 1
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.93.b
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+				is_neighbor_of = event_target:crisisChina
+				liberty_desire = 50
+			}
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Dragon Emperor - Rus Participation
+country_event = {
+	id = ab_byzantium_disaster.94
+	title = ab_byzantium_disaster.94.t
+	desc = ab_byzantium_disaster.94.d
+	picture = AB_RUS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_subject_country = {
+			is_subject_of_type = grand_diocese_vassal
+			is_neighbor_of = event_target:crisisChina
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.94.a
+		custom_tooltip = BYZ_CHINA_CAN_SEIZE_RUSSIA
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = grand_diocese_vassal
+				}
+				set_country_flag = byz_chinese_war_romeside
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.94.b
+	}
+}
+
+#Dragon Emperor - Horde Participation
+country_event = {
+	id = ab_byzantium_disaster.95
+	title = ab_byzantium_disaster.95.t
+	desc = ab_byzantium_disaster.95.d
+	picture = CHINESE_GENERAL_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_reform = steppe_horde
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_reform = steppe_horde
+					NOT = {
+						any_country = {
+							has_reform = steppe_horde
+							NOT = { tag = PREV }
+							total_development = PREV
+						}
+					}
+				}
+				save_global_event_target_as = romanChinaInvasionHorde
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.95.a
+		add_treasury = -1000
+		add_prestige = -10
+		custom_tooltip = BYZ_HORDE_CAN_SEIZE_CHINA
+		hidden_effect = {
+			event_target:romanChinaInvasionHorde = {
+				set_country_flag = byz_chinese_war_romeside
+				add_treasury = 1000
+				add_prestige = 10
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.95.b
+		event_target:romanChinaInvasionHorde = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_angry
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					is_subject_of_type = grand_diocese_vassal
+					has_country_flag = byz_chinese_war_romeside
+				}
+			}
+			custom_tooltip = BYZ_HORDE_CAN_SEIZE_RUSSIA
+			hidden_effect = {
+				event_target:romanChinaInvasionHorde = {
+					set_country_flag = byz_chinese_war_chinaside
+				}
+			}
+		}
+	}
+}
+
+#Dragon Emperor - Japan Participation
+country_event = {
+	id = ab_byzantium_disaster.96
+	title = ab_byzantium_disaster.96.t
+	desc = ab_byzantium_disaster.96.d
+	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			exists = JAP
+			AND = {
+				NOT = { exists = JAP }
+				any_country = {
+					capital_scope = {
+						region = japan_region
+					}
+					OR = {
+						has_reform = shogunate
+						has_reform = reformed_shogunate
+					}
+				}
+			}
+		}
+		any_country = {
+			capital_scope = {
+				region = korea_region
+			}
+			is_free_or_tributary_trigger = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = JAP
+				}
+				JAP = {
+					save_global_event_target_as = romanChinaInvasionJapan
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						OR = {
+							has_reform = shogunate
+							has_reform = reformed_shogunate
+						}
+					}
+					save_global_event_target_as = romanChinaInvasionJapan
+				}
+			}
+			random_country = {
+				limit = {
+					capital_scope = {
+						region = korea_region
+					}
+					is_free_or_tributary_trigger = yes
+				}
+				save_global_event_target_as = romanChinaInvasionKorea
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.96.a
+		create_alliance = event_target:romanChinaInvasionJapan
+		add_trust = {
+			who = event_target:romanChinaInvasionJapan
+			value = 20
+			mutual = yes
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:romanChinaInvasionJapan = {
+			set_country_flag = byz_chinese_war_romeside
+			if = {
+				limit = {
+					ROOT = {
+						institution_difference = {
+							who = PREV
+							value = 1
+						}
+					}
+				}
+				add_next_institution_embracement = 100
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						tech_difference = 1
+					}
+				}
+				add_country_modifier = {
+					name = byz_japan_westernization
+					duration = 3650
+				}
+			}
+			else = {
+				grant_all_mana = {
+					mana = 200
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_JAPAN_CAN_SEIZE_CHINA
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium_disaster.97
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.96.b
+		event_target:romanChinaInvasionJapan = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_angry
+			}
+		}
+	}
+}
+
+#Dragon Emperor - Korea Participation
+country_event = {
+	id = ab_byzantium_disaster.97
+	title = ab_byzantium_disaster.97.t
+	desc = ab_byzantium_disaster.97.d
+	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			event_target:romanChinaInvasionKorea = {
+				set_country_flag = byz_chinese_war_chinaside
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_angry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.97.a
+		tooltip = {
+			event_target:romanChinaInvasionKorea = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_angry
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_KOREA_CAN_SEIZE_JAPAN
+	}
+}
+
+#The Invasion of China Begin
+country_event = {
+	id = ab_byzantium_disaster.98
+	title = ab_byzantium_disaster.98.t
+	desc = ab_byzantium_disaster.98.d
+	picture = AB_PERSIANWAR_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			event_target:crisisChina = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = tributary_state
+						has_opinion = {
+							who = PREV
+							value = 50
+						}
+					}
+					set_country_flag = byz_chinese_war_chinaside
+					set_country_flag = byz_chinese_war_tributary
+				}
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = tributary_state
+						has_opinion = {
+							who = ROM
+							value = 100
+						}
+						NOT = {
+							has_opinion = {
+								who = PREV
+								value = 50
+							}
+						}
+					}
+					grant_independence = yes
+					set_country_flag = byz_chinese_war_romeside
+					set_country_flag = byz_chinese_war_tributary
+				}
+			}
+			declare_war_with_cb = {
+				who = event_target:crisisChina
+				casus_belli = cb_roman_chinese_war
+			}
+			every_country = {
+				limit = {
+					has_country_flag = byz_chinese_war_chinaside
+				}
+				join_all_defensive_wars_of = event_target:crisisChina
+			}
+			every_country = {
+				limit = {
+					has_country_flag = byz_chinese_war_romeside
+				}
+				join_all_offensive_wars_of = ROM
+			}
+			country_event = {
+				id = ab_byzantium_disaster.84
+				days = 548
+			}
+			country_event = {
+				id = ab_byzantium_disaster.101
+				days = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.98.a
+		tooltip = {
+			declare_war_with_cb = {
+				who = event_target:crisisChina
+				casus_belli = cb_roman_chinese_war
+			}
+		}
+		custom_tooltip = BYZ_WAR_CHINA
+	}
+}
+
+#Destruction of China
+country_event = {
+	id = ab_byzantium_disaster.99
+	title = ab_byzantium_disaster.99.t
+	desc = ab_byzantium_disaster.99.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_dragon_emperor
+			set_country_flag = byz_chinese_war_victory
+			TLW_roman_dismantle_china_effect = yes
+		}
+	}
+	
+	option = {
+		name = ab_byzantium_disaster.99.a
+		swap_non_generic_missions = yes
+		custom_tooltip = BYZ_REVOLT_CHINA
+		custom_tooltip = AB_EMPTY
+		tibet_region = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
+		}
+		burma_region = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
+		}
+	}
+}
+
+#Tributaries Peace Out
+country_event = {
+	id = ab_byzantium_disaster.100
+	title = ab_byzantium_disaster.100.t
+	desc = ab_byzantium_disaster.100.d
+	picture = AB_PERSIANWAR_eventPicture
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = ab_byzantium_disaster.100.a
+		if = {
+			limit = {
+				has_country_flag = byz_chinese_war_romeside
+			}
+			white_peace = event_target:crisisChina
+		}
+		else = {
+			white_peace = ROM
+		}
+	}
+}
+
+#Emperor of China Victory
+country_event = {
+	id = ab_byzantium_disaster.101
+	title = ab_byzantium_disaster.101.t
+	desc = ab_byzantium_disaster.101.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = rome_dragon_emperor
+		is_in_war = {
+			casus_belli = cb_roman_chinese_war
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_dragon_emperor
+			white_peace = event_target:crisisChina
+			add_prestige = -200
+			add_stability = -6
+			grant_all_mana = {
+				mana = -1000
+			}
+			add_legitimacy = -100
+			add_country_modifier = {
+				name = byz_failed_invasion_of_china
+				duration = 7300
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium_disaster.101.a
+		tooltip = {
+			white_peace = event_target:crisisChina
+			add_prestige = -200
+			add_stability = -6
+			grant_all_mana = {
+				mana = -1000
+			}
+			add_legitimacy = -100
+			add_country_modifier = {
+				name = byz_failed_invasion_of_china
+				duration = 7300
+			}
+		}
+		custom_tooltip = BYZ_LOCKED_ASIAN_MISSIONS
+	}
+}

@@ -1,0 +1,206 @@
+TLW_culture_conversion_calc_effect = {
+	set_variable = {
+		which = culture_conversion_var
+		value = 0
+	}
+	set_variable = {
+		which = culture_conversion_change_var
+		value = 0
+	}
+	TLW_culture_conversion_refresh_effect = yes
+}
+
+TLW_culture_conversion_refresh_effect = {
+	# Colony
+	if = {
+		limit = {
+			NOT = { culture = owner }
+			owner = {
+				is_colonial_nation = yes
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.0
+		}
+	}
+	# Hellenization
+	if = {
+		limit = {
+			NOT = { culture_group = hellenic_g }
+			owner = {
+				culture_group = hellenic_g
+				OR = {
+					is_subject_of_type = diadochi_vassal
+					has_government_attribute = ab_has_diadochi
+				}
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.1
+		}
+	}
+	# Romanization
+	if = {
+		limit = {
+			NOT = { culture_group = roman_g }
+			owner = {
+				culture_group = roman_g
+			}
+			province_is_diocese_land_trigger = yes
+		}
+		province_event = {
+			id = ab_culture_conversion.2
+		}
+	}
+	# Spread of Greek Culture in Anatolia
+	if = {
+		limit = {
+			region = anatolia_region
+			NOT = { culture = greek }
+			owner = {
+				has_country_flag = byz_greek_spread
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.3
+		}
+	}
+	# Spread of Visigothic Culture
+	if = {
+		limit = {
+			NOT = { culture = Visigothic }
+			owner = {
+				primary_culture = Visigothic
+			}
+			OR = {
+				AND = {
+					OR = {
+						area = pyrenees_area
+						area = guyenne_area
+						area = languedoc_area
+						area = savoy_dauphine_area
+						area = massif_central_area
+						area = poitou_area
+						area = provence_area
+					}
+					owner = {
+						has_country_flag = vsg_spread_france
+					}
+				}
+				AND = {
+					region = iberia_region
+					owner = {
+						has_country_flag = vsg_spread_iberia
+					}
+				}
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.5
+		}
+	}
+	# Punicization
+	if = {
+		limit = {
+			NOT = { culture_group = punic_g }
+			owner = {
+				culture_group = punic_g
+			}
+			OR = {
+				AND = {
+					owner = {
+						has_country_flag = ctg_barbiri_spread
+					}
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				AND = {
+					owner = {
+						has_country_flag = ctg_spread_iberia
+					}
+					OR = {
+						region = iberia_region
+						region = france_region
+					}
+				}
+				AND = {
+					owner = {
+						has_country_flag = ctg_spread_africa
+					}
+					region = maghreb_region
+				}
+				AND = {
+					owner = {
+						has_country_flag = ctg_spread_levant
+					}
+					superregion = near_east_superregion
+				}
+				AND = {
+					owner = {
+						has_country_flag = ctg_spread_europe
+					}
+					continent = europe
+				}
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.6
+		}
+	}
+	# Spread of Iroquoian Culture
+	if = {
+		limit = {
+			NOT = { culture_group = iroquoian }
+			owner = {
+				culture_group = iroquoian
+			}
+			OR = {
+				AND = {
+					owner = {
+						has_country_flag = che_huron_spread
+					}
+					culture_group = eastern_algonquian
+				}
+				AND = {
+					owner = {
+						has_country_flag = che_mesquakie_spread
+					}
+					culture_group = siouan
+				}
+				AND = {
+					owner = {
+						has_country_flag = che_tionontate_spread
+					}
+					OR = {
+						culture_group = caddoan
+						culture_group = plains_algonquian
+					}
+				}
+				AND = {
+					owner = {
+						has_country_flag = che_europe_spread
+					}
+					superregion = europe_superregion
+				}
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.7
+		}
+	}
+	# Spread of Hebrew Culture
+	if = {
+		limit = {
+			superregion = near_east_superregion
+			NOT = { culture = hebrew }
+			owner = {
+				has_country_flag = cca_hebrew_spread
+			}
+		}
+		province_event = {
+			id = ab_culture_conversion.8
+		}
+	}
+}

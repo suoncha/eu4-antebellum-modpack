@@ -1,0 +1,85 @@
+spriteTypes = {
+	spriteType = {
+  name = "GFX_disaster_byzantium_fall_angelid"
+  texturefile = "gfx//interface//disasters//byzantium_fall_angelid.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_rome_persian_war"
+  texturefile = "gfx//interface//disasters//rome_persian_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_byzantium_16th_crisis"
+  texturefile = "gfx//interface//disasters//byzantium_16th_crisis.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_rome_roman_civil_war"
+  texturefile = "gfx//interface//disasters//rome_roman_civil_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_rome_biased_cultural_sphere"
+  texturefile = "gfx//interface//disasters//rome_biased_cultural_sphere.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_rome_dragon_emperor"
+  texturefile = "gfx//interface//disasters//rome_dragon_emperor.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_nicene_diadochi_war"
+  texturefile = "gfx//interface//disasters//nicene_diadochi_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_nicene_displeased_faction"
+  texturefile = "gfx//interface//disasters//nicene_displeased_faction.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_the_pale_death"
+  texturefile = "gfx//interface//disasters//punic_plague.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_the_gray_fever"
+  texturefile = "gfx//interface//disasters//punic_plague.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_punic_rise_of_carthage"
+  texturefile = "gfx//interface//disasters//punic_rise_of_carthage.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+
+ spriteType = {
+  name = "GFX_disaster_punic_fourth_war"
+  texturefile = "gfx//interface//disasters//punic_fourth_war.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+}

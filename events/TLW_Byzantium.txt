@@ -1,0 +1,5850 @@
+namespace = ab_byzantium
+
+# Belisarius Reborn
+country_event = {
+	id = ab_byzantium.47
+	title = ab_byzantium.47.t
+	desc = ab_byzantium.47.d
+	picture = AB_BELISARIUS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.47.a
+		country_event = {
+			id = ab_byzantium.72
+		}
+		custom_tooltip = AB_EMPTY
+		define_general = {
+			shock = 4
+			fire = 6
+			manuever = 5
+			siege = 5
+			name = "Belisarius"
+			trait = inspirational_leader_general_personality
+		}
+	}
+}
+
+# Byzantine Military Reform
+country_event = {
+	id = ab_byzantium.48
+	title = ab_byzantium.48.t
+	desc = ab_byzantium.48.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.48.a
+		add_army_tradition_or_mil_power = { amount = 20 }
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = byz_militarization
+			duration = 3650
+		}
+	}
+}
+
+#Hellenization of the Bulgars
+country_event = {
+	id = ab_byzantium.49
+	title = ab_byzantium.49.t
+	desc = ab_byzantium.49.d
+	picture = BYZ_COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.49.a
+		add_mil_power = 100
+		add_ruler_modifier = {
+			name = byzantium_slayer
+			duration = -1
+		}
+		custom_tooltip = BYZ_HELLENIZED_BULGARIANS
+		hidden_effect = {
+			replace_culture_with_effect = {
+				new_culture = Illyrian
+				old_culture_1 = bulgarian
+			}
+		}
+	}
+}
+
+#Hellenization of the Balkans
+country_event = {
+	id = ab_byzantium.50
+	title = ab_byzantium.50.t
+	desc = ab_byzantium.50.d
+	picture = BYZ_COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.50.a
+		define_advisor = {
+			type = commandant
+			skill = 2
+			culture = Illyrian
+			cost_multiplier = 0.5
+		}
+		custom_tooltip = AB_EMPTY
+	    custom_tooltip = BYZ_HELLENIZED_BALKANS
+		hidden_effect = {
+			replace_culture_with_effect = {
+				new_culture = Illyrian
+				old_culture_1 = bosnian
+				old_culture_2 = serbian
+				old_culture_3 = croatian
+				old_culture_4 = dalmatian
+			}
+		}
+	}
+}
+
+#Nicaean Invasion
+country_event = {
+	id = ab_byzantium.51
+	title = ab_byzantium.51.t
+	desc = ab_byzantium.51.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		NCI = {
+			ai = yes
+			OR = {
+				offensive_war_with = ROOT
+				BYZ = {
+					ai = yes
+					has_country_flag = ab_stronger_ai_byz
+					war_with = NCI
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NCI = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 1545
+				}
+			}
+			else_if = {
+				limit = {
+					NCI = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 2
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 1180
+				}
+			}
+			else_if = {
+				limit = {
+					NCI = {
+						any_ally = {
+							offensive_war_with = ROOT
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 815
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 450
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.51.a
+		custom_tooltip = AB_WAR_NICAEA_INFO
+		custom_tooltip = AB_EMPTY
+		tooltip = {
+			if = {
+				limit = {
+					NCI = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 1545
+				}
+			}
+			else_if = {
+				limit = {
+					NCI = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 2
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 1180
+				}
+			}
+			else_if = {
+				limit = {
+					NCI = {
+						any_ally = {
+							offensive_war_with = ROOT
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 815
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = byz_nci_war_timer
+					duration = 450
+				}
+			}
+		}
+		custom_tooltip = AB_WAR_NICAEA_ALLIES
+	}
+}
+
+#Occupation of Nicaea
+country_event = {
+	id = ab_byzantium.52
+	title = ab_byzantium.52.t
+	desc = ab_byzantium.52.d
+	picture = muslimgfx_CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		OR = {
+			AND = {
+				has_country_modifier = byz_nci_war_timer
+				NCI = {
+					ai = yes
+					offensive_war_with = ROOT
+					capital_scope = {
+						controlled_by = ROOT
+					}
+					NOT = {
+						war_score_against = {
+							who = ROOT
+							value = -60
+						}
+					}
+				}
+			}
+			AND = {
+				has_country_flag = ab_stronger_ai_byz
+				ai = yes
+				NCI = {
+					ai = yes
+					war_with = BYZ
+					capital_scope = {
+						controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			white_peace = NCI
+			inherit = NCI
+			every_owned_province = {
+				limit = {
+					is_core = NCI
+				}
+				remove_core = NCI
+			}
+			add_years_of_income = 1
+			remove_country_modifier = byz_nci_war_timer
+		}
+	}
+
+	option = {
+		name = ab_byzantium.52.a
+		tooltip = {
+			add_years_of_income = 1
+			inherit = NCI
+		}
+	}
+}
+
+#Bulgarian Invasion
+country_event = {
+	id = ab_byzantium.53
+	title = ab_byzantium.53.t
+	desc = ab_byzantium.53.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		BUL = {
+			ai = yes
+			offensive_war_with = ROOT
+			any_owned_province = {
+                is_core = BYZ
+            }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					BUL = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 1545
+				}
+			}
+			else_if = {
+				limit = {
+					BUL = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 2
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 1180
+				}
+			}
+			else_if = {
+				limit = {
+					BUL = {
+						any_ally = {
+							offensive_war_with = ROOT
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 815
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 450
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.53.a
+		custom_tooltip = AB_WAR_BULGARIA_INFO
+		BUL = {
+			custom_tooltip = AB_BULGARIAN_INVASION_REWARD
+		}
+		custom_tooltip = AB_EMPTY
+		tooltip = {
+			if = {
+				limit = {
+					BUL = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 3
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 1545
+				}
+			}
+			else_if = {
+				limit = {
+					BUL = {
+						calc_true_if = {
+							all_ally = {
+								offensive_war_with = ROOT
+							}
+							amount = 2
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 1180
+				}
+			}
+			else_if = {
+				limit = {
+					BUL = {
+						any_ally = {
+							offensive_war_with = ROOT
+						}
+					}
+				}
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 815
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = byz_bul_war_timer
+					duration = 450
+				}
+			}
+		}
+		custom_tooltip = AB_WAR_NICAEA_ALLIES
+	}
+}
+
+#Occupation of Tarnovo
+country_event = {
+	id = ab_byzantium.54
+	title = ab_byzantium.54.t
+	desc = ab_byzantium.54.d
+	picture = muslimgfx_CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		has_country_modifier = byz_bul_war_timer
+		BUL = {
+			ai = yes
+			offensive_war_with = ROOT
+			capital_scope = {
+				controlled_by = ROOT
+			}
+			NOT = {
+				war_score_against = {
+					who = ROOT
+					value = -40
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			BUL = {
+				add_treasury = -250
+				every_owned_province = {
+					limit = {
+						culture = greek
+					}
+					cede_province = ROOT
+				}
+			}
+			add_treasury = 250
+			white_peace = BUL
+			every_owned_province = {
+				limit = {
+					is_core = BUL
+				}
+				remove_core = BUL
+			}
+			remove_country_modifier = byz_bul_war_timer
+		}
+	}
+
+	option = {
+		name = ab_byzantium.54.a
+		tooltip = {
+			add_treasury = 250
+			BUL = {
+				custom_tooltip = AB_BULGARIAN_INVASION_REWARD
+			}
+		}
+	}
+}
+
+#Italian Ambition
+country_event = {
+	id = ab_byzantium.57
+	title = ab_byzantium.57.t
+	desc = ab_byzantium.57.d
+	picture = AB_ITALY_AMBITION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.57.a
+		add_prestige_or_monarch_power = { amount = 10 }
+		custom_tooltip = AB_EMPTY
+		apulia_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		calabria_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#Diocesis Dacia annex Romanians
+country_event = {
+	id = ab_byzantium.58
+	title = ab_byzantium.58.t
+	desc = ab_byzantium.58.d
+	picture = SEJM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.58.a
+		RDR = {
+			if = {
+				limit = {
+					WAL = {
+						is_subject_of = ROM
+					}
+				}
+				inherit = WAL
+			}
+			if = {
+				limit = {
+					MOL = {
+						is_subject_of = ROM
+					}
+				}
+				inherit = MOL
+			}
+			add_liberty_desire = -50
+		}
+	}
+
+	option = {
+		name = ab_byzantium.58.b
+	}
+}
+
+#Diocese System
+country_event = {
+	id = ab_byzantium.59
+	title = ab_byzantium.59.t
+	desc = ab_byzantium.59.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.59.a
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.70
+			}
+		}
+	}
+}
+
+#Conqueror of the Seven Seas
+country_event = {
+	id = ab_byzantium.60
+	title = ab_byzantium.60.t
+	desc = ab_byzantium.60.d
+	picture = AB_CALILUGA_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.60.a
+		add_country_modifier = {
+			name = byz_seven_seas
+			duration = 36500
+		}
+		custom_tooltip = BYZ_CNS_COLONIST
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+				}
+				add_country_modifier = {
+					name = byz_seven_seas_subject
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+#Punics in the New World
+country_event = {
+	id = ab_byzantium.61
+	title = ab_byzantium.61.t
+	desc = ab_byzantium.61.d
+	picture = DHOW_AT_SEA_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			discover_province = 965
+			every_country = {
+				limit = {
+					primary_culture = punic
+				}
+				add_historical_rival = ROOT
+			}
+		}
+	}
+
+	goto = capitalProv
+
+	option = {
+		name = ab_byzantium.61.a
+		every_country = {
+			limit = {
+				primary_culture = punic
+			}
+			ROOT = {
+				add_historical_rival = PREV
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					965 = {
+						has_discovered = ROOT
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			tooltip = {
+				discover_province = 965
+			}
+		}
+	}
+}
+
+#Unification of the Orthodox World
+country_event = {
+	id = ab_byzantium.62
+	title = ab_byzantium.62.t
+	desc = ab_byzantium.62.d
+	picture = AB_RUS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.62.a
+		trigger = {
+			NOT = { exists = UKR }
+		}
+		custom_tooltip = BYZ_RUSSIAN_PRINCES
+		hidden_effect = {
+			if = {
+				limit = {
+					government = monarchy
+					NOT = { has_country_flag = byz_restore_republic }
+				}
+				every_country = {
+					limit = {
+						has_reform = principality
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_restore_personal_union
+						months = 300
+					}
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						has_reform = principality
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 300
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.62.b
+		trigger = {
+			exists = UKR
+		}
+		if = {
+			limit = {
+				government = monarchy
+				NOT = { has_country_flag = byz_restore_republic }
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 300
+				target = UKR
+			}
+		}
+		else = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				months = 300
+				target = UKR
+			}
+		}
+	}
+}
+
+#Roman Belgica
+country_event = {
+	id = ab_byzantium.63
+	title = ab_byzantium.63.t
+	desc = ab_byzantium.63.d
+	picture = AB_BELGICA_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.63.a
+		add_country_modifier = {
+			name = byz_belgica_french
+			duration = -1
+		}
+		custom_tooltip = BYZ_GALLIA_BELGICA
+		set_country_flag = rom_belgica_isof_gallia
+	}
+
+	option = {
+		name = ab_byzantium.63.b
+		add_country_modifier = {
+			name = byz_belgica_german
+			duration = -1
+		}
+		custom_tooltip = BYZ_GERMANIA_BELGICA
+		set_country_flag = rom_belgica_isof_germania
+	}
+}
+
+#Rulers of Europe
+country_event = {
+	id = ab_byzantium.64
+	title = ab_byzantium.64.t
+	desc = ab_byzantium.64.d
+	picture = AB_ROMAN_TRIUMPH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.64.a
+		set_country_flag = rome_buffed_augustus
+		change_monarch_points_or_power = {
+			points = 1
+			power = adm
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = dip
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = mil
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = byz_roma_europa
+			duration = 3650
+		}
+		custom_tooltip = BYZ_BUFFED_AUGUSTUS
+		hidden_effect = {
+			remove_ruler_personality = augustus_personality
+			add_ruler_personality = augustus_buffed_personality
+		}
+	}
+}
+
+#Romanization of Rus
+country_event = {
+	id = ab_byzantium.65
+	title = ab_byzantium.65.t
+	desc = ab_byzantium.65.d
+	picture = BYZ_COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.65.a
+		UKR = {
+			change_primary_culture = russo_roman
+			if = {
+				limit = {
+					NOT = { technology_group = western }
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
+			hidden_effect = {
+				capital_scope = {
+					province_event = {
+						id = ab_byzantium.71
+					}
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_RUSSO_ROMAN
+	}
+}
+
+#Restoration of Rome
+country_event = {
+	id = ab_byzantium.67
+	title = ab_byzantium.67.t
+	desc = ab_byzantium.67.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = tlw_romanization_page_var
+				value = 1
+			}
+			set_variable = {
+				which = tlw_diocese_page_var
+				value = 1
+			}
+		}
+	}
+
+	# Flag clearing to optimize performance
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					mission_completed = byzantium_iron
+				}
+				clr_country_flag = had_16th_crisis
+			}
+			clr_country_flag = byz_court_latin
+			clr_country_flag = byz_court_mixed
+			clr_country_flag = byz_court_greek
+			clr_country_flag = byz_restore_republic
+			clr_country_flag = lat_cant_trigger_events
+			clr_country_flag = formed_westrome_flag
+			clr_country_flag = byz_greek_spread
+		}
+	}
+
+	option = {
+		name = ab_byzantium.67.a
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = byz_restore_republic
+					government = republic
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = byz_restore_republic
+					}
+					change_government = republic
+				}
+			}
+			add_government_reform = byzromanrepublic
+		}
+		else_if = {
+			limit = {
+				government = theocracy
+				NOT = { religion_group = muslim }
+			}
+			add_government_reform = byzromantheocracy
+		}
+		else_if ={
+			limit = {
+				religion_group = muslim
+			}
+			add_government_reform = byzromancaliphate
+		}
+		else = {
+			add_government_reform = byzromanempire
+		}
+		custom_tooltip = AB_EMPTY
+		add_government_reform = byzculturalsphere
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = byz_court_latin
+						religion = catholic
+					}
+				}
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = 100
+				}
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = -40
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = byz_court_mixed
+				}
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = 100
+				}
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = -50
+				}
+			}
+			else_if = {
+				limit = {
+					religion = zoroastrian
+				}
+				add_faction_influence = {
+					faction = faction_byzpersian
+					influence = 100
+				}
+				add_faction_influence = {
+					faction = faction_byzpersian
+					influence = -60
+				}
+			}
+			else = {
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = 100
+				}
+				add_faction_influence = {
+					faction = faction_byzlatin
+					influence = -60
+				}
+			}
+			country_event = {
+				id = ab_byzantium.59
+			}
+		}
+	}
+}
+
+#Roman Republic Election
+country_event = {
+	id = ab_byzantium.68
+	title = ab_byzantium.68.t
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = byzrepublic_death_election }
+		}
+		desc = ab_byzantium.68.d1
+	}
+	desc = {
+		trigger = {
+			has_country_flag = byzrepublic_death_election
+		}
+		desc = ab_byzantium.68.d2
+	}
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = byzrepublic_death_election
+		}
+	}
+
+	option = {
+		name = ab_byzantium.68.a
+		random_list = {
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = roman_new
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = gallo_roman
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = afro_roman
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_british
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = hispano_roman
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_germanic
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_nordic
+				}
+			}
+			12 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = daco_roman
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 5
+		}
+	}
+
+	option = {
+		name = ab_byzantium.68.b
+		random_list = {
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = illyro_roman
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = greco_roman
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_arabic
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = russo_roman
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_polish
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_scythic
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 5
+		}
+	}
+
+	option = {
+		name = ab_byzantium.68.c
+		trigger = {
+			has_faction = faction_byzpersian
+		}
+		random_list = {
+			50 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = perso_roman
+				}
+			}
+			50 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = indo_roman
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 5
+		}
+	}
+
+	option = {
+		name = ab_byzantium.68.d
+		trigger = {
+			has_faction = faction_byzchinese
+		}
+		random_list = {
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = tibeto_roman
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = sino_roman
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_korean
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_japanese
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_tai
+				}
+			}
+			16 = { 
+				define_ruler = {
+					hide_skills = yes
+					culture = romano_malay
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 5
+		}
+	}
+}
+
+#Suppressed Diocese
+country_event = {
+	id = ab_byzantium.69
+	title = ab_byzantium.69.t
+	desc = ab_byzantium.69.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			clear_global_event_target = suppressDiocese
+		}
+	}
+
+	option = {
+		name = ab_byzantium.69.a
+		inherit = event_target:suppressDiocese
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+			}
+			add_liberty_desire = 10
+		}
+	}
+
+	option = {
+		name = ab_byzantium.69.b
+		create_subject = {
+			subject_type = diocese_vassal
+			subject = event_target:suppressDiocese
+		}
+		event_target:suppressDiocese = {
+			add_liberty_desire = -100
+			add_country_modifier = {
+				name = byz_loyal_diocese
+				duration = 3650
+			}
+			add_government_reform = rom_diocese
+			hidden_effect = {
+				kill_ruler = yes
+				kill_heir = {}
+			}
+		}
+	}
+}
+
+#Heritage Trait
+country_event = {
+    id = ab_byzantium.70
+    title = ab_byzantium.70.t
+    desc = ab_byzantium.70.d
+    picture = BYZ_BYZANTINE_EAGLE_eventPicture
+    
+	is_triggered_only = yes
+
+    option = {
+        name = ab_byzantium.70.a
+		if = {
+			limit = {
+				was_tag = BYZ
+			}
+			add_country_modifier = {
+				name = rome_formedbybyzantium
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = SER
+			}
+			add_country_modifier = {
+				name = rome_formedbyserbia
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = UKR
+			}
+			add_country_modifier = {
+				name = rome_formedbyrus
+				duration = -1
+			}
+			hidden_effect = {
+				country_event = {
+					id = ab_byzantium.83
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = RUM
+			}
+			add_country_modifier = {
+				name = rome_formedbyrum
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = LAT
+			}
+			add_country_modifier = {
+				name = rome_formedbylatinempire
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = BRN
+			}
+			add_country_modifier = {
+				name = rome_formedbyprydain
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = VSG
+			}
+			add_country_modifier = {
+				name = rome_formedbyvisigoths
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = AQT
+			}
+			add_country_modifier = {
+				name = rome_formedbyaquitaine
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				was_tag = CAP
+			}
+			add_country_modifier = {
+				name = rome_formedbycapua
+				duration = -1
+			}
+		}
+    }
+}
+
+#Romanization - Trigger for Rewards
+province_event = {
+	id = ab_byzantium.71
+	title = ab_byzantium.71.t
+	desc = ab_byzantium.71.d
+	picture = CULTURE_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { culture_group = roman_g }
+	}
+
+	option = {
+		name = ab_byzantium.71.a
+		if = {
+			limit = {
+				OR = {
+					region = france_region
+					AND = {
+						region = low_countries_region
+						ROM = {
+							has_country_flag = rom_belgica_isof_gallia
+						}
+					}
+				}
+			}
+			change_culture = gallo_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = maghreb_region
+					area = cap_verde_area
+					area = western_sahara_area
+					area = east_azbin_area
+					area = azbin_area
+				}
+			}
+			change_culture = afro_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					area = croatia_area
+					area = slavonia_area
+					area = bosnia_area
+					area = rascia_area
+					area = albania_area
+					area = serbia_area
+					area = bulgaria_area
+					area = silistria_area
+					area = east_adriatic_coast_area
+					area = carinthia_area
+					province_id = 4780
+					province_id = 3001
+					province_id = 1764
+				}
+			}
+			change_culture = illyro_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					area = northern_greece_area
+					area = morea_area
+					area = ionian_islands_area
+					area = macedonia_area
+					area = thrace_area
+				}
+			}
+			change_culture = greco_roman
+		}
+		else_if = {
+			limit = {
+				region = british_isles_region
+			}
+			change_culture = romano_british
+		}
+		else_if = {
+			limit = {
+				region = iberia_region
+			}
+			change_culture = hispano_roman
+		}
+		else_if = {
+			limit = {
+				region = carpathia_region
+			}
+			change_culture = daco_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					area = al_jazira_area
+					area = iraq_arabi_area
+					area = basra_area
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						religion = zoroastrian
+					}
+				}
+				change_culture = perso_roman
+			}
+			else_if = {
+				limit = {
+					ROM = {
+						religion_group = muslim
+					}
+				}
+				change_culture = romano_arabic
+			}
+			else = {
+				change_culture = greco_roman
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = mashriq_region
+					region = egypt_region
+					area = saharan_oases
+					area = dongola_area
+					province_id = 1232
+					province_id = 2324
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						religion_group = christian
+					}
+				}
+				change_culture = greco_roman
+			}
+			else = {
+				change_culture = romano_arabic
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = north_german_region
+					region = south_german_region
+					AND = {
+						region = low_countries_region
+						ROM = {
+							has_country_flag = rom_belgica_isof_germania
+						}
+					}
+				}
+			}
+			change_culture = romano_germanic
+		}
+		else_if = {
+			limit = {
+				region = scandinavia_region
+			}
+			change_culture = romano_nordic
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = korea_region
+					area = liaoning_area
+				}
+			}
+			change_culture = romano_korean
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = crimea_region
+					region = central_asia_region
+					region = mongolia_region
+					region = manchuria_region
+					area = circassia_area
+					area = dagestan_area
+				}
+			}
+			change_culture = romano_scythic
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = persia_region
+					region = khorasan_region
+					AND = {
+						region = caucasia_region
+						ROM = {
+							has_country_flag = rom_caucasia_isof_persia
+						}
+					}
+				}
+			}
+			change_culture = perso_roman
+		}
+		else_if = {
+			limit = {
+				superregion = india_superregion
+			}
+			change_culture = indo_roman
+		}
+		else_if = {
+			limit = {
+				region = arabia_region
+			}
+			change_culture = romano_arabic
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = wendia_region
+					region = poland_region
+					region = baltic_region
+					area = podlasie_area
+					area = red_ruthenia_area
+				}
+			}
+			change_culture = romano_polish
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = russia_region
+					region = ruthenia_region
+				}
+			}
+			change_culture = russo_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = ural_region
+					region = west_siberia_region
+					region = east_siberia_region
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						tag = GLH
+					}
+				}
+				change_culture = romano_scythic
+			}
+			else = {
+				change_culture = russo_roman
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = anatolia_region
+					AND = {
+						region = caucasia_region
+						ROM = {
+							has_country_flag = rom_caucasia_isof_anatolia
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						was_tag = RUM
+					}
+				}
+				change_culture = romano_scythic
+			}
+			else = {
+				change_culture = greco_roman
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = north_china_region
+					region = south_china_region
+					area = chuanbei_area
+					area = sichuan_area
+				}
+			}
+			change_culture = sino_roman
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = tibet_region
+					region = burma_region
+					region = xinan_region
+				}
+			}
+			change_culture = tibeto_roman
+		}
+		else_if = {
+			limit = {
+				region = japan_region
+			}
+			change_culture = romano_japanese
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = indo_china_region
+					area = north_tenasserim_area
+					area = tenasserim_area
+				}
+			}
+			change_culture = romano_tai
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = indonesia_region
+					region = moluccas_region
+					region = malaya_region
+				}
+			}
+			change_culture = romano_malay
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = horn_of_africa_region
+					area = kurdufan_area
+					area = sudan_area
+					area = darfur_central_sahara_area
+					area = chad_area
+					area = centralafrica_area
+					area = nkongo_area
+				}
+			}
+			change_culture = romano_cushitic
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = niger_region
+					region = sahel_region
+					region = guinea_region
+					area = cameroon_area
+				}
+			}
+			change_culture = romano_nigerian
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = kongo_region
+					region = kalahari_region
+					region = south_africa_region
+					area = sankuru_area
+					area = chokwe_area
+					area = zambia_area
+				}
+			}
+			change_culture = romano_kongolese
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = east_africa_region
+					region = central_africa_region
+					region = south_africa_region
+					area = sankuru_area
+					area = chokwe_area
+				}
+			}
+			change_culture = romano_bantu
+		}
+		else_if = {
+			limit = {
+				region = italy_region
+			}
+			change_culture = roman_new
+		}
+		else = {
+			change_culture = ROOT
+		}
+		add_province_modifier = {
+			name = byz_forced_romanized
+			duration = 7300 
+		}
+	}
+}
+
+# General Focus
+country_event = {
+	id = ab_byzantium.72
+	title = ab_byzantium.72.t
+	desc = ab_byzantium.72.d
+	picture = AB_BELISARIUS_eventPicture
+	
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.72
+				days = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.72.a
+		add_country_modifier = {
+			name = byz_fire_focused
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ab_byzantium.72.b
+		add_country_modifier = {
+			name = byz_shock_focused
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ab_byzantium.72.c
+		add_country_modifier = {
+			name = byz_manuever_focused
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ab_byzantium.72.e
+		add_country_modifier = {
+			name = byz_siege_focused
+			duration = 3650
+		}
+	}
+}
+
+# Max Imperial Professionalism Reach
+country_event = {
+	id = ab_byzantium.73
+	title = ab_byzantium.73.t
+	desc = ab_byzantium.73.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = byz_max_legion_professionalism
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.73.a
+		tooltip = {
+			add_country_modifier = {
+				name = byz_max_legion_professionalism
+				duration = -1
+			}
+		}
+		custom_tooltip = BYZREDUCELEGIONPROFESSIONALISM
+	}
+}
+
+# Max Diocese Professionalism Reach
+country_event = {
+	id = ab_byzantium.74
+	title = ab_byzantium.74.t
+	desc = ab_byzantium.74.d
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = byz_max_diocese_professionalism
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.74.a
+		tooltip = {
+			add_country_modifier = {
+				name = byz_max_diocese_professionalism
+				duration = -1
+			}
+		}
+		custom_tooltip = BYZREDUCEDIOCESEPROFESSIONALISM
+	}
+}
+
+# Max Imperial Professionalism Remove
+country_event = {
+	id = ab_byzantium.75
+	title = ab_byzantium.75.t
+	desc = ab_byzantium.75.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	hidden = yes 
+
+	trigger = {
+		has_country_modifier = byz_max_legion_professionalism
+		NOT = {
+			has_government_power = { 
+				mechanic_type = roman_professionalism_mechanic
+				power_type = romanprofessionalism
+				value = 0
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.75.a
+		remove_country_modifier = byz_max_legion_professionalism
+	}
+}
+
+# Max Diocese Professionalism Remove
+country_event = {
+	id = ab_byzantium.76
+	title = ab_byzantium.76.t
+	desc = ab_byzantium.76.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	hidden = yes 
+
+	trigger = {
+		has_country_modifier = byz_max_diocese_professionalism
+		has_government_power = { 
+			mechanic_type = roman_professionalism_mechanic
+			power_type = romanprofessionalism
+			value = 0
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.76.a
+		remove_country_modifier = byz_max_diocese_professionalism
+	}
+}
+
+#Roman Caucasia
+country_event = {
+	id = ab_byzantium.78
+	title = ab_byzantium.78.t
+	desc = ab_byzantium.78.d
+	picture = AB_PERSIA_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.78.a
+		add_country_modifier = {
+			name = byz_caucasia_greek
+			duration = -1
+		}
+		if = {
+			limit = {
+				was_tag = RUM
+			}
+			custom_tooltip = BYZ_ANATOLIA_CAUCASIA_RUM
+		}
+		else = {
+			custom_tooltip = BYZ_ANATOLIA_CAUCASIA
+		}
+		set_country_flag = rom_caucasia_isof_anatolia
+	}
+
+	option = {
+		name = ab_byzantium.78.b
+		add_country_modifier = {
+			name = byz_caucasia_persian
+			duration = -1
+		}
+		custom_tooltip = BYZ_PERSIA_CAUCASIA
+		set_country_flag = rom_caucasia_isof_persia
+	}
+}
+
+#Reconquest of the Levant
+country_event = {
+	id = ab_byzantium.79
+	title = ab_byzantium.79.t
+	desc = ab_byzantium.79.d
+	picture = AB_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = byz_reconquest_of_the_levant
+				duration = -1
+				desc = "until the end of the war"
+			}
+			event_target:levantReconquestOwner = {
+				add_country_modifier = {
+					name = byz_reconquest_of_the_levant_nizzarids
+					duration = -1
+					desc = "until the end of the war"
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clear_global_event_target = levantReconquestOwner
+		}
+	}
+
+	option = {
+		name = ab_byzantium.79.a
+		tooltip = {
+			add_country_modifier = {
+				name = byz_reconquest_of_the_levant
+				duration = -1
+				desc = "until the end of the war"
+			}
+			event_target:levantReconquestOwner = {
+				add_country_modifier = {
+					name = byz_reconquest_of_the_levant_nizzarids
+					duration = -1
+					desc = "until the end of the war"
+				}
+			}
+		}
+	}
+}
+
+#Fall of Rome - Zoroastrian Rum
+country_event = {
+	id = ab_byzantium.80
+	title = ab_byzantium.80.t
+	desc = ab_byzantium.80.d
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = ab_byzantium.80.a
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		add_country_modifier = {
+			name = rum_fall_rome
+			duration = -1
+		}
+	}
+}
+
+#Epitome of Far East
+country_event = {
+	id = ab_byzantium.81
+	title = ab_byzantium.81.t
+	desc = ab_byzantium.81.d
+	picture = AB_RISING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.81.a
+		set_country_flag = byz_center_of_far_east_korea
+		custom_tooltip = BYZ_FAR_EAST_RENAME_KOREA
+		custom_tooltip = AB_EMPTY
+		korea_region = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_base_production = 1
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = japan_turtle_fleets
+			duration = -1
+		}
+		set_country_flag = enable_korean_palace_flag
+		custom_tooltip = JAP_ACCESS_GYEONGBOK
+	}
+
+	option = {
+		name = ab_byzantium.81.b
+		set_country_flag = byz_center_of_far_east_japan
+		custom_tooltip = BYZ_FAR_EAST_RENAME_JAPAN
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = byz_roman_samurai
+			duration = -1
+		}
+		custom_tooltip = BYZ_ENABLE_ROMAN_SAMURAI
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = BYZ_ENABLE_SAMURAI_DECISION
+	}
+}
+
+#An Empire Across Asia
+country_event = {
+	id = ab_byzantium.82
+	title = ab_byzantium.82.t
+	desc = ab_byzantium.82.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.82.a
+		change_monarch_points_or_power = {
+			points = 2
+			power = adm
+		}
+		change_monarch_points_or_power = {
+			points = 2
+			power = dip
+		}
+		change_monarch_points_or_power = {
+			points = 2
+			power = mil
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = byz_roman_asia
+			duration = -1
+		}
+	}
+}
+
+#Capital of the Empire
+country_event = {
+	id = ab_byzantium.83
+	title = ab_byzantium.83.t
+	desc = ab_byzantium.83.d
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.83.a
+		set_country_flag = ukr_romancapital_kiev
+		custom_tooltip = UKR_UNLOCK_RUS_MISSION
+		swap_non_generic_missions = yes
+		custom_tooltip = AB_EMPTY
+		capital_scope = {
+			change_culture = russo_roman
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = BYZ_queen_of_cities
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.83.b
+		set_country_flag = ukr_romancapital_constantinople
+		custom_tooltip = UKR_UNLOCK_CONSTANTINOPLE_MISSION
+		swap_non_generic_missions = yes
+		custom_tooltip = AB_EMPTY
+		151 = {
+			change_culture = russo_roman
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+			if = {
+				limit = {
+					NOT = { is_capital_of = ROOT }
+				}
+				move_capital_effect = yes
+			}
+			add_province_modifier = {
+				name = BYZ_queen_of_cities
+				duration = -1
+			}
+		}
+	}
+}
+
+#Romanization of Tataria
+country_event = {
+	id = ab_byzantium.84
+	title = ab_byzantium.84.t
+	desc = ab_byzantium.84.d
+	picture = BYZ_COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.84.a
+		GLH = {
+			change_primary_culture = romano_scythic
+			if = {
+				limit = {
+					NOT = { technology_group = western }
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
+			hidden_effect = {
+				capital_scope = {
+					province_event = {
+						id = ab_byzantium.71
+					}
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = RUM_ROMANO_SCYTHIC
+	}
+}
+
+#Westernization of Latin Empire
+country_event = {
+	id = ab_byzantium.86
+	title = ab_byzantium.86.t
+	desc = ab_byzantium.86.d
+	picture = AB_CHARLEMAGNE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.86.a
+		if = {
+			limit = {
+				primary_culture = albanian
+			}
+			change_primary_culture = cosmopolitan_french
+			add_accepted_culture_or_dip_power = {
+				culture = albanian
+				dip_reward = yes
+			}
+		}
+		else = {
+			change_primary_culture = cosmopolitan_french
+			add_accepted_culture_or_dip_power = {
+				culture = Illyrian
+				dip_reward = yes
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		change_technology_group = western
+		change_unit_type = western
+		hidden_effect = {
+			set_heir_culture = ROOT
+			set_ruler_culture = ROOT	
+		}
+	}
+}
+
+#Restoration of West Rome
+country_event = {
+	id = ab_byzantium.87
+	title = ab_byzantium.87.t
+	desc = ab_byzantium.87.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.87.a
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		custom_tooltip = SER_UNLOCK_FORMING_ROME
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_CATHOLIC_FORMATION_CLAIM
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						region = anatolia_region
+						region = egypt_region
+						region = italy_region
+						region = france_region
+						region = iberia_region
+						region = balkan_region
+						area = east_midlands_area
+						area = west_midlands_area
+						area = yorkshire_area
+						area = wessex_area
+						area = home_counties_area
+						area = east_anglia_area
+						area = wales_area
+						area = scottish_marches_area
+						area = cornwall_area
+						area = tripolitania_area
+						area = djerba_area
+						area = tunisia_area
+						area = kabylia_area
+						area = barbary_coast_area
+						area = northern_morocco_area
+						area = syria_area
+						area = aleppo_area
+						area = palestine_area
+						area = carinthia_area
+						province_id = 1232
+						province_id = 2324
+					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+#Aftermath of the Crusader
+country_event = {
+	id = ab_byzantium.88
+	title = ab_byzantium.88.t
+	desc = ab_byzantium.88.d
+	picture = CRUSADER_HORDE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_stability = -1
+			if = {
+				limit = {
+					tag = ASU
+				}
+				add_country_modifier = {
+					name = vsg_defeat_of_valencia_asturias
+					duration = 3650
+				}
+				GAL = {
+					every_owned_province = {
+						add_claim = ROOT
+					}
+				}
+				NAV = {
+					every_owned_province = {
+						add_claim = ROOT
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = vsg_defeat_of_valencia
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.88.a
+		tooltip = {
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				tag = ASU
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = vsg_defeat_of_valencia_asturias
+					duration = 3650
+				}
+				GAL = {
+					every_owned_province = {
+						add_claim = ROOT
+					}
+				}
+				NAV = {
+					every_owned_province = {
+						add_claim = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			tooltip = {
+				add_country_modifier = {
+					name = vsg_defeat_of_valencia
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Future of Iberia
+country_event = {
+	id = ab_byzantium.89
+	title = ab_byzantium.89.t
+	desc = ab_byzantium.89.d
+	picture = HISPANIC_MONARCHY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.89.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = ab_stronger_ai_vsg
+			}
+		}
+		change_tag = IBE
+		swap_non_generic_missions = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				government = monarchy
+			}
+			add_government_reform = iberian_crown
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = NO_CNS }
+				any_subject_country = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_tooltip = AB_TURN_CNS_INTO_PRESET_CNS
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation = yes
+					}
+					# It is OK to fire all of them because the usage
+					# of country_event checks the triggers
+					country_event = { id = colonial_iberia.1 }
+					country_event = { id = colonial_iberia.2 }
+					country_event = { id = colonial_iberia.3 }
+					country_event = { id = colonial_iberia.4 }
+					country_event = { id = colonial_iberia.5 }
+					country_event = { id = colonial_iberia.6 }
+					country_event = { id = colonial_iberia.7 }
+					country_event = { id = colonial_iberia.8 }
+					country_event = { id = colonial_iberia.9 }
+					country_event = { id = colonial_iberia.10 }
+					country_event = { id = colonial_iberia.11 }
+					country_event = { id = colonial_iberia.12 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.89.b
+		ai_chance = { factor = 50 }
+		highlight = yes
+		set_country_flag = ab_is_rome_heir
+		change_tag = VSG
+		swap_non_generic_missions = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank = 2
+		}
+		custom_tooltip = AB_EMPTY
+		change_primary_culture = Visigothic
+		capital_scope = {
+			change_culture = Visigothic
+		}
+		hidden_effect = {
+			set_ruler_culture = ROOT
+			set_heir_culture = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				government = monarchy
+			}
+			add_government_reform = visigothic_kingdom
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+	}
+}
+
+#Reconquista - Francia joins the war?
+country_event = {
+	id = ab_byzantium.90
+	title = ab_byzantium.90.t
+	desc = ab_byzantium.90.d
+	picture = CRUSADER_HORDE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				mission_completed = ibe_north
+				is_in_war = {
+					casus_belli = cb_grand_crusade_reconquista
+				}
+			}
+			save_event_target_as = reconquistaIberian
+		}
+	}
+
+	option = {
+		name = ab_byzantium.90.a
+		ai_chance = { factor = 100 }
+		join_all_offensive_wars_of = event_target:reconquistaIberian
+		event_target:reconquistaIberian = {
+			country_event = {
+				id = ab_byzantium.91
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.90.b
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+
+#Reconquista - Francia will join the war
+country_event = {
+	id = ab_byzantium.91
+	title = ab_byzantium.91.t
+	desc = ab_byzantium.91.d
+	picture = CRUSADER_HORDE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.91.a
+		add_trust = {
+			who = FRC
+			value = 15
+			mutual = yes
+		}
+	}
+}
+
+#Timed Mission Unlock - Byzantium
+country_event = {
+	id = ab_byzantium.92
+	title = ab_byzantium.92.t
+	desc = ab_byzantium.92.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.92.a
+		set_country_flag = byz_timed_mission_unlocked
+		hidden_effect = {
+			swap_non_generic_missions = yes
+			country_event = {
+				id = ab_byzantium.93
+				days = 1825
+			}
+		}
+	}
+}
+
+#Timed Mission Fail - Byzantium
+country_event = {
+	id = ab_byzantium.93
+	title = ab_byzantium.93.t
+	desc = ab_byzantium.93.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			tag = BYZ
+			was_tag = BYZ
+		}
+		has_country_flag = byz_timed_mission_unlocked
+		NOT = { mission_completed = byzantium_italian_war }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = byz_timed_mission_unlocked
+			set_country_flag = byz_timed_mission_failed
+			swap_non_generic_missions = yes
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.93.a
+	}
+}
+
+#Establish Diocese Peace Treaty
+country_event = {
+	id = ab_byzantium.94
+	title = ab_byzantium.94.t
+	desc = ab_byzantium.94.d
+	picture = AB_ROMANDIOCESE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					event_target:establishDioceseTarget = {
+						owns = 225
+					}
+				}
+				set_country_flag = byz_establish_diocese_hispania
+				event_target:establishDioceseTarget = {
+					every_owned_province = {
+						limit = {
+							region = iberia_region
+						}
+						cede_province = ROOT
+					}
+				}
+				every_owned_province = {
+					limit = {
+						region = iberia_region
+					}
+					add_core = RD2
+					remove_core = ROOT
+				}
+				release = RD2
+				create_subject = {
+					who = RD2
+					subject_type = diocese_vassal
+				}
+				RD2 = {
+					change_primary_culture = hispano_roman
+					change_religion = ROOT
+					change_government = republic
+					add_government_reform = rom_diocese
+					kill_ruler = yes
+					set_capital = 225
+					capital_scope = {
+						province_event = {
+							id = ab_byzantium.71
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:establishDioceseTarget = {
+						owns = 183
+					}
+				}
+				set_country_flag = byz_establish_diocese_gallia
+				event_target:establishDioceseTarget = {
+					every_owned_province = {
+						limit = {
+							region = france_region
+						}
+						cede_province = ROOT
+					}
+				}
+				every_owned_province = {
+					limit = {
+						region = france_region
+					}
+					add_core = RD4
+					remove_core = ROOT
+				}
+				release = RD4
+				create_subject = {
+					who = RD4
+					subject_type = diocese_vassal
+				}
+				RD4 = {
+					change_primary_culture = gallo_roman
+					change_religion = ROOT
+					change_government = republic
+					add_government_reform = rom_diocese
+					kill_ruler = yes
+					set_capital = 183
+					capital_scope = {
+						province_event = {
+							id = ab_byzantium.71
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:establishDioceseTarget = {
+						owns = 236
+					}
+				}
+				set_country_flag = byz_establish_diocese_britannia
+				event_target:establishDioceseTarget = {
+					every_owned_province = {
+						limit = {
+							region = british_isles_region
+						}
+						cede_province = ROOT
+					}
+				}
+				every_owned_province = {
+					limit = {
+						region = british_isles_region
+					}
+					add_core = RD5
+					remove_core = ROOT
+				}
+				release = RD5
+				create_subject = {
+					who = RD5
+					subject_type = diocese_vassal
+				}
+				RD5 = {
+					change_primary_culture = romano_british
+					change_religion = ROOT
+					change_government = republic
+					add_government_reform = rom_diocese
+					kill_ruler = yes
+					set_capital = 236
+					capital_scope = {
+						province_event = {
+							id = ab_byzantium.71
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:establishDioceseTarget = {
+						tag = UKR
+					}
+				}
+				set_country_flag = byz_establish_diocese_russia
+				TLW_establish_diocese_russia_effect = yes
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clear_global_event_target = establishDioceseTarget
+			clr_country_flag = byz_establish_diocese_hispania
+			clr_country_flag = byz_establish_diocese_gallia
+			clr_country_flag = byz_establish_diocese_britannia
+			clr_country_flag = byz_establish_diocese_russia
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.94.a
+		if = {
+			limit = {
+				has_country_flag = byz_establish_diocese_hispania
+			}
+			custom_tooltip = AB_DIOCESE_HISPANIA
+			custom_tooltip = AB_EMPTY
+		}
+		if = {
+			limit = {
+				has_country_flag = byz_establish_diocese_gallia
+			}
+			custom_tooltip = AB_DIOCESE_GALLIA
+			custom_tooltip = AB_EMPTY
+		}
+		if = {
+			limit = {
+				has_country_flag = byz_establish_diocese_britannia
+			}
+			custom_tooltip = AB_DIOCESE_BRITANNIA
+			custom_tooltip = AB_EMPTY
+		}
+		if = {
+			limit = {
+				has_country_flag = byz_establish_diocese_russia
+			}
+			custom_tooltip = AB_DIOCESE_RUSSIA_CB
+			custom_tooltip = AB_EMPTY
+		}
+	}
+}
+
+#Epirus Overthrow Angelids Peace Treaty
+country_event = {
+	id = ab_byzantium.95
+	title = ab_byzantium.95.t
+	desc = ab_byzantium.95.d
+	picture = AB_ROMANCIVILWAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = ab_byzantium.95.a
+		inherit = BYZ
+		change_tag = BYZ
+		on_change_tag_effect = yes
+		swap_non_generic_missions = yes
+		set_government_rank = 3
+		if = {
+			limit = {
+				has_country_flag = epi_angelidrevolt_venicedeal
+			}
+			146 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					cede_province = VEN
+				}
+			}
+			5152 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					cede_province = VEN
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = epi_angelidrevolt_nicaeadeal
+			}
+			318 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					cede_province = NCI
+				}
+			}
+			4700 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					cede_province = NCI
+				}
+			}
+			2348 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					cede_province = NCI
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		country_event = {
+			id = ab_byzantium_disaster.1
+		}
+	}
+}
+
+#Jerusalem in Christian Hands
+country_event = {
+	id = ab_byzantium.97
+	title = ab_byzantium.97.t
+	desc = ab_byzantium.97.d
+	picture = BYZ_JERUSALEM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ab_byzantium.97.a
+		add_papal_influence = 100
+		add_church_power = 100
+		add_country_modifier = {
+			name = lat_jerusalem
+			duration = 9125
+		}
+		tabuk_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		mecca_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		medina_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#The Fate of Cordoba
+country_event = {
+	id = ab_byzantium.98
+	title = ab_byzantium.98.t
+	desc = ab_byzantium.98.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = ab_byzantium.98.a
+		add_prestige = 25
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+		add_treasury = 1000
+		225 = {
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.98.b
+		add_prestige = 15
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}
+		225 = {
+			add_devastation = 35
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			change_religion = ROOT
+		}
+		225 = {
+			move_capital_effect = yes
+			change_culture = ROOT
+		}
+	}
+}
+
+#Askeladd
+country_event = {
+	id = ab_byzantium.99
+	title = ab_byzantium.99.t
+	desc = ab_byzantium.99.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.99.a
+		define_advisor = {
+			name = "Lucius Artorius Castus"
+			type = commandant
+			skill = 3
+			cost_multiplier = 0.1
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = brn_vinland_saga
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.99.b
+		define_general = {
+			name = "Lucius Artorius Castus"
+			fire = 3
+			shock = 4
+			manuever = 6
+			siege = 2
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = brn_vinland_saga
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = ab_byzantium.99.c
+		define_explorer = {
+			name = "Lucius Artorius Castus"
+			fire = 3
+			shock = 4
+			manuever = 6
+			siege = 2
+		}
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = brn_vinland_saga
+			duration = 9125
+		}
+	}
+}
+
+#The Third Rome
+country_event = {
+	id = ab_byzantium.100
+	title = ab_byzantium.100.t
+	desc = ab_byzantium.100.d
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.100.a
+		trigger = {
+			151 = {
+				is_capital = no
+			}
+		}
+		151 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+			move_capital_effect = yes
+			change_religion = ROOT
+			change_culture = ROOT
+			add_province_modifier = {
+				name = third_rome_modifier
+				duration = -1
+			}
+		}
+		custom_tooltip = SER_UNLOCK_FORMING_ROME
+	}
+	
+	option = {
+		name = ab_byzantium.100.b
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = third_rome_modifier
+				duration = -1
+			}
+		}
+		custom_tooltip = SER_UNLOCK_FORMING_ROME
+	}
+}
+
+# NO CHEATING
+country_event = {
+	id = ab_byzantium.102
+	title = ab_byzantium.102.t
+	desc = ab_byzantium.102.d
+	picture = CIVIL_WAR_eventPicture
+
+	trigger = {
+		ai = no
+		has_country_modifier = ab_stronger_ai_rome
+	}
+
+	option = {
+		name = ab_byzantium.102.a
+		remove_country_modifier = ab_stronger_ai_rome
+	}
+}
+
+# AI Helper - Asturias vs Andalusia
+country_event = {
+	id = ab_byzantium.103
+	title = ab_byzantium.103.t
+	desc = ab_byzantium.103.d
+	picture = CIVIL_WAR_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		ai = yes
+		has_country_flag = ab_stronger_ai_vsg
+		OR = {
+			NOT = { exists = GAL }
+			overlord_of = GAL
+		}
+		OR = {
+			NOT = { exists = NAV }
+			overlord_of = NAV
+		}
+		army_size_percentage = 0.5
+		NOT = { truce_with = ADU }
+		is_at_war = no
+		FRC = {
+			NOT = { truce_with = ADU }
+			is_at_war = no
+		}
+	}
+
+	option = {
+		name = ab_byzantium.103.a
+		inherit = GAL
+		inherit = NAV
+		declare_war_with_cb = {
+			casus_belli = cb_grand_crusade_reconquista
+			who = ADU
+		}
+		add_treasury = 200
+		capital_scope = {
+			for = {
+				amount = 20
+				effect = "
+					infantry = ROOT
+				"
+			}
+		}
+		ADU = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_stability = -3
+				add_treasury = -500
+				add_manpower = -20
+				every_owned_province = {
+					limit = {
+						is_neighbor_of = ROOT
+					}
+					change_controller = ROOT
+				}
+			}
+		}
+	}
+}
+
+# Triumvirate - First check
+country_event = {
+	id = ab_byzantium.104
+	title = ab_byzantium.104.t
+	desc = ab_byzantium.104.d
+	picture = CIVIL_WAR_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = ab_is_rome_heir
+		total_development = 750
+		is_subject = no
+		is_at_war = no
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 75
+			OR = {
+				superregion = europe_superregion
+				superregion = near_east_superregion
+				region = balkan_region
+				region = maghreb_region
+			}
+		}
+		any_country = {
+			has_country_flag = ab_is_rome_heir
+			total_development = 750
+			NOT = { tag = ROOT }
+			is_subject = no
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 75
+				OR = {
+					superregion = europe_superregion
+					superregion = near_east_superregion
+					region = balkan_region
+					region = maghreb_region
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			save_global_event_target_as = romanTriumvir1
+			random_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					has_country_flag = ab_is_rome_heir
+					total_development = 750
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 75
+						OR = {
+							superregion = europe_superregion
+							superregion = near_east_superregion
+							region = balkan_region
+							region = maghreb_region
+						}
+					}
+				}
+				save_global_event_target_as = romanTriumvir2
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.104.a
+		if = {
+			limit = {
+				event_target:romanTriumvir2 = {
+					ai = no
+				}
+			}
+			event_target:romanTriumvir2 = {
+				country_event = {
+					id = ab_byzantium.105
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = ab_byzantium.105
+			}
+		}
+	}
+}
+
+# Triumvirate - Player Choice
+country_event = {
+	id = ab_byzantium.105
+	title = ab_byzantium.105.t
+	desc = ab_byzantium.105.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					event_target:romanTriumvir2 = {
+						ai = no
+					}
+				}
+				event_target:romanTriumvir1 = {
+					save_event_target_as = targetTriumvir
+				}
+			}
+			else = {
+				event_target:romanTriumvir2 = {
+					save_event_target_as = targetTriumvir
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.105.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_global_flag = AB_TRIUMVIRATE_SET
+			set_country_flag = byz_triumvir_flag
+			remove_historical_rival = event_target:targetTriumvir
+			add_historical_friend = event_target:targetTriumvir
+			remove_rival = event_target:targetTriumvir
+			add_opinion = {
+				who = event_target:targetTriumvir
+				modifier = opinion_triumvir
+			}
+			add_opinion = {
+				who = event_target:targetTriumvir
+				modifier = opinion_strategic_partners
+			}
+			every_country = {
+				limit = {
+					NOT = { tag = event_target:targetTriumvir }
+					OR = {
+						guaranteed_by = ROOT
+						alliance_with = ROOT
+					}
+				}
+				ROOT = {
+					remove_guarantee = PREV
+					break_alliance = PREV
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:targetTriumvir = {
+				set_country_flag = byz_triumvir_flag
+				remove_historical_rival = ROOT
+				add_historical_friend = ROOT
+				remove_rival = ROOT
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_triumvir
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_strategic_partners
+				}
+				every_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						OR = {
+							guaranteed_by = PREV
+							alliance_with = PREV
+						}
+					}
+					PREV = {
+						remove_guarantee = PREV
+						break_alliance = PREV
+					}
+				}
+			}
+		}
+		create_alliance = event_target:targetTriumvir
+		add_trust = {
+			who = event_target:targetTriumvir
+			value = 100
+			mutual = yes
+		}
+		tooltip = {
+			add_opinion = {
+				who = event_target:targetTriumvir
+				modifier = opinion_triumvir_for_tooltips
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_TRIUMVIRATE_ROOT
+		custom_tooltip = ROM_TRIUMVIRATE_FROM
+		custom_tooltip = ROM_TRIUMVIRATE_MECHANIC
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_CATHOLIC_FORMATION_CLAIM
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						region = anatolia_region
+						region = egypt_region
+						region = italy_region
+						region = france_region
+						region = iberia_region
+						region = balkan_region
+						area = east_midlands_area
+						area = west_midlands_area
+						area = yorkshire_area
+						area = wessex_area
+						area = home_counties_area
+						area = east_anglia_area
+						area = wales_area
+						area = scottish_marches_area
+						area = cornwall_area
+						area = tripolitania_area
+						area = djerba_area
+						area = tunisia_area
+						area = kabylia_area
+						area = barbary_coast_area
+						area = northern_morocco_area
+						area = syria_area
+						area = aleppo_area
+						area = palestine_area
+						area = carinthia_area
+						province_id = 1232
+						province_id = 2324
+					}
+				}
+				add_permanent_claim = ROOT
+				add_permanent_claim = event_target:targetTriumvir
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_TRIUMVIRATE_WILL_BREAK
+	}
+
+	option = {
+		name = ab_byzantium.105.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			clear_global_event_target = romanTriumvir1
+			clear_global_event_target = romanTriumvir2
+		}
+	}
+}
+
+# Triumvirate - Tetrarchy check
+country_event = {
+	id = ab_byzantium.106
+	title = ab_byzantium.106.t
+	desc = ab_byzantium.106.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = AB_TRIUMVIRATE_SET
+		has_country_flag = ab_is_rome_heir
+		total_development = 750
+		NOT = { tag = event_target:romanTriumvir1 }
+		NOT = { tag = event_target:romanTriumvir2 }
+		is_subject = no
+		is_at_war = no
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 75
+			OR = {
+				superregion = europe_superregion
+				superregion = near_east_superregion
+				region = balkan_region
+				region = maghreb_region
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			save_global_event_target_as = romanTriumvir3
+		}
+	}
+
+	option = {
+		name = ab_byzantium.106.a
+		if = {
+			limit = {
+				event_target:romanTriumvir2 = {
+					ai = no
+				}
+			}
+			event_target:romanTriumvir2 = {
+				country_event = {
+					id = ab_byzantium.107
+				}
+			}
+		}
+		else = {
+			event_target:romanTriumvir1 = {
+				country_event = {
+					id = ab_byzantium.107
+				}
+			}
+		}
+	}
+}
+
+# Triumvirate - Tetrarchy Choice
+country_event = {
+	id = ab_byzantium.107
+	title = ab_byzantium.107.t
+	desc = ab_byzantium.107.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			event_target:romanTriumvir3 = {
+				save_event_target_as = targetTriumvir
+			}
+			if = {
+				limit = {
+					tag = event_target:romanTriumvir1
+				}
+				event_target:romanTriumvir2 = {
+					save_event_target_as = otherTriumvir
+				}
+			}
+			else = {
+				event_target:romanTriumvir1 = {
+					save_event_target_as = otherTriumvir
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.107.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				event_target:targetTriumvir = {
+					ai = no
+				}
+			}
+			event_target:targetTriumvir = {
+				country_event = {
+					id = ab_byzantium.108
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				remove_historical_rival = event_target:targetTriumvir
+				add_historical_friend = event_target:targetTriumvir
+				remove_rival = event_target:targetTriumvir
+				add_opinion = {
+					who = event_target:targetTriumvir
+					modifier = opinion_triumvir
+				}
+				add_opinion = {
+					who = event_target:targetTriumvir
+					modifier = opinion_strategic_partners
+				}
+			}
+			hidden_effect = {
+				event_target:otherTriumvir = {
+					remove_historical_rival = event_target:targetTriumvir
+					add_historical_friend = event_target:targetTriumvir
+					remove_rival = event_target:targetTriumvir
+					add_opinion = {
+						who = event_target:targetTriumvir
+						modifier = opinion_triumvir
+					}
+					add_opinion = {
+						who = event_target:targetTriumvir
+						modifier = opinion_strategic_partners
+					}
+					create_alliance = event_target:targetTriumvir
+					add_trust = {
+						who = event_target:targetTriumvir
+						value = 100
+						mutual = yes
+					}
+				}
+			}
+			hidden_effect = {
+				event_target:targetTriumvir = {
+					set_country_flag = byz_triumvir_flag
+					remove_historical_rival = ROOT
+					add_historical_friend = ROOT
+					remove_rival = ROOT
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_triumvir
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_strategic_partners
+					}
+					remove_historical_rival = event_target:otherTriumvir
+					add_historical_friend = event_target:otherTriumvir
+					remove_rival = event_target:otherTriumvir
+					add_opinion = {
+						who = event_target:otherTriumvir
+						modifier = opinion_triumvir
+					}
+					add_opinion = {
+						who = event_target:otherTriumvir
+						modifier = opinion_strategic_partners
+					}
+					every_country = {
+						limit = {
+							NOT = { tag = ROOT }
+							NOT = { tag = event_target:otherTriumvir }
+							OR = {
+								guaranteed_by = PREV
+								alliance_with = PREV
+							}
+						}
+						PREV = {
+							remove_guarantee = PREV
+							break_alliance = PREV
+						}
+					}
+				}
+			}
+			create_alliance = event_target:targetTriumvir
+			add_trust = {
+				who = event_target:targetTriumvir
+				value = 100
+				mutual = yes
+			}
+			tooltip = {
+				add_opinion = {
+					who = event_target:targetTriumvir
+					modifier = opinion_triumvir_for_tooltips
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ROM_TRIUMVIRATE_FROM
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							region = anatolia_region
+							region = egypt_region
+							region = italy_region
+							region = france_region
+							region = iberia_region
+							region = balkan_region
+							area = east_midlands_area
+							area = west_midlands_area
+							area = yorkshire_area
+							area = wessex_area
+							area = home_counties_area
+							area = east_anglia_area
+							area = wales_area
+							area = scottish_marches_area
+							area = cornwall_area
+							area = tripolitania_area
+							area = djerba_area
+							area = tunisia_area
+							area = kabylia_area
+							area = barbary_coast_area
+							area = northern_morocco_area
+							area = syria_area
+							area = aleppo_area
+							area = palestine_area
+							area = carinthia_area
+							province_id = 1232
+							province_id = 2324
+						}
+					}
+					add_permanent_claim = event_target:targetTriumvir
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.107.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			clear_global_event_target = romanTriumvir3
+		}
+	}
+}
+
+# Triumvirate - Tetrarchy Reply Choice
+country_event = {
+	id = ab_byzantium.108
+	title = ab_byzantium.108.t
+	desc = ab_byzantium.108.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = event_target:romanTriumvir1
+					}
+				}
+				event_target:romanTriumvir2 = {
+					save_event_target_as = otherTriumvir
+				}
+			}
+			else = {
+				event_target:romanTriumvir1 = {
+					save_event_target_as = otherTriumvir
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.108.a
+		hidden_effect = {
+			set_country_flag = byz_triumvir_flag
+			remove_historical_rival = FROM
+			add_historical_friend = FROM
+			remove_rival = FROM
+			add_opinion = {
+				who = FROM
+				modifier = opinion_triumvir
+			}
+			add_opinion = {
+				who = FROM
+				modifier = opinion_strategic_partners
+			}
+			remove_historical_rival = event_target:otherTriumvir
+			add_historical_friend = event_target:otherTriumvir
+			remove_rival = event_target:otherTriumvir
+			add_opinion = {
+				who = event_target:otherTriumvir
+				modifier = opinion_triumvir
+			}
+			add_opinion = {
+				who = event_target:otherTriumvir
+				modifier = opinion_strategic_partners
+			}
+			every_country = {
+				limit = {
+					NOT = { tag = FROM }
+					NOT = { tag = event_target:otherTriumvir }
+					OR = {
+						guaranteed_by = ROOT
+						alliance_with = ROOT
+					}
+				}
+				ROOT = {
+					remove_guarantee = PREV
+					break_alliance = PREV
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				remove_historical_rival = ROOT
+				add_historical_friend = ROOT
+				remove_rival = ROOT
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_triumvir
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_strategic_partners
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:otherTriumvir = {
+				remove_historical_rival = ROOT
+				add_historical_friend = ROOT
+				remove_rival = ROOT
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_triumvir
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_strategic_partners
+				}
+			}
+		}
+		create_alliance = FROM
+		add_trust = {
+			who = FROM
+			value = 100
+			mutual = yes
+		}
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_triumvir_for_tooltips
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		create_alliance = event_target:otherTriumvir
+		add_trust = {
+			who = event_target:otherTriumvir
+			value = 100
+			mutual = yes
+		}
+		tooltip = {
+			add_opinion = {
+				who = event_target:otherTriumvir
+				modifier = opinion_triumvir_for_tooltips
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_TRIUMVIRATE_ROOT
+		custom_tooltip = ROM_TRIUMVIRATE_MECHANIC
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_CATHOLIC_FORMATION_CLAIM
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						region = anatolia_region
+						region = egypt_region
+						region = italy_region
+						region = france_region
+						region = iberia_region
+						region = balkan_region
+						area = east_midlands_area
+						area = west_midlands_area
+						area = yorkshire_area
+						area = wessex_area
+						area = home_counties_area
+						area = east_anglia_area
+						area = wales_area
+						area = scottish_marches_area
+						area = cornwall_area
+						area = tripolitania_area
+						area = djerba_area
+						area = tunisia_area
+						area = kabylia_area
+						area = barbary_coast_area
+						area = northern_morocco_area
+						area = syria_area
+						area = aleppo_area
+						area = palestine_area
+						area = carinthia_area
+						province_id = 1232
+						province_id = 2324
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ROM_TRIUMVIRATE_WILL_BREAK
+	}
+
+	option = {
+		name = ab_byzantium.108.b
+		hidden_effect = {
+			clear_global_event_target = romanTriumvir3
+		}
+	}
+}
+
+# Triumvirate - Break Check
+country_event = {
+	id = ab_byzantium.109
+	title = ab_byzantium.109.t
+	desc = ab_byzantium.109.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = AB_TRIUMVIRATE_SET
+		OR = {
+			tag = event_target:romanTriumvir1
+			tag = event_target:romanTriumvir2
+		}
+		OR = {
+			AND = {
+				exists = ROM
+				ROM = {
+					NOT = { mission_completed = trc_roman_ambition }
+				}
+			}
+			exists = WRE
+			calc_true_if = {
+				amount = 370
+				all_province = {
+					OR = {
+						region = anatolia_region
+						region = egypt_region
+						region = italy_region
+						region = france_region
+						region = iberia_region
+						region = balkan_region
+						area = east_midlands_area
+						area = west_midlands_area
+						area = yorkshire_area
+						area = wessex_area
+						area = home_counties_area
+						area = east_anglia_area
+						area = wales_area
+						area = scottish_marches_area
+						area = cornwall_area
+						area = tripolitania_area
+						area = djerba_area
+						area = tunisia_area
+						area = kabylia_area
+						area = barbary_coast_area
+						area = northern_morocco_area
+						area = syria_area
+						area = aleppo_area
+						area = palestine_area
+						area = carinthia_area
+						province_id = 1232
+						province_id = 2324
+					}
+					if = {
+						limit = {
+							has_saved_global_event_target = romanTriumvir3
+						}
+						OR = {
+							country_or_non_sovereign_subject_holds = event_target:romanTriumvir1
+							country_or_non_sovereign_subject_holds = event_target:romanTriumvir2
+							country_or_non_sovereign_subject_holds = event_target:romanTriumvir3
+						}
+					}
+					else = {
+						OR = {
+							country_or_non_sovereign_subject_holds = event_target:romanTriumvir1
+							country_or_non_sovereign_subject_holds = event_target:romanTriumvir2
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = AB_TRIUMVIRATE_SET
+			event_target:romanTriumvir1 = {
+				clr_country_flag = byz_triumvir_flag
+				set_country_flag = byz_old_triumvir_flag
+				break_alliance = event_target:romanTriumvir2
+				break_alliance = event_target:romanTriumvir3
+				remove_historical_friend = event_target:romanTriumvir2
+				remove_historical_friend = event_target:romanTriumvir3
+				add_historical_rival = event_target:romanTriumvir2
+				add_historical_rival = event_target:romanTriumvir3
+				remove_opinion = {
+					who = event_target:romanTriumvir2
+					modifier = opinion_triumvir
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir3
+					modifier = opinion_triumvir
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir2
+					modifier = opinion_strategic_partners
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir3
+					modifier = opinion_strategic_partners
+				}
+			}
+			event_target:romanTriumvir2 = {
+				clr_country_flag = byz_triumvir_flag
+				set_country_flag = byz_old_triumvir_flag
+				break_alliance = event_target:romanTriumvir1
+				break_alliance = event_target:romanTriumvir3
+				remove_historical_friend = event_target:romanTriumvir1
+				remove_historical_friend = event_target:romanTriumvir3
+				add_historical_rival = event_target:romanTriumvir1
+				add_historical_rival = event_target:romanTriumvir3
+				remove_opinion = {
+					who = event_target:romanTriumvir1
+					modifier = opinion_triumvir
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir3
+					modifier = opinion_triumvir
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir1
+					modifier = opinion_strategic_partners
+				}
+				remove_opinion = {
+					who = event_target:romanTriumvir3
+					modifier = opinion_strategic_partners
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = romanTriumvir3
+				}
+				event_target:romanTriumvir3 = {
+					clr_country_flag = byz_triumvir_flag
+					set_country_flag = byz_old_triumvir_flag
+					break_alliance = event_target:romanTriumvir1
+					break_alliance = event_target:romanTriumvir2
+					remove_historical_friend = event_target:romanTriumvir1
+					remove_historical_friend = event_target:romanTriumvir2
+					add_historical_rival = event_target:romanTriumvir1
+					add_historical_rival = event_target:romanTriumvir2
+					remove_opinion = {
+						who = event_target:romanTriumvir1
+						modifier = opinion_triumvir
+					}
+					remove_opinion = {
+						who = event_target:romanTriumvir2
+						modifier = opinion_triumvir
+					}
+					remove_opinion = {
+						who = event_target:romanTriumvir1
+						modifier = opinion_strategic_partners
+					}
+					remove_opinion = {
+						who = event_target:romanTriumvir2
+						modifier = opinion_strategic_partners
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.109.a
+		if = {
+			limit = {
+				has_saved_global_event_target = romanTriumvir3
+			}
+			event_target:romanTriumvir3 = {
+				declare_war_with_cb = {
+					casus_belli = cb_triumvirate_unification
+					who = event_target:romanTriumvir1
+				}
+			}
+			event_target:romanTriumvir1 = {
+				declare_war_with_cb = {
+					casus_belli = cb_triumvirate_unification
+					who = event_target:romanTriumvir2
+				}
+			}
+			event_target:romanTriumvir2 = {
+				declare_war_with_cb = {
+					casus_belli = cb_triumvirate_unification
+					who = event_target:romanTriumvir3
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					event_target:romanTriumvir2 = {
+						ai = no
+					}
+				}
+				event_target:romanTriumvir2 = {
+					declare_war_with_cb = {
+						casus_belli = cb_triumvirate_unification
+						who = event_target:romanTriumvir1
+					}
+				}
+			}
+			else = {
+				event_target:romanTriumvir1 = {
+					declare_war_with_cb = {
+						casus_belli = cb_triumvirate_unification
+						who = event_target:romanTriumvir2
+					}
+				}
+			}
+		}
+		event_target:romanTriumvir1 = {
+			country_event = {
+				id = ab_byzantium.110
+			}			
+		}
+		event_target:romanTriumvir2 = {
+			country_event = {
+				id = ab_byzantium.110
+			}			
+		}
+		event_target:romanTriumvir3 = {
+			country_event = {
+				id = ab_byzantium.110
+			}			
+		}
+	}
+}
+
+# Triumvirate - Break War
+country_event = {
+	id = ab_byzantium.110
+	title = ab_byzantium.110.t
+	desc = ab_byzantium.110.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.110.a
+		custom_tooltip = ROM_TRIUMVIRATE_CB_TT
+	}
+}
+
+# Triumvirate - War End
+country_event = {
+	id = ab_byzantium.111
+	title = ab_byzantium.111.t
+	desc = ab_byzantium.111.d
+	picture = AB_ROMANDIOCESE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_triumvirate_unification
+			duration = 1825
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = ROOT
+						defender_leader = THIS
+						casus_belli = cb_triumvirate_unification
+					}
+				}
+				save_event_target_as = targetTriumvir
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.111.a
+		every_province = {
+			limit = {
+				OR = {
+					region = anatolia_region
+					region = egypt_region
+					region = italy_region
+					region = france_region
+					region = iberia_region
+					region = balkan_region
+					area = east_midlands_area
+					area = west_midlands_area
+					area = yorkshire_area
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
+					area = wales_area
+					area = scottish_marches_area
+					area = cornwall_area
+					area = tripolitania_area
+					area = djerba_area
+					area = tunisia_area
+					area = kabylia_area
+					area = barbary_coast_area
+					area = northern_morocco_area
+					area = syria_area
+					area = aleppo_area
+					area = palestine_area
+					area = carinthia_area
+					province_id = 1232
+					province_id = 2324
+				}
+			}
+			if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					controlled_by = event_target:targetTriumvir
+				}
+				add_core = event_target:targetTriumvir
+				cede_province = event_target:targetTriumvir
+			}
+			else_if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = event_target:targetTriumvir
+					controlled_by = ROOT
+				}
+				add_core = ROOT
+				cede_province = ROOT
+			}
+		}
+		white_peace = event_target:targetTriumvir
+	}
+}
+
+# Capua - Visitors from the East
+country_event = {
+	id = ab_byzantium.112
+	title = ab_byzantium.112.t
+	desc = ab_byzantium.112.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAP
+		is_year = 1445
+	}
+
+	option = {
+		name = ab_byzantium.112.a
+		trigger = {
+			NOT = { has_country_flag = ab_stronger_ai_cap }
+		}
+		add_prestige = 10
+	}
+
+	option = {
+		name = ab_byzantium.112.b
+		trigger = {
+			OR = {
+				ai = no
+				has_country_flag = ab_stronger_ai_cap
+			}
+		}
+		highlight = yes
+		set_country_flag = cap_chose_sol_invictus_flag
+		set_ruler_religion = sol_invictus
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_UNLOCK_SOL_EVENTS
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.113
+				days = 30
+			}
+		}
+	}
+}
+
+# Capua - Reform Our Court
+country_event = {
+	id = ab_byzantium.113
+	title = ab_byzantium.113.t
+	desc = ab_byzantium.113.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.113.a
+		define_advisor = {
+			type = inquisitor
+			skill = 3
+			religion = sol_invictus
+			cost_multiplier = 0.1
+		}
+		custom_tooltip = AB_EMPTY
+		define_advisor = {
+			type = ae_advisor
+			skill = 3
+			religion = sol_invictus
+			cost_multiplier = 0.1
+		}
+		custom_tooltip = AB_EMPTY
+		define_advisor = {
+			type = siegeengineer
+			skill = 3
+			religion = sol_invictus
+			cost_multiplier = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.114
+				days = 30
+			}
+		}
+	}
+}
+
+# Capua - Restore the Roman Bureaucracy
+country_event = {
+	id = ab_byzantium.114
+	title = ab_byzantium.114.t
+	desc = ab_byzantium.114.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ab_byzantium.114.a
+		custom_tooltip = CAP_WILL_FIGHT_POPE
+		custom_tooltip = AB_EMPTY
+		unlock_government_reform = {
+			government_reform = capua_roman_bureaucracy
+		}
+		custom_tooltip = AB_EMPTY
+		add_government_reform = capua_roman_bureaucracy
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.115
+				days = 30
+			}
+		}
+	}
+}
+
+# Capua - A Sol Invictus Kingdom
+country_event = {
+	id = ab_byzantium.115
+	title = ab_byzantium.115.t
+	desc = ab_byzantium.115.d
+	picture = BYZ_BATTLE_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_heir_religion = sol_invictus
+			set_consort_religion = sol_invictus
+			add_treasury = 500
+			capital_scope = {
+				for = {
+					amount = 20
+					effect = "
+						infantry = ROOT
+					"
+				}
+			}
+			lazio_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			central_italy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_core
+				who = PAP
+				war_goal_province = 118
+			}
+			set_government_rank = 2
+			if = {
+				limit = {
+					has_country_flag = ab_stronger_ai_cap
+					ai = yes
+				}	
+				add_treasury = 500
+				add_manpower = 100
+				create_general = { tradition = 100 }
+				add_ruler_personality = augustus_personality
+				add_stability = 2
+				capital_scope = {
+					for = {
+						amount = 20
+						effect = "
+							infantry = ROOT
+						"
+					}
+				}
+				PAP = {
+					if = {
+						limit = {
+							ai = yes
+						}
+						add_stability = -3
+						add_treasury = -200
+						add_manpower = -20
+					}
+				}
+				4732 = {
+					change_controller = ROOT
+				}
+				118 = {
+					change_controller = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.115.a
+		enable_religion = sol_invictus
+		change_religion = sol_invictus
+		tooltip = {
+			set_government_rank = 2
+			add_treasury = 500
+			custom_tooltip = AB_EMPTY
+			lazio_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			central_italy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+}
+
+# Capua - Dream of Rome
+country_event = {
+	id = ab_byzantium.116
+	title = ab_byzantium.116.t
+	desc = ab_byzantium.116.d
+	picture = BYZ_BYZANTINE_EAGLE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = cap_chose_sol_invictus_flag
+			set_country_flag = ab_is_rome_heir
+			set_country_flag = cap_embraced_sol_invictus
+			swap_non_generic_missions = yes
+		}
+	}
+
+	option = {
+		name = ab_byzantium.116.a
+		118 = {
+			move_capital_effect = yes
+			custom_tooltip = AB_EMPTY
+			change_religion = sol_invictus
+		}
+		custom_tooltip = CAP_SPAWN_CENTER_ROME
+		hidden_effect = {
+			118 = {
+				add_reform_center = sol_invictus
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_UNLOCK_ITALY_CB
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_UNLOCK_FORMING_WRE
+	}
+}
+
+# Capua - The Mad Emperor
+country_event = {
+	id = ab_byzantium.117
+	title = ab_byzantium.117.t
+	desc = ab_byzantium.117.d
+	picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = formed_westrome_flag
+		}
+	}
+
+	option = {
+		name = ab_byzantium.117.a
+		add_ruler_personality = augustus_personality
+		custom_tooltip = BYZ_ALWAYS_AUGUSTUS
+		custom_tooltip = AB_EMPTY
+		# TLW [[[
+		TLW_switch_flag_triumvirate_effect = yes
+		# ]]]
+		change_tag = ROM
+		on_change_tag_effect = yes
+		# TLW [[[
+		TLW_switch_target_triumvirate_effect = yes
+		# ]]]
+		custom_tooltip = AB_EMPTY
+		change_primary_culture = roman_new
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_FASTER_ROMANIZATION
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_ROMANIZATION_ON_EVENT
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = restore_roman_empire_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				set_in_empire = no
+			}
+		}
+		hidden_effect = {
+			set_heir_culture = ROOT
+			set_ruler_culture = ROOT
+			118 = {
+				add_core = ROOT
+				province_event = {
+					id = ab_byzantium.71
+				}
+			}
+			country_event = {
+				id = ab_byzantium.67
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		add_country_modifier = {
+			name = centralization_modifier
+			duration = 7300
+		}
+		swap_non_generic_missions = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = NO_CNS }
+				any_subject_country = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = AB_TURN_CNS_INTO_PRESET_CNS
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation = yes
+					}
+					ab_swap_to_preset_cn_tag = { tag = rome }
+				}
+			}
+		}
+	}
+}
+
+# Capua - Death of the Emperor
+country_event = {
+	id = ab_byzantium.118
+	title = ab_byzantium.118.t
+	desc = ab_byzantium.118.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = cap_robert_is_dead
+			if = {
+				limit = {
+					NOT = { exists = IVR }
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = piedmont_area
+							area = liguria_area
+						}
+					}
+					add_core = IVR
+				}
+				release = IVR
+				IVR = {
+					change_religion = sol_invictus
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_capua_roman_reconquest
+					who = IVR
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = LOM }
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = lombardy_area
+							area = po_valley_area
+						}
+					}
+					add_core = LOM
+				}
+				release = LOM
+				LOM = {
+					change_religion = sol_invictus
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_capua_roman_reconquest
+					who = LOM
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = RMG }
+				}
+				every_owned_province = {
+					limit = {
+						area = emilia_romagna_area
+					}
+					add_core = RMG
+				}
+				release = RMG
+				RMG = {
+					change_religion = sol_invictus
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_capua_roman_reconquest
+					who = RMG
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = LAN }
+				}
+				every_owned_province = {
+					limit = {
+						area = tuscany_area
+					}
+					add_core = LAN
+				}
+				release = LAN
+				LAN = {
+					change_religion = sol_invictus
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_capua_roman_reconquest
+					who = LAN
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = VRN }
+				}
+				every_owned_province = {
+					limit = {
+						area = venetia_area
+					}
+					add_core = VRN
+				}
+				release = VRN
+				VRN = {
+					change_religion = sol_invictus
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_capua_roman_reconquest
+					who = VRN
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.118.a
+		custom_tooltip = CAP_UNLOCK_ROBERT_ICON
+	}
+}
+
+# Capua - The Key to Immortality
+country_event = {
+	id = ab_byzantium.119
+	title = ab_byzantium.119.t
+	desc = ab_byzantium.119.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		has_ruler = "Robert XI"
+	}
+
+	option = {
+		name = ab_byzantium.119.a
+		add_ruler_modifier = {
+			name = cap_prolong_life
+			duration = -1
+		}
+	}
+}
+
+# Capua - To Pay the Price 1
+country_event = {
+	id = ab_byzantium.120
+	title = ab_byzantium.120.t
+	desc = ab_byzantium.120.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_ruler_modifier = cap_prolong_life
+		is_year = 1500
+	}
+
+	option = {
+		name = ab_byzantium.120.a
+		ai_chance = { factor = 0 }
+		grant_all_mana = {
+			mana = -50
+		}
+		add_treasury = -200
+		add_legitimacy = -10
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_EXTEND_ROBERT_LIFESPAN
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.121
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.120.b
+		ai_chance = { factor = 100 }
+		kill_ruler = yes
+	}
+}
+
+# Capua - To Pay the Price 2
+country_event = {
+	id = ab_byzantium.121
+	title = ab_byzantium.121.t
+	desc = ab_byzantium.121.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_ruler_modifier = cap_prolong_life
+	}
+
+	option = {
+		name = ab_byzantium.121.a
+		grant_all_mana = {
+			mana = -100
+		}
+		add_treasury = -400
+		add_legitimacy = -20
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_EXTEND_ROBERT_LIFESPAN
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.122
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.121.b
+		kill_ruler = yes
+	}
+}
+
+# Capua - To Pay the Price 3
+country_event = {
+	id = ab_byzantium.122
+	title = ab_byzantium.122.t
+	desc = ab_byzantium.122.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_ruler_modifier = cap_prolong_life
+	}
+
+	option = {
+		name = ab_byzantium.122.a
+		grant_all_mana = {
+			mana = -200
+		}
+		add_treasury = -800
+		add_legitimacy = -40
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_EXTEND_ROBERT_LIFESPAN
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.123
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.122.b
+		kill_ruler = yes
+	}
+}
+
+# Capua - To Pay the Price 4
+country_event = {
+	id = ab_byzantium.123
+	title = ab_byzantium.123.t
+	desc = ab_byzantium.123.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_ruler_modifier = cap_prolong_life
+	}
+
+	option = {
+		name = ab_byzantium.123.a
+		grant_all_mana = {
+			mana = -400
+		}
+		add_treasury = -1600
+		add_legitimacy = -80
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = CAP_EXTEND_ROBERT_LIFESPAN
+		hidden_effect = {
+			country_event = {
+				id = ab_byzantium.123
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = ab_byzantium.123.b
+		kill_ruler = yes
+	}
+}
+
+## CULTURAL SPHERES FLAVOR
+#Roman advisor
+country_event = {
+	id = ab_byzantium.1000
+	title = ab_byzantium.1000.t
+	desc = ab_byzantium.1000.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ab_byzantium.1000.a
+		random_list = {
+			20 = { 
+				define_advisor = {
+					type = in_advisor
+					skill = 3
+					culture = roman_new
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = ae_advisor
+					skill = 3
+					culture = roman_new
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = natural_scientist
+					skill = 3
+					culture = roman_new
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = commandant
+					skill = 3
+					culture = roman_new
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = army_reformer
+					skill = 3
+					culture = roman_new
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 2
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1000.b
+		random_list = {
+			20 = { 
+				define_advisor = {
+					type = colonist
+					skill = 3
+					culture = greco_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = visionary
+					skill = 3
+					culture = greco_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = scholar
+					skill = 3
+					culture = greco_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = trader
+					skill = 3
+					culture = greco_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = naval_reformer
+					skill = 3
+					culture = greco_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 2
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1000.c
+		trigger = {
+			has_faction = faction_byzpersian
+		}
+		random_list = {
+			20 = { 
+				define_advisor = {
+					type = fortification_expert
+					skill = 3
+					culture = perso_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = quartermaster
+					skill = 3
+					culture = perso_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = magistrate
+					skill = 3
+					culture = perso_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = architect
+					skill = 3
+					culture = perso_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = missionary
+					skill = 3
+					culture = perso_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 2
+		}
+	}
+
+	option = {
+		name = ab_byzantium.1000.e
+		trigger = {
+			has_faction = faction_byzchinese
+		}
+		random_list = {
+			20 = { 
+				define_advisor = {
+					type = planner
+					skill = 3
+					culture = sino_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = treasurer
+					skill = 3
+					culture = sino_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = statesman
+					skill = 3
+					culture = sino_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = diplomat
+					skill = 3
+					culture = sino_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+			20 = { 
+				define_advisor = {
+					type = master_of_mint
+					skill = 3
+					culture = sino_roman
+					religion = ROOT
+					cost_multiplier = 0.5
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 2
+		}
+	}
+}
+
+#Roman general
+country_event = {
+	id = ab_byzantium.1001
+	title = ab_byzantium.1001.t
+	desc = ab_byzantium.1001.d
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ab_byzantium.1001.a
+		create_general = {
+			tradition = 75
+			add_fire = 1
+			culture = roman_new
+		}
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1001.b
+		create_general = {
+			tradition = 75
+			add_shock = 1
+			culture = greco_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1001.c
+		trigger = {
+			has_faction = faction_byzpersian
+		}
+		create_general = {
+			tradition = 75
+			add_manuever = 1
+			culture = perso_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 1
+		}
+	}
+
+	option = {
+		name = ab_byzantium.1001.e
+		trigger = {
+			has_faction = faction_byzchinese
+		}
+		create_general = {
+			tradition = 75
+			add_siege = 1
+			culture = sino_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 1
+		}
+	}
+}
+
+#Roman admiral
+country_event = {
+	id = ab_byzantium.1002
+	title = ab_byzantium.1002.t
+	desc = ab_byzantium.1002.d
+	picture = BARBARY_PIRATES_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ab_byzantium.1002.a
+		create_admiral = {
+			tradition = 75
+			add_fire = 1
+			culture = roman_new
+		}
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1002.b
+		create_admiral = {
+			tradition = 75
+			add_shock = 1
+			culture = greco_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1002.c
+		trigger = {
+			has_faction = faction_byzpersian
+		}
+		create_admiral = {
+			tradition = 75
+			add_manuever = 1
+			culture = perso_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 1
+		}
+	}
+
+	option = {
+		name = ab_byzantium.1002.e
+		trigger = {
+			has_faction = faction_byzchinese
+		}
+		create_admiral = {
+			tradition = 75
+			add_siege = 1
+			culture = sino_roman
+		}
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 1
+		}
+	}
+}
+
+#Roman trading fleet
+country_event = {
+	id = ab_byzantium.1003
+	title = ab_byzantium.1003.t
+	desc = ab_byzantium.1003.d
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ab_byzantium.1003.a
+		add_treasury = -100
+		random_province = {
+			limit = {
+				has_port = yes
+				province_is_diocese_land_trigger = yes
+				province_is_latinsphere_trigger = yes
+			}
+			for = {
+				amount = 5
+				effect = "
+					light_ship = ROM
+				"
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1003.b
+		add_treasury = -100
+		random_province = {
+			limit = {
+				has_port = yes
+				province_is_diocese_land_trigger = yes
+				province_is_hellenosphere_trigger = yes
+			}
+			for = {
+				amount = 5
+				effect = "
+					light_ship = ROM
+				"
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1003.c
+		trigger = {
+			has_faction = faction_byzpersian
+		}
+		add_treasury = -100
+		random_province = {
+			limit = {
+				has_port = yes
+				province_is_diocese_land_trigger = yes
+				province_is_persosphere_trigger = yes
+			}
+			for = {
+				amount = 5
+				effect = "
+					light_ship = ROM
+				"
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 1
+		}
+	}
+
+	option = {
+		name = ab_byzantium.1003.e
+		trigger = {
+			has_faction = faction_byzchinese
+		}
+		add_treasury = -100
+		random_province = {
+			limit = {
+				has_port = yes
+				province_is_diocese_land_trigger = yes
+				province_is_sinosphere_trigger = yes
+			}
+			for = {
+				amount = 5
+				effect = "
+					light_ship = ROM
+				"
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 1
+		}
+	}
+}
+
+#Roman university
+country_event = {
+	id = ab_byzantium.1004
+	title = ab_byzantium.1004.t
+	desc = ab_byzantium.1004.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		adm_tech = 17
+		any_province = {
+			province_is_diocese_land_trigger = yes
+			NOT = { has_building = university }
+			culture_group = roman_g
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ab_byzantium.1004.a
+		trigger = {
+			any_province = {
+				province_is_diocese_land_trigger = yes
+				province_is_latinsphere_trigger = yes
+				NOT = { has_building = university }
+			}
+		}
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				province_is_latinsphere_trigger = yes
+				NOT = { has_building = university }
+			}
+			add_building_construction = {
+				building = university
+				speed = 0.5
+				cost = 0.5
+			}
+		}
+		add_faction_influence = {
+			faction = faction_byzlatin
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1004.b
+		trigger = {
+			any_province = {
+				province_is_diocese_land_trigger = yes
+				province_is_hellenosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+		}
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				province_is_hellenosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+			add_building_construction = {
+				building = university
+				speed = 0.5
+				cost = 0.5
+			}
+		}
+		add_faction_influence = {
+			faction = faction_byzgreek
+			influence = 1
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.1004.c
+		trigger = {
+			has_faction = faction_byzpersian
+			any_province = {
+				province_is_diocese_land_trigger = yes
+				province_is_persosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+		}
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				province_is_persosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+			add_building_construction = {
+				building = university
+				speed = 0.5
+				cost = 0.5
+			}
+		}
+		add_faction_influence = {
+			faction = faction_byzpersian
+			influence = 1
+		}
+	}
+
+	option = {
+		name = ab_byzantium.1004.e
+		trigger = {
+			has_faction = faction_byzchinese
+			any_province = {
+				province_is_diocese_land_trigger = yes
+				province_is_sinosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+		}
+		random_province = {
+			limit = {
+				province_is_diocese_land_trigger = yes
+				province_is_sinosphere_trigger = yes
+				NOT = { has_building = university }
+			}
+			add_building_construction = {
+				building = university
+				speed = 0.5
+				cost = 0.5
+			}
+		}
+		add_faction_influence = {
+			faction = faction_byzchinese
+			influence = 1
+		}
+	}
+}
+
+## DIOCESES FLAVOR
+#Diocese fight corruption
+country_event = {
+	id = ab_byzantium.2000
+	title = ab_byzantium.2000.t
+	desc = ab_byzantium.2000.d
+	picture = CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_subject_country = {
+			is_subject_of_type = diocese_vassal
+			corruption = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					corruption = 1
+				}
+				save_event_target_as = flavorDiocese
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2000.a
+		trigger = {
+			event_target:flavorDiocese = {
+				corruption = 2
+			}
+		}
+		add_adm_power = -80
+		add_years_of_income = -0.5
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese = {
+			add_corruption = -2
+			add_years_of_income = 1.0
+			add_liberty_desire = -10
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2000.b
+		add_adm_power = -40
+		add_years_of_income = -0.25
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese = {
+			add_corruption = -1
+			add_years_of_income = 0.5
+			add_liberty_desire = -5
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2000.c
+		event_target:flavorDiocese = {
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Diocese develop capital
+country_event = {
+	id = ab_byzantium.2001
+	title = ab_byzantium.2001.t
+	desc = ab_byzantium.2001.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_subject_country = {
+			is_subject_of_type = diocese_vassal
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+				}
+				save_event_target_as = flavorDiocese
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2001.a
+		grant_all_mana = {
+			mana = -80
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			add_liberty_desire = -10
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2001.b
+		grant_all_mana = {
+			mana = -40
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_liberty_desire = -5
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2001.c
+		event_target:flavorDiocese = {
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Diocese border conflict
+country_event = {
+	id = ab_byzantium.2002
+	title = ab_byzantium.2002.t
+	desc = ab_byzantium.2002.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_subject_country = {
+			is_subject_of_type = diocese_vassal
+			any_neighbor_country = {
+				is_subject_of_type = diocese_vassal
+				NOT = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = opinion_dioceses_border_clash
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					any_neighbor_country = {
+						is_subject_of_type = diocese_vassal
+						NOT = {
+							has_opinion_modifier = {
+								who = PREV
+								modifier = opinion_dioceses_border_clash
+							}
+						}
+					}
+				}
+				save_event_target_as = flavorDiocese1
+				random_neighbor_country = {
+					limit = {
+						is_subject_of_type = diocese_vassal
+						NOT = {
+							has_opinion_modifier = {
+								who = PREV
+								modifier = opinion_dioceses_border_clash
+							}
+						}
+					}
+					save_event_target_as = flavorDiocese2
+				}
+			}
+			event_target:flavorDiocese1 = {
+				add_opinion = {
+					who = event_target:flavorDiocese2
+					modifier = opinion_dioceses_border_clash
+				}
+			}
+			event_target:flavorDiocese2 = {
+				add_opinion = {
+					who = event_target:flavorDiocese1
+					modifier = opinion_dioceses_border_clash
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2002.a
+		event_target:flavorDiocese1 = {
+			add_treasury = 200
+			add_manpower = 10
+			add_liberty_desire = -20
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese2 = {
+			add_treasury = -200
+			add_manpower = -10
+			add_liberty_desire = 20
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2002.b
+		event_target:flavorDiocese1 = {
+			add_treasury = -200
+			add_manpower = -10
+			add_liberty_desire = 20
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese2 = {
+			add_treasury = 200
+			add_manpower = 10
+			add_liberty_desire = -20
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2002.c
+		event_target:flavorDiocese1 = {
+			add_liberty_desire = 10
+		}
+		event_target:flavorDiocese2 = {
+			add_liberty_desire = 20
+		}
+	}
+}
+
+#Diocese assassinate rival Vicarius
+country_event = {
+	id = ab_byzantium.2003
+	title = ab_byzantium.2003.t
+	desc = ab_byzantium.2003.d
+	picture = ASSASSINATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_subject_country = {
+			is_subject_of_type = diocese_vassal
+			any_neighbor_country = {
+				is_subject_of_type = diocese_vassal
+				has_opinion_modifier = {
+					who = PREV
+					modifier = opinion_dioceses_border_clash
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					any_neighbor_country = {
+						is_subject_of_type = diocese_vassal
+						has_opinion_modifier = {
+							who = PREV
+							modifier = opinion_dioceses_border_clash
+						}
+					}
+				}
+				save_event_target_as = flavorDiocese1
+				random_neighbor_country = {
+					limit = {
+						is_subject_of_type = diocese_vassal
+						has_opinion_modifier = {
+							who = PREV
+							modifier = opinion_dioceses_border_clash
+						}
+					}
+					save_event_target_as = flavorDiocese2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2003.a
+		event_target:flavorDiocese1 = {
+			add_liberty_desire = -10
+		}
+		custom_tooltip = AB_EMPTY
+		event_target:flavorDiocese2 = {
+			kill_ruler = yes
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2003.b
+		event_target:flavorDiocese1 = {
+			add_liberty_desire = 5
+		}
+	}
+}
+
+#Diocese inward perfection
+country_event = {
+	id = ab_byzantium.2004
+	title = ab_byzantium.2004.t
+	desc = ab_byzantium.2004.d
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		any_subject_country = {
+			is_subject_of_type = diocese_vassal
+			NOT = { has_country_modifier = byz_diocese_inward_perfection }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = diocese_vassal
+					NOT = { has_country_modifier = byz_diocese_inward_perfection }
+				}
+				save_event_target_as = flavorDiocese
+			}
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2004.a
+		custom_tooltip = BYZ_ALLOW_DIOCESE_INWARD_PERFECTION
+		event_target:flavorDiocese = {
+			add_country_modifier = {
+				name = byz_diocese_inward_perfection
+				duration = 3650
+			}
+			hidden_effect = {
+				every_owned_province = {
+					add_province_modifier = {
+						name = byz_diocese_inward_perfection_province
+						duration = 3650
+					}
+				}
+			}
+			add_liberty_desire = -10
+		}
+	}
+	
+	option = {
+		name = ab_byzantium.2004.b
+		event_target:flavorDiocese = {
+			add_liberty_desire = 15
+		}
+	}
+}
+
+#Diocese annexation event
+country_event = {
+	id = ab_byzantium.2005
+	title = ab_byzantium.2005.t
+	desc = ab_byzantium.2005.d
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = ab_byzantium.2005.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = diocese_vassal
+			}
+			add_liberty_desire = 20
+		}
+	}
+}

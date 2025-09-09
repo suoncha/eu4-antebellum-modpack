@@ -1,0 +1,5 @@
+government = republic
+primary_culture = roman_new
+religion = orthodox
+technology_group = western
+capital = 118

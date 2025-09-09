@@ -1,0 +1,549 @@
+call_diocese_into_wars = {
+	category = animism
+
+	require_acceptance = no
+
+	is_visible = {
+		tag = ROM
+		FROM = {
+			OR = {
+				is_subject_of_type = diocese_vassal
+				is_subject_of_type = grand_diocese_vassal
+			}
+		}
+	}
+
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_modifier = byz_diocese_inward_perfection
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_FORBID_WAR_10YEARS_TT
+				FROM = {
+					NOT = { has_country_modifier = byz_diocese_inward_perfection }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_any_disaster = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_DISASTER_TT
+				has_any_disaster = no
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					liberty_desire = 50
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = {
+					NOT = { liberty_desire = 50 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_in_war = {
+						attacker_leader = ROOT
+					}
+				}
+				NOT = {
+					is_in_war = {
+						defender_leader = ROOT
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ROOT_IS_NOT_AT_WAR_LEADER_TT
+				OR = {
+					is_in_war = {
+						attacker_leader = ROOT
+					}
+					is_in_war = {
+						defender_leader = ROOT
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						owes_favors = {
+							who = ROOT
+							value = 25
+						}
+					}
+				}
+				is_in_war = {
+					defender_leader = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_25_FAVORS_DEFENSIVE_WAR_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						owes_favors = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_50_FAVORS_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+			}
+			add_favors = {
+				who = FROM
+				amount = -50
+			}
+			FROM = {
+				join_all_offensive_wars_of = ROOT
+				add_liberty_desire = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_unlocked_government_reform = {
+							government_reform = rom_legio
+						}
+					}
+				}
+				FROM = {
+					add_liberty_desire = 10
+				}
+			}
+		}
+		else = {
+			add_favors = {
+				who = FROM
+				amount = -25
+			}
+			FROM = {
+				join_all_defensive_wars_of = ROOT
+				add_liberty_desire = 5
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_unlocked_government_reform = {
+							government_reform = rom_legio
+						}
+					}
+				}
+				FROM = {
+					add_liberty_desire = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government_mechanic = roman_professionalism_mechanic
+			}
+			add_government_power = {
+				mechanic_type = roman_professionalism_mechanic
+				power_type = romanprofessionalism
+				value = -3
+			}
+		}
+	}
+	
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}
+
+befriend_diocese = {
+	category = animism
+
+	require_acceptance = no
+
+	is_visible = {
+		tag = ROM
+		FROM = {
+			is_subject_of_type = diocese_vassal
+			NOT = { has_country_modifier = byz_friend_diocese }
+		}
+	}
+
+	is_allowed = {
+		if = {
+			limit = {
+				calc_true_if = {
+					all_subject_country = {
+						has_country_modifier = byz_friend_diocese
+					}
+					amount = 3
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_FRIEND_DIOCESE
+				NOT = {
+					calc_true_if = {
+						all_subject_country = {
+							has_country_modifier = byz_friend_diocese
+						}
+						amount = 3
+					}
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = byz_friend_diocese
+				duration = -1
+			}
+			every_owned_province = {
+				add_province_modifier = {
+					name = byz_friend_diocese_province
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}
+
+unfriend_diocese = {
+	category = animism
+
+	require_acceptance = no
+
+	is_visible = {
+		tag = ROM
+		FROM = {
+			is_subject_of_type = diocese_vassal
+			has_country_modifier = byz_friend_diocese
+		}
+	}
+
+	is_allowed = {
+	}
+
+	on_accept = {
+		FROM = {
+			remove_country_modifier = byz_friend_diocese
+			every_owned_province = {
+				limit = {
+					has_province_modifier = byz_friend_diocese_province
+				}
+				remove_province_modifier = byz_friend_diocese_province
+			}
+			add_liberty_desire = 40
+		}
+	}
+	
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}
+
+promote_vassal_to_foederati = {
+	category = animism
+
+	require_acceptance = yes
+
+	alert_index = 6
+	alert_tooltip = promote_vassal_to_satrapy_alert_tooltip
+
+	is_visible = {
+		tag = ROM
+		FROM = {
+			vassal_of = ROOT
+		}
+	}
+
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { liberty_desire = 50 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { NOT = { liberty_desire = 50 } }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { total_development = 100 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_100_DEVELOPMENT
+				FROM = { NOT = { total_development = 100 } }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_reform = papacy_reform }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_POPE
+				FROM = { NOT = { has_reform = papacy_reform } }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_reform = celestial_empire }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_CELESTIAL_EMPIRE
+				FROM = { NOT = { has_reform = celestial_empire } }
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_reform = shogunate }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_SHOGUN
+				FROM = { NOT = { has_reform = shogunate } }
+			}
+		}
+	}
+
+	on_accept = {
+		create_subject = {
+			subject_type = foederati_vassal
+			subject = FROM
+			keep_liberty_desire = yes
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+			}
+			change_primary_culture = ROOT
+			add_government_reform = foederati_reform
+			hidden_effect = {
+				set_ruler_culture = ROOT
+				set_heir_culture = ROOT
+				capital_scope = {
+					province_event = {
+						id = ab_byzantium.71
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no
+	}
+
+	ai_acceptance = {
+        add_entry = {
+            name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.2
+			}
+        }
+		add_entry = {
+			name = AI_TRUST_TOWARDS_ROOT
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			#1 trust = +4 ai points
+			multiply_variable = {
+				which = ai_value
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = AI_DIPLOMATIC_REPUTATION
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 4
+			multiply_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		add_entry = {
+			name = AI_LIBERTY_DESIRE
+			export_to_variable = {
+				variable_name = ai_value
+				value = liberty_desire
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+		}
+	}
+}
+
+call_foederati_into_wars = {
+	category = animism
+
+	require_acceptance = no
+
+	is_visible = {
+		tag = ROM
+		FROM = {
+			is_subject_of_type = foederati_vassal
+		}
+	}
+
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { liberty_desire = 50 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { NOT = { liberty_desire = 50 } }
+			}
+		}
+		if = {
+			limit = {
+				is_at_war = no
+			}
+			custom_trigger_tooltip = {
+				tooltip = ROOT_IS_NOT_AT_WAR_TT
+				is_at_war = yes
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						owes_favors = {
+							who = ROOT
+							value = 20
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_20_FAVORS_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { mil_power = 50 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ROOT_HAS_50MIL_TT
+				mil_power = 50
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_at_war = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+	}
+
+	on_accept = {
+		add_favors = {
+			who = FROM
+			amount = -20
+		}
+		add_mil_power = -50
+		FROM = {
+			join_all_offensive_wars_of = ROOT
+			join_all_defensive_wars_of = ROOT
+			add_mil_power = 50
+		}
+	}
+	
+	on_decline = {
+	}
+
+	ai_will_do = {
+		FROM = {
+			NOT = { liberty_desire = 50 }
+			owes_favors = {
+				who = ROOT
+				value = 20
+			}
+			is_at_war = no
+		}
+		mil_power = 600
+	}
+}

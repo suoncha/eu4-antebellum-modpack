@@ -1,0 +1,15 @@
+#953 - Conoy
+
+owner = PU5
+controller = PU5
+add_core = PU5
+culture = punic
+religion = canaanite
+hre = no
+base_tax = 5
+base_production = 3
+trade_goods = iron
+base_manpower = 3
+capital = "Conoy"
+discovered_by = buniq_tech
+center_of_trade = 1

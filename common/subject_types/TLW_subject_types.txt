@@ -1,0 +1,481 @@
+diocese_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_diocese
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_diocese
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_diocese
+
+	# Properties:
+	base_liberty_desire = -25
+	transfer_trade_power = yes
+	joins_overlords_wars = no
+	can_be_annexed = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 2
+	can_gain_favors = yes
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.1
+	liberty_desire_same_dynasty = -10.0
+	pays_overlord = 1.5
+	forcelimit_to_overlord = 0.35
+	naval_forcelimit_to_overlord = 0.35
+	manpower_to_overlord = 0.35
+	sailors_to_overlord = 0.35
+	military_focus = 1.5
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_disloyal_diocese
+
+	# Subject Interactions:
+	support_loyalists = yes
+	subsidize_armies = yes
+	divert_trade = yes
+	placate_rulers = no
+	replace_governor = yes
+	grant_province = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = byz_diocese_subject_modifier
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = byz_diocese_latin_modifier
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BYZ_IS_LATINSPHERE
+				OR = {
+					primary_culture = roman_new
+					primary_culture = gallo_roman
+					primary_culture = afro_roman
+					primary_culture = romano_british
+					primary_culture = hispano_roman
+					primary_culture = romano_germanic
+					primary_culture = romano_nordic
+					primary_culture = daco_roman
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = byz_diocese_hellenic_modifier
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BYZ_IS_HELLENOSPHERE
+				OR = {
+					primary_culture = illyro_roman
+					primary_culture = greco_roman
+					primary_culture = romano_arabic
+					primary_culture = romano_polish
+					primary_culture = russo_roman
+					primary_culture = romano_scythic
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = byz_diocese_persic_modifier
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BYZ_IS_PERSOSPHERE
+				OR = {
+					primary_culture = perso_roman
+					primary_culture = indo_roman
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = byz_diocese_sinic_modifier
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BYZ_IS_SINOSPHERE
+				OR = {
+					primary_culture = tibeto_roman
+					primary_culture = sino_roman
+					primary_culture = romano_korean
+					primary_culture = romano_japanese
+					primary_culture = romano_tai
+					primary_culture = romano_malay
+				}
+			}
+		}
+	}
+
+	overlord_opinion_modifier = opinion_is_diocese
+	subject_opinion_modifier = opinion_is_diocese
+}
+
+grand_diocese_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_diocese
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_diocese
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_diocese
+
+	# Properties:
+	base_liberty_desire = -50
+	transfer_trade_power = yes
+	joins_overlords_wars = no
+	has_overlords_ruler = yes
+	can_be_integrated = no
+	has_power_projection = no
+	disable_inheritance = yes
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 0
+	can_gain_favors = yes
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.05
+	liberty_desire_same_dynasty = 0.0
+	pays_overlord = 0.2
+	forcelimit_to_overlord = 0.05
+	naval_forcelimit_to_overlord = 0.05
+	manpower_to_overlord = 0.05
+	sailors_to_overlord = 0.05
+	military_focus = 1.5
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_disloyal_diocese
+
+	# Subject Interactions:
+	support_loyalists = yes
+	subsidize_armies = yes
+	divert_trade = yes
+	placate_rulers = no
+	grant_province = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = byz_diocese_russia
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = byz_diocese_hellenic_modifier
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BYZ_IS_HELLENOSPHERE
+				OR = {
+					primary_culture = illyro_roman
+					primary_culture = greco_roman
+					primary_culture = romano_arabic
+					primary_culture = russo_roman
+					primary_culture = romano_scythic
+				}
+			}
+		}
+	}
+
+	overlord_opinion_modifier = opinion_is_diocese
+	subject_opinion_modifier = opinion_is_diocese
+}
+
+foederati_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_foederati
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_foederati
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_foederati
+
+	# Properties:
+	base_liberty_desire = 0
+	transfer_trade_power = yes
+	joins_overlords_wars = no
+	can_be_annexed = yes
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 2
+	can_gain_favors = yes
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.075
+	liberty_desire_same_dynasty = -10.0
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0.25
+	naval_forcelimit_to_overlord = 0.25
+	manpower_to_overlord = 0.25
+	sailors_to_overlord = 0.25
+	military_focus = 1.5
+	annex_cost_per_development = 5.0
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_disloyal_vassal
+
+	# Subject Interactions:
+	support_loyalists = yes
+	place_relative_on_throne = no
+	subsidize_armies = yes
+	divert_trade = yes
+	placate_rulers = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = rom_foederati_subject_modifier
+	}
+	modifier_overlord = clear
+}
+
+diadochi_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_diadochi
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_diadochi
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_diadochi
+
+	# Properties:
+	base_liberty_desire = 0
+	transfer_trade_power = yes
+	joins_overlords_wars = no
+	can_be_annexed = yes
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 2
+	can_gain_favors = yes
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.075
+	liberty_desire_same_dynasty = -10.0
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0.25
+	naval_forcelimit_to_overlord = 0.25
+	manpower_to_overlord = 0.25
+	sailors_to_overlord = 0.25
+	military_focus = 1.5
+	annex_cost_per_development = 5.0
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_disloyal_vassal
+
+	# Subject Interactions:
+	support_loyalists = yes
+	place_relative_on_throne = no
+	subsidize_armies = yes
+	divert_trade = yes
+	placate_rulers = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = rom_foederati_subject_modifier
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = nci_diadochi_antigonos_modifier
+		trigger = {
+			tag = HLM
+		}
+	}
+	modifier_overlord = {
+		modifier = nci_diadochi_seleukos_modifier
+		trigger = {
+			tag = HLS
+		}
+	}
+	modifier_overlord = {
+		modifier = nci_diadochi_ptolemaios_modifier
+		trigger = {
+			tag = AEG
+		}
+	}
+}
+
+punic_city_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_eumda
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_eumda
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_eumda
+
+	# Properties:
+	base_liberty_desire = 0
+	gives_daimyo_bonuses = yes
+	separatists_become_subjects = yes
+	overlord_can_be_subject = yes
+	can_use_claims = no
+	overlord_protects_external = yes
+
+	transfer_trade_power = yes
+	joins_overlords_wars = no
+	can_be_annexed = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 1
+	can_gain_favors = yes
+	must_accept_cta_from_overlord = yes
+	favors_cost_to_join_offensive_wars = 120
+	favors_cost_to_join_defensive_wars = 50
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.125
+	liberty_desire_same_dynasty = -10.0
+	pays_overlord = 1.5
+	forcelimit_to_overlord = 0.0
+	naval_forcelimit_to_overlord = 0.0
+	manpower_to_overlord = 0.0
+	sailors_to_overlord = 0.0
+	military_focus = 0.5
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	can_fight = {
+		same_overlord = punic_city_vassal
+	}
+	can_rival = {
+		same_overlord = punic_city_vassal
+	}
+	can_ally = {
+		same_overlord = punic_city_vassal
+		same_overlord = punic_tribe_vassal
+	}
+	can_marry = {
+		same_overlord = punic_city_vassal
+		same_overlord = punic_tribe_vassal
+	}
+
+	# Subject Interactions:
+	support_loyalists = yes
+	subsidize_armies = no
+	divert_trade = yes
+	placate_rulers = no
+	replace_governor = no
+	grant_province = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+
+	overlord_opinion_modifier = opinion_is_easima
+	subject_opinion_modifier = opinion_is_easima
+}
+
+punic_tribe_vassal = {
+	copy_from = default
+	
+	# Graphics:
+    sprite = GFX_icon_aldiraq
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_aldiraq
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_aldiraq
+
+	# Properties:
+	base_liberty_desire = 0
+	gives_daimyo_bonuses = yes
+	separatists_become_subjects = yes
+	overlord_can_be_subject = yes
+	can_use_claims = no
+	overlord_protects_external = yes
+	allows_taking_land_without_independence = yes
+
+	enforce_religion = no
+	transfer_trade_power = yes
+	can_be_annexed = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_transfer_in_peace = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 1
+	can_gain_favors = yes
+	opinion_on_subject_integration = 0
+
+	liberty_desire_development_ratio = 0.25
+	liberty_desire_same_dynasty = -10.0
+	pays_overlord = 0.0
+	forcelimit_to_overlord = 0.35
+	naval_forcelimit_to_overlord = 0.35
+	manpower_to_overlord = 0.35
+	sailors_to_overlord = 0.35
+	military_focus = 1.5
+	
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	can_fight = {
+		same_overlord = punic_tribe_vassal
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_rival = {
+		same_overlord = punic_tribe_vassal
+	}
+	can_ally = {
+		same_overlord = punic_tribe_vassal
+		same_overlord = punic_city_vassal
+	}
+	can_marry = {
+		same_overlord = punic_tribe_vassal
+		same_overlord = punic_city_vassal
+	}
+
+	# Subject Interactions:
+	support_loyalists = yes
+	subsidize_armies = yes
+	divert_trade = no
+	placate_rulers = yes
+	replace_governor = no
+	grant_province = no
+
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+
+	overlord_opinion_modifier = opinion_is_easima
+	subject_opinion_modifier = opinion_is_easima
+}

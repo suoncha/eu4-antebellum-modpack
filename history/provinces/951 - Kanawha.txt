@@ -1,0 +1,22 @@
+#951 - Kanawha
+
+latent_trade_goods = {
+	coal
+}
+
+owner = MSG
+controller = MSG
+add_core = MSG
+culture = shawnee
+religion = totemism
+capital = "Kanawha"
+trade_goods = dyes
+hre = no
+base_tax = 2 
+base_production = 3
+base_manpower = 2
+native_size = 5
+native_ferocity = 1
+native_hostileness = 4
+
+discovered_by = north_american

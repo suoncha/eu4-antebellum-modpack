@@ -1,0 +1,78 @@
+province_is_latinsphere_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_IS_LATINSPHERE
+		OR = {
+			culture = roman_new
+			culture = gallo_roman
+			culture = afro_roman
+			culture = romano_british
+			culture = hispano_roman
+			culture = romano_germanic
+			culture = romano_nordic
+			culture = daco_roman
+		}
+	}
+}
+
+province_is_hellenosphere_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_IS_HELLENOSPHERE
+		OR = {
+			culture = greco_roman
+			culture = illyro_roman
+			culture = romano_arabic
+			culture = romano_polish
+			culture = russo_roman
+			culture = romano_scythic
+		}
+	}
+}
+
+province_is_persosphere_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_IS_PERSOSPHERE
+		OR = {
+			culture = perso_roman
+			culture = indo_roman
+		}
+	}
+}
+
+province_is_sinosphere_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_IS_SINOSPHERE
+		OR = {
+			culture = sino_roman
+			culture = tibeto_roman
+			culture = romano_korean
+			culture = romano_japanese
+			culture = romano_tai
+			culture = romano_malay
+		}
+	}
+}
+
+province_is_diocese_land_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_IS_DIOCESE_LAND
+		owner = {
+			OR = {
+				tag = ROM
+				is_subject_of_type = diocese_vassal
+				is_subject_of_type = grand_diocese_vassal
+				is_subject_of_type = foederati_vassal
+			}
+		}
+	}
+}
+
+tlw_is_american_trigger = {
+	OR = {
+		technology_group = buniq_tech
+		technology_group = north_american
+		technology_group = mesoamerican
+		technology_group = andean
+		technology_group = south_american
+		technology_group = high_american
+	}
+}

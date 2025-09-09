@@ -1,0 +1,415 @@
+take_capital_suppress_revolt = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_suppress_revolt
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = SUPPRESS_REVOLT_WAR_NAME
+}
+
+take_claim_italian_league_to_byz = {
+	type = take_province
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		allowed_provinces = {
+			region = italy_region
+		}
+		peace_options = {
+			po_demand_provinces
+		}
+		prov_desc = ALL_ITALIAN_PROVS
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_defeat_italian_league
+		}
+	}
+
+	war_name = ITALIAN_LEAGUE_TO_BYZ_WAR_NAME
+}
+
+take_capital_diocese = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_suppress_diocese
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = SUPPRESS_REVOLT_WAR_NAME
+}
+
+take_capital_roman_civil_war = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_roman_civil_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = ROMAN_CIVIL_WAR_WAR_NAME
+}
+
+take_capital_establish_diocese = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_establish_diocese
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = ESTABLISH_DIOCESE_WAR_WAR_NAME
+}
+
+take_capital_roman_persian_war = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_roman_persian_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = ROMAN_PERSIAN_WAR_WAR_NAME
+}
+
+take_capital_roman_chinese_war = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_roman_chinese_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+
+	war_name = ROMAN_CHINESE_WAR_WAR_NAME
+}
+
+superiority_hellenic_conquest = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5	
+		
+		allowed_provinces = {
+			OR = {
+				superregion = near_east_superregion
+				superregion = persia_superregion
+				superregion = india_superregion
+				superregion = east_indies_superregion
+				region = italy_region
+				region = france_region
+				region = iberia_region
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_HELLENIC_CONQUEST_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+	
+	war_name = HELLENIC_WAR_WAR_NAME	
+}
+
+superiority_diadochi_war = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_diadochi_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_diadochi_war
+		}
+	}
+
+	war_name = DIADOCHI_WAR_WAR_NAME
+}
+
+superiority_capua_roman_reconquest = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5	
+		
+		allowed_provinces = {
+			OR = {
+				region = italy_region
+				region = anatolia_region
+				region = egypt_region
+				region = france_region
+				region = iberia_region
+				region = balkan_region
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = wales_area
+				area = scottish_marches_area
+				area = cornwall_area
+				area = tripolitania_area
+				area = djerba_area
+				area = tunisia_area
+				area = kabylia_area
+				area = barbary_coast_area
+				area = northern_morocco_area
+				area = syria_area
+				area = aleppo_area
+				area = palestine_area
+				area = carinthia_area
+				province_id = 1232
+				province_id = 2324
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_CAPUA_ROMAN_RECONQUEST_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+	
+	war_name = CAPUA_ROMAN_RECONQUEST_WAR_NAME	
+}
+
+superiority_political_war = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+		peace_options = {
+			po_political_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+		peace_options = {
+			po_political_war
+		}
+	}
+
+	war_name = PUNIC_POLITICAL_WAR_NAME
+}
+
+superiority_easima_trade_war = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 2
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+		peace_options = {
+			po_easima_trade_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 2
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+	}
+
+	war_name = EASIMA_TRADE_WAR_NAME
+}
+
+superiority_coalition_carthage = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_release_annexed
+		}
+	}
+
+	defender = {
+		badboy_factor = 2
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+	}
+
+	war_name = COALITION_CARTHAGE_WAR_NAME
+}
+
+superiority_fourth_punic_war = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = FOURTH_PUNIC_WAR_GAME
+}
+
+superiority_hyl_ozo_league_war = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 2
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+		peace_options = {
+			po_hyl_ozo_league_war
+		}
+	}
+
+	defender = {
+		badboy_factor = 2
+		prestige_factor = 0.2
+		peace_cost_factor = 1
+		peace_options = {
+			po_hyl_ozo_league_war
+		}
+	}
+
+	war_name = HYL_OZO_LEAGUE_WAR_NAME
+}

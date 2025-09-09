@@ -1,0 +1,110 @@
+estate_burghers_punic_isolationism = {
+	icon = privilege_grant_new_world_charter
+	loyalty = 0
+	influence = 0.1
+	max_absolutism = -10
+	is_valid = {
+		technology_group = buniq_tech
+		NOT = { has_country_flag = estate_burghers_punic_isolationism_removed }
+	}
+	can_revoke = {
+		custom_trigger_tooltip = {
+			tooltip = PUN_ESTATE_REVOKABLE
+			always = no
+		}
+	}
+	penalties = {
+		global_colonial_growth = -20
+		colonist_placement_chance = -0.2
+		native_uprising_chance = 0.5
+	}
+	on_revoked = {
+		add_country_modifier = {
+			name = punic_into_the_wastelands
+			duration = 1825
+		}
+		set_country_flag = estate_burghers_punic_isolationism_removed
+		custom_tooltip = PUN_ESTATE_COLONIST_IDEA
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_burghers_marsh_expansion = {
+	icon = privilege_dev_cost
+	max_absolutism = -10
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_marsh_expansion
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = marsh
+				has_terrain = savannah
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_marsh_expansion_gt_marsh
+		tooltip = {
+			add_province_modifier = {
+				name = estate_burghers_marsh_expansion_marsh
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_burghers_marsh_expansion_gt_savanna
+		tooltip = {
+			add_province_modifier = {
+				name = estate_burghers_marsh_expansion_savanna
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = marsh
+				}
+				add_province_modifier = {
+					name = estate_burghers_marsh_expansion_marsh
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = savannah
+				}
+				add_province_modifier = {
+					name = estate_burghers_marsh_expansion_savanna
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_marsh_expansion_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_burghers_marsh_expansion_marsh
+						has_province_modifier = estate_burghers_marsh_expansion_savanna
+					}
+				}
+				remove_province_modifier = estate_burghers_marsh_expansion_marsh
+				remove_province_modifier = estate_burghers_marsh_expansion_savanna
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

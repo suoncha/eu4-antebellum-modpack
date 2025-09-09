@@ -1,0 +1,413 @@
+#Rome
+rom_diocese_name = {
+	rank = {
+		1 = DIOCESE
+		2 = DIOCESE
+		3 = DIOCESE
+	}
+
+	ruler_male = {
+		1 = VICARIUS
+		2 = VICARIUS
+		3 = VICARIUS
+	}
+
+	ruler_female = {
+		1 = VICARIUS
+		2 = VICARIUS
+		3 = VICARIUS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = rom_diocese
+			has_reform = rom_grand_diocese
+			has_reform = rom_former_diocese
+		}
+	}
+}
+
+rom_muslim_name = {
+	rank = {
+		1 = ISLAMIC_CALIPHATE
+		2 = ISLAMIC_CALIPHATE
+		3 = ISLAMIC_CALIPHATE
+	}
+
+	ruler_male = {
+		1 = CALIPH
+		2 = CALIPH
+		3 = CALIPH
+	}
+
+	ruler_female = {
+		1 = CALIPHA
+		2 = CALIPHA
+		3 = CALIPHA
+	}
+
+	trigger = {
+		tag = ROM
+		religion_group = muslim
+	}
+}
+
+rom_zoroastrian_name = {
+	rank = {
+		1 = PRINCEDOM
+		2 = SHAHDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = MIRZA
+		2 = SHAH
+		3 = RUMANSHAH
+	}
+
+	ruler_female = {
+		1 = BANBISHN
+		2 = BANBISHN
+		3 = BANBISHN
+	}
+
+	trigger = {
+		tag = ROM
+		religion = zoroastrian
+	}
+}
+
+rom_rum_christian_name = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUK
+		2 = BASILEYYUS
+		3 = IMPARATOR
+	}
+
+	ruler_female = {
+		1 = DUSES
+		2 = BASILYEN
+		3 = IMPARATORICE
+	}
+
+	trigger = {
+		tag = ROM
+		was_tag = RUM
+		religion_group = christian
+	}
+}
+
+rom_christian_name = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = GOVERNOR
+		2 = REX
+		3 = IMPERATOR
+	}
+
+	ruler_female = {
+		1 = GOVERNOR
+		2 = REGINA
+		3 = IMPERATRIX
+	}
+
+	trigger = {
+		tag = ROM
+		NOT = { was_tag = RUM }
+		religion_group = christian
+	}
+}
+
+rom_foederati_name = {
+	rank = {
+		1 = FOEDERATI
+		2 = FOEDERATI
+		3 = FOEDERATI
+	}
+
+	ruler_male = {
+		1 = WARLORD
+		2 = WARLORD
+		3 = WARLORD
+	}
+
+	ruler_female = {
+		1 = WARLORD
+		2 = WARLORD
+		3 = WARLORD
+	}
+
+	trigger = {
+		has_reform = foederati_reform
+	}
+}
+
+#Nicaea
+nci_diadochi_name = {
+	rank = {
+		1 = DIADOCHI
+		2 = DIADOCHI
+		3 = DIADOCHI
+	}
+
+	ruler_male = {
+		1 = WARLORD
+		2 = WARLORD
+		3 = WARLORD
+	}
+
+	ruler_female = {
+		1 = WARLORD
+		2 = WARLORD
+		3 = WARLORD
+	}
+
+	trigger = {
+		has_reform = nicene_diadochi
+	}
+}
+
+#Punic
+ctg_punic_league_name = {
+	rank = {
+		1 = PUNIC_LEAGUE
+		2 = PUNIC_LEAGUE
+		3 = PUNIC_LEAGUE
+	}
+
+	ruler_male = {
+		1 = EASIMA
+		2 = EASIMA
+		3 = EASIMA
+	}
+
+	ruler_female = {
+		1 = EASIMA
+		2 = EASIMA
+		3 = EASIMA
+	}
+
+	trigger = {
+		OR = {
+			has_reform = ctg_punic_league_reform
+			tag = CTG
+		}	
+	}
+}
+
+ctg_punic_city_name = {
+	rank = {
+		1 = PUNIC_CITY
+		2 = PUNIC_CITY
+		3 = PUNIC_CITY
+	}
+
+	ruler_male = {
+		1 = EUMDA
+		2 = EUMDA
+		3 = EUMDA
+	}
+
+	ruler_female = {
+		1 = EUMDA
+		2 = EUMDA
+		3 = EUMDA
+	}
+
+	trigger = {
+		is_subject_of_type = punic_city_vassal
+	}
+}
+
+ctg_punic_tribe_name = {
+	rank = {
+		1 = PUNIC_TRIBE
+		2 = PUNIC_TRIBE
+		3 = PUNIC_TRIBE
+	}
+
+	ruler_male = {
+		1 = RAYI
+		2 = RAYI
+		3 = RAYI
+	}
+
+	ruler_female = {
+		1 = RAYI
+		2 = RAYI
+		3 = RAYI
+	}
+
+	trigger = {
+		primary_culture = barbiri
+	}
+}
+
+#Hylinian League
+hyl_republic_name = {
+	rank = {
+		1 = KATASTASI
+		2 = KATASTASI
+		3 = KATASTASI
+	}
+
+	ruler_male = {
+		1 = PROXENOS
+		2 = PROXENOS
+		3 = PROXENOS
+	}
+
+	ruler_female = {
+		1 = PROXENOS
+		2 = PROXENOS
+		3 = PROXENOS
+	}
+
+	trigger = {
+		culture_group = eastern_algonquian
+		government = republic
+	}
+}
+
+#Order of Zoroaster
+che_tribe_name = {
+	rank = {
+		1 = GHABILEH
+		2 = GHABILEH
+		3 = GHABILEH
+	}
+
+	ruler_male = {
+		1 = RAIES
+		2 = RAIES
+		3 = RAIES
+	}
+
+	ruler_female = {
+		1 = RAIES
+		2 = RAIES
+		3 = RAIES
+	}
+
+	trigger = {
+		has_reform = che_zoro_tribe_reform
+	}
+}
+
+che_theocracy_name = {
+	rank = {
+		1 = DASTOR
+		2 = DASTOR
+		3 = DASTOR
+	}
+
+	ruler_male = {
+		1 = ZHUNERAL
+		2 = ZHUNERAL
+		3 = ZHUNERAL
+	}
+
+	ruler_female = {
+		1 = ZHUNERAL
+		2 = ZHUNERAL
+		3 = ZHUNERAL
+	}
+
+	trigger = {
+		culture_group = iroquoian
+		religion = zoroastrian
+		government = theocracy
+		NOT = { has_reform = ozo_reformation_great_flame_upgrade_reform }
+	}
+}
+
+che_persia_name = {
+	rank = {
+		1 = DASTOR
+		2 = DASTOR
+		3 = DASTOR
+	}
+
+	ruler_male = {
+		1 = GODKING
+		2 = GODKING
+		3 = GODKING
+	}
+
+	ruler_female = {
+		1 = GODKING
+		2 = GODKING
+		3 = GODKING
+	}
+
+	trigger = {
+		has_reform = ozo_reformation_great_flame_upgrade_reform
+	}
+}
+
+#Cahokia
+cao_kingdom_name = {
+	rank = {
+		1 = MALKHUT
+		2 = MALKHUT
+		3 = MALKHUT
+	}
+
+	ruler_male = {
+		1 = ELYON
+		2 = ELYON
+		3 = ELYON
+	}
+
+	ruler_female = {
+		1 = ELYON
+		2 = ELYON
+		3 = ELYON
+	}
+
+	trigger = {
+		OR = {
+			culture_group = siouan
+			primary_culture = yuchi
+		}
+		religion = jewish
+		government = monarchy
+	}
+}
+
+#Crime Syndicate
+joa_republic_name = {
+	rank = {
+		1 = NUQABA
+		2 = NUQABA
+		3 = NUQABA
+	}
+
+	ruler_male = {
+		1 = KIMBARUN
+		2 = KIMBARUN
+		3 = KIMBARUN
+	}
+
+	ruler_female = {
+		1 = KIMBARUN
+		2 = KIMBARUN
+		3 = KIMBARUN
+	}
+
+	trigger = {
+		culture_group = muskogean
+		government = republic
+	}
+}
