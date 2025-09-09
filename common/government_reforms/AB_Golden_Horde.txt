@@ -1,0 +1,165 @@
+glh_kurultai = {
+	icon = "warrior_monks_reform"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = GLH
+			was_tag = GLH
+			tag = GRH
+			was_tag = GRH
+			tag = ILK
+			was_tag = ILK
+		}
+	}
+	modifiers = {
+		monarch_military_power = 1
+		heir_chance = 1
+	}
+	trigger = {
+		if = {
+			limit = {
+				OR = {
+					tag = GLH
+					was_tag = GLH
+				}
+			}
+			mission_completed = glh_horde_unite_mongolia
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = ILK
+					was_tag = ILK
+				}
+			}
+			mission_completed = ilk_mongols
+		}
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+glh_saddle = {
+	icon = "nazcavalry"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = GLH
+			was_tag = GLH
+			tag = GRH
+			was_tag = GRH
+			tag = ILK
+			was_tag = ILK
+		}
+	}
+	modifiers = {
+		cavalry_shock = 0.25
+		cavalry_cost = -0.25
+	}
+	trigger = {
+		if = {
+			limit = {
+				OR = {
+					tag = GLH
+					was_tag = GLH
+				}
+			}
+			mission_completed = glh_horde_central_asia
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = ILK
+					was_tag = ILK
+				}
+			}
+			mission_completed = ilk_central_asia
+		}
+	}
+	ai = {
+		factor = 10
+	}
+}
+#aba new governmnet form
+aba_GLH_golden_tsardom  = {
+	icon = "tsardom"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			# AB [[[
+			AND = {
+				OR = {
+					mission_completed = glh_all_rus
+					tag =  GLH
+					was_tag = GLH
+				}
+			}
+			# ]]]
+		}
+		# AB [[[
+		# We will keep it using for Ukraine, thank you very much
+		#NOT = { primary_culture = ruthenian }
+		#NOT = { primary_culture = byelorussian }
+		# ]]]
+		OR = {
+			AND = {
+				culture_group = tartar
+				OR = {
+					AND = {
+						tag = GLH
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						is_playing_custom_nation = yes
+						have_had_reform = tsardom
+					}
+				}
+			}
+		}
+	}
+	fixed_rank = 3
+	legacy_equivalent = tsardom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	nation_designer_trigger = {
+		OR = {
+			culture_group = tartar
+			#culture_group = slavic
+		}
+		NOT = { primary_culture = ruthenian }
+		NOT = { primary_culture = byelorussian }
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.20
+		yearly_absolutism = 0.5
+		global_autonomy = -0.05
+		governing_capacity = 350
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
+		vassal_income = 0.5
+	}
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Third Rome" 
+			NOT = { has_dlc = "Domination" }
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			russian_mechanic
+			# russian_modernization_mechanic
+		}
+	}
+}

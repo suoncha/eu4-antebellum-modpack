@@ -1,0 +1,782 @@
+﻿namespace = ab_new_cultures
+normal_or_historical_nations = yes
+
+#Nikkei (Japanese) Spread
+province_event = {
+	id = ab_new_cultures.1
+	title = ab_new_cultures.1.t
+	desc = ab_new_cultures.1.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+#Will fire for all non japanese_g province in the philippines
+trigger = {
+	religion = shinto
+    owner = {
+        has_country_flag = nikkei_culture_spread
+    }
+    NOT = {
+        culture_group = japanese_g
+    }
+    OR = {
+        area = palawan_area
+        area = luzon_area
+        area = visayas_area
+        area = west_mindanao_area
+        area = mindanao_area
+        area = southern_luzon_area
+    }
+}
+	
+	option = {
+		name = ab_new_cultures.1.a	
+		change_culture = japanese_nikkei
+	}
+}
+
+
+
+# #Tornatrás (Iberian) Spread TO DO 1.10 events 2-4
+# province_event = {
+# 	id = ab_new_cultures.2
+# 	title = ab_new_cultures.2.t
+# 	desc = ab_new_cultures.2.d
+# 	picture = CULTURE_eventPicture
+
+# 	hidden = yes
+
+# 	mean_time_to_happen = {
+# 		months = 240
+# 	}
+
+# 	trigger = {
+# 	religion = catholic
+#     owner = {
+#         has_country_flag = tornatras_culture_spread
+#     }
+#     NOT = {
+#         culture_group = iberian
+#     }
+#     OR = {
+#         area = palawan_area
+#         area = luzon_area
+#         area = visayas_area
+#         area = west_mindanao_area
+#         area = mindanao_area
+#         area = southern_luzon_area
+#     }
+# }
+
+
+
+# 	option = {
+# 		name = ab_new_cultures.2.a
+# 		change_culture = iberian_tornatras
+# 	}
+# }
+
+# #Moro (Andulasian) Spread
+# province_event = {
+# 	id = ab_new_cultures.3
+# 	title = ab_new_cultures.3.t
+# 	desc = ab_new_cultures.3.d
+# 	picture = CULTURE_eventPicture
+
+# 	hidden = yes
+
+# 	mean_time_to_happen = {
+# 		months = 240
+# 	}
+
+# 	trigger = {
+# 	religion = sunni
+#     owner = {
+#         has_country_flag = moro_culture_spread
+#     }
+#     NOT = {
+#         culture_group = iberian
+#     }
+#     OR = {
+#         area = palawan_area
+#         area = luzon_area
+#         area = visayas_area
+#         area = west_mindanao_area
+#         area = mindanao_area
+#         area = southern_luzon_area
+#     }
+# }
+
+
+# 	option = {
+# 		name = ab_new_cultures.3.a
+# 		change_culture = andalucian_moro
+# 	}
+# }
+
+# #Hispano-Chinese (Iberian) 
+# province_event = {
+# 	id = ab_new_cultures.4
+# 	title = ab_new_cultures.4.t
+# 	desc = ab_new_cultures.4.d
+# 	picture = CULTURE_eventPicture
+
+# 	hidden = yes
+
+# 	mean_time_to_happen = {
+# 		months = 240
+# 	}
+
+# 	trigger = {
+# 	religion = catholic
+# 		owner = {
+# 			has_country_flag = chino_hispano_culture_spread
+# 		}
+# 		NOT = {
+# 			culture_group = iberian
+# 		}
+# 		OR = {
+# 			region = north_china_region
+# 			region = south_china_region
+# 		}
+# 	}
+
+# 	option = {
+# 		name = ab_new_cultures.4.a
+# 		change_culture = chino_hispano
+# 	}
+# }
+
+
+#Siniczed Japanese Spread 
+province_event = {
+	id = ab_new_cultures.5
+	title = ab_new_cultures.5.t
+	desc = ab_new_cultures.5.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+	religion = confucianism
+		owner = {
+			has_country_flag = sinicized_japanese_culture_spread
+		}
+		NOT = {
+			culture_group = sinico_japanese
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.6.a
+		change_culture = sinico_japanese
+	}
+}
+
+#Sino-Korean (Sino-Japanese) Spread
+province_event = {
+	id = ab_new_cultures.19
+	title = ab_new_cultures.19.t
+	desc = ab_new_cultures.19.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+trigger = {
+	religion = shinto
+    owner = {
+        has_country_flag = sinicized_korean_culture_spread
+    }
+	NOT = {
+		OR = {
+			culture_group = sinico_japanese
+		    culture_group = korean_new
+		}
+	}
+    OR = {
+      region = korea_region
+    }
+}
+	
+	option = {
+		name = ab_new_cultures.19.a	
+		change_culture = korean_new
+	}
+}
+
+#Zainichi (Japanese) Spread
+province_event = {
+	id = ab_new_cultures.6
+	title = ab_new_cultures.6.t
+	desc = ab_new_cultures.6.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+#Will fire for all non japanese_g province in the Korea region
+trigger = {
+	religion = shinto
+    owner = {
+        has_country_flag = japanese_zainichi_culture_spread
+    }
+	NOT = {
+		OR = {
+			culture_group = sinico_japanese
+			culture_group = japanese_g
+		    culture_group = korean_new
+		}
+	}
+    OR = {
+      region = korea_region
+    }
+	NOT = {
+		has_country_flag = sinicized_korean_culture_spread
+	}
+}
+	
+	option = {
+		name = ab_new_cultures.6.a	
+		change_culture = japanese_zainichi
+	}
+}
+
+#Wolgadeutsche German cultures Spread 
+province_event = {
+	id = ab_new_cultures.7
+	title = ab_new_cultures.7.t
+	desc = ab_new_cultures.7.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = wolgadeutsche_culture_spread
+		}
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic 
+
+			}
+		}
+		OR = {
+			area = astrakhan_area
+			area = lower_don_area
+			area = saratov_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.7.a
+		change_culture = wolgadeutsche_culture
+	}
+
+
+}
+
+
+#Schwarzmeerdeutsche (German cultures Spread 
+province_event = {
+	id = ab_new_cultures.8
+	title = ab_new_cultures.8.t
+	desc = ab_new_cultures.8.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = schwarzmeerdeutsche_culture_spread
+		}
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic 
+			}
+		}
+		OR = {
+			area = crimea_area
+			area = zaporizhia_area
+			area = azov_area
+			area = yedisan_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.8.a
+		change_culture = schwarzmeerdeutsche_culture
+	}
+
+}
+
+#Donauschwaben (German cultures Spread 
+province_event = {
+	id = ab_new_cultures.9
+	title = ab_new_cultures.9.t
+	desc = ab_new_cultures.9.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = donauschwaben_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic 
+			}
+		}
+		OR = {
+			area = transdanubia_area
+			area = centralhungary_area
+			area = alfold_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.9.a
+		change_culture = donauschwaben_culture
+	}
+
+}
+
+#Mantaken (German) Spread 
+province_event = {
+	id = ab_new_cultures.10
+	title = ab_new_cultures.10.t
+	desc = ab_new_cultures.10.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = mantaken_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic 
+			}
+		}
+		OR = {
+			area = southern_transylvania_area
+			area = transylvania_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.10.a
+		change_culture = mantaken_culture
+	}
+
+}
+
+#Litivin Spread 
+province_event = {
+	id = ab_new_cultures.11
+	title = ab_new_cultures.11.t
+	desc = ab_new_cultures.11.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = rus_litvin_culture_spread
+		}
+		culture_group = baltic
+		any_neighbor_province = {
+			culture = Litvin
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.11.a
+		change_culture = Litvin
+		change_original_culture = Litvin
+	}
+
+}
+
+#Olender (Dutch) Spread 
+province_event = {
+	id = ab_new_cultures.12
+	title = ab_new_cultures.12.t
+	desc = ab_new_cultures.12.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = aba_ned_baltic_settlement
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+				culture_group = west_germanic 
+			}
+		}
+		OR = {
+			region = baltic_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.12.a
+		change_culture = olender_culture
+		change_original_culture = olender_culture
+	}
+
+}
+
+#Weichseldeutsche (German) Spread 
+province_event = {
+	id = ab_new_cultures.13
+	title = ab_new_cultures.13.t
+	desc = ab_new_cultures.13.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = aba_ger_weichseldeutsche_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+				culture_group = west_germanic 
+			}
+		}
+		OR = {
+			region = poland_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.13.a
+		change_culture = weichseldeutsche_culture
+	}
+
+}
+
+#Russlanddeutsche (German) Spread 
+province_event = {
+	id = ab_new_cultures.14
+	title = ab_new_cultures.14.t
+	desc = ab_new_cultures.14.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = aba_ger_russlanddeutsche_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+				culture_group = west_germanic 
+			}
+		}
+		OR = {
+			region = russia_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.14.a
+		change_culture = russlanddeutsche_culture
+	}
+
+}
+
+#Wolhynien (German) Spread 
+province_event = {
+	id = ab_new_cultures.15
+	title = ab_new_cultures.15.t
+	desc = ab_new_cultures.15.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = aba_ger_wolhynien_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+				culture_group = west_germanic 
+			}
+		}
+		OR = {
+			region = ruthenia_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.15.a
+		change_culture = wolhynien_culture
+	}
+
+}
+
+#jugoslawienschwaben (German) Spread 
+province_event = {
+	id = ab_new_cultures.16
+	title = ab_new_cultures.16.t
+	desc = ab_new_cultures.16.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+		}
+		owner = {
+			has_country_flag = aba_ger_wolhynien_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+				culture_group = west_germanic 
+			}
+		}
+		OR = {
+			region = balkan_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.16.a
+		change_culture = jugoslawienschwaben_culture
+	}
+
+}
+
+#Anglo-Norse (Norwegian) Spread 
+province_event = {
+	id = ab_new_cultures.17
+	title = ab_new_cultures.17.t
+	desc = ab_new_cultures.17.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_nor_anglonorse_spread
+		}
+		culture = english
+		OR = {
+			religion = reformed_norse
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			OR = {
+				culture_group = scandinavian
+			}
+		}
+		OR = {
+			region = british_isles_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.17.a
+		change_culture = anglonorse_culture
+	}
+
+}
+
+#Norse_Gaelic (Norwegian) Spread 
+province_event = {
+	id = ab_new_cultures.18
+	title = ab_new_cultures.18.t
+	desc = ab_new_cultures.18.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_nor_norsegaelic_spread
+		}
+		OR = {
+			culture = norse_gael
+			culture = irish
+		}
+		OR = {
+			religion = reformed_norse
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			OR = {
+				culture_group = scandinavian
+			}
+		}
+		OR = {
+			region = british_isles_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.18.a
+		change_culture = norse_gael_nordic
+	}
+
+}
+
+#Gallic Culture Spread (Gallia/Britanny) Spread 
+province_event = {
+	id = ab_new_cultures.20
+	title = ab_new_cultures.20.t
+	desc = ab_new_cultures.20.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_gallic_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = gaelic
+			}
+		}
+		OR = {
+			region = france_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.20.a
+		change_culture = Gallic
+	}
+
+}
+
+
+
+
+
