@@ -3,38 +3,11 @@ country_decisions = {
 	romanian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = {
-				is_or_was_tag = {
-					tag = WAL
-				}
+				tag = MOL
+				was_tag = MOL
 			}
 			NOT = { exists = RMN }
-			OR = {
-				primary_culture = Wallachian
-				primary_culture = Moldavian
-				primary_culture = transylvanian
-				primary_culture = morlaci
-				primary_culture = panonic
-				primary_culture = adriaticii
-				primary_culture = amiaza
-				primary_culture = cisalpini
-				primary_culture = latini
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 		}
 		
 		provinces_to_highlight = {
@@ -52,15 +25,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
 			owns_core_province = 158	# Transylvania
 			owns_core_province = 160	# Oltenia
 			owns_core_province = 161	# Wallachia
 			owns_core_province = 268	# Bessarabia
 			owns_core_province = 1756	# Budjak
 			owns_core_province = 1951
+			is_at_war = no
+            is_subject = no
 		}
 		effect = {
 			change_tag = RMN

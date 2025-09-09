@@ -2,20 +2,8 @@ country_decisions = {
 	wal_form_the_united_houses = {
 		major = yes
 		potential = {
-			is_or_was_wallachia = yes
+			tag = WAL
 			has_wallachia_purged_the_estates = no
-			NOT = {
-				has_country_flag = formed_the_united_houses
-			}
-			NOT = {
-				tag = ROD
-			}
-			NOT = {
-				tag = HLR
-			}
-			NOT = {
-				tag = RMN
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -33,12 +21,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			NOT = {
-				exists = TUH
-			}
+			tag = WAL
 			mission_completed = wal_the_great_feast
 			transylvania_area = {
 				type = all
@@ -64,11 +47,10 @@ country_decisions = {
 				is_core = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			is_subject = no
+			is_at_war = no
 		}
 		effect = {
-			hidden_effect = {
-				set_country_flag = formed_the_united_houses
-			}
 			change_tag = TUH
 			if = {
 				limit = {

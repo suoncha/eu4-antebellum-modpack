@@ -2247,6 +2247,9 @@ num_of_completed_idea_groups_adm = {
 		full_idea_group = administrative_ideas
 		full_idea_group = humanist_ideas
 		full_idea_group = infrastructure_ideas
+		# AB [[[
+		full_idea_group = state_governance_ideas
+		# ]]]
 		amount = $amount$
 	}
 }
@@ -2261,6 +2264,11 @@ num_of_completed_idea_groups_dip = {
 		full_idea_group = maritime_ideas
 		full_idea_group = influence_ideas
 		full_idea_group = court_ideas
+		# AB [[[
+		full_idea_group = imperial_ideas
+		full_idea_group = celestial_ideas
+		full_idea_group = globaldomination_ideas
+		# ]]]
 		amount = $amount$
 	}
 }
@@ -2279,6 +2287,9 @@ num_of_completed_idea_groups_mil = {
 		full_idea_group = horde_gov_ideas
 		full_idea_group = plutocracy_ideas
 		full_idea_group = mercenary_ideas
+		# AB [[[
+		full_idea_group = professional_ideas
+		# ]]]
 		amount = $amount$
 	}
 }
@@ -4387,7 +4398,7 @@ has_not_locked_first_tier_reform = {
 	NOT = { has_reform = self_governing_colony_government }
 	NOT = { has_reform = trade_company_government }
 	NOT = { has_reform = english_parliamentary_republic_government }
-	NOT = { has_reform = papacy_reform }
+	NOT = { tag = PAP }
 	NOT = { has_reform = caliphate_theocracy_reform }
 	NOT = { has_reform = fifth_monarchists_reform }
 	NOT = { has_reform = great_mongol_state_reform }	

@@ -4523,17 +4523,6 @@ on_country_creation = {
 	if = {
 		limit = {
 			tag = PAP
-			OR = {
-				NOT = {
-					religion = catholic
-				}
-				NOT = {
-					has_reform = papacy_reform
-				}
-				NOT = {
-					government = theocracy
-				}
-			}
 		}
 		change_religion = catholic
 		change_government = theocracy

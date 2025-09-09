@@ -967,3 +967,43 @@ wallachia_buffed_cossacks = {
 	cavalry_flanking = 0.5
 	is_cossack_modifier = yes
 }
+
+dominance_of_basarab = {
+	basarab_faction_influence = 0.05
+}
+
+dominance_of_bibescu = {
+	bibescu_faction_influence = 0.05
+}
+
+dominance_of_draculesti = {
+	draculesti_faction_influence = 0.05
+}
+
+dominance_of_brancoveanu = {
+	brancoveanu_faction_influence = 0.05
+}
+
+dominance_of_movilesti = {
+	movilesti_faction_influence = 0.05
+}
+
+dominance_of_danesti = {
+	danesti_faction_influence = 0.05
+}
+
+dominance_of_ghica = {
+	ghica_faction_influence = 0.05
+}
+
+dominance_of_racovita = {
+	racovita_faction_influence = 0.05
+}
+
+dominance_of_cantacuzino = {
+	cantacuzino_faction_influence = 0.05
+}
+
+dominance_of_mavrocordatos = {
+	mavrocordatos_faction_influence = 0.05
+}

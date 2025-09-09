@@ -8,9 +8,7 @@ ab_romania_1 = {
 		}
 		OR = {
 			tag = MOL
-			tag = TRA
-			tag = RMN
-			tag = UNP
+			was_tag = MOL
 		}
 	}
 	has_country_shield = yes
@@ -156,9 +154,7 @@ ab_romania_2 = {
 		}
 		OR = {
 			tag = MOL
-			tag = TRA
-			tag = RMN
-			tag = UNP
+			was_tag = MOL
 		}
 	}
 	has_country_shield = yes
@@ -395,9 +391,7 @@ ab_romania_3 = {
 		}
 		OR = {
 			tag = MOL
-			tag = TRA
-			tag = RMN
-			tag = UNP
+			was_tag = MOL
 		}
 	}
 	has_country_shield = yes
@@ -672,9 +666,7 @@ ab_romania_4 = {
 		}
 		OR = {
 			tag = MOL
-			tag = TRA
-			tag = RMN
-			tag = UNP
+			was_tag = MOL
 		}
 	}
 	has_country_shield = yes
@@ -841,9 +833,7 @@ ab_romania_5 = {
 		}
 		OR = {
 			tag = MOL
-			tag = TRA
-			tag = RMN
-			tag = UNP
+			was_tag = MOL
 		}
 	}
 	has_country_shield = yes

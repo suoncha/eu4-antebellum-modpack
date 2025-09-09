@@ -44,101 +44,94 @@ romanian_elective_monarchy_mechanic = {
 				hidden_effect = {
 					tuh_apply_government_mechanic_cooldown = yes
 				}
-				add_country_modifier = {
-					name = hidden_prerogative_trigger_modifier
-					duration = 7300
-					hidden = yes
+				if = {
+					limit = {
+						dynasty = "Basarab"
+					}
+					add_country_modifier = {
+						name = tooltip_basarab_dynastic_prerogative
+						duration = 7300
+					}
 				}
-				tooltip = {
-					if = {
-						limit = {
-							dynasty = "Basarab"
-						}
-						add_country_modifier = {
-							name = tooltip_basarab_dynastic_prerogative
-							duration = 7300
-						}
+				else_if = {
+					limit = {
+						dynasty = "Bibescu"
 					}
-					else_if = {
-						limit = {
-							dynasty = "Bibescu"
-						}
-						add_country_modifier = {
-							name = tooltip_bibescu_dynastic_prerogative
-							duration = 7300
-						}
+					add_country_modifier = {
+						name = tooltip_bibescu_dynastic_prerogative
+						duration = 7300
 					}
-					else_if = {
-						limit = {
-							dynasty = "Draculesti"
-						}
-						add_country_modifier = {
-							name = tooltip_draculesti_dynastic_prerogative
-							duration = 7300
-						}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Draculesti"
 					}
-					else_if = {
-						limit = {
-							dynasty = "Brancoveanu"
-						}
-						add_country_modifier = {
-							name = tooltip_brancoveanu_dynastic_prerogative
-							duration = 7300
-						}
+					add_country_modifier = {
+						name = tooltip_draculesti_dynastic_prerogative
+						duration = 7300
 					}
-					else_if = {
-						limit = {
-							dynasty = "Movilesti"
-						}
-						add_country_modifier = {
-							name = tooltip_movilesti_dynastic_prerogative
-							duration = 7300
-						}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Brancoveanu"
 					}
-					else_if = {
-						limit = {
-							dynasty = "Danesti"
-						}
-						add_country_modifier = {
-							name = tooltip_danesti_dynastic_prerogative
-							duration = 7300
-						}
+					add_country_modifier = {
+						name = tooltip_brancoveanu_dynastic_prerogative
+						duration = 7300
 					}
-					else_if = {
-						limit = {
-							dynasty = "Ghica"
-						}
-						add_country_modifier = {
-							name = tooltip_ghica_dynastic_prerogative
-							duration = 7300
-						}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Movilesti"
 					}
-					else_if = {
-						limit = {
-							dynasty = "Racovita"
-						}
-						add_country_modifier = {
-							name = tooltip_racovita_dynastic_prerogative
-							duration = 7300
-						}
+					add_country_modifier = {
+						name = tooltip_movilesti_dynastic_prerogative
+						duration = 7300
 					}
-					else_if = {
-						limit = {
-							dynasty = "Cantacuzino"
-						}
-						add_country_modifier = {
-							name = tooltip_cantacuzino_dynastic_prerogative
-							duration = 7300
-						}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Danesti"
 					}
-					else_if = {
-						limit = {
-							dynasty = "Mavrocordatos"
-						}
-						add_country_modifier = {
-							name = tooltip_mavrocordatos_dynastic_prerogative
-							duration = 7300
-						}
+					add_country_modifier = {
+						name = tooltip_danesti_dynastic_prerogative
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Ghica"
+					}
+					add_country_modifier = {
+						name = tooltip_ghica_dynastic_prerogative
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Racovita"
+					}
+					add_country_modifier = {
+						name = tooltip_racovita_dynastic_prerogative
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Cantacuzino"
+					}
+					add_country_modifier = {
+						name = tooltip_cantacuzino_dynastic_prerogative
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						dynasty = "Mavrocordatos"
+					}
+					add_country_modifier = {
+						name = tooltip_mavrocordatos_dynastic_prerogative
+						duration = 7300
 					}
 				}
 			}
@@ -241,51 +234,77 @@ romanian_elective_monarchy_mechanic = {
 				}
 				if = {
 					limit = {
-						has_government_attribute = revive_public_punishments_shorter_cooldown
-					}
-					add_country_modifier = {
-						name = hidden_revive_public_punishments
-						duration = 3650
-						hidden = yes
-					}
-				}
-				else = {
-					add_country_modifier = {
-						name = hidden_revive_public_punishments
-						duration = 7300
-						hidden = yes
-					}
-				}
-				if = {
-					limit = {
 						dynasty = "Draculesti"
 					}
 					custom_tooltip = revive_public_punishments_draculesti_tooltip_yes
+					if = {
+						limit = {
+							has_government_attribute = revive_public_punishments_shorter_cooldown
+						}
+						add_country_modifier = {
+							name = tooltip_revive_public_punishments_draculesti
+							duration = 3650
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = tooltip_revive_public_punishments_draculesti
+							duration = 7300
+						}
+					}
+					custom_tooltip = revive_public_punishments_else_tooltip_no
+					tooltip = {
+						if = {
+							limit = {
+								has_government_attribute = revive_public_punishments_shorter_cooldown
+							}
+							add_country_modifier = {
+								name = tooltip_revive_public_punishments
+								duration = 3650
+							}
+						}
+						else = {
+							add_country_modifier = {
+								name = tooltip_revive_public_punishments
+								duration = 7300
+							}
+						}
+					}
 				}
 				else = {
 					custom_tooltip = revive_public_punishments_draculesti_tooltip_no
-				}
-				tooltip = {
-					add_country_modifier = {
-						name = tooltip_revive_public_punishments_draculesti
-						duration = 7300
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							dynasty = "Draculesti"
+					tooltip = {
+						if = {
+							limit = {
+								has_government_attribute = revive_public_punishments_shorter_cooldown
+							}
+							add_country_modifier = {
+								name = tooltip_revive_public_punishments_draculesti
+								duration = 3650
+							}
+						}
+						else = {
+							add_country_modifier = {
+								name = tooltip_revive_public_punishments_draculesti
+								duration = 7300
+							}
 						}
 					}
 					custom_tooltip = revive_public_punishments_else_tooltip_yes
-				}
-				else = {
-					custom_tooltip = revive_public_punishments_else_tooltip_no
-				}
-				tooltip = {
-					add_country_modifier = {
-						name = tooltip_revive_public_punishments
-						duration = 7300
+					if = {
+						limit = {
+							has_government_attribute = revive_public_punishments_shorter_cooldown
+						}
+						add_country_modifier = {
+							name = tooltip_revive_public_punishments
+							duration = 3650
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = tooltip_revive_public_punishments
+							duration = 7300
+						}
 					}
 				}
 			}

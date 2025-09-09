@@ -163,7 +163,6 @@ ab_wal_boier_compromise_missions = {
 				limit = {
 					tag = DAC
 				}
-				set_country_flag = formed_the_united_houses
 				change_tag = TUH
 				if = {
 					limit = {

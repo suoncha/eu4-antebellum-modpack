@@ -363,15 +363,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_basarab_coalition_trigger
+			name = tooltip_basarab_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_basarab_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = basarab_faction
@@ -386,15 +379,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_basarab_coalition_trigger
+			name = tooltip_basarab_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_basarab_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = basarab_faction
@@ -412,15 +398,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_bibescu_coalition_trigger
+			name = tooltip_bibescu_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_bibescu_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = bibescu_faction
@@ -435,15 +414,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_bibescu_coalition_trigger
+			name = tooltip_bibescu_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_bibescu_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = bibescu_faction
@@ -461,15 +433,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_draculesti_coalition_trigger
+			name = tooltip_draculesti_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_draculesti_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = draculesti_faction
@@ -484,15 +449,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_draculesti_coalition_trigger
+			name = tooltip_draculesti_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_draculesti_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = draculesti_faction
@@ -510,15 +468,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_brancoveanu_coalition_trigger
+			name = tooltip_brancoveanu_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_brancoveanu_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = brancoveanu_faction
@@ -533,15 +484,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_brancoveanu_coalition_trigger
+			name = tooltip_brancoveanu_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_brancoveanu_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = brancoveanu_faction
@@ -556,15 +500,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_movilesti_coalition_trigger
+			name = tooltip_movilesti_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_movilesti_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = movilesti_faction
@@ -583,15 +520,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_danesti_coalition_trigger
+			name = tooltip_danesti_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_danesti_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = danesti_faction
@@ -606,15 +536,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_danesti_coalition_trigger
+			name = tooltip_danesti_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_danesti_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = danesti_faction
@@ -632,15 +555,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_ghica_coalition_trigger
+			name = tooltip_ghica_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_ghica_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = ghica_faction
@@ -655,15 +571,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_ghica_coalition_trigger
+			name = tooltip_ghica_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_ghica_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = ghica_faction
@@ -681,15 +590,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_racovita_coalition_trigger
+			name = tooltip_racovita_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_racovita_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = racovita_faction
@@ -704,15 +606,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_racovita_coalition_trigger
+			name = tooltip_racovita_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_racovita_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = racovita_faction
@@ -730,15 +625,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_cantacuzino_coalition_trigger
+			name = tooltip_cantacuzino_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_cantacuzino_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = cantacuzino_faction
@@ -753,15 +641,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_cantacuzino_coalition_trigger
+			name = tooltip_cantacuzino_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_cantacuzino_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = cantacuzino_faction
@@ -779,15 +660,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = hidden_mavrocordatos_coalition_trigger
+			name = tooltip_mavrocordatos_coalition
 			duration = 7300
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_mavrocordatos_coalition
-				duration = 7300
-			}
 		}
 		add_faction_influence = {
 			faction = mavrocordatos_faction
@@ -802,15 +676,8 @@ country_event = {
 			dynasty = "Movilesti"
 		}
 		add_country_modifier = {
-			name = hidden_mavrocordatos_coalition_trigger
+			name = tooltip_mavrocordatos_coalition
 			duration = 10950
-			hidden = yes
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = tooltip_mavrocordatos_coalition
-				duration = 10950
-			}
 		}
 		add_faction_influence = {
 			faction = mavrocordatos_faction
@@ -831,9 +698,6 @@ country_event = {
 		is_or_was_wallachia = yes
 		#TODO
 		#ADD CHECKS FOR MOLDAVIA
-	}
-	mean_time_to_happen = {
-		days = 0
 	}
 	option = {
 		name = tuh_events.2.a
@@ -859,11 +723,9 @@ country_event = {
 		add_stability = 1
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = cantacuzino_modifier_tooltip
-		tooltip = {
-			add_country_modifier = {
-				name = return_of_the_emperor_tooltip_mod
-				duration = -1
-			}
+		add_country_modifier = {
+			name = return_of_the_emperor_tooltip_mod
+			duration = -1
 		}
 	}
 }

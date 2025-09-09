@@ -7,6 +7,9 @@ country_decisions = {
 			133
 		}
 		allow = {
+			hidden_trigger = {
+				has_country_flag = allow_aqa_pu_decision
+			}
 			languedoc_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -37,12 +40,9 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = allow_aqa_pu_decision
-			NOT = {
-				has_country_flag = released_aquitania_as_personal_union
-			}
 		}
 		effect = {
-			set_country_flag = released_aquitania_as_personal_union
+			clr_country_flag = allow_aqa_pu_decision
 			custom_tooltip = release_aquitania_effect_tooltip
 			hidden_effect = {
 				every_province = {

@@ -16,7 +16,6 @@ updated_the_lost_world06 = {
 				tag = GAL
 				tag = NAV
 				tag = WAL
-				tag = MOL
 			}
 		}
 	}

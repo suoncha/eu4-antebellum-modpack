@@ -2,25 +2,8 @@ country_decisions = {
 	wal_form_dacia = {
 		major = yes
 		potential = {
-			is_or_was_wallachia = yes
-			NOT = {
-				has_country_flag = formed_dacia
-			}
-			NOT = {
-				tag = ROD
-			}
-			NOT = {
-				tag = HLR
-			}
-			NOT = {
-				tag = TUH
-			}
-			NOT = {
-				tag = RMN
-			}
-			NOT = {
-				mission_completed = wal_the_great_feast
-			}
+			tag = WAL
+			NOT = { mission_completed = wal_the_great_feast }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -38,17 +21,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			NOT = {
-				exists = DAC
-			}
+			tag = WAL
 			if = {
 				limit = {
-					NOT = {
-						has_country_flag = early_form_dacia
-					}
+					NOT = { has_country_flag = early_form_dacia }
 				}
 				adm_tech = 10
 			}
@@ -76,11 +52,10 @@ country_decisions = {
 				is_core = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			is_subject = no
+			is_at_war = no
 		}
 		effect = {
-			hidden_effect = {
-				set_country_flag = formed_dacia
-			}
 			hidden_effect = {
 				export_government_power_to_variable = {
 					mechanic_type = wallachian_terror_mechanic

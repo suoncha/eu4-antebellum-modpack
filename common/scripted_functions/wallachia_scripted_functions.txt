@@ -4,7 +4,7 @@ can_change_culture = {
 		potential = {
 			culture = bulgarian
 			FROM = {
-				are_bulgars_an_underclass = yes
+				has_country_flag = wal_bulgarian_underclass
 			}
 		}
 		allow = {
@@ -20,7 +20,7 @@ can_add_seat_in_parliament = {
 			culture = bulgarian
 			OR = {
 				FROM = {
-					are_bulgars_an_underclass = yes
+					has_country_flag = wal_bulgarian_underclass
 				}
 				has_province_modifier = wallachia_aftermath_of_the_krushenieto
 			}
