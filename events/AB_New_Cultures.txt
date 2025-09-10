@@ -1,4 +1,4 @@
-﻿namespace = ab_new_cultures
+namespace = ab_new_cultures
 normal_or_historical_nations = yes
 
 #Nikkei (Japanese) Spread

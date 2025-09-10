@@ -38,7 +38,7 @@
  JAP_SJ_tooltip: "The §YSino-Japanese§! and §YSino-Korean§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese and Korean§! provinces."
  JAP_SJ_unrest_tooltip: "Our Japanese provinces won't take §Rkindly§! to this..."
  JAP_SJ_decline_tooltip: "§RWe will reject Chinese influence, much to the Ire of our Chinese subjects...§!"
- JAP_convert_culture: "§YSinification of Japan§!"
+ JAP_convert_culture: "§YSinification of Japan?"§!"
 #Germans
  GER_wolgadeutsche_tooltip: "\nThe §YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
  GER_donauschwaben_tooltip: "\nThe §YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
@@ -95,4 +95,5 @@
 #Modifiers
 #Sweden
 aba_swe_caroleans: "Carolean Paladins"
-aba_swe_caroleans_prov: "Home of the Caroleans Paladins"
+aba_swe_caroleans_prov: "Home of the Caroleans Paladins'
+

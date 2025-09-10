@@ -135,7 +135,6 @@ glh_eu_first_tengri_branching = {
 				has_country_flag = glh_picked_buddhist
 				has_country_flag = glh_picked_judaism
 				has_country_flag = glh_picked_nestorian
-				has_country_flag = glh_picked_zoroastrian
 			}
 		}
 	}
@@ -148,8 +147,13 @@ glh_eu_first_tengri_branching = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}	
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
@@ -157,7 +161,10 @@ glh_eu_first_tengri_branching = {
 				has_estate_privilege = estate_church_karma_temples
 				num_of_owned_provinces_with = {
 					value = 10
-					has_tax_building_trigger = yes
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
 				}
 			}
 		}
@@ -223,7 +230,7 @@ glh_eu_first_tengri_branching = {
 				duration = -1
 			}
 		}
-	}
+	}	
 }
 
 glh_eu_first_buddhist_branching = {
@@ -242,7 +249,6 @@ glh_eu_first_buddhist_branching = {
 				has_country_flag = glh_picked_tengri
 				has_country_flag = glh_picked_judaism
 				has_country_flag = glh_picked_nestorian
-				has_country_flag = glh_picked_zoroastrian
 			}
 		}
 	}
@@ -280,18 +286,26 @@ glh_eu_first_buddhist_branching = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}	
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
-            OR = {
-                has_estate_privilege = estate_church_karma_temples
-                religious_unity = 0.9
-            }
+			OR = {
+				has_estate_privilege = estate_church_karma_temples
+				religious_unity = 0.9
+			}
 			num_of_owned_provinces_with = {
 				value = 15
-				has_tax_building_trigger = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
 			}
 		}
 		
@@ -329,7 +343,7 @@ glh_eu_first_buddhist_branching = {
 				duration = -1
 			}
 		}
-	}
+	}	
 }
 
 glh_eu_first_sunni_branching = {
@@ -348,7 +362,6 @@ glh_eu_first_sunni_branching = {
 				has_country_flag = glh_picked_buddhist
 				has_country_flag = glh_picked_judaism
 				has_country_flag = glh_picked_nestorian
-				has_country_flag = glh_picked_zoroastrian
 			}
 		}
 	}
@@ -426,8 +439,13 @@ glh_eu_first_sunni_branching = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}	
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
@@ -437,7 +455,10 @@ glh_eu_first_sunni_branching = {
 			}
 			num_of_owned_provinces_with = {
 				value = 15
-				has_tax_building_trigger = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
 			}
 		}
 		
@@ -487,7 +508,7 @@ glh_eu_first_sunni_branching = {
 				duration = -1
 			}
 		}
-	}
+	}	
 }
 
 glh_eu_first_christian_branching = {
@@ -508,7 +529,6 @@ glh_eu_first_christian_branching = {
 				has_country_flag = glh_picked_sunni
 				has_country_flag = glh_picked_buddhist
 				has_country_flag = glh_picked_judaism
-				has_country_flag = glh_picked_zoroastrian
 			}
 		}
 	}
@@ -546,14 +566,22 @@ glh_eu_first_christian_branching = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}	
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
 			num_of_owned_provinces_with = {
 				value = 15
-				has_tax_building_trigger = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
 			}
 		}
 		
@@ -587,10 +615,12 @@ glh_eu_first_christian_branching = {
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
 			patriarch_authority = 0.75
-			num_of_owned_provinces_with = {
-				value = 50
-				has_state_patriach = yes
-			}
+            calc_true_if = {
+                all_owned_province = {
+                    has_state_patriach = yes
+                }
+                amount = 50
+            }
         }
 		
 		effect = {
@@ -619,7 +649,6 @@ glh_eu_first_jewish_branching = {
 				has_country_flag = glh_picked_buddhist
 				has_country_flag = glh_picked_orthodox
 				has_country_flag = glh_picked_nestorian
-				has_country_flag = glh_picked_zoroastrian
 			}
 		}
 	}
@@ -658,14 +687,22 @@ glh_eu_first_jewish_branching = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}	
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
 			num_of_owned_provinces_with = {
 				value = 15
-				has_tax_building_trigger = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
 			}
 		}
 		
@@ -720,149 +757,6 @@ glh_eu_first_jewish_branching = {
 	}
 }
 
-glh_eu_first_zoroastrian_branching = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		tag = GLH
-		has_country_flag = glh_european_tree
-		NOT = { has_country_flag = glh_horde_tree }
-		has_country_flag = glh_picked_zoroastrian
-		NOT = {
-			OR = {
-				has_country_flag = glh_picked_tengri
-				has_country_flag = glh_picked_sunni
-				has_country_flag = glh_picked_buddhist
-				has_country_flag = glh_picked_orthodox
-				has_country_flag = glh_picked_nestorian
-				has_country_flag = glh_picked_judaism
-			}
-		}
-	}
-	has_country_shield = yes
-	
-	glh_mobeds = {
-		icon = mission_rajput_trade_guilds
-		required_missions = { }
-		position = 4
-		
-		trigger = {
-			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
-			estate_loyalty = {
-				estate = estate_church 
-				loyalty = 60 
-			}
-		}
-		
-		effect = {
-			custom_tooltip = add_25_dip_per_privilege_church_max_4
-			hidden_effect = {
-				for_privilege_given_to_estate = {
-					estate = church
-					max_privileges = 4
-					effect = "add_dip_power = 25"
-				}
-			}
-			add_country_modifier = {
-				name = "per_faith"
-				duration = 5475
-			}
-			define_advisor = {
-				type = inquisitor
-				skill = 2
-				religion = ROOT
-				culture = ROOT
-				cost_multiplier = 0.5
-			}
-		}
-	}
-
-	glh_eternal = {
-		icon = mission_fires
-		position = 5
-		required_missions = { glh_mobeds }
-		
-		provinces_to_highlight = {
-			owned_by = ROOT
-			NOT = { has_tax_building_trigger = yes }
-		}
-		
-		trigger = {
-			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
-			num_of_owned_provinces_with = {
-				value = 15
-				has_tax_building_trigger = yes
-			}
-		}
-		
-		effect = {
-			custom_tooltip = PER_TEMPLES
-			add_country_modifier = {
-				name = per_blessing_atar
-				duration = 5475
-			}
-			hidden_effect = {
-                for = {
-                    amount = 5
-                    effect = "
-                        random_owned_province = {
-							limit = {
-								has_tax_building_trigger = yes
-							}
-							add_base_tax = 1
-                        }
-                    "
-                }
-			}
-		}
-	}
-	
-	glh_birthplace = {
-		icon = mission_firetemple2
-		position = 6
-		required_missions = { glh_eternal }
-		
-		trigger = {
-			ab_not_in_mission_preview_mode = { key = AB_GLH_FAITH_QUESTION }
-			owns = 441
-			441 = {
-				has_tax_building_trigger = yes
-			}
-			441 = {
-				development = 15
-			}
-			441 = {
-				has_great_project = {
-					type = itchan_kala
-					tier = 3
-				}
-			}
-        }
-		
-		effect = {
-			custom_tooltip = ZUN_DIASPORA
-			hidden_effect = {
-                for = {
-                    amount = 10
-                    effect = "
-                        random_owned_province = {
-							limit = {
-								religion = zoroastrian
-							}
-							add_base_manpower = 1
-                        }
-                    "
-                }
-			}
-			add_country_modifier = {
-				name = "zun_yasna"
-				duration = -1
-			}
-		}
-	}
-}
-
 glh_eu_first2_group = {
 	slot = 1
 	generic = no
@@ -887,10 +781,12 @@ glh_eu_first2_group = {
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_TATARIA_HORDE }
-			num_of_owned_provinces_with = {
-				value = 10
-				region = crimea_region
-				development = 12
+			calc_true_if = {
+				all_owned_province = {
+					region = crimea_region
+					development = 12
+				}
+				amount = 10
 			}
 		}
 		
@@ -974,9 +870,9 @@ glh_eu_second_group = {
 			}
 			hidden_effect = {
 				change_estate_land_share = {
-                    estate = all
-                    share = -5
-                }
+					estate = all
+					share = -5
+				}
 			}
 			add_country_modifier = {
 				name = "gh_feudalism"
@@ -1052,7 +948,7 @@ glh_eu_second_group = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			has_road_building_trigger = no
+			NOT = { has_road_building_trigger = yes }
 		}
 		
 		trigger = {
@@ -1113,9 +1009,7 @@ glh_eu_second_group = {
 					limit = {
 						tag = GLH
 					}
-					country_event = {
-						id = ideagroups.1
-					}
+					swap_free_idea_group = yes
 				}
 			}
 		}
@@ -1145,10 +1039,10 @@ glh_eu_second_group = {
 				name = glh_hordes
 				duration = 9125
 			}
-			central_asia_region = {
+			central_asia_region  = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1180,17 +1074,17 @@ glh_eu_second_group = {
 				name = glh_siberian
 				duration = -1
 			}
-			mongolia_region = {
+			mongolia_region  = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			manchuria_region = {
+			manchuria_region  = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1212,7 +1106,9 @@ glh_eu_second_group = {
 		
 		provinces_to_highlight = {
 			region = mongolia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {
@@ -1333,7 +1229,9 @@ glh_eu_third_group = {
 						}
 					}
 				}
-				NOT = { exists = BYZ }
+				NOT = {
+					exists = BYZ
+				}
 			}
 		}
 		
@@ -1484,7 +1382,7 @@ glh_eu_fourth_group = {
 	}
 	
 	glh_caucasia = {
-		icon = the_alpine_wall
+		icon = prosper_in_piedmont
 		position = 4
 		required_missions = { glh_stabilize }
 		
@@ -1526,10 +1424,7 @@ glh_eu_fourth_group = {
 							}
 						}
 						ALN = {
-							has_opinion = {
-								who = GLH
-								value = 200
-							}
+							has_opinion = { who = GLH value = 200 } 
 						}
 					}
 					if = {
@@ -1541,10 +1436,7 @@ glh_eu_fourth_group = {
 							}
 						}
 						CMN = {
-							has_opinion = {
-								who = GLH
-								value = 200
-							}
+							has_opinion = { who = GLH value = 200 } 
 						}
 					}
 				}
@@ -1638,7 +1530,9 @@ glh_eu_fourth_group = {
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_TATARIA_HORDE }
-			310 = { country_or_non_sovereign_subject_holds = ROOT }
+			310 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {
@@ -1699,10 +1593,9 @@ glh_eu_fourth_group = {
 		}
 		
 		effect = {
-			country_event = { id = aba_glh_events.1 }
-			custom_tooltip = AB_EMPTY
 			set_government_rank = 3
 			custom_tooltip = GLH_ALL_RUS
+			country_event = { id = aba_glh_events.1 }
 			tooltip = {
 				add_nationalism = -5
 			}
@@ -1754,7 +1647,7 @@ glh_eu_fourth_group = {
 	
 	glh_finland = {
 		icon = mission_conquer_finland
-		position = 9
+		position = 10
 		required_missions = { glh_all_rus }
 		
 		provinces_to_highlight = {
@@ -1809,6 +1702,8 @@ glh_eu_fourth_group = {
 			}
 		}
 	}
+			
+	
 }
 
 glh_eu_fifth_group = {
@@ -1831,10 +1726,7 @@ glh_eu_fifth_group = {
 			owner = {
 				culture_group = east_slavic
 				NOT = {
-					has_opinion = {
-						who = GLH
-						value = 50
-					}
+					has_opinion = { who = GLH value = 50 } 
 				}
 			}
 		}
@@ -1843,12 +1735,9 @@ glh_eu_fifth_group = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_TATARIA_HORDE }
 			OR = {
 				calc_true_if = {
-					all_known_country = {
+					all_country = {
 						culture_group = east_slavic
-						has_opinion = {
-							who = GLH
-							value = 50
-						}
+						has_opinion = { who = GLH value = 50 } 
 					}
 					amount = 5
 				}
@@ -1968,9 +1857,12 @@ glh_eu_fifth_group = {
 					NOT = { owned_by = ROOT }
 					ROOT = {
 						NOT = {
-							num_of_owned_provinces_with = {
-								value = 15
-								culture = ruthenian
+							calc_true_if = {
+								all_owned_province = {
+									owned_by = ROOT
+									culture = ruthenian
+								}
+								amount = 15
 							}
 						}
 					}
@@ -1980,9 +1872,12 @@ glh_eu_fifth_group = {
 		
 		trigger = {
 			ab_not_in_mission_preview_mode = { key = AB_GLH_TATARIA_HORDE }
-			num_of_owned_provinces_with = {
-				value = 15
-				culture = ruthenian
+			calc_true_if = {
+				all_owned_province = {
+					culture = ruthenian
+					NOT = { nationalism = 1 }
+				}
+				amount = 15
 			}
 		}
 		
@@ -2092,55 +1987,7 @@ glh_eu_fifth_group = {
 				name = "gh_polish"
 				duration = -1
 			}
-			wendia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
-}
-
-#Grand Diocese
-glh_eu_fourth_group_diocese = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential = {
-		tag = GLH
-		has_country_flag = glh_european_tree
-		NOT = { has_country_flag = glh_horde_tree }
-		is_subject_of_type = grand_diocese_vassal
-	}
-	has_country_shield = yes
-
-	glh_wendia = {
-		icon = mission_wendia
-		position = 10	
-		required_missions = { glh_baltic glh_poland }
-		
-		provinces_to_highlight = {
-			region = wendia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			ab_not_in_mission_preview_mode = { key = AB_GLH_TATARIA_HORDE }
-			wendia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		
-		effect = {
-			ROM = {
-				country_event = {
-					id = ab_byzantium.84
-				}
-			}
-		}
-	}
 }

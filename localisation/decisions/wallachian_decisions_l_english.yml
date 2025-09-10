@@ -1,9 +1,0 @@
-﻿l_english:
- toggle_wallachian_terror_dynamic_country_color_title: "Toggle Dynamic Recoloring of Country Color"
- toggle_wallachian_terror_dynamic_country_color_desc: "When enabled, our country's color will change depending on how much §YTerror§! we have. At §Y0 Terror§!, we will have our default color and as we gain more §YTerror§!, our country's color will become more §Rblood red§!."
- enable_wallachian_terror_dynamic_country_color: "Enable dynamic recoloring of country color"
- disable_wallachian_terror_dynamic_country_color: "Disable dynamic recoloring of country color"
- release_aquitania_as_personal_union_title: "Release @AQA §Y[AQA.GetName]§! as a junior partner."
- release_aquitania_as_personal_union_desc: "The vast lands of Southern Gaul require dedicated governance. The Sfatul Tarii has decreed that a new throne shall be raised in Aquitaine, bound in personal union to our own crown. This new kingdom will serve as a powerful testament to the glory and reach of our elective union."
- release_aquitania_effect_tooltip: "We will release @AQA §Y[AQA.GetName]§! as a junior partner in a personal union.\n@AQA §Y[AQA.GetName]§! will be given every owned province in §YGascony§!, §YLanguedoc§!, §YGuyenne§!, and §YAuvergne§!.\n§RWe will lose a core on every province that is given to @AQA §Y[AQA.GetName]§!.§!\n@AQA §Y[AQA.GetName]§! will gain a permanent claim on all provinces in the region of §YFrance§! that's not currently owned by either of us."
- UNITE_ORIGINAL_ROMANIAN_CULTURE: "Every owned §YWallachian§!, §YMoldavian§!, and §YTransylvanian§! province will adopt the new §YRomanian§! culture."

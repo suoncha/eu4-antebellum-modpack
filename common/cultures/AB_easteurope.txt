@@ -8,23 +8,23 @@ Finnic = {
 			Mannerheim Furuhjelm Aminoff Perkele Armfelt Carpelan Rehbinder Schulman
 		}
 		male_names = {
-			Eerikki Niklas V√§in√§m√∂inen Aato Fredrik Jani Aleksanteri Edvard Jaakko Juha Aapeli Alpertti Antero 
+			Eerikki Niklas V‰in‰mˆinen Aato Fredrik Jani Aleksanteri Edvard Jaakko Juha Aapeli Alpertti Antero 
 			Eino Erno Heikki Jooseppi Jyri Kaarle Kristian Lauri Mainio Mikael Onni Otso Paavo Petteri Ransu 
 			Samuli Taavi Tauno Tuomas Valto Veli Vieno Vilhelmi Voitto Reino
 			Aatos Ahma Aimo Armas Arvo Asikko Ensio Haapa Hannu Havu Hintsa Ihanti Into Jalo Jurva 
 			Kalevi Kettu Kolli Lalli Lauri Laurence Lemetti Kaleva
-			Mielitty Miemo Mikko Michael Oiva Onni Otso Pyry P√§ivi√∂ Pentti Reko Sampo Satajalka 
-			Seppo Susi Tapani Terho Toivo Ukko Uoti Urho V√§in√∂ Satatieto
+			Mielitty Miemo Mikko Michael Oiva Onni Otso Pyry P‰iviˆ Pentti Reko Sampo Satajalka 
+			Seppo Susi Tapani Terho Toivo Ukko Uoti Urho V‰inˆ Satatieto
 			Valta Valto Veli Vesa Voitto Erkki Erik Kaarle Charles Johannes John Risto Christopher 
-			Olaf Petri Peter Henri Henry Yrj√∂ George Olavi
+			Olaf Petri Peter Henri Henry Yrjˆ George Olavi
 			Valteri Walter Riku Richard Matti Matthew Jaakoppi Jacob Taisto Paavo Paul Aatso Adam Ahvo 
 			Artur Asko Tuokko David Rieti Frederick Aarto
 			Kauro Gabriel Kuuti Knut Pekko Soini Sven Tuure Turo Tommo Tohmas Thomas
 		}
 		female_names = {
 			Tarja Aina Jaana
-			Aamu Aino Hell√§ Helmi Ilta Kaarina Catherine K√§py Kielo Kukka Lauha Lempi Mahla Maija 
-			Metta P√§iv√§ P√§ivi Pihla Pilvi Rauha Sisko Suoma Marja Mesi 
+			Aamu Aino Hell‰ Helmi Ilta Kaarina Catherine K‰py Kielo Kukka Lauha Lempi Mahla Maija 
+			Metta P‰iv‰ P‰ivi Pihla Pilvi Rauha Sisko Suoma Marja Mesi 
 			Taimi Terhi Titti Tuija Tuovi Tuuli Tuulikki Tyyne Tyyni Vanamo Venla Mielikki Hertta 
 			Inkeri Ilmatar Irene Irene Ilona Helen Kristiina Christina Loviisa
 			Elisabet Elisabeth Sohvi Sofia Auni Agnes Liekko Helen Kivutar Lemmikki Lyylikki Salme 
@@ -34,8 +34,8 @@ Finnic = {
 	karelian = {
 		primary = KRL
 		male_names = {
-			Mohkku Mokci N√°hkol N√°innas Njulgu Oav√°n Orddot R√°stos Riibma Ruigi S√°rra Speaidna Viggu Kaarel Kaaren Kahus Kaido 
-			Kalev Kalju Kaljuvald Kalle Kaomeel Karuvald Kaugemeel Kaupo Pihl Piho Pikne P√§evalemb P√§rt Raak Raho Rahuleid Sulev 
+			Mohkku Mokci N·hkol N·innas Njulgu Oav·n Orddot R·stos Riibma Ruigi S·rra Speaidna Viggu Kaarel Kaaren Kahus Kaido 
+			Kalev Kalju Kaljuvald Kalle Kaomeel Karuvald Kaugemeel Kaupo Pihl Piho Pikne P‰evalemb P‰rt Raak Raho Rahuleid Sulev 
 			Sutepelg Tambet Tarva Tarvet Dobrinya Dokya Dondy Gazheg Hulyen Inzhay Irter Lyneg Lysko Kezhapa Kezhay Kezhedey 
 			Setyamka Shindyay Shypicha Shyrpuzh Spira Syrka Tikshayka Tuhan Tyueykezhut Tyutyuk Tugan Kezhevat Kichay Koksha 
 			Kuaz Kudym-Osh Kya Kyldysin Malyaka Malyy Meltsayka Mosheg Nalka Turush Uchva Varaka Vechkas Velmayka Virdyan Viryas 
@@ -62,18 +62,18 @@ Finnic = {
 			Endel Endrik Enn Enno Ergo Erik Erki Erko Erlend Ermo Evald Evert Feliks Georg Gert Gunnar Gustav Hannes Hans 
 			Hardi Harri Heigo Heiki Heino Heiti Hendrik Henn Henri Hillar Iisak Illar Illimar Ilmar Ilmo Imre Indrek Innar 
 			Ivar Ivari Ivo Jaagup Jaak Jaakob Jaan Jaanus Jakob Janar Janek Janno Jass Joel Johannes Joona Joonas Joonatan 
-			Joosep Juhan Juho Jukk Juss J√ºrgen J√ºri J√ºrjo Kaarel Kaido Kajar Kalev Kaljo Kalju Kalle Kardo Karl Kaspar 
+			Joosep Juhan Juho Jukk Juss J¸rgen J¸ri J¸rjo Kaarel Kaido Kajar Kalev Kaljo Kalju Kalle Kardo Karl Kaspar 
 			Kaupo Kaur Kauri Ken Kermo Kert Kevin Koit Kristen Kristian Kristjan Kristo Kristofer Kuldar Kunnar Kusta 
-			Kustas Kustav K√ºllo Laur Lauri Leevi Leho Lembit Lennart Luukas Maanus Maarjo Madi Madis Magnus Maido Mairo 
+			Kustas Kustav K¸llo Laur Lauri Leevi Leho Lembit Lennart Luukas Maanus Maarjo Madi Madis Magnus Maido Mairo 
 			Mait Marek Margo Margus Mario Mark Marko Markus Marten Marti Martin Mati Matteus Mattias Meelis Meeme Mehis 
-			Mihkel Miikael Mikk M√§rt Neeme Nigul Nigulas Niilo Nuut Olari Olavi Olev Oliver Oskar Ott Otto Paavo Paul 
+			Mihkel Miikael Mikk M‰rt Neeme Nigul Nigulas Niilo Nuut Olari Olavi Olev Oliver Oskar Ott Otto Paavo Paul 
 			Paulus Peep Peeter Peetrus Priidu Priit Ragnar Raido Raigo Raiko Raimo Raimond Rain Rainer Rait Raivo Rando 
 			Ranno Rasmus Raul Rauno Reedik Reigo Rein Reio Rene Richard Rihard Riho Riivo Risto Robert Robi Robin Roland 
-			Roman Romet Roomet Rudolf Ruuben Ruudi Ruut R√ºnno Saamuel Sander Siim Siimeon Siimon Silver Sten Sulev Sven 
+			Roman Romet Roomet Rudolf Ruuben Ruudi Ruut R¸nno Saamuel Sander Siim Siimeon Siimon Silver Sten Sulev Sven 
 			Taaniel Taavet Taavi Taavo Taivo Tambet Tanel Tarmo Tarvi Tarvo Tauno Tauri Teet Tiidrik Tiit Tiitus Timmo 
-			Timmu Timo Toivo Toomas Tormi Tuudor T√µnis T√µnu Udo Uku Uno Urmas Urmet Urmo Uudo Vahur Vaiko Vaino Valdeko 
+			Timmu Timo Toivo Toomas Tormi Tuudor Tınis Tınu Udo Uku Uno Urmas Urmet Urmo Uudo Vahur Vaiko Vaino Valdeko 
 			Valdo Valdur Valentin Vallo Valter Vambola Veiko Veljo Vello Verner Vidrik Viktor Viljar Viljo Ville Villem 
-			Villu Voldemar Vootele V√§ino √úlari √úllar √úllo √úlo √úrjo
+			Villu Voldemar Vootele V‰ino ‹lari ‹llar ‹llo ‹lo ‹rjo
 		}
 		female_names = {
 			Aada Aasa Aet Age Agnes Aile Aili Aino Ainu Aire Airi Aita Aive Aleksandra Alina Andra Anete Angela Angelika 
@@ -84,40 +84,40 @@ Finnic = {
 			Ingel Ingrid Inna Irene Iris Irja Irma Ivi Ivika Jaana Jaanika Jana Jane Janne Johanna Juta Kaarin Kadi Kadri 
 			Kai Kaia Kaidi Kaie Kaili Kairi Kaisa Kaja Karin Karina Karmen Karoliina Karoliine Karolin Katariina Kati Katre 
 			Katri  Katriin Katrin Keiu Kelli Kerli Kersti Kerstin Kertu Kirke Koidu Krista Kristel Kristen Kristi Kristiina 
-			Kristin Kristina K√§rt K√§tlin K√ºlli K√ºllike Lagle Laine Laura Lea Leelo Lehte Leida Leili Lembi Lemme Lii Liia 
-			Liidia Liilia Liina Liis Liisa Liisbet Liisi Liivi Lilian Lilli Linda Luule L√º√ºdia Maarika Maarja Made Madli 
+			Kristin Kristina K‰rt K‰tlin K¸lli K¸llike Lagle Laine Laura Lea Leelo Lehte Leida Leili Lembi Lemme Lii Liia 
+			Liidia Liilia Liina Liis Liisa Liisbet Liisi Liivi Lilian Lilli Linda Luule L¸¸dia Maarika Maarja Made Madli 
 			Mai Maia Maie Maila Maimu Maire Malle Mare Maret Margareeta Margaret Marge Margit Margot Mari Mari-Liis Maria 
 			Marika Mariliis Marina Maris Marit Marje Marju Marleen Marta Marve Meeli Meelika Meelike Merike Merili Merilin 
 			Merit Merje Merle Miia Miina Minna Mirjam Monika Moonika Nele Olli Paula Piia Pille Pilvi Piret Raahel Rahel 
 			Raili Rebeka Reeli Reelika Reet Regina Reili Renate Riin Riina Riinu Rita Ruth Rutt Ruut Saara Saima Salme 
 			Sandra Sigrid Siiri Silja Silvi Silvia Siret Sirje Sirli Susanna Taimi Talvi Tea Teele Terje Tiia Tiina Tiiu 
-			Triin Triinu Tuule Tuuli Ursula Urve Vaike Valli Veronika Viia Viiu Viive Viivi Vilja Virge Virve √ïie √ïnne 
-			√ïnnela √úlle
+			Triin Triinu Tuule Tuuli Ursula Urve Vaike Valli Veronika Viia Viiu Viive Viivi Vilja Virge Virve ’ie ’nne 
+			’nnela ‹lle
 		}
 	}
 	sapmi = {
 		primary = SMI
 		male_names = {
-			Baeivvet Biejan Bij√°s Bilzi D√°vgon Dutt√° G√°ivvas Elmar Hain Haljas Igap√§iv Ihalemb Kahar Eeri Heameel Heat√µiv 
-			Hoovat√µiv Hurmas Hurmet√µiv H√µimulemb H√ºvalemb H√ºvameel H√ºvat√µiv T√µnn Uku Vootele V√§ino V√§rvo √ïigemeel √úlo K√ºllelemb 
-			Leet√µiv Lembit Leppet√µiv Lible Vambola Vandemeel Varjelemb Veli Vello Venno Vesse Vihavald Vililemb Vilimeel Andyamo 
+			Baeivvet Biejan Bij·s Bilzi D·vgon Dutt· G·ivvas Elmar Hain Haljas Igap‰iv Ihalemb Kahar Eeri Heameel Heatıiv 
+			Hoovatıiv Hurmas Hurmetıiv Hıimulemb H¸valemb H¸vameel H¸vatıiv Tınn Uku Vootele V‰ino V‰rvo ’igemeel ‹lo K¸llelemb 
+			Leetıiv Lembit Leppetıiv Lible Vambola Vandemeel Varjelemb Veli Vello Venno Vesse Vihavald Vililemb Vilimeel Andyamo 
 			Nuyaksha Nuyanza Nuyat Nydog Nylog Odeg Onika Osh Oshmar Oshypel Ovtay Ozheg Ozhmeg Arnaz Arti Artis Arvo Aymort 
 			Azeg Biur Biyar Burmort Chichayka Chuga Dergun Deryab Pakstyan Paksyay Paksyut Parush Pivtsay Pokshayka Putyayka 
 			Pyera Rateg Rayda Sarin Sektev Dobrinya Erziya Inzhay Kezhapa Kezhay Kezhedey Kezhevat Kichay Kubrat Malyaka Malyy 
 			Koshel Murunza Naruchad Nishkepaz Orunza Puresh Purysho Saksa Shkay Surt Tul Tunya Tutyra 
 		}
 		female_names = {
-			M√°idna N√°sti Nan√° Nj√°ves Oaj√° S√°r√°hkk√° Sealgg√° Sear√° Soab√° Soj√° Suoinn√° Suonjar Uks√°hkk√° Maija Mari Marja Meeli 
-			Niine Ninni Oie Pilve P√§ivi P√µim Salme Sirje S√§de Taimi Talvi Heli Helina Helmi Helve Hiie H√§marik H√º√ºp Ida Ilme 
+			M·idna N·sti Nan· Nj·ves Oaj· S·r·hkk· Sealgg· Sear· Soab· Soj· Suoinn· Suonjar Uks·hkk· Maija Mari Marja Meeli 
+			Niine Ninni Oie Pilve P‰ivi Pıim Salme Sirje S‰de Taimi Talvi Heli Helina Helmi Helve Hiie H‰marik H¸¸p Ida Ilme 
 			Ilmi Ilo Kai Kaili Kaja Kalli Kare Tundava Tundya Unzhutka Upurga Utyayka Valdava Vergava Vezhav Vidyava Virtyava 
-			Yalgava Liyava Mazava Megurka Mel'shay Nezayka Nulzyava Nyal'ka Nyayka Nyumina Nyv Olota Ordava Oshama √ñshkam√∂shka 
+			Yalgava Liyava Mazava Megurka Mel'shay Nezayka Nulzyava Nyal'ka Nyayka Nyumina Nyv Olota Ordava Oshama ÷shkamˆshka 
 			Parava Pekshayka Pemka Pokshava Poshayka Potekay Potyava Putyayka Ravzhava Rayda Ruzava Sanal'ka Sangasa Sernyava 
 			Serzhay Setyamka Seyamka Shochynava Shonzhava Shukshtoroyka Sinyava Siyamka Slyugan'ka Sochava Styaka Syryava Tatka 
 			Tekay 
 		}
 		dynasty_names = {
-			Ubmeje Nuor√°ne G√°jka
-			Magga Guol√°dat Yugra
+			Ubmeje Nuor·ne G·jka
+			Magga Guol·dat Yugra
 			Kaise Saiva
 		}
 	}
@@ -130,20 +130,20 @@ finno_ugric = { #Ugric
 		primary = PRM
 		male_names = {
 			Mikhail Yermolay Matvey Vasiley Pitirim Gerasim Isaak Iona Volod Gavril Yegor Ivan Mikulay Petyr 
-			Kos'ta √ñndrey Stepan √ñly√∂ksey Boris Danil Dmitry Pedot Illya Seg√∂ Sem√∂ Ped√∂r 
+			Kos'ta ÷ndrey Stepan ÷lyˆksey Boris Danil Dmitry Pedot Illya Segˆ Semˆ Pedˆr 
 		}
 		female_names = {
-			Nasta Katy√∂ √ñlga
+			Nasta Katyˆ ÷lga
 		}
 	}
 	samoyed = {
 		male_names = {
-			Alik Hasaba Kako Kharuchi Kolik Mandak Nabtiko Nenyts Nga Ng√´noh Noumea Num Nyalku Panay 
-			Salinder Samatu Sarak Sirtya Somatu Syudbya Tatva Tolik Vesei Wayngachi X√´ryuchi Yadne 
+			Alik Hasaba Kako Kharuchi Kolik Mandak Nabtiko Nenyts Nga NgÎnoh Noumea Num Nyalku Panay 
+			Salinder Samatu Sarak Sirtya Somatu Syudbya Tatva Tolik Vesei Wayngachi XÎryuchi Yadne 
 			Yar Yavlad Yurak Pudak Yapti
 		}
 		female_names = {
-			Atp√§lha Auli Galya Ilme Kat Khatyako Kont√§w Kujku Laptsui Ngeva Senda Syeju Tada Tadane Yar
+			Atp‰lha Auli Galya Ilme Kat Khatyako Kont‰w Kujku Laptsui Ngeva Senda Syeju Tada Tadane Yar
 		}
 		dynasty_names = {
 			# CKII
@@ -154,29 +154,29 @@ finno_ugric = { #Ugric
 	
 	ostyaki = {
 		male_names = {
-			√Åggi √Åiges√°rri √Åilu √Åmmot √Åra √Årrajuoksa √Åsllat √àoavv√° Ahkemiella Algebaeivi Baeivi Aare Agul Ahas Aho Ahti Ahvo 
-			Alar Alo Alur Aopelg Aot√µiv Arp Arvet Arvo Atko Aul Aulemb Kaur Kiur Kiurupelg Koit Kosk Kudres Susi Sutemeel Meigo 
-			Neeme Niglas Vilit√µiv Vilivald Tasulemb Toivo Toom Tunne Tutkas Tuul T√µeleid T√µiv T√µivulemb T√µll Urmas Uru Valdur 
+			¡ggi ¡iges·rri ¡ilu ¡mmot ¡ra ¡rrajuoksa ¡sllat »oavv· Ahkemiella Algebaeivi Baeivi Aare Agul Ahas Aho Ahti Ahvo 
+			Alar Alo Alur Aopelg Aotıiv Arp Arvet Arvo Atko Aul Aulemb Kaur Kiur Kiurupelg Koit Kosk Kudres Susi Sutemeel Meigo 
+			Neeme Niglas Vilitıiv Vilivald Tasulemb Toivo Toom Tunne Tutkas Tuul Tıeleid Tıiv Tıivulemb Tıll Urmas Uru Valdur 
 			Kezhevat Kichay Koksha Kuaz Kudym-Osh Kya Kyldysin Malyaka Malyy Meltsayka Mosheg Nalka Turush Uchva Varaka Vechkas 
 			Velmayka Virdyan Viryas Viryay Vokan Yirkap Ylvan Andyamo Nuyaksha Nuyanza Nuyat Nydog Nylog Odeg Onika Osh Oshmar 
 			Oshypel Ovtay Ozheg Ozhmeg Zhebeg Zhuneg Zyryan Zarny Zhebeg Zhuneg Zyryan Andyamo Chichayka Chumbulat Dergun Deryab 
 			Uchva Varaka Vechkas Velmayka Virdyan Viryas Viryay Atyamas Azyren Chipaz Kardaz Kinyak 
 		}
 		female_names = {
-			√Åidn√° √Ålgen √Ållet √àuvje Biell√° Bierg√° Buohtt√° Duoj√° Geal√° Gier√° Giste Juoks√°hkk√° Leandu Kati Kiir Kiire Killu K√§bi 
+			¡idn· ¡lgen ¡llet »uvje Biell· Bierg· Buohtt· Duoj· Geal· Gier· Giste Juoks·hkk· Leandu Kati Kiir Kiire Killu K‰bi 
 			Lagle Laine Lee Leek Leelo Leili Lemme Liis Lill Linda Luule Elyuva Inyava Kanyava Kanyuva Kirdyava Kunava Kunyavka 
 			Litava Liyava Mazava Megurka Sinyava Siyamka Slyugan'ka Sochava Styaka Syryava Tatka Tekay Tetyava Tikshayka 
 			Toyaksha Parava Pekshayka Pemka Pokshava Poshayka Potekay Potyava Putyayka Ravzhava Rayda Ruzava Sanal'ka Sangasa 
-			Sernyava Serzhay Setyamka Seyamka Shochynava Shonzhava Shukshtoroyka Yug√∂rka Anava Ashava Asrava Avya Azra-Va 
+			Sernyava Serzhay Setyamka Seyamka Shochynava Shonzhava Shukshtoroyka Yugˆrka Anava Ashava Asrava Avya Azra-Va 
 			Chechama Chenksa Cherava Chichayka Chindyapa Chindyayka Chinzhay Chitska Elyuva Inyava Kanyava Kanyuva Kirdyava 
 			Kunava Kunyavka Litava 
 		}
 	}
 	ingrian = {
 		male_names = {
-			Kahru Kahrulemb G√°ktu Henes J√°rre Jeansa Juvven John L√°gon L√°vrrohas Leamm√° Mellet Mihka Igalemb Ihameel Ihar 
-			Ihat√µiv Ihavald Illimar Ilmalemb Ilmar Ilvelemb Jaolemb Kaalep L√§ttelemb Manivald Mart Maru Mati Mats Meelis Mehis 
-			Ohet√µiv Ohevald Olev Onni Otelemb Ott Arnaz Arti Artis Arvo Aymort Azeg Biur Biyar Burmort Chichayka Chuga Dergun 
+			Kahru Kahrulemb G·ktu Henes J·rre Jeansa Juvven John L·gon L·vrrohas Leamm· Mellet Mihka Igalemb Ihameel Ihar 
+			Ihatıiv Ihavald Illimar Ilmalemb Ilmar Ilvelemb Jaolemb Kaalep L‰ttelemb Manivald Mart Maru Mati Mats Meelis Mehis 
+			Ohetıiv Ohevald Olev Onni Otelemb Ott Arnaz Arti Artis Arvo Aymort Azeg Biur Biyar Burmort Chichayka Chuga Dergun 
 			Deryab Pakstyan Paksyay Paksyut Parush Pivtsay Pokshayka Putyayka Pyera Rateg Rayda Sarin Sektev Dobrinya Dokya 
 			Dondy Gazheg Hulyen Inzhay Irter Lyneg Lysko Kezhapa Kezhay Kezhedey Setyamka Shindyay Shypicha Shyrpuzh Spira Syrka 
 			Tikshayka Tuhan Tyueykezhut Tyutyuk Meltsayka Mordvinko Moksha Nalka Nuyaksha Nuyanza Nuyat Ovtay Pakstyan Paksyay 
@@ -184,17 +184,17 @@ finno_ugric = { #Ugric
 		}
 		female_names = {
 			Aasa Ahma Aime Aimo Aita Aldi Ann Anni Annika Are Auli Aune Eha Elo Ere Helbe Hele Helgi Tiiu Tuuli Urve Viire Vilja 
-			Virge Virve V√§rvu √ïie √ïnne √úlane √úlle Anava Ashava Asrava Avya Azra-Va Chechama Chenksa Cherava Chichayka Chindyapa 
-			Chindyayka Chinzhay Chitska Mel'shay Nezayka Nulzyava Nyal'ka Nyayka Nyumina Nyv Olota Ordava Oshama √ñshkam√∂shka 
+			Virge Virve V‰rvu ’ie ’nne ‹lane ‹lle Anava Ashava Asrava Avya Azra-Va Chechama Chenksa Cherava Chichayka Chindyapa 
+			Chindyayka Chinzhay Chitska Mel'shay Nezayka Nulzyava Nyal'ka Nyayka Nyumina Nyv Olota Ordava Oshama ÷shkamˆshka 
 			Tetyava Tikshayka Toyaksha Tundava Tundya Unzhutka Upurga Utyayka Valdava Vergava Vezhav Vidyava Virtyava Yalgava 
-			Yug√∂rka Anava Ashava Asrava Azra-Va Chechama Chenksa Cherava Chichayka Chindyapa Chindyayka Chinzhay Chitska Elyuva 
+			Yugˆrka Anava Ashava Asrava Azra-Va Chechama Chenksa Cherava Chichayka Chindyapa Chindyayka Chinzhay Chitska Elyuva 
 			Inyava Kanyava Kanyuva Kirdyava Kunava Kunyavka Litava Liyava Mazava Megurka Mel'shay Nezayka Nulzyava Nuyanza 
 			Nyal'ka 
 		}
 	}
 	dynasty_names = {
 		# CKII - Lappish
-		"Ubmeje" "Nuor√°ne" "G√°jka" "Kaise" "Saiva" "Keite" "Sapmi" "Magga" "Guol√°dat"
+		"Ubmeje" "Nuor·ne" "G·jka" "Kaise" "Saiva" "Keite" "Sapmi" "Magga" "Guol·dat"
 		# Komi
 		"Azegid" "Gachegid" "Zhebegid" "Lunegid" "Zhunegid" "Irtegid" "Moshegid" "Nydogid" "Nylogid" "Ozhegid" "Odegid" 
 		"Rategid" "Permyakid" "Yugra" "Syktyvkar"
@@ -229,8 +229,8 @@ south_slavic = {
 		dynasty_names = {
 			"Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
 			"Kosaca" "Vukcic" "Vukasin" "Dukasin" "Babonic" "Frankopan" "Kacic" "Draskovic" 
-			"Bebek" "Svetoslavic" "Kre≈°imirovic" "Domagojevic" "Fe≈°tetic" "Gorjanski"
-			"Svacic" "Kobilic" "Lackovic" "≈†ubic"
+			"Bebek" "Svetoslavic" "Kreöimirovic" "Domagojevic" "Feötetic" "Gorjanski"
+			"Svacic" "Kobilic" "Lackovic" "äubic"
 			"Berislavic" "Nepilic" "Jalacic" "Zrinski" "Garaj" "Eltz" "Kaboga" 
 			"Crnkovic" "Cerva" "Rubido"
 		}
@@ -369,8 +369,8 @@ south_slavic = {
 		dynasty_names = {
 			"Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
 			"Kosaca" "Vukcic" "Vukasin" "Dukasin" "Babonic" "Frankopan" "Kacic" "Draskovic" 
-			"Bebek" "Svetoslavic" "Kre≈°imirovic" "Domagojevic" "Fe≈°tetic" "Gorjanski"
-			"Svacic" "Kobilic" "Lackovic" "≈†ubic"
+			"Bebek" "Svetoslavic" "Kreöimirovic" "Domagojevic" "Feötetic" "Gorjanski"
+			"Svacic" "Kobilic" "Lackovic" "äubic"
 			"Berislavic" "Nepilic" "Jalacic" "Zrinski" "Garaj" "Eltz" "Kaboga" 
 			"Crnkovic" "Cerva" "Rubido"
 		}
@@ -400,8 +400,8 @@ south_slavic = {
 		dynasty_names = {
 			"Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
 			"Kosaca" "Vukcic" "Vukasin" "Dukasin" "Babonic" "Frankopan" "Kacic" "Draskovic" 
-			"Bebek" "Svetoslavic" "Kre≈°imirovic" "Domagojevic" "Fe≈°tetic" "Gorjanski"
-			"Svacic" "Kobilic" "Lackovic" "≈†ubic"
+			"Bebek" "Svetoslavic" "Kreöimirovic" "Domagojevic" "Feötetic" "Gorjanski"
+			"Svacic" "Kobilic" "Lackovic" "äubic"
 			"Berislavic" "Nepilic" "Jalacic" "Zrinski" "Garaj" "Eltz" "Kaboga" 
 			"Crnkovic" "Cerva" "Rubido"
 		}
@@ -414,14 +414,14 @@ west_slavic = {
 	czech = {
 		primary = BOH
 		dynasty_names = {
-			"Jankovsk√Ω z Vla≈°imi" Chotek Lichnowsky Lobkowicz Nostitz Kutscha 
-			"Kounic" "V√≠tkovec" "Zerot√≠n" "Czern√≠n" "von Harrach" Kinsky Rosenberg
+			"Jankovsk˝ z Vlaöimi" Chotek Lichnowsky Lobkowicz Nostitz Kutscha 
+			"Kounic" "VÌtkovec" "ZerotÌn" "CzernÌn" "von Harrach" Kinsky Rosenberg
 			Waldstein Jeszenszky
 		}
 		male_names = {
-			V√°clav Jir√≠ Karel Premysl Premysl Zikmund Frantisek Jindrich Josef Frantisek Josef Bocek Jir√≠ 
-			Vladislav Vladim√≠r Petr Petr Viktor√≠n Jan V√°clav Josef V√°clav Karel Josef Maty√°≈° Ferdinand 
-			Vratislav Boleslav Vil√©m Viktor Jarom√≠r Jaroslav Ludv√≠k Otakar
+			V·clav JirÌ Karel Premysl Premysl Zikmund Frantisek Jindrich Josef Frantisek Josef Bocek JirÌ 
+			Vladislav VladimÌr Petr Petr ViktorÌn Jan V·clav Josef V·clav Karel Josef Maty·ö Ferdinand 
+			Vratislav Boleslav VilÈm Viktor JaromÌr Jaroslav LudvÌk Otakar
 		}
 		female_names = {
 			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnieszka Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
@@ -441,11 +441,11 @@ west_slavic = {
 			Bretislav Bretislaus Casimir Ctibor Ctibor Dobieslaw Dobromil Drosuk Dytryk Thierry Frantisek 
 			Francis Gawel Grzegorz Gregory Havel Gallus Jacenty Hyacinth Jakub Jakusz Jacob 
 			Janusz John Jaromar
-			Jaromil Jaromir Jaroslav Jedrzej Jindrich Henry Jir√≠ George Jozef Joseph 
+			Jaromil Jaromir Jaroslav Jedrzej Jindrich Henry JirÌ George Jozef Joseph 
 			Juliusz Julian Kajetan Kamil Camillus Karel Charles Kasper Kazimierz Kliment Clement Kolman 
 			Koloman Kornel Cornelius Kresimir Krzeslaw
 			Krzysztof Christopher Lech Leszek Lubomir Lucjan Lucius Ludvik Louis Marek Marcus Marian Marius 
-			Martin Mateusz Matthew Mieszko Mikol√°s Nicholas Miloslaw Milosz Miroslaw 
+			Martin Mateusz Matthew Mieszko Mikol·s Nicholas Miloslaw Milosz Miroslaw 
 			Mscislaw Mstislav Msciwoj
 			Oldrich Ulrich Ondrej Andrew Otokar Patryk Patrick Pawel Paul Piotr Peter Prendota Przemysl 
 			Premysl Przybyslaw Radomil Radomir Radoslav Rostislav Ryszard Richard Sambor Sobieslav Sobeslaus 
@@ -462,15 +462,15 @@ west_slavic = {
 			Dobroniega Dorota Dorothy Dragomira Edyta Ewa Geira Gertruda Gertrude
 			Gracja Grazyna Halina Hanna Irena Izabela Jadwiga Jarka Jarmila Jolanta Judyta Judith Kamila 
 			Katarina Catherine Kenna Kornelia Krystyna Christina Ksenia Lidia
-			Ludmila Magda Magdalena Magdalena Magdalena Malgorzata Marcelina Maria Mark√©ta Martyna 
-			Mateja Matylda Matilda Milena Miroslava Pechna R√≥za Radomila Radomira Radoslava
-			Raina Regelinda Rycheza Salomea Smiechna Stanislava Stefana Stephania Svetlana Urszula V√°clava 
+			Ludmila Magda Magdalena Magdalena Magdalena Malgorzata Marcelina Maria MarkÈta Martyna 
+			Mateja Matylda Matilda Milena Miroslava Pechna RÛza Radomila Radomira Radoslava
+			Raina Regelinda Rycheza Salomea Smiechna Stanislava Stefana Stephania Svetlana Urszula V·clava 
 			Vladislava Wera Wojslawa Zdenka Zofia Zwinislawa
 		}
 		dynasty_names = {
 			"von Klinckow" "von Puttkamer" "von Barnekow" "von Strantz" "Gryf" "Wizlawid"
 			"von Krassow" "von der Lancken" "von Schlieffen" "von Schwerin"
-			"von Sch√∂ning" "von Suhm" "von Maltzahn" "von Below" "von Blixen" "von Borcke"
+			"von Schˆning" "von Suhm" "von Maltzahn" "von Below" "von Blixen" "von Borcke"
 			"von Buggenhagen" "von Manteuffel" "von Corswant" "von Stralenheim" "von Dewitz" "von Preen" "von Podewils"
 			"von Flemming" "von Platen" "von Neuenkirchen" "von Gottberg" "von Hackewitz" "von Hennigs" "Trampe" "von Hertzberg" "von Heyden" "von Kameke" "von Kleist" "Natzmer" 
 			"von Zepelin" "von Gostowski" "von Wakenitz"
@@ -497,14 +497,14 @@ west_slavic = {
 	Moravian = {
 		primary = MVA
 		dynasty_names = {
-			"Mojm√≠r" Velislav Trencansky Veligradsky Nitransky 
-			Moravsky Nitransky "z Dev√≠na" "z Nitravy" Carihradsky Krusnohorsky Povazsky
+			"MojmÌr" Velislav Trencansky Veligradsky Nitransky 
+			Moravsky Nitransky "z DevÌna" "z Nitravy" Carihradsky Krusnohorsky Povazsky
 			Podunajsky Bitovsky Boskovicky Bystricky Doubravsky Nybisovsky Podstatsky Tovacovsky
 		}
 		male_names = {
-			Svatopluk Mojm√≠r Slavom√≠r Pribyslav Vladislav Vladim√≠r Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
+			Svatopluk MojmÌr SlavomÌr Pribyslav Vladislav VladimÌr Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
 			Slavomil Petr Stanislav Svatoboj Svetozar Tichomir Tomislav Cyril Vitezslav Vneslav Zlatoslav 
-			Vratislav Boleslav Zivodan Zdislav Jarom√≠r Jaroslav
+			Vratislav Boleslav Zivodan Zdislav JaromÌr Jaroslav
 		}
 		female_names = {
 			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
@@ -515,14 +515,14 @@ west_slavic = {
 	Pannonian = {
 		primary = PNN
 		dynasty_names = {
-			"Mojm√≠r" Velislav Trencansky Veligradsky Nitransky 
-			Moravsky Nitransky "z Dev√≠na" "z Nitravy" Carihradsky Krusnohorsky Povazsky
+			"MojmÌr" Velislav Trencansky Veligradsky Nitransky 
+			Moravsky Nitransky "z DevÌna" "z Nitravy" Carihradsky Krusnohorsky Povazsky
 			Podunajsky Bitovsky Boskovicky Bystricky Doubravsky Nybisovsky Podstatsky Tovacovsky
 		}
 		male_names = {
-			Svatopluk Mojm√≠r Slavom√≠r Pribyslav Vladislav Vladim√≠r Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
+			Svatopluk MojmÌr SlavomÌr Pribyslav Vladislav VladimÌr Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
 			Slavomil Petr Stanislav Svatoboj Svetozar Tichomir Tomislav Cyril Vitezslav Vneslav Zlatoslav 
-			Vratislav Boleslav Zivodan Zdislav Jarom√≠r Jaroslav
+			Vratislav Boleslav Zivodan Zdislav JaromÌr Jaroslav
 		}
 		female_names = {
 			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
@@ -534,8 +534,8 @@ west_slavic = {
 		primary = SLO
 		male_names = {
 			Matej Jan Lukas Stefan Pavol Peter Juraj Jozef Marek Daniel Moric Samuel Martin Ondrej Anton Karol
-			Hugol√≠n Tomas Ludov√≠t Viliam Mikulas Ignac Jaroslav Jaromir Miroslav Drahoslav Svatopluk Mojmir
-			Dobroslav Radoslav Radom√≠r Kazim√≠r Vlastimil Vitazoslav Blahoslav Svetozar Bonifac Vratislav
+			HugolÌn Tomas LudovÌt Viliam Mikulas Ignac Jaroslav Jaromir Miroslav Drahoslav Svatopluk Mojmir
+			Dobroslav Radoslav RadomÌr KazimÌr Vlastimil Vitazoslav Blahoslav Svetozar Bonifac Vratislav
 			Vladislav Volodymyr Cyril Konstantin Metod Bohuslav Drahomir Prokop Jergus Tichomir Bartolomej
 			Luboslav Lubomir Levoslav Stanislav
 		}
@@ -543,7 +543,7 @@ west_slavic = {
 			Maria Anna Alzbeta Ludmila Eva Jaroslava Jarmila Amalia Margareta Hana Luboslava Miroslava Pravoslava Radoslava Branislava Bohuslava Alica		 
 		}
 		dynasty_names = {
-			Stiborsky Bel Dubravsky Podmanick√Ω Hatnansk√Ω Velehradsky Turciansky Nitransky Zichy Povazsky Podunajsky
+			Stiborsky Bel Dubravsky Podmanick˝ Hatnansk˝ Velehradsky Turciansky Nitransky Zichy Povazsky Podunajsky
 			Novohradsky Preslavsky Devinsky Tatransky Zemplinsky Presporsky Kollar Jesensky Rakovsky 
 		}
 	}
@@ -552,7 +552,7 @@ west_slavic = {
 		dynasty_names = {
 			Batory Hunadi Zapolsky Rakoci Bockaj Betlen Andrasy Caky
 			Karoly Madary Pereny Ronaj Sepesi Tokoly Tisa Zrinsky Teleky
-			Docy Koh√°r Frankop√°n Garaj Mikes
+			Docy Koh·r Frankop·n Garaj Mikes
 			
 		}
 		male_names = {
@@ -561,23 +561,23 @@ west_slavic = {
 			Albert Blazej Benedikt Bernard Otto 
 		}
 		female_names = {
-			Ester Berta Anna Dorota Erika Aranka Ag√°ta Eva Agnesa
-			Etela Gizela Irena J√∫lia Juliana Judita
-			Kinga Kl√°ra Kristina Lucia Maria Marta Magdalena S√°ra Zuza
+			Ester Berta Anna Dorota Erika Aranka Ag·ta Eva Agnesa
+			Etela Gizela Irena J˙lia Juliana Judita
+			Kinga Kl·ra Kristina Lucia Maria Marta Magdalena S·ra Zuza
 			Ruzena Tereza Viola Zofia Sofia
 		}
 	}
 	Slovien = {
 		primary = GMA
 		dynasty_names = {
-			"Mojm√≠r" Velislav Trencansky Veligradsky Nitransky 
-			Moravsky Nitransky "z Dev√≠na" "z Nitravy" Carihradsky Krusnohorsky Povazsky
+			"MojmÌr" Velislav Trencansky Veligradsky Nitransky 
+			Moravsky Nitransky "z DevÌna" "z Nitravy" Carihradsky Krusnohorsky Povazsky
 			Podunajsky Bitovsky Boskovicky Bystricky Doubravsky Nybisovsky Podstatsky Tovacovsky
 		}
 		male_names = {
-			Svatopluk Mojm√≠r Slavom√≠r Pribyslav Vladislav Vladim√≠r Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
+			Svatopluk MojmÌr SlavomÌr Pribyslav Vladislav VladimÌr Predslav Velislav Pavel Rostislav Pribislav Pravoslav 
 			Slavomil Petr Stanislav Svatoboj Svetozar Tichomir Tomislav Cyril Vitezslav Vneslav Zlatoslav 
-			Vratislav Boleslav Zivodan Zdislav Jarom√≠r Jaroslav
+			Vratislav Boleslav Zivodan Zdislav JaromÌr Jaroslav
 		}
 		female_names = {
 			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
@@ -597,7 +597,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -625,7 +625,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -643,7 +643,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -671,7 +671,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -686,12 +686,12 @@ west_slavic = {
 			Wjaclaw Wylem
 		}
 		female_names = {
-			Bogna Benedikta Hanka Inga Irmgard Jewa Lubina Ludmila Marja Marta Marjana Pawlina R√≥za Sofija
+			Bogna Benedikta Hanka Inga Irmgard Jewa Lubina Ludmila Marja Marta Marjana Pawlina RÛza Sofija
 		}
 		dynasty_names = {
 			Brosk "z Barenstamma" Buk Bronisz Czornak Cyzh Dejka "z Friedenfelsa"
 			Glowan Jakobica Klosopolski Kucank Leska Langa Mosak Muslik Mercink Miczka
-			Parczewski Pr√§torius Pjekar Rhenisz Rizo Rychtar Swora Stempel Smoler
+			Parczewski Pr‰torius Pjekar Rhenisz Rizo Rychtar Swora Stempel Smoler
 			Woski Wirt Zejler
 		}
 	}
@@ -708,7 +708,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -736,7 +736,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -755,7 +755,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -783,7 +783,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -802,7 +802,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -830,7 +830,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -849,7 +849,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -877,7 +877,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -895,7 +895,7 @@ west_slavic = {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -923,7 +923,7 @@ west_slavic = {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -936,9 +936,9 @@ romanian_culture_group = {
 		primary = WAL
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
-			Callimachi Ghica Brancoveanu Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hajdau
-			Kogalniceanu Movilesti Racovita
+			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti H‚jdau
+			Kogalniceanu Movilesti
 		}
 		male_names = {
 			Alexandru Radu Vlad Constantin Mihail Mircea George Grigore Mihnea Nicolae Besarab Vladislav Mattia 
@@ -972,9 +972,9 @@ romanian_culture_group = {
 		primary = RMN
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
-			Brancoveanu Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu H√¢jdau
-			Kogalniceanu Movilesti Racovita
+			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti H‚jdau
+			Kogalniceanu Movilesti
 		}
 		male_names = {
 			Alexandru Radu Vlad Constantin Mihail Mircea George Grigore Mihnea Nicolae Besarab Vladislav Mattia 
@@ -1009,7 +1009,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu H√¢jdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti H‚jdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
@@ -1045,7 +1045,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu H√¢jdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti H‚jdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
@@ -1075,388 +1075,154 @@ romanian_culture_group = {
 			Tereza Teresa Vasilica Violeta Yolanda Voica Zina
 		}
 	}
-
-	# ABMP [[[
-	panonic = {
-		primary = HUN
-		dynasty_names = {
-			"Basarab" "Bathory" "Bibescu" "Callimachi" "Cantacuzino" "Craiovesti" "Danesti" 
-			"Draculesti" "Esterhazy" "Ghica" "Hunyadi" "Karolyi" "Mavrocordatos" "Movilesti" 
-			"Racovita" "Sturdza" "Szilagyi" "Teleki" "Thurzo" "Vacarescu" "Zrinyi"
-		}
-		male_names = {
-			Alexandru Andras Andrei Attila Barbat Bela Benedek Bogdan Constantin Corneliu 
-			Costin Dan Denes Dragos Dumitru Elek Endre Erno Farkas Ferenc Florin Gabriel 
-			Gabor Gaspar Geza Gheorghe George Grigore Gyorgy Iancu Ieremia Imre Ioan Istvan 
-			Janos Jozsef Karoly Kristof Lajos Laszlo Laurentiu Lorinc Lucian Marius Marton 
-			Matyas Mihai Mihaly Miklos Mircea Moise Neagoe Nicolae Octavian Pal Peter Petru 
-			Radu Sandor Serban Sergiu Simion Stefan Tamas Teodor Tibor Tudor Valentin 
-			Vasile Victor Vlad Zoltan Zsolt
-		}
-
-		female_names = {
-			Adelina Adriana Agnes Agota Ana Anastasia Angela Anna Borbala Cristina Dana 
-			Dorottya Ecaterina Edina Edit Elena Elisabeta Emese Emilia Erika Erzsebet 
-			Eszter Eva Felicia Floarea Gabriela Gizella Ibolya Ildiko Ilona Ioana Irina 
-			Iulia Judit Julianna Katalin Kinga Klara Margit Maria Monica Natalia Orsolya 
-			Piroska Reka Roxana Ruxandra Sarolta Sofia Stana Stefana Szilvia Teodora Tunde 
-			Valentina Vasilica Violeta Voica Zsofia Zsuzsanna
-		}
-	}
-	morlaci = {
-		primary = ILR
-		dynasty_names = {
-			"Basarab" "Brankovic" "Cantacuzino" "Dragovic" "Frankopan" "Ghica" 
-			"Hrvatinic" "Kotromanic" "Kosaƒça" "Movilesti" "Nemanjic" "Radulovic" 
-			"Sturdza" "Vladislavic" "Zrinski"
-		}
-		male_names = {
-			Andrei Andrija Ante Bogdan Boris Branimir Constantin Damir Dejan Dragan 
-			Dragos Dusan Filip Florin Goran Gheorghe Ioan Ivan Jovan Lazar Luka 
-			Marin Marko Mihai Milan Milos Mircea Mladen Nicolae Petar Radu Ratko 
-			Slobodan Stanko Stefan Stjepan Tomislav Vasile Vlad Vladimir Vlado 
-			Vuk Zoran
-		}
-		female_names = {
-			Ana Anca Biljana Branka Cristina Danica Doina Dragana Dubravka Elena 
-			Florica Gordana Ioana Ivana Jelena Katarina Ljiljana Ljubica Maria 
-			Milena Milica Mirjana Nada Nata≈°a Nevenka Olga Ruxandra Slavica 
-			Sofia Stana Svetlana Tatjana Teodora Vesna Zora
-		}
-	}
-	adriaticii = {
-		primary = VEN
-		dynasty_names = {
-			"Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "Contarini" "Dandolo" 
-			"Draculesti" "Ghica" "Giustiniani" "Loredan" "Mocenigo" "Morosini" 
-			"Movilesti" "Racovita" "Sturdza" "Zorzi"
-		}
-		male_names = {
-			Alvise Andrei Bogdan Constantin Cornel Cosimo Daniele Dragan Dragos 
-			Florin Francesco Gheorghe Giacomo Giovanni Ioan Jacopo Lorenzo Luca 
-			Marco Marin Matteo Mihai Mircea Nicolae Paolo Petru Pietro Radu 
-			Stefan Teodor Vasile Vincenzo Vlad
-		}
-		female_names = {
-			Adriana Alba Ana Anca Andreea Beatrice Bianca Camilla Caterina Chiara 
-			Cristina Elena Elisabetta Fiorenza Florica Francesca Giulia Ioana 
-			Isabella Laura Lucia Lucrezia Margherita Maria Marta Nicoletta Paola 
-			Ruxandra Sofia Teodora Valentina Veronica Vittoria
-		}
-	
-	}
-	amiaza = {
-		primary = TRC
-		dynasty_names = {
-			"Altavilla" "Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "Caracciolo" 
-			"Chiaramonte" "Draculesti" "Ghica" "Moncada" "Movilesti" "Racovita" 
-			"Ruffo" "Sanseverino" "Sturdza"
-		}
-		male_names = {
-			Alvise Andrei Bogdan Calogero Constantin Cornel Cosimo Daniele Dragan 
-			Dragos Florin Francesco Gennaro Gheorghe Giacomo Giovanni Guglielmo 
-			Ioan Jacopo Lorenzo Luca Marco Marin Matteo Mihai Mircea Nicolae 
-			Paolo Petru Pietro Radu Ruggero Salvatore Stefan Tancredi Teodor 
-			Vasile Vincenzo Vlad
-		}
-		female_names = {
-			Adriana Agata Alba Ana Anca Andreea Beatrice Bianca Camilla Caterina 
-			Chiara Concetta Costanza Cristina Elena Elisabetta Fiorenza Florica 
-			Francesca Giulia Ioana Isabella Laura Lucia Lucrezia Margherita Maria 
-			Marta Nicoletta Paola Rosalia Ruxandra Sofia Teodora Valentina 
-			Veronica Vittoria
-		}
-	}
-	cisalpini = {
-		primary = ITA
-		dynasty_names = {
-			"Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "d'Este" "della Scala" 
-			"Doria" "Draculesti" "Ghica" "Gonzaga" "Grimaldi" "Movilesti" 
-			"Racovita" "Savoia" "Sforza" "Sturdza" "Visconti"
-		}
-		male_names = {
-			Adalberto Alessandro Amedeo Andrea Andrei Bogdan Carlo Constantin 
-			Cornel Dragan Dragos Enrico Federico Filippo Florin Galeazzo 
-			Gheorghe Giovanni Giuseppe Guglielmo Ioan Ludovico Marco Mihai 
-			Mircea Nicolae Oddone Petru Pietro Radu Stefan Teodor Ugo 
-			Umberto Vasile Vlad
-		}
-		female_names = {
-			Adelaide Adelheid Ana Anca Andreea Beatrice Bianca Bianca-Maria 
-			Caterina Chiara Cristina Elena Florica Francesca Gisela Giulia 
-			Ioana Irmengard Isabella Laura Lucia Margherita Maria Matilde 
-			Ruxandra Sofia Teodora Valentina
-		}
-	}
-	latini = {
-		primary = ITA
-		dynasty_names = {
-			"Basarab" "Bibescu" "Borgia" "Brancoveanu" "Cantacuzino" "Colonna" 
-			"Draculesti" "Ghica" "Malatesta" "Medici" "Montefeltro" "Movilesti" 
-			"Orsini" "Pazzi" "Racovita" "Strozzi" "Sturdza"
-		}
-		male_names = {
-			Alessandro Andrea Andrei Augusto Bogdan Cesare Constantin Cornel 
-			Cosimo Dragan Dragos Fabio Flavio Florin Francesco Gheorghe 
-			Giuliano Giulio Ioan Lorenzo Lucio Marco Mihai Mircea Nicolae 
-			Paolo Petru Piero Pietro Radu Stefan Teodor Vasile Vlad
-		}
-		female_names = {
-			Ana Anca Andreea Aurelia Bianca Camilla Caterina Cecilia Chiara 
-			Clarice Cristina Elena Flavia Florica Francesca Giulia Ioana 
-			Isabella Laura Livia Lucrezia Margherita Maria Ottavia Ruxandra 
-			Sofia Teodora Valentina
-		}
-	}
-	provinciali = {
-		primary = AQA
-		dynasty_names = {
-			"Alaman" "Aubert" "Basarab" "Belmont" "Bertran" "Brancoveanu" 
-			"Cantacuzino" "Castel" "Coman" "Draculesti" "Fabron" "Garin" 
-			"Ghica" "Iancu" "Laur" "Marin" "Montfort" "Moraru" "Pons" 
-			"Racovita" "Raimond" "Roux" "Sabin" "Tudor" "Vidal"
-		}
-		male_names = {
-			Adelin Alin Armand Augustin Aurel Bernard Cezar Constantin 
-			Cornel Denis Dragos Emil Florin Gaston Gilbert Guilhem 
-			Honor√© Ioan Laurentiu Loic Lucian Marius Mihai Mircea 
-			Olivier Pascal Petru Radu Raimond Remus Sabin Stefan 
-			Teodor Tristan Valentin Victor Vlad
-		}
-		female_names = {
-			Adela Adeline Amandine Ana Andreea Aurelia Beatrice Bianca 
-			Camille Caterina Cecilia Corina Cristina Eleonore Elena 
-			Esclarmonde Felicia Florica Ioana Isabelle Josiane Laura 
-			Livia Magdalena Margaux Maria Mirela Nicoleta Ruxandra 
-			Sabina Silvia Sofia Teodora Valentina
-		}
-	}
-	galici = {
-		primary = FRA
-		dynasty_names = {
-			"Basarab" "Brancoveanu" "Bourbon" "Cantacuzino" "Draculesti" "Ghica" 
-			"de Guise" "de Lorraine" "Montmorency" "Movilesti" "Racovita" "de Rohan" 
-			"Sturdza" "Valois" "d'Anjou" "de Foix"
-		}
-		male_names = {
-			Andrei Antoine Bogdan Charles Constantin Dragos Fran√ßois Gheorghe 
-			Guillaume Henri Jean Louis Mihai Mircea Nicolae Olivier 
-			Philippe Pierre Radu Stefan Vasile Vlad
-		}
-		female_names = {
-			Ana Anca Anne Blanche Catherine Charlotte Elena Eleonore 
-			Florica Genevieve Ioana Isabelle Jeanne Marguerite Maria Ruxandra 
-			Sophie Teodora
-		}
-		province = {
-			local_has_musketeers = yes
-			amount_of_musketeers = 0.1
-		}
-		country = {
-			has_musketeer = yes
-		}
-	}
-	lusitanii = {
-		primary = POR
-		
-		dynasty_names = {
-			"Almeida" "Avis" "Basarab" "Bibescu" "Braganca" "Brancoveanu" 
-			"Cantacuzino" "Castro" "Cunha" "Draculesti" "Ghica" "Melo" 
-			"Movilesti" "Noronha" "Pereira" "Racovita" "Sousa" "Sturdza"
-			"Martins"
-		}
-		male_names = {
-			Afonso Andrei Ant√≥nio Bogdan Constantin Diogo Dragos Duarte 
-			Fernando Francisco Gheorghe Goncalo Henrique Ion Joao Jorge 
-			Manuel Mihai Mircea Nicolae Pedro Petru Radu Stefan Vasco 
-			Vasile Vlad
-		}
-		female_names = {
-			Ana Anca Beatriz Branca Catarina Cristina Elena Filipa 
-			Florica Guiomar Ines Ioana Isabel Joana Leonor Maria 
-			Ruxandra Teodora Teresa
-		}
-		province = {
-			local_has_caravel = yes 
-			amount_of_caravel = 0.5
-		}
-		country = {
-			has_caravel = yes
-		}
-	}
-	hispani = {
-		primary = ASU
-		dynasty_names = {
-			"Alvarez" "Basarab" "Brancoveanu" "Cantacuzino" "de la Cerda" "Draculesti" 
-			"Enriquez" "Ghica" "Guzman" "Mendoza" "Movilesti" "Pimentel" 
-			"Racovita" "Sturdza" "Trastamara" "Velasco"
-		}
-		male_names = {
-			Alfonso Andrei Bogdan Carlos Constantin Diego Dragos Enrique 
-			Felipe Fernando Francisco Gheorghe Gonzalo Juan Mihai Mircea 
-			Nicolae Pedro Radu Rodrigo Stefan Vasile Vlad
-		}
-		female_names = {
-			Ana Anca Catalina Constanza Cristina Elena Florica Ioana 
-			Isabel Juana Leonor Lucia Maria Ruxandra Teodora Teresa
-		}
-		province = {
-			local_has_tercio = yes
-		}
-		country = {
-			has_tercio = yes
-		}
-	}
-	# ]]]
 }
-
 
 carpathian = {	
 	graphical_culture = easterngfx
 	Szekler = {
 		primary = SZK
 		dynasty_names = {
-			Aba Acs√°d Agm√°nd Ajtony √Åkos Apor √Årp√°d Baksa Baracska Barcz B√°na B√°r-Kal√°n B√©l Borsa B√∂sz√∂rm√©ny 
-			B√µ Csan√°d Cs√°k Csolt Dorozsma J√°k√≥ Kaj√°n Kaplyony Katap√°n K√°ta K√∂lcse K√∂lp√©ny Miskolc Monoszl√≥ 	
-			Oslu √ñrs√∫r Rosd Szaonok Szemere Tardos Tomaj Turul Z√°h Zsombor
+			Aba Acs·d Agm·nd Ajtony ¡kos Apor ¡rp·d Baksa Baracska Barcz B·na B·r-Kal·n BÈl Borsa BˆszˆrmÈny 
+			Bı Csan·d Cs·k Csolt Dorozsma J·kÛ Kaj·n Kaplyony Katap·n K·ta Kˆlcse KˆlpÈny Miskolc MonoszlÛ 	
+			Oslu ÷rs˙r Rosd Szaonok Szemere Tardos Tomaj Turul Z·h Zsombor
 		}
 		male_names = {
-			Ajtony Ampud Attila √Åkos √Ålmos Apor √Årp√°d √Årt√°nd √Årv√°d Balog B√°tor Bek√µ B√©l B√©la Bors Botos B√≥dog 
-			B√∂ng√©r B√µd B√µs Csaba Csaha Csan√°d Cenk Cenke Csonta El√µd Ete Fajsz Farkas Fiacs Finta Geregen Gye√ºcsa 
-			Gy√©cs Het√©ny Huba Jen√µ Kadicsa Kaba Karuly Kem√©nd Kese Ketel Ket√ºd Keve K√∂lked K√∂nd Kursz√°n K√ºsid L√©l 
-			Li√ºntika M√°g√≥cs Miskolc Mohar Mokud N√©gye Opos √ñs√∂d √ñt√©ny √ïrs √ïze P√≥sa Somogy S√∫r Szal√≥k Szaonok Szend 	
-			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T√ºh√ºt√ºm Vajk Vata Ula Yelegh Zo√°rd
-			Kopp√°ny Zerind Taksony Zolta G√©za Levedi El√∂d Ugyek
+			Ajtony Ampud Attila ¡kos ¡lmos Apor ¡rp·d ¡rt·nd ¡rv·d Balog B·tor Bekı BÈl BÈla Bors Botos BÛdog 
+			BˆngÈr Bıd Bıs Csaba Csaha Csan·d Cenk Cenke Csonta Elıd Ete Fajsz Farkas Fiacs Finta Geregen Gye¸csa 
+			GyÈcs HetÈny Huba Jenı Kadicsa Kaba Karuly KemÈnd Kese Ketel Ket¸d Keve Kˆlked Kˆnd Kursz·n K¸sid LÈl 
+			Li¸ntika M·gÛcs Miskolc Mohar Mokud NÈgye Opos ÷sˆd ÷tÈny ’rs ’ze PÛsa Somogy S˙r SzalÛk Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T¸h¸t¸m Vajk Vata Ula Yelegh Zo·rd
+			Kopp·ny Zerind Taksony Zolta GÈza Levedi Elˆd Ugyek
 		}
 		female_names = {
-			Angyalka Anik√≥ Aranka Askam Borb√°la Csilla Csillag Czenzi Em√µke Emese Eperjes Etel Gilv√°d Gy√∂ngy√∂s 
-			Hajnal Ibolya Ildik√≥ J√≥zsa Kinga Ilona Le√°ncs Luca Mag√≥ Nyeste Odola Orsolya Panni Piroska Sarolt 
-			S√°fely Sebe Szent√µ Sz√©pa Szinta Sz√ºga T√ºnd√©r Vir√°g Zolt√°na Zsuzsa Zsanett
+			Angyalka AnikÛ Aranka Askam Borb·la Csilla Csillag Czenzi Emıke Emese Eperjes Etel Gilv·d Gyˆngyˆs 
+			Hajnal Ibolya IldikÛ JÛzsa Kinga Ilona Le·ncs Luca MagÛ Nyeste Odola Orsolya Panni Piroska Sarolt 
+			S·fely Sebe Szentı SzÈpa Szinta Sz¸ga T¸ndÈr Vir·g Zolt·na Zsuzsa Zsanett
 		}
 	}
 	alfoldian_culture = {
 		primary = MGY
 		dynasty_names = {
-			Aba Acs√°d Agm√°nd Ajtony √Åkos Apor √Årp√°d Baksa Baracska Barcz B√°na B√°r-Kal√°n B√©l Borsa B√∂sz√∂rm√©ny 
-			B√µ Csan√°d Cs√°k Csolt Dorozsma J√°k√≥ Kaj√°n Kaplyony Katap√°n K√°ta K√∂lcse K√∂lp√©ny Miskolc Monoszl√≥ 	
-			Oslu √ñrs√∫r Rosd Szaonok Szemere Tardos Tomaj Turul Z√°h Zsombor
+			Aba Acs·d Agm·nd Ajtony ¡kos Apor ¡rp·d Baksa Baracska Barcz B·na B·r-Kal·n BÈl Borsa BˆszˆrmÈny 
+			Bı Csan·d Cs·k Csolt Dorozsma J·kÛ Kaj·n Kaplyony Katap·n K·ta Kˆlcse KˆlpÈny Miskolc MonoszlÛ 	
+			Oslu ÷rs˙r Rosd Szaonok Szemere Tardos Tomaj Turul Z·h Zsombor
 		}
 		male_names = {
-			Ajtony Ampud Attila √Åkos √Ålmos Apor √Årp√°d √Årt√°nd √Årv√°d Balog B√°tor Bek√µ B√©l B√©la Bors Botos B√≥dog 
-			B√∂ng√©r B√µd B√µs Csaba Csaha Csan√°d Cenk Cenke Csonta El√µd Ete Fajsz Farkas Fiacs Finta Geregen Gye√ºcsa 
-			Gy√©cs Het√©ny Huba Jen√µ Kadicsa Kaba Karuly Kem√©nd Kese Ketel Ket√ºd Keve K√∂lked K√∂nd Kursz√°n K√ºsid L√©l 
-			Li√ºntika M√°g√≥cs Miskolc Mohar Mokud N√©gye Opos √ñs√∂d √ñt√©ny √ïrs √ïze P√≥sa Somogy S√∫r Szal√≥k Szaonok Szend 	
-			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T√ºh√ºt√ºm Vajk Vata Ula Yelegh Zo√°rd
-			Kopp√°ny Zerind Taksony Zolta G√©za Levedi El√∂d Ugyek
+			Ajtony Ampud Attila ¡kos ¡lmos Apor ¡rp·d ¡rt·nd ¡rv·d Balog B·tor Bekı BÈl BÈla Bors Botos BÛdog 
+			BˆngÈr Bıd Bıs Csaba Csaha Csan·d Cenk Cenke Csonta Elıd Ete Fajsz Farkas Fiacs Finta Geregen Gye¸csa 
+			GyÈcs HetÈny Huba Jenı Kadicsa Kaba Karuly KemÈnd Kese Ketel Ket¸d Keve Kˆlked Kˆnd Kursz·n K¸sid LÈl 
+			Li¸ntika M·gÛcs Miskolc Mohar Mokud NÈgye Opos ÷sˆd ÷tÈny ’rs ’ze PÛsa Somogy S˙r SzalÛk Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T¸h¸t¸m Vajk Vata Ula Yelegh Zo·rd
+			Kopp·ny Zerind Taksony Zolta GÈza Levedi Elˆd Ugyek
 		}
 		female_names = {
-			Angyalka Anik√≥ Aranka Askam Borb√°la Csilla Csillag Czenzi Em√µke Emese Eperjes Etel Gilv√°d Gy√∂ngy√∂s 
-			Hajnal Ibolya Ildik√≥ J√≥zsa Kinga Ilona Le√°ncs Luca Mag√≥ Nyeste Odola Orsolya Panni Piroska Sarolt 
-			S√°fely Sebe Szent√µ Sz√©pa Szinta Sz√ºga T√ºnd√©r Vir√°g Zolt√°na Zsuzsa Zsanett
+			Angyalka AnikÛ Aranka Askam Borb·la Csilla Csillag Czenzi Emıke Emese Eperjes Etel Gilv·d Gyˆngyˆs 
+			Hajnal Ibolya IldikÛ JÛzsa Kinga Ilona Le·ncs Luca MagÛ Nyeste Odola Orsolya Panni Piroska Sarolt 
+			S·fely Sebe Szentı SzÈpa Szinta Sz¸ga T¸ndÈr Vir·g Zolt·na Zsuzsa Zsanett
 		}
 	}
 	dunavian_culture = {
 		primary = BCS
 		dynasty_names = {
-			Aba Acs√°d Agm√°nd Ajtony √Åkos Apor √Årp√°d Baksa Baracska Barcz B√°na B√°r-Kal√°n B√©l Borsa B√∂sz√∂rm√©ny 
-			B√µ Csan√°d Cs√°k Csolt Dorozsma J√°k√≥ Kaj√°n Kaplyony Katap√°n K√°ta K√∂lcse K√∂lp√©ny Miskolc Monoszl√≥ 	
-			Oslu √ñrs√∫r Rosd Szaonok Szemere Tardos Tomaj Turul Z√°h Zsombor
+			Aba Acs·d Agm·nd Ajtony ¡kos Apor ¡rp·d Baksa Baracska Barcz B·na B·r-Kal·n BÈl Borsa BˆszˆrmÈny 
+			Bı Csan·d Cs·k Csolt Dorozsma J·kÛ Kaj·n Kaplyony Katap·n K·ta Kˆlcse KˆlpÈny Miskolc MonoszlÛ 	
+			Oslu ÷rs˙r Rosd Szaonok Szemere Tardos Tomaj Turul Z·h Zsombor
 		}
 		male_names = {
-			Ajtony Ampud Attila √Åkos √Ålmos Apor √Årp√°d √Årt√°nd √Årv√°d Balog B√°tor Bek√µ B√©l B√©la Bors Botos B√≥dog 
-			B√∂ng√©r B√µd B√µs Csaba Csaha Csan√°d Cenk Cenke Csonta El√µd Ete Fajsz Farkas Fiacs Finta Geregen Gye√ºcsa 
-			Gy√©cs Het√©ny Huba Jen√µ Kadicsa Kaba Karuly Kem√©nd Kese Ketel Ket√ºd Keve K√∂lked K√∂nd Kursz√°n K√ºsid L√©l 
-			Li√ºntika M√°g√≥cs Miskolc Mohar Mokud N√©gye Opos √ñs√∂d √ñt√©ny √ïrs √ïze P√≥sa Somogy S√∫r Szal√≥k Szaonok Szend 	
-			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T√ºh√ºt√ºm Vajk Vata Ula Yelegh Zo√°rd
-			Kopp√°ny Zerind Taksony Zolta G√©za Levedi El√∂d Ugyek
+			Ajtony Ampud Attila ¡kos ¡lmos Apor ¡rp·d ¡rt·nd ¡rv·d Balog B·tor Bekı BÈl BÈla Bors Botos BÛdog 
+			BˆngÈr Bıd Bıs Csaba Csaha Csan·d Cenk Cenke Csonta Elıd Ete Fajsz Farkas Fiacs Finta Geregen Gye¸csa 
+			GyÈcs HetÈny Huba Jenı Kadicsa Kaba Karuly KemÈnd Kese Ketel Ket¸d Keve Kˆlked Kˆnd Kursz·n K¸sid LÈl 
+			Li¸ntika M·gÛcs Miskolc Mohar Mokud NÈgye Opos ÷sˆd ÷tÈny ’rs ’ze PÛsa Somogy S˙r SzalÛk Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T¸h¸t¸m Vajk Vata Ula Yelegh Zo·rd
+			Kopp·ny Zerind Taksony Zolta GÈza Levedi Elˆd Ugyek
 		}
 		female_names = {
-			Angyalka Anik√≥ Aranka Askam Borb√°la Csilla Csillag Czenzi Em√µke Emese Eperjes Etel Gilv√°d Gy√∂ngy√∂s 
-			Hajnal Ibolya Ildik√≥ J√≥zsa Kinga Ilona Le√°ncs Luca Mag√≥ Nyeste Odola Orsolya Panni Piroska Sarolt 
-			S√°fely Sebe Szent√µ Sz√©pa Szinta Sz√ºga T√ºnd√©r Vir√°g Zolt√°na Zsuzsa Zsanett
+			Angyalka AnikÛ Aranka Askam Borb·la Csilla Csillag Czenzi Emıke Emese Eperjes Etel Gilv·d Gyˆngyˆs 
+			Hajnal Ibolya IldikÛ JÛzsa Kinga Ilona Le·ncs Luca MagÛ Nyeste Odola Orsolya Panni Piroska Sarolt 
+			S·fely Sebe Szentı SzÈpa Szinta Sz¸ga T¸ndÈr Vir·g Zolt·na Zsuzsa Zsanett
 		}
 	}
 	karpataljai_culture = {
 		primary = UNG
 		dynasty_names = {
-			Aba Acs√°d Agm√°nd Ajtony √Åkos Apor √Årp√°d Baksa Baracska Barcz B√°na B√°r-Kal√°n B√©l Borsa B√∂sz√∂rm√©ny 
-			B√µ Csan√°d Cs√°k Csolt Dorozsma J√°k√≥ Kaj√°n Kaplyony Katap√°n K√°ta K√∂lcse K√∂lp√©ny Miskolc Monoszl√≥ 	
-			Oslu √ñrs√∫r Rosd Szaonok Szemere Tardos Tomaj Turul Z√°h Zsombor
+			Aba Acs·d Agm·nd Ajtony ¡kos Apor ¡rp·d Baksa Baracska Barcz B·na B·r-Kal·n BÈl Borsa BˆszˆrmÈny 
+			Bı Csan·d Cs·k Csolt Dorozsma J·kÛ Kaj·n Kaplyony Katap·n K·ta Kˆlcse KˆlpÈny Miskolc MonoszlÛ 	
+			Oslu ÷rs˙r Rosd Szaonok Szemere Tardos Tomaj Turul Z·h Zsombor
 		}
 		male_names = {
-			Ajtony Ampud Attila √Åkos √Ålmos Apor √Årp√°d √Årt√°nd √Årv√°d Balog B√°tor Bek√µ B√©l B√©la Bors Botos B√≥dog 
-			B√∂ng√©r B√µd B√µs Csaba Csaha Csan√°d Cenk Cenke Csonta El√µd Ete Fajsz Farkas Fiacs Finta Geregen Gye√ºcsa 
-			Gy√©cs Het√©ny Huba Jen√µ Kadicsa Kaba Karuly Kem√©nd Kese Ketel Ket√ºd Keve K√∂lked K√∂nd Kursz√°n K√ºsid L√©l 
-			Li√ºntika M√°g√≥cs Miskolc Mohar Mokud N√©gye Opos √ñs√∂d √ñt√©ny √ïrs √ïze P√≥sa Somogy S√∫r Szal√≥k Szaonok Szend 	
-			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T√ºh√ºt√ºm Vajk Vata Ula Yelegh Zo√°rd
-			Kopp√°ny Zerind Taksony Zolta G√©za Levedi El√∂d Ugyek
+			Ajtony Ampud Attila ¡kos ¡lmos Apor ¡rp·d ¡rt·nd ¡rv·d Balog B·tor Bekı BÈl BÈla Bors Botos BÛdog 
+			BˆngÈr Bıd Bıs Csaba Csaha Csan·d Cenk Cenke Csonta Elıd Ete Fajsz Farkas Fiacs Finta Geregen Gye¸csa 
+			GyÈcs HetÈny Huba Jenı Kadicsa Kaba Karuly KemÈnd Kese Ketel Ket¸d Keve Kˆlked Kˆnd Kursz·n K¸sid LÈl 
+			Li¸ntika M·gÛcs Miskolc Mohar Mokud NÈgye Opos ÷sˆd ÷tÈny ’rs ’ze PÛsa Somogy S˙r SzalÛk Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T¸h¸t¸m Vajk Vata Ula Yelegh Zo·rd
+			Kopp·ny Zerind Taksony Zolta GÈza Levedi Elˆd Ugyek
 		}
 		female_names = {
-			Angyalka Anik√≥ Aranka Askam Borb√°la Csilla Csillag Czenzi Em√µke Emese Eperjes Etel Gilv√°d Gy√∂ngy√∂s 
-			Hajnal Ibolya Ildik√≥ J√≥zsa Kinga Ilona Le√°ncs Luca Mag√≥ Nyeste Odola Orsolya Panni Piroska Sarolt 
-			S√°fely Sebe Szent√µ Sz√©pa Szinta Sz√ºga T√ºnd√©r Vir√°g Zolt√°na Zsuzsa Zsanett
+			Angyalka AnikÛ Aranka Askam Borb·la Csilla Csillag Czenzi Emıke Emese Eperjes Etel Gilv·d Gyˆngyˆs 
+			Hajnal Ibolya IldikÛ JÛzsa Kinga Ilona Le·ncs Luca MagÛ Nyeste Odola Orsolya Panni Piroska Sarolt 
+			S·fely Sebe Szentı SzÈpa Szinta Sz¸ga T¸ndÈr Vir·g Zolt·na Zsuzsa Zsanett
 		}
 	}
 	magyar_culture = {
 		primary = MGY
 		dynasty_names = {
-			Aba Acs√°d Agm√°nd Ajtony √Åkos Apor √Årp√°d Baksa Baracska Barcz B√°na B√°r-Kal√°n B√©l Borsa B√∂sz√∂rm√©ny 
-			B√µ Csan√°d Cs√°k Csolt Dorozsma J√°k√≥ Kaj√°n Kaplyony Katap√°n K√°ta K√∂lcse K√∂lp√©ny Miskolc Monoszl√≥ 	
-			Oslu √ñrs√∫r Rosd Szaonok Szemere Tardos Tomaj Turul Z√°h Zsombor
+			Aba Acs·d Agm·nd Ajtony ¡kos Apor ¡rp·d Baksa Baracska Barcz B·na B·r-Kal·n BÈl Borsa BˆszˆrmÈny 
+			Bı Csan·d Cs·k Csolt Dorozsma J·kÛ Kaj·n Kaplyony Katap·n K·ta Kˆlcse KˆlpÈny Miskolc MonoszlÛ 	
+			Oslu ÷rs˙r Rosd Szaonok Szemere Tardos Tomaj Turul Z·h Zsombor
 		}
 		male_names = {
-			Ajtony Ampud Attila √Åkos √Ålmos Apor √Årp√°d √Årt√°nd √Årv√°d Balog B√°tor Bek√µ B√©l B√©la Bors Botos B√≥dog 
-			B√∂ng√©r B√µd B√µs Csaba Csaha Csan√°d Cenk Cenke Csonta El√µd Ete Fajsz Farkas Fiacs Finta Geregen Gye√ºcsa 
-			Gy√©cs Het√©ny Huba Jen√µ Kadicsa Kaba Karuly Kem√©nd Kese Ketel Ket√ºd Keve K√∂lked K√∂nd Kursz√°n K√ºsid L√©l 
-			Li√ºntika M√°g√≥cs Miskolc Mohar Mokud N√©gye Opos √ñs√∂d √ñt√©ny √ïrs √ïze P√≥sa Somogy S√∫r Szal√≥k Szaonok Szend 	
-			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T√ºh√ºt√ºm Vajk Vata Ula Yelegh Zo√°rd
-			Kopp√°ny Zerind Taksony Zolta G√©za Levedi El√∂d Ugyek
+			Ajtony Ampud Attila ¡kos ¡lmos Apor ¡rp·d ¡rt·nd ¡rv·d Balog B·tor Bekı BÈl BÈla Bors Botos BÛdog 
+			BˆngÈr Bıd Bıs Csaba Csaha Csan·d Cenk Cenke Csonta Elıd Ete Fajsz Farkas Fiacs Finta Geregen Gye¸csa 
+			GyÈcs HetÈny Huba Jenı Kadicsa Kaba Karuly KemÈnd Kese Ketel Ket¸d Keve Kˆlked Kˆnd Kursz·n K¸sid LÈl 
+			Li¸ntika M·gÛcs Miskolc Mohar Mokud NÈgye Opos ÷sˆd ÷tÈny ’rs ’ze PÛsa Somogy S˙r SzalÛk Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul T¸h¸t¸m Vajk Vata Ula Yelegh Zo·rd
+			Kopp·ny Zerind Taksony Zolta GÈza Levedi Elˆd Ugyek
 		}
 		female_names = {
-			Angyalka Anik√≥ Aranka Askam Borb√°la Csilla Csillag Czenzi Em√µke Emese Eperjes Etel Gilv√°d Gy√∂ngy√∂s 
-			Hajnal Ibolya Ildik√≥ J√≥zsa Kinga Ilona Le√°ncs Luca Mag√≥ Nyeste Odola Orsolya Panni Piroska Sarolt 
-			S√°fely Sebe Szent√µ Sz√©pa Szinta Sz√ºga T√ºnd√©r Vir√°g Zolt√°na Zsuzsa Zsanett
+			Angyalka AnikÛ Aranka Askam Borb·la Csilla Csillag Czenzi Emıke Emese Eperjes Etel Gilv·d Gyˆngyˆs 
+			Hajnal Ibolya IldikÛ JÛzsa Kinga Ilona Le·ncs Luca MagÛ Nyeste Odola Orsolya Panni Piroska Sarolt 
+			S·fely Sebe Szentı SzÈpa Szinta Sz¸ga T¸ndÈr Vir·g Zolt·na Zsuzsa Zsanett
 		}
 	}
 	hungarian = {
 		primary = HUN
 		dynasty_names = {
-			B√°thory Hunyadi Szapolyai R√°k√≥czy Bocskai Bethlen Alm√°sy Andr√°ssy Batthy√°ny Cs√°ky Dessewffy
-			Erdody Eszterh√°zy Festetics Hajd√∫ K√°rolyi Kun Magyary Per√©nyi R√≥nai Sz√©chenyi Szepessy 
-			Th√∂k√∂ly Tisza Zr√≠nyi Teleki
-			Majl√°th D√≥czy Dob√≥ Koh√°ry Orczy Frankopan Garay Mikes Sz√©csi Imreffy N√°dasdy Rh√©dey
+			B·thory Hunyadi Szapolyai R·kÛczy Bocskai Bethlen Alm·sy Andr·ssy Batthy·ny Cs·ky Dessewffy
+			Erdody Eszterh·zy Festetics Hajd˙ K·rolyi Kun Magyary PerÈnyi RÛnai SzÈchenyi Szepessy 
+			Thˆkˆly Tisza ZrÌnyi Teleki
+			Majl·th DÛczy DobÛ Koh·ry Orczy Frankopan Garay Mikes SzÈcsi Imreffy N·dasdy RhÈdey
 			
 			#CK2
-			Zrinski Hadik Both "R√°k√≥czi" Forg√°ch Cseszneky Derencs√©nyi D√©csey R√©vay Esterh√°zy
-			K√°llay Kem√©ny Thurz√≥ Zichy
+			Zrinski Hadik Both "R·kÛczi" Forg·ch Cseszneky DerencsÈnyi DÈcsey RÈvay Esterh·zy
+			K·llay KemÈny ThurzÛ Zichy
 		}
 		male_names = {
-			Ul√°szl√≥ L√°szl√≥ Lajos Albert J√°nos M√°ty√°s Zsigmond Andr√°s K√°roly Istv√°n B√©la Anaszt√°z Barnab√°s 
-			Boldizs√°r D√°vid D√∂m√∂t√∂r Edv√°rd Ern√∂ Ferenc G√°bor Gy√∂rgy Izs√°k Jen√∂ J√≥zsef K√°lm√°n K√°zm√©r L√∂rinc 
-			Mikl√≥s Oszk√°r Ott√≥ Patrik P√©ter Simon Tam√°s Vencel
-			√Åbel √Åd√°rn √Ågoston √Ålmos √Årp√°d √ïd√∂n Otto Alajos Ambrus Andr√°s Andrew Antal Attila B√°lint 
-			Albert Bal√°zs Benedek Benedict Bern√°t Bernard Bert√≥k Bertalan Boldizs√°r Bonuslo
-			Borisz Boris Cs√°k Csaba Csongor D√©nes D√∂m√∂t√∂r Dezs√µ Domoszl√≥ Don√°t Elek Elem√©r Endre Ern√µ 
-			Philip Ferenc Francis Frigyes G√°bor G√°briel Gabriel G√°sp√°r Caspar G√©za Gazsi
-			Gell√©rt Gergely Gy√∂rgy George Gyula Imre Istv√°n Stephen Izs√°k J√°kob Jacob J√°nos John J√≥zsef 
-			Joseph Jen√µ K√°lm√°n K√°roly Charles Konr√°d Konrad Korn√©l Krist√≥f L√°szl√≥ L√°z√°r L√µrinc Lajos 
-			Lampert Levente Luk√°cs M√°rk Marcus M√°rton Martin M√°t√© M√°ty√°s Matthew M√≥ric M√≥zes Mih√°ly 
-			Michael Louis Ful√∂p B√©la
-			Mikl√≥s N√°ndor Orb√°n Oszk√°r P√°l Paul P√©ter Peter S√°muel Samuel S√°ndor Alexander Salamon 
-			Szilveszter Silvester T√°dor Tacsony Tam√°s Thomas Tibor Tivadar Vazul Vencel Vaclav Vilmos 
-			Zolt√°n Zsigmond Sigmund Zsolt Saul Soma
+			Ul·szlÛ L·szlÛ Lajos Albert J·nos M·ty·s Zsigmond Andr·s K·roly Istv·n BÈla Anaszt·z Barnab·s 
+			Boldizs·r D·vid Dˆmˆtˆr Edv·rd Ernˆ Ferenc G·bor Gyˆrgy Izs·k Jenˆ JÛzsef K·lm·n K·zmÈr Lˆrinc 
+			MiklÛs Oszk·r OttÛ Patrik PÈter Simon Tam·s Vencel
+			¡bel ¡d·rn ¡goston ¡lmos ¡rp·d ’dˆn Otto Alajos Ambrus Andr·s Andrew Antal Attila B·lint 
+			Albert Bal·zs Benedek Benedict Bern·t Bernard BertÛk Bertalan Boldizs·r Bonuslo
+			Borisz Boris Cs·k Csaba Csongor DÈnes Dˆmˆtˆr Dezsı DomoszlÛ Don·t Elek ElemÈr Endre Ernı 
+			Philip Ferenc Francis Frigyes G·bor G·briel Gabriel G·sp·r Caspar GÈza Gazsi
+			GellÈrt Gergely Gyˆrgy George Gyula Imre Istv·n Stephen Izs·k J·kob Jacob J·nos John JÛzsef 
+			Joseph Jenı K·lm·n K·roly Charles Konr·d Konrad KornÈl KristÛf L·szlÛ L·z·r Lırinc Lajos 
+			Lampert Levente Luk·cs M·rk Marcus M·rton Martin M·tÈ M·ty·s Matthew MÛric MÛzes Mih·ly 
+			Michael Louis Fulˆp BÈla
+			MiklÛs N·ndor Orb·n Oszk·r P·l Paul PÈter Peter S·muel Samuel S·ndor Alexander Salamon 
+			Szilveszter Silvester T·dor Tacsony Tam·s Thomas Tibor Tivadar Vazul Vencel Vaclav Vilmos 
+			Zolt·n Zsigmond Sigmund Zsolt Saul Soma
 		}
 		female_names = {
-			√Ågnes Agnes √âva Eva Adelaida Adelaide Ag√°ta Agatha Am√°lia Amelia Angyalka Anik√≥ Aranka 
-			Bertha Borb√°la Csilla Csillag Czenzi Dorottya Dorothy Edit Edith Em√µke Emese Erika Erzs√©bet 
+			¡gnes Agnes …va Eva Adelaida Adelaide Ag·ta Agatha Am·lia Amelia Angyalka AnikÛ Aranka 
+			Bertha Borb·la Csilla Csillag Czenzi Dorottya Dorothy Edit Edith Emıke Emese Erika ErzsÈbet 
 			Elisabeth Eszter Berta Anna
-			Etel Euphemia Euphemia Gizella Gisela Gy√∂rgyi Georgia Hajnal Hedwig Hedwig Ibolya Ildik√≥ 
-			Ir√©n Irene J√°cinta J√≥zsa J√∫lia Juliana Jol√°n Judith Judith Kamilla Camilla Katalin 
-			Kinga Kl√°ra Clara Catherine Illona
-			Konstancia Constance Krisztina Christina Kunigunda Kunigunde Luca M√°ria Maria M√°rta Martha 
-			Magdolna Magdalena Margar√©ta Margaret Margit Matild Matilda Nat√°lia Natalia Odola Orsolya 
-			Panni Piroska R√≥zsa Rosa S√°ra Sarah Sarolt Zsuzsa Zsanett
-			Skolasztika Sophia Sophia Tund√©r Terezia Teresa Viola Viola Vir√°g Zolt√°na Zs√≥fia Sophia
+			Etel Euphemia Euphemia Gizella Gisela Gyˆrgyi Georgia Hajnal Hedwig Hedwig Ibolya IldikÛ 
+			IrÈn Irene J·cinta JÛzsa J˙lia Juliana Jol·n Judith Judith Kamilla Camilla Katalin 
+			Kinga Kl·ra Clara Catherine Illona
+			Konstancia Constance Krisztina Christina Kunigunda Kunigunde Luca M·ria Maria M·rta Martha 
+			Magdolna Magdalena MargarÈta Margaret Margit Matild Matilda Nat·lia Natalia Odola Orsolya 
+			Panni Piroska RÛzsa Rosa S·ra Sarah Sarolt Zsuzsa Zsanett
+			Skolasztika Sophia Sophia TundÈr Terezia Teresa Viola Viola Vir·g Zolt·na ZsÛfia Sophia
 		}
 	}
 }
@@ -1772,7 +1538,7 @@ baltic	= {
 			"Wilks" "Klakis" "Luks" "Kuilis" "Kalabijjan"
 			"Jankowskie" "Konopacki" "Penikis" "Tontegode" "Vidins" "Draguns" "Sirkants"
 			# Ugric Baltic
-			"Karasi" "Ingrija" "Revala" "Virumaa" "L√§√§nemaa" "Ingeri" "Livo" "Harjumaa"
+			"Karasi" "Ingrija" "Revala" "Virumaa" "L‰‰nemaa" "Ingeri" "Livo" "Harjumaa"
 			"Ridala" "Saaremaa" "Vaiga" "Turaida"
 		}
 	}
@@ -1881,7 +1647,7 @@ baltic	= {
 			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
 			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
 			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
-			Izbor J√≥zef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			Izbor JÛzef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
 			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
 			Christian Krzeslaw Lambert Lambert Leszek Ctibor
 			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
@@ -1909,7 +1675,7 @@ baltic	= {
 			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
 			Premyslovci Podebrad 
 			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
-			Ostrogski Ostror√≥g Pac Sapieha Sanguszko Tarnowski Teczynski
+			Ostrogski OstrorÛg Pac Sapieha Sanguszko Tarnowski Teczynski
 			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
 			Brzeczyszczykiewicz
 		}
@@ -1966,11 +1732,11 @@ baltic	= {
 		Ugandi Gediminai Radziwill Gostautas Astikas Kesgaila Chodkiewicz Olshanski Chartoryski
 		Giedraiciai Pac Plater Tyzenhaus Sapieha Ostrogski Oginski
 		# CKII
-		"von Finckenstein" "Wilks" "Klakis" "Luks" "Kuilis" "Kalabijjan" "von Preussen" "von K√∂nigsberg" 
+		"von Finckenstein" "Wilks" "Klakis" "Luks" "Kuilis" "Kalabijjan" "von Preussen" "von Kˆnigsberg" 
 		"Jankowskie" "von Danzig" "von Seidlitz" "von Marienburg" "Konopacki"
 		"von Memel" "von Kurs" "von Rohrbach" "Penikis" "Tontegode" "Vidins" "Draguns" "Sirkants"
 		# Ugric Baltic
-		"Karasi" "Ingrija" "Saaremaa" "Revala" "Virumaa" "L√§√§nemaa" "Vaiga" "Ingeri" "Ingeri" "Livo" "Harjumaa" "Virumaa" 
+		"Karasi" "Ingrija" "Saaremaa" "Revala" "Virumaa" "L‰‰nemaa" "Vaiga" "Ingeri" "Ingeri" "Livo" "Harjumaa" "Virumaa" 
 		"Ridala" "Saaremaa" "Vaiga" "Turaida"
 	}
 }
@@ -2022,14 +1788,14 @@ byzantine = {
 			"Kassymatas" "Nesteutes" "Scholastikos" "Chrisostomos" "Nazianzen" "Nikomedianos" "Protokletos" "Garidas" 
 			"Grammatikos" "Zeno" "Gavalas" "Axuchos" "Kamonas" "Asidenos" "Hephaistos" "Karatzas" 
 			"Amiroutzes" "Bessarion" "Callistus" "Chalkokondyles" "Gazis" "Kourtesios" "Kallistos" "Kladas" "de Patras" 
-			"Gemistus" "Allatios" "Chalcocondyles" "Korniaktos" "Damaskenos" "Eparchos" "Flanginis" "Fok√°s" "Heraclides" 
-			"Kallokratos" "Kottounios" "Leontaritis" "Loukanis" "Margunios" "Musurus" "Nafpliotis" "Hatzid√°kis" 
+			"Gemistus" "Allatios" "Chalcocondyles" "Korniaktos" "Damaskenos" "Eparchos" "Flanginis" "Fok·s" "Heraclides" 
+			"Kallokratos" "Kottounios" "Leontaritis" "Loukanis" "Margunios" "Musurus" "Nafpliotis" "Hatzid·kis" 
 			"Aprenos"  "Chortatzis" "Gabrielopoulos" "Gounaropoulos" "Belissariotis" "Konstantopoulos" "Kavallarios" 
 			"Maniakis" "Notaras" "Sgouromallis" "Epiphanis" "Logaras" "Eudaimon" "Sakellarios" "Maurozoumis" "Stylaios" 
 			"Maleinos" "Basilakios" "Mamonas" "Kekaumenos" "Metaxas" "Kanavos" "Koukouzelis" "Koresis" "Makrinos" 
 			"Lambardas" "Adrianos" "Agallon" "Akropolites" "Aoinos" "Apokaukos" "Aprenos" "Arbantenos" "Argyros" 
 			"Arianites" "Atrapes" "Balsamon" "Batatzes" "Botaneiates" "Boumbalis" "Bourtzes" "Branas" "Bryennios" 
-			"Chandrenos" "Choniates" "Choumnos" "Chrysaphes" "Chrysoloras" "Dalassenos" "Dermoka√Øtes" "Diasorenos" 
+			"Chandrenos" "Choniates" "Choumnos" "Chrysaphes" "Chrysoloras" "Dalassenos" "DermokaÔtes" "Diasorenos" 
 			"Dokeianos" "Eirenikos" "Exazenos" "Gavras" "Glabas" "Iagaris" "Kabakes" "Kabasilas" "Kalamanos" "Kaloethes" 
 			"Kalothetos" "Kamateros" "Katrares" "Kaukadenos" "Kontostephanos" "Koresses" "Kourkouas" 
 			"Kourtikes" "Limpidares" "Machoneos" "Makrembolites" "Malakes" "Maliasenos" "Mamalis" 
@@ -2043,7 +1809,7 @@ byzantine = {
 			"Antiochos" "Antipapas" "Arbintenos" "Areobindenos" "Areobindos" "Argyropoulos" "Aristenos" "Artoukomites" 
 			"Arvantenos" "Attaleiates" "Aulenos" "Aulepates" "Axinites" "Axiomatikos" "Balantes" "Barbaros" "Bardales" 
 			"Barenos" "Barsakes" "Barys" "Belissariotes" "Bempetziotes" "Beriboes" "Beriotes" "Blachernites" "Blangas" 
-			"Bo√Ølas" "Bouches" "Boutzares" "Bouzenos" "Brachamios" "Bringas" "Chaldos" "Chalkites" "Chalkoutzes" 
+			"BoÔlas" "Bouches" "Boutzares" "Bouzenos" "Brachamios" "Bringas" "Chaldos" "Chalkites" "Chalkoutzes" 
 			"Chamaretos" "Charsianites" "Chasanes" "Chazanes" "Choinides" "Choirosphaktes" "Chomatenos" "Chordolibas" 
 			"Choriates" "Chrouselios" "Chrousos" "Chrysanthos" "Chryselios" "Chrysobalantites" "Chrysoberges" "Chytes" 
 			"Daimones" "Dalessenos" "Dalassenos Doukas" "Dekanos" "Diabatenos" "Dikaios" "Diogenes" "Domestikopouolos" 
@@ -2054,7 +1820,7 @@ byzantine = {
 			"Haplorabdes" "Haploucheir" "Hexakionites" "Hexaklinites" "Hexamilites" "Hierakes" "Hikanatos" "Iasites" 
 			"Iberopoulos" "Isakiotes" "Italikos" "Kaballarios" "Kabasilas" "Kaisar" "Kalameteros" "Kalamaras" 
 			"Kalampakes" "Kalognomos" "Kamytzes Komnenodoukas" "Kappadokes" "Kappadox Kalampakes" "Karabitenos" 
-			"Karabitziotes" "Kara√Øonatan" "Karamallos" "Karandenos" "Karantes" "Kardamopoulos" "Karenos" "Karianites" 
+			"Karabitziotes" "KaraÔonatan" "Karamallos" "Karandenos" "Karantes" "Kardamopoulos" "Karenos" "Karianites" 
 			"Karkaronymos" "Karmalikes" "Karouzeiates" "Kaspax" "Kastamonites" "Katakalon" "Katakalos" "Kataphloros" 
 			"Katas" "Katharos" "Katotikos" "Katzamoundes" "Kegenes" "Kekaleimenos" "Keklymmenos" "Kemineianos" "Kenchres" 
 			"Kentenares" "Kephalas" "Keroularios" "Kibyrraiotes" "Kinnamos" "Kokkinos" "Komnenodoukas" "Konops" 
@@ -2062,12 +1828,12 @@ byzantine = {
 			"Kritharas" "Kritopolos" "Kyminianos" "Kynochorites" "Kyriotes" "Kyritzes" "Labouzenos" "Laktentitzes" 
 			"Lalakon" "Lampsiotes" "Lapardas" "Leichoudes" "Lependrenos" "Leukedonites" "Libadares" "Libadas" 
 			"Libellisios" "Limas" "Liparites" "Lithokastrites" "Logariastes" "Loules" "Louloukes" "Lykaon" "Machetarios" 
-			"Madrites" "Madytenos" "Makropoderes" "Male√Ønos" "Maleses" "Mamalos" "Manganes" "Marachas" "Marapas" 
+			"Madrites" "Madytenos" "Makropoderes" "MaleÔnos" "Maleses" "Mamalos" "Manganes" "Marachas" "Marapas" 
 			"Marchapsabos" "Marianites" "Marzapoulos" "Matzaris" "Matzas" "Matzoukes" "Maurex" "Maurokatakalos" "Mauros" 
 			"Maurozomes" "Mechos" "Megalommates" "Megenos" "Meginos" "Melias" "Melissenos" "Mermentoulos" "Mesarites" 
 			"Meschos" "Mesopotamites" "Metochites" "Metropoulos" "Mitylenaios" "Monachites" "Monokarites" "Monomachatos" 
 			"Moroiannes" "Mosaraph" "Moschos" "Mosele" "Moungos" "Mourmoures" "Moustakes" "Mozaes" "Myralides" 
-			"Myrede√Øtes" "Myrelaetes" "Myron" "Nabatenos" "Narbiotes" "Narsites" "Neophytos" "Neustongios" "Nikerites" 
+			"MyredeÔtes" "Myrelaetes" "Myron" "Nabatenos" "Narbiotes" "Narsites" "Neophytos" "Neustongios" "Nikerites" 
 			"Nikoulitzes" "Noe" "Oinaiotes" "Olyntenos" "Opos" "Pagomenos" "Pakourianos" "Paktiares" 
 			"Doukas Mourtzouphlos" "Palaiotes" "Palatinos" "Pamphilos" "Panaretos" "Pankalos" 
 			"Panokomites" "Parsakoutenos" "Parthenios" "Paxenos" "Pediasimos" "Peganites" "Pegonites" "Pekoules" 
@@ -2139,14 +1905,14 @@ byzantine = {
 			"Kassymatas" "Nesteutes" "Scholastikos" "Chrisostomos" "Nazianzen" "Nikomedianos" "Protokletos" "Garidas" 
 			"Grammatikos" "Zeno" "Gavalas" "Axuchos" "Kamonas" "Asidenos" "Hephaistos" "Karatzas" 
 			"Amiroutzes" "Bessarion" "Callistus" "Chalkokondyles" "Gazis" "Kourtesios" "Kallistos" "Kladas" "de Patras" 
-			"Gemistus" "Allatios" "Chalcocondyles" "Korniaktos" "Damaskenos" "Eparchos" "Flanginis" "Fok√°s" "Heraclides" 
-			"Kallokratos" "Kottounios" "Leontaritis" "Loukanis" "Margunios" "Musurus" "Nafpliotis" "Hatzid√°kis" 
+			"Gemistus" "Allatios" "Chalcocondyles" "Korniaktos" "Damaskenos" "Eparchos" "Flanginis" "Fok·s" "Heraclides" 
+			"Kallokratos" "Kottounios" "Leontaritis" "Loukanis" "Margunios" "Musurus" "Nafpliotis" "Hatzid·kis" 
 			"Aprenos"  "Chortatzis" "Gabrielopoulos" "Gounaropoulos" "Belissariotis" "Konstantopoulos" "Kavallarios" 
 			"Maniakis" "Notaras" "Sgouromallis" "Epiphanis" "Logaras" "Eudaimon" "Sakellarios" "Maurozoumis" "Stylaios" 
 			"Maleinos" "Basilakios" "Mamonas" "Kekaumenos" "Metaxas" "Kanavos" "Koukouzelis" "Koresis" "Makrinos" 
 			"Lambardas" "Adrianos" "Agallon" "Akropolites" "Aoinos" "Apokaukos" "Aprenos" "Arbantenos" "Argyros" 
 			"Arianites" "Atrapes" "Balsamon" "Batatzes" "Botaneiates" "Boumbalis" "Bourtzes" "Branas" "Bryennios" 
-			"Chandrenos" "Choniates" "Choumnos" "Chrysaphes" "Chrysoloras" "Dalassenos" "Dermoka√Øtes" "Diasorenos" 
+			"Chandrenos" "Choniates" "Choumnos" "Chrysaphes" "Chrysoloras" "Dalassenos" "DermokaÔtes" "Diasorenos" 
 			"Dokeianos" "Eirenikos" "Exazenos" "Gavras" "Glabas" "Iagaris" "Kabakes" "Kabasilas" "Kalamanos" "Kaloethes" 
 			"Kalothetos" "Kamateros" "Katrares" "Kaukadenos" "Kontostephanos" "Koresses" "Kourkouas" 
 			"Kourtikes" "Limpidares" "Machoneos" "Makrembolites" "Malakes" "Maliasenos" "Mamalis" 
@@ -2160,7 +1926,7 @@ byzantine = {
 			"Antiochos" "Antipapas" "Arbintenos" "Areobindenos" "Areobindos" "Argyropoulos" "Aristenos" "Artoukomites" 
 			"Arvantenos" "Attaleiates" "Aulenos" "Aulepates" "Axinites" "Axiomatikos" "Balantes" "Barbaros" "Bardales" 
 			"Barenos" "Barsakes" "Barys" "Belissariotes" "Bempetziotes" "Beriboes" "Beriotes" "Blachernites" "Blangas" 
-			"Bo√Ølas" "Bouches" "Boutzares" "Bouzenos" "Brachamios" "Bringas" "Chaldos" "Chalkites" "Chalkoutzes" 
+			"BoÔlas" "Bouches" "Boutzares" "Bouzenos" "Brachamios" "Bringas" "Chaldos" "Chalkites" "Chalkoutzes" 
 			"Chamaretos" "Charsianites" "Chasanes" "Chazanes" "Choinides" "Choirosphaktes" "Chomatenos" "Chordolibas" 
 			"Choriates" "Chrouselios" "Chrousos" "Chrysanthos" "Chryselios" "Chrysobalantites" "Chrysoberges" "Chytes" 
 			"Daimones" "Dalessenos" "Dalassenos Doukas" "Dekanos" "Diabatenos" "Dikaios" "Diogenes" "Domestikopouolos" 
@@ -2171,7 +1937,7 @@ byzantine = {
 			"Haplorabdes" "Haploucheir" "Hexakionites" "Hexaklinites" "Hexamilites" "Hierakes" "Hikanatos" "Iasites" 
 			"Iberopoulos" "Isakiotes" "Italikos" "Kaballarios" "Kabasilas" "Kaisar" "Kalameteros" "Kalamaras" 
 			"Kalampakes" "Kalognomos" "Kamytzes Komnenodoukas" "Kappadokes" "Kappadox Kalampakes" "Karabitenos" 
-			"Karabitziotes" "Kara√Øonatan" "Karamallos" "Karandenos" "Karantes" "Kardamopoulos" "Karenos" "Karianites" 
+			"Karabitziotes" "KaraÔonatan" "Karamallos" "Karandenos" "Karantes" "Kardamopoulos" "Karenos" "Karianites" 
 			"Karkaronymos" "Karmalikes" "Karouzeiates" "Kaspax" "Kastamonites" "Katakalon" "Katakalos" "Kataphloros" 
 			"Katas" "Katharos" "Katotikos" "Katzamoundes" "Kegenes" "Kekaleimenos" "Keklymmenos" "Kemineianos" "Kenchres" 
 			"Kentenares" "Kephalas" "Keroularios" "Kibyrraiotes" "Kinnamos" "Kokkinos" "Komnenodoukas" "Konops" 
@@ -2179,12 +1945,12 @@ byzantine = {
 			"Kritharas" "Kritopolos" "Kyminianos" "Kynochorites" "Kyriotes" "Kyritzes" "Labouzenos" "Laktentitzes" 
 			"Lalakon" "Lampsiotes" "Lapardas" "Leichoudes" "Lependrenos" "Leukedonites" "Libadares" "Libadas" 
 			"Libellisios" "Limas" "Liparites" "Lithokastrites" "Logariastes" "Loules" "Louloukes" "Lykaon" "Machetarios" 
-			"Madrites" "Madytenos" "Makropoderes" "Male√Ønos" "Maleses" "Mamalos" "Manganes" "Marachas" "Marapas" 
+			"Madrites" "Madytenos" "Makropoderes" "MaleÔnos" "Maleses" "Mamalos" "Manganes" "Marachas" "Marapas" 
 			"Marchapsabos" "Marianites" "Marzapoulos" "Matzaris" "Matzas" "Matzoukes" "Maurex" "Maurokatakalos" "Mauros" 
 			"Maurozomes" "Mechos" "Megalommates" "Megenos" "Meginos" "Melias" "Melissenos" "Mermentoulos" "Mesarites" 
 			"Meschos" "Mesopotamites" "Metochites" "Metropoulos" "Mitylenaios" "Monachites" "Monokarites" "Monomachatos" 
 			"Moroiannes" "Mosaraph" "Moschos" "Mosele" "Moungos" "Mourmoures" "Moustakes" "Mozaes" "Myralides" 
-			"Myrede√Øtes" "Myrelaetes" "Myron" "Nabatenos" "Narbiotes" "Narsites" "Neophytos" "Neustongios" "Nikerites" 
+			"MyredeÔtes" "Myrelaetes" "Myron" "Nabatenos" "Narbiotes" "Narsites" "Neophytos" "Neustongios" "Nikerites" 
 			"Nikoulitzes" "Noe" "Oinaiotes" "Olyntenos" "Opos" "Pagomenos" "Pakourianos" "Paktiares" 
 			"Doukas Mourtzouphlos" "Palaiotes" "Palatinos" "Pamphilos" "Panaretos" "Pankalos" 
 			"Panokomites" "Parsakoutenos" "Parthenios" "Paxenos" "Pediasimos" "Peganites" "Pegonites" "Pekoules" 
@@ -2222,30 +1988,30 @@ byzantine = {
 		male_names = {
 			Mikail Gebrail Daniyel Filip Yosef Yohan Yihsus Aleksandir Antoniy Tomas Davud Adriyan Peder Matihas Corge Benyamin
 			Arslan Atakan Tugrul Ertugrul Turgut Ozan Orhan Oguz Orhun Orkun Yigit Kubilay Kutalmis Kutay Giray
-			G√∂khan Dogukan Tolga Alp Alper Kaan Hakan Berkay Efe Akin Altay Baris Cagatay Karatay Erkin Koray Eren
+			Gˆkhan Dogukan Tolga Alp Alper Kaan Hakan Berkay Efe Akin Altay Baris Cagatay Karatay Erkin Koray Eren
 			Savas
 		}
 		female_names = {
-			√ái√ßek √áilen √áiltanesi √ñzgul √ñzlem Akgul Asli Aslihan Ayasun Ayla Ayse Ayten Azize Bahar Banu 
-			Boz√ßin Canan Ceylan Dunya Dilber Dilek Emine Esin Fatma Firuze Gul√ßi√ßek Gulay Gulbahar Gulfem 
+			«iÁek «ilen «iltanesi ÷zgul ÷zlem Akgul Asli Aslihan Ayasun Ayla Ayse Ayten Azize Bahar Banu 
+			BozÁin Canan Ceylan Dunya Dilber Dilek Emine Esin Fatma Firuze GulÁiÁek Gulay Gulbahar Gulfem 
 			Gulsum Gumus Gunduz Gundes Gunes Hatice Hayat Huriye Ilkay Ilknur Ipek Ipekel Irge Karacik Lale 
 			Leyla Mala Mansure Merve Mutlu Nagihan Nergis Neslihan Nilufer Nur Peksen Terkhen Samur Sarica 
-			Sati Sehnaz Serap Serife Sevilay Sevindik Sibel Sibylla Sirin Sirma Songul Sumru Tek√ße Tura 
-			Umay Usunbike Vahide Yasar Yeldem Yildiz Zehra Zuhal Hatice Safiye Zeynep H√ºrrem Mihrimah Nurbanu 
-			Handan Alime K√∂sem H√ºma 
+			Sati Sehnaz Serap Serife Sevilay Sevindik Sibel Sibylla Sirin Sirma Songul Sumru TekÁe Tura 
+			Umay Usunbike Vahide Yasar Yeldem Yildiz Zehra Zuhal Hatice Safiye Zeynep H¸rrem Mihrimah Nurbanu 
+			Handan Alime Kˆsem H¸ma 
 		}
 	}
 	albanian = {
 		primary = ALB
 		male_names = {
-			Gjergj Lek√´ Gjon Kostandin Lul√´zim Pal Tanush Aleksand√´r Karolus Filippo Adnan Agim Bashkim Besnik 
-			Dardan Dhurim Drit√´ro Elidon Erjon Fatmir Flamur Florin Hekuran Ilir Ismail Klodian Luigj Milaim 
-			Pashko P√´llumb P√´rparim Pjet√´r Rrok Shp√´tim Tahir Viktor Xhevat Ylli Zenel Halil Ali Mustafa Qemal 
-			Mehmet Ramiz Edi Demaci Edon Dukagjin Haxhi Lish√´ndri Mensur Kreshnik Rahman Nxhiku Riza Rexhep 
+			Gjergj LekÎ Gjon Kostandin LulÎzim Pal Tanush AleksandÎr Karolus Filippo Adnan Agim Bashkim Besnik 
+			Dardan Dhurim DritÎro Elidon Erjon Fatmir Flamur Florin Hekuran Ilir Ismail Klodian Luigj Milaim 
+			Pashko PÎllumb PÎrparim PjetÎr Rrok ShpÎtim Tahir Viktor Xhevat Ylli Zenel Halil Ali Mustafa Qemal 
+			Mehmet Ramiz Edi Demaci Edon Dukagjin Haxhi LishÎndri Mensur Kreshnik Rahman Nxhiku Riza Rexhep 
 			Sulejman Selim Sadik Bujar Nikolla Enver Ramadan
 		}
 		female_names = {
-			Gjylo Af√´rdita Blerta Bora Dafina Dardana Era Fatmire Flutura Gentiana Jehona Lindita Lule Luljeta Pranvera Shpresa 
+			Gjylo AfÎrdita Blerta Bora Dafina Dardana Era Fatmire Flutura Gentiana Jehona Lindita Lule Luljeta Pranvera Shpresa 
 			Shqipe Teuta Venera Vera Vesa Yllka
 		}
 		dynasty_names = { 
@@ -2257,14 +2023,14 @@ byzantine = {
 	Illyrian = {
 		primary = ALB
 		male_names = {
-			Gjergj Lek√´ Gjon Kostandin Lul√´zim Pal Tanush Aleksand√´r Karolus Filippo Adnan Agim Bashkim Besnik 
-			Dardan Dhurim Drit√´ro Elidon Erjon Fatmir Flamur Florin Hekuran Ilir Ismail Klodian Luigj Milaim 
-			Pashko P√´llumb P√´rparim Pjet√´r Rrok Shp√´tim Tahir Viktor Xhevat Ylli Zenel Halil Ali Mustafa Qemal 
-			Mehmet Ramiz Edi Demaci Edon Dukagjin Haxhi Lish√´ndri Mensur Kreshnik Rahman Nxhiku Riza Rexhep 
+			Gjergj LekÎ Gjon Kostandin LulÎzim Pal Tanush AleksandÎr Karolus Filippo Adnan Agim Bashkim Besnik 
+			Dardan Dhurim DritÎro Elidon Erjon Fatmir Flamur Florin Hekuran Ilir Ismail Klodian Luigj Milaim 
+			Pashko PÎllumb PÎrparim PjetÎr Rrok ShpÎtim Tahir Viktor Xhevat Ylli Zenel Halil Ali Mustafa Qemal 
+			Mehmet Ramiz Edi Demaci Edon Dukagjin Haxhi LishÎndri Mensur Kreshnik Rahman Nxhiku Riza Rexhep 
 			Sulejman Selim Sadik Bujar Nikolla Enver Ramadan
 		}
 		female_names = {
-			Gjylo Af√´rdita Blerta Bora Dafina Dardana Era Fatmire Flutura Gentiana Jehona Lindita Lule Luljeta Pranvera Shpresa 
+			Gjylo AfÎrdita Blerta Bora Dafina Dardana Era Fatmire Flutura Gentiana Jehona Lindita Lule Luljeta Pranvera Shpresa 
 			Shqipe Teuta Venera Vera Vesa Yllka
 		}
 		dynasty_names = { 
@@ -2401,7 +2167,7 @@ caucasian = {
 		}
 		dynasty_names = {
 			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
-			Hatuqwai Khegaik Khetuk C√∂bein Shapsug Beslenei Ubykh Tazryt Okhlov
+			Hatuqwai Khegaik Khetuk Cˆbein Shapsug Beslenei Ubykh Tazryt Okhlov
 		}
 	}
 	dagestani = {
