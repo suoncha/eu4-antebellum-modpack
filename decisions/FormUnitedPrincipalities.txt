@@ -3,7 +3,8 @@ country_decisions = {
 	unp_nation = {
 		major = yes
 		potential = {
-			tag = MOL
+			culture_group = romanian_culture_group
+			is_or_was_wallachia = no
 		}
 		
 		provinces_to_highlight = {
@@ -20,7 +21,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			tag = MOL
 			mission_completed = rmn_principalities
 			owns_core_province = 160
 			owns_core_province = 161

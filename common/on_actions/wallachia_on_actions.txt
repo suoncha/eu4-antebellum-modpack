@@ -91,7 +91,6 @@ on_new_monarch = {
 				dynasty = "Draculesti"
 			}
 			remove_country_modifier = tooltip_draculesti_coalition
-			remove_country_modifier = tooltip_revive_public_punishments
 			if = {
 				limit = {
 					has_reform = dominance_of_the_ruling_house

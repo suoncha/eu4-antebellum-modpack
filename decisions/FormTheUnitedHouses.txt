@@ -2,7 +2,10 @@ country_decisions = {
 	wal_form_the_united_houses = {
 		major = yes
 		potential = {
-			tag = WAL
+			OR = {
+				tag = WAL
+				tag = DAC
+			}
 			has_wallachia_purged_the_estates = no
 		}
 		provinces_to_highlight = {
@@ -21,7 +24,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			tag = WAL
 			mission_completed = wal_the_great_feast
 			transylvania_area = {
 				type = all
