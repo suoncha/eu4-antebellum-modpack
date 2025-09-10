@@ -2492,7 +2492,10 @@ ashigaru_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Domination"
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+			culture = sinico_japanese
+		}
 	}
 	trigger = {
 		if = {
@@ -2518,7 +2521,10 @@ early_bushido_code_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Domination"
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+			culture = sinico_japanese
+		}
 	}
 	trigger = {
 		if = {
@@ -4188,7 +4194,10 @@ jap_gokaido_reform = {
 	icon = "jap_gokaido_reform"
 	allow_normal_conversion = no
 	potential = {
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+			culture = sinico_japanese
+		}
 	}
 	trigger = {
 		OR = {
@@ -4232,7 +4241,10 @@ reform_the_samurai_reform = {
 	icon = "reform_the_samurai_reform"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = japanese_g 
+		OR = {
+			culture_group = japanese_g
+			culture = sinico_japanese 
+		}
 		# AB [[[
 		OR = {
 			tag = JAP

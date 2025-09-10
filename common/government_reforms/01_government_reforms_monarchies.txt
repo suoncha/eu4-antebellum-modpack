@@ -451,7 +451,10 @@ indep_daimyo = {
 					# }}}
 				}
 				capital_scope = { region = japan_region }
-				culture_group = japanese_g
+				OR = {
+					culture_group = japanese_g
+					culture = sinico_japanese
+				}
 			}
 			AND = {
 				is_playing_custom_nation = yes

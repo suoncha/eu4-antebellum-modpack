@@ -11,12 +11,25 @@ country_event = {
 		name = AB_Shahi_Event.1.OPT1
 		ai_chance = { factor = 50 }
 		change_technology_group = indian
-		custom_tooltip = AB_SHH_CB_tt
-		unlock_estate_privilege = {
-			estate_privilege = estate_nobles_ghurid_hindu_integration
+		If = {
+			limit = {
+				government = monarchy
+			}
+			custom_tooltip = aba_shahi_diwan_tt
+		    add_government_reform = aba_shahi_diwan
 		}
+		else_if = {
+			limit = {
+				government = tribal
+			}
+			custom_tooltip = aba_shahi_diwan_tt
+		    add_government_reform = aba_shahi_diwan_tribal
+		}
+		custom_tooltip = AB_SHH_CB_tt
 		custom_tooltip = GHU_REFORMSHH
-		hidden_effect = { set_country_flag = AB_SHH_activate_CB }
+		hidden_effect = { 
+			set_country_flag = AB_SHH_activate_CB 
+	   }
 	}
 	option = {
 		name = AB_Shahi_Event.1.OPT2

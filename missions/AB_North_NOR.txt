@@ -477,6 +477,8 @@ nor_2_group = {
 		}
 		
 		effect = {
+			set_country_flag = abf_varangians_culture_spread
+			custom_tooltip = abf_varangians_culture_spread_tt
 			add_mercantilism = 5
 			define_advisor = {
 				type = trader
