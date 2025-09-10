@@ -438,6 +438,7 @@ BRI_missions_2 = {
 		
 		effect = {
 			country_event = { id = aba_brittany_event.6 }
+			set_country_flag = aba_gal_release_celt
 			grant_all_mana = {
 				mana = 150
 			}

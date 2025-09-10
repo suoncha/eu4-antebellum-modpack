@@ -2389,6 +2389,8 @@ ab_danish_fifth5 = {
 		}
 		
 		effect = {
+			set_country_flag = abf_varangians_culture_spread
+			custom_tooltip = abf_varangians_culture_spread_tt
 			add_army_professionalism = 0.05
 			add_country_modifier = {
 				name = "dan_wends"

@@ -165,12 +165,15 @@ province_event = {
 	}
 
 	trigger = {
-	religion = confucianism
+		religion = confucianism
 		owner = {
 			has_country_flag = sinicized_japanese_culture_spread
 		}
 		NOT = {
 			culture_group = sinico_japanese
+		}
+		OR = {
+		region = japan_region
 		}
 	}
 
@@ -193,7 +196,7 @@ province_event = {
 	}
 
 trigger = {
-	religion = shinto
+	religion = confucianism
     owner = {
         has_country_flag = sinicized_korean_culture_spread
     }
@@ -228,7 +231,9 @@ province_event = {
 
 #Will fire for all non japanese_g province in the Korea region
 trigger = {
-	religion = shinto
+	OR = {
+			religion = confucianism
+		}
     owner = {
         has_country_flag = japanese_zainichi_culture_spread
     }
@@ -291,7 +296,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.7.a
-		change_culture = wolgadeutsche_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = wolgadeutsche_culture_new
+		}
+		else = {
+         change_culture = wolgadeutsche_culture
+		}
 	}
 
 
@@ -336,7 +347,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.8.a
-		change_culture = schwarzmeerdeutsche_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = schwarzmeerdeutsche_culture_new
+		}
+		else = {
+         change_culture = schwarzmeerdeutsche_culture
+		}
 	}
 
 }
@@ -378,7 +395,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.9.a
-		change_culture = donauschwaben_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = donauschwaben_culture_new
+		}
+		else = {
+         change_culture = donauschwaben_culture
+		}
 	}
 
 }
@@ -419,7 +442,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.10.a
-		change_culture = mantaken_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = mantaken_culture_new
+		}
+		else = {
+         change_culture = mantaken_culture
+		}
 	}
 
 }
@@ -491,8 +520,15 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.12.a
-		change_culture = olender_culture
-		change_original_culture = olender_culture
+	    if = {
+			limit = { culture_group = united_germanic }
+            change_culture = olender_culture_new
+		    change_original_culture = olender_culture_new
+		}
+		else = {
+         change_culture = olender_culture
+		 change_original_culture = olender_culture
+		}
 	}
 
 }
@@ -533,7 +569,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.13.a
-		change_culture = weichseldeutsche_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = weichseldeutsche_culture_new
+		}
+		else = {
+         change_culture = weichseldeutsche_culture
+		}
 	}
 
 }
@@ -574,7 +616,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.14.a
-		change_culture = russlanddeutsche_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = weichseldeutsche_culture_new
+		}
+		else = {
+         change_culture = russlanddeutsche_culture
+		}
 	}
 
 }
@@ -615,7 +663,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.15.a
-		change_culture = wolhynien_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = wolhynien_culture_new
+		}
+		else = {
+         change_culture = wolhynien_culture
+		}
 	}
 
 }
@@ -656,7 +710,13 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.16.a
-		change_culture = jugoslawienschwaben_culture
+		if = {
+			limit = { culture_group = united_germanic }
+            change_culture = jugoslawienschwaben_culture_new
+		}
+		else = {
+         change_culture = jugoslawienschwaben_culture
+		}
 	}
 
 }
@@ -772,6 +832,418 @@ province_event = {
 	option = {
 		name = ab_new_cultures.20.a
 		change_culture = Gallic
+	}
+
+}
+
+#Aibofolke Culture Spread (Swedish) Spread 
+province_event = {
+	id = ab_new_cultures.21
+	title = ab_new_cultures.21.t
+	desc = ab_new_cultures.21.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_swe_aibofolke_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = scandinavian
+			}
+		}
+		OR = {
+			region = baltic_region
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.20.a
+		change_culture = aibofolke_culture
+	}
+
+}
+
+#Finnish Culture Spread in North (Swedish) Spread 
+province_event = {
+	id = ab_new_cultures.22
+	title = ab_new_cultures.22.t
+	desc = ab_new_cultures.22.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_swe_finnish_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = scandinavian
+			}
+		}
+		OR = {
+			area = karelia_area
+			area = pomor_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.22.a
+		change_culture = finnish_new_culture
+	}
+
+}
+
+#Cossack Culture Spread (UKR/Russ/HET) Spread 
+province_event = {
+	id = ab_new_cultures.23
+	title = ab_new_cultures.23.t
+	desc = ab_new_cultures.23.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = abf_ukr_cossack_culture_spread
+		}
+		religion = orthodox
+		NOT = {
+			OR = {
+				culture_group = east_slavic
+			}
+		}
+		OR = {
+			    area = crimea_area
+				area = yedisan_area
+				area = zaporizhia_area 
+				area = azov_area
+				area = lower_don_area
+				area = circassia_area
+				area = dagestan_area
+				area = astrakhan_area
+				area = saratov_area
+				area = samara_area
+				area = volga_area
+				area = kazan_area
+				area = lower_yik_area
+				area = bashkiria_area
+				area = galich_area
+				area = perm_area
+				area = kama_area
+				area = nogai_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.23.a
+		if = { 
+			limit = {  #Black Sea 
+				OR = {
+				area = crimea_area
+				area = yedisan_area
+				area = zaporizhia_area 
+				}
+			}
+			change_culture = aba_chernomoriya_cossack_culture
+		}
+		else_if = {
+			limit = { #Don
+				OR = {
+				area = azov_area
+				area = lower_don_area
+
+				}
+			}
+			change_culture = aba_don_cossack_culture
+		}
+		else_if = { #Caucausia
+			limit = {
+				OR = {
+				area = circassia_area
+				area = dagestan_area
+				}
+			}
+			change_culture = aba_terek_cossack_culture
+		}
+		else_if = { # Volga
+			limit = {
+				OR = {
+				area = astrakhan_area
+				area = saratov_area
+				area = samara_area
+				area = volga_area
+				area = kazan_area
+				area = tambov_area
+				}
+			}
+			change_culture = aba_povolzyhe_cossack_culture
+		}
+		else_if = { # Yik
+			limit = {
+				OR = {
+				area = lower_yik_area
+				area = bashkiria_area
+				area = galich_area
+				area = perm_area
+				area = kama_area
+				area = nogai_area
+				}
+			}
+			change_culture = aba_uralskiye_cossack_culture
+		}
+		else = {
+			change_culture = ruthenian
+		}
+	}
+
+}
+
+#Pomorian Culture Spread in North (Novogorod) Spread 
+province_event = {
+	id = ab_new_cultures.26
+	title = ab_new_cultures.26.t
+	desc = ab_new_cultures.26.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = abf_nov_pomor_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = east_slavic
+			}
+		}
+		OR = {
+			religion = orthodox
+	  }
+		OR = {
+			area = karelia_area
+			area = finland_area
+			area = norrland_area
+			area = laponia_area
+			area = bothnia_area
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.26.a
+		change_culture = pomorian
+	}
+
+}
+
+#Pomorian Culture Spread in North (Novogorod) Spread 
+province_event = {
+	id = ab_new_cultures.24
+	title = ab_new_cultures.24.t
+	desc = ab_new_cultures.24.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_kharbinskiye_cossack_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = east_slavic
+			}
+		}
+		OR = {
+			region = manchuria_region
+	  }
+	  OR = {
+			religion = orthodox
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.24.a
+		change_culture = aba_kharbinskiye_cossack_culture
+	}
+
+}
+
+#Albinese Culture Spread in North (Novogorod) Spread - jump to event id 27
+province_event = {
+	id = ab_new_cultures.25
+	title = ab_new_cultures.25.t
+	desc = ab_new_cultures.25.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = abf_albion_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture = abf_albion_culture
+			}
+		}
+		OR = {
+		 culture = scottish
+		 culture = cornish
+		 culture = english
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.25.a
+		change_culture = abf_albion_culture
+	}
+
+}
+
+#Nagaybak Culture Spread in Central Asia (Russian) 
+province_event = {
+	id = ab_new_cultures.27
+	title = ab_new_cultures.27.t
+	desc = ab_new_cultures.27.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		religion = orthodox
+		owner = {
+			has_country_flag = abf_nagaybak_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture = abf_albion_culture
+			}
+		}
+		OR = {
+		 culture = khazak
+		 culture = kirgiz
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.27.a
+		change_culture = abf_nagaybak_culture
+	}
+
+}
+
+#Nagaybak Culture Spread in Central Asia (Russian) 
+province_event = {
+	id = ab_new_cultures.28
+	title = ab_new_cultures.28.t
+	desc = ab_new_cultures.28.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = abf_varangians_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = scandinavian
+			}
+		}
+		OR = {
+		 area = novgorod_area
+		 area = karelia_area
+		 area = pomor_area
+		 area = arkhangelsk_area
+		 province_id = 38
+		 province_id = 43
+		 province_id = 4745
+		 province_id = 151
+	  }
+	  OR = {
+			religion = reformed_norse
+			religion = norse_pagan_reformed
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.28.a
+		change_culture = abf_varangians_culture
+	}
+
+}
+
+#Wendish Culture Spread in Germany
+province_event = {
+	id = ab_new_cultures.29
+	title = ab_new_cultures.29.t
+	desc = ab_new_cultures.29.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = abf_wendish_culture_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = west_slavic
+			}
+		}
+		OR = {
+		region = north_german_region
+		region = south_german_region
+	  }
+	  OR = {
+			religion = slavic_pagan
+			religion = reformed_slavic
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.29.a
+		change_culture = Wendish
 	}
 
 }

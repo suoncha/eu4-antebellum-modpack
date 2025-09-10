@@ -2653,12 +2653,18 @@ ab_japan_third_second = {
 			}
 		}
 		effect = {
+			if = {
+				limit  = {
+					 NOT = {
+						 has_country_flag = sinicized_japanese_culture_spread 
+			         }
+	          }
+			set_country_flag = japanese_zainichi_culture_spread
+			custom_tooltip = JAP_KR_CULTURE
 			korea_region = {
 				add_base_production = 1
 			}
 			custom_tooltip = JAP_ACCESS_GYEONGBOK
-			custom_tooltip = JAP_KR_CULTURE
-			set_country_flag = japanese_zainichi_culture_spread
 			set_country_flag = enable_korean_palace_flag
 			add_country_modifier = {
 				name = japan_turtle_fleets
@@ -2668,7 +2674,24 @@ ab_japan_third_second = {
 				country_event = {
 					id = ab_achiev.45
 				}
+			  }
 			}
+          else = {
+			korea_region = {
+				add_base_production = 1
+			}
+			custom_tooltip = JAP_ACCESS_GYEONGBOK
+			set_country_flag = enable_korean_palace_flag
+			add_country_modifier = {
+				name = japan_turtle_fleets
+				duration = -1
+			 }
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.45
+				}
+			  }
+		   }
 		}
 	}
 

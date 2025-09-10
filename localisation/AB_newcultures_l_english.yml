@@ -1,64 +1,101 @@
 ﻿l_english:
 # Cultures #
+#Asia
  japanese_nikkei: "Nikkei"
 #iberian_tornatras: "Tornatrás" - TODO 1.10
 #andalucian_moro: "Moro"# TODO 1.10
 #chino_hispano: "Hispano-Chinese" - 1.10
 #arb_kurdo_arabic: "Kurdo-Arabic" - 1.10
- sinico_japanese: "Sino-Japanese"
+ sinico_japanese: "Fusau"
  japanese_zainichi: "Zainichi"
- wolgadeutsche_culture: "Wolga"
- schwarzmeerdeutsche_culture: "Schwarzmeer"
- donauschwaben_culture: "Donauschwaben"
- mantaken_culture: "Mantaken"
+#German
+ wolgadeutsche_culture: "Wolgadeutsch"
+ schwarzmeerdeutsche_culture: "Schwarzmeerdeutsch"
+ donauschwaben_culture: "Donauschwäbisch"
+ mantaken_culture: "Mantakisch"
  olender_culture: "Olender"
  jugoslawienschwaben_culture: "Jugoslawienschwaben"
- wolhynien_culture: "Wolhynien"
- weichseldeutsche_culture: "Weichseldeutsche"
- russlanddeutsche_culture: "Russlanddeutsche"
+ wolhynien_culture: "Wolhynian"
+ weichseldeutsche_culture: "Weichseldeutsch"
+ russlanddeutsche_culture: "Russlanddeutsch"
+ wolgadeutsche_culture_new: "Wolgadeutsch"
+ schwarzmeerdeutsche_culture_new: "Schwarzmeerdeutsch"
+ donauschwaben_culture_new: "Donauschwäbisch"
+ mantaken_culture_new: "Mantakisch"
+ olender_culture_new: "Olender"
+ jugoslawienschwaben_culture_new: "Jugoslawienschwaben"
+ wolhynien_culture_new: "Wolhynian"
+ weichseldeutsche_culture_new: "Weichseldeutsch"
+ russlanddeutsche_culture_new: "Russlanddeutsch"
+#Scandinavia
  anglonorse_culture: "Anglo-Norse"
  finnish_new_culture: "Finnish"
-
+ aibofolke_culture: "Aibofolke"
+ abf_varangians_culture: "Varangian"
+#Russian
+ aba_chernomoriya_cossack_culture: "Chernomoriya"
+ aba_don_cossack_culture: "Dontsi"
+ aba_terek_cossack_culture: "Terek"
+ aba_povolzyhe_cossack_culture: "Povolzyhe"
+ aba_uralskiye_cossack_culture: "Uralskiye"
+ aba_kharbinskiye_cossack_culture: "Kharbinskiye"
+ abf_nagaybak_culture: "Nagaybak"
+#British
+ abf_albion_culture: "Alban"
 
  #government_reforms
  aba_GLH_golden_tsardom: "The Golden Tsardom"
  aba_GLH_golden_tsardom_desc: "We have truimphed over the squabbling states of Rus, asserting ourselves as the true heirs of Ruthenia. With our modernized bureaucracy and insitutions, we must fully embrace the traditions of the Ruthenians to ensure a lasting legacy and their loyalty."
  ABA_danubian_federation: "The Danubian Federation"
  ABA_danubian_federation_desc: "As we've spread our influence over the Carpathian Basin, we've come to realize that the various peoples of this region would be better served under a single federal government. By fusing the Hungarian culture and traditions with that of our various subjects, we can create a more unified and stable state that will be better equipped to face the challenges of the future."
+ aba_shahi_diwan: "Shahi Diwan"
+ aba_shahi_diwan_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ aba_shahi_diwan_tribal: "Shahi Diwan"
+ aba_shahi_diwan_tribal_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire.
 
 
 # Mission Tooltips #
 #Asia
  JAP_PH_CULTURE: "The §YNikkei§! culture will §Gnaturally spread§! throughout our §YShinto Filipino§! provinces."
  JAP_KR_CULTURE: "The §YZainichi§! culture will §Gnaturally spread§! throughout our §YShinto Korean§! provinces."
+abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
+abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
+aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fusing §GIndian§! and §GAfghan§! ways of governance. We will recieve increased and unique rewards for assimilating Indian cultures!\n"
 # IBE_PH_CULTURE: "The §YTornatrás§! culture will §Gnaturally spread§! throughout our §YCatholic Filipino§! provinces."
 # ADU_PH_CULTURE: "The §YMoro§! culture will §Gnaturally spread§! throughout our §YMuslim Filipino§! provinces." - TO DO 1.10
 # IBE_CH_CULTURE: "The §YHispano-Chinese§! culture will §Gnaturally spread§! throughout our §YCatholic Chinese§! provinces." - TO DO 1.10
 # ARAB_KURDO_ARABIC: "Our culture will switch to §YKurdo-Arabic§! in the §GLevantine Group§!" - TO DO 1.10
- JAP_SJ_tooltip: "The §YSino-Japanese§! and §YSino-Korean§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese and Korean§! provinces."
+ JAP_SJ_tooltip: "§YFusau§! and §YSino-Korean§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese and Korean§! provinces!."
  JAP_SJ_unrest_tooltip: "Our Japanese provinces won't take §Rkindly§! to this..."
  JAP_SJ_decline_tooltip: "§RWe will reject Chinese influence, much to the Ire of our Chinese subjects...§!"
- JAP_convert_culture: "§YSinification of Japan?"§!"
+ JAP_convert_culture: "§YSinification of Japan§!"
+#Russia/Steppe
+ abf_ukr_cossack_culture_spread_tt: "\n§YRuthenian Cossack§! cultures will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Steppe!\n"
+ abf_nov_pomor_culture_spread_tt: "\n§YPomorian§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the North!\n"
+ aba_kharbinskiye_cossack_culture_tt: "\n§YKharbinskiye§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Manchuria!\n"
+ aba_nagaybak_culture_spread_tt: "\n§YNagaybak§! culture will §Gnaturally spread§! throughout our §YOrthodox Kazakh§! and §YKyrgzy§! provinces!\n"
 #Germans
  GER_wolgadeutsche_tooltip: "\nThe §YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
  GER_donauschwaben_tooltip: "\nThe §YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
  GER_mantaken_tooltip: "\nThe §YMantaken Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Mountains!\n"
  ABA_NED_BALTIC_SETTLEMENT_TT: "\nThe §YOlender Dutch§! culture will §Gnaturally spread§! throughout our §YChristian provinces§! in the Baltics!\n"
- GER_weichseldeutsche_tooltip_2: "\n§YWeichseldeutsche Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces in Poland§!!\n"
+ GER_weichseldeutsche_tooltip_2: "\n§YWeichseldeutsche Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Poland!\n"
  GER_jugoslawienschwaben_tooltip: "The §YJugoslawienschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Balkans!"
- GER_ruthenian_germanic_cultures_tooltip: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces in Ruthenia and Russia§!\n"
+ GER_ruthenian_germanic_cultures_tooltip: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Ruthenia and Russia\n"
  GER_ruthenian_germanic_cultures_tooltip_2: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces in the Steppe§!\n"
- aba_GER_hungarian_cultures: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces in in the Carpathian Basin§!\n"
+ aba_GER_hungarian_cultures: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in in the Carpathian Basin\n"
+ aba_wendish_culture_spread_tt: "\n§YWendish§! culture will §Gnaturally spread§! throughout our §YSlavic§! provinces in in the Germany\n"
 #SCANDINAVIA
  aba_anglonorse_spread_tooltip: "\nThe §YAnglo-Norse§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in the British Isles!\n"
  aba_nor_norsegaelic_spread_tooltip: "\nThe §YNorse-Gaelic§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in Ireland!\n"
- aba_swe_move_finnish_culture_tooltip: "\n§YFinnish§! culture will be moved to the §GScandinavian§! culture group\n"
+ aba_swe_move_finnish_culture_tooltip: "\n§YFinnish§! culture will be moved to the §GScandinavian§! culture group and spread throughout Karelia and Pomorye.\n"
  aba_SWE_carolean_paladins_tooltip: "\nWe will gain the ability to recruit §GCarolean Paladins§!\n"
+ aba_swe_swe_aibofolke_culture_spread_tt: "\n§YAibofolke§! culture will §Gnaturally spread§! throughout our directly owned §YChristian§! provinces in the Baltic!\n"
+ abf_varangians_culture_spread_tt: "\n§YVarangian§! culture will §Gnaturally spread§! throughout our directly owned §YNorse§! provinces in the East!\n"
+ #France/West Europe
  aba_breton_gallic_culture_spread_tt: "\nThe §YGallic§! culture will §Gnaturally spread§! throughout our §YFrench§! provinces!\n"
-# GER_wolhynien_tooltip: "The §YWolhynien Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian #provinces§! in Ruthenia!"
-# GER_russlanddeutsche_tooltip: "The §YRusslanddeutsche§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox  Christian # provinces§! in Russia!"
-# GER_weichseldeutsche_tooltip: "The §YWeichseldeutsche Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox #Christian provinces§! in Poland!"
-# GER_schwarzmeerdeutsch_tooltip: "\nThe §YSchwarzmeer Germanic§! culture will §Gnaturally spread§! throughout our §YChristian #provinces§! in the Black Sea Region!\n"
+#British
+ abf_albion_culture_spread_tt: "\nThe §YAlban§! culture will §Gnaturally spread§! throughout our §YBritish§! provinces!\n"
 
 #Events
 #Japan
@@ -91,9 +128,16 @@
  aba_brittany_event.9.t: "The Irish Revolt"
  aba_brittany_event.9.d: "The Irish people have always had a separate and unique identity to that of the British. The revolt of 1395 and the subsequent liberation of Irish settlements in the south from English control only furthered that divide, viewing themselves as distinct from the other Isles. This new revival angered the remnants of the Old High King's court, who gathered in the southern Munster region to begin plotting their rebellion. When they gathered enough support from the populace, they declared their independence from the Britons, claiming the title of High King of Ireland once more."
 
+#Decisions
+#Gallia
+aba_gal_release_celt_decision_title:"Release the Celtic Union"
+aba_gal_release_celt_decision_desc:"After our conquest and conversion of the British Isles many suggested that the lands may be better run by our Brittonic subjects, so that we that we may focus on recovering our homeland on the continent. It is certainly an interesting proposition..."
+
+
 
 #Modifiers
 #Sweden
 aba_swe_caroleans: "Carolean Paladins"
-aba_swe_caroleans_prov: "Home of the Caroleans Paladins'
+aba_swe_caroleans_prov: "Home of the Caroleans Paladins"
+
 

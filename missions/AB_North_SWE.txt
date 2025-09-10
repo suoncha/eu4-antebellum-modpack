@@ -1318,7 +1318,9 @@ ab_sweden_slot2 = {
 		effect = {
 			set_country_flag = swe_release_teuton
 			set_country_flag = swe_release_livonia
+			set_country_flag = aba_swe_aibofolke_culture_spread
 			custom_tooltip = SWE_RELEASE_ORDERS
+			custom_tooltip = aba_swe_swe_aibofolke_culture_spread_tt
 		}
 	}
 	
@@ -3000,6 +3002,7 @@ ab_sweden_slot5 = {
 			add_adm_power = 100
 			custom_tooltip = SWE_GRAND_DUCHY
 			custom_tooltip = aba_swe_move_finnish_culture_tooltip
+			set_country_flag = aba_swe_finnish_culture_spread
 			tooltip = {
 				add_province_modifier = {
 					name = swe_grand_duchy
