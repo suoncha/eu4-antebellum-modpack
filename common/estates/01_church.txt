@@ -38,15 +38,9 @@ estate_church = {
 		church_power_modifier = 0.1
 		monthly_fervor_increase = 1
 		stability_cost_modifier = -0.1
-		# TLW [[[
-		faction_byzpersian_influence = 0.2
-		# ]]]
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
-		# TLW [[[
-		faction_byzpersian_influence = 0.1
-		# ]]]
 	}	
 	country_modifier_angry = {
 		global_tax_modifier = -0.1
@@ -56,9 +50,6 @@ estate_church = {
 		monthly_fervor_increase = -1
 		stability_cost_modifier = 0.1
 		global_unrest = 2
-		# TLW [[[
-		faction_byzpersian_influence = -0.1
-		# ]]]
 	}
 
 	land_ownership_modifier = {
@@ -177,19 +168,16 @@ estate_church = {
 			419 = { religion = coptic has_owner_religion = yes }
 		}
 	}
-	# TLW [[[
+	
 	custom_name = {
 		desc = estate_klirikoi
 		trigger = {
 			OR = {
 				primary_culture = greek
 				primary_culture = sclavinian
-				primary_culture = greco_roman
-				culture_group = hellenic_g
 			}
 		}
 	}
-	# ]]]
 	custom_name = {
 		desc = estate_monasteries
 		trigger = {
@@ -198,14 +186,14 @@ estate_church = {
 	}
 	# AB [[[
 	custom_name = {
-        desc = estate_tietajat
-        trigger = {
-            OR = {
-                tag = FIN
-                was_tag = FIN
-            }
-        }
-    }
+		desc = estate_tietajat
+		trigger = {
+			OR = {
+				tag = FIN
+				was_tag = FIN
+			}
+		}
+	}
 	custom_name = {
 		desc = estate_dvasininkai
 		trigger = {
@@ -231,61 +219,6 @@ estate_church = {
 				tag = SWE
 				was_tag = SWE
 			}
-		}
-	}
-	# ]]]
-	# TLW [[[
-	custom_name = {
-		desc = estate_pontifices
-		trigger = {
-			culture_group = roman_g
-			NOT = { primary_culture = greco_roman }
-		}
-	}
-	custom_name = {
-		desc = estate_kanisa
-		trigger = {
-			OR = {
-				religion = canaanite
-				religion = reformed_canaanite
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_kirukos
-		trigger = {
-			OR = {
-				culture_group = punic_g
-				culture_group = muskogean
-				culture_group = eastern_algonquian
-				culture_group = central_algonquian
-				culture_group = siouan
-				culture_group = iroquoian
-			}
-			OR = {
-				religion = hellenic
-				religion = reformed_hellenic
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_azronal
-		trigger = {
-			OR = {
-				culture_group = punic_g
-				culture_group = muskogean
-				culture_group = eastern_algonquian
-				culture_group = central_algonquian
-				culture_group = siouan
-				culture_group = iroquoian
-			}
-			religion = zoroastrian
-		}
-	}
-	custom_name = {
-		desc = estate_wakantanka
-		trigger = {
-			religion = totemism
 		}
 	}
 	# ]]]
@@ -329,6 +262,12 @@ estate_church = {
 		desc = estate_gurus
 		trigger = {
 			religion = sikhism
+		}
+	}
+	custom_name = {
+		desc = estate_medicine_men
+		trigger = {
+			religion = totemism
 		}
 	}
 	custom_name = {
@@ -408,7 +347,6 @@ estate_church = {
 			religion = confucianism
 		}
 	}
-	# ABMP [[[
 	custom_name = {
 		desc = estate_clerul
 		trigger = {
@@ -416,8 +354,6 @@ estate_church = {
 			religion_group = christian
 		}
 	}
-	# ]]]
-
 	contributes_to_curia_treasury = yes
 	color = { 200 150 0 }
 
@@ -466,11 +402,6 @@ estate_church = {
 		# AB [[[
 		estate_church_pagan_reconciliation
 		estate_church_interfaith_unity
-		# ]]]
-		# TLW [[[
-		estate_church_punic_primitive_administration
-		estate_church_punic_religious_tolerance
-		estate_church_punic_abrahamic_tolerance
 		# ]]]
 	}
 

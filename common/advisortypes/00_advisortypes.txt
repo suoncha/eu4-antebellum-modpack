@@ -120,57 +120,11 @@ philosopher = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
 			technology_cost = -0.02
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]
@@ -292,7 +246,7 @@ natural_scientist = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
@@ -319,70 +273,14 @@ natural_scientist = {
 			global_trade_goods_size_modifier = 0.02
 		}
 	}
-    skill_scaled_modifier = {
-        trigger = {
-            owner = {
-                has_country_flag = teu_scaling_scientist
-            }
-        }
-        modifier = {
-            administrative_efficiency = 0.01
-        }
-    }
-	# ]]]
-	# TLW [[[
 	skill_scaled_modifier = {
 		trigger = {
 			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = nci_scaling_natural_scientist
+				has_country_flag = teu_scaling_scientist
 			}
 		}
 		modifier = {
-			administrative_efficiency = 0.015
+			administrative_efficiency = 0.01
 		}
 	}
 	# ]]]
@@ -545,7 +443,7 @@ artist = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
@@ -553,53 +451,6 @@ artist = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	# ]]]
-	# ABMP [[[
 	skill_scaled_modifier = {
 		trigger = {
 			owner = {
@@ -608,8 +459,6 @@ artist = {
 		}
 		modifier = { great_project_upgrade_cost = -0.05 }
 	}
-	# ]]]
-
 	chance = {
 		factor = 1
 	}
@@ -730,52 +579,6 @@ treasurer = {
 		}
 		modifier = {
 			technology_cost = -0.02
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]
@@ -930,7 +733,7 @@ theologian = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
@@ -947,52 +750,6 @@ theologian = {
 			yearly_corruption = -0.1
 		}
 	}	
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
 	# ]]]
 	
 	chance = {
@@ -1121,57 +878,11 @@ master_of_mint = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
 			technology_cost = -0.02
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]
@@ -1328,87 +1039,11 @@ inquisitor = {
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
-				has_country_flag = frn_unlock_adm_advisor_bonus
+				has_country_flag = frn_unlock_adm_advisor_bonus 
 			}
 		}
 		modifier = {
 			technology_cost = -0.02
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = brn_scaling_inquisitor
-			}
-		}
-		modifier = {
-			land_morale = 0.025
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = cca_scaling_inquisitor
-			}
-		}
-		modifier = {
-			global_autonomy = -0.03
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = cca_scaling_inquisitor2
-			}
-		}
-		modifier = {
-			all_power_cost = -0.01
 		}
 	}
 	# ]]]
@@ -1523,72 +1158,6 @@ statesman = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = ctg_scaling_statesman
-			}
-		}
-		modifier = {
-			reduced_liberty_desire = 4
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
-		}
-	}
-	# ]]]
 
 	chance = {
 		factor = 1
@@ -1670,92 +1239,6 @@ naval_reformer = {
 		}
 		modifier = {
 			monthly_southernfrenchness = -0.05
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = rus_scaling_naval_reformer
-			}
-		}
-		modifier = {
-			heavy_ship_power = 0.03
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = lat_scaling_naval_reformer
-			}
-		}
-		modifier = {
-			galley_power = 0.04
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = vsg_scaling_naval_reformer
-			}
-		}
-		modifier = {
-			global_ship_cost = -0.04
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
 		}
 	}
 	# ]]]
@@ -1910,82 +1393,6 @@ trader = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = trader_give_caravan_power
-			}
-		}
-		modifier = { 
-			caravan_power = 0.06
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = ctg_scaling_trader
-			}
-		}
-		modifier = { 
-			trade_company_investment_cost = -0.03
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
-		}
-	}
-	# ]]]
 
 	chance = {
 		factor = 1
@@ -2056,62 +1463,6 @@ spymaster = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
-		}
-	}
-	# ]]]
 	
 	chance = {
 		factor = 1
@@ -2178,62 +1529,6 @@ colonial_governor = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
-		}
-	}
-	# ]]]
 
 	chance = {
 		factor = 1
@@ -2246,6 +1541,7 @@ colonial_governor = {
 			owner = { is_colonial_nation = yes }
 		}
 	}
+	# ]]]
 	
 	ai_will_do = {
 		factor = 1
@@ -2338,62 +1634,6 @@ diplomat = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
-		}
-	}
-	# ]]]
 	
 	chance = {
 		factor = 1
@@ -2457,62 +1697,6 @@ navigator = {
 		}
 		modifier = {
 			monthly_southernfrenchness = -0.05
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = aldiraq_scaling_dip
-			}
-		}
-		modifier = {
-			trade_efficiency = 0.04
 		}
 	}
 	# ]]]
@@ -2608,52 +1792,6 @@ army_reformer = {
 		}
 		modifier = { 
 			discipline = 0.01
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]
@@ -2767,52 +1905,6 @@ army_organiser = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	# ]]]
 
 	chance = {
 		factor = 1
@@ -2899,90 +1991,14 @@ commandant = {
 		}
 	}
 	skill_scaled_modifier = {
-        trigger = {
-            owner = { 
-                has_country_flag = ven_scaling_commandant
-            }
-        }
-        modifier = { 
-            mercenary_manpower = 0.06
-            merc_maintenance_modifier = -0.06
-        }
-    }
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
 		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_country_flag = commandants_give_global_supply_limit_modifier
+			owner = { 
+				has_country_flag = ven_scaling_commandant
 			}
 		}
 		modifier = { 
-			global_supply_limit_modifier = 0.05
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = che_commandant_buff
-			}
-		}
-		modifier = {
-			siege_ability = 0.04
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
-				has_country_flag = che_commandant2_buff
-			}
-		}
-		modifier = {
-			assault_fort_cost_modifier = -0.1
+			mercenary_manpower = 0.06
+			merc_maintenance_modifier = -0.06
 		}
 	}
 	# ]]]
@@ -3087,52 +2103,6 @@ quartermaster = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	# ]]]
 
 	chance = {
 		factor = 1
@@ -3220,52 +2190,6 @@ recruitmaster = {
 		}
 		modifier = { 
 			discipline = 0.01
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]
@@ -3397,53 +2321,7 @@ fortification_expert = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
-		}
-	}
-	# ]]]
-	# ABMP [[[
+	#PotionSeller
 	skill_scaled_modifier = {
 		trigger = {
 			owner = {
@@ -3464,8 +2342,6 @@ fortification_expert = {
 			garrison_damage = 0.2
 		}
 	}
-	# ]]]
-
 	chance = {
 		factor = 1
 	}
@@ -3548,52 +2424,6 @@ grand_captain = {
 		}
 		modifier = { 
 			discipline = 0.01
-		}
-	}
-	# ]]]
-	# TLW [[[
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzlatin
-			}
-			province_is_latinsphere_trigger = yes
-		}
-		modifier = {
-			faction_byzlatin_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzgreek
-			}
-			province_is_hellenosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzgreek_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzpersian
-			}
-			province_is_persosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzpersian_influence = 0.02
-		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = {
-				has_faction = faction_byzchinese
-			}
-			province_is_sinosphere_trigger = yes
-		}
-		modifier = {
-			faction_byzchinese_influence = 0.02
 		}
 	}
 	# ]]]

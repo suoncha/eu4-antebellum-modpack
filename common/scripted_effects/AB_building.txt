@@ -82,19 +82,6 @@ ab_building_trade_effect = {
 		}
 		add_base_production = 1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = len_marketplace_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = len_additional_slot
-			duration = -1
-		}
-	}
-	# ]]]
 }
 
 ab_removing_trade_effect = {
@@ -106,14 +93,6 @@ ab_removing_trade_effect = {
 		}
 		add_base_production = -1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = len_additional_slot
-		}
-		remove_province_modifier = len_additional_slot
-	}
-	# ]]]
 }
 
 ab_building_tax_effect = {
@@ -144,20 +123,6 @@ ab_building_tax_effect = {
 			duration = -1
 		}
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = che_tax_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = che_rekindling
-			duration = -1
-		}
-	}
-	# ]]]
-	# ABMP [[[
 	if = {
 		limit = {
 			FROM = {
@@ -210,7 +175,6 @@ ab_building_tax_effect = {
 			}
 		}
 	}
-    # ]]]
 }
 
 ab_removing_tax_effect = {
@@ -232,15 +196,6 @@ ab_removing_tax_effect = {
 		}
 		remove_province_modifier = pol_slavic_holy_grounds
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = che_rekindling
-		}
-		remove_province_modifier = che_rekindling
-	}
-	# ]]]
-	# ABMP [[[
 	if = {
 		limit = {
 			has_province_modifier = wallachia_church_buff
@@ -253,7 +208,7 @@ ab_removing_tax_effect = {
 		}
 		remove_province_modifier = wallachia_basilica_buff
 	}
-    # ]]]
+
 }
 
 ab_building_production_effect = {
@@ -309,27 +264,6 @@ ab_building_courthouse_effect = {
 		}
 		add_base_tax = 1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			ROM = {
-				has_country_modifier = byz_cultural_hegemony
-			}
-		}
-		TLW_cultural_hegemony_province_effect = yes
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = ctg_courthouse_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = punic_cultural_hegemony_mod
-			duration = -1
-		}
-	}
-	# ]]]
 }
 
 ab_removing_courthouse_effect = {
@@ -358,20 +292,6 @@ ab_removing_courthouse_effect = {
 		}
 		add_base_tax = -1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = byz_cultural_hegemony_province
-		}
-		remove_province_modifier = byz_cultural_hegemony_province
-	}
-	if = {
-		limit = {
-			has_province_modifier = punic_cultural_hegemony_mod
-		}
-		remove_province_modifier = punic_cultural_hegemony_mod
-	}
-	# ]]]
 }
 
 ab_building_manpower_effect = {
@@ -386,30 +306,6 @@ ab_building_manpower_effect = {
 			duration = -1
 		}
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = vsg_barrack_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = vsg_barrack_mod
-			duration = -1
-		}
-	}
-	else_if = {
-		limit = {
-			FROM = {
-				has_country_flag = ctg_barrack_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = punic_iscine_mod
-			duration = -1
-		}
-	}
-	# ]]]
 }
 
 ab_removing_manpower_effect = {
@@ -419,20 +315,6 @@ ab_removing_manpower_effect = {
 		}
 		remove_province_modifier = ivr_extra_manpower_1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = vsg_barrack_mod
-		}
-		remove_province_modifier = vsg_barrack_mod
-	}
-	else_if = {
-		limit = {
-			has_province_modifier = punic_iscine_mod
-		}
-		remove_province_modifier = punic_iscine_mod
-	}
-	# ]]]
 }
 
 ab_building_shipyard_effect = {
@@ -545,21 +427,6 @@ ab_building_fort_effect = {
 			duration = -1
 		}
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_estate_privilege = estate_nobles_theme_system
-			}
-			base_manpower = 5
-		}
-		add_permanent_province_modifier = {
-			name = byz_estate_theme
-			duration = -1
-		}
-	}
-	# ]]]
-	# ABMP [[[
 	if = {
 		limit = {
 			owner = {
@@ -584,7 +451,6 @@ ab_building_fort_effect = {
 			duration = -1
 		}
 	}
-    # ]]]
 }
 
 ab_removing_fort_effect = {
@@ -635,14 +501,6 @@ ab_removing_fort_effect = {
 		}
 		remove_province_modifier = ned_low_countries_fort_buff_buffed
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = byz_estate_theme
-		}
-		remove_province_modifier = byz_estate_theme
-	}
-	# ]]]
 }
 
 ab_building_university_effect = {
@@ -673,30 +531,6 @@ ab_building_university_effect = {
 			duration = -1
 		}
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = ctg_uni_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = punic_universal_education_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = cca_building_uni
-			}
-		}
-		add_permanent_province_modifier = {
-			name = cca_uni_buff
-			duration = -1
-		}
-	}
-	# ]]]
 }
 
 ab_removing_university_effect = {
@@ -718,20 +552,6 @@ ab_removing_university_effect = {
 		}
 		remove_province_modifier = tus_university_buff
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = punic_universal_education_mod
-		}
-		remove_province_modifier = punic_universal_education_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = cca_uni_buff
-		}
-		remove_province_modifier = cca_uni_buff
-	}
-	# ]]]
 }
 
 ab_building_road_effect = {
@@ -746,28 +566,6 @@ ab_building_road_effect = {
 			duration = -1
 		}
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = byz_building_roads_bonus
-			}
-		}
-		add_permanent_province_modifier = {
-			name = byz_roads_province
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			ROM = {
-				has_country_modifier = byz_cultural_hegemony
-			}
-		}
-		TLW_cultural_hegemony_province_effect = yes
-	}
-	# ]]]
-	# ABMP [[[
 	if = {
 		limit = {
 			owner = {
@@ -821,7 +619,6 @@ ab_building_road_effect = {
 			}
 		}
 	}
-    # ]]]
 }
 
 ab_removing_road_effect = {
@@ -831,21 +628,6 @@ ab_removing_road_effect = {
 		}
 		remove_province_modifier = swa_imperial_builders_province
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = byz_roads_province
-		}
-		remove_province_modifier = byz_roads_province
-	}
-	if = {
-		limit = {
-			has_province_modifier = byz_cultural_hegemony_province
-		}
-		remove_province_modifier = byz_cultural_hegemony_province
-	}
-	# ]]]
-	# ABMP
 	wallachia_remove_road_bonus = yes
 }
 
@@ -858,19 +640,6 @@ ab_building_dock_effect = {
 		}
 		add_base_manpower = 1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = ctg_dock_buff
-			}
-		}
-		add_permanent_province_modifier = {
-			name = punic_thapsus_mod
-			duration = -1
-		}
-	}
-	# ]]]	
 }
 
 ab_removing_dock_effect = {
@@ -882,14 +651,6 @@ ab_removing_dock_effect = {
 		}
 		add_base_manpower = -1
 	}
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = punic_thapsus_mod
-		}
-		remove_province_modifier = punic_thapsus_mod
-	}
-	# ]]]
 }
 
 ab_building_coastal_defence_effect = {
@@ -916,28 +677,7 @@ ab_removing_coastal_defence_effect = {
 }
 
 ab_building_soldier_households_effect = {
-	# TLW [[[
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = cca_building_soldier_households
-			}
-		}
-		add_permanent_province_modifier = {
-			name = cca_additional_manufactory
-			duration = -1
-		}
-	}
-	# ]]]
 }
 
 ab_removing_soldier_households_effect = {
-	# TLW [[[
-	if = {
-		limit = {
-			has_province_modifier = cca_additional_manufactory
-		}
-		remove_province_modifier = cca_additional_manufactory
-	}
-	# ]]]
 }

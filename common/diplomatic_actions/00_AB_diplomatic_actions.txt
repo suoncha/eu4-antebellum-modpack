@@ -121,7 +121,7 @@ declarewar = {
 		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
 		potential = {
 			ai = yes 
-			has_country_flag = ab_teu_joined_the_hre
+			has_country_flag = ab_teu_joined_hre
 			FROM = { is_part_of_hre = yes }
 		}
 		allow = { 
@@ -129,37 +129,7 @@ declarewar = {
 		}
 	}
 	# ]]]
-	# TLW [[[
-	condition = {
-		tooltip = CANNOT_DECLARE_WARS_BUFFER_ZONES
-		potential = {
-			has_country_flag = byz_persian_war_partners
-			FROM = {
-				OR = {
-					tag = GEO
-					tag = JLR
-				}
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
-	condition = {
-		tooltip = CANNOT_DECLARE_INTERNAL_LEAGUE_WARS_OTHER_THAN_INDEPENDENCE_WARS
-		potential = {
-			has_reform = ctg_punic_city_reform
-			NOT = { has_global_flag = ab_disabled_punic_league }
-			REB = {
-				has_country_flag = punic_league_reform_passed_9
-			}
-		}
-		allow = {
-			FROM = { overlord_of = ROOT }
-		}
-	}
-	# ]]]
-	# ABMP [[[
+	#Potion Seller
 	condition = {
 		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
 		potential = {
@@ -175,7 +145,6 @@ declarewar = {
 			}
 		}
 	}
-    # ]]]
 	effect = {
 		on_war_declaration_effect = yes
 		# AB [[[
@@ -306,10 +275,11 @@ declarewar = {
 					is_colonial_nation = yes
 				}
 				OR = {
-					# TLW [[[
-					tag = CTG
-					tlw_is_american_trigger = yes
-					# ]]]
+					technology_group = north_american
+					technology_group = mesoamerican
+					technology_group = andean
+					technology_group = south_american
+					technology_group = high_american
 				}
 			}
 			FROM = {
@@ -383,47 +353,8 @@ declarewar = {
 			}
 		}
 		# ]]]
-		# TLW [[[
-		if = {
-			limit = {
-				is_in_war = {
-					casus_belli = cb_grand_crusade_reconquista
-				}
-				FROM = {
-					tag = ADU
-				}
-				FRC = {
-					is_emperor = yes
-					NOT = { truce_with = ADU }
-				}
-			}
-			FRC = {
-				country_event = {
-					id = ab_byzantium.90
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = byz_unlock_reconquest_of_levant
-				FROM = {
-					OR = {
-						tag = NAZ
-						was_tag = NAZ
-					}
-				}
-			}
-			clr_country_flag = byz_unlock_reconquest_of_levant
-			FROM = {
-				save_global_event_target_as = levantReconquestOwner
-			}
-			country_event = {
-				id = ab_byzantium.79
-			}
-		}
-		# ]]]
-		# ABMP [[[
-		# Sanctioned Princes Call In Emperor Against Them
+		#PotionSeller
+		#Sanctioned Princes Call In Emperor Against Them
 		if = {
 			limit = {
 				has_country_flag = hre_sanctioned_prince
@@ -446,7 +377,7 @@ declarewar = {
 				}
 			}
 		}
-		# Impaler T3 reduces war exhaustion penalty scaled by the amount of stab hit reduction
+		#Impaler T3 reduces war exhaustion penalty scaled by the amount of stab hit reduction
 		if = {
 			limit = {
 				ruler_has_personality = impaler3_personality
@@ -501,7 +432,6 @@ declarewar = {
 				set_country_flag = reduce_ae_with_coalition_target_if_lose
 			}
 		}
-        # ]]]
 	}
 }
 
@@ -534,7 +464,6 @@ demand_unlawful_territory_action = {
 			always = no
 		}
 	}
-	# ABMP [[[
 	condition = {
 		tooltip = imperial_schism_war_ut_tooltip
 		potential = {
@@ -553,7 +482,6 @@ demand_unlawful_territory_action = {
 			always = no
 		}
 	}
-    # ]]]
 }
 
 excommunicate_action = {
@@ -586,24 +514,6 @@ annexationaction = {
 			}
 		}
 	}
-	# TLW [[[
-	condition = {
-		tooltip = CANNOT_ANNEX_CORE_DIADOCHI
-		potential = {
-			FROM = {
-				is_subject_of_type = diadochi_vassal
-				OR = {
-					tag = AEG
-					tag = HLS
-					tag = HLM
-				}
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
-	# ]]]
 	effect = {
 	}
 }
@@ -621,113 +531,3 @@ insultaction = {
 		}
 	}
 }
-
-# TLW [[[
-allianceaction = {
-	condition = {
-		tooltip = DISASTER_TAG_CANNOT_ALLY
-		potential = {
-			has_country_flag = disaster_tag_cannot_ally
-		}
-		allow = {
-			always = no
-		}
-	}
-	condition = {
-		tooltip = FROM_DISASTER_TAG_CANNOT_ALLY
-		potential = {
-			FROM = {
-				has_country_flag = disaster_tag_cannot_ally
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
-	condition = {
-		tooltip = TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			has_country_flag = byz_triumvir_flag
-		}
-		allow = {
-			FROM = {
-				has_country_flag = byz_triumvir_flag
-			}
-		}
-	}
-	condition = {
-		tooltip = FROM_TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			FROM = {
-				has_country_flag = byz_triumvir_flag
-			}
-		}
-		allow = {
-			has_country_flag = byz_triumvir_flag
-		}
-	}
-	effect = {
-	}
-}
-
-break_alliance = {
-	condition = {
-		tooltip = TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			has_country_flag = byz_triumvir_flag
-		}
-		allow = {
-			always = no
-		}
-	}
-	condition = {
-		tooltip = FROM_TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			FROM = {
-				has_country_flag = byz_triumvir_flag
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
-}
-
-guaranteeaction = {
-	condition = {
-		tooltip = TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			has_country_flag = byz_triumvir_flag
-		}
-		allow = {
-			always = no
-		}
-	}
-	condition = {
-		tooltip = FROM_TRIUMVIR_TAG_CANNOT_ALLY
-		potential = {
-			FROM = {
-				has_country_flag = byz_triumvir_flag
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
-	effect = {
-	}
-}
-
-fabricate_claim = {
-	condition = {
-		tooltip = ROOT_IS_CTG_TT
-		potential = {
-			NOT = { has_global_flag = ab_disabled_punic_league }
-			primary_culture = punic
-		}
-		allow = {
-			tag = CTG
-		}
-	}
-}
-# ]]]

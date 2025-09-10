@@ -1,8 +1,0 @@
-﻿l_english:
-#To distinguish from other culture groups
- greek: "Rhomaioi"
-
-#Tooltips
- RUS_BYZANTIUM: "Releases @BYZ §Y[BYZ.GetName]§! as a junior partner in the personal union. They will receive our owned §YRhomaioi§! provinces."
- RUS_LATIN: "Releases the @LAT §Y[LAT.GetName]§! as a junior partner in the personal union. They will receive our owned §YRhomaioi§! provinces."
- KOJ_LAT_GREECE: "We will establish the @LAT §YLatin Empire§! as a junior partner in the personal union in all owned §YRhomaioi§! provinces."

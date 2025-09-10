@@ -570,7 +570,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 
 			### Core
-			# ABMP [[[
 			guiButtonType = {
 				name = "parliament_macro_button"
 				quadTextureSprite = "GFX_autonomy_macro_empty_button"
@@ -934,8 +933,6 @@ guiTypes = {
 					format = center
 				}
 			}
-			# ]]]
-
 			iconType =
 			{
 				name ="tax_base_icon"
@@ -1131,7 +1128,6 @@ guiTypes = {
 				fixedsize = yes
 			}
 
-			# ABMP [[[
 			guiButtonType =
 			{
 				name ="raze_button"
@@ -1190,7 +1186,7 @@ guiTypes = {
 				no_clicksound = yes
 				shortcut = "shift+w"
 			}
-			# ]]]
+
 
 
 			### INCOME
@@ -1286,16 +1282,6 @@ guiTypes = {
 				format = left
 				fixedsize = yes
 			}
-
-			# TLW [[[
-			iconType = {
-				name = "religion_conversion_bar"
-				quadTextureSprite ="GFX_religion_conversion_hellenic"
-				position = { x = 202 y = 240 }
-				scripted = yes
-			}
-			# ]]]
-
 			iconType =
 			{
 				name ="province_religious_conversion_progress"
@@ -1387,22 +1373,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_trading_city_button"
 				position = { x = 140 y = 328 }
 			}
-
-			# TLW [[[
-			guiButtonType = {
-				name ="ab_hellenization_center_spawn_button"
-				quadTextureSprite = "GFX_spawn_hellenic_center_button"
-				position = { x = 140 y = 328 }
-				scripted = yes
-			}
-
-			guiButtonType = {
-				name ="ab_hellenization_center_remove_button"
-				quadTextureSprite = "GFX_remove_hellenic_center_button"
-				position = { x = 140 y = 328 }
-				scripted = yes
-			}
-			# ]]]
 
 			### CLAIMS
 			instantTextBoxType = {
@@ -1544,23 +1514,6 @@ guiTypes = {
 				format = left
 				fixedsize = yes
 			}
-
-			# TLW [[[
-			iconType = {
-				name = "culture_conversion_bar"
-				spriteType = "GFX_culture_conversion_bar"
-				position = { x = 204 y = 199 }
-				scripted = yes
-			}
-
-			iconType = {
-				name = "culture_conversion_frame"
-				spriteType = "GFX_culture_conversion_frame"
-				position = { x = 202 y = 195 }
-				alwaystransparent = yes
-				scripted = yes
-			}
-			# ]]]
 
 			guiButtonType = {
 				name ="change_culture_button"
@@ -2026,15 +1979,6 @@ guiTypes = {
 				format = centre
 			}
 
-			# TLW [[[
-			guiButtonType = {
-				name ="ab_hellenization_swaying_faction_button"
-				quadTextureSprite = "GFX_replace_governor_button_small"
-				position = { x = 425 y = 375 }
-				scripted = yes
-			}
-			# ]]]
-
 			iconType = {
 				name ="building_fort"
 				spriteType = "GFX_building_default"
@@ -2221,6 +2165,8 @@ guiTypes = {
 				position = { x = 251 y = 551 }
 			}
 
+
+			#TODO make a nice button
 			guiButtonType = {
 				name ="tradepost_button"
 				spriteType = "GFX_trade_post_button"
@@ -3208,7 +3154,6 @@ guiTypes = {
 				format = left
 			}
 
-			# ABMP [[[
 			#Global edict commander
 			guiButtonType = {
 				name = "open_global_edict_button"
@@ -3628,7 +3573,6 @@ guiTypes = {
 					position = { x = 109 y = 360 }
 				}
 			}
-			# ]]]
 
 			guiButtonType = {
 				name ="view_edicts_button"
@@ -7826,7 +7770,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000¤"
+			text = "2000�"
 		}
 
 		checkboxType = {
@@ -7858,7 +7802,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000¤"
+			text = "2000�"
 		}
 
 	}

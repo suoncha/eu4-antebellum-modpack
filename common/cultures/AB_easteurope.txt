@@ -1075,8 +1075,6 @@ romanian_culture_group = {
 			Tereza Teresa Vasilica Violeta Yolanda Voica Zina
 		}
 	}
-
-	# ABMP [[[
 	panonic = {
 		primary = HUN
 		dynasty_names = {
@@ -1307,7 +1305,6 @@ romanian_culture_group = {
 			has_tercio = yes
 		}
 	}
-	# ]]]
 }
 
 

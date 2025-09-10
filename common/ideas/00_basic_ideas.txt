@@ -1004,12 +1004,6 @@ exploration_ideas = {
 	category = DIP
 	important = yes
 
-	# TLW [[[
-	trigger = {
-		NOT = { has_estate_privilege = estate_burghers_punic_isolationism }
-	}
-	# ]]]
-
 	bonus = {
 		cb_on_primitives = yes
 	}
@@ -1050,18 +1044,10 @@ exploration_ideas = {
 			factor = 0
 			tag = NAZ
 		}
-		# TLW [[[
 		modifier = {
 			factor = 0
 			is_tribal = yes
-			NOT = { technology_group = buniq_tech }
 		}
-		modifier = {
-			factor = 100
-			technology_group = buniq_tech
-			has_idea_group = expansion_ideas
-		}
-		# ]]]
 		modifier = {
 			factor = 0
 			is_subject = yes
@@ -1147,6 +1133,10 @@ exploration_ideas = {
 			NOT = { technology_group = high_american }
 		}
 		modifier = {
+			factor = 0.5
+			tag = ARA
+		}
+		modifier = {
 			factor = 0.1
 			NOT = { is_year = 1490 }
 			capital_scope = {
@@ -1178,6 +1168,9 @@ exploration_ideas = {
 		modifier = {
 			factor = 1000
 			OR = {
+				tag = POR
+				tag = CAS
+				tag = SPA
 				tag = ADU
 				tag = ENG
 				tag = NOR
@@ -1189,6 +1182,7 @@ exploration_ideas = {
 				tag = GBR
 				tag = NED
 				tag = FRA
+				tag = KUR
 				tag = JAP
 				tag = FRC
 			}
@@ -1530,12 +1524,6 @@ expansion_ideas = {
 	category = ADM
 	important = yes
 
-	# TLW [[[
-	trigger = {
-		NOT = { has_estate_privilege = estate_burghers_punic_isolationism }
-	}
-	# ]]]
-
 	bonus = {
  		min_autonomy_in_territories = -0.1
 	}
@@ -1569,12 +1557,6 @@ expansion_ideas = {
 
 	ai_will_do = {
 		factor = 0.5
-		# TLW [[[
-		modifier = {
-			factor = 100
-			technology_group = buniq_tech
-		}
-		# ]]]
 		modifier = {
 			factor = 10
 			OR = {
@@ -1598,6 +1580,15 @@ expansion_ideas = {
 			tag = ADU
 		}
 		# ]]]
+		modifier = {
+			factor = 10
+			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
+			tag = RUS
+			num_of_cities = 20
+			any_owned_province = {
+				has_empty_adjacent_province = yes
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = { has_idea_group = exploration_ideas }
@@ -1701,13 +1692,11 @@ administrative_ideas = {
 humanist_ideas = {
 	category = ADM
 
-	# ABMP [[[
 	trigger = {
 		NOT = {
 			has_government_attribute = blocks_humanist_ideas
 		}
 	}
-	# ]]]
 	bonus = {
 		idea_cost = -0.1
 		yearly_harmony = 0.25  # Used if religion uses harmony (confucianism)

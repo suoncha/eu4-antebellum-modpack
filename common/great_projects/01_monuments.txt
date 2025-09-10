@@ -40,11 +40,6 @@ hagia_sophia = {
 			province_is_or_accepts_religion = {
 				religion = nestorian
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 			province_is_or_accepts_religion_group = {
 				religion_group = muslim
 			}
@@ -85,11 +80,6 @@ hagia_sophia = {
 			province_is_or_accepts_religion = {
 				religion = nestorian
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 			province_is_or_accepts_religion_group = {
 				religion_group = muslim
 			}
@@ -111,11 +101,6 @@ hagia_sophia = {
 			province_is_or_accepts_religion = {
 				religion = nestorian
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 			province_is_or_accepts_religion_group = {
 				religion_group = muslim
 			}
@@ -4948,8 +4933,7 @@ alhambra = {
 		}
 
 		#what effects happen when this tier is achieved
-		on_upgraded = {
-			# ABMP
+		on_upgraded = {	
 			if = {
 				limit = {
 					owner = {
@@ -7219,7 +7203,6 @@ pyramid_of_cheops = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { 
 				owner = { 
@@ -7263,7 +7246,6 @@ pyramid_of_cheops = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { 
 				owner = { 
@@ -7311,7 +7293,6 @@ pyramid_of_cheops = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { 
 				owner = { 
@@ -8092,11 +8073,6 @@ kiev_pechersk_lavra = {
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 		}
 	}
 
@@ -8129,11 +8105,6 @@ kiev_pechersk_lavra = {
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 		}
 	}
 
@@ -8156,11 +8127,6 @@ kiev_pechersk_lavra = {
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
-			# TLW [[[
-			province_is_or_accepts_religion = {
-				religion = sol_invictus
-			}
-			# ]]]
 		}
 	}
 
@@ -9062,7 +9028,6 @@ versailles = {
 	build_trigger = {
 		OR = {
 			culture_group = french
-			# ABMP
 			culture = galici
 		}
 		province_is_or_accepts_culture = yes
@@ -9082,7 +9047,6 @@ versailles = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = french
-			# ABMP
 			culture = galici
 		}
 		province_is_or_accepts_culture = yes
@@ -9092,7 +9056,6 @@ versailles = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = french
-			# ABMP
 			culture = galici
 		}
 		province_is_or_accepts_culture = yes
@@ -9226,8 +9189,7 @@ versailles = {
 		}
 
 		#what effects happen when this tier is achieved
-		on_upgraded = {
-			# ABMP
+		on_upgraded = {	
 			if = {
 				limit = {
 					owner = {
@@ -9273,7 +9235,6 @@ el_escorial = {
 	build_trigger = {
 		OR = {
 			culture_group = iberian
-			# ABMP
 			culture = hispani
 		}
 		province_is_or_accepts_culture = yes
@@ -9293,7 +9254,6 @@ el_escorial = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = iberian
-			# ABMP
 			culture = hispani
 		}
 		province_is_or_accepts_culture = yes
@@ -9303,7 +9263,6 @@ el_escorial = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = iberian
-			# ABMP
 			culture = hispani
 		}
 		province_is_or_accepts_culture = yes
@@ -9865,9 +9824,7 @@ kaaba = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					owner = {
-						has_country_flag = arb_upgrade_kaaba
-					}
+					has_country_flag = arb_upgrade_kaaba
 				}
 			}
 			modifier = {
@@ -10138,9 +10095,7 @@ holy_city_jerusalem = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					owner = {
-						has_country_flag = koj_buff_great_project
-					}
+					has_country_flag = koj_buff_great_project
 				}
 			}
 			modifier = {
@@ -11021,7 +10976,6 @@ bran_castle = {
 		}
 		on_upgraded = {
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { owner= { has_bran_castle_bonus = yes } }
 			modifier = {
@@ -11050,7 +11004,6 @@ bran_castle = {
 		}
 		on_upgraded = {
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { owner= { has_bran_castle_bonus = yes } }
 			modifier = {
@@ -11079,7 +11032,6 @@ bran_castle = {
 		}
 		on_upgraded = {
 		}
-		# ABMP
 		conditional_modifier = {
 			trigger = { owner= { has_bran_castle_bonus = yes } }
 			modifier = {
@@ -11544,7 +11496,6 @@ doges_palace = {
 	type = monument
 
 	build_trigger = {
-		# ABMP
 		hidden_trigger = {
 			owner = {
 				NOT = {
@@ -14794,7 +14745,7 @@ rila_monasteries = {
 	type = monument
 
 	build_trigger = {
-		hidden_trigger = { # ABMP
+		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
 		province_is_or_accepts_religion = {
@@ -14809,7 +14760,7 @@ rila_monasteries = {
 	}
 
 	can_use_modifiers_trigger = {
-		hidden_trigger = { # ABMP
+		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
 		province_is_or_accepts_religion = {
@@ -14818,7 +14769,7 @@ rila_monasteries = {
 	}
 
 	can_upgrade_trigger = {
-		hidden_trigger = { # ABMP
+		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
 		province_is_or_accepts_religion = {
@@ -18588,7 +18539,7 @@ imperial_city_kyoto = {
 
 kazan_kremlin = {
 	start = 1082 
-	date = 1214.12.2 #Built: 10th 16th centuries
+	date = 1214.12.2 #Built: 10th�16th centuries
 	time = { months = 0	}
 	build_cost = 0
 	can_be_moved = no
@@ -19254,9 +19205,7 @@ nizwa_fort = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					owner = {
-						has_country_flag = arb_upgrade_nizwa
-					}
+					has_country_flag = arb_upgrade_nizwa
 				}
 			}
 			modifier = {
@@ -19374,9 +19323,7 @@ city_of_sanaa = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					owner = {
-						has_country_flag = arb_upgrade_sanaa
-					}
+					has_country_flag = arb_upgrade_sanaa
 				}
 			}
 			modifier = {
@@ -19527,7 +19474,6 @@ venetian_arsenal_gp = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		# ABMP
 		hidden_trigger = {
 			owner = {
 				NOT = {
@@ -19962,7 +19908,6 @@ schonbrunn_palace = {
 							has_country_flag = tir_unlock_schonbrunn_flag
 						}
 					}
-					# ABMP
 					custom_trigger_tooltip = {
 						tooltip = rem_SCHONBRUNN_CONDITION
 						owner = {
@@ -20001,7 +19946,6 @@ schonbrunn_palace = {
 							has_country_flag = tir_unlock_schonbrunn_flag
 						}
 					}
-					# ABMP
 					custom_trigger_tooltip = {
 						tooltip = rem_SCHONBRUNN_CONDITION
 						owner = {

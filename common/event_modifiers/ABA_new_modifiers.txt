@@ -1,8 +1,0 @@
-aba_swe_caroleans = {
-    has_musketeer = yes 
-    amount_of_musketeers = 10
-}
-
-aba_swe_caroleans_prov = {
-	local_has_musketeers = yes
-}

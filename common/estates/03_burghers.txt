@@ -27,23 +27,14 @@ estate_burghers = {
 	country_modifier_happy = {
 		trade_efficiency = 0.2
 		development_cost = -0.1
-		# TLW [[[
-		faction_byzgreek_influence = 0.2
-		# ]]]
 	}
 	country_modifier_neutral = {
 		trade_efficiency = 0.2
-		# TLW [[[
-		faction_byzgreek_influence = 0.1
-		# ]]]
 	}	
 	country_modifier_angry = {
 		trade_efficiency = -0.1
 		development_cost = 0.1
 		global_unrest = 2
-		# TLW [[[
-		faction_byzgreek_influence = -0.1
-		# ]]]
 	}
 	land_ownership_modifier = {
 		burghers_loyalty_modifier = 0.2
@@ -189,27 +180,23 @@ estate_burghers = {
 	}
 	#Custom Names
 	custom_name = {
-        desc = estate_kauppiaita
-        trigger = {
-            OR = {
-                tag = FIN
-                was_tag = FIN
-            }
-        }
-    }
-	# TLW [[[
+		desc = estate_kauppiaita
+		trigger = {
+			OR = {
+				tag = FIN
+				was_tag = FIN
+			}
+		}
+	}
 	custom_name = {
 		desc = estate_emporoi
 		trigger = {
 			OR = {
 				primary_culture = greek
 				primary_culture = sclavinian
-				primary_culture = greco_roman
-				culture_group = hellenic_g
 			}
 		}
 	}
-	# ]]]
 	custom_name = {
 		desc = estate_quartersmasters
 		trigger = {
@@ -281,43 +268,8 @@ estate_burghers = {
 				primary_culture = lithuanian
 				primary_culture = Litvin
 				tag = PRR
-                was_tag = PRR
+				was_tag = PRR
 			}
-		}
-	}
-	# ]]]
-	# TLW [[[
-	custom_name = {
-		desc = estate_equestrians
-		trigger = {
-			culture_group = roman_g
-			NOT = { primary_culture = greco_roman }
-		}
-	}
-	custom_name = {
-		desc = estate_taqir
-		trigger = {
-			OR = {
-				culture_group = punic_g
-				culture_group = muskogean
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_membectoq
-		trigger = {
-			OR = {
-				culture_group = eastern_algonquian
-				culture_group = central_algonquian
-				culture_group = siouan
-				culture_group = iroquoian
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_qausiqtuk
-		trigger = {
-			culture_group = eskaleut
 		}
 	}
 	# ]]]
@@ -334,15 +286,12 @@ estate_burghers = {
 			}
 		}
 	}
-	# ABMP [[[
 	custom_name = {
 		desc = estate_breslele
 		trigger = {
 			culture_group = romanian_culture_group
 		}
 	}
-	# ]]]
-
 	color = { 35 35 150 }
 
 	privileges = {
@@ -406,11 +355,7 @@ estate_burghers = {
 		estate_burghers_saxon_woods_expansion
 		estate_burghers_german_woods_expansion
 		# ]]]
-		# TLW [[[
-		estate_burghers_punic_isolationism
-		estate_burghers_marsh_expansion
-		# ]]]
-		# ABMP [[[
+		# Potion Seller [[[
 		estate_burghers_wal_mountain_expansion
 		# ]]]
 	}
