@@ -1,8 +1,11 @@
 wal_hired_bulgar_adm_advisor = {
 	potential = {
-		are_bulgars_an_underclass = yes
+		has_country_flag = wal_bulgarian_underclass
 	}
 	trigger = {
+		hidden_trigger = {
+			has_country_flag = wal_bulgarian_underclass
+		}
 		employed_advisor = {
 			category = ADM
 			culture = bulgarian
@@ -16,9 +19,12 @@ wal_hired_bulgar_adm_advisor = {
 
 wal_hired_bulgar_dip_advisor = {
 	potential = {
-		are_bulgars_an_underclass = yes
+		has_country_flag = wal_bulgarian_underclass
 	}
 	trigger = {
+		hidden_trigger = {
+			has_country_flag = wal_bulgarian_underclass
+		}
 		employed_advisor = {
 			category = DIP
 			culture = bulgarian
@@ -32,9 +38,12 @@ wal_hired_bulgar_dip_advisor = {
 
 wal_hired_bulgar_mil_advisor = {
 	potential = {
-		are_bulgars_an_underclass = yes
+		has_country_flag = wal_bulgarian_underclass
 	}
 	trigger = {
+		hidden_trigger = {
+			has_country_flag = wal_bulgarian_underclass
+		}
 		employed_advisor = {
 			category = MIL
 			culture = bulgarian

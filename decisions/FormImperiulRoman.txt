@@ -5,8 +5,7 @@ country_decisions = {
 			has_country_flag = allow_form_imperiul_roman
 			OR = {
 				tag = WAL
-				tag = DAC
-				tag = TUH
+				was_tag = WAL
 			}
 		}
 		provinces_to_highlight = {
@@ -19,9 +18,12 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_at_war = no
-			is_subject = no
+			hidden_trigger = {
+				has_country_flag = allow_form_imperiul_roman
+			}
 			has_all_imperiul_roman_provinces = yes
+			is_subject = no
+			is_at_war = no
 		}
 		effect = {
 			clr_country_flag = allow_form_imperiul_roman

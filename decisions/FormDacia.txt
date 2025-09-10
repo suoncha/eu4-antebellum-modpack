@@ -21,6 +21,7 @@ country_decisions = {
 			}
 		}
 		allow = {
+			tag = WAL
 			if = {
 				limit = {
 					NOT = { has_country_flag = early_form_dacia }
