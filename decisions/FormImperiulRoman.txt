@@ -3,7 +3,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			has_country_flag = allow_form_imperiul_roman
-			has_government_mechanic = wallachian_terror_mechanic
+			OR = {
+				tag = WAL
+				tag = DAC
+				tag = TUH
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -15,12 +19,9 @@ country_decisions = {
 			}
 		}
 		allow = {
-			hidden_trigger = {
-				has_country_flag = allow_form_imperiul_roman
-			}
-			has_all_imperiul_roman_provinces = yes
-			is_subject = no
 			is_at_war = no
+			is_subject = no
+			has_all_imperiul_roman_provinces = yes
 		}
 		effect = {
 			clr_country_flag = allow_form_imperiul_roman
