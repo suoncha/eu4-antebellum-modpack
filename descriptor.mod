@@ -8,7 +8,7 @@ tags={
 	"Religion"
 	"Military"
 }
-name="Ante Bellum - The Lost World - Modpack"
+name="Ante Bellum - Ultimate Modpack"
 dependencies={
 	"Ante Bellum"
 }
