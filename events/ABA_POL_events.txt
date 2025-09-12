@@ -1,0 +1,46 @@
+namespace = aba_pol_events
+
+#Krakow University Event
+country_event = {
+	id = aba_pol_events.1
+	title = aba_pol_events.1.T
+	desc = aba_pol_events.1.D
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = aba_pol_events.1.a
+		if = {
+			limit = { has_dlc = "Rule Britannia" } 
+			change_innovativeness = 3 
+		}
+		else = { 
+			add_adm_power = 25 
+			add_dip_power = 25
+		}
+		if = { 
+			limit = { 
+				262 = { 
+					NOT = { has_building = university } 
+				}
+			}
+			262 = { add_building = university } 
+		}
+		else_if = {
+			limit = { has_dlc = "Rights of Man" } 
+			add_ruler_personality = scholar_personality
+		}
+		else = { 
+			262 = { add_base_tax = 1 } 
+		}
+		custom_tooltip = aba_pol_institutions_will_slowly_grow_in_262_tt
+		hidden_effect = {
+			262 = { 
+				add_province_modifier = { 
+					name = aba_pol_krakow_university_modifier 
+					duration = -1
+					hidden = yes 
+				}
+			}
+		}
+	}
+}

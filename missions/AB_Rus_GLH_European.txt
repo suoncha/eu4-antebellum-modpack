@@ -1594,8 +1594,10 @@ glh_eu_fourth_group = {
 		
 		effect = {
 			set_government_rank = 3
+			country_event = { 
+				id = aba_glh_events.1
+			}
 			custom_tooltip = GLH_ALL_RUS
-			country_event = { id = aba_glh_events.1 }
 			tooltip = {
 				add_nationalism = -5
 			}

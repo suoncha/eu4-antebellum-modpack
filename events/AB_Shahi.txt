@@ -326,3 +326,45 @@ country_event = {
 		}
 	}
 }
+
+#Indian Centry 
+country_event = {
+	id = AB_Shahi_Event.8
+	title = AB_Shahi_Event.8.T
+	desc = AB_Shahi_Event.8.D
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = AB_Shahi_Event.8.a
+		add_prestige = 20
+		override_country_name = aba_SHH_shahistan
+		custom_tooltip = ZUN_PP
+		hidden_effect = {
+			add_power_projection = {
+				type = ZUN_perma_pp
+				amount = 50
+			}
+		}
+		add_country_modifier = {
+			name = "zun_master_india"
+			duration = -1
+		}
+	}
+
+	option = {
+		name = AB_Shahi_Event.8.b
+		add_prestige = 20
+		custom_tooltip = ZUN_PP
+		hidden_effect = {
+			add_power_projection = {
+				type = ZUN_perma_pp
+				amount = 50
+			}
+		}
+		add_country_modifier = {
+			name = "zun_master_india"
+			duration = -1
+		}
+	}
+}

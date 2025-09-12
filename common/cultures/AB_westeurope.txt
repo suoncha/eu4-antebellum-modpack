@@ -4044,27 +4044,50 @@ iberian	= {
 			Montserrat Núria Octàvia Prudència Roberta Rodolfa
 		}
 	}
-	iberian_andalusian = {
-		primary = IBE
-		province = { local_has_caravel = yes local_has_galleon = yes }
+	# iberian_andalusian = { to do 1.10
+	# 	primary = IBE
+	# 	province = { local_has_caravel = yes local_has_galleon = yes }
+	# 	dynasty_names = {
+	# 		"d'Aragó" "de Borja" "de Luna" "d'Urgell" "Folc de Cardona"
+	# 		#CK2
+	# 		"de Menezes" "de Mendoza" "de Niebla" "de Silva" "de Alba" "de Borja"
+	# 		"de Medinaceli" "de Castro" "de Haro" "Santcliment" "de Altamira" Osorio
+	# 		Zúñiga "de Villahermosa" Vilafermosa Garmendia "de Rocamora" "de Goyeneche"
+	# 		"de Cabrera" "de Villena"
+	# 	}
+	# 	male_names = {
+	# 		Aaró Aaron Abelard Abraham Absaló Abundi Adalbert Adam Adrià Alaric Albà Albí Aleix Àlvar Àngel Antoni Arnau
+	# 		Artur Blai Carles Cecili Conrad Dari Dionís Emili Enric Felip Ferran Francés Francesc Fructuós Germà
+	# 		Gonçal Guillem Guiu Ignasi Israel Joan Jordi Josep Josep Maria Lleó Lluc Lluís Macedoni Màrius Martí Miquel
+	# 		Octavi Òscar Pau Pere Pol Pompeu Pròsper Prudenci Prudencià Quirze Rafael Ramir Raül Reginald Ricard Robert Roc
+	# 		Rubèn Sergi Simó Teodor Tomàs Vicenç Vicent Xavier
+	# 	}
+	# 	female_names = {
+	# 		Àgata Àgueda Aina Anna Antònia Caterina Cecília Cristina Dolors Francesca Genoveva Isabel Joana Justina Laia
+	# 		Montserrat Núria Octàvia Prudència Roberta Rodolfa
+	# 	}
+	# }
+	andalucian = {
+		primary = ADU
 		dynasty_names = {
-			"d'Aragó" "de Borja" "de Luna" "d'Urgell" "Folc de Cardona"
-			#CK2
-			"de Menezes" "de Mendoza" "de Niebla" "de Silva" "de Alba" "de Borja"
-			"de Medinaceli" "de Castro" "de Haro" "Santcliment" "de Altamira" Osorio
-			Zúñiga "de Villahermosa" Vilafermosa Garmendia "de Rocamora" "de Goyeneche"
-			"de Cabrera" "de Villena"
+			"Nasrid" "Umayyad" "Zirid" "Hafsid" "Karamanli" "Muradid" "Husainid" "Banu Muhammad" "Al-Muwahhidun" "Al-Murabitun" "Al-Mu'tadid" "bi-Illah" "Al-Judhami" "Banu Tujib" "Sayf al-Dawla" "Ibn Masarra"
+			"Matiyyid" "Dhunnunid" "Ya'isid" "Masarrid"
 		}
 		male_names = {
-			Aaró Aaron Abelard Abraham Absaló Abundi Adalbert Adam Adrià Alaric Albà Albí Aleix Àlvar Àngel Antoni Arnau
-			Artur Blai Carles Cecili Conrad Dari Dionís Emili Enric Felip Ferran Francés Francesc Fructuós Germà
-			Gonçal Guillem Guiu Ignasi Israel Joan Jordi Josep Josep Maria Lleó Lluc Lluís Macedoni Màrius Martí Miquel
-			Octavi Òscar Pau Pere Pol Pompeu Pròsper Prudenci Prudencià Quirze Rafael Ramir Raül Reginald Ricard Robert Roc
-			Rubèn Sergi Simó Teodor Tomàs Vicenç Vicent Xavier
+			Muhammad Y�suf 'Al� Sa'd Isma'�l Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rash�d Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
 		}
 		female_names = {
-			Àgata Àgueda Aina Anna Antònia Caterina Cecília Cristina Dolors Francesca Genoveva Isabel Joana Justina Laia
-			Montserrat Núria Octàvia Prudència Roberta Rodolfa
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
 		}
 	}
 	galician = {

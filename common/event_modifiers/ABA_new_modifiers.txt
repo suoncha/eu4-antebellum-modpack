@@ -7,3 +7,128 @@ aba_swe_caroleans = {
 aba_swe_caroleans_prov = {
 	local_has_musketeers = yes
 }
+
+#Shahi
+aba_shahi_war_elephants = {
+    cavalry_shock = 0.5
+}
+
+aba_shh_jewel_of_india = {
+    allowed_num_of_buildings = 2
+    allowed_num_of_manufactories = 2
+    local_build_cost = -0.25
+    local_governing_cost = -0.25
+    local_great_project_upgrade_cost = -0.25
+    local_great_project_upgrade_time = -0.1
+    local_prosperity_growth = 0.25
+    local_production_efficiency = 0.25
+}
+
+ABA_SHH_indian_syncretism = {
+    tolerance_of_heathens_capacity = 2
+    tolerance_of_heretics_capacity = 2
+    tolerance_own = 1
+    tolerance_heretic = 1
+    tolerance_heathen = 1
+    religious_unity = 0.35
+}
+
+ABA_SHH_great_trunk_road = {
+   allowed_num_of_buildings = 1
+   local_prosperity_growth = 0.10
+   local_trade_power = 0.05
+   local_development_cost = -0.15
+   local_merchant_steering = 0.15
+}
+
+ABA_shh_staple_ports_of_india = {
+   local_institution_spread = 0.1
+   trade_goods_size_modifier = 0.25
+   local_center_of_trade_upgrade_cost = -0.33
+   province_trade_power_modifier = 0.1
+
+}
+
+#Polish Catholic Modifiers
+
+aba_polish_america = {
+    colonist_placement_chance = 0.20
+    trade_steering = 0.20
+}
+
+aba_new_polish_city = {
+    allowed_num_of_buildings = 1
+    allowed_num_of_manufactories = 1
+    local_build_cost = -0.25
+    local_governing_cost = -0.10
+}
+
+aba_pol_krakow_university_modifier = {
+    institution_growth = 4 
+}
+
+aba_pol_military_development = {
+    army_tradition_decay = -0.01
+    army_tradition = 1
+}
+
+aba_pol_integrate_tribal_leaders = {
+    manpower_recovery_speed = 0.10
+    free_land_leader_pool = 2
+    leader_cost = -0.10
+}
+
+aba_pol_westernized_army = {
+    infantry_power = 0.05
+    cavalry_power = 0.05
+    artillery_power = 0.05
+}
+
+aba_pol_expansion_of_hussars = {
+    cavalry_shock = 0.5
+    amount_of_hussars = 10
+}
+
+aba_pol_harness_the_industry = {
+    production_efficiency = 0.10
+    global_allowed_num_of_manufactories = 1
+}
+
+aba_pol_freedom_of_religion = {
+    no_religion_penalty = yes
+    tolerance_of_heretics_capacity = 1
+    tolerance_of_heathens_capacity = 1
+}
+
+aba_pol_union_of_many_peoples = {
+    global_unrest = -1
+    promote_culture_cost = -0.25
+    num_accepted_cultures = 3
+}
+
+aba_pol_foreign_legion = {
+    manpower_recovery_speed = 0.10
+    global_regiment_recruit_speed = -0.10
+    global_manpower_modifier = 0.10
+}
+
+aba_pol_cossack_registry = {
+    is_cossack_modifier = yes
+    cavalry_power = 0.10
+    cavalry_cost = -0.10
+    infantry_shock = 0.15
+
+}
+
+aba_pol_cossack_expansion = {
+  allowed_cossack_fraction = 0.25
+}
+
+aba_pol_patronage_of_the_west = {
+    global_institution_spread = 0.10
+    idea_cost = -0.10
+}
+
+
+
+
