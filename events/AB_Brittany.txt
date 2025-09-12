@@ -32,6 +32,9 @@ country_event = {
 		}
 		hidden_effect = {
 			complete_mission = bri_restoration
+			ROOT = {
+				country_event = { id = ab_brittany.3 }
+			}
 			169 = {
 				change_original_culture = Gallic
 			}
@@ -163,5 +166,38 @@ country_event = {
 				name = "bri_vercingetorix"
 				duration = -1
 			}
+	}
+}
+
+#Embrace Gallic Faith 
+country_event = {
+	id = ab_brittany.3
+	title = ab_brittany.3.t
+	desc = ab_brittany.3.d
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = ab_brittany.3.a
+			change_religion = gaelic_ab
+			set_ruler_religion = gaelic_ab
+			set_heir_religion = gaelic_ab
+			capital_scope = {
+			change_religion = gaelic_ab
+			}
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+	}
+
+	option = {
+		name = ab_brittany.3.b
 	}
 }

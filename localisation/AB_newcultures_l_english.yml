@@ -14,7 +14,7 @@
  donauschwaben_culture: "Donauschwäbisch"
  mantaken_culture: "Mantakisch"
  olender_culture: "Olender"
- jugoslawienschwaben_culture: "Jugoslawienschwaben"
+ jugoslawienschwaben_culture: "Jugoschwäbisch"
  wolhynien_culture: "Wolhynian"
  weichseldeutsche_culture: "Weichseldeutsch"
  russlanddeutsche_culture: "Russlanddeutsch"
@@ -23,7 +23,7 @@
  donauschwaben_culture_new: "Donauschwäbisch"
  mantaken_culture_new: "Mantakisch"
  olender_culture_new: "Olender"
- jugoslawienschwaben_culture_new: "Jugoslawienschwaben"
+ jugoslawienschwaben_culture_new: "Jugoschwäbisch"
  wolhynien_culture_new: "Wolhynian"
  weichseldeutsche_culture_new: "Weichseldeutsch"
  russlanddeutsche_culture_new: "Russlanddeutsch"
@@ -56,8 +56,8 @@
 
 # Mission Tooltips #
 #Asia
- JAP_PH_CULTURE: "The §YNikkei§! culture will §Gnaturally spread§! throughout our §YShinto Filipino§! provinces."
- JAP_KR_CULTURE: "The §YZainichi§! culture will §Gnaturally spread§! throughout our §YShinto Korean§! provinces."
+ JAP_PH_CULTURE: "§YNikkei§! culture will §Gnaturally spread§! throughout our §YShinto Filipino§! provinces."
+ JAP_KR_CULTURE: "§YZainichi§! culture will §Gnaturally spread§! throughout our §YShinto Korean§! provinces."
 abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
 abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
 aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fusing §GIndian§! and §GAfghan§! ways of governance. We will recieve increased and unique rewards for assimilating Indian cultures!\n"
@@ -75,10 +75,10 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  aba_kharbinskiye_cossack_culture_tt: "\n§YKharbinskiye§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Manchuria!\n"
  aba_nagaybak_culture_spread_tt: "\n§YNagaybak§! culture will §Gnaturally spread§! throughout our §YOrthodox Kazakh§! and §YKyrgzy§! provinces!\n"
 #Germans
- GER_wolgadeutsche_tooltip: "\nThe §YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
- GER_donauschwaben_tooltip: "\nThe §YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
+ GER_wolgadeutsche_tooltip: "\nT§YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
+ GER_donauschwaben_tooltip: "\n§YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
  GER_mantaken_tooltip: "\nThe §YMantaken Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Mountains!\n"
- ABA_NED_BALTIC_SETTLEMENT_TT: "\nThe §YOlender Dutch§! culture will §Gnaturally spread§! throughout our §YChristian provinces§! in the Baltics!\n"
+ ABA_NED_BALTIC_SETTLEMENT_TT: "\n§YOlender Dutch§! culture will §Gnaturally spread§! throughout our §YChristian provinces§! in the Baltics!\n"
  GER_weichseldeutsche_tooltip_2: "\n§YWeichseldeutsche Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Poland!\n"
  GER_jugoslawienschwaben_tooltip: "The §YJugoslawienschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Balkans!"
  GER_ruthenian_germanic_cultures_tooltip: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Ruthenia and Russia\n"
@@ -86,16 +86,23 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  aba_GER_hungarian_cultures: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in in the Carpathian Basin\n"
  aba_wendish_culture_spread_tt: "\n§YWendish§! culture will §Gnaturally spread§! throughout our §YSlavic§! provinces in in the Germany\n"
 #SCANDINAVIA
- aba_anglonorse_spread_tooltip: "\nThe §YAnglo-Norse§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in the British Isles!\n"
- aba_nor_norsegaelic_spread_tooltip: "\nThe §YNorse-Gaelic§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in Ireland!\n"
+ aba_anglonorse_spread_tooltip: "\n§YAnglo-Norse§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in the British Isles!\n"
+ aba_nor_norsegaelic_spread_tooltip: "\n§YNorse-Gaelic§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in Ireland!\n"
  aba_swe_move_finnish_culture_tooltip: "\n§YFinnish§! culture will be moved to the §GScandinavian§! culture group and spread throughout Karelia and Pomorye.\n"
  aba_SWE_carolean_paladins_tooltip: "\nWe will gain the ability to recruit §GCarolean Paladins§!\n"
  aba_swe_swe_aibofolke_culture_spread_tt: "\n§YAibofolke§! culture will §Gnaturally spread§! throughout our directly owned §YChristian§! provinces in the Baltic!\n"
  abf_varangians_culture_spread_tt: "\n§YVarangian§! culture will §Gnaturally spread§! throughout our directly owned §YNorse§! provinces in the East!\n"
  #France/West Europe
- aba_breton_gallic_culture_spread_tt: "\nThe §YGallic§! culture will §Gnaturally spread§! throughout our §YFrench§! provinces!\n"
+ aba_breton_gallic_culture_spread_tt: "\n§YGallic§! culture will §Gnaturally spread§! throughout our §YFrench§! provinces!\n"
 #British
- abf_albion_culture_spread_tt: "\nThe §YAlban§! culture will §Gnaturally spread§! throughout our §YBritish§! provinces!\n"
+ abf_albion_culture_spread_tt: "\n§YAlban§! culture will §Gnaturally spread§! throughout our §YBritish§! provinces!\n"
+#Poland
+aba_pol_institutions_will_slowly_grow_in_262_tt: "\n§YInsitutions§! will §Gnaturally grow§! throughout our §YKrakow§!!\n"
+aba_unlock_lavra_tt: "\nWe will gain the ability to construct §GLavra§!!\n"
+ABA_POLISH_HUSSARS_TT: "\nUpon unlocking §YHussars§!, our maximum recruitment cap will be increased!\n"
+#Shahi
+ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, granting bonsues to the provinces it runs through!\n"
+ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
 
 #Events
 #Japan
@@ -127,6 +134,18 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  aba_brittany_event.8.d: "The Highlanders of Scotland had disliked the Brittonic Revolution. A very real aspect of this revolution was the suppression and removal of local customs via the lords who practiced this new doctrine, some of whom would use their new authority from the crown to punish and imprison those who still followed the old traditions. This very case happened in the Highlands, and several lords of the old Kingdoms joined together to throw off their Briton lords, declaring themselves an independent Kingdom."
  aba_brittany_event.9.t: "The Irish Revolt"
  aba_brittany_event.9.d: "The Irish people have always had a separate and unique identity to that of the British. The revolt of 1395 and the subsequent liberation of Irish settlements in the south from English control only furthered that divide, viewing themselves as distinct from the other Isles. This new revival angered the remnants of the Old High King's court, who gathered in the southern Munster region to begin plotting their rebellion. When they gathered enough support from the populace, they declared their independence from the Britons, claiming the title of High King of Ireland once more."
+ab_brittany.3.t: "The Gaelic Faith"
+ab_brittany.3.d: "With the revival of the Gallic culture, many have begun to look into the old faith of our ancestors, the ancient Celtic polytheism that was practiced before the coming of Christianity. While many scoff at this idea, it has gained a significant following among the common folk and some of the nobility. Our lord, [Root.Monarch.GetName], has decided to combine ascepts of this faith with those of Christianity, seeing it as a way to further distance ourselves from the French and their influence. This decision has been met with mixed reactions, with some seeing it as a bold move towards independence, while others view it as a dangerous step towards heresy. Regardless, we must now navigate the challenges that come with this new faith and its place in our society."
+ab_brittany.3.a: "A new faith for a new age..."
+ab_brittany.3.b: "These are only the delusions of a madman!"
+#####POLAND
+aba_pol_events.1.T: "The Founding of Krakow University"
+aba_pol_events.1.d: "The city of Krakow has long been a center of culture and learning in our nation. However, it lacks a formal institution of higher education that can rival those found in other European countries. To address this, we have decided to establish a university in Krakow. This university will serve as a hub for intellectual and cultural exchange, attracting scholars and students from across Europe. It will also help to promote the Polish language and culture, which has been overshadowed by Latin and German in academic circles. The university will be modeled after the great universities of Bologna and Paris, with a focus on theology, law, medicine, and the arts. We will also establish a library and a printing press to facilitate the dissemination of knowledge. The founding of Krakow University is a significant step forward for our nation, and we are confident that it will help to elevate Poland's status as a center of learning and culture in Europe."
+#####SHAHI
+AB_Shahi_Event.8.T: "The Indian Century"
+AB_Shahi_Event.8.D: "With our conquest of Indian nearing its end and the establishment of our rule over the subcontinent, we have entered a new era in our history. This era is marked by the fusion of Afghan and Indian cultures, which has created a unique and vibrant society that is unlike anything seen before. We have embraced the rich traditions and customs of India, while also maintaining our Afghan heritage. This fusion has led to the development of new art forms, music, and literature that reflect the diverse influences of our people. We have also adopted new technologies and ideas from India, which have helped to modernize our economy and society. The Indian Century is a time of great opportunity and promise for our nation, and we are excited to see what the future holds."
+AB_Shahi_Event.8.a: "The §YIndian Century§! begins... We will now be known as the §GShahistan§!"
+AB_Shahi_Event.8.b: "The §YIndian Century§! begins!"
 
 #Decisions
 #Gallia
@@ -134,10 +153,32 @@ aba_gal_release_celt_decision_title:"Release the Celtic Union"
 aba_gal_release_celt_decision_desc:"After our conquest and conversion of the British Isles many suggested that the lands may be better run by our Brittonic subjects, so that we that we may focus on recovering our homeland on the continent. It is certainly an interesting proposition..."
 
 
-
 #Modifiers
 #Sweden
 aba_swe_caroleans: "Carolean Paladins"
 aba_swe_caroleans_prov: "Home of the Caroleans Paladins"
+#Poland
+aba_polish_america: "Polish America"
+aba_new_polish_city: "New Polish City"
+aba_pol_military_development: "Polish Military Development"
+aba_pol_integrate_tribal_leaders: "Integrate Tribal Leaders"
+aba_pol_westernized_army: "Westernized Army"
+aba_pol_expansion_of_hussars: "Expansion of the Hussars"
+aba_pol_harness_the_industry: "Fires of Polish Industry"
+aba_pol_freedom_of_religion: "Freedom of Religion"
+aba_pol_union_of_many_peoples: "Union of Many Peoples"
+aba_pol_foreign_legion: "Foreign Legion"
+aba_pol_cossack_registry: "Cossack Registry"
+aba_pol_cossack_expansion: "Cossack Expansion"
+aba_pol_patronage_of_the_west: "Patronage of the West"
+#Shahi
+aba_shahi_war_elephants: "Shahi War Elehpants"
+aba_shh_jewel_of_india: "Crown Jewel of India"
+ABA_SHH_indian_syncretism: "Indian Syncretism"
+ABA_SHH_great_trunk_road: "Great Trunk Road"
+ABA_shh_staple_ports_of_india: "Staple Port of India"
+aba_SHH_shahistan: "Shahistan"
+aba_SHH_shahistan_adj: "Shahistani"
+
 
 

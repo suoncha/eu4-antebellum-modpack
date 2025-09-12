@@ -896,6 +896,7 @@ ned_first_branching_british = {
 		position = 6
 		
 		trigger = {
+            ab_not_in_mission_preview_mode = { key = AB_NED }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
 				OR = {
@@ -972,6 +973,7 @@ ned_first_branching_british = {
 		position = 7
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			ulster_area = {
 				type = all
 				country_or_subject_holds = ROOT
@@ -1077,6 +1079,7 @@ ned_first_branching_british = {
 		}
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			lowlands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1910,13 +1913,9 @@ ned_second_branching_dutch = {
 				NOT = {
 					num_of_buildings_in_province = 4	
 				}
-				NOT = {
-					AND = {
-						province_has_center_of_trade_of_level = 1
-						NOT = {
-							province_has_center_of_trade_of_level = 3
-						}
-					}
+                AND = {
+                    NOT = { development = 35 }
+                    NOT = { province_has_center_of_trade_of_level = 3 }
 				}
 			}
 		} 
@@ -2881,11 +2880,7 @@ ned_second_branching_baltic = {
 		provinces_to_highlight = {
 			region = baltic_region
 			country_or_non_sovereign_subject_holds = ROOT
-			OR = {
-				NOT = {
-					development = 30
-				}
-			}
+			NOT = { development = 30 }
 		}
 		
 		trigger = {
@@ -2942,6 +2937,7 @@ ned_second_branching_british = {
 		position = 5
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			navy_size_percentage = 1
 			num_of_admirals = 1
 			num_of_heavy_ship = ENG
@@ -3045,6 +3041,7 @@ ned_second_branching_british = {
 		}
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			calc_true_if = {
 				all_province = {
 					OR = {
@@ -3124,6 +3121,7 @@ ned_second_branching_british = {
 		}
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
 				region = british_isles_region
@@ -3192,7 +3190,8 @@ ned_second_branching_british = {
 			}
 		} 
 
-		trigger = {  
+		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			british_isles_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -3248,14 +3247,15 @@ ned_second_branching_british = {
 		
 		provinces_to_highlight = {
 			OR = {
-				culture = english
 				nationalism = 1
 				local_autonomy_above_min = 10
 			}
+			culture = english
 			owned_by = ROOT
 		}
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			accepted_culture = english
 			num_of_owned_provinces_with = {
 				culture = english
@@ -3294,6 +3294,7 @@ ned_second_branching_british = {
 		}
 		
 		trigger = {
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			stability = 3
 			legitimacy_equivalent = 95
 			development_in_provinces = {
@@ -4050,33 +4051,10 @@ ned_third = {
 		required_missions = { NED_cloth_trading }
 		
 		provinces_to_highlight = {
-			if = {
-				limit = { has_dlc = "Leviathan" }
-				OR = {
-					AND = {
-						province_id = 97
-						NOT = {
-							has_great_project = {
-								type = dutch_polders
-								tier = 3
-							}
-						}
-					}
-					AND = {
-						region = low_countries_region
-						OR = {
-							NOT = { country_or_non_sovereign_subject_holds = root }
-							NOT = { num_of_times_improved = 3 }
-						}
-					}
-				}
-			}
-			else = {
-				region = low_countries_region
-				OR = {
-					NOT = { country_or_non_sovereign_subject_holds = root }
-					NOT = { num_of_times_improved = 3 }
-				}
+            region = low_countries_region
+            OR = {
+                NOT = { country_or_non_sovereign_subject_holds = root }
+                NOT = { num_of_times_improved = 3 }
 			}
 		}
 	
@@ -5576,6 +5554,12 @@ ned_fifth = {
 		position = 6
 		required_missions = { NED_military_reforms }
 
+		provinces_to_highlight = {
+            owned_by = ROOT
+            region = low_countries_region
+            province_has_current_tech_fort_trigger = no
+        }
+
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = low_countries_region
@@ -5787,19 +5771,22 @@ ned_fifth = {
 		required_missions = { NED_cape_of_good_hope } 
 		provinces_to_highlight = {  
 			province_id = 1177
-			NOT = { development = 20 }
-			NOT = { has_fort_building_trigger = yes }
-			NOT = { has_trade_building_trigger = yes }
 		} 
 
-		trigger = {  
-			1177 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				development = 20
-				has_fort_building_trigger = yes
-				has_trade_building_trigger = yes
-			}
-		} 
+        trigger = {
+            1177 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            1177 = {
+                development = 20
+            }
+            1177 = {
+                has_fort_building_trigger = yes
+            }
+            1177 = {
+                has_trade_building_trigger = yes
+            }
+        }
 
 		effect = {  
 			1177 = {
