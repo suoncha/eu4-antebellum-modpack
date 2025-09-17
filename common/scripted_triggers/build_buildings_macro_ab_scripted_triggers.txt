@@ -1,0 +1,56 @@
+#SCOPE = COUNTRY
+can_afford_to_build_factory = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_factory_tt
+		price_var = factory_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_greatmarket = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_greatmarket_tt
+		price_var = greatmarket_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_fort_19th = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_fort_19th_tt
+		price_var = fort_19th_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_early_road = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_early_road_tt
+		price_var = early_road_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_gravel_road = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_gravel_road_tt
+		price_var = gravel_road_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_royal_road = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_royal_road_tt
+		price_var = royal_road_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_macadam_road = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_macadam_road_tt
+		price_var = macadam_road_build_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_build_rail_road = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_rail_road_tt
+		price_var = rail_road_build_cost
+	}
+}

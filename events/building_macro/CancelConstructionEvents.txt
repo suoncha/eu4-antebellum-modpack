@@ -1,0 +1,99 @@
+namespace = cancel_construction_events
+country_event = {
+	id = cancel_construction_events.1
+	title = cancel_construction_events.1.t
+	desc = cancel_construction_events.1.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = cancel_construction_events.1.a		#Less than 10% only
+		trigger = {
+			any_owned_province = {
+				has_construction = building
+				NOT = {
+					construction_progress = 0.1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_construction = building
+					NOT = {
+						construction_progress = 0.1
+					}
+				}
+				cancel_construction = yes
+			}
+		}
+		custom_tooltip = cancel_construction_events_full_refund_tt
+	}
+	option = {
+		name = cancel_construction_events.1.b		#Cancel all ongoing building construction
+		trigger = {
+			any_owned_province = {
+				has_construction = building
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_construction = building
+				}
+				cancel_construction = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_owned_province = {
+						has_construction = building
+						construction_progress = 0.1
+					}
+				}
+			}
+			custom_tooltip = cancel_construction_events_full_refund_tt
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					any_owned_province = {
+						has_construction = building
+						NOT = {
+							construction_progress = 0.1
+						}
+					}
+				}
+			}
+			custom_tooltip = cancel_construction_events_half_refund_tt
+		}
+		else = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_construction = building
+						NOT = {
+							construction_progress = 0.1
+						}
+					}
+				}
+				custom_tooltip = cancel_construction_events_some_full_refund_tt
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						has_construction = building
+						construction_progress = 0.1
+					}
+				}
+				custom_tooltip = cancel_construction_events_some_half_refund_tt
+			}
+		}
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		clr_country_flag = in_building_macro_settings
+	}
+}

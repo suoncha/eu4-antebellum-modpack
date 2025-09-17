@@ -1,0 +1,265 @@
+defined_text = {
+	name = upgrade_to_greatmarket_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_greatmarket_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_greatmarket_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_greatmarket_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_factory_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_factory_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_factory_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_factory_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_fort_19th_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_fort_19th_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_fort_19th_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_fort_19th_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_gravel_road_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_gravel_road_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_gravel_road_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_gravel_road_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_royal_road_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_royal_road_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_royal_road_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_royal_road_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_macadam_road_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_macadam_road_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_macadam_road_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_macadam_road_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = upgrade_to_rail_road_button_tt_loc
+	random = no
+	text = {
+		localisation_key = upgrade_to_rail_road_button_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_rail_road_button_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = upgrade_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_to_rail_road_button_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}

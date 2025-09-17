@@ -1,0 +1,239 @@
+﻿l_english:
+ build_building_macro_title: "Build Building Macro"
+ price_error: "§RERROR§!"
+ build_building_macro_closed_tt: "Click here to open the §YBuild Building Macro§! window."
+ build_building_macro_open_tt: "[build_building_macro_open_custom_loc]"
+ build_building_macro_open_switch_tab: "Click here to switch to the §YBuild Building Macro§! window."
+ build_building_marketplace_cost: "[From.marketplace_build_cost.GetValue]¤"
+ build_building_trade_depot_cost: "[From.trade_depot_build_cost.GetValue]¤"
+ build_building_stock_exchange_cost: "[From.stock_exchange_build_cost.GetValue]¤"
+ build_building_town_hall_cost: "[From.town_hall_build_cost.GetValue]¤"
+ build_building_courthouse_cost: "[From.courthouse_build_cost.GetValue]¤"
+ build_building_university_cost: "[From.university_build_cost.GetValue]¤"
+ build_building_dock_cost: "[From.dock_build_cost.GetValue]¤"
+ build_building_drydock_cost: "[From.drydock_build_cost.GetValue]¤"
+ build_building_shipyard_cost: "[From.shipyard_build_cost.GetValue]¤"
+ build_building_grand_shipyard_cost: "[From.grand_shipyard_build_cost.GetValue]¤"
+ build_building_workshop_cost: "[From.workshop_build_cost.GetValue]¤"
+ build_building_counting_house_cost: "[From.counting_house_build_cost.GetValue]¤"
+ build_building_barracks_cost: "[From.barracks_build_cost.GetValue]¤"
+ build_building_training_fields_cost: "[From.training_fields_build_cost.GetValue]¤"
+ build_building_regimental_camp_cost: "[From.regimental_camp_build_cost.GetValue]¤"
+ build_building_conscription_center_cost: "[From.conscription_center_build_cost.GetValue]¤"
+ build_building_temple_cost: "[From.temple_build_cost.GetValue]¤"
+ build_building_cathedral_cost: "[From.cathedral_build_cost.GetValue]¤"
+ build_building_fort_15th_cost: "[From.fort_15th_build_cost.GetValue]¤"
+ build_building_fort_16th_cost: "[From.fort_16th_build_cost.GetValue]¤"
+ build_building_fort_17th_cost: "[From.fort_17th_build_cost.GetValue]¤"
+ build_building_fort_18th_cost: "[From.fort_18th_build_cost.GetValue]¤"
+ build_building_coastal_defence_cost: "[From.coastal_defence_build_cost.GetValue]¤"
+ build_building_naval_battery_cost: "[From.naval_battery_build_cost.GetValue]¤"
+ build_building_manufactory_cost: "[From.manufactory_build_cost.GetValue]¤"
+ build_building_ramparts_cost: "[From.ramparts_build_cost.GetValue]¤"
+ build_building_impressment_offices_cost: "[From.impressment_offices_build_cost.GetValue]¤"
+ build_building_state_house_cost: "[From.state_house_build_cost.GetValue]¤"
+ build_building_soldier_households_cost: "[From.soldier_households_build_cost.GetValue]¤"
+ build_building_furnace_cost: "[From.furnace_build_cost.GetValue]¤"
+ building_macro_build_marketplace_tt: "[build_building_macro_build_marketplace_tt_loc]"
+ build_building_macro_build_marketplace_infinite_tt: "Build as Many §YMarketplaces§! As Possible"
+ build_building_macro_build_marketplace_1_tt: "Build §G1§! §YMarketplace§!"
+ build_building_macro_build_marketplace_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YMarketplaces§!"
+ building_macro_build_marketplace_tt: "[build_building_macro_build_marketplace_tt_loc]"
+ building_macro_build_trade_depot_tt: "[build_building_macro_build_trade_depot_tt_loc]"
+ building_macro_build_stock_exchange_tt: "[build_building_macro_build_stock_exchange_tt_loc]"
+ building_macro_build_town_hall_tt: "[build_building_macro_build_town_hall_tt_loc]"
+ building_macro_build_courthouse_tt: "[build_building_macro_build_courthouse_tt_loc]"
+ building_macro_build_university_tt: "[build_building_macro_build_university_tt_loc]"
+ building_macro_build_dock_tt: "[build_building_macro_build_dock_tt_loc]"
+ building_macro_build_drydock_tt: "[build_building_macro_build_drydock_tt_loc]"
+ building_macro_build_shipyard_tt: "[build_building_macro_build_shipyard_tt_loc]"
+ building_macro_build_grand_shipyard_tt: "[build_building_macro_build_grand_shipyard_tt_loc]"
+ building_macro_build_workshop_tt: "[build_building_macro_build_workshop_tt_loc]"
+ building_macro_build_counting_house_tt: "[build_building_macro_build_counting_house_tt_loc]"
+ building_macro_build_barracks_tt: "[build_building_macro_build_barracks_tt_loc]"
+ building_macro_build_training_fields_tt: "[build_building_macro_build_training_fields_tt_loc]"
+ building_macro_build_regimental_camp_tt: "[build_building_macro_build_regimental_camp_tt_loc]"
+ building_macro_build_conscription_center_tt: "[build_building_macro_build_conscription_center_tt_loc]"
+ building_macro_build_temple_tt: "[build_building_macro_build_temple_tt_loc]"
+ building_macro_build_cathedral_tt: "[build_building_macro_build_cathedral_tt_loc]"
+ building_macro_build_fort_15th_tt: "[build_building_macro_build_fort_15th_tt_loc]"
+ building_macro_build_fort_16th_tt: "[build_building_macro_build_fort_16th_tt_loc]"
+ building_macro_build_fort_17th_tt: "[build_building_macro_build_fort_17th_tt_loc]"
+ building_macro_build_fort_18th_tt: "[build_building_macro_build_fort_18th_tt_loc]"
+ building_macro_build_coastal_defence_tt: "[build_building_macro_build_coastal_defence_tt_loc]"
+ building_macro_build_naval_battery_tt: "[build_building_macro_build_naval_battery_tt_loc]"
+ building_macro_build_manufactory_tt: "[build_building_macro_build_manufactory_tt_loc]"
+ building_macro_build_ramparts_tt: "[build_building_macro_build_ramparts_tt_loc]"
+ building_macro_build_impressment_offices_tt: "[build_building_macro_build_impressment_offices_tt_loc]"
+ building_macro_build_state_house_tt: "[build_building_macro_build_state_house_tt_loc]"
+ building_macro_build_soldier_households_tt: "[build_building_macro_build_soldier_households_tt_loc]"
+ building_macro_build_furnace_tt: "[build_building_macro_build_furnace_tt_loc]"
+
+ # --- Marketplace ---
+ build_building_macro_build_marketplace_infinite_tt: "Build as Many §YMarketplaces§! As Possible"
+ build_building_macro_build_marketplace_1_tt: "Build §G1§! §YMarketplace§!"
+ build_building_macro_build_marketplace_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YMarketplaces§!"
+ 
+ # --- Trade Depot ---
+ build_building_macro_build_trade_depot_infinite_tt: "Build as Many §YTrade Depots§! As Possible"
+ build_building_macro_build_trade_depot_1_tt: "Build §G1§! §YTrade Depot§!"
+ build_building_macro_build_trade_depot_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YTrade Depots§!"
+ 
+ # --- Stock Exchange ---
+ build_building_macro_build_stock_exchange_infinite_tt: "Build as Many §YStock Exchanges§! As Possible"
+ build_building_macro_build_stock_exchange_1_tt: "Build §G1§! §YStock Exchange§!"
+ build_building_macro_build_stock_exchange_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YStock Exchanges§!"
+ 
+ # --- Town Hall ---
+ build_building_macro_build_town_hall_infinite_tt: "Build as Many §YTown Halls§! As Possible"
+ build_building_macro_build_town_hall_1_tt: "Build §G1§! §YTown Hall§!"
+ build_building_macro_build_town_hall_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YTown Halls§!"
+ 
+ # --- Courthouse ---
+ build_building_macro_build_courthouse_infinite_tt: "Build as Many §YCourthouses§! As Possible"
+ build_building_macro_build_courthouse_1_tt: "Build §G1§! §YCourthouse§!"
+ build_building_macro_build_courthouse_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YCourthouses§!"
+ 
+ # --- University ---
+ build_building_macro_build_university_infinite_tt: "Build as Many §YUniversities§! As Possible"
+ build_building_macro_build_university_1_tt: "Build §G1§! §YUniversity§!"
+ build_building_macro_build_university_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YUniversities§!"
+ 
+ # --- Dock ---
+ build_building_macro_build_dock_infinite_tt: "Build as Many §YDocks§! As Possible"
+ build_building_macro_build_dock_1_tt: "Build §G1§! §YDock§!"
+ build_building_macro_build_dock_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YDocks§!"
+ 
+ # --- Drydock ---
+ build_building_macro_build_drydock_infinite_tt: "Build as Many §YDrydocks§! As Possible"
+ build_building_macro_build_drydock_1_tt: "Build §G1§! §YDrydock§!"
+ build_building_macro_build_drydock_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YDrydocks§!"
+ 
+ # --- Shipyard ---
+ build_building_macro_build_shipyard_infinite_tt: "Build as Many §YShipyards§! As Possible"
+ build_building_macro_build_shipyard_1_tt: "Build §G1§! §YShipyard§!"
+ build_building_macro_build_shipyard_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YShipyards§!"
+ 
+ # --- Grand Shipyard ---
+ build_building_macro_build_grand_shipyard_infinite_tt: "Build as Many §YGrand Shipyards§! As Possible"
+ build_building_macro_build_grand_shipyard_1_tt: "Build §G1§! §YGrand Shipyard§!"
+ build_building_macro_build_grand_shipyard_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YGrand Shipyards§!"
+ 
+ # --- Workshop ---
+ build_building_macro_build_workshop_infinite_tt: "Build as Many §YWorkshops§! As Possible"
+ build_building_macro_build_workshop_1_tt: "Build §G1§! §YWorkshop§!"
+ build_building_macro_build_workshop_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YWorkshops§!"
+ 
+ # --- Counting House ---
+ build_building_macro_build_counting_house_infinite_tt: "Build as Many §YCounting Houses§! As Possible"
+ build_building_macro_build_counting_house_1_tt: "Build §G1§! §YCounting House§!"
+ build_building_macro_build_counting_house_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YCounting Houses§!"
+ 
+ # --- Barracks ---
+ build_building_macro_build_barracks_infinite_tt: "Build as Many §YBarracks§! As Possible"
+ build_building_macro_build_barracks_1_tt: "Build §G1§! §YBarracks§!"
+ build_building_macro_build_barracks_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YBarracks§!"
+ 
+ # --- Training Fields ---
+ build_building_macro_build_training_fields_infinite_tt: "Build as Many §YTraining Fields§! As Possible"
+ build_building_macro_build_training_fields_1_tt: "Build §G1§! §YTraining Fields§!"
+ build_building_macro_build_training_fields_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YTraining Fields§!"
+ 
+ # --- Regimental Camp ---
+ build_building_macro_build_regimental_camp_infinite_tt: "Build as Many §YRegimental Camps§! As Possible"
+ build_building_macro_build_regimental_camp_1_tt: "Build §G1§! §YRegimental Camp§!"
+ build_building_macro_build_regimental_camp_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YRegimental Camps§!"
+ 
+ # --- Conscription Center ---
+ build_building_macro_build_conscription_center_infinite_tt: "Build as Many §YConscription Centers§! As Possible"
+ build_building_macro_build_conscription_center_1_tt: "Build §G1§! §YConscription Center§!"
+ build_building_macro_build_conscription_center_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YConscription Centers§!"
+ 
+ # --- Temple ---
+ build_building_macro_build_temple_infinite_tt: "Build as Many §YTemples§! As Possible"
+ build_building_macro_build_temple_1_tt: "Build §G1§! §YTemple§!"
+ build_building_macro_build_temple_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YTemples§!"
+ 
+ # --- Cathedral ---
+ build_building_macro_build_cathedral_infinite_tt: "Build as Many §YCathedrals§! As Possible"
+ build_building_macro_build_cathedral_1_tt: "Build §G1§! §YCathedral§!"
+ build_building_macro_build_cathedral_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YCathedrals§!"
+ 
+ # --- Castle (fort_15th) ---
+ build_building_macro_build_fort_15th_infinite_tt: "Build as Many §YCastles§! As Possible"
+ build_building_macro_build_fort_15th_1_tt: "Build §G1§! §YCastle§!"
+ build_building_macro_build_fort_15th_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YCastles§!"
+ 
+ # --- Bastion (fort_16th) ---
+ build_building_macro_build_fort_16th_infinite_tt: "Build as Many §YBastions§! As Possible"
+ build_building_macro_build_fort_16th_1_tt: "Build §G1§! §YBastion§!"
+ build_building_macro_build_fort_16th_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YBastions§!"
+ 
+ # --- Star Fort (fort_17th) ---
+ build_building_macro_build_fort_17th_infinite_tt: "Build as Many §YStar Forts§! As Possible"
+ build_building_macro_build_fort_17th_1_tt: "Build §G1§! §YStar Fort§!"
+ build_building_macro_build_fort_17th_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YStar Forts§!"
+ 
+ # --- Fortress (fort_18th) ---
+ build_building_macro_build_fort_18th_infinite_tt: "Build as Many §YFortresses§! As Possible"
+ build_building_macro_build_fort_18th_1_tt: "Build §G1§! §YFortress§!"
+ build_building_macro_build_fort_18th_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YFortresses§!"
+ 
+ # --- Coastal Defence ---
+ build_building_macro_build_coastal_defence_infinite_tt: "Build as Many §YCoastal Defences§! As Possible"
+ build_building_macro_build_coastal_defence_1_tt: "Build §G1§! §YCoastal Defence§!"
+ build_building_macro_build_coastal_defence_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YCoastal Defences§!"
+ 
+ # --- Naval Battery ---
+ build_building_macro_build_naval_battery_infinite_tt: "Build as Many §YNaval Batteries§! As Possible"
+ build_building_macro_build_naval_battery_1_tt: "Build §G1§! §YNaval Battery§!"
+ build_building_macro_build_naval_battery_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YNaval Batteries§!"
+ 
+ # --- Manufactory ---
+ build_building_macro_build_manufactory_infinite_tt: "Build as Many §YManufactories§! As Possible"
+ build_building_macro_build_manufactory_1_tt: "Build §G1§! §YManufactory§!"
+ build_building_macro_build_manufactory_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YManufactories§!"
+ 
+ # --- Ramparts ---
+ build_building_macro_build_ramparts_infinite_tt: "Build as Many §YRamparts§! As Possible"
+ build_building_macro_build_ramparts_1_tt: "Build §G1§! §YRamparts§!"
+ build_building_macro_build_ramparts_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YRamparts§!"
+ 
+ # --- Impressment Offices ---
+ build_building_macro_build_impressment_offices_infinite_tt: "Build as Many §YImpressment Offices§! As Possible"
+ build_building_macro_build_impressment_offices_1_tt: "Build §G1§! §YImpressment Offices§!"
+ build_building_macro_build_impressment_offices_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YImpressment Offices§!"
+ 
+ # --- State House ---
+ build_building_macro_build_state_house_infinite_tt: "Build as Many §YState Houses§! As Possible"
+ build_building_macro_build_state_house_1_tt: "Build §G1§! §YState House§!"
+ build_building_macro_build_state_house_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YState Houses§!"
+ 
+ # --- Soldier Households ---
+ build_building_macro_build_soldier_households_infinite_tt: "Build as Many §YSoldier Households§! As Possible"
+ build_building_macro_build_soldier_households_1_tt: "Build §G1§! §YSoldier Households§!"
+ build_building_macro_build_soldier_households_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YSoldier Households§!"
+ 
+ # --- Furnace ---
+ build_building_macro_build_furnace_infinite_tt: "Build as Many §YFurnaces§! As Possible"
+ build_building_macro_build_furnace_1_tt: "Build §G1§! §YFurnace§!"
+ build_building_macro_build_furnace_multiple_tt: "Build §G[From.build_building_quantity.GetValue]§! §YFurnaces§!"
+ building_macro_construction_logic_tt: "\nConstruction will be queued in eligible provinces based on the chosen strategy. The process will continue until either the selected quantity of buildings is reached, or the treasury can no longer afford to construct the next building in the queue."
+ # --- Strategy Tooltips ---
+ building_macro_strategy_highest_trade_value_tt: "Buildings will be constructed in eligible provinces with the §Yhighest trade value§! first."
+ building_macro_strategy_highest_governing_cost_tt: "Buildings will be constructed in eligible provinces with the §Yhighest governing cost§! first."
+ building_macro_strategy_lowest_development_cost_tt: "Buildings will be constructed in eligible provinces with the §Ylowest development cost§! first."
+ building_macro_strategy_most_sailors_tt: "Buildings will be constructed in eligible provinces with the §Yhighest sailor count§! first."
+ building_macro_strategy_lowest_autonomy_tt: "Buildings will be constructed in eligible provinces with the §Ylowest autonomy§! first."
+ building_macro_strategy_highest_production_tt: "Buildings will be constructed in eligible provinces with the §Yhighest production income§! first."
+ building_macro_strategy_highest_manpower_tt: "Buildings will be constructed in eligible provinces with the §Yhighest manpower§! first."
+ building_macro_strategy_highest_tax_tt: "Buildings will be constructed in eligible provinces with the §Yhighest tax income§! first."
+ building_macro_strategy_most_defensive_tt: "Buildings will be constructed in eligible provinces with the §Yhighest defensiveness§! first."
+ building_macro_strategy_anywhere_possible_tt: "Buildings will be constructed in any eligible province."
+ building_macro_strategy_manufactory_tt: "Manufactories will be constructed in eligible provinces, prioritizing those with the §Yhighest production income§!."
+ building_macro_strategy_ramparts_tt: "Ramparts will be constructed in province with a fort, prioritizing those with the §Yhighest defensiveness§!."
+ building_macro_strategy_impressment_offices_tt: "Impressment Offices will be constructed in eligible provinces with the §Yhighest sailor count§! first."
+ building_macro_strategy_state_house_tt: "State Houses will be constructed in eligible provinces with the §Yhighest governing cost§! first."
+ building_macro_strategy_soldier_households_tt: "Soldier's Households will be constructed in eligible provinces with the §Yhighest manpower§! first."
+ building_macro_cancel_button_tt: "Click here to cancel all or some building construction."
+ building_macro_settings_button_tt: "CLick here to configure how the macro builds buildings."

@@ -1,7 +1,9 @@
 custom_button = {
 	name = parliament_macro_button
 	potential = {
-		always = yes
+		FROM = {
+			has_parliament = yes
+		}
 	}
 	trigger = {
 		FROM = {

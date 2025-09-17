@@ -35,17 +35,29 @@ country_event = {
 		# Startup Events
 		GAL = {
 			country_event = {
-				id = ab_byzantium.88
+				id = ab_visigoths.0
 			}
 		}
 		ASU = {
 			country_event = {
-				id = ab_byzantium.88
+				id = ab_visigoths.0
 			}
 		}
 		NAV = {
 			country_event = {
-				id = ab_byzantium.88
+				id = ab_visigoths.0
+			}
+		}
+		CAP = {
+			country_event = {
+				id = tlw_capua.0
+				days = 60
+			}
+		}
+		ADU = {
+			country_event = {
+				id = ab_visigoths.7
+				days = 30
 			}
 		}
 		country_event = {

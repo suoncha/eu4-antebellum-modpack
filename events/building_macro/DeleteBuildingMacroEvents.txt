@@ -1,0 +1,745 @@
+namespace = delete_building_macro_events
+country_event = {
+	id = delete_building_macro_events.1
+	title = delete_building_macro_events.1.t
+	picture = GREAT_BUILDING_eventPicture
+	is_triggered_only = yes
+	# Dynamic Descriptions - Only one will show based on the flag set
+	desc = {
+		desc = delete_building_macro_events.d_marketplace
+		trigger = {
+			has_country_flag = delete_building_macro_marketplace
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_trade_depot
+		trigger = {
+			has_country_flag = delete_building_macro_trade_depot
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_stock_exchange
+		trigger = {
+			has_country_flag = delete_building_macro_stock_exchange
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_town_hall
+		trigger = {
+			has_country_flag = delete_building_macro_town_hall
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_courthouse
+		trigger = {
+			has_country_flag = delete_building_macro_courthouse
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_university
+		trigger = {
+			has_country_flag = delete_building_macro_university
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_dock
+		trigger = {
+			has_country_flag = delete_building_macro_dock
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_drydock
+		trigger = {
+			has_country_flag = delete_building_macro_drydock
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_shipyard
+		trigger = {
+			has_country_flag = delete_building_macro_shipyard
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_grand_shipyard
+		trigger = {
+			has_country_flag = delete_building_macro_grand_shipyard
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_workshop
+		trigger = {
+			has_country_flag = delete_building_macro_workshop
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_counting_house
+		trigger = {
+			has_country_flag = delete_building_macro_counting_house
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_barracks
+		trigger = {
+			has_country_flag = delete_building_macro_barracks
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_training_fields
+		trigger = {
+			has_country_flag = delete_building_macro_training_fields
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_regimental_camp
+		trigger = {
+			has_country_flag = delete_building_macro_regimental_camp
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_conscription_center
+		trigger = {
+			has_country_flag = delete_building_macro_conscription_center
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_temple
+		trigger = {
+			has_country_flag = delete_building_macro_temple
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_cathedral
+		trigger = {
+			has_country_flag = delete_building_macro_cathedral
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_fort_15th
+		trigger = {
+			has_country_flag = delete_building_macro_fort_15th
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_fort_16th
+		trigger = {
+			has_country_flag = delete_building_macro_fort_16th
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_fort_17th
+		trigger = {
+			has_country_flag = delete_building_macro_fort_17th
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_fort_18th
+		trigger = {
+			has_country_flag = delete_building_macro_fort_18th
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_coastal_defence
+		trigger = {
+			has_country_flag = delete_building_macro_coastal_defence
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_naval_battery
+		trigger = {
+			has_country_flag = delete_building_macro_naval_battery
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_ramparts
+		trigger = {
+			has_country_flag = delete_building_macro_ramparts
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_impressment_offices
+		trigger = {
+			has_country_flag = delete_building_macro_impressment_offices
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_state_house
+		trigger = {
+			has_country_flag = delete_building_macro_state_house
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_soldier_households
+		trigger = {
+			has_country_flag = delete_building_macro_soldier_households
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_furnace
+		trigger = {
+			has_country_flag = delete_building_macro_furnace
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_manufactory_choice
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_greatmarket
+		trigger = {
+			has_country_flag = delete_building_macro_greatmarket
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_factory
+		trigger = {
+			has_country_flag = delete_building_macro_factory
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_fort_19th
+		trigger = {
+			has_country_flag = delete_building_macro_fort_19th
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_early_road
+		trigger = {
+			has_country_flag = delete_building_macro_early_road
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_gravel_road
+		trigger = {
+			has_country_flag = delete_building_macro_gravel_road
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_royal_road
+		trigger = {
+			has_country_flag = delete_building_macro_royal_road
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_macadam_road
+		trigger = {
+			has_country_flag = delete_building_macro_macadam_road
+		}
+	}
+	desc = {
+		desc = delete_building_macro_events.d_rail_road
+		trigger = {
+			has_country_flag = delete_building_macro_rail_road
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_marketplace
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = marketplace
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_trade_depot
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = trade_depot
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_stock_exchange
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = stock_exchange
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_town_hall
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = town_hall
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_courthouse
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = courthouse
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_university
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = university
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_dock
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = dock
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_drydock
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = drydock
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_shipyard
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = shipyard
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_grand_shipyard
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = grand_shipyard
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_workshop
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = workshop
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_counting_house
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = counting_house
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_barracks
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = barracks
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_training_fields
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = training_fields
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_regimental_camp
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = regimental_camp
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_conscription_center
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = conscription_center
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_temple
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = temple
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_cathedral
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = cathedral
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_fort_15th
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = fort_15th
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_fort_16th
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = fort_16th
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_fort_17th
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = fort_17th
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_fort_18th
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = fort_18th
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_coastal_defence
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = coastal_defence
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_naval_battery
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = naval_battery
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_ramparts
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = ramparts
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_impressment_offices
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = impressment_offices
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_state_house
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = state_house
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_soldier_households
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = soldier_households
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_furnace
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = furnace
+		}
+	}
+	# Specific Manufactory Deletion Options
+	option = {
+		name = delete_building_macro_events.a_delete_wharf
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = wharf
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = wharf
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_weapons
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = weapons
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = weapons
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_textile
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = textile
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = textile
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_tradecompany
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = tradecompany
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = tradecompany
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_farm_estate
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = farm_estate
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = farm_estate
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_mills
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = mills
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = mills
+		}
+	}
+	option = {
+		name = delete_building_macro_events.a_delete_plantations
+		trigger = {
+			has_country_flag = delete_building_macro_manufactory
+			any_owned_province = {
+				has_building = plantations
+			}
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = plantations
+		}
+	}
+	#AB
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_greatmarket
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = greatmarket
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_factory
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = factory
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_fort_19th
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = fort_19th
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_early_road
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = early_road
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_gravel_road
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = gravel_road
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_royal_road
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = royal_road
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_macadam_road
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = macadam_road
+		}
+	}
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		trigger = {
+			has_country_flag = delete_building_macro_rail_road
+		}
+		custom_tooltip = delete_building_macro_cannot_be_undone_tt
+		delete_buildings_macro_delete_building_type = {
+			building = rail_road
+		}
+	}
+	# "Nevermind" Option
+	option = {
+		name = "nevermind"
+	}
+	after = {
+		# Clear all possible flags to reset the state
+		clr_country_flag = delete_building_macro_marketplace
+		clr_country_flag = delete_building_macro_trade_depot
+		clr_country_flag = delete_building_macro_stock_exchange
+		clr_country_flag = delete_building_macro_town_hall
+		clr_country_flag = delete_building_macro_courthouse
+		clr_country_flag = delete_building_macro_university
+		clr_country_flag = delete_building_macro_dock
+		clr_country_flag = delete_building_macro_drydock
+		clr_country_flag = delete_building_macro_shipyard
+		clr_country_flag = delete_building_macro_grand_shipyard
+		clr_country_flag = delete_building_macro_workshop
+		clr_country_flag = delete_building_macro_counting_house
+		clr_country_flag = delete_building_macro_barracks
+		clr_country_flag = delete_building_macro_training_fields
+		clr_country_flag = delete_building_macro_regimental_camp
+		clr_country_flag = delete_building_macro_conscription_center
+		clr_country_flag = delete_building_macro_temple
+		clr_country_flag = delete_building_macro_cathedral
+		clr_country_flag = delete_building_macro_fort_15th
+		clr_country_flag = delete_building_macro_fort_16th
+		clr_country_flag = delete_building_macro_fort_17th
+		clr_country_flag = delete_building_macro_fort_18th
+		clr_country_flag = delete_building_macro_coastal_defence
+		clr_country_flag = delete_building_macro_naval_battery
+		clr_country_flag = delete_building_macro_manufactory
+		clr_country_flag = delete_building_macro_ramparts
+		clr_country_flag = delete_building_macro_impressment_offices
+		clr_country_flag = delete_building_macro_state_house
+		clr_country_flag = delete_building_macro_soldier_households
+		clr_country_flag = delete_building_macro_furnace
+		#AB
+		clr_country_flag = delete_building_macro_greatmarket
+		clr_country_flag = delete_building_macro_factory
+		clr_country_flag = delete_building_macro_fort_19th
+		clr_country_flag = delete_building_macro_early_road
+		clr_country_flag = delete_building_macro_gravel_road
+		clr_country_flag = delete_building_macro_royal_road
+		clr_country_flag = delete_building_macro_macadam_road
+		clr_country_flag = delete_building_macro_rail_road
+	}
+}

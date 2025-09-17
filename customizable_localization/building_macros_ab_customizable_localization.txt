@@ -1,0 +1,296 @@
+defined_text = {
+	name = build_building_macro_build_greatmarket_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_greatmarket_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_greatmarket_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_greatmarket_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_factory_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_factory_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_factory_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_factory_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_fort_19th_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_fort_19th_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_19th_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_19th_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_early_road_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_early_road_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_early_road_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_early_road_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_gravel_road_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_gravel_road_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_gravel_road_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_gravel_road_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_royal_road_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_royal_road_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_royal_road_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_royal_road_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_macadam_road_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_macadam_road_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_macadam_road_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_macadam_road_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = build_building_macro_build_rail_road_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_rail_road_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_rail_road_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_rail_road_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+﻿l_english:
+ cancel_construction_events.1.t: "Cancel Building Construction"
+ cancel_construction_events.1.d: "You can easily cancel all ongoing building construction by selecting one of the options below.\n\nIf you're expecting an option that is no longer visible, it's because none of your provinces have any construction that meets the criteria."
+ cancel_construction_events.1.a: "Cancel all building construction that is less than 10% complete"
+ cancel_construction_events.1.b: "Cancel all building construction"
+ cancel_construction_events_full_refund_tt: "§GYou will receive a full refund for all buildings canceled!§!"
+ cancel_construction_events_half_refund_tt: "§OYou will only receive a §Rhalf refund§! for all buildings canceled...§!"
+ cancel_construction_events_some_full_refund_tt: "You will receive a §Gfull refund§! for §Ysome§! of the buildings canceled."
+ cancel_construction_events_some_half_refund_tt: "You will receive a §Rhalf refund§! for §Ysome§! of the buildings canceled."
+ 

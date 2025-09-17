@@ -1,0 +1,333 @@
+custom_button = {
+	name = building_macro_build_greatmarket
+	tooltip = building_macro_build_greatmarket_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_greatmarket = yes
+			any_owned_province = {
+				can_build = greatmarket
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_greatmarket
+				building = greatmarket
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_factory
+	tooltip = building_macro_build_factory_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_factory = yes
+			any_owned_province = {
+				can_build = factory
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_factory
+				building = factory
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_fort_19th
+	tooltip = building_macro_build_fort_19th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_fort_19th = yes
+			any_owned_province = {
+				can_build = fort_19th
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_19th
+				building = fort_19th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_early_road
+	tooltip = building_macro_build_early_road_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_early_road = yes
+			any_owned_province = {
+				can_build = early_road
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_early_road
+				building = early_road
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+custom_button = {
+	name = building_macro_build_gravel_road
+	tooltip = building_macro_build_gravel_road_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_gravel_road = yes
+			any_owned_province = {
+				can_build = gravel_road
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_gravel_road
+				building = gravel_road
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+custom_button = {
+	name = building_macro_build_royal_road
+	tooltip = building_macro_build_royal_road_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_royal_road = yes
+			any_owned_province = {
+				can_build = royal_road
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_royal_road
+				building = royal_road
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+custom_button = {
+	name = building_macro_build_macadam_road
+	tooltip = building_macro_build_macadam_road_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_macadam_road = yes
+			any_owned_province = {
+				can_build = macadam_road
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_macadam_road
+				building = macadam_road
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+custom_button = {
+	name = building_macro_build_rail_road
+	tooltip = building_macro_build_rail_road_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_rail_road = yes
+			any_owned_province = {
+				can_build = rail_road
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_rail_road
+				building = rail_road
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+
+custom_text_box = {
+	name = build_building_greatmarket_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_factory_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_fort_19th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_early_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_gravel_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_royal_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_macadam_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+custom_text_box = {
+	name = build_building_rail_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}

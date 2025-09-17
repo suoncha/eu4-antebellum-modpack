@@ -1,0 +1,79 @@
+#SCOPE = COUNTRY
+has_any_building_selected_for_deletion = {
+	custom_trigger_tooltip = {
+		tooltip = has_any_building_selected_for_deletion_tt
+		OR = {
+			# Trade
+			has_country_flag = delete_building_macro_marketplace
+			has_country_flag = delete_building_macro_trade_depot
+			has_country_flag = delete_building_macro_stock_exchange
+			# Government
+			has_country_flag = delete_building_macro_town_hall
+			has_country_flag = delete_building_macro_courthouse
+			has_country_flag = delete_building_macro_university
+			# Navy
+			has_country_flag = delete_building_macro_dock
+			has_country_flag = delete_building_macro_drydock
+			has_country_flag = delete_building_macro_shipyard
+			has_country_flag = delete_building_macro_grand_shipyard
+			# Production
+			has_country_flag = delete_building_macro_workshop
+			has_country_flag = delete_building_macro_counting_house
+			# Army
+			has_country_flag = delete_building_macro_barracks
+			has_country_flag = delete_building_macro_training_fields
+			has_country_flag = delete_building_macro_regimental_camp
+			has_country_flag = delete_building_macro_conscription_center
+			# Taxation
+			has_country_flag = delete_building_macro_temple
+			has_country_flag = delete_building_macro_cathedral
+			# Defense
+			has_country_flag = delete_building_macro_fort_15th
+			has_country_flag = delete_building_macro_fort_16th
+			has_country_flag = delete_building_macro_fort_17th
+			has_country_flag = delete_building_macro_fort_18th
+			# Coastal Defense
+			has_country_flag = delete_building_macro_coastal_defence
+			has_country_flag = delete_building_macro_naval_battery
+			# Manufactories
+			has_country_flag = delete_building_macro_manufactory
+			has_country_flag = delete_building_macro_ramparts
+			has_country_flag = delete_building_macro_impressment_offices
+			has_country_flag = delete_building_macro_state_house
+			has_country_flag = delete_building_macro_soldier_households
+			has_country_flag = delete_building_macro_furnace
+			#AB
+			has_country_flag = delete_building_macro_greatmarket
+			has_country_flag = delete_building_macro_factory
+			has_country_flag = delete_building_macro_fort_19th
+			has_country_flag = delete_building_macro_early_road
+			has_country_flag = delete_building_macro_gravel_road
+			has_country_flag = delete_building_macro_royal_road
+			has_country_flag = delete_building_macro_macadam_road
+			has_country_flag = delete_building_macro_rail_road
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_province_not_whitelisted_delete_building_macro = {
+	custom_trigger_tooltip = {
+		tooltip = is_province_not_whitelisted_delete_building_macro_tt
+		NOT = {
+			has_province_flag = delete_building_macro_whitelisted_province
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+has_production_manufactory = {
+	OR = {
+		has_building = wharf
+		has_building = weapons
+		has_building = textile
+		has_building = tradecompany
+		has_building = farm_estate
+		has_building = mills
+		has_building = plantations
+	}
+}

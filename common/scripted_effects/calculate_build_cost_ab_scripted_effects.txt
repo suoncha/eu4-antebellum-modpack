@@ -1,0 +1,181 @@
+#SCOPE = COUNTRY
+calculate_greatmarket_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 600
+		var_name = greatmarket_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_factory_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 750
+		var_name = factory_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_fort_19th_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 1000
+		var_name = fort_19th_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_early_road_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 75
+		var_name = early_road_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_gravel_road_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 150
+		var_name = gravel_road_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_royal_road_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 250
+		var_name = royal_road_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_macadam_road_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 350
+		var_name = macadam_road_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_rail_road_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = rail_road_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_greatmarket_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = greatmarket_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_factory_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 650
+		var_name = factory_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_fort_19th_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 800
+		var_name = fort_19th_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_gravel_road_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 75
+		var_name = gravel_road_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_royal_road_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 175
+		var_name = royal_road_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_macadam_road_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 275
+		var_name = macadam_road_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+#SCOPE = COUNTRY
+calculate_rail_road_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 425
+		var_name = rail_road_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}

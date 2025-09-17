@@ -2,6 +2,8 @@ on_startup = {
 	edict_commander_set_all_trade_node_flags = yes
 	set_all_movement_edict_flags = yes
 	setup_autonomy_macro = yes
+	setup_build_building_macro = yes
+	setup_upgrade_building_macro = yes
 }
 
 on_institution_embracement = {

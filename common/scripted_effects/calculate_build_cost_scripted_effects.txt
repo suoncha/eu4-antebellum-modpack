@@ -1,0 +1,650 @@
+#SCOPE = COUNTRY
+calculate_building_action_cost = {
+	set_variable = {
+		which = base_cost
+		value = $base_cost$
+	}
+	set_variable = {
+		which = $var_name$
+		which = base_cost
+	}
+	multiply_variable = {
+		which = $var_name$
+		which = $build_cost_var$
+	}
+	change_variable = {
+		which = $var_name$
+		which = base_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_trade_depot_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = trade_depot_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_stock_exchange_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = stock_exchange_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_town_hall_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = town_hall_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_dry_dock_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = dry_dock_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_grand_shipyard_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = grand_shipyard_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_counting_house_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = counting_house_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_training_fields_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = training_fields_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_conscription_center_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = conscription_center_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_cathedral_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = cathedral_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_bastion_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = bastion_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_star_fort_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 400
+		var_name = star_fort_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_fortress_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 600
+		var_name = fortress_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_naval_battery_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = naval_battery_upgrade_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_building_upgrade_costs = {
+	hidden_effect = {
+		calculate_trade_depot_upgrade_cost = yes
+		calculate_stock_exchange_upgrade_cost = yes
+		calculate_town_hall_upgrade_cost = yes
+		calculate_dry_dock_upgrade_cost = yes
+		calculate_grand_shipyard_upgrade_cost = yes
+		calculate_counting_house_upgrade_cost = yes
+		calculate_training_fields_upgrade_cost = yes
+		calculate_conscription_center_upgrade_cost = yes
+		calculate_cathedral_upgrade_cost = yes
+		calculate_bastion_upgrade_cost = yes
+		calculate_star_fort_upgrade_cost = yes
+		calculate_fortress_upgrade_cost = yes
+		calculate_naval_battery_upgrade_cost = yes
+		#AB
+		calculate_greatmarket_upgrade_cost = yes
+		calculate_factory_upgrade_cost = yes
+		calculate_fort_19th_upgrade_cost = yes
+		calculate_gravel_road_upgrade_cost = yes
+		calculate_royal_road_upgrade_cost = yes
+		calculate_macadam_road_upgrade_cost = yes
+		calculate_rail_road_upgrade_cost = yes
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_marketplace_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = marketplace_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_workshop_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = workshop_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_temple_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = temple_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_barracks_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = barracks_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_shipyard_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = shipyard_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_fort_15th_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = fort_15th_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_coastal_defence_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = coastal_defence_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_courthouse_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = courthouse_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_dock_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 100
+		var_name = dock_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_regimental_camp_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = regimental_camp_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_fort_16th_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 400
+		var_name = fort_16th_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_naval_battery_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = naval_battery_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_cathedral_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = cathedral_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_university_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = university_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_trade_depot_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = trade_depot_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_grand_shipyard_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = grand_shipyard_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_training_fields_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = training_fields_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_fort_17th_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 600
+		var_name = fort_17th_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_stock_exchange_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 400
+		var_name = stock_exchange_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_counting_house_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 400
+		var_name = counting_house_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_town_hall_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 200
+		var_name = town_hall_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_drydock_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 300
+		var_name = drydock_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_conscription_center_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 400
+		var_name = conscription_center_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_fort_18th_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 800
+		var_name = fort_18th_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_manufactory_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = manufactory_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_furnace_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = furnace_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_ramparts_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = ramparts_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_soldier_households_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = soldier_households_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_impressment_offices_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = impressment_offices_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_state_house_build_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
+	calculate_building_action_cost = {
+		base_cost = 500
+		var_name = state_house_build_cost
+		build_cost_var = country_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_building_build_costs = {
+	hidden_effect = {
+		calculate_marketplace_build_cost = yes
+		calculate_workshop_build_cost = yes
+		calculate_temple_build_cost = yes
+		calculate_barracks_build_cost = yes
+		calculate_shipyard_build_cost = yes
+		calculate_fort_15th_build_cost = yes
+		calculate_coastal_defence_build_cost = yes
+		calculate_courthouse_build_cost = yes
+		calculate_dock_build_cost = yes
+		calculate_regimental_camp_build_cost = yes
+		calculate_fort_16th_build_cost = yes
+		calculate_naval_battery_build_cost = yes
+		calculate_cathedral_build_cost = yes
+		calculate_university_build_cost = yes
+		calculate_trade_depot_build_cost = yes
+		calculate_grand_shipyard_build_cost = yes
+		calculate_training_fields_build_cost = yes
+		calculate_fort_17th_build_cost = yes
+		calculate_stock_exchange_build_cost = yes
+		calculate_counting_house_build_cost = yes
+		calculate_town_hall_build_cost = yes
+		calculate_drydock_build_cost = yes
+		calculate_conscription_center_build_cost = yes
+		calculate_fort_18th_build_cost = yes
+		calculate_manufactory_build_cost = yes
+		calculate_furnace_build_cost = yes
+		calculate_ramparts_build_cost = yes
+		calculate_soldier_households_build_cost = yes
+		calculate_impressment_offices_build_cost = yes
+		calculate_state_house_build_cost = yes
+		#AB
+		calculate_greatmarket_build_cost = yes
+		calculate_factory_build_cost = yes
+		calculate_fort_19th_build_cost = yes
+		calculate_early_road_build_cost = yes
+		calculate_gravel_road_build_cost = yes
+		calculate_royal_road_build_cost = yes
+		calculate_macadam_road_build_cost = yes
+		calculate_rail_road_build_cost = yes
+	}
+}
