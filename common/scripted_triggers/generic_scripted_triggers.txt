@@ -214,10 +214,3 @@ is_most_developed_orthodox_province = {
 		}
 	}
 }
-
-#Scope - Province
-can_province_be_given_a_parliament_seat = {
-	is_core = ROOT
-	is_state = yes
-	has_seat_in_parliament = no
-}

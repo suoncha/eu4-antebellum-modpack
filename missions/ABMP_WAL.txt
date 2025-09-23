@@ -182,6 +182,7 @@ ab_wal_boier_compromise_missions = {
 			}
 			hidden_effect = {
 				tuh_faction_initialization_effect = yes
+				complete_mission = wal_the_great_feast
 			}
 		}
 	}

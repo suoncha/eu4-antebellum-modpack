@@ -1,5 +1,21 @@
 #on_raze on actions must go here as well if you want them to be executed when using the raze utility.
 execute_razed_province_on_actions = {
+	vanilla_on_raze_effect = yes
+	ab_on_raze_effect = yes
+	if = {
+		limit = {
+			province_id = 105
+		}
+		set_country_flag = ab_achiev_razed_parma
+		hidden_effect = {
+			country_event = {
+				id = ab_achiev.106
+			}
+		}
+	}
+}
+
+vanilla_on_raze_effect = {
 	add_permanent_province_modifier = {
 		name = province_razed
 		duration = 7300
@@ -34,15 +50,8 @@ execute_razed_province_on_actions = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			province_id = 105
-		}
-		set_country_flag = ab_achiev_razed_parma
-	}
-	ab_on_raze_effect = yes
-	wallachian_terror_on_raze_effect = yes
 }
+
 
 #Basically remove_loot effect gives a province's loot to anyone except the owner... So we have to do the following:
 #1 find another tag
