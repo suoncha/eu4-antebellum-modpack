@@ -13,6 +13,7 @@ execute_razed_province_on_actions = {
 			}
 		}
 	}
+	wallachian_terror_on_raze_effect = yes
 }
 
 vanilla_on_raze_effect = {
