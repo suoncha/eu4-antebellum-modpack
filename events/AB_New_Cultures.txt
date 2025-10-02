@@ -563,7 +563,12 @@ province_event = {
 			}
 		}
 		OR = {
-			region = poland_region
+		area = wielkopolska_area
+		area = malopolska_area
+		area = mazovia_area
+		area = central_poland_area
+		area = sandomierz_area
+		area = kuyavia_area
 	  }
 	}
 
@@ -924,9 +929,7 @@ province_event = {
 		}
 		religion = orthodox
 		NOT = {
-			OR = {
-				culture_group = east_slavic
-			}
+			culture_group = east_slavic
 		}
 		OR = {
 			    area = crimea_area
@@ -1148,7 +1151,7 @@ province_event = {
 		}
 		NOT = {
 			OR = {
-				culture = abf_albion_culture
+				culture_group = east_slavic
 			}
 		}
 		OR = {
@@ -1164,7 +1167,7 @@ province_event = {
 
 }
 
-#Nagaybak Culture Spread in Central Asia (Russian) 
+#Varangian Culture Spread in Russia
 province_event = {
 	id = ab_new_cultures.28
 	title = ab_new_cultures.28.t
@@ -1246,6 +1249,36 @@ province_event = {
 		change_culture = Wendish
 	}
 
+}
+
+#Malorussian Culture Spread in Baltics
+province_event = {
+	id = ab_new_cultures.30
+	title = ab_new_cultures.30.t
+	desc = ab_new_cultures.30.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_malorussian_cossack_culture_spread
+		}
+		religion = orthodox
+		NOT = {
+			culture_group = east_slavic
+		}
+		region = baltic_region
+	}
+
+	option = {
+		name = ab_new_cultures.30.a
+		change_culture = aba_malorussian_cossack_culture
+		change_original_culture = aba_malorussian_cossack_culture
+	}
 }
 
 

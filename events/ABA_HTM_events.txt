@@ -1,0 +1,34 @@
+namespace = aba_hetmanate
+
+#Hussar Regiments
+country_event = {
+	id = aba_hetmanate.1
+	title = aba_hetmanate.1.t
+	desc = aba_hetmanate.1.d
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = aba_htm_hussar_spawn_event
+	}
+	
+	option = {
+		name = aba_hetmanate.1.a
+		custom_tooltip = ABA_HTM_hussar_spawn_tt
+		hidden_effect = {
+			capital_scope = {
+				for = {
+					amount = 5
+					effect = "
+						hussars_cavalry = ROOT
+					"
+				}
+			}
+		}
+		country_event = {
+			id = aba_hetmanate.1
+			days = 3650
+		}
+	}
+}

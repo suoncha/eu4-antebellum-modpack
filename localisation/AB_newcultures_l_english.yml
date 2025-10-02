@@ -40,6 +40,7 @@
  aba_uralskiye_cossack_culture: "Uralskiye"
  aba_kharbinskiye_cossack_culture: "Kharbinskiye"
  abf_nagaybak_culture: "Nagaybak"
+ aba_malorussian_cossack_culture: "Malorossian"
 #British
  abf_albion_culture: "Alban"
 
@@ -74,6 +75,8 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  abf_nov_pomor_culture_spread_tt: "\n§YPomorian§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the North!\n"
  aba_kharbinskiye_cossack_culture_tt: "\n§YKharbinskiye§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Manchuria!\n"
  aba_nagaybak_culture_spread_tt: "\n§YNagaybak§! culture will §Gnaturally spread§! throughout our §YOrthodox Kazakh§! and §YKyrgzy§! provinces!\n"
+ aba_malorussian_cossack_culture_tt: "\n§YMalorossian§! culture will §Gnaturally spread§! throughout our §YOrthodox§! in the Baltics!\n"
+ aba_htm_stables_tt: "We will now be able to use the §GGreat Stables of Szeged§! monument!"
 #Germans
  GER_wolgadeutsche_tooltip: "\nT§YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
  GER_donauschwaben_tooltip: "\n§YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
@@ -104,6 +107,8 @@ aba_pol_build_lavra_monument_tt: "Monument is enabled as a reward"
 #Shahi
 ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, granting bonsues to the provinces it runs through!\n"
 ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
+#Hetmanate
+ABA_HTM_hussar_spawn_tt: "\nFive §GWinged Hussars§! will be raised in our Capital and every §G10 years§! we will recieve new regiments of winged hussars!\n"
 
 #Events
 #Japan
@@ -147,7 +152,10 @@ AB_Shahi_Event.8.T: "The Indian Century"
 AB_Shahi_Event.8.D: "With our conquest of Indian nearing its end and the establishment of our rule over the subcontinent, we have entered a new era in our history. This era is marked by the fusion of Afghan and Indian cultures, which has created a unique and vibrant society that is unlike anything seen before. We have embraced the rich traditions and customs of India, while also maintaining our Afghan heritage. This fusion has led to the development of new art forms, music, and literature that reflect the diverse influences of our people. We have also adopted new technologies and ideas from India, which have helped to modernize our economy and society. The Indian Century is a time of great opportunity and promise for our nation, and we are excited to see what the future holds."
 AB_Shahi_Event.8.a: "The §YIndian Century§! begins... We will now be known as the §GShahistan§!"
 AB_Shahi_Event.8.b: "The §YIndian Century§! begins!"
-
+#### Hetmanate:
+aba_hetmanate.1.t: "Hussar Regiments Arrive"
+aba_hetmanate.1.d: "Our integration of Poland has gone. Fusing their frontier spirit and will to survive with the martial prowess of the Cossacks has produced unpredecented results. Their famed Hussar regiments have pledged themselves to our cause of liberty and freedom."
+aba_hetmanate.1.a: "And the Winged Hussars Arrived!"
 #Decisions
 #Gallia
 aba_gal_release_celt_decision_title:"Release the Celtic Union"
@@ -180,6 +188,12 @@ ABA_SHH_great_trunk_road: "Great Trunk Road"
 ABA_shh_staple_ports_of_india: "Staple Port of India"
 aba_SHH_shahistan: "Shahistan"
 aba_SHH_shahistan_adj: "Shahistani"
-
-
+#Hetmanate
+aba_htm_free_ruthenia: "A Free Ruthenia"
+htm_danube_sich: "Danubian Sich"
+aba_htm_military_treasury: "Military Treasury"
+ABA_htm_new_horse_production: "Horse Breeding Revolution"
+ABA_htm_regimental_rule: "Regimental Rule"
+aba_htm_vodka: "Hetman's Vodka"
+aba_htm_new_coinage: "New Coinage"
 

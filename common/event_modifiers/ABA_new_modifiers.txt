@@ -36,9 +36,8 @@ ABA_SHH_indian_syncretism = {
 ABA_SHH_great_trunk_road = {
    allowed_num_of_buildings = 1
    local_prosperity_growth = 0.10
-   local_trade_power = 0.05
+   province_trade_power_value = 0.05
    local_development_cost = -0.15
-   local_merchant_steering = 0.15
 }
 
 ABA_shh_staple_ports_of_india = {
@@ -115,9 +114,8 @@ aba_pol_foreign_legion = {
 aba_pol_cossack_registry = {
     is_cossack_modifier = yes
     cavalry_power = 0.10
+    cavalry_shock = 0.25
     cavalry_cost = -0.10
-    infantry_shock = 0.15
-
 }
 
 aba_pol_cossack_expansion = {
@@ -128,6 +126,47 @@ aba_pol_patronage_of_the_west = {
     global_institution_spread = 0.10
     idea_cost = -0.10
 }
+
+# Hetmanate
+
+aba_htm_free_ruthenia = {
+    republican_tradition = 0.5
+    candidate_random_bonus = 1
+}
+
+htm_danube_sich = {
+reform_progress_growth = 0.1
+manpower_in_accepted_culture_provinces = 0.10
+land_attrition = -0.10
+}
+
+aba_htm_military_treasury = {
+    war_taxes_cost_modifier = -0.25
+    land_maintenance_modifier = -0.10
+}
+
+ABA_htm_new_horse_production = {
+ cavalry_cost = -0.10
+ movement_speed = 0.05
+}
+
+ABA_htm_regimental_rule = {
+state_maintenance_modifier = -0.25
+state_governing_cost = -0.25
+}
+
+aba_htm_vodka = {
+ global_unrest = -1
+ idea_cost = 0.05
+ global_supply_limit_modifier = 0.10
+}
+
+aba_htm_new_coinage = {
+    inflation_action_cost = -0.1
+    inflation_reduction = 0.05
+    global_tax_modifier = 0.10
+}
+
 
 
 
