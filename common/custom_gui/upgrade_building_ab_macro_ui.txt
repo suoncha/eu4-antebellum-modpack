@@ -1,0 +1,330 @@
+custom_button = {
+	name = upgrade_to_greatmarket_button
+	tooltip = upgrade_to_greatmarket_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_greatmarket = yes
+			any_owned_province = {
+				can_build = greatmarket
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_greatmarket_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_trade_buildings_to_greatmarkets = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_factory_button
+	tooltip = upgrade_to_factory_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_factory = yes
+			any_owned_province = {
+				can_build = factory
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_factory_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_production_buildings_to_factories = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_fort_19th_button
+	tooltip = upgrade_to_fort_19th_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_fort_19th = yes
+			any_owned_province = {
+				can_build = fort_19th
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_fort_19th_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_fort_buildings_to_level_9_fort = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_gravel_road_button
+	tooltip = upgrade_to_gravel_road_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_gravel_road = yes
+			any_owned_province = {
+				can_build = gravel_road
+				has_building = early_road
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_gravel_road_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_road_buildings_to_gravel_road = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_royal_road_button
+	tooltip = upgrade_to_royal_road_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_royal_road = yes
+			any_owned_province = {
+				can_build = royal_road
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_royal_road_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_road_buildings_to_royal_road = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_macadam_road_button
+	tooltip = upgrade_to_macadam_road_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_macadam_road = yes
+			any_owned_province = {
+				can_build = macadam_road
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+					has_building = royal_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_macadam_road_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_road_buildings_to_macadam_road = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_rail_road_button
+	tooltip = upgrade_to_rail_road_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_upgrade_rail_road = yes
+			any_owned_province = {
+				can_build = rail_road
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+					has_building = royal_road
+					has_building = macadam_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+			custom_tooltip = upgrade_to_rail_road_effect_tt
+		}
+		else = {
+			custom_tooltip = upgrade_building_anywhere_possible_tt
+		}
+		hidden_effect = {
+			FROM = {
+				upgrade_all_road_buildings_to_rail_road = yes
+			}
+		}
+	}
+}
+
+custom_text_box = {
+	name = upgrade_to_greatmarket_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_factory_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_fort_19th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_gravel_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_royal_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_macadam_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = upgrade_to_rail_road_cost
+	potential = {
+	}
+	tooltip = empty_text
+}

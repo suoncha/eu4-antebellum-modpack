@@ -1,0 +1,9 @@
+﻿l_english:
+ can_afford_to_build_greatmarket_tt: "Have at least §Y[This.greatmarket_build_cost.GetValue]§!¤" 
+ can_afford_to_build_factory_tt: "Have at least §Y[This.factory_build_cost.GetValue]§!¤" 
+ can_afford_to_build_fort_19th_tt: "Have at least §Y[This.fort_19th_build_cost.GetValue]§!¤" 
+ can_afford_to_build_early_road_tt: "Have at least §Y[This.early_road_build_cost.GetValue]§!¤" 
+ can_afford_to_build_gravel_road_tt: "Have at least §Y[This.gravel_road_build_cost.GetValue]§!¤" 
+ can_afford_to_build_royal_road_tt: "Have at least §Y[This.royal_road_build_cost.GetValue]§!¤" 
+ can_afford_to_build_macadam_road_tt: "Have at least §Y[This.macadam_road_build_cost.GetValue]§!¤" 
+ can_afford_to_build_rail_road_tt: "Have at least §Y[This.rail_road_build_cost.GetValue]§!¤" 

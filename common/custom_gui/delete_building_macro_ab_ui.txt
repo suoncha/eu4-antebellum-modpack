@@ -1,0 +1,218 @@
+# Trade Buildings
+custom_button = {
+	name = building_macro_delete_greatmarket
+	tooltip = building_macro_delete_greatmarket_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = greatmarket
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_greatmarket
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_delete_factory
+	tooltip = building_macro_delete_factory_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = factory
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_factory
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_delete_fort_19th
+	tooltip = building_macro_delete_fort_19th_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = fort_19th
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_fort_19th
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+# Government Buildings
+custom_button = {
+	name = building_macro_delete_early_road
+	tooltip = building_macro_delete_early_road_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = early_road
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_early_road
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_delete_gravel_road
+	tooltip = building_macro_delete_gravel_road_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = gravel_road
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_gravel_road
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_delete_royal_road
+	tooltip = building_macro_delete_royal_road_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = royal_road
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_royal_road
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+# Navy Buildings
+custom_button = {
+	name = building_macro_delete_macadam_road
+	tooltip = building_macro_delete_macadam_road_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = macadam_road
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_macadam_road
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_delete_rail_road
+	tooltip = building_macro_delete_rail_road_tt
+	potential = {
+	}
+	trigger = {
+		is_province_not_whitelisted_delete_building_macro = yes
+		FROM = {
+			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = rail_road
+				is_province_not_whitelisted_delete_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			hidden_effect = {
+				set_country_flag = delete_building_macro_rail_road
+			}
+			country_event = {
+				id = delete_building_macro_events.1
+			}
+		}
+	}
+}

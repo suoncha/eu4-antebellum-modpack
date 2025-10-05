@@ -1,0 +1,58 @@
+﻿l_english:
+ delete_building_macro_closed_tt: "Click here to open the §YDelete Building Macro§! window."
+ delete_building_macro_open_tt: "[delete_building_macro_open_custom_loc]"
+ delete_building_macro_open_switch_tab: "Click here to switch to the §YDelete Building Macro§! window."
+ # Trade
+ building_macro_delete_marketplace_tt: "Delete All §YMarketplaces§!"
+ building_macro_delete_trade_depot_tt: "Delete All §YTrade Depots§!"
+ building_macro_delete_stock_exchange_tt: "Delete All §YStock Exchanges§!"
+
+ # Government
+ building_macro_delete_town_hall_tt: "Delete All §YTown Halls§!"
+ building_macro_delete_courthouse_tt: "Delete All §YCourthouses§!"
+ building_macro_delete_university_tt: "Delete All §YUniversities§!"
+
+ # Navy
+ building_macro_delete_dock_tt: "Delete All §YDocks§!"
+ building_macro_delete_drydock_tt: "Delete All §YDrydocks§!"
+ building_macro_delete_shipyard_tt: "Delete All §YShipyards§!"
+ building_macro_delete_grand_shipyard_tt: "Delete All §YGrand Shipyards§!"
+
+ # Production
+ building_macro_delete_workshop_tt: "Delete All §YWorkshops§!"
+ building_macro_delete_counting_house_tt: "Delete All §YCounting Houses§!"
+
+ # Army
+ building_macro_delete_barracks_tt: "Delete All §YBarracks§!"
+ building_macro_delete_training_fields_tt: "Delete All §YTraining Fields§!"
+ building_macro_delete_regimental_camp_tt: "Delete All §YRegimental Camps§!"
+ building_macro_delete_conscription_center_tt: "Delete All §YConscription Centers§!"
+
+ # Taxation
+ building_macro_delete_temple_tt: "Delete All §YTemples§!"
+ building_macro_delete_cathedral_tt: "Delete All §YCathedrals§!"
+
+ # Defense
+ building_macro_delete_fort_15th_tt: "Delete All §YCastles§!"
+ building_macro_delete_fort_16th_tt: "Delete All §YBastions§!"
+ building_macro_delete_fort_17th_tt: "Delete All §YStar Forts§!"
+ building_macro_delete_fort_18th_tt: "Delete All §YFortresses§!"
+
+ # Coastal Defense
+ building_macro_delete_coastal_defence_tt: "Delete All §YCoastal Defences§!"
+ building_macro_delete_naval_battery_tt: "Delete All §YNaval Batteries§!"
+
+ # Manufactories (and other special buildings)
+ building_macro_delete_manufactory_tt: "Delete All §YManufactories§!"
+ building_macro_delete_ramparts_tt: "Delete All §YRamparts§!"
+ building_macro_delete_impressment_offices_tt: "Delete All §YImpressment Offices§!"
+ building_macro_delete_state_house_tt: "Delete All §YState Houses§!"
+ building_macro_delete_soldier_households_tt: "Delete All §YSoldier's Households§!"
+ building_macro_delete_furnace_tt: "Delete All §YFurnaces§!"
+ has_any_building_selected_for_deletion_tt: "We aren't in the process of deleting a building."
+ is_province_not_whitelisted_delete_building_macro_tt: "This province is not whitelisted."
+ delete_building_macro_whitelist_button_text: "Whitelist"
+ delete_building_macro_unwhitelist_button_text: "Unwhitelist"
+ delete_building_macro_whitelist_button_tt: "This will whitelist the province, preventing the macro from deleting buildings in this province."
+ delete_building_macro_unwhitelist_button_tt: "This will unwhitelist the province, allowing the macro to delete buildings in the province again."
+ delete_macro_manufactory_specify_tt: "§gYou will be able to specify what kind of manufactory you want to delete in the confirmation event.§!"

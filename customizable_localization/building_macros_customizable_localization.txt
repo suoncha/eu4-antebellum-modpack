@@ -1,0 +1,1204 @@
+defined_text = {
+	name = upgrade_building_macro_open_custom_loc
+	text = {
+		localisation_key = upgrade_building_macro_open_switch_tab
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = upgrade_building_macro_open
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = close_the_window
+		trigger = {
+			FROM = {
+				has_country_flag = upgrade_building_macro_open
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_open_custom_loc
+	text = {
+		localisation_key = build_building_macro_open_switch_tab
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = build_building_macro_open
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = close_the_window
+		trigger = {
+			FROM = {
+				has_country_flag = build_building_macro_open
+			}
+		}
+	}
+}
+defined_text = {
+	name = delete_building_macro_open_custom_loc
+	text = {
+		localisation_key = delete_building_macro_open_switch_tab
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = delete_building_macro_open
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = close_the_window
+		trigger = {
+			FROM = {
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_marketplace_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_marketplace_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_marketplace_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_marketplace_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_trade_depot_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_trade_depot_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_trade_depot_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_trade_depot_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_stock_exchange_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_stock_exchange_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_stock_exchange_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_stock_exchange_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_town_hall_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_town_hall_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_town_hall_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_town_hall_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_courthouse_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_courthouse_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_courthouse_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_courthouse_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_university_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_university_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_university_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_university_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_dock_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_dock_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_dock_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_dock_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_drydock_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_drydock_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_drydock_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_drydock_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_shipyard_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_shipyard_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_shipyard_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_shipyard_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_grand_shipyard_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_grand_shipyard_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_grand_shipyard_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_grand_shipyard_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_workshop_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_workshop_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_workshop_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_workshop_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_counting_house_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_counting_house_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_counting_house_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_counting_house_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_barracks_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_barracks_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_barracks_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_barracks_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_training_fields_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_training_fields_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_training_fields_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_training_fields_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_regimental_camp_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_regimental_camp_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_regimental_camp_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_regimental_camp_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_conscription_center_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_conscription_center_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_conscription_center_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_conscription_center_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_temple_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_temple_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_temple_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_temple_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_cathedral_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_cathedral_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_cathedral_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_cathedral_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_fort_15th_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_fort_15th_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_15th_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_15th_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_fort_16th_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_fort_16th_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_16th_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_16th_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_fort_17th_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_fort_17th_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_17th_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_17th_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_fort_18th_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_fort_18th_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_18th_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_fort_18th_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_coastal_defence_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_coastal_defence_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_coastal_defence_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_coastal_defence_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_naval_battery_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_naval_battery_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_naval_battery_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_naval_battery_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_manufactory_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_manufactory_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_manufactory_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_manufactory_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_ramparts_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_ramparts_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_ramparts_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_ramparts_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_impressment_offices_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_impressment_offices_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_impressment_offices_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_impressment_offices_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_state_house_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_state_house_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_state_house_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_state_house_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_soldier_households_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_soldier_households_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_soldier_households_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_soldier_households_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_build_furnace_tt_loc
+	random = no
+	text = {
+		localisation_key = build_building_macro_build_furnace_infinite_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = -1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_furnace_1_tt
+		trigger = {
+			FROM = {
+				is_variable_equal = {
+					which = build_building_quantity
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = build_building_macro_build_furnace_multiple_tt
+		trigger = {
+			FROM = {
+				check_variable = {
+					which = build_building_quantity
+					value = 2
+				}
+			}
+		}
+	}
+}

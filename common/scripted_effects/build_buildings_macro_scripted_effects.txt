@@ -1,0 +1,1453 @@
+#SCOPE = COUNTRY
+#-1 = build until you have no money left
+set_build_building_quantity = {
+	hidden_effect = {
+		set_variable = {
+			which = build_building_quantity
+			value = $n$
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+setup_build_building_macro = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = initialized_building_macro
+			}
+		}
+		set_build_building_quantity = {
+			n = -1
+		}
+		set_manufactory_trade_goods_flags = yes
+		set_impressment_offices_trade_goods_flags = yes
+		set_state_house_trade_goods_flags = yes
+		set_soldiers_households_trade_goods_flags = yes
+		set_country_flag = enable_smart_build_building_macro
+		set_country_flag = initialized_building_macro
+	}
+}
+
+#SCOPE = COUNTRY
+build_buildings_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				$can_afford_to_build_trigger$ = yes
+				any_owned_province = {
+					can_build = $building$
+					[[manufactory]
+					is_enabled_trade_good_manufactories_build_building_macro = yes
+					]
+					[[impressment_office]
+					is_enabled_trade_good_impressment_offices_build_building_macro = yes
+					]
+					[[state_house]
+					is_enabled_trade_good_state_house_build_building_macro = yes
+					]
+					[[soldiers_households]
+					is_enabled_trade_good_soldiers_households_build_building_macro = yes
+					]
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				$build_buildings_macro_strategy$ = {
+					building = $building$
+				}
+			}
+			else = {
+				build_buildings_anywhere_possible = {
+					building = $building$
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_manufactories_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				can_afford_to_build_manufactory = yes
+				any_owned_province = {
+					can_build_manufactory = yes
+					is_enabled_trade_good_manufactories_build_building_macro = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				build_manufactories_highest_production = yes
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_build_manufactory = yes
+						is_enabled_trade_good_manufactories_build_building_macro = yes
+					}
+					add_manufactory_construction = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_ramparts_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				can_afford_to_build_ramparts = yes
+				any_owned_province = {
+					can_build = ramparts
+					has_fort_building_trigger = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				build_ramparts_most_defensive = yes
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_build = ramparts
+					}
+					add_building_construction = {
+						building = ramparts
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_impressment_offices_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				can_afford_to_build_impressment_offices = yes
+				any_owned_province = {
+					can_build = impressment_offices
+					is_enabled_trade_good_impressment_offices_build_building_macro = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				build_impressment_offices_highest_sailors = yes
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_build = impressment_offices
+						is_enabled_trade_good_impressment_offices_build_building_macro = yes
+					}
+					add_building_construction = {
+						building = impressment_offices
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_state_house_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				can_afford_to_build_state_house = yes
+				any_owned_province = {
+					can_build = state_house
+					is_enabled_trade_good_state_house_build_building_macro = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				build_state_house_highest_governing_cost = yes
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_build = state_house
+						is_enabled_trade_good_state_house_build_building_macro = yes
+					}
+					add_building_construction = {
+						building = state_house
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_soldiers_households_macro_effect = {
+	hidden_effect = {
+		calculate_building_build_costs = yes
+		set_variable = {
+			which = iteration_counter
+			which = build_building_quantity
+		}
+		while = {
+			limit = {
+				can_afford_to_build_soldier_households = yes
+				any_owned_province = {
+					can_build = soldier_households
+					is_enabled_trade_good_soldiers_households_build_building_macro = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = build_building_quantity
+							value = 0
+						}
+					}
+					check_variable = {
+						which = iteration_counter
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+				build_soldiers_households_highest_manpower = yes
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_build = soldier_households
+						is_enabled_trade_good_soldiers_households_build_building_macro = yes
+					}
+					add_building_construction = {
+						building = soldier_households
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = build_building_quantity
+						value = 0
+					}
+				}
+				subtract_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_buildings_highest_trade_value = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = local_trade_power
+			value = province_trade_power
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_trade_power_province
+				}
+			}
+			save_global_event_target_as = highest_trade_power_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_trade_power
+						which = event_target:highest_trade_power_province
+					}
+				}
+				save_global_event_target_as = highest_trade_power_province
+			}
+		}
+	}
+	event_target:highest_trade_power_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_trade_power_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_highest_governing_cost = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		set_variable = {
+			which = local_governing_cost
+			which = dev
+		}
+		set_variable = {
+			which = local_governing_cost_modifier
+			value = 1
+		}
+		export_to_variable = {
+			which = local_governing_cost_modifier_raw
+			value = modifier:local_governing_cost
+		}
+		change_variable = {
+			which = local_governing_cost_modifier
+			which = local_governing_cost_modifier_raw
+		}
+		multiply_variable = {
+			which = local_governing_cost
+			which = local_governing_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_gov_cost_province
+				}
+			}
+			save_global_event_target_as = highest_gov_cost_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_governing_cost
+						which = event_target:highest_gov_cost_province
+					}
+				}
+				save_global_event_target_as = highest_gov_cost_province
+			}
+		}
+	}
+	event_target:highest_gov_cost_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_gov_cost_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_lowest_development_cost = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+#SCOPE = COUNTRY
+build_buildings_most_sailors = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		#Province gains a base +60 dev per point of development, so naturally the province with the most development has the most base sailors.
+		export_to_variable = {
+			which = sailors_total
+			value = development
+		}
+		export_to_variable = {
+			which = sailors_mod
+			value = modifier:local_sailors_modifier
+		}
+		multiply_variable = {
+			which = sailors_total
+			which = sailors_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = sailors_total
+			which = autonomy_to_multiply
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_sailor_province
+				}
+			}
+			save_global_event_target_as = highest_sailor_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = sailors_total
+						which = event_target:highest_sailor_province
+					}
+				}
+				save_global_event_target_as = highest_sailor_province
+			}
+		}
+	}
+	event_target:highest_sailor_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_sailor_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_lowest_autonomy = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = lowest_autonomy_province
+				}
+			}
+			save_global_event_target_as = lowest_autonomy_province
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = curr_autonomy
+							which = event_target:lowest_autonomy_province
+						}
+					}
+				}
+				save_global_event_target_as = lowest_autonomy_province
+			}
+		}
+	}
+	event_target:lowest_autonomy_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = lowest_autonomy_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_highest_production = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = local_trade_goods_size
+			value = modifier:trade_goods_size
+		}
+		set_variable = {
+			which = local_production_score
+			which = local_trade_goods_size
+		}
+		export_to_variable = {
+			which = base_prod
+			value = trigger_value:base_production
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = base_prod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = curr_autonomy
+						which = 0.001
+					}
+				}
+			}
+			#Prevent dividing by 0
+			set_variable = {
+				which = curr_autonomy
+				value = 0.001
+			}
+		}
+		divide_variable = {
+			which = local_production_score
+			which = curr_autonomy
+		}
+		export_to_variable = {
+			which = local_trade_goods_size_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+		change_variable = {
+			which = local_trade_goods_size_modifier
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_trade_goods_size_modifier
+		}
+		export_to_variable = {
+			which = local_production_mod
+			value = modifier:local_production_efficiency
+		}
+		change_variable = {
+			which = local_production_mod
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_production_mod
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_production_province
+				}
+			}
+			save_global_event_target_as = highest_production_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_production_score
+						which = event_target:highest_production_province
+					}
+				}
+				save_global_event_target_as = highest_production_province
+			}
+		}
+	}
+	event_target:highest_production_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_production_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_highest_manpower = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		set_variable = {
+			which = manpower_total
+			value = 0
+		}
+		export_to_variable = {
+			which = manpower_base
+			value = trigger_value:base_manpower
+			who = this
+		}
+		set_variable = {
+			which = manpower_total
+			value = 250
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_base
+		}
+		export_to_variable = {
+			which = manpower_mod
+			value = modifier:local_manpower_modifier
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = autonomy_to_multiply
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_manpower_province
+				}
+			}
+			save_global_event_target_as = highest_manpower_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = manpower_total
+						which = event_target:highest_manpower_province
+					}
+				}
+				save_global_event_target_as = highest_manpower_province
+			}
+		}
+	}
+	event_target:highest_manpower_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_manpower_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_highest_tax = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = local_yearly_tax_income
+			value = modifier:tax_income
+		}
+		export_to_variable = {
+			which = local_base_tax
+			value = trigger_value:base_tax
+		}
+		set_variable = {
+			which = local_monthly_tax_income
+			which = local_yearly_tax_income
+		}
+		change_variable = {
+			which = local_monthly_tax_income
+			which = local_base_tax
+		}
+		divide_variable = {
+			which = local_monthly_tax_income
+			value = 12
+		}
+		export_to_variable = {
+			which = local_tax_mod
+			value = modifier:local_tax_modifier
+		}
+		export_to_variable = {
+			which = global_tax_mod
+			value = modifier:global_tax_modifier
+			who = ROOT
+		}
+		set_variable = {
+			which = tax_modifier
+			which = global_tax_mod
+		}
+		change_variable = {
+			which = tax_modifier
+			which = local_tax_mod
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = tax_modifier
+		}
+		export_to_variable = {
+			which = local_autonomy_raw
+			value = local_autonomy
+		}
+		set_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		subtract_variable = {
+			which = local_autonomy
+			which = local_autonomy_raw
+		}
+		divide_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_tax_province
+				}
+			}
+			save_global_event_target_as = highest_tax_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_monthly_tax_income
+						which = event_target:highest_tax_province
+					}
+				}
+				save_global_event_target_as = highest_tax_province
+			}
+		}
+	}
+	event_target:highest_tax_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = highest_tax_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_most_defensive = {
+	every_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		export_to_variable = {
+			which = def
+			value = modifier:local_defensiveness
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = most_defensive_province
+				}
+			}
+			save_global_event_target_as = most_defensive_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = def
+						which = event_target:most_defensive_province
+					}
+				}
+				save_global_event_target_as = most_defensive_province
+			}
+		}
+	}
+	event_target:most_defensive_province = {
+		add_building_construction = {
+			building = $building$
+		}
+	}
+	clear_global_event_target = most_defensive_province
+}
+
+#SCOPE = COUNTRY
+build_buildings_anywhere_possible = {
+	random_owned_province = {
+		limit = {
+			can_build = $building$
+		}
+		add_building_construction = {
+			building = $building$
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+add_manufactory_construction = {
+	if = {
+		limit = {
+			OR = {
+				trade_goods = naval_supplies
+				trade_goods = fish
+				trade_goods = salt
+			}
+		}
+		add_building_construction = {
+			building = wharf
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = copper
+				trade_goods = iron
+			}
+		}
+		add_building_construction = {
+			building = weapons
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = wool
+				trade_goods = cloth
+				trade_goods = silk
+				trade_goods = dyes
+			}
+		}
+		add_building_construction = {
+			building = textile
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = coffee
+				trade_goods = cotton
+				trade_goods = sugar
+				trade_goods = tobacco
+				trade_goods = tea
+				trade_goods = cocoa
+			}
+		}
+		add_building_construction = {
+			building = plantations
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = ivory
+				trade_goods = slaves
+				trade_goods = spices
+				trade_goods = cloves
+				trade_goods = fur
+				trade_goods = incense
+			}
+		}
+		add_building_construction = {
+			building = tradecompany
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wine
+			}
+		}
+		add_building_construction = {
+			building = farm_estate
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = paper
+				trade_goods = gems
+				trade_goods = tropical_wood
+				trade_goods = glass
+				trade_goods = chinaware
+			}
+		}
+		add_building_construction = {
+			building = mills
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+build_manufactories_highest_production = {
+	every_owned_province = {
+		limit = {
+			can_build_manufactory = yes
+		}
+		export_to_variable = {
+			which = local_trade_goods_size
+			value = modifier:trade_goods_size
+		}
+		set_variable = {
+			which = local_production_score
+			which = local_trade_goods_size
+		}
+		export_to_variable = {
+			which = base_prod
+			value = trigger_value:base_production
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = base_prod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = curr_autonomy
+						which = 0.001
+					}
+				}
+			}
+			#Prevent dividing by 0
+			set_variable = {
+				which = curr_autonomy
+				value = 0.001
+			}
+		}
+		divide_variable = {
+			which = local_production_score
+			which = curr_autonomy
+		}
+		export_to_variable = {
+			which = local_trade_goods_size_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+		change_variable = {
+			which = local_trade_goods_size_modifier
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_trade_goods_size_modifier
+		}
+		export_to_variable = {
+			which = local_production_mod
+			value = modifier:local_production_efficiency
+		}
+		change_variable = {
+			which = local_production_mod
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_production_mod
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_production_province
+				}
+			}
+			save_global_event_target_as = highest_production_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_production_score
+						which = event_target:highest_production_province
+					}
+				}
+				save_global_event_target_as = highest_production_province
+			}
+		}
+	}
+	event_target:highest_production_province = {
+		add_manufactory_construction = yes
+	}
+	clear_global_event_target = highest_production_province
+}
+
+#SCOPE = COUNTRY
+build_ramparts_most_defensive = {
+	every_owned_province = {
+		limit = {
+			can_build = ramparts
+			has_fort_building_trigger = yes
+		}
+		export_to_variable = {
+			which = def
+			value = modifier:local_defensiveness
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = most_defensive_province
+				}
+			}
+			save_global_event_target_as = most_defensive_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = def
+						which = event_target:most_defensive_province
+					}
+				}
+				save_global_event_target_as = most_defensive_province
+			}
+		}
+	}
+	event_target:most_defensive_province = {
+		add_building_construction = {
+			building = ramparts
+		}
+	}
+	clear_global_event_target = most_defensive_province
+}
+
+#SCOPE = COUNTRY
+build_impressment_offices_highest_sailors = {
+	every_owned_province = {
+		limit = {
+			can_build = impressment_offices
+			is_enabled_trade_good_impressment_offices_build_building_macro = yes
+		}
+		#Province gains a base +60 dev per point of development, so naturally the province with the most development has the most base sailors.
+		export_to_variable = {
+			which = sailors_total
+			value = development
+		}
+		export_to_variable = {
+			which = sailors_mod
+			value = modifier:local_sailors_modifier
+		}
+		multiply_variable = {
+			which = sailors_total
+			which = sailors_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = sailors_total
+			which = autonomy_to_multiply
+		}
+		if = {
+			limit = {
+				OR = {
+					trade_goods = salt
+					trade_goods = fish
+					trade_goods = naval_supplies
+					trade_goods = tropical_wood
+				}
+			}
+			#Provinces with these trade goods make the manufactory twice as effective.
+			multiply_variable = {
+				which = sailors_total
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_sailor_province
+				}
+			}
+			save_global_event_target_as = highest_sailor_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = sailors_total
+						which = event_target:highest_sailor_province
+					}
+				}
+				save_global_event_target_as = highest_sailor_province
+			}
+		}
+	}
+	event_target:highest_sailor_province = {
+		add_building_construction = {
+			building = impressment_offices
+		}
+	}
+	clear_global_event_target = highest_sailor_province
+}
+
+#SCOPE = COUNTRY
+build_state_house_highest_governing_cost = {
+	every_owned_province = {
+		limit = {
+			can_build = state_house
+			is_enabled_trade_good_state_house_build_building_macro = yes
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		set_variable = {
+			which = local_governing_cost
+			which = dev
+		}
+		set_variable = {
+			which = local_governing_cost_modifier
+			value = 1
+		}
+		export_to_variable = {
+			which = local_governing_cost_modifier_raw
+			value = modifier:local_governing_cost
+		}
+		change_variable = {
+			which = local_governing_cost_modifier
+			which = local_governing_cost_modifier_raw
+		}
+		multiply_variable = {
+			which = local_governing_cost
+			which = local_governing_cost_modifier
+		}
+		if = {
+			limit = {
+				OR = {
+					trade_goods = paper
+					trade_goods = glass
+					trade_goods = gems
+				}
+			}
+			#Provinces with these trade goods make the manufactory twice as effective.
+			multiply_variable = {
+				which = local_governing_cost
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_gov_cost_province
+				}
+			}
+			save_global_event_target_as = highest_gov_cost_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_governing_cost
+						which = event_target:highest_gov_cost_province
+					}
+				}
+				save_global_event_target_as = highest_gov_cost_province
+			}
+		}
+	}
+	event_target:highest_gov_cost_province = {
+		add_building_construction = {
+			building = state_house
+		}
+	}
+	clear_global_event_target = highest_gov_cost_province
+}
+
+#SCOPE = COUNTRY
+build_soldiers_households_highest_manpower = {
+	every_owned_province = {
+		limit = {
+			can_build = soldier_households
+			is_enabled_trade_good_soldiers_households_build_building_macro = yes
+		}
+		set_variable = {
+			which = manpower_total
+			value = 0
+		}
+		export_to_variable = {
+			which = manpower_base
+			value = trigger_value:base_manpower
+			who = this
+		}
+		set_variable = {
+			which = manpower_total
+			value = 250
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_base
+		}
+		export_to_variable = {
+			which = manpower_mod
+			value = modifier:local_manpower_modifier
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = autonomy_to_multiply
+		}
+		if = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = fish
+					trade_goods = livestock
+					trade_goods = wine
+				}
+			}
+			#Provinces with these trade goods make the manufactory twice as effective.
+			multiply_variable = {
+				which = manpower_total
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_manpower_province
+				}
+			}
+			save_global_event_target_as = highest_manpower_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = manpower_total
+						which = event_target:highest_manpower_province
+					}
+				}
+				save_global_event_target_as = highest_manpower_province
+			}
+		}
+	}
+	event_target:highest_manpower_province = {
+		add_building_construction = {
+			building = soldier_households
+		}
+	}
+	clear_global_event_target = highest_manpower_province
+}

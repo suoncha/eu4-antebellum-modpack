@@ -1,0 +1,56 @@
+#SCOPE = COUNTRY
+can_afford_to_upgrade_greatmarket = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_greatmarket_cost_trigger_tt
+		price_var = greatmarket_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_factory = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_factory_cost_trigger_tt
+		price_var = factory_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_fort_19th = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_fort_19th_cost_trigger_tt
+		price_var = fort_19th_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_gravel_road = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_gravel_road_cost_trigger_tt
+		price_var = gravel_road_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_royal_road = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_royal_road_cost_trigger_tt
+		price_var = royal_road_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_macadam_road = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_macadam_road_cost_trigger_tt
+		price_var = macadam_road_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_royal_road = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_royal_road_cost_trigger_tt
+		price_var = royal_road_upgrade_cost
+	}
+}
+#SCOPE = COUNTRY
+can_afford_to_upgrade_rail_road = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_rail_road_cost_trigger_tt
+		price_var = rail_road_upgrade_cost
+	}
+}

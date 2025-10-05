@@ -1,0 +1,1422 @@
+#Before opening the upgrade building macro window
+custom_button = {
+	name = build_building_macro_tab_window_closed
+	tooltip = build_building_macro_closed_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			NOT = {
+				has_country_flag = upgrade_building_macro_open
+			}
+			NOT = {
+				has_country_flag = build_building_macro_open
+			}
+			NOT = {
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_country_flag = build_building_macro_open
+			calculate_building_build_costs = yes
+		}
+	}
+}
+
+#After opening the upgrade building macro window
+#We do this because the macro window obstructs the tab to open it.
+custom_button = {
+	name = build_building_macro_tab_window_opened
+	tooltip = build_building_macro_open_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = {
+				has_country_flag = upgrade_building_macro_open
+				has_country_flag = build_building_macro_open
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+	trigger = {
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = build_building_macro_open
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				has_country_flag = build_building_macro_open
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = build_building_macro_open
+					}
+				}
+				set_country_flag = build_building_macro_open
+				clr_country_flag = upgrade_building_macro_open
+				clr_country_flag = delete_building_macro_open
+			}
+			else = {
+				clr_country_flag = build_building_macro_open
+			}
+			calculate_building_build_costs = yes
+		}
+	}
+}
+
+custom_window = {
+	name = build_building_macro_window
+	potential = {
+		owned_by = FROM
+		FROM = {
+			has_country_flag = build_building_macro_open
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_marketplace
+	tooltip = building_macro_build_marketplace_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_marketplace = yes
+			any_owned_province = {
+				can_build = marketplace
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_marketplace
+				building = marketplace
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_trade_depot
+	tooltip = building_macro_build_trade_depot_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_trade_depot = yes
+			any_owned_province = {
+				can_build = trade_depot
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_trade_depot
+				building = trade_depot
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_stock_exchange
+	tooltip = building_macro_build_stock_exchange_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_stock_exchange = yes
+			any_owned_province = {
+				can_build = stock_exchange
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_stock_exchange
+				building = stock_exchange
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_town_hall
+	tooltip = building_macro_build_town_hall_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_town_hall = yes
+			any_owned_province = {
+				can_build = town_hall
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_governing_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_town_hall
+				building = town_hall
+				build_buildings_macro_strategy = build_buildings_highest_governing_cost
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_courthouse
+	tooltip = building_macro_build_courthouse_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_courthouse = yes
+			any_owned_province = {
+				can_build = courthouse
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_governing_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_courthouse
+				building = courthouse
+				build_buildings_macro_strategy = build_buildings_highest_governing_cost
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_university
+	tooltip = building_macro_build_university_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_university = yes
+			any_owned_province = {
+				can_build = university
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_university
+				building = university
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_dock
+	tooltip = building_macro_build_dock_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_dock = yes
+			any_owned_province = {
+				can_build = dock
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_sailors_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_dock
+				building = dock
+				build_buildings_macro_strategy = build_buildings_most_sailors
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_drydock
+	tooltip = building_macro_build_drydock_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_drydock = yes
+			any_owned_province = {
+				can_build = drydock
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_sailors_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_drydock
+				building = drydock
+				build_buildings_macro_strategy = build_buildings_most_sailors
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_shipyard
+	tooltip = building_macro_build_shipyard_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_shipyard = yes
+			any_owned_province = {
+				can_build = shipyard
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_shipyard
+				building = shipyard
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_grand_shipyard
+	tooltip = building_macro_build_grand_shipyard_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_grand_shipyard = yes
+			any_owned_province = {
+				can_build = grand_shipyard
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_grand_shipyard
+				building = grand_shipyard
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_workshop
+	tooltip = building_macro_build_workshop_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_workshop = yes
+			any_owned_province = {
+				can_build = workshop
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_workshop
+				building = workshop
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_counting_house
+	tooltip = building_macro_build_counting_house_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_counting_house = yes
+			any_owned_province = {
+				can_build = counting_house
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_counting_house
+				building = counting_house
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_barracks
+	tooltip = building_macro_build_barracks_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_barracks = yes
+			any_owned_province = {
+				can_build = barracks
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_manpower_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_barracks
+				building = barracks
+				build_buildings_macro_strategy = build_buildings_highest_manpower
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_training_fields
+	tooltip = building_macro_build_training_fields_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_training_fields = yes
+			any_owned_province = {
+				can_build = training_fields
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_manpower_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_training_fields
+				building = training_fields
+				build_buildings_macro_strategy = build_buildings_highest_manpower
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_regimental_camp
+	tooltip = building_macro_build_regimental_camp_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_regimental_camp = yes
+			any_owned_province = {
+				can_build = regimental_camp
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_regimental_camp
+				building = regimental_camp
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_conscription_center
+	tooltip = building_macro_build_conscription_center_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_conscription_center = yes
+			any_owned_province = {
+				can_build = conscription_center
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_conscription_center
+				building = conscription_center
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_temple
+	tooltip = building_macro_build_temple_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_temple = yes
+			any_owned_province = {
+				can_build = temple
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_tax_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_temple
+				building = temple
+				build_buildings_macro_strategy = build_buildings_highest_tax
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_cathedral
+	tooltip = building_macro_build_cathedral_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_cathedral = yes
+			any_owned_province = {
+				can_build = cathedral
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_tax_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_cathedral
+				building = cathedral
+				build_buildings_macro_strategy = build_buildings_highest_tax
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_fort_15th
+	tooltip = building_macro_build_fort_15th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_fort_15th = yes
+			any_owned_province = {
+				can_build = fort_15th
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_15th
+				building = fort_15th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_fort_16th
+	tooltip = building_macro_build_fort_16th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_fort_16th = yes
+			any_owned_province = {
+				can_build = fort_16th
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_16th
+				building = fort_16th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_fort_17th
+	tooltip = building_macro_build_fort_17th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_fort_17th = yes
+			any_owned_province = {
+				can_build = fort_17th
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_17th
+				building = fort_17th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_fort_18th
+	tooltip = building_macro_build_fort_18th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_fort_18th = yes
+			any_owned_province = {
+				can_build = fort_18th
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_18th
+				building = fort_18th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_coastal_defence
+	tooltip = building_macro_build_coastal_defence_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_coastal_defence = yes
+			any_owned_province = {
+				can_build = coastal_defence
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_coastal_defence
+				building = coastal_defence
+				build_buildings_macro_strategy = build_buildings_anywhere_possible
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_naval_battery
+	tooltip = building_macro_build_naval_battery_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_naval_battery = yes
+			any_owned_province = {
+				can_build = naval_battery
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_naval_battery
+				building = naval_battery
+				build_buildings_macro_strategy = build_buildings_anywhere_possible
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_manufactory
+	tooltip = building_macro_build_manufactory_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_manufactory = yes
+			any_owned_province = {
+				can_build_manufactory = yes
+				NOT = {
+					has_construction = any
+				}
+				is_enabled_trade_good_manufactories_build_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_manufactory_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_manufactories_macro_effect = yes
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_ramparts
+	tooltip = building_macro_build_ramparts_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_ramparts = yes
+			any_owned_province = {
+				can_build = ramparts
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_ramparts_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_ramparts_macro_effect = yes
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_impressment_offices
+	tooltip = building_macro_build_impressment_offices_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_impressment_offices = yes
+			any_owned_province = {
+				can_build = impressment_offices
+				is_enabled_trade_good_impressment_offices_build_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_impressment_offices_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_impressment_offices_macro_effect = yes
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_state_house
+	tooltip = building_macro_build_state_house_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_state_house = yes
+			any_owned_province = {
+				can_build = state_house
+				is_enabled_trade_good_state_house_build_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_state_house_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_state_house_macro_effect = yes
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_soldier_households
+	tooltip = building_macro_build_soldier_households_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_soldier_households = yes
+			any_owned_province = {
+				can_build = soldier_households
+				is_enabled_trade_good_soldiers_households_build_building_macro = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_soldier_households_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_soldiers_households_macro_effect = yes
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_build_furnace
+	tooltip = building_macro_build_furnace_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			can_afford_to_build_furnace = yes
+			any_owned_province = {
+				can_build = furnace
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_furnace
+				building = furnace
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_settings_button
+	tooltip = building_macro_settings_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = in_building_macro_settings
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				set_country_flag = in_building_macro_settings
+				country_event = {
+					id = building_macro_settings_events.1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = building_macro_cancel_button
+	tooltip = building_macro_cancel_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = in_building_macro_settings
+				}
+			}
+			any_owned_province = {
+				has_construction = building
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			set_country_flag = in_building_macro_settings
+			country_event = {
+				id = cancel_construction_events.1
+			}
+		}
+	}
+}
+
+custom_text_box = {
+	name = build_building_marketplace_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_trade_depot_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_stock_exchange_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_town_hall_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_courthouse_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_university_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_dock_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_drydock_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_shipyard_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_grand_shipyard_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_workshop_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_counting_house_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_barracks_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_training_fields_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_regimental_camp_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_conscription_center_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_temple_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_cathedral_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_fort_15th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_fort_16th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_fort_17th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_fort_18th_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_coastal_defence_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_naval_battery_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_manufactory_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_ramparts_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_impressment_offices_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_state_house_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_soldier_households_cost
+	potential = {
+	}
+	tooltip = empty_text
+}
+
+custom_text_box = {
+	name = build_building_furnace_cost
+	potential = {
+	}
+	tooltip = empty_text
+}

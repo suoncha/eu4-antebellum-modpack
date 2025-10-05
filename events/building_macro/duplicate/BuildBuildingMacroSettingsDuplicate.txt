@@ -1,0 +1,4560 @@
+namespace = building_macro_settings_duplicate_events
+country_event = {
+	id = building_macro_settings_duplicate_events.2
+	title = building_macro_settings_events.2.t
+	desc = building_macro_settings_events.2.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.1
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.infinite
+		trigger = {
+			NOT = {
+				hidden_trigger = {
+					build_building_macro_quantity_equals = {
+						n = -1
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.infinite
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = -1
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_1
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = 1
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_1
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					build_building_macro_quantity_equals = {
+						n = 1
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_5
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = 5
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_5
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					build_building_macro_quantity_equals = {
+						n = 5
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_10
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = 10
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_10
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					build_building_macro_quantity_equals = {
+						n = 10
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_25
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = 25
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = 25
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_25
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					build_building_macro_quantity_equals = {
+						n = 25
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = 25
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_50
+		trigger = {
+			hidden_trigger = {
+				build_building_macro_quantity_equals = {
+					n = 50
+				}
+			}
+		}
+		highlight = yes
+		set_build_building_quantity = {
+			n = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = building_macro_settings_events.2.build_50
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					build_building_macro_quantity_equals = {
+						n = 50
+					}
+				}
+			}
+		}
+		set_build_building_quantity = {
+			n = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.2
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.1
+			}
+		}
+	}
+}
+
+#Manufactory Settings Event
+country_event = {
+	id = building_macro_settings_duplicate_events.4
+	title = building_macro_settings_events.4.t
+	desc = building_macro_settings_events.4.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+	option = {
+		name = enable_all
+		hidden_effect = {
+			set_manufactory_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = disable_all
+		hidden_effect = {
+			clr_manufactory_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = disable_impressment_office_goods
+		custom_tooltip = disable_impressment_office_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_manufactory_fish
+			clr_country_flag = build_building_macro_manufactory_salt
+			clr_country_flag = build_building_macro_manufactory_naval_supplies
+			clr_country_flag = build_building_macro_manufactory_tropical_wood
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = disable_state_house_goods
+		custom_tooltip = disable_state_house_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_manufactory_paper
+			clr_country_flag = build_building_macro_manufactory_glass
+			clr_country_flag = build_building_macro_manufactory_gems
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = disable_soldiers_households_goods
+		custom_tooltip = disable_soldiers_households_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_manufactory_grain
+			clr_country_flag = build_building_macro_manufactory_fish
+			clr_country_flag = build_building_macro_manufactory_livestock
+			clr_country_flag = build_building_macro_manufactory_wine
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Grain
+	option = {
+		name = grain
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_grain
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = grain
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_grain
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Wine
+	option = {
+		name = wine
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_wine
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = wine
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_wine
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Wool
+	option = {
+		name = wool
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_wool
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = wool
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_wool
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Cloth
+	option = {
+		name = cloth
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_cloth
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = cloth
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_cloth
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Fish
+	option = {
+		name = fish
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_fish
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = fish
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_fish
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Fur
+	option = {
+		name = fur
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_fur
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = fur
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_fur
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Salt
+	option = {
+		name = salt
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_salt
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = salt
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_salt
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Naval Supplies
+	option = {
+		name = naval_supplies
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_naval_supplies
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = naval_supplies
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_naval_supplies
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Copper
+	option = {
+		name = copper
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_copper
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = copper
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_copper
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Iron
+	option = {
+		name = iron
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_iron
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = iron
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_iron
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Slaves
+	option = {
+		name = slaves
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_slaves
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = slaves
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_slaves
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Ivory
+	option = {
+		name = ivory
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_ivory
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = ivory
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_ivory
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Tea
+	option = {
+		name = tea
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_tea
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = tea
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_tea
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Chinaware
+	option = {
+		name = chinaware
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_chinaware
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = chinaware
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_chinaware
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Spices
+	option = {
+		name = spices
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_spices
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = spices
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_spices
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Coffee
+	option = {
+		name = coffee
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_coffee
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = coffee
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_coffee
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Cotton
+	option = {
+		name = cotton
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_cotton
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = cotton
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_cotton
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Sugar
+	option = {
+		name = sugar
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_sugar
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = sugar
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_sugar
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Tobacco
+	option = {
+		name = tobacco
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_tobacco
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = tobacco
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_tobacco
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Cocoa
+	option = {
+		name = cocoa
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_cocoa
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = cocoa
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_cocoa
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Silk
+	option = {
+		name = silk
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_silk
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = silk
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_silk
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Dyes
+	option = {
+		name = dyes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_dyes
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = dyes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_dyes
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Tropical Wood
+	option = {
+		name = tropical_wood
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_tropical_wood
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = tropical_wood
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_tropical_wood
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Livestock
+	option = {
+		name = livestock
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_livestock
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = livestock
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_livestock
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Incense
+	option = {
+		name = incense
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_incense
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = incense
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_incense
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Glass
+	option = {
+		name = glass
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_glass
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = glass
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_glass
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Paper
+	option = {
+		name = paper
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_paper
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = paper
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_paper
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Gems
+	option = {
+		name = gems
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_gems
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = gems
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_gems
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	# Cloves
+	option = {
+		name = cloves
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = build_building_macro_manufactory_cloves
+			}
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = cloves
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = build_building_macro_manufactory_cloves
+				}
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_manufactory_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.4
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+}
+
+#Impressment Office Settings Event
+country_event = {
+	id = building_macro_settings_duplicate_events.5
+	title = building_macro_settings_events.5.t	# You will need to create localization for this
+	desc = building_macro_settings_events.5.d	# And this
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+	option = {
+		name = enable_all
+		hidden_effect = {
+			set_impressment_offices_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = disable_all
+		hidden_effect = {
+			clr_impressment_offices_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = enable_impressment_office_goods
+		custom_tooltip = enable_impressment_office_goods_tt
+		hidden_effect = {
+			set_country_flag = build_building_macro_impressment_offices_fish
+			set_country_flag = build_building_macro_impressment_offices_salt
+			set_country_flag = build_building_macro_impressment_offices_naval_supplies
+			set_country_flag = build_building_macro_impressment_offices_tropical_wood
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = disable_state_house_goods
+		custom_tooltip = disable_state_house_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_impressment_offices_paper
+			clr_country_flag = build_building_macro_impressment_offices_glass
+			clr_country_flag = build_building_macro_impressment_offices_gems
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = disable_soldiers_households_goods
+		custom_tooltip = disable_soldiers_households_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_impressment_offices_grain
+			clr_country_flag = build_building_macro_impressment_offices_fish
+			clr_country_flag = build_building_macro_impressment_offices_livestock
+			clr_country_flag = build_building_macro_impressment_offices_wine
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Grain
+	option = {
+		name = grain
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_grain
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = grain
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_grain
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Wine
+	option = {
+		name = wine
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_wine
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = wine
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_wine
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Wool
+	option = {
+		name = wool
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_wool
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = wool
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_wool
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Cloth
+	option = {
+		name = cloth
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_cloth
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = cloth
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_cloth
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Fish
+	option = {
+		name = fish
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_fish
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = fish
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_fish
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Fur
+	option = {
+		name = fur
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_fur
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = fur
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_fur
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Salt
+	option = {
+		name = salt
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_salt
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = salt
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_salt
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Naval Supplies
+	option = {
+		name = naval_supplies
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_naval_supplies
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = naval_supplies
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_naval_supplies
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Copper
+	option = {
+		name = copper
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_copper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = copper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_copper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Gold
+	option = {
+		name = gold
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_gold
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = gold
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_gold
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Iron
+	option = {
+		name = iron
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_iron
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = iron
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_iron
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Slaves
+	option = {
+		name = slaves
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_slaves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = slaves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_slaves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Ivory
+	option = {
+		name = ivory
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_ivory
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = ivory
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_ivory
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Tea
+	option = {
+		name = tea
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_tea
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = tea
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_tea
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Chinaware
+	option = {
+		name = chinaware
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_chinaware
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = chinaware
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_chinaware
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Spices
+	option = {
+		name = spices
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_spices
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = spices
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_spices
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Coffee
+	option = {
+		name = coffee
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_coffee
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = coffee
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_coffee
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Cotton
+	option = {
+		name = cotton
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_cotton
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = cotton
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_cotton
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Sugar
+	option = {
+		name = sugar
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_sugar
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = sugar
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_sugar
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Tobacco
+	option = {
+		name = tobacco
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_tobacco
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = tobacco
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_tobacco
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Cocoa
+	option = {
+		name = cocoa
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_cocoa
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = cocoa
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_cocoa
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Silk
+	option = {
+		name = silk
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_silk
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = silk
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_silk
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Dyes
+	option = {
+		name = dyes
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_dyes
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = dyes
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_dyes
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Tropical Wood
+	option = {
+		name = tropical_wood
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_tropical_wood
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = tropical_wood
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_tropical_wood
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Livestock
+	option = {
+		name = livestock
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_livestock
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = livestock
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_livestock
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Incense
+	option = {
+		name = incense
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_incense
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = incense
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_incense
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Glass
+	option = {
+		name = glass
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_glass
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = glass
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_glass
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Paper
+	option = {
+		name = paper
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_paper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = paper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_paper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Gems
+	option = {
+		name = gems
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_gems
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = gems
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_gems
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	# Cloves
+	option = {
+		name = cloves
+		trigger = {
+			has_country_flag = build_building_macro_impressment_offices_cloves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = cloves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_impressment_offices_cloves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_impressment_offices_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.5
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+}
+
+#State House Settings Event
+country_event = {
+	id = building_macro_settings_duplicate_events.6
+	title = building_macro_settings_events.6.t	# You will need to create localization for this
+	desc = building_macro_settings_events.6.d	# And this
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+	option = {
+		name = enable_all
+		hidden_effect = {
+			set_state_house_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = disable_all
+		hidden_effect = {
+			clr_state_house_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = enable_state_house_goods
+		custom_tooltip = enable_state_house_goods_tt
+		hidden_effect = {
+			set_country_flag = build_building_macro_state_house_paper
+			set_country_flag = build_building_macro_state_house_glass
+			set_country_flag = build_building_macro_state_house_gems
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = disable_impressment_office_goods
+		custom_tooltip = disable_impressment_office_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_state_house_fish
+			clr_country_flag = build_building_macro_state_house_salt
+			clr_country_flag = build_building_macro_state_house_naval_supplies
+			clr_country_flag = build_building_macro_state_house_tropical_wood
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = disable_soldiers_households_goods
+		custom_tooltip = disable_soldiers_households_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_state_house_grain
+			clr_country_flag = build_building_macro_state_house_fish
+			clr_country_flag = build_building_macro_state_house_livestock
+			clr_country_flag = build_building_macro_state_house_wine
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Grain
+	option = {
+		name = grain
+		trigger = {
+			has_country_flag = build_building_macro_state_house_grain
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = grain
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_grain
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Wine
+	option = {
+		name = wine
+		trigger = {
+			has_country_flag = build_building_macro_state_house_wine
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = wine
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_wine
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Wool
+	option = {
+		name = wool
+		trigger = {
+			has_country_flag = build_building_macro_state_house_wool
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = wool
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_wool
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Cloth
+	option = {
+		name = cloth
+		trigger = {
+			has_country_flag = build_building_macro_state_house_cloth
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = cloth
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_cloth
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Fish
+	option = {
+		name = fish
+		trigger = {
+			has_country_flag = build_building_macro_state_house_fish
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = fish
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_fish
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Fur
+	option = {
+		name = fur
+		trigger = {
+			has_country_flag = build_building_macro_state_house_fur
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = fur
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_fur
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Salt
+	option = {
+		name = salt
+		trigger = {
+			has_country_flag = build_building_macro_state_house_salt
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = salt
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_salt
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Naval Supplies
+	option = {
+		name = naval_supplies
+		trigger = {
+			has_country_flag = build_building_macro_state_house_naval_supplies
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = naval_supplies
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_naval_supplies
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Copper
+	option = {
+		name = copper
+		trigger = {
+			has_country_flag = build_building_macro_state_house_copper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = copper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_copper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Gold
+	option = {
+		name = gold
+		trigger = {
+			has_country_flag = build_building_macro_state_house_gold
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = gold
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_gold
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Iron
+	option = {
+		name = iron
+		trigger = {
+			has_country_flag = build_building_macro_state_house_iron
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = iron
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_iron
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Slaves
+	option = {
+		name = slaves
+		trigger = {
+			has_country_flag = build_building_macro_state_house_slaves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = slaves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_slaves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Ivory
+	option = {
+		name = ivory
+		trigger = {
+			has_country_flag = build_building_macro_state_house_ivory
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = ivory
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_ivory
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Tea
+	option = {
+		name = tea
+		trigger = {
+			has_country_flag = build_building_macro_state_house_tea
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = tea
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_tea
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Chinaware
+	option = {
+		name = chinaware
+		trigger = {
+			has_country_flag = build_building_macro_state_house_chinaware
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = chinaware
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_chinaware
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Spices
+	option = {
+		name = spices
+		trigger = {
+			has_country_flag = build_building_macro_state_house_spices
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = spices
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_spices
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Coffee
+	option = {
+		name = coffee
+		trigger = {
+			has_country_flag = build_building_macro_state_house_coffee
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = coffee
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_coffee
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Cotton
+	option = {
+		name = cotton
+		trigger = {
+			has_country_flag = build_building_macro_state_house_cotton
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = cotton
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_cotton
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Sugar
+	option = {
+		name = sugar
+		trigger = {
+			has_country_flag = build_building_macro_state_house_sugar
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = sugar
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_sugar
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Tobacco
+	option = {
+		name = tobacco
+		trigger = {
+			has_country_flag = build_building_macro_state_house_tobacco
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = tobacco
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_tobacco
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Cocoa
+	option = {
+		name = cocoa
+		trigger = {
+			has_country_flag = build_building_macro_state_house_cocoa
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = cocoa
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_cocoa
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Silk
+	option = {
+		name = silk
+		trigger = {
+			has_country_flag = build_building_macro_state_house_silk
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = silk
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_silk
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Dyes
+	option = {
+		name = dyes
+		trigger = {
+			has_country_flag = build_building_macro_state_house_dyes
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = dyes
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_dyes
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Tropical Wood
+	option = {
+		name = tropical_wood
+		trigger = {
+			has_country_flag = build_building_macro_state_house_tropical_wood
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = tropical_wood
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_tropical_wood
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Livestock
+	option = {
+		name = livestock
+		trigger = {
+			has_country_flag = build_building_macro_state_house_livestock
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = livestock
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_livestock
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Incense
+	option = {
+		name = incense
+		trigger = {
+			has_country_flag = build_building_macro_state_house_incense
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = incense
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_incense
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Glass
+	option = {
+		name = glass
+		trigger = {
+			has_country_flag = build_building_macro_state_house_glass
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = glass
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_glass
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Paper
+	option = {
+		name = paper
+		trigger = {
+			has_country_flag = build_building_macro_state_house_paper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = paper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_paper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Gems
+	option = {
+		name = gems
+		trigger = {
+			has_country_flag = build_building_macro_state_house_gems
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = gems
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_gems
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	# Cloves
+	option = {
+		name = cloves
+		trigger = {
+			has_country_flag = build_building_macro_state_house_cloves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = cloves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_state_house_cloves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_state_house_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.6
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+}
+
+#Soldier's Households Settings Event
+country_event = {
+	id = building_macro_settings_duplicate_events.7
+	title = building_macro_settings_events.7.t	# You will need to create localization for this
+	desc = building_macro_settings_events.7.d	# And this
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+	option = {
+		name = enable_all
+		hidden_effect = {
+			set_soldiers_households_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = disable_all
+		hidden_effect = {
+			clr_soldiers_households_trade_goods_flags = yes
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = enable_soldiers_households_goods
+		custom_tooltip = enable_soldiers_households_goods_tt
+		hidden_effect = {
+			set_country_flag = build_building_macro_soldiers_households_grain
+			set_country_flag = build_building_macro_soldiers_households_fish
+			set_country_flag = build_building_macro_soldiers_households_livestock
+			set_country_flag = build_building_macro_soldiers_households_wine
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = disable_impressment_office_goods
+		custom_tooltip = disable_impressment_office_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_soldiers_households_fish
+			clr_country_flag = build_building_macro_soldiers_households_salt
+			clr_country_flag = build_building_macro_soldiers_households_naval_supplies
+			clr_country_flag = build_building_macro_soldiers_households_tropical_wood
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = disable_state_house_goods
+		custom_tooltip = disable_state_house_goods_tt
+		hidden_effect = {
+			clr_country_flag = build_building_macro_soldiers_households_paper
+			clr_country_flag = build_building_macro_soldiers_households_glass
+			clr_country_flag = build_building_macro_soldiers_households_gems
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Grain
+	option = {
+		name = grain
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_grain
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = grain
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_grain
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_grain
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Wine
+	option = {
+		name = wine
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_wine
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = wine
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_wine
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_wine
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Wool
+	option = {
+		name = wool
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_wool
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = wool
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_wool
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_wool
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Cloth
+	option = {
+		name = cloth
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_cloth
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = cloth
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_cloth
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cloth
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Fish
+	option = {
+		name = fish
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_fish
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = fish
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_fish
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_fish
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Fur
+	option = {
+		name = fur
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_fur
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = fur
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_fur
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_fur
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Salt
+	option = {
+		name = salt
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_salt
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = salt
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_salt
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_salt
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Naval Supplies
+	option = {
+		name = naval_supplies
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_naval_supplies
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = naval_supplies
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_naval_supplies
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_naval_supplies
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Copper
+	option = {
+		name = copper
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_copper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = copper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_copper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_copper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Gold
+	option = {
+		name = gold
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_gold
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = gold
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_gold
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_gold
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Iron
+	option = {
+		name = iron
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_iron
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = iron
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_iron
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_iron
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Slaves
+	option = {
+		name = slaves
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_slaves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = slaves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_slaves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_slaves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Ivory
+	option = {
+		name = ivory
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_ivory
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = ivory
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_ivory
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_ivory
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Tea
+	option = {
+		name = tea
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_tea
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = tea
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_tea
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tea
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Chinaware
+	option = {
+		name = chinaware
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_chinaware
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = chinaware
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_chinaware
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_chinaware
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Spices
+	option = {
+		name = spices
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_spices
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = spices
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_spices
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_spices
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Coffee
+	option = {
+		name = coffee
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_coffee
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = coffee
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_coffee
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_coffee
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Cotton
+	option = {
+		name = cotton
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_cotton
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = cotton
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_cotton
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cotton
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Sugar
+	option = {
+		name = sugar
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_sugar
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = sugar
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_sugar
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_sugar
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Tobacco
+	option = {
+		name = tobacco
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_tobacco
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = tobacco
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_tobacco
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tobacco
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Cocoa
+	option = {
+		name = cocoa
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_cocoa
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = cocoa
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_cocoa
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cocoa
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Silk
+	option = {
+		name = silk
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_silk
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = silk
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_silk
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_silk
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Dyes
+	option = {
+		name = dyes
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_dyes
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = dyes
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_dyes
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_dyes
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Tropical Wood
+	option = {
+		name = tropical_wood
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_tropical_wood
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = tropical_wood
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_tropical_wood
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_tropical_wood
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Livestock
+	option = {
+		name = livestock
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_livestock
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = livestock
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_livestock
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_livestock
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Incense
+	option = {
+		name = incense
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_incense
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = incense
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_incense
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_incense
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Glass
+	option = {
+		name = glass
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_glass
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = glass
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_glass
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_glass
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Paper
+	option = {
+		name = paper
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_paper
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = paper
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_paper
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_paper
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Gems
+	option = {
+		name = gems
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_gems
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = gems
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_gems
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_gems
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	# Cloves
+	option = {
+		name = cloves
+		trigger = {
+			has_country_flag = build_building_macro_soldiers_households_cloves
+		}
+		highlight = yes
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = cloves
+		trigger = {
+			NOT = {
+				has_country_flag = build_building_macro_soldiers_households_cloves
+			}
+		}
+		toggle_country_flag = {
+			flag = build_building_macro_soldiers_households_cloves
+		}
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.7
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.3
+			}
+		}
+	}
+}
+
+#Misc
+country_event = {
+	id = building_macro_settings_duplicate_events.8
+	title = building_macro_settings_events.8.t
+	desc = building_macro_settings_events.8.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = enable_smart_build_building_macro
+			}
+		}
+		highlight = yes
+		name = building_macro_settings_events.8.a
+		custom_tooltip = smart_build_building_macro_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = enable_smart_build_building_macro
+			}
+			country_event = {
+				id = building_macro_settings_events.8
+			}
+		}
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+		}
+		name = building_macro_settings_events.8.a
+		custom_tooltip = smart_build_building_macro_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = enable_smart_build_building_macro
+			}
+			country_event = {
+				id = building_macro_settings_events.8
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = building_macro_settings_events.1
+			}
+		}
+	}
+}

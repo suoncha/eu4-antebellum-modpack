@@ -1,0 +1,342 @@
+namespace = upgrade_building_macro_settings_event
+country_event = {
+	id = upgrade_building_macro_settings_event.1
+	title = upgrade_building_macro_settings_event.1.t
+	desc = upgrade_building_macro_settings_event.1.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = upgrade_building_macro_settings_event.1.a		#Configure Build Quantities
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.1.b
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_event.3
+			}
+		}
+	}
+	option = {
+		name = global_edict_commander_settings_events.1.exit
+		hidden_effect = {
+			clr_country_flag = in_building_macro_settings
+		}
+	}
+}
+
+country_event = {
+	id = upgrade_building_macro_settings_event.2
+	title = upgrade_building_macro_settings_event.2.t
+	desc = upgrade_building_macro_settings_event.2.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_event.1
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.infinite
+		trigger = {
+			NOT = {
+				hidden_trigger = {
+					upgrade_building_macro_quantity_equals = {
+						n = -1
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.infinite
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = -1
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_1
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = 1
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_1
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					upgrade_building_macro_quantity_equals = {
+						n = 1
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_5
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = 5
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_5
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					upgrade_building_macro_quantity_equals = {
+						n = 5
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_10
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = 10
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_10
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					upgrade_building_macro_quantity_equals = {
+						n = 10
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_25
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = 25
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = 25
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_25
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					upgrade_building_macro_quantity_equals = {
+						n = 25
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = 25
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_50
+		trigger = {
+			hidden_trigger = {
+				upgrade_building_macro_quantity_equals = {
+					n = 50
+				}
+			}
+		}
+		highlight = yes
+		set_upgrade_building_quantity = {
+			n = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = upgrade_building_macro_settings_event.2.build_50
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					upgrade_building_macro_quantity_equals = {
+						n = 50
+					}
+				}
+			}
+		}
+		set_upgrade_building_quantity = {
+			n = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.2
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_event.1
+			}
+		}
+	}
+}
+
+#Misc
+country_event = {
+	id = upgrade_building_macro_settings_event.3
+	title = upgrade_building_macro_settings_event.3.t
+	desc = upgrade_building_macro_settings_event.3.d
+	picture = SCIENTISTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+		}
+		highlight = yes
+		name = upgrade_building_macro_settings_event.3.a
+		custom_tooltip = smart_upgrade_macro_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = enable_smart_upgrade_building_macro
+			}
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.3
+			}
+		}
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = enable_smart_upgrade_building_macro
+				}
+			}
+		}
+		name = upgrade_building_macro_settings_event.3.a
+		custom_tooltip = smart_upgrade_macro_tt
+		hidden_effect = {
+			toggle_country_flag = {
+				flag = enable_smart_upgrade_building_macro
+			}
+			country_event = {
+				id = upgrade_building_macro_settings_duplicate_event.3
+			}
+		}
+	}
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id = upgrade_building_macro_settings_event.1
+			}
+		}
+	}
+}

@@ -1,0 +1,935 @@
+#SCOPE = COUNTRY
+upgrade_all_trade_buildings_to_greatmarkets = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_greatmarket = yes
+			any_owned_province = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_highest_trade_value_province_to_greatmarket = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = greatmarket
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_highest_trade_value_province_to_greatmarket = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+				has_building = stock_exchange
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = local_trade_power
+			value = province_trade_power
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_trade_power_province
+				}
+			}
+			save_global_event_target_as = highest_trade_power_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_trade_power
+						which = event_target:highest_trade_power_province
+					}
+				}
+				save_global_event_target_as = highest_trade_power_province
+			}
+		}
+	}
+	event_target:highest_trade_power_province = {
+		add_building_construction = {
+			building = greatmarket
+		}
+	}
+	clear_global_event_target = highest_trade_power_province
+}
+
+#SCOPE = COUNTRY
+upgrade_all_production_buildings_to_factories = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_factory = yes
+			any_owned_province = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_highest_production_province_to_factory = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = factory
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_highest_production_province_to_factory = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = local_trade_goods_size
+			value = modifier:trade_goods_size
+		}
+		set_variable = {
+			which = local_production_score
+			which = local_trade_goods_size
+		}
+		export_to_variable = {
+			which = base_prod
+			value = trigger_value:base_production
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = base_prod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = curr_autonomy
+						which = 0.001
+					}
+				}
+			}
+			#Prevent dividing by 0
+			set_variable = {
+				which = curr_autonomy
+				value = 0.001
+			}
+		}
+		divide_variable = {
+			which = local_production_score
+			which = curr_autonomy
+		}
+		export_to_variable = {
+			which = local_trade_goods_size_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+		change_variable = {
+			which = local_trade_goods_size_modifier
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_trade_goods_size_modifier
+		}
+		export_to_variable = {
+			which = local_production_mod
+			value = modifier:local_production_efficiency
+		}
+		change_variable = {
+			which = local_production_mod
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_production_mod
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_production_province
+				}
+			}
+			save_global_event_target_as = highest_production_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = local_production_score
+						which = event_target:highest_production_province
+					}
+				}
+				save_global_event_target_as = highest_production_province
+			}
+		}
+	}
+	event_target:highest_production_province = {
+		add_building_construction = {
+			building = factory
+		}
+	}
+	clear_global_event_target = highest_production_province
+}
+
+#SCOPE = COUNTRY
+upgrade_all_fort_buildings_to_level_9_fort = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_fort_19th = yes
+			any_owned_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			#Always prioritize capital
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+						NOT = {
+							has_construction = any
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						building = fort_19th
+					}
+				}
+			}
+			else = {
+				upgrade_most_defensive_province_to_level_9_fort = yes
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = fort_19th
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_most_defensive_province_to_level_9_fort = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+				has_building = fort_18th
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = def
+			value = modifier:local_defensiveness
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = most_defensive_province
+				}
+			}
+			save_global_event_target_as = most_defensive_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = def
+						which = event_target:most_defensive_province
+					}
+				}
+				save_global_event_target_as = most_defensive_province
+			}
+		}
+	}
+	event_target:most_defensive_province = {
+		add_building_construction = {
+			building = fort_19th
+		}
+	}
+	clear_global_event_target = most_defensive_province
+}
+
+#SCOPE = COUNTRY
+upgrade_all_road_buildings_to_gravel_road = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_gravel_road = yes
+			any_owned_province = {
+				has_building = early_road
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_lowest_development_cost_province_to_gravel_road = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					has_building = early_road
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = gravel_road
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_lowest_development_cost_province_to_gravel_road = {
+	every_owned_province = {
+		limit = {
+			has_building = early_road
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		add_building_construction = {
+			building = gravel_road
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+#SCOPE = COUNTRY
+upgrade_all_road_buildings_to_royal_road = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_royal_road = yes
+			any_owned_province = {
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_lowest_development_cost_province_to_royal_road = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = early_road
+						has_building = gravel_road
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = royal_road
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_lowest_development_cost_province_to_royal_road = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = early_road
+				has_building = gravel_road
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		add_building_construction = {
+			building = royal_road
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+#SCOPE = COUNTRY
+upgrade_all_road_buildings_to_macadam_road = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_macadam_road = yes
+			any_owned_province = {
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+					has_building = royal_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_lowest_development_cost_province_to_macadam_road = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = early_road
+						has_building = gravel_road
+						has_building = royal_road
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = macadam_road
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_lowest_development_cost_province_to_macadam_road = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = early_road
+				has_building = gravel_road
+				has_building = royal_road
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		add_building_construction = {
+			building = macadam_road
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+#SCOPE = COUNTRY
+upgrade_all_road_buildings_to_rail_road = {
+	hidden_effect = {
+		set_variable = {
+			which = iteration_counter
+			which = upgrade_building_quantity
+		}
+	}
+	calculate_building_upgrade_costs = yes
+	while = {
+		limit = {
+			if = {
+				limit = {
+					check_variable = {
+						which = upgrade_building_quantity
+						value = 0
+					}
+				}
+				check_variable = {
+					which = iteration_counter
+					value = 1
+				}
+			}
+			can_afford_to_upgrade_rail_road = yes
+			any_owned_province = {
+				OR = {
+					has_building = early_road
+					has_building = gravel_road
+					has_building = royal_road
+					has_building = rail_road
+				}
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = enable_smart_upgrade_building_macro
+			}
+			upgrade_lowest_development_cost_province_to_rail_road = yes
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = early_road
+						has_building = gravel_road
+						has_building = royal_road
+						has_building = rail_road
+					}
+					NOT = {
+						has_construction = any
+					}
+				}
+				add_building_construction = {
+					building = trade_depot
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = upgrade_building_quantity
+					value = 0
+				}
+			}
+			subtract_variable = {
+				which = iteration_counter
+				value = 1
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_lowest_development_cost_province_to_rail_road = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = early_road
+				has_building = gravel_road
+				has_building = royal_road
+				has_building = rail_road
+			}
+			NOT = {
+				has_construction = any
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		add_building_construction = {
+			building = rail_road
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}

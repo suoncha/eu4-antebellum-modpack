@@ -9824,7 +9824,9 @@ kaaba = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					has_country_flag = arb_upgrade_kaaba
+					owner = {
+						has_country_flag = arb_upgrade_kaaba
+					}
 				}
 			}
 			modifier = {
@@ -10095,7 +10097,9 @@ holy_city_jerusalem = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					has_country_flag = koj_buff_great_project
+					owner = {
+						has_country_flag = koj_buff_great_project
+					}
 				}
 			}
 			modifier = {
@@ -18539,7 +18543,7 @@ imperial_city_kyoto = {
 
 kazan_kremlin = {
 	start = 1082 
-	date = 1214.12.2 #Built: 10th�16th centuries
+	date = 1214.12.2 #Built: 10th 16th centuries
 	time = { months = 0	}
 	build_cost = 0
 	can_be_moved = no
@@ -19205,7 +19209,9 @@ nizwa_fort = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					has_country_flag = arb_upgrade_nizwa
+					owner = {
+						has_country_flag = arb_upgrade_nizwa
+					}
 				}
 			}
 			modifier = {
@@ -19323,7 +19329,9 @@ city_of_sanaa = {
 			trigger = {
 				custom_trigger_tooltip = {
 					tooltip = enable_korean_palace_tt
-					has_country_flag = arb_upgrade_sanaa
+					owner = {
+						has_country_flag = arb_upgrade_sanaa
+					}
 				}
 			}
 			modifier = {

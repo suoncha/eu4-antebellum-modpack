@@ -1,0 +1,129 @@
+can_afford_build_action = {
+	variable_arithmetic_trigger = {
+		custom_tooltip = $tooltip$
+		export_to_variable = {
+			which = treasury
+			value = treasury
+		}
+		check_variable = {
+			which = treasury
+			which = $price_var$
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_trade_depot = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_trade_depot_cost_trigger_tt
+		price_var = trade_depot_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_stock_exchange = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_stock_exchange_cost_trigger_tt
+		price_var = stock_exchange_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_town_hall = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_town_hall_cost_trigger_tt
+		price_var = town_hall_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_drydock = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_drydock_cost_trigger_tt
+		price_var = dry_dock_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_grand_shipyard = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_grand_shipyard_cost_trigger_tt
+		price_var = grand_shipyard_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_counting_house = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_counting_house_cost_trigger_tt
+		price_var = counting_house_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_training_fields = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_training_fields_cost_trigger_tt
+		price_var = training_fields_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_conscription_center = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_conscription_center_cost_trigger_tt
+		price_var = conscription_center_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_cathedral = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_cathedral_cost_trigger_tt
+		price_var = cathedral_upgrade_cost
+	}
+}
+
+# Forts use the cost variables for the building they are upgrading *to* (Bastion, Star Fort, Fortress)
+# Fort 16th (Bastion)
+#SCOPE = COUNTRY
+can_afford_to_upgrade_fort_16th = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_fort_16th_cost_trigger_tt
+		price_var = bastion_upgrade_cost
+	}
+}
+
+# Fort 17th (Star Fort)
+#SCOPE = COUNTRY
+can_afford_to_upgrade_fort_17th = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_fort_17th_cost_trigger_tt
+		price_var = star_fort_upgrade_cost
+	}
+}
+
+# Fort 18th (Fortress)
+#SCOPE = COUNTRY
+can_afford_to_upgrade_fort_18th = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_fort_18th_cost_trigger_tt
+		price_var = fortress_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_upgrade_naval_battery = {
+	can_afford_build_action = {
+		tooltip = upgrade_to_naval_battery_cost_trigger_tt
+		price_var = naval_battery_upgrade_cost
+	}
+}
+
+#SCOPE = COUNTRY
+upgrade_building_macro_quantity_equals = {
+	is_variable_equal = {
+		which = upgrade_building_quantity
+		value = $n$
+	}
+}
