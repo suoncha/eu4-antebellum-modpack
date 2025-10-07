@@ -109,6 +109,14 @@ ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, gran
 ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
 #Hetmanate
 ABA_HTM_hussar_spawn_tt: "\nFive §GWinged Hussars§! will be raised in our Capital and every §G10 years§! we will recieve new regiments of winged hussars!\n"
+#Zun
+ABA_ZNN_india_tt: "\nWe will abandon our ambitions in Persia to focus on the rich and fertile lands of §GHindustans§!!\n"
+ABA_ZNN_persia_tt: "\nWe will abandon our ambitions in the East to reclaim the long lost glory of the §GPersian Empire§!!\n"
+ABA_ZNN_global_purification_tt: "\nWe will begin a campaign of §RGlobal Purification§! to spread the §JZunist§! faith across our the World!\n"
+ABA_ZUN_UNLOCKED_PATH: "\nThis mission can be unlocked by completeing the §JBeyond The Horizon§! mission\n"
+ABA_zun_shift_west_tt: "\nWe will turn our attention §JWestward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
+ABA_zun_shift_east_tt: "\nWe will turn our attention §JEastward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
+ABA_ZUN_sahar_bahar_tt: "\nWe will be able to §Yrestore§! §GSah-Bahar - The Temple of the Kings§! in §YGhanzi§!!\n"
 
 #Events
 #Japan
@@ -154,12 +162,27 @@ AB_Shahi_Event.8.a: "The §YIndian Century§! begins... We will now be known as 
 AB_Shahi_Event.8.b: "The §YIndian Century§! begins!"
 #### Hetmanate:
 aba_hetmanate.1.t: "Hussar Regiments Arrive"
-aba_hetmanate.1.d: "Our integration of Poland has gone. Fusing their frontier spirit and will to survive with the martial prowess of the Cossacks has produced unpredecented results. Their famed Hussar regiments have pledged themselves to our cause of liberty and freedom."
+aba_hetmanate.1.d: "Our integration of Poland has gone well. Fusing their frontier spirit and will to survive with the martial prowess of the Cossacks has produced unpredecented results. Their famed Hussar regiments have pledged themselves to our cause of liberty and freedom."
 aba_hetmanate.1.a: "And the Winged Hussars Arrived!"
+##### Zun
+aba_zun_event.1.t: "Our Destiny"
+aba_zun_event.1.d: "Through Faith we emerged victorious, and now our humble nation lies at a crossroads. We turn to the annals of history looking for a direction. Some in our court suggest we claim the mantle of the Persian Empire, and take advantage of the chaos left in the wake of the collapsing Illkhanate. While others say we should turn towards the East, and feast on the riches of India. It is time to decide the fate of our nation."
+aba_zun_event.1.a: "Let the sun set over Hindustan!"
+aba_zun_event.1.b: "We shall bring the Fire of Zun to the West!"
+aba_zun_event.2.t: "The Synthesis"
+aba_zun_event.2.d: "With our conquest of India, we have come to embrace the rich and diverse culture of the subcontinent. Our people have adopted many Indian customs and traditions, and we have even begun to incorporate Indian art and architecture into our own. This fusion of cultures has created a unique and vibrant society that is unlike anything seen before. We have also embraced elements of the Indian religion of Hinduism, which has become a major part of our spiritual life. The synthesis of Zunist and Indian cultures has led to a new era of prosperity and enlightenment for our nation, and we are excited to see what the future holds But some in court suggest we enforce our heritage instead of adopting this new culture."
+aba_zun_event.2.a: "The §YSynthesis§! of §JAfghan Culture§! and §OIndian§! cultures begins..."
+aba_zun_event.2.b: "We shall enforce the §RZunist§! faith and §RAfghan§! culture on the world!"
+aba_zun_event.3.t: "Global Purification"
+aba_zun_event.3.d: "Our faith has guided us to victory, and now it is time to spread its light to the rest of the world. We will embark on a massive campaign to crush the false gods that many of these heretics and heathens pray to. We've already destroyed their holy sites, but this is simply not enough to show them the falsity of their ways. We will send missionaries to every corner of the globe, preaching the truth of Zun and converting those who are willing to listen. For those who refuse, we will show them the true power of our faith through force if necessary..."
+
 #Decisions
 #Gallia
 aba_gal_release_celt_decision_title:"Release the Celtic Union"
 aba_gal_release_celt_decision_desc:"After our conquest and conversion of the British Isles many suggested that the lands may be better run by our Brittonic subjects, so that we that we may focus on recovering our homeland on the continent. It is certainly an interesting proposition..."
+
+#Monuments 
+ABA_ZUN_sahar_bahar: "Sah Bahar - Temple of the King"
 
 
 #Modifiers
@@ -188,6 +211,7 @@ ABA_SHH_great_trunk_road: "Great Trunk Road"
 ABA_shh_staple_ports_of_india: "Staple Port of India"
 aba_SHH_shahistan: "Shahistan"
 aba_SHH_shahistan_adj: "Shahistani"
+
 #Hetmanate
 aba_htm_free_ruthenia: "A Free Ruthenia"
 htm_danube_sich: "Danubian Sich"
@@ -196,4 +220,19 @@ ABA_htm_new_horse_production: "Horse Breeding Revolution"
 ABA_htm_regimental_rule: "Regimental Rule"
 aba_htm_vodka: "Hetman's Vodka"
 aba_htm_new_coinage: "New Coinage"
+
+########### Zun
+aba_ZNN_war_elephants: "War Elephants"
+aba_ZNN_mysore_rockets: "Mysore Rocketry"
+aba_znn_golconda: "Expanded Golconda Mine"
+aba_zun_global_purification: "Global Purification"
+aba_zun_great_conversion: "Great Conversion"
+aba_ZUN_conversion_prov: "Increased Zunist Missionary Activity"
+aba_zun_sunset_india: "Sunset over Hindustan"
+aba_ZNN_damascus_steel: "Damascus Steel"
+aba_ZNN_embrace_india: "Embrace Indian Culture"
+aba_zun_tattagird: "Port of Tattagird"
+aba_zun_gunpowder: "Gunpowder Empire"
+aba_zun_malacca: "Viceroy of Malacca"
+aba_zun_afghan_indian_reject: "Pashtun Dominance"
 
