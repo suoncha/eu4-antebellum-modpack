@@ -8,1444 +8,750 @@ build_building_macro_quantity_equals = {
 
 #SCOPE = PROVINCE
 is_enabled_trade_good_manufactories_build_building_macro = {
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+	custom_trigger_tooltip = {
+		tooltip = is_enabled_trade_good_build_building_macro_tt
+		OR = {
+			AND = {
+				trade_goods = grain
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_grain
 				}
 			}
-		}
-		NOT = {
-			trade_goods = grain
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wine
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_wine
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wine
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wool
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_wool
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wool
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloth
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_cloth
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloth
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fish
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_fish
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fish
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fur
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_fur
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fur
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = salt
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_salt
 				}
 			}
-		}
-		NOT = {
-			trade_goods = salt
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = naval_supplies
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_naval_supplies
 				}
 			}
-		}
-		NOT = {
-			trade_goods = naval_supplies
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = copper
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_copper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = copper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = iron
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_iron
 				}
 			}
-		}
-		NOT = {
-			trade_goods = iron
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = slaves
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_slaves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = slaves
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = ivory
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_ivory
 				}
 			}
-		}
-		NOT = {
-			trade_goods = ivory
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tea
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_tea
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tea
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = chinaware
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_chinaware
 				}
 			}
-		}
-		NOT = {
-			trade_goods = chinaware
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = spices
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_spices
 				}
 			}
-		}
-		NOT = {
-			trade_goods = spices
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = coffee
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_coffee
 				}
 			}
-		}
-		NOT = {
-			trade_goods = coffee
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cotton
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_cotton
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cotton
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = sugar
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_sugar
 				}
 			}
-		}
-		NOT = {
-			trade_goods = sugar
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tobacco
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_tobacco
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tobacco
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cocoa
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_cocoa
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cocoa
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = silk
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_silk
 				}
 			}
-		}
-		NOT = {
-			trade_goods = silk
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = dyes
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_dyes
 				}
 			}
-		}
-		NOT = {
-			trade_goods = dyes
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tropical_wood
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_tropical_wood
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tropical_wood
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = livestock
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_livestock
 				}
 			}
-		}
-		NOT = {
-			trade_goods = livestock
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = incense
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_incense
 				}
 			}
-		}
-		NOT = {
-			trade_goods = incense
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = glass
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_glass
 				}
 			}
-		}
-		NOT = {
-			trade_goods = glass
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = paper
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_paper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = paper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gems
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_gems
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gems
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloves
+				FROM = {
 					has_country_flag = build_building_macro_manufactory_cloves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloves
 		}
 	}
 }
 
 #SCOPE = PROVINCE
 is_enabled_trade_good_impressment_offices_build_building_macro = {
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+	custom_trigger_tooltip = {
+		tooltip = is_enabled_trade_good_build_building_macro_tt
+		OR = {
+			AND = {
+				trade_goods = grain
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_grain
 				}
 			}
-		}
-		NOT = {
-			trade_goods = grain
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wine
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_wine
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wine
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wool
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_wool
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wool
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloth
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_cloth
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloth
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fish
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_fish
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fish
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fur
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_fur
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fur
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = salt
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_salt
 				}
 			}
-		}
-		NOT = {
-			trade_goods = salt
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = naval_supplies
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_naval_supplies
 				}
 			}
-		}
-		NOT = {
-			trade_goods = naval_supplies
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = copper
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_copper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = copper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gold
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_gold
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gold
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = iron
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_iron
 				}
 			}
-		}
-		NOT = {
-			trade_goods = iron
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = slaves
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_slaves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = slaves
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = ivory
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_ivory
 				}
 			}
-		}
-		NOT = {
-			trade_goods = ivory
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tea
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_tea
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tea
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = chinaware
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_chinaware
 				}
 			}
-		}
-		NOT = {
-			trade_goods = chinaware
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = spices
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_spices
 				}
 			}
-		}
-		NOT = {
-			trade_goods = spices
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = coffee
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_coffee
 				}
 			}
-		}
-		NOT = {
-			trade_goods = coffee
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cotton
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_cotton
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cotton
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = sugar
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_sugar
 				}
 			}
-		}
-		NOT = {
-			trade_goods = sugar
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tobacco
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_tobacco
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tobacco
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cocoa
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_cocoa
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cocoa
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = silk
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_silk
 				}
 			}
-		}
-		NOT = {
-			trade_goods = silk
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = dyes
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_dyes
 				}
 			}
-		}
-		NOT = {
-			trade_goods = dyes
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tropical_wood
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_tropical_wood
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tropical_wood
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = livestock
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_livestock
 				}
 			}
-		}
-		NOT = {
-			trade_goods = livestock
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = incense
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_incense
 				}
 			}
-		}
-		NOT = {
-			trade_goods = incense
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = glass
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_glass
 				}
 			}
-		}
-		NOT = {
-			trade_goods = glass
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = paper
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_paper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = paper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gems
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_gems
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gems
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloves
+				FROM = {
 					has_country_flag = build_building_macro_impressment_offices_cloves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloves
 		}
 	}
 }
 
 #SCOPE = PROVINCE
 is_enabled_trade_good_state_house_build_building_macro = {
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+	custom_trigger_tooltip = {
+		tooltip = is_enabled_trade_good_build_building_macro_tt
+		OR = {
+			AND = {
+				trade_goods = grain
+				FROM = {
 					has_country_flag = build_building_macro_state_house_grain
 				}
 			}
-		}
-		NOT = {
-			trade_goods = grain
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wine
+				FROM = {
 					has_country_flag = build_building_macro_state_house_wine
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wine
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wool
+				FROM = {
 					has_country_flag = build_building_macro_state_house_wool
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wool
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloth
+				FROM = {
 					has_country_flag = build_building_macro_state_house_cloth
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloth
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fish
+				FROM = {
 					has_country_flag = build_building_macro_state_house_fish
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fish
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fur
+				FROM = {
 					has_country_flag = build_building_macro_state_house_fur
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fur
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = salt
+				FROM = {
 					has_country_flag = build_building_macro_state_house_salt
 				}
 			}
-		}
-		NOT = {
-			trade_goods = salt
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = naval_supplies
+				FROM = {
 					has_country_flag = build_building_macro_state_house_naval_supplies
 				}
 			}
-		}
-		NOT = {
-			trade_goods = naval_supplies
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = copper
+				FROM = {
 					has_country_flag = build_building_macro_state_house_copper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = copper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gold
+				FROM = {
 					has_country_flag = build_building_macro_state_house_gold
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gold
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = iron
+				FROM = {
 					has_country_flag = build_building_macro_state_house_iron
 				}
 			}
-		}
-		NOT = {
-			trade_goods = iron
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = slaves
+				FROM = {
 					has_country_flag = build_building_macro_state_house_slaves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = slaves
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = ivory
+				FROM = {
 					has_country_flag = build_building_macro_state_house_ivory
 				}
 			}
-		}
-		NOT = {
-			trade_goods = ivory
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tea
+				FROM = {
 					has_country_flag = build_building_macro_state_house_tea
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tea
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = chinaware
+				FROM = {
 					has_country_flag = build_building_macro_state_house_chinaware
 				}
 			}
-		}
-		NOT = {
-			trade_goods = chinaware
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = spices
+				FROM = {
 					has_country_flag = build_building_macro_state_house_spices
 				}
 			}
-		}
-		NOT = {
-			trade_goods = spices
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = coffee
+				FROM = {
 					has_country_flag = build_building_macro_state_house_coffee
 				}
 			}
-		}
-		NOT = {
-			trade_goods = coffee
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cotton
+				FROM = {
 					has_country_flag = build_building_macro_state_house_cotton
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cotton
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = sugar
+				FROM = {
 					has_country_flag = build_building_macro_state_house_sugar
 				}
 			}
-		}
-		NOT = {
-			trade_goods = sugar
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tobacco
+				FROM = {
 					has_country_flag = build_building_macro_state_house_tobacco
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tobacco
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cocoa
+				FROM = {
 					has_country_flag = build_building_macro_state_house_cocoa
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cocoa
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = silk
+				FROM = {
 					has_country_flag = build_building_macro_state_house_silk
 				}
 			}
-		}
-		NOT = {
-			trade_goods = silk
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = dyes
+				FROM = {
 					has_country_flag = build_building_macro_state_house_dyes
 				}
 			}
-		}
-		NOT = {
-			trade_goods = dyes
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tropical_wood
+				FROM = {
 					has_country_flag = build_building_macro_state_house_tropical_wood
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tropical_wood
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = livestock
+				FROM = {
 					has_country_flag = build_building_macro_state_house_livestock
 				}
 			}
-		}
-		NOT = {
-			trade_goods = livestock
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = incense
+				FROM = {
 					has_country_flag = build_building_macro_state_house_incense
 				}
 			}
-		}
-		NOT = {
-			trade_goods = incense
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = glass
+				FROM = {
 					has_country_flag = build_building_macro_state_house_glass
 				}
 			}
-		}
-		NOT = {
-			trade_goods = glass
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = paper
+				FROM = {
 					has_country_flag = build_building_macro_state_house_paper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = paper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gems
+				FROM = {
 					has_country_flag = build_building_macro_state_house_gems
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gems
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloves
+				FROM = {
 					has_country_flag = build_building_macro_state_house_cloves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloves
 		}
 	}
 }
 
 #SCOPE = PROVINCE
 is_enabled_trade_good_soldiers_households_build_building_macro = {
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+	custom_trigger_tooltip = {
+		tooltip = is_enabled_trade_good_build_building_macro_tt
+		OR = {
+			AND = {
+				trade_goods = grain
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_grain
 				}
 			}
-		}
-		NOT = {
-			trade_goods = grain
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wine
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_wine
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wine
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = wool
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_wool
 				}
 			}
-		}
-		NOT = {
-			trade_goods = wool
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloth
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_cloth
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloth
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fish
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_fish
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fish
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = fur
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_fur
 				}
 			}
-		}
-		NOT = {
-			trade_goods = fur
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = salt
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_salt
 				}
 			}
-		}
-		NOT = {
-			trade_goods = salt
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = naval_supplies
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_naval_supplies
 				}
 			}
-		}
-		NOT = {
-			trade_goods = naval_supplies
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = copper
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_copper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = copper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gold
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_gold
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gold
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = iron
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_iron
 				}
 			}
-		}
-		NOT = {
-			trade_goods = iron
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = slaves
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_slaves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = slaves
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = ivory
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_ivory
 				}
 			}
-		}
-		NOT = {
-			trade_goods = ivory
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tea
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_tea
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tea
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = chinaware
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_chinaware
 				}
 			}
-		}
-		NOT = {
-			trade_goods = chinaware
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = spices
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_spices
 				}
 			}
-		}
-		NOT = {
-			trade_goods = spices
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = coffee
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_coffee
 				}
 			}
-		}
-		NOT = {
-			trade_goods = coffee
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cotton
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_cotton
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cotton
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = sugar
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_sugar
 				}
 			}
-		}
-		NOT = {
-			trade_goods = sugar
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tobacco
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_tobacco
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tobacco
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cocoa
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_cocoa
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cocoa
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = silk
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_silk
 				}
 			}
-		}
-		NOT = {
-			trade_goods = silk
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = dyes
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_dyes
 				}
 			}
-		}
-		NOT = {
-			trade_goods = dyes
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = tropical_wood
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_tropical_wood
 				}
 			}
-		}
-		NOT = {
-			trade_goods = tropical_wood
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = livestock
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_livestock
 				}
 			}
-		}
-		NOT = {
-			trade_goods = livestock
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = incense
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_incense
 				}
 			}
-		}
-		NOT = {
-			trade_goods = incense
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = glass
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_glass
 				}
 			}
-		}
-		NOT = {
-			trade_goods = glass
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = paper
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_paper
 				}
 			}
-		}
-		NOT = {
-			trade_goods = paper
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = gems
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_gems
 				}
 			}
-		}
-		NOT = {
-			trade_goods = gems
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				NOT = {
+			AND = {
+				trade_goods = cloves
+				FROM = {
 					has_country_flag = build_building_macro_soldiers_households_cloves
 				}
 			}
-		}
-		NOT = {
-			trade_goods = cloves
 		}
 	}
 }
