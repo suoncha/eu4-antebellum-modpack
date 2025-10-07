@@ -503,30 +503,39 @@ ab_shahi_missions_1 = {
 		trigger = { 
 			504 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			517 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			2030 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			534 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			2026 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			539 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			552 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			4477 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 			564 = {
 				owned_by = ROOT
+				base_tax = 8
 			}
 
 		}
@@ -655,7 +664,8 @@ ab_shahi_missions_1 = {
 					name = ABA_SHH_great_trunk_road
 					duration = -1
 				}
-		hidden_effect ={
+			}
+		hidden_effect = {
 				558 = {
 					add_province_modifier = {
 						name = ABA_SHH_great_trunk_road
@@ -715,7 +725,6 @@ ab_shahi_missions_1 = {
 
 		}
 	}
-}
 ab_shahi_missions_2 = {
 	slot = 2
 	generic = no
@@ -1665,6 +1674,7 @@ ab_shahi_missions_3 = {
 		}
 
 		effect = { 
+			set_capital = 524
 			524 = {
 				add_province_modifier = {
 						name = "aba_shh_jewel_of_india"

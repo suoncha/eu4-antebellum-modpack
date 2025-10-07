@@ -127,7 +127,7 @@ aba_pol_patronage_of_the_west = {
     idea_cost = -0.10
 }
 
-# Hetmanate
+##### Hetmanate
 
 aba_htm_free_ruthenia = {
     republican_tradition = 0.5
@@ -167,7 +167,96 @@ aba_htm_new_coinage = {
     global_tax_modifier = 0.10
 }
 
+###### Zun
+
+aba_ZNN_war_elephants = {
+    cavalry_shock = 0.5
+}
+
+aba_ZNN_mysore_rockets = {
+    artillery_fire = 0.25
+	shock_damage = 0.10
+    artillery_cost = -0.10
+    
+}
+
+aba_znn_golconda = {
+    local_production_efficiency = 0.10
+    local_development_cost = -0.1
+    trade_goods_size = 0.5
+}
+
+aba_zun_global_purification = {
+	global_missionary_strength = 0.01  
+    missionaries = 1
+    yearly_government_power = 0.05
+    religious_unity = 0.25
+}
 
 
+aba_zun_great_conversion = {
+    global_missionary_strength = 0.01  
+    missionaries = 2
+    yearly_government_power = 0.05
+}
 
+aba_ZUN_conversion_prov = {
+    local_missionary_strength = 0.5
+    missionary_maintenance_cost = -0.10
+    local_unrest = -5
+}
+
+aba_zun_sunset_india = {
+    prestige_decay = -0.02
+    prestige = 0.5
+    max_absolutism = 15
+    legitimacy = 1
+}
+
+aba_zun_damascus_steel = {
+army_tradition_decay = -0.01
+morale_damage_received = -0.025
+morale_damage = 0.025
+
+}
+
+aba_ZNN_embrace_india = {
+    manpower_in_accepted_culture_provinces = 0.10
+    num_accepted_cultures = 2
+    tolerance_of_heathens_capacity = 2
+    tolerance_of_heretics_capacity = 2
+    tolerance_heretic = 1
+    tolerance_heathen = 1
+    religious_unity = 0.35
+}
+
+aba_zun_tattagird = {
+allowed_num_of_buildings = 1
+allowed_num_of_manufactories = 1
+local_development_cost = -0.25
+local_governing_cost = -0.10
+}
+
+aba_zun_gunpowder = {
+    infantry_fire = 0.25
+    fire_damage = 0.10
+    infantry_cost = -0.10
+    allowed_rajput_fraction = 0.25
+}
+
+aba_zun_malacca = {
+	merchants = 1
+    global_trade_power = 0.1
+}
+
+aba_zun_afghan_indian_reject = {
+	culture_conversion_cost = -0.25
+    culture_conversion_time = -0.1
+    global_missionary_strength = 0.02
+    missionaries = 1
+    tolerance_heathen = -1
+    tolerance_heretic = -1
+    land_attrition = -0.10
+    manpower_recovery_speed = 0.10
+}
 
