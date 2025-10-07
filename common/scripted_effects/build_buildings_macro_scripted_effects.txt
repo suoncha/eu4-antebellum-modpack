@@ -42,18 +42,6 @@ build_buildings_macro_effect = {
 				$can_afford_to_build_trigger$ = yes
 				any_owned_province = {
 					can_build = $building$
-					[[manufactory]
-					is_enabled_trade_good_manufactories_build_building_macro = yes
-					]
-					[[impressment_office]
-					is_enabled_trade_good_impressment_offices_build_building_macro = yes
-					]
-					[[state_house]
-					is_enabled_trade_good_state_house_build_building_macro = yes
-					]
-					[[soldiers_households]
-					is_enabled_trade_good_soldiers_households_build_building_macro = yes
-					]
 				}
 				if = {
 					limit = {
@@ -1072,6 +1060,7 @@ build_manufactories_highest_production = {
 	every_owned_province = {
 		limit = {
 			can_build_manufactory = yes
+			is_enabled_trade_good_manufactories_build_building_macro = yes
 		}
 		export_to_variable = {
 			which = local_trade_goods_size
