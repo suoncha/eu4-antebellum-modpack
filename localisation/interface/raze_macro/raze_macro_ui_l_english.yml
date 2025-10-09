@@ -1,4 +1,0 @@
-﻿l_english:
- raze_button_tooltip: "Enable/Disable Razing for this Province: §Yshift+w§!\nRaze All Applicable Provinces: §YALT+shift+r§!"
- is_razing_blocked_tooltip: "Razing is enabled for this province."
- loot_province_effect_tooltip: "§Y[This.GetName]§! will be looted by us."

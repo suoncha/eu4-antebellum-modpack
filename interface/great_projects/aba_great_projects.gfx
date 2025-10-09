@@ -1,7 +1,0 @@
-
- spriteTypes = { 
-    spriteType = {
-        name = "GFX_great_project_ABA_ZUN_sahar_bahar"    
-        texturefile  = "gfx//interface//great_projects//great_project_ABA_ZUN_sahar_bahar.dds"
-    }
-}

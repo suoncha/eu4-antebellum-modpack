@@ -1,8 +1,0 @@
-﻿l_english:
- wallachian_civil_war: "The War of the Ten Houses"
- wallachian_civil_war_desc: "Todo"
- wallachian_civil_war_voivode_was_captured_in_capital: "The §Y[Root.Monarch.GetTitle]§! was captured in §Y[Root.Capital.GetCapitalName]§!"
- wallachian_civil_war_voivode_surrendered: "The §Y[Root.Monarch.GetTitle]§! has surrendered to the §YBoiermiea§!."
- wallachian_civil_war_refused_ultimatum_trigger_tooltip: "Refused the ultimatum of the §YBoiermiea§!"
- wallchian_civil_war_slaughtered_guests_trigger_tooltip: "Butchered the ten heads of the §YBoiermiea§! at §YThe Banquet of Blood§!"
- wallachian_civil_war_defeated_the_10_houses_tooltip: "We have defeated the §YTen Houses§! or we have purchased their loyalty. Currently, we have defeated §Y[This.war_of_ten_houses_num_defeated.GetValue]§! out of §Y10§!."

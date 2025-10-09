@@ -1,7 +1,0 @@
-is_imperial_retribution_war_ongoing = {
-	has_global_flag = imperial_retibution_war_ongoing
-}
-
-has_neither_side_won_in_imperial_retribution_war = {
-	has_global_flag = imperial_retribution_status_quo
-}

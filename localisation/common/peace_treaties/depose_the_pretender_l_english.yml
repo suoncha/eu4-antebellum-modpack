@@ -1,5 +1,0 @@
-﻿l_english:
- po_depose_pretender: "Depose Pretender"
- po_depose_pretender_desc: "By enforcing this peace, we will force the ruler of §Y[From.GetName]§! to renounce their claim to the title of §YHoly Roman Emperor§!, triggering an immediate new election in which they will be ineligible."
- CB_ALLOWED_po_depose_pretender: "Demand §YImperial Abdication§!"
- PEACE_po_depose_pretender: "Force Imperial Abdication"
