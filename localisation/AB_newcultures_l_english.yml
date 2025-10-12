@@ -32,6 +32,7 @@
  finnish_new_culture: "Finnish"
  aibofolke_culture: "Aibofolke"
  abf_varangians_culture: "Varangian"
+ aba_norman_nordic_culture: "Norman"
 #Russian
  aba_chernomoriya_cossack_culture: "Chernomoriya"
  aba_don_cossack_culture: "Dontsi"
@@ -43,6 +44,9 @@
  aba_malorussian_cossack_culture: "Malorossian"
 #British
  abf_albion_culture: "Alban"
+#Bulgarian:
+aba_bul_rostislavtsi: "Rostislavtsi"
+aba_bul_vlach: "Vlach"
 
  #government_reforms
  aba_GLH_golden_tsardom: "The Golden Tsardom"
@@ -70,13 +74,15 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  JAP_SJ_unrest_tooltip: "Our Japanese provinces won't take §Rkindly§! to this..."
  JAP_SJ_decline_tooltip: "§RWe will reject Chinese influence, much to the Ire of our Chinese subjects...§!"
  JAP_convert_culture: "§YSinification of Japan§!"
-#Russia/Steppe
+#Russia/Steppe/Slavs
  abf_ukr_cossack_culture_spread_tt: "\n§YRuthenian Cossack§! cultures will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Steppe!\n"
  abf_nov_pomor_culture_spread_tt: "\n§YPomorian§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the North!\n"
  aba_kharbinskiye_cossack_culture_tt: "\n§YKharbinskiye§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Manchuria!\n"
  aba_nagaybak_culture_spread_tt: "\n§YNagaybak§! culture will §Gnaturally spread§! throughout our §YOrthodox Kazakh§! and §YKyrgzy§! provinces!\n"
  aba_malorussian_cossack_culture_tt: "\n§YMalorossian§! culture will §Gnaturally spread§! throughout our §YOrthodox§! in the Baltics!\n"
  aba_htm_stables_tt: "We will now be able to use the §GGreat Stables of Szeged§! monument!"
+ ABA_LTV_CULTURE_SPREAD_tt: "\n§YLitvin§! culture will §Gnaturally spread§! throughout our §YOrthodox§! provinces in the Baltics!\n"
+ ABA_BUL_cossacks_tt: "\n 10 §YCossack§! regiments will spawn in our capital!\n"
 #Germans
  GER_wolgadeutsche_tooltip: "\nT§YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
  GER_donauschwaben_tooltip: "\n§YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
@@ -95,6 +101,7 @@ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fus
  aba_SWE_carolean_paladins_tooltip: "\nWe will gain the ability to recruit §GCarolean Paladins§!\n"
  aba_swe_swe_aibofolke_culture_spread_tt: "\n§YAibofolke§! culture will §Gnaturally spread§! throughout our directly owned §YChristian§! provinces in the Baltic!\n"
  abf_varangians_culture_spread_tt: "\n§YVarangian§! culture will §Gnaturally spread§! throughout our directly owned §YNorse§! provinces in the East!\n"
+ ABA_NOR_norman_nordic_tt: "\n§YNorman§! culture will be moved to the §GNordic§! Culture Group!\n"
  #France/West Europe
  aba_breton_gallic_culture_spread_tt: "\n§YGallic§! culture will §Gnaturally spread§! throughout our §YFrench§! provinces!\n"
 #British
@@ -117,6 +124,12 @@ ABA_ZUN_UNLOCKED_PATH: "\nThis mission can be unlocked by completeing the §JBey
 ABA_zun_shift_west_tt: "\nWe will turn our attention §JWestward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
 ABA_zun_shift_east_tt: "\nWe will turn our attention §JEastward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
 ABA_ZUN_sahar_bahar_tt: "\nWe will be able to §Yrestore§! §GSah-Bahar - The Temple of the Kings§! in §YGhanzi§!!\n"
+#Bulgaria
+ABA_BUL_slavic_tt: "\nA New §JRome§! Rises!\n"
+ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
+aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
 
 #Events
 #Japan
@@ -175,6 +188,15 @@ aba_zun_event.2.a: "The §YSynthesis§! of §JAfghan Culture§! and §OIndian§!
 aba_zun_event.2.b: "We shall enforce the §RZunist§! faith and §RAfghan§! culture on the world!"
 aba_zun_event.3.t: "Global Purification"
 aba_zun_event.3.d: "Our faith has guided us to victory, and now it is time to spread its light to the rest of the world. We will embark on a massive campaign to crush the false gods that many of these heretics and heathens pray to. We've already destroyed their holy sites, but this is simply not enough to show them the falsity of their ways. We will send missionaries to every corner of the globe, preaching the truth of Zun and converting those who are willing to listen. For those who refuse, we will show them the true power of our faith through force if necessary..."
+##### Bulgaria
+aba_bul_event.1.t: "Proclamation of the Third Bulgarian Empire"
+aba_bul_event.1.d: "With the fall of the perfidious Byzantine Empire, and our subsequent domination of the Balkans, we have come to see ourselves as the true heirs of something new. Not the inheritors of Rome or even a continuation of the Second Bulgarian Empire, but something entirely new. We are the Third Bulgarian Empire, a fusion of the old and new, a beacon of hope and strength in a world that is constantly changing. We will embrace our Slavic heritage, while also incorporating the best aspects of the cultures we have conquered. May a new age dawn of the Slavic World under our watchful eye, a new Rome in the East!"
+aba_bul_event.1.a: "The §YThird Bulgarian Empire§! is born!"
+aba_bul_event.2.t: "The Question of the Volga Bulgarians"
+aba_bul_event.2.d: "The Volga Bulgarians are our long lost wayward brothers. OVertime they have continued to embrace Turkic influences and even the Muslim faith, but they are still Bulgarians at heart. Some in our court suggest that we should bring them back into the fold, reuniting the Bulgarian people under one banner. This would be a bold move, but it would also be a risky one. The Volga Bulgarians are a proud people, and they may not take kindly to being ruled by us. We must weigh the pros and cons carefully before making a decision."
+aba_bul_event.2.a: "Let them be! They are too far gone!"
+aba_bul_event.2.b: "Drive them out! They are not true Bulgarians!"
+
 
 #Decisions
 #Gallia
@@ -235,4 +257,19 @@ aba_zun_tattagird: "Port of Tattagird"
 aba_zun_gunpowder: "Gunpowder Empire"
 aba_zun_malacca: "Viceroy of Malacca"
 aba_zun_afghan_indian_reject: "Pashtun Dominance"
+
+########## Bulgaria
+aba_bul_new_rome: "A New Rome"
+aba_bul_pontic: "Pontic Trade Port"
+aba_bul_fortified: "Safeguarding the Tsarigrad"
+aba_bulgarian_siberia: "Siberian Expedition"
+aba_bulgaria_cossacks: "Buh Cossacks"
+aba_bulgaria_kyiv: "Mother of Cities"
+aba_bul_phanagoria: "Revival of Phanagoria"
+aba_bul_cuman_knights: "Cuman Knights"
+aba_bulgaria_arsenal: "Bulgarian Royal Arsenal"
+aba_bul_mines: "Expanded Mines"
+aba_bul_three_cities: "Bulgarian Great City"
+aba_bulgaria_settle: "Population Exchange"
+aba_bul_kazan_accepted: "Volga Bulgarian Peace"
 

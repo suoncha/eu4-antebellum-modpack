@@ -1,0 +1,56 @@
+namespace = aba_bul_event
+
+#Third Bulgarian Empire
+country_event = {
+	id = aba_bul_event.1
+	title = aba_bul_event.1.t
+	desc = aba_bul_event.1.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aba_bul_event.1.a
+		custom_tooltip = ABA_BUL_slavic_tt
+	}
+
+}
+
+#Volga Bulgars
+country_event = {
+	id = aba_bul_event.2
+	title = aba_bul_event.2.t
+	desc = aba_bul_event.2.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aba_bul_event.2.a
+		every_province = {
+			limit = { 
+				owned_by = ROOT
+				culture = kazani 
+			}
+		 add_province_modifier = {
+					name = aba_bul_kazan_accepted
+					duration = -1
+			}
+		 }
+	}
+
+
+	option = {
+		name = aba_bul_event.2.b
+		every_province = {
+			limit = {
+				 owned_by = ROOT
+				 culture = kazani
+			}
+			change_culture = bulgarian
+			change_religion = orthodox
+			add_unrest = 5
+		}
+	}
+
+}
