@@ -344,6 +344,57 @@ south_slavic = {
 			"Knesovich" "Soymirovic" "Tsablak"
 		}
 	}
+	#ABA new Culture
+	aba_bul_rostislavtsi = {
+		male_names = {
+			Ivan Asen Koloman Petar Todor Michael Aleksandar Kalojan Georgi Konstantin Stepan Stracimir 
+			Simeon Andon Andrei Angel Atanas Bogdan Bogomil Branimir Damyan Dimitar Emil Gavril Hristo Iordan 
+			Krasimir Lazar Marko Mikhail Miroslav Nikola Pavel Radomir Samuil Vasil Volodymyr Zhivko
+			Aleksii Balin Bernardin Bernard Bertalan Bogoris Boril Bozidar Theodat Braslav Dan Dionisii 
+			Dionysus Dominik Dominic Dragoman Dragshan Drzislav Evtimii Frujin German Grgur Hranimir
+			Ioakim Ivan John Jerolim Kalojan Kocelj Kozma Kresimir Kulin Ljubomir Ljutomisl Marko 
+			Mihail Michael Mikica Miroslav Miroslav Momchil Nikola Nicholas Ognen Petar Peter 
+			Prijezda Radislav Radu Sava Sermon Slavac Soimir Stracimir Svetislav Tomislav Trpimir 
+			Basil Viseslav Vladislav Vladislav Vojnomir Zdeslav Marcus Vasilii Boris Kliment
+		}
+		female_names = {
+			Aleksandra Aleksandrina Bilyana Bisera Bogdana Bogna Borislava Boyana Dana Desislava Donka 
+			Elisaveta Emiliya Evdokiya Filipa Gergana
+			Hristina Iskra Iva Ivana Ivanka Ivet Lala Lidiya Lilyana Lyudmila Maya Nadejda Nevena 
+			Penka Rada Radka Raina Raya Rayna Rosa Nikolina
+			Rositsa Silviya Snezhana Stoyanka Tereza Teresa Todorka Tsveta Tsvetanka Vasilka 
+			Yolanda Yana Yoanan Yordanka Zhivka Violeta Bogomilia Sofija Krasimira Tatyana
+		}
+		dynasty_names = {
+			"Krum" "Dulo" "Cometopuli" "Asen" "Terter" "Shishman" "Teleki" "Pejacevic" "Smilets" "Sratsimir"
+			"Knesovich" "Soymirovic" "Tsablak"
+		}
+	}
+	aba_bul_vlach = {
+		male_names = {
+			Ivan Asen Koloman Petar Todor Michael Aleksandar Kalojan Georgi Konstantin Stepan Stracimir 
+			Simeon Andon Andrei Angel Atanas Bogdan Bogomil Branimir Damyan Dimitar Emil Gavril Hristo Iordan 
+			Krasimir Lazar Marko Mikhail Miroslav Nikola Pavel Radomir Samuil Vasil Volodymyr Zhivko
+			Aleksii Balin Bernardin Bernard Bertalan Bogoris Boril Bozidar Theodat Braslav Dan Dionisii 
+			Dionysus Dominik Dominic Dragoman Dragshan Drzislav Evtimii Frujin German Grgur Hranimir
+			Ioakim Ivan John Jerolim Kalojan Kocelj Kozma Kresimir Kulin Ljubomir Ljutomisl Marko 
+			Mihail Michael Mikica Miroslav Miroslav Momchil Nikola Nicholas Ognen Petar Peter 
+			Prijezda Radislav Radu Sava Sermon Slavac Soimir Stracimir Svetislav Tomislav Trpimir 
+			Basil Viseslav Vladislav Vladislav Vojnomir Zdeslav Marcus Vasilii Boris Kliment
+		}
+		female_names = {
+			Aleksandra Aleksandrina Bilyana Bisera Bogdana Bogna Borislava Boyana Dana Desislava Donka 
+			Elisaveta Emiliya Evdokiya Filipa Gergana
+			Hristina Iskra Iva Ivana Ivanka Ivet Lala Lidiya Lilyana Lyudmila Maya Nadejda Nevena 
+			Penka Rada Radka Raina Raya Rayna Rosa Nikolina
+			Rositsa Silviya Snezhana Stoyanka Tereza Teresa Todorka Tsveta Tsvetanka Vasilka 
+			Yolanda Yana Yoanan Yordanka Zhivka Violeta Bogomilia Sofija Krasimira Tatyana
+		}
+		dynasty_names = {
+			"Krum" "Dulo" "Cometopuli" "Asen" "Terter" "Shishman" "Teleki" "Pejacevic" "Smilets" "Sratsimir"
+			"Knesovich" "Soymirovic" "Tsablak"
+		}
+	}
 	jadranian_culture = {
 		primary = CRO
 		male_names = {
