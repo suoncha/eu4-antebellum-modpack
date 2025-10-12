@@ -95,7 +95,7 @@ country_event = {
 	hidden = yes
 
 	option = {
-		name = aba_zun_event.3.a
+		name = aba_zun_event.4.a
 		clr_country_flag = ABA_zun_india_path
 		set_country_flag = ABA_zun_persia_path
 		swap_non_generic_missions = yes
@@ -174,9 +174,9 @@ country_event = {
 
 #Switch Focus Eastward 
 country_event = {
-	id = aba_zun_event.4
-	title = aba_zun_event.4.t
-	desc = aba_zun_event.4.d
+	id = aba_zun_event.5
+	title = aba_zun_event.5.t
+	desc = aba_zun_event.5.d
 	picture = AB_ECLIPSE_eventPicture
 	
 	is_triggered_only = yes
@@ -184,7 +184,7 @@ country_event = {
 	hidden = yes
 
 	option = {
-		name = aba_zun_event.3.a
+		name = aba_zun_event.5.a
 		clr_country_flag = ABA_zun_persia_path
 		set_country_flag = ABA_zun_india_path
 		swap_non_generic_missions = yes

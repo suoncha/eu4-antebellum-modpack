@@ -1281,6 +1281,49 @@ province_event = {
 	}
 }
 
+#Donauschwaben (German cultures Spread 
+province_event = {
+	id = ab_new_cultures.31
+	title = ab_new_cultures.31.t
+	desc = ab_new_cultures.31.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		OR = {
+			religion = orthodox
+		}
+		owner = {
+			has_country_flag = aba_bul_rostislavtsi_spread
+		}
+		NOT = {
+			OR = {
+				culture_group = south_slavic
+				culture_group = west_slavic 
+			}
+		}
+		OR = {
+			area = transdanubia_area
+			area = centralhungary_area
+			area = alfold_area
+			area = southern_transylvania_area
+			area = transylvania_area
+			
+	  }
+	}
+
+	option = {
+		name = ab_new_cultures.31.a
+         change_culture = aba_bul_rostislavtsi
+	}
+
+}
+
 
 
 

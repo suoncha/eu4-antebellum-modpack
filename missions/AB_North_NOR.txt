@@ -411,6 +411,15 @@ nor_2_group = {
 		
 		effect = {
 			add_dip_power = 75
+			custom_tooltip = ABA_NOR_norman_nordic_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = normand
+					}
+					change_culture = aba_norman_nordic_culture
+				}
+			}
 			183 = {
 				if = {
 					limit = {
