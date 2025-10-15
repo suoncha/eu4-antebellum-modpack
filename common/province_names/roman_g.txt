@@ -2399,7 +2399,7 @@
 2985 = "Fovea" # 2985 -> Capitanata
 2986 = "Caralis" # 2986 -> Cagliari
 2987 = "Urgellum" # 2987 -> Urgell
-2988 = "Tarracinae" # 2988 -> Tarragona
+2988 = "Tarraco" # 2988 -> Tarragona
 2989 = "Rioiia" # 2989 -> Rioja
 2990 = "Terulium" # 2990 -> Teruel
 2991 = "Varus" # 2991 -> Forcalquier

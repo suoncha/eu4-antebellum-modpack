@@ -127,7 +127,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = orthodox
+					uses_patriarch_authority = yes
 				}
 				patriarch_authority = 1
 			}
@@ -169,7 +169,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = orthodox
+					uses_patriarch_authority = yes
 				}
 				add_patriarch_authority = -1
 			}
@@ -389,6 +389,69 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+	hold_sol_festival = {
+		potential = {
+			religion = sol_invictus
+			NOT = { has_country_modifier = rom_sol_festival_timer }
+		}
+		allow = {
+			religion = sol_invictus
+			if = {
+				limit = {
+					has_country_flag = sol_buff_festival
+				}
+				patriarch_authority = 0.25
+			}
+			else = {
+				patriarch_authority = 0.5
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = sol_buff_festival
+				}
+				add_patriarch_authority = -0.25
+			}
+			else = {
+				add_patriarch_authority = -0.5
+			}
+			country_event = {
+				id = ab_sol_invictus.0
+			}
+			hidden_effect = {
+				add_country_modifier = {
+					name = rom_sol_festival_timer
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	grant_sol_power = {
+		potential = {
+			ai = no
+			religion = sol_invictus
+			NOT = { has_country_flag = rom_sol_blessing_on }
+		}
+		allow = {
+			religion = sol_invictus
+			patriarch_authority = 0.1
+		}
+		effect = {
+			country_event = {
+				id = ab_sol_invictus.2
+			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

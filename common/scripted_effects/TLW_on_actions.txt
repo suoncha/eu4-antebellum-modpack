@@ -87,6 +87,16 @@ TLW_on_adm_development_effect = {
 	# Rome
 	if = {
 		limit = {
+			owner = {
+				has_country_modifier = rom_sol_festival_legacy
+			}
+		}
+		owner = {
+			add_patriarch_authority = 0.01
+		}
+	}
+	if = {
+		limit = {
 			province_is_diocese_land_trigger = yes
 		}
 		if = {
@@ -178,6 +188,16 @@ TLW_on_adm_development_effect = {
 
 TLW_on_dip_development_effect = {
 	# Rome
+	if = {
+		limit = {
+			owner = {
+				has_country_modifier = rom_sol_festival_trade
+			}
+		}
+		owner = {
+			add_patriarch_authority = 0.01
+		}
+	}
 	if = {
 		limit = {
 			OR = {
@@ -345,6 +365,16 @@ TLW_on_mil_development_effect = {
 	# Rome
 	if = {
 		limit = {
+			owner = {
+				has_country_modifier = rom_sol_festival_might
+			}
+		}
+		owner = {
+			add_patriarch_authority = 0.01
+		}
+	}
+	if = {
+		limit = {
 			province_is_diocese_land_trigger = yes
 		}
 		if = {
@@ -500,6 +530,29 @@ TLW_on_death_election_effect = {
 
 TLW_on_siege_won_province_effect = {
 	# Rome
+	if = {
+		limit = {
+			controller = {
+				has_ruler_modifier = rom_sol_aurelian
+			}
+		}
+		random_list = {
+			20 = {
+				add_core = controller
+			}
+			80 = { }
+		}
+	}
+	if = {
+		limit = {
+			controller = {
+				has_country_flag = rom_sol_holy_site_lyon
+			}
+		}
+		controller = {
+			add_patriarch_authority = 0.001
+		}
+	}
 	if = {
 		limit = {
 			controller = {
@@ -979,6 +1032,18 @@ TLW_on_war_won_effect = {
 	# Rome
 	if = {
 		limit = {
+			has_country_modifier = rom_sol_eclipse_fight
+		}
+		remove_country_modifier = rom_sol_eclipse_fight
+	}
+	if = {
+		limit = {
+			has_country_flag = rom_sol_holy_site_const
+		}
+		add_patriarch_authority = 0.05
+	}
+	if = {
+		limit = {
 			has_disaster = byzantium_fall_angelid
 		}
 		if = {
@@ -1148,6 +1213,271 @@ TLW_on_province_owner_change_effect = {
 	# Culture Conversion
 	TLW_culture_conversion_calc_effect = yes
 	# Rome
+	if = {
+		limit = {
+			religion = sol_invictus
+		}
+		if = {
+			limit = {
+				province_id = 118
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.13
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.13
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 151
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.14
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.14
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 358
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.15
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.15
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 2313
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.16
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.16
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 379
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.17
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.17
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 341
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.18
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.18
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 80
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.19
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.19
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 2988
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.20
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.20
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 236
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.21
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.21
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 203
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.22
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.22
+						}
+					}
+				}
+			}
+		}
+	}
 	if = {
 		limit = {
 			owner = {
@@ -1576,6 +1906,334 @@ TLW_on_province_culture_changed = {
 }
 
 TLW_on_province_religion_changed = {
+	# Rome
+	if = {
+		limit = {
+			religion = sol_invictus
+		}
+		# Holy Site Rewards
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = rom_sol_holy_site_rome
+				}
+			}
+			owner = {
+				add_patriarch_authority = 0.01
+			}
+		}
+		if = {
+			limit = {
+				NOT = { culture_group = roman_g }
+				owner = {
+					has_country_flag = rom_sol_holy_site_alex
+					culture_group = roman_g
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = culture_conversion_var
+						value = 75
+					}
+				}
+				province_event = {
+					id = tlw_rome.0
+				}
+			}
+			else = {
+				change_variable = {
+					which = culture_conversion_var
+					value = 25
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = rom_sol_holy_site_tunis
+				}
+			}
+			add_base_tax = 1
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = rom_sol_holy_site_london
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = rom_sol_holy_site_trier
+				}
+			}
+			add_base_manpower = 1
+		}
+		# Holy Site Events
+		if = {
+			limit = {
+				province_id = 118
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.13
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.13
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 151
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.14
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.14
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 358
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.15
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.15
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 2313
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.16
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.16
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 379
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.17
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.17
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 341
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.18
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.18
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 80
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.19
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.19
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 2988
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.20
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.20
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 236
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.21
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.21
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				province_id = 203
+			}
+			if = {
+				limit = {
+					owner = {
+						is_subject = no
+					}
+				}
+				owner = {
+					country_event = {
+						id = ab_sol_invictus.22
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						country_event = {
+							id = ab_sol_invictus.22
+						}
+					}
+				}
+			}
+		}
+	}
 	# Nicaea
 	if = {
 		limit = {

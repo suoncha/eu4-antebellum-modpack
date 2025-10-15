@@ -1,4 +1,158 @@
 ﻿l_english:
+### SOL INVICTUS ###
+# Mercenaries #
+ ab_merc_brotherhood_sun: "Brotherhood of the Sun"
+
+# Decisions #
+ hold_sol_festival_title: "Hold the Festival of the Unconquered Sun"
+ hold_sol_festival_desc: "As a fellow subject of Sol Invictus, we can hold the Festival of the Unconquered Sun to honor Sol and the Holy Cross."
+ grant_sol_power_title: "Grant the Blessing of Sol"
+ grant_sol_power_desc: "As a fellow subject of Sol Invictus, we can earn the Blessing of Sol in exchange for religious authority."
+
+# Events #
+ ab_sol_invictus.0.t: "Festival of the Unconquered Sun"
+ ab_sol_invictus.0.d: "As dawn breaks over our capital, the faithful gather under golden banners to celebrate the Festival of the Unconquered Sun, where flames dance in honor of Sol and Christ alike. Priests in robes of white and crimson chant hymns from the Ancient Empire times, their voices rising above the altars of [Root.Capital.GetName]. Merchants offer silks and spices, their stalls aglow with the promise of prosperity, while warriors swear oaths to carry the sun's light to Roman lost lands. In this moment, our realm shines as a beacon of the new Rome, its glory unbound by the shadows of the past."
+ ab_sol_invictus.0.a: "Legacy of Rome shall endures"
+ ab_sol_invictus.0.b: "This is a great opportunity for commerce"
+ ab_sol_invictus.0.c: "Let Sol Shine Eternal!"
+ SOL_DEV_ADM_BONUS: "While this modifier is active, developing £adm£ grants §G1§! Patriarch Authority."
+ SOL_DEV_DIP_BONUS: "While this modifier is active, developing £dip£ grants §G1§! Patriarch Authority."
+ SOL_DEV_MIL_BONUS: "While this modifier is active, developing £mil£ grants §G1§! Patriarch Authority."
+
+ ab_sol_invictus.1.t: "The Solar Codex"
+ ab_sol_invictus.1.d: "In the hallowed libraries of Roman ancient ruins, our scholars unearth a trove of scrolls - the Solar Codex, blending Zunist hymns with Christian psalms. Penned in the shadow of Rome's decline, these texts proclaim Sol Invictus as the divine bridge between empires past and future. Our nobles, inspired by visions of the Great Trajan and Aurelian, urge us to enshrine this codex as the cornerstone of our faith, rallying our people to the cause of imperial restoration. Yet, whispers of dissent echo from traditionalist priests, fearing its pagan roots may fracture our Christian unity."
+ ab_sol_invictus.1.a: "What are we waiting for? Enshrine the Codex now!"
+ ab_sol_invictus.1.b: "We must not go against the priests"
+
+ ab_sol_invictus.2.t: "Blessing of Sol"
+ ab_sol_invictus.2.d: "Priests of Sol Invictus, clad in robes of gold and crimson, proclaim a divine blessing from the Unconquered Sun, its light promised to guide our path to Rome's eternal glory. These rites stir unrest among traditional priests, warning that such blessings may fracture our Christian unity. Shall we embrace the Sun's gifts, choosing the domains of administration, diplomacy, or war?"
+ ab_sol_invictus.2.a1: "Seek from Sol the Wisdom for Governance"
+ ab_sol_invictus.2.a2: "Revoke the Wisdom for Governance"
+ ab_sol_invictus.2.b1: "Seek from Sol the Eloquence for Diplomacy"
+ ab_sol_invictus.2.b2: "Revoke the Eloquence for Diplomacy"
+ ab_sol_invictus.2.c1: "Seek from Sol the Valor for War"
+ ab_sol_invictus.2.c2: "Revoke the Valor for War"
+ ab_sol_invictus.2.e: "We are content with the current situation"
+
+ ab_sol_invictus.4.t: "The Sun's Eclipse"
+ ab_sol_invictus.4.d: "A shadow falls across the land as an eclipse darkens the sun, sending tremors through the faithful of Sol Invictus. In the streets of [Root.Capital.GetName], crowds gather, some hailing it as a divine test, others as a warning against our hybrid faith. Catholic Priests seize the moment, preaching that our worship of the Unconquered Sun strays from Christ's path, urging a return to orthodoxy. Yet our Solar Hierarchs, clad in radiant vestments, proclaim the eclipse a call to prove our resolve, to march forth and restore Roman glory under Sol' eternal light. As fear and fervor clash, our realm's stability hangs in the balance, the eyes of Hispania and Trinacria fixed upon the heavens."
+ ab_sol_invictus.4.a: "Defy the shadow!"
+ ab_sol_invictus.4.b: "We are doomed..."
+ SOL_FIGHT_ECLIPSE: "This modifier can be removed once we won a war."
+
+ ab_sol_invictus.5.t: "Aurelian's Vision"
+ ab_sol_invictus.5.d: "In the quiet chambers of our capital, a visionary priest claims to have received a divine revelation from Emperor Aurelian himself, the founder of Sol Invictus in ancient Rome. Appearing in a dream wreathed in solar flames, Aurelian urges us to honor the cult's military roots, blessing our legions with the  might of Sol. As word spreads through the barracks, our warriors feel a surge of imperial zeal, their shields emblazoned with the sun-cross. In this hour, as we march toward restoring the glory of Rome, Aurelian's legacy calls us to blend sword and faith in unbreakable unity."
+ ab_sol_invictus.5.a: "Honor his call, march the legions!"
+ SOL_AURELIAN_MOD: "While this modifier is active, occupying provinces has a §G20.0%§! chance to grant a core."
+
+ ab_sol_invictus.6.t: "Dies Natalis Solis Invicti"
+ ab_sol_invictus.6.d: "As winter's chill grips the land, our faithful celebrate the Dies Natalis Solis Invicti - the Birth of Sol Invictus - on the 25th of December, a festival echoing ancient Rome's rites instituted by Aurelian in 274 AD. Bonfires blaze in the squares of Oviedo, Pamplona, and Messina, where sun-priests and Christian bishops alike lead processions, merging solar hymns with nativity chants. This sacred day, once a cornerstone of Roman unity, now inspires our people to reflect on the sun's triumph over darkness, mirroring Christ's victory over sin. Citizens thrive amid the festivities, but conservative voices decry the blending of pagan dates with holy observances, fearing divine displeasure. In the glow of the flames, we find the nation's path illuminated toward the restoration of Rome's glory."
+ ab_sol_invictus.6.a: "May Sol shines upon our [Root.Monarch.GetTitle]"
+ ab_sol_invictus.6.b: "May Sol favors the people"
+ ab_sol_invictus.6.c: "May Sol fortunates the armies"
+ ab_sol_invictus.6.e: "May Sol bless us all"
+
+ ab_sol_invictus.7.t: "Halo of Invictus"
+ ab_sol_invictus.7.d: "Artists and iconographers in our courts unveil a new style of sacred imagery: saints and emperors adorned with golden halos, symbols of the divine sun's radiance drawn from Sol Invictus' influence on early Christian art. Inspired by Rome's ancient mosaics, where the sun god's light encircled heroes, these works grace our cathedrals and palaces, proclaiming the Roman heritage of our faith. In the workshops of [Root.Capital.GetName], craftsmen labor to depict Sol Invictus as a bridge between pagan valor and Christian grace, fostering cultural pride among our nobles. With the spread of these radiant icons, they bind our people in a shared vision of glory, their light guiding us to reclaim the Eternal City."
+ ab_sol_invictus.7.a: "God stands with us!"
+ EVERY_SOL_PROVINCE: "Every owned §YSol Invictus§! province will receive:"
+
+ ab_sol_invictus.8.t: "The Solar Synod"
+ ab_sol_invictus.8.d: "Convened in the shadow of Rome's ancient temples, the Solar Synod gathers priests, scholars, and warriors to codify Sol Invictus' doctrines. Drawing from Aurelian's cult, established to unify a fractured Rome, and Zunist texts from the East, they debate blending sun rituals with Christian sacraments, forging a faith resilient against the shadow of Catholicism and Islam alike. Debates rage over military patronage-honoring Sol as protector of soldiers and imperial symbolism, with some advocating aureate crowns for our rulers."
+ ab_sol_invictus.8.a: "We are guided by God to spread his faith"
+
+ ab_sol_invictus.9.t: "Brotherhood of the Sun"
+ ab_sol_invictus.9.d: "From the ranks of our warriors and scholars arises the Brotherhood of the Sun, a sacred order sworn to uphold Sol Invictus' tenets. Modeled after Rome's ancient priesthoods under Aurelian, who rallied the empire with solar devotion, these guardians train in both sword and scripture, their vows forging unbreakable bonds of loyalty. As they march in processions beneath radiant banners, the brotherhood inspires our armies and courts, their presence a shield against doubt and a spear for our imperial dreams, illuminating the path to a reborn Western dominion."
+ ab_sol_invictus.9.a: "Come, let us serve the Unconquered Sun"
+ UNLOCK_SOL_MERCS: "§GUnlocks§! the §YBrotherhood of the Sun§! Mercenary Company."
+
+ ab_sol_invictus.10.t: "The Dawn Procession"
+ ab_sol_invictus.10.d: "As the first rays of dawn pierce the morning mist, our people gather in solemn procession, their voices raised in hymns to Sol Invictus. Priests in golden vestments lead the march, bearing standards adorned with the sun-cross, a symbol born of Christ's eternal light. From city squares to coastal citadels, the faithful proclaim their devotion, their chants echoing the glory of Rome."
+ ab_sol_invictus.10.a: "The dawn shall illuminate our glorious realm"
+
+ ab_sol_invictus.11.t: "Flame of Sol's Altar"
+ ab_sol_invictus.11.d: "At the heart of our capital, a grand altar to Sol blazes with an eternal flame, its light a beacon of divine favor. The altar fuels tales of our destiny, its glow promising prosperity as we forge a new Rome. Maintaining such a sacred flame strains our coffers, as artisans craft gilded relics to honor the sun's vigil."
+ ab_sol_invictus.11.a: "Tend the flame, kindle our destiny"
+ ab_sol_invictus.11.b: "This is too costly for us"
+
+ ab_sol_invictus.12.t: "The Sun's Standard Raised"
+ ab_sol_invictus.12.d: "On the eve of battle, our warriors unveil a magnificent standard of Sol, its golden sunburst gleaming against the sky. Forged in the likeness of Roman aquilae, this banner recalls the legions of Aurelian, who carried the sun's might to victory. As our armies rally beneath it, their spirits soar, envisioning a Western Empire reborn under the unconquered light. This creation, however, demands the finest smiths and resources, a costly testament to our martial pursue."
+ ab_sol_invictus.12.a: "Raise the standard!"
+ ab_sol_invictus.12.b: "A cheap standard will do"
+
+ ab_sol_invictus.13.t: "Eternal City Reborn"
+ ab_sol_invictus.13.d: "Roma, the Eternal City, rises anew under the banners of Sol Invictus, its seven hills aglow with the divine fire. Once the cradle of an empire that bound the world, its forums and temples now echo with sacred light. As priests consecrate the Tiber's banks with the sun-cross, pilgrims flock to its sacred altars, their zeal heralding a reborn dominion. Roma's triumph, the heart of our imperial dream, kindles a flame that will guide our legions to eternal glory."
+ ab_sol_invictus.13.a: "Hail Sol, may God be with us!"
+ SOL_HOLY_SITE_ROME: "Converting a province to your religion grants §G1§! Patriarch Authority."
+
+ ab_sol_invictus.14.t: "The Great Constantinopolis"
+ ab_sol_invictus.14.d: "The Great Constantinopolis, Rome of the East, submits to Sol Invictus, its golden domes and towering walls bathed in the radiant glow. As our priests weave Zunist fire with imperial splendor, the city's harbors and basilicas resound with chants of a new era. This majestic citadel, once the beacon of Roman might, now stands as a pillar of our faith, its converted masses rallying to our divine cause. Constantinopolis's glory shines forth, a blazing testament to our empire's unyielding ascent under the eternal light."
+ ab_sol_invictus.14.a: "Justinian would be proud"
+ SOL_HOLY_SITE_CONST: "Winning wars grants §G5§! Patriarch Authority."
+
+ ab_sol_invictus.15.t: "Hellenic Wisdom"
+ ab_sol_invictus.15.d: "Alexandrea, cradle of Hellenic wisdom, bows to Sol Invictus, its ancient libraries and Nile-kissed shores alight with brilliance. As our priests convert its scholarly halls, they merge Zunist lore with the grandeur of Rome's intellectual legacy, drawing sages to our cause. This city, where Ptolemaic kings and Roman scholars once thrived, now channels its wisdom into our imperial vision, its light a beacon for the rebirth of the Western Empire. Alexandrea's triumph illuminates our path, a star of knowledge guiding Rome's restoration."
+ ab_sol_invictus.15.a: "Enlight us with the wisdom of Sol"
+ SOL_HOLY_SITE_ALEX: "Converting a province to your religion grants §G25.0%§! Romanization Progress."
+
+ ab_sol_invictus.16.t: "Crossroads of Empires"
+ ab_sol_invictus.16.d: "Antiochia, the crossroads of empires, opens its gates to Sol Invictus, its ancient markets and temples ablaze with the eternal flame of Sol. Our priests bearing the sun-cross, convert its storied streets, their rites weaving the solar hymns with divine purpose. This hub, where East met West, now strengthens our dominion in Asia, its faithful swelling our ranks with fervor. The conquest of Antiochia kindles our resolve, a blazing spark in our quest to reclaim Roman boundless glory."
+ ab_sol_invictus.16.a: "We will restore Roman influence in this region"
+ SOL_HOLY_SITE_ANTI: "Building §YTrade§! buildings now grants §G+2§! £dip£ Power."
+
+ ab_sol_invictus.17.t: "City of God"
+ ab_sol_invictus.17.d: "Hierosolyma, the City of God, kneels before Sol Invictus, its sacred walls and holy places bathed in the divine radiance. As priests consecrate its ancient stones with solar rites, they blend Zunist fire with timeless reverence, echoing Rome's triumph under Titus times. This hallowed city, a beacon of faith across empires, now fuels our imperial ambition, its converted pilgrims chanting of a new Rome reborn. The Holy City's sanctity shines forth, guiding our march under the eternal light."
+ ab_sol_invictus.17.a: "Sanctify Hierosolyma as the City of Sol!"
+ SOL_HOLY_SITE_JERU: "Building §YTaxation§! buildings now grants §G+2§! £adm£ Power."
+
+ ab_sol_invictus.18.t: "Conquered Light"
+ ab_sol_invictus.18.d: "Tunes, heir to Carthage's legacy, now falls to Sol Invictus rule. Once Rome's fiercest rival, its conversion transforms this African stronghold into a bastion of our faith, its harbors resounding with the hymns of Christ. Priests raise altars amid Punic ruins, their rites honoring the sun's triumph over ancient foes. The reborn light of Tunes strengthens our empire, a blazing cornerstone in the quest to restore Rome's dominion in Africa."
+ ab_sol_invictus.18.a: "They will be better under Roman rule"
+ SOL_HOLY_SITE_TUNIS: "Converting a province to your religion grants §G+1§! bonus £adm£ development."
+
+ ab_sol_invictus.19.t: "The Fallen Dream"
+ ab_sol_invictus.19.d: "Augusta Treverorum, where Augustus's dream of Germania took root, now shines under Sol Invictus, its Porta Nigra crowned with the sun-cross. As our priests convert its ancient halls, they weave Aurelian's solar rites with the legacy of Rome's northern frontier. This city, once a seat of Constantine's imperial will, rallies our faithful, its devotion fortifying our claim as Rome's true heirs."
+ ab_sol_invictus.19.a: "We will complete the dream of Augustus!"
+ SOL_HOLY_SITE_TRIER: "Converting a province to your religion grants §G+1§! bonus £mil£ development."
+
+ ab_sol_invictus.20.t: "The Solar Crown"
+ ab_sol_invictus.20.d: "Tarraco, capital of Hispania Tarraconensis and jewel of Iberia, submits to Sol Invictus, its amphitheaters and aqueducts return to our rule. As priests consecrate its ancient stones with rites, they honor Aurelian's vision of a unified empire. Tarraco's triumph heralds our empire's ascent, a remarkable step toward our mission to restore the Western Empire."
+ ab_sol_invictus.20.a: "The Sun shall shine upon this peninsula"
+ SOL_HOLY_SITE_TARRA: "Building §YManpower§! buildings now grants §G+2§! £mil£ Power."
+
+ ab_sol_invictus.21.t: "Dawn on Britannia"
+ ab_sol_invictus.21.d: "Londinium, Rome's northern sentinel, dawns anew under Sol Invictus, its misty Thames reflecting the light of Sol. As our priests convert its ancient walls, they tell tales of Britannia's Roman past, honoring Aurelian's unifying flame. This outpost, a testament to Roman far-reaching power, now bolsters our faith, its faithful swelling our ranks with zeal. The dawn of Britannia shines forth, as the Roman supremacy will soon return to these lands."
+ ab_sol_invictus.21.a: "Britannia will become Roman again!"
+ SOL_HOLY_SITE_BRIT: "Converting a province to your religion grants §G+1§! bonus £dip£ development."
+
+ ab_sol_invictus.22.t: "Gallic Glory"
+ ab_sol_invictus.22.d: "Lugdunum, heart of Roman Gallia, submits to Sol Invictus, its forums and amphitheaters alight with the eternal fire. As priests consecrate its storied lands with the sun-cross, they blend the solar legacy with our imperial ambition. This city, once a hub of Gallic administration, now strengthens our faith's resolve in the region. This victory lights our path, a blazing beacon in the quest for Rome's everlasting dominion."
+ ab_sol_invictus.22.a: "Frankish influence in Gaul must be replaced"
+ SOL_HOLY_SITE_GAUL: "Ooccupying provinces grants §G0.1§! Patriarch Authority."
+
+# Modifiers #
+ rom_sol_festival_legacy: "Edict of Imperial Legacy"
+ rom_sol_festival_trade: "Edict of Radiant Trade"
+ rom_sol_festival_might: "Edict of Solar Might"
+ rom_sol_codex_embrace: "Embraced the Solar Codex"
+ rom_sol_codex_reject: "Rejected the Solar Codex"
+ rom_sol_blessing_adm: "Wisdom for Governance"
+ rom_sol_blessing_dip: "Eloquence for Diplomacy"
+ rom_sol_blessing_mil: "Valor for War"
+ rom_sol_eclipse_fight: "The Sun's Eclipse"
+ rom_sol_eclipse_accept: "The Sun's Eclipse"
+ rom_sol_aurelian: "Vision of Aurelian"
+ rom_sol_christmas_adm: "Dies Natalis Solis Invicti"
+ rom_sol_christmas_dip: "Dies Natalis Solis Invicti"
+ rom_sol_christmas_mil: "Dies Natalis Solis Invicti"
+ rom_sol_christmas_all: "Dies Natalis Solis Invicti"
+ rom_sol_halo_country: "Halo of Invictus"
+ rom_sol_halo_prov: "Halo of Invictus"
+ rom_sol_altar_buff: "Flame of Sol's Altar"
+ rom_sol_standard_buff: "Gold Standard of Sol"
+ rom_sol_standard_weak: "Silver Standard of Sol"
+ rom_sol_holy_site: "Sol Invictus Holy Site"
+
 ### VISIGOTHS ###
 # Countries #
  VSG: "Visigoths"

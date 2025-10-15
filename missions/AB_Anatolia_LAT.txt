@@ -667,6 +667,7 @@ latin_second_group = {
 				add_permanent_claim = ROOT
 			}
 			custom_tooltip = AB_EMPTY
+			set_country_flag = general_flag_Rome_flag
 			custom_tooltip = WLS_OCCUPATION
 		}
 	}

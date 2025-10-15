@@ -136,6 +136,16 @@ on_thri_yearly_pulse_4 = {
 		20 = ab_byzantium.2003
 		20 = ab_byzantium.2004
 
+		#Sol Invictus Religion
+		25 = ab_sol_invictus.1
+		25 = ab_sol_invictus.4
+		10 = ab_sol_invictus.5
+		25 = ab_sol_invictus.7
+		25 = ab_sol_invictus.8
+		25 = ab_sol_invictus.10
+		25 = ab_sol_invictus.11
+		25 = ab_sol_invictus.12
+
 		#Canaanite Religion
 		50 = ab_punic.2000
 		50 = ab_punic.2001
