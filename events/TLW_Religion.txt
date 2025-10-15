@@ -1,0 +1,872 @@
+### Sol Invictus ###
+namespace = ab_sol_invictus
+
+# Festival of the Unconquered Sun
+country_event = {
+	id = ab_sol_invictus.0
+	title = ab_sol_invictus.0.t
+	desc = ab_sol_invictus.0.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			remove_country_modifier = rom_sol_festival_timer
+			add_country_modifier = {
+				name = rom_sol_festival_timer
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.0.a
+		add_country_modifier = {
+			name = rom_sol_festival_legacy
+			duration = 3650
+		}
+		custom_tooltip = SOL_DEV_ADM_BONUS
+	}
+
+	option = {
+		name = ab_sol_invictus.0.b
+		add_country_modifier = {
+			name = rom_sol_festival_trade
+			duration = 3650
+		}
+		custom_tooltip = SOL_DEV_DIP_BONUS
+	}
+
+	option = {
+		name = ab_sol_invictus.0.c
+		add_country_modifier = {
+			name = rom_sol_festival_might
+			duration = 3650
+		}
+		custom_tooltip = SOL_DEV_MIL_BONUS
+	}
+}
+
+# The Solar Codex
+country_event = {
+	id = ab_sol_invictus.1
+	title = ab_sol_invictus.1.t
+	desc = ab_sol_invictus.1.d
+	picture = COPTIC_MOUNTAIN_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_modifier = rom_sol_codex_timer }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = rom_sol_codex_timer
+				duration = 18250
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.1.a
+		change_government_reform_progress = 50
+		add_country_modifier = {
+			name = rom_sol_codex_embrace
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.1.b
+		add_patriarch_authority = 0.25
+		add_country_modifier = {
+			name = rom_sol_codex_reject
+			duration = 9125
+		}
+	}
+}
+
+# Blessing of Sol
+country_event = {
+	id = ab_sol_invictus.2
+	title = ab_sol_invictus.2.t
+	desc = ab_sol_invictus.2.d
+	picture = AB_JUSTINIAN_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rom_sol_blessing_on
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = rom_sol_blessing_on
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_modifier = rom_sol_blessing_adm
+							has_country_modifier = rom_sol_blessing_dip
+							has_country_modifier = rom_sol_blessing_mil
+						}
+					}
+				}
+				clr_country_flag = rom_sol_blessing_enabled
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.2.a1
+		trigger = {
+			NOT = { has_country_modifier = rom_sol_blessing_adm }
+		}
+		set_country_flag = rom_sol_blessing_enabled
+		add_country_modifier = {
+			name = rom_sol_blessing_adm
+			duration = -1
+			desc = "for as long as we have Patriarch Authority to spare"
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.2.a2
+		trigger = {
+			has_country_modifier = rom_sol_blessing_adm
+		}
+		remove_country_modifier = rom_sol_blessing_adm
+	}
+
+	option = {
+		name = ab_sol_invictus.2.b1
+		trigger = {
+			NOT = { has_country_modifier = rom_sol_blessing_dip }
+		}
+		set_country_flag = rom_sol_blessing_enabled
+		add_country_modifier = {
+			name = rom_sol_blessing_dip
+			duration = -1
+			desc = "for as long as we have Patriarch Authority to spare"
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.2.b2
+		trigger = {
+			has_country_modifier = rom_sol_blessing_dip
+		}
+		remove_country_modifier = rom_sol_blessing_dip
+	}
+
+	option = {
+		name = ab_sol_invictus.2.c1
+		trigger = {
+			NOT = { has_country_modifier = rom_sol_blessing_mil }
+		}
+		set_country_flag = rom_sol_blessing_enabled
+		add_country_modifier = {
+			name = rom_sol_blessing_mil
+			duration = -1
+			desc = "for as long as we have Patriarch Authority to spare"
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.2.c2
+		trigger = {
+			has_country_modifier = rom_sol_blessing_mil
+		}
+		remove_country_modifier = rom_sol_blessing_mil
+	}
+
+	option = {
+		name = ab_sol_invictus.2.e
+	}
+}
+
+# Blessing of Sol - Removal
+country_event = {
+	id = ab_sol_invictus.3
+	title = ab_sol_invictus.3.t
+	desc = ab_sol_invictus.3.d
+	picture = CULTURE_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		ai = no
+		has_country_flag = rom_sol_blessing_enabled
+		NOT = { patriarch_authority = 0.01 }
+	}
+
+	option = {
+		name = ab_sol_invictus.3.a
+		clr_country_flag = rom_sol_blessing_enabled
+		remove_country_modifier = rom_sol_blessing_adm
+		remove_country_modifier = rom_sol_blessing_dip
+		remove_country_modifier = rom_sol_blessing_mil
+	}
+}
+
+# The Sun's Eclipse
+country_event = {
+	id = ab_sol_invictus.4
+	title = ab_sol_invictus.4.t
+	desc = ab_sol_invictus.4.d
+	picture = AB_ECLIPSE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_modifier = rom_sol_eclipse_timer }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = rom_sol_eclipse_timer
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.4.a
+		add_country_modifier = {
+			name = rom_sol_eclipse_fight
+			duration = 3650
+		}
+		custom_tooltip = SOL_FIGHT_ECLIPSE
+	}
+
+	option = {
+		name = ab_sol_invictus.4.b
+		add_country_modifier = {
+			name = rom_sol_eclipse_accept
+			duration = 3650
+		}
+	}
+}
+
+# Aurelian's Vision
+country_event = {
+	id = ab_sol_invictus.5
+	title = ab_sol_invictus.5.t
+	desc = ab_sol_invictus.5.d
+	picture = AB_ROMAN_TRIUMPH_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_ruler_modifier = rom_sol_aurelian }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ab_sol_invictus.5.a
+		add_ruler_modifier = {
+			name = rom_sol_aurelian
+			duration = -1
+		}
+		custom_tooltip = SOL_AURELIAN_MOD
+	}
+}
+
+# Dies Natalis Solis Invicti
+country_event = {
+	id = ab_sol_invictus.6
+	title = ab_sol_invictus.6.t
+	desc = ab_sol_invictus.6.d
+	picture = PRAYING_eventPicture
+	
+	trigger = {
+		religion = sol_invictus
+		is_month = 11
+		NOT = { has_country_modifier = rom_sol_christmas_timer }
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = rom_sol_christmas_timer
+				duration = 90
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.6.a
+		add_adm_power = -50
+		add_country_modifier = {
+			name = rom_sol_christmas_adm
+			duration = 180
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.6.b
+		add_dip_power = -50
+		add_country_modifier = {
+			name = rom_sol_christmas_dip
+			duration = 180
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.6.c
+		add_mil_power = -50
+		add_country_modifier = {
+			name = rom_sol_christmas_mil
+			duration = 180
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.6.e
+		add_years_of_income = -0.25
+		add_country_modifier = {
+			name = rom_sol_christmas_all
+			duration = 180
+		}
+	}
+}
+
+# Halo of Invictus
+country_event = {
+	id = ab_sol_invictus.7
+	title = ab_sol_invictus.7.t
+	desc = ab_sol_invictus.7.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_modifier = rom_sol_halo_timer }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ab_sol_invictus.7.a
+		add_country_modifier = {
+			name = rom_sol_halo_country
+			duration = 3650
+		}
+		custom_tooltip = EVERY_SOL_PROVINCE
+		tooltip = {
+			add_province_modifier = {
+				name = rom_sol_halo_prov
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = rom_sol_halo_timer
+				duration = 7300
+				hidden = yes
+			}
+			every_owned_province = {
+				limit = {
+					religion = sol_invictus
+				}
+				add_province_modifier = {
+					name = rom_sol_halo_timer
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+# The Solar Synod
+country_event = {
+	id = ab_sol_invictus.8
+	title = ab_sol_invictus.8.t
+	desc = ab_sol_invictus.8.d
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ab_sol_invictus.8.a
+		random_list = {
+			33 = {
+				add_adm_power = 25
+			}
+			33 = {
+				add_prestige = 15
+			}
+			33 = {
+				add_patriarch_authority = 0.1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { religion = sol_invictus }
+			}
+			change_religion = sol_invictus
+		}
+		random_owned_province = {
+			limit = {
+				religion = sol_invictus
+			}
+			add_or_upgrade_tax_building = yes
+		}
+	}
+}
+
+# Brotherhood of the Sun
+country_event = {
+	id = ab_sol_invictus.9
+	title = ab_sol_invictus.9.t
+	desc = ab_sol_invictus.9.d
+	picture = KNIGHTS_eventPicture
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_brotherhood }
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = ab_sol_invictus.9.a
+		set_country_flag = rom_sol_brotherhood
+		custom_tooltip = UNLOCK_SOL_MERCS
+	}
+}
+
+# The Dawn Procession
+country_event = {
+	id = ab_sol_invictus.10
+	title = ab_sol_invictus.10.t
+	desc = ab_sol_invictus.10.d
+	picture = COPTIC_BISHOP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ab_sol_invictus.10.a
+		add_legitimacy_or_mil_power = { amount = 5 }
+		add_patriarch_authority = 0.05
+		random_owned_province = {
+			limit = {
+				religion = sol_invictus
+			}
+			add_base_tax = 1
+		}
+		random_owned_province = {
+			limit = {
+				religion = sol_invictus
+			}
+			add_base_tax = 1
+		}
+	}
+}
+
+# Flame of Sol's Altar
+country_event = {
+	id = ab_sol_invictus.11
+	title = ab_sol_invictus.11.t
+	desc = ab_sol_invictus.11.d
+	picture = BONFIRE_OF_THE_VANITIES_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		capital_scope = {
+			NOT = { has_province_modifier = rom_sol_altar_buff }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ab_sol_invictus.11.a
+		add_years_of_income = -0.15
+		add_patriarch_authority = 0.05
+		capital_scope = {
+			add_province_modifier = {
+				name = rom_sol_altar_buff
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.11.b
+		add_prestige = -10
+	}
+}
+
+# The Sun's Standard Raised
+country_event = {
+	id = ab_sol_invictus.12
+	title = ab_sol_invictus.12.t
+	desc = ab_sol_invictus.12.d
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_modifier = rom_sol_standard_timer }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = rom_sol_standard_timer
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.12.a
+		add_years_of_income = -0.25
+		add_patriarch_authority = 0.1
+		add_country_modifier = {
+			name = rom_sol_standard_buff
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ab_sol_invictus.12.b
+		add_prestige = -10
+		add_years_of_income = -0.1
+		add_patriarch_authority = 0.05
+		add_country_modifier = {
+			name = rom_sol_standard_weak
+			duration = 3650
+		}
+	}
+}
+
+# Holy Sites - Eternal City Reborn
+country_event = {
+	id = ab_sol_invictus.13
+	title = ab_sol_invictus.13.t
+	desc = ab_sol_invictus.13.d
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_rome }
+	}
+
+	option = {
+		name = ab_sol_invictus.13.a
+		118 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_rome
+		custom_tooltip = SOL_HOLY_SITE_ROME
+	}
+}
+
+# Holy Sites - The Great Constantinopolis
+country_event = {
+	id = ab_sol_invictus.14
+	title = ab_sol_invictus.14.t
+	desc = ab_sol_invictus.14.d
+	picture = BYZ_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_const }
+	}
+
+	option = {
+		name = ab_sol_invictus.14.a
+		151 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_const
+		custom_tooltip = SOL_HOLY_SITE_CONST
+	}
+}
+
+# Holy Sites - Hellenic Wisdom
+country_event = {
+	id = ab_sol_invictus.15
+	title = ab_sol_invictus.15.t
+	desc = ab_sol_invictus.15.d
+	picture = muslimgfx_RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_alex }
+	}
+
+	option = {
+		name = ab_sol_invictus.15.a
+		358 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_alex
+		custom_tooltip = SOL_HOLY_SITE_ALEX
+	}
+}
+
+# Holy Sites - Crossroads of Empires
+country_event = {
+	id = ab_sol_invictus.16
+	title = ab_sol_invictus.16.t
+	desc = ab_sol_invictus.16.d
+	picture = muslimgfx_CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_anti }
+	}
+
+	option = {
+		name = ab_sol_invictus.16.a
+		2313 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_anti
+		custom_tooltip = SOL_HOLY_SITE_ANTI
+	}
+}
+
+# Holy Sites - City of God
+country_event = {
+	id = ab_sol_invictus.17
+	title = ab_sol_invictus.17.t
+	desc = ab_sol_invictus.17.d
+	picture = BYZ_JERUSALEM_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_jeru }
+	}
+
+	option = {
+		name = ab_sol_invictus.17.a
+		379 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_jeru
+		custom_tooltip = SOL_HOLY_SITE_JERU
+	}
+}
+
+# Holy Sites - Conquered Light
+country_event = {
+	id = ab_sol_invictus.18
+	title = ab_sol_invictus.18.t
+	desc = ab_sol_invictus.18.d
+	picture = muslimgfx_WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_tunis }
+	}
+
+	option = {
+		name = ab_sol_invictus.18.a
+		341 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_tunis
+		custom_tooltip = SOL_HOLY_SITE_TUNIS
+	}
+}
+
+# Holy Sites - The Fallen Dream
+country_event = {
+	id = ab_sol_invictus.19
+	title = ab_sol_invictus.19.t
+	desc = ab_sol_invictus.19.d
+	picture = ICONS_IN_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_trier }
+	}
+
+	option = {
+		name = ab_sol_invictus.19.a
+		80 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_trier
+		custom_tooltip = SOL_HOLY_SITE_TRIER
+	}
+}
+
+# Holy Sites - The Solar Crown
+country_event = {
+	id = ab_sol_invictus.20
+	title = ab_sol_invictus.20.t
+	desc = ab_sol_invictus.20.d
+	picture = SONS_OF_ARAGON_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_tarra }
+	}
+
+	option = {
+		name = ab_sol_invictus.20.a
+		2988 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_tarra
+		custom_tooltip = SOL_HOLY_SITE_TARRA
+	}
+}
+
+# Holy Sites - Dawn on Britannia
+country_event = {
+	id = ab_sol_invictus.21
+	title = ab_sol_invictus.21.t
+	desc = ab_sol_invictus.21.d
+	picture = AB_HEPTARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_london }
+	}
+
+	option = {
+		name = ab_sol_invictus.21.a
+		236 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_london
+		custom_tooltip = SOL_HOLY_SITE_BRIT
+	}
+}
+
+# Holy Sites - Gallic Glory
+country_event = {
+	id = ab_sol_invictus.22
+	title = ab_sol_invictus.22.t
+	desc = ab_sol_invictus.22.d
+	picture = FORT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = sol_invictus
+		NOT = { has_country_flag = rom_sol_holy_site_lyon }
+	}
+
+	option = {
+		name = ab_sol_invictus.22.a
+		203 = {
+			add_permanent_province_modifier = {
+				name = rom_sol_holy_site
+				duration = -1
+			}
+		}
+		set_country_flag = rom_sol_holy_site_lyon
+		custom_tooltip = SOL_HOLY_SITE_GAUL
+	}
+}

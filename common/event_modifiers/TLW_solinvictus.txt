@@ -5,6 +5,145 @@ rom_foederati_subject_modifier = {
 	naval_forcelimit_modifier = -0.35
 }
 
+rom_sol_festival_timer = {
+}
+
+rom_sol_festival_legacy = {
+	build_cost = -0.1
+	build_time = -0.1
+}
+
+rom_sol_festival_trade = {
+	trade_efficiency = 0.15
+	merchants = 1
+}
+
+rom_sol_festival_might = {
+	land_morale = 0.1
+	naval_morale = 0.1
+}
+
+rom_sol_codex_timer = {
+}
+
+rom_sol_codex_embrace = {
+	technology_cost = -0.05
+	idea_cost = -0.1
+}
+
+rom_sol_codex_reject = {
+	administrative_efficiency = 0.05
+}
+
+rom_sol_blessing_adm = {
+	country_admin_power = 2
+	yearly_patriarch_authority = -0.05
+}
+
+rom_sol_blessing_dip = {
+	country_diplomatic_power = 2
+	yearly_patriarch_authority = -0.05
+}
+
+rom_sol_blessing_mil = {
+	country_military_power = 2
+	yearly_patriarch_authority = -0.05
+}
+
+rom_sol_eclipse_timer = {
+}
+
+rom_sol_eclipse_fight = {
+	stability_cost_modifier = 1
+	legitimacy = -2
+	prestige_decay = 0.02
+	army_tradition_decay = 0.01
+	navy_tradition_decay = 0.01
+}
+
+rom_sol_eclipse_accept = {
+	stability_cost_modifier = 0.5
+	legitimacy = -1
+	prestige_decay = 0.01
+	army_tradition_decay = 0.005
+	navy_tradition_decay = 0.005
+}
+
+rom_sol_aurelian = {
+	core_creation = -0.1
+	war_exhaustion = -0.1
+}
+
+rom_sol_christmas_timer = {
+}
+
+rom_sol_christmas_adm = {
+	global_unrest = -2
+	years_of_nationalism = -5
+}
+
+rom_sol_christmas_dip = {
+	development_cost = -0.05
+	production_efficiency = 0.1
+}
+
+rom_sol_christmas_mil = {
+	discipline = 0.025
+	military_tactics = 0.15
+}
+
+rom_sol_christmas_all = {
+	global_tax_modifier = 0.33
+	build_cost = -0.1
+}
+
+rom_sol_halo_timer = {
+}
+
+rom_sol_halo_country = {
+	advisor_cost = -0.1
+	global_missionary_strength = 0.01
+}
+
+rom_sol_halo_prov = {
+	trade_goods_size_modifier = 0.05
+	local_tax_modifier = 0.15
+	local_development_cost = -0.1
+}
+
+rom_sol_altar_buff = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_manpower_modifier = 0.25
+	global_trade_power = 0.05
+}
+
+rom_sol_standard_timer = {
+}
+
+rom_sol_standard_buff = {
+	infantry_fire = 0.25
+	cavalry_shock = 0.15
+	artillery_fire = 0.25
+}
+
+rom_sol_standard_weak = {
+	infantry_fire = 0.1
+	cavalry_shock = 0.05
+	artillery_fire = 0.1
+}
+
+rom_sol_holy_site = {
+	fort_level = 2
+	local_tax_modifier = 0.5
+	local_manpower_modifier = 0.5
+	allowed_num_of_buildings = 2
+	allowed_num_of_manufactories = 2
+	local_missionary_strength = -1
+	global_heretic_missionary_strength = 0.003
+	global_heathen_missionary_strength = 0.002
+}
+
 # Visigoths #
 rome_formedbyvisigoths = {
 	has_tercio = yes
