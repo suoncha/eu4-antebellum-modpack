@@ -429,6 +429,7 @@
  opinion_triumvir: "Triumvir"
  opinion_triumvir_for_tooltips: "Triumvir"
  rom_foederati_subject_modifier: "Is Foederati"
+ rom_center_of_empire: "Imperial Region"
 
 ### MISSIONS ###
  vsg_carpathia_title: "Annihilate Magyars"

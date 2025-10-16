@@ -153,6 +153,67 @@
  rom_sol_standard_weak: "Silver Standard of Sol"
  rom_sol_holy_site: "Sol Invictus Holy Site"
 
+### JEWISH ###
+# Decisions #
+ ask_jews_for_money_title: "Ask the Jews for Money"
+ ask_jews_for_money_desc: "In the halls of our capital, where the Jewish community thrives with ancient wisdom and prosperous trade, we may seek their aid in times of need."
+ JEWS_IN_CAPITAL: "Has a §YJewish Community§!."
+ JEWS_LOAN_BORROW_RECENTLY: "Not asking for a loan in the last §Y5§! years."
+ repay_jewish_loan_title: "Repay the Jewish Loan"
+ repay_jewish_loan_desc: "The time has come to honor the bonds forged with the Jewish community of our capital. Their loans, extended in good faith, have bolstered our empire's fortunes, but debts must be settled to maintain the balance of honor."
+ JEWS_LOAN_PAY: "Lose §R-[Root.jewish_community_loan.GetValue]§! Ducats."
+ expel_the_jews_title: "Expel the Jews"
+ expel_the_jews_desc: "The Jewish community in our capital has become entangled in our realm's fortunes through their loans. To unburden our treasury, we may decree their expulsion, erasing all debts in the process."
+ JEWS_EXPEL: "Every owned §YJewish Community§! will be banished."
+
+# Events #
+ tlw_jewish.0.t: "The Jews of [Root.GetName]"
+ tlw_jewish.0.d1: "The banners of our domination now fly over [Root.GetName], where a thriving Jewish community, steeped in Hebrew wisdom and trade, has long flourished. In the shadow of [Root.GetName]'s walls, their scholars pen treatises in the tradition of distant sages, while merchants weave networks of silk and spice that enrich the province's markets. As conquerors of this storied land, we stand at a choice: shall we embrace the Jews of [Root.GetName], granting them autonomy to continue their works and bolster our coffers, or banish them to quell the murmurs of those wary of their influence?"
+ tlw_jewish.0.d2: "As our banners rise over [Root.GetName], we find a vibrant Jewish community, their synagogues and markets a testament to a legacy of resilience and wisdom. In the streets of [Root.GetName], our kin have thrived, their scribes preserving sacred texts and their traders binding distant lands in commerce. As rulers of the same faith, we can let this community flourish in its historic home, strengthening [Root.GetName]'s prosperity. Or, should we summon them to our capital, uniting our people's wisdom in a grand hub of learning and trade?"
+ tlw_jewish.0.a: "They are welcome to stay in our realm"
+ tlw_jewish.0.b: "Pack up your things and leave!"
+ tlw_jewish.0.c: "They should stay where they belong"
+ tlw_jewish.0.e: "We will relocate them to the capital"
+ JEWS_FLEE_ANOTHER_COUNTRY: "The Jews will seek refuge in another country..."
+
+ tlw_jewish.1.t: "The Jewish Refugees"
+ tlw_jewish.1.d1: "From the lands of our neighbor countries, a wave of Jewish refugees arrives at our borders, driven forth by banishment and seeking haven in our realm. These wanderers, heirs to a lineage of scholars, merchants, and artisans, carry with them tales of resilience forged in the crucibles of distant empires. Their skills in trade and learning could enrich our markets and courts, much as they once bolstered the realms of old. Yet, their arrival stirs the winds of change, for our people whisper of unfamiliar customs and the burdens of strangers in our midst. Shall we open our gates to these exiles, welcoming their wisdom to weave new threads into our empire's tapestry, or turn them away, preserving the harmony of our lands as the annals of history demand?"
+ tlw_jewish.1.d2: "Brethren from another realm seek refuge at our borders, expelled from their homes yet unbowed in spirit, their journey a chapter in the enduring saga of our people. These kin, bearers of sacred texts and timeless crafts, arrive with the fire of survival kindled in their hearts, ready to share their knowledge in the halls of our shared heritage. As rulers of a faith bound by ancient covenants, shall we embrace our exiled brothers and sisters, strengthening the bonds of our community and weaving their strengths into our realm's grand narrative, or send them onward, mindful of the strains such influx might place upon our lands?"
+ tlw_jewish.1.a: "Welcome the refugees"
+ tlw_jewish.1.b: "They may stay in our realm"
+ tlw_jewish.1.c: "Turn them away"
+
+ tlw_jewish.2.t: "Growth of the Jews in [Root.GetName]"
+ tlw_jewish.2.d: "In [Root.GetName], the Jewish community has flourished under our stewardship, its tremendous growth was driven by the wealth and wisdom poured into these lands. The markets of [Root.GetName] now brim with silks and spices, led by the tireless commerce of Jewish merchants whose networks span seas and empires. In synagogues and scriptoria, scholars pen works of philosophy and science, their scrolls gleaming with the knowledge of ages past. This ascendant community, now a radiant jewel in our realm, draws artisans and traders from distant shores."
+ tlw_jewish.2.a: "As long as they contribute to our prosperity"
+
+ tlw_jewish.3.t: "The Jewish Loan"
+ tlw_jewish.3.d: "In the shadow of our capital, representatives of the Jewish community approach our court, their scrolls bearing tidings of solidarity forged in the crucibles of history. These merchants and scholars, guardians of timeless knowledge, offer loans free of interest, a gesture rooted in their enduring legacy of resilience and commerce. Shall we accept their generosity to bolster our treasury, or tread cautiously, mindful of the storms that unpaid obligations may summon?"
+ tlw_jewish.3.a: "Accept a great loan"
+ tlw_jewish.3.b: "Accept a medium loan"
+ tlw_jewish.3.c: "Accept a small loan"
+ tlw_jewish.3.e: "On second thought, we should decline the offer"
+ JEWS_LOAN_DUCAT_1YEAR: "Gain §G[Root.jewish_community_loan.GetValue]§! Ducats.\nThis loan must be repaid within §Y5§! years."
+ JEWS_LOAN_DUCAT_3YEAR: "Gain §G[Root.jewish_community_loan_3year.GetValue]§! Ducats.\nThis loan must be repaid within §Y5§! years."
+ JEWS_LOAN_DUCAT_5YEAR: "Gain §G[Root.jewish_community_loan_5year.GetValue]§! Ducats.\nThis loan must be repaid within §Y5§! years."
+
+ tlw_jewish.4.t: "The Unpaid Debt"
+ tlw_jewish.4.d: "Five years have passed since we sought the aid of the Jewish community in our capital, their loans a lifeline in times of trial. Unfortunately, the coffers remain strained, and repayment eludes us. In a grand audience beneath the arches of [Root.Capital.GetName], the community's elders approach with solemn grace, offering to erase the debt in exchange for greater autonomy. Their proposal would consecrate the province as a haven of their faith, transforming it into a Jewish diaspora. This act of mercy carries the weight of history, binding our realms in a new covenant forged from necessity and honor."
+ tlw_jewish.4.a: "Be done with it..."
+ JEWS_BETTER_MOVE_CAPITAL_TIP: "We better move the capital elsewhere. Or, there is also another option..."
+
+ tlw_jewish.5.t: "La Judería"
+ tlw_jewish.5.d: "In the heart of [225.GetName], where the Guadalquivir weaves its silver threads through a city of minarets and markets, the Jewish quarter stands as a testament to al-Andalus' radiant past. Here, under the Umayyad banners, a vibrant community has flourished for centuries, its scholars and merchants weaving a tapestry of wisdom and wealth that rivals the great academies of the East. In the shadow of the ancient synagogue, where prayers rise to the heavens, men like Hasdai ibn Shaprut: physician, diplomat, and sage - once counseled Caliph Abd al-Rahman III, their words shaping the destiny of a golden age. Scrolls of astronomy, medicine, and philosophy, penned in Hebrew and Arabic, illuminate the libraries, while the souks hum with the trade of silks, spices, and secrets from distant shores. The Jews of [225.GetName], heirs to a legacy older than Roman eagle, have turned this city into a beacon of learning, their influence stretching from the Pillars of Hercules to the courts of the East. Yet, their prominence stirs whispers among our emirs, who marvel at their brilliance but guard against the envy of lesser men. As our caliphate faces the Christian swords of the north, the legacy of La Judería endures, a shining star in Andalusian crown."
+ tlw_jewish.5.a: "Their presence is welcomed!"
+
+# Modifiers #
+ jewish_community_small: "Small Jewish Community"
+ jewish_community_med: "Thriving Jewish Community"
+ jewish_community_large: "Dominant Jewish Community"
+ jewish_community_hub: "Jewish Trade Hub"
+ jewish_community_banished: "Banished the Jews"
+ jewish_community_diaspora: "Jewish Diaspora"
+
 ### VISIGOTHS ###
 # Countries #
  VSG: "Visigoths"
@@ -246,17 +307,12 @@
  VSG_UNLOCK_MISSION_ORTHODOX: "§GUnlocks§! §YOrthodox§! mission tree. It can be accessed via §YMission Switch§!."
  VSG_UNLOCK_MISSION_CATHOLIC: "§GUnlocks§! §YCatholic§! mission tree. It can be accessed via §YMission Switch§."
 
- ab_visigoths.7.t: "La Judería"
- ab_visigoths.7.d: "In the heart of [225.GetName], where the Guadalquivir weaves its silver threads through a city of minarets and markets, the Jewish quarter stands as a testament to al-Andalus' radiant past. Here, under the Umayyad banners, a vibrant community has flourished for centuries, its scholars and merchants weaving a tapestry of wisdom and wealth that rivals the great academies of the East. In the shadow of the ancient synagogue, where prayers rise to the heavens, men like Hasdai ibn Shaprut: physician, diplomat, and sage - once counseled Caliph Abd al-Rahman III, their words shaping the destiny of a golden age. Scrolls of astronomy, medicine, and philosophy, penned in Hebrew and Arabic, illuminate the libraries, while the souks hum with the trade of silks, spices, and secrets from distant shores. The Jews of [225.GetName], heirs to a legacy older than Roman eagle, have turned this city into a beacon of learning, their influence stretching from the Pillars of Hercules to the courts of the East. Yet, their prominence stirs whispers among our emirs, who marvel at their brilliance but guard against the envy of lesser men. As our caliphate faces the Christian swords of the north, the legacy of La Judería endures, a shining star in Andalusian crown."
- ab_visigoths.7.a: "Their presence is welcomed!"
-
 # Modifiers #
  VSG_perma_pp: "Legacy of Alaric"
  rome_formedbyvisigoths: "Hispano-Roman Heritage"
  desc_rome_formedbyvisigoths: "We have formed Rome from Visigoths"
  vsg_defeat_of_valencia: "Defeat of Valencia"
  vsg_choose_catholic: "Iberian Crusaders"
- vsg_cordoba_jews: "Thriving Jewish Community"
  vsg_convert_the_berbers: "Convert the Berbers"
  vsg_vandalic_elites: "Vandalic Elites"
  vsg_balearic_naval_base: "Balearic Naval Base"

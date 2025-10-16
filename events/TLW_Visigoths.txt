@@ -396,6 +396,12 @@ country_event = {
 			name = rome_formedbyvisigoths
 			duration = -1
 		}
+		iberia_region = {
+			add_permanent_province_modifier = {
+				name = rom_center_of_empire
+				duration = -1
+			}
+		}
 	}
 }
 
@@ -527,26 +533,5 @@ country_event = {
 		}
 		set_country_flag = vsg_religion_catholic
 		custom_tooltip = VSG_UNLOCK_MISSION_CATHOLIC
-	}
-}
-
-# La Judería
-country_event = {
-	id = ab_visigoths.7
-	title = ab_visigoths.7.t
-	desc = ab_visigoths.7.d
-	picture = muslimgfx_MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = ab_visigoths.7.a
-		225 = {
-			add_building = marketplace
-			add_permanent_province_modifier = {
-				name = vsg_cordoba_jews
-				duration = -1
-			}
-		}
 	}
 }
