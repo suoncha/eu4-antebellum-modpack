@@ -1,3 +1,300 @@
+### UNIQUE ###
+vsg_gal_first = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = GAL
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_gal_second = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = GAL
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_gal_third = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = GAL
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_gal_fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = GAL
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_gal_fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = GAL
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_asu_first = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = ASU
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_asu_second = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = ASU
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_asu_third = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = ASU
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_asu_fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = ASU
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_asu_fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = ASU
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_nav_first = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = NAV
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_nav_second = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = NAV
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_nav_third = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = NAV
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_nav_fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = NAV
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_nav_fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		was_tag = NAV
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+### VISIGOTHS ##
+vsg_branch_first = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_branch_second = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_branch_third = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_branch_fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
+vsg_branch_fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = VSG
+			was_tag = VSG
+		}
+		has_country_flag = ab_missionswitch_rome_default
+	}
+	has_country_shield = yes
+}
+
 visigoths_first = {
 	slot = 1
 	generic = no
@@ -14,7 +311,7 @@ visigoths_first = {
 	vsg_cordoba_control = {
 	    icon = mission_cordoba
 		required_missions = { }
-		position = 1
+		position = 6
 		
 		provinces_to_highlight = {
 			province_id = 225
@@ -125,7 +422,7 @@ visigoths_first = {
 	vsg_finish_reconquista = {
 	    icon = mission_reclaim_andalucia
 		required_missions = { vsg_cordoba_control }
-		position = 3
+		position = 8
 
 		ai_weight = {
 			factor = 1000
@@ -215,7 +512,7 @@ visigoths_first = {
 	vsg_convert = {
 		icon = show_piety
 		required_missions = { vsg_finish_reconquista }
-		position = 4
+		position = 9
 
 		provinces_to_highlight = {
 			region = iberia_region
@@ -273,7 +570,7 @@ visigoths_first = {
 			
 	vsg_pirates = {
 		icon = mission_combat_barbary_piracy
-		position = 6
+		position = 11
 		required_missions = { vsg_invade_morocco }
 		
 		trigger = {
@@ -328,7 +625,7 @@ visigoths_first = {
 	vsg_rule_maghreb = {
 	    icon = mission_moroccan_ports
 		required_missions = { vsg_pirates vsg_vandals }
-		position = 7
+		position = 12
 		
 		trigger = {
 			overlord_of = VSV
@@ -414,7 +711,7 @@ visigoths_first = {
 	vsg_new_dockyard = {
 	    icon = toulon_dockyards
 		required_missions = { }
-		position = 8
+		position = 13
 		
 		provinces_to_highlight = {
 			province_id = 227
@@ -451,7 +748,7 @@ visigoths_first = {
 	vsg_countryside = {
 	    icon = mission_farm
 		required_missions = { vsg_new_dockyard }
-		position = 9
+		position = 14
 		
 		provinces_to_highlight = {
 			region = iberia_region
@@ -484,7 +781,7 @@ visigoths_first = {
 	vsg_industrialize_iberia = {
 	    icon = industrialized_rhineland
 		required_missions = { vsg_countryside }
-		position = 11
+		position = 16
 		
 		provinces_to_highlight = {
 			region = iberia_region
@@ -534,7 +831,7 @@ visigoths_second = {
 	vsg_revitalize_economy = {
 		icon = mission_african_gold
 		required_missions = { vsg_cordoba_control }
-		position = 2
+		position = 7
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -576,7 +873,7 @@ visigoths_second = {
 	vsg_capital = {
 	    icon = mission_golden_century
 		required_missions = { vsg_finish_reconquista vsg_revitalize_economy }
-		position = 4
+		position = 9
 		
 		provinces_to_highlight = {
 			province_id = 219
@@ -622,7 +919,7 @@ visigoths_second = {
 	vsg_invade_morocco = {
 	    icon = mission_retake_ceuta
 		required_missions = { }
-		position = 5
+		position = 10
 
 		ai_weight = {
 			factor = 1000
@@ -707,7 +1004,7 @@ visigoths_second = {
 	vsg_vandals = {
 		icon = africa_proconsulare
 		required_missions = { vsg_invade_morocco }
-		position = 6
+		position = 11
 	
 		trigger = {
 			tunisia_area = {
@@ -802,7 +1099,7 @@ visigoths_second = {
 	vsg_egypt = {
 		icon = mission_nizzarid
 		required_missions = { vsg_vandals }
-		position = 8
+		position = 13
 		
 		ai_weight = {
 			factor = 1000
@@ -878,7 +1175,7 @@ visigoths_second = {
 	vsg_universities = {
 		icon = pontifical_universities
 		required_missions = { vsg_countryside }
-		position = 10
+		position = 15
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -920,7 +1217,7 @@ visigoths_third = {
 	vsg_secure_baleares = {
 	    icon = mission_feodosia_port
 		required_missions = { }
-		position = 1
+		position = 6
 		
 		trigger = {
 			if = {
@@ -968,7 +1265,7 @@ visigoths_third = {
 	vsg_take_isles = {
 	    icon = seize_sardinia
 		required_missions = { vsg_secure_baleares }
-		position = 2
+		position = 7
 		
 		trigger = {
 			if = {
@@ -1061,7 +1358,7 @@ visigoths_third = {
 	vsg_dismantle_sultanate = {
 	    icon = per_unify_the_shia_realms
 		required_missions = { vsg_take_isles }
-		position = 3
+		position = 8
 
 		trigger = {
 		    sicily_area = {
@@ -1126,7 +1423,7 @@ visigoths_third = {
 	vsg_rome = {
 		icon = mission_colosseum
 		required_missions = { vsg_dismantle_sultanate vsg_po_valley }
-		position = 5
+		position = 10
 
 		ai_weight = {
 			factor = 1000
@@ -1199,7 +1496,7 @@ visigoths_third = {
 	vsg_italy = {
 		icon = mission_rule_italy
 		required_missions = { vsg_rome }
-		position = 6
+		position = 11
 		
 		trigger = {
 			overlord_of = VSO
@@ -1266,7 +1563,7 @@ visigoths_third = {
 	vsg_palestine = {
 		icon = jerusalem
 		required_missions = { vsg_italy }
-		position = 7
+		position = 12
 
 		ai_weight = {
 			factor = 1000
@@ -1357,7 +1654,7 @@ visigoths_third = {
 	vsg_schism = {
 		icon = mission_pf_cross
 		required_missions = { vsg_egypt vsg_palestine }
-		position = 9
+		position = 14
 		
 		provinces_to_highlight = {
 			OR = {
@@ -1483,7 +1780,7 @@ visigoths_third = {
 
 	vsg_rus_union = {
 		icon = mission_rule_ruthenia
-		position = 10
+		position = 15
 		required_missions = { vsg_schism }
 
 		provinces_to_highlight = {
@@ -1596,7 +1893,7 @@ visigoths_fourth = {
 	vsg_contest_in_mediterranean = {
 		icon = mission_aragonese_navy
 		required_missions = { }
-		position = 2
+		position = 7
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -1623,7 +1920,7 @@ visigoths_fourth = {
 	vsg_mare_nostrum = {
 		icon = mission_mare_nostrum
 		required_missions = { vsg_take_isles vsg_contest_in_mediterranean vsg_invade_francia }
-		position = 3
+		position = 8
 		
 		provinces_to_highlight = {
 			is_capital = yes
@@ -1680,7 +1977,7 @@ visigoths_fourth = {
 	vsg_po_valley = {
 		icon = mission_conquer_north_italy
 		required_missions = { vsg_visigothic_aquitania }
-		position = 4
+		position = 9
 		
 		provinces_to_highlight = {
 			OR = {
@@ -1746,7 +2043,7 @@ visigoths_fourth = {
 	vsg_balkan = {
 		icon = mission_balkan_conquest
 		required_missions = { vsg_po_valley }
-		position = 5
+		position = 10
 		
 		provinces_to_highlight = {
 			region = balkan_region
@@ -1830,7 +2127,7 @@ visigoths_fourth = {
 	vsg_latin_empire = {
 		icon = mission_plc_purple_phoenix
 		required_missions = { vsg_italy vsg_balkan }
-		position = 7
+		position = 12
 		
 		provinces_to_highlight = {
 			area = thrace_area
@@ -1875,7 +2172,7 @@ visigoths_fourth = {
 	vsg_legacy_of_alaric = {
 		icon = mission_barbarossa
 		required_missions = { }
-		position = 8
+		position = 13
 		
 		trigger = {
 			OR = {
@@ -1900,7 +2197,7 @@ visigoths_fourth = {
 	vsg_mass_mobilization = {
 		icon = ven_standing_army_mission_2
 		required_missions = { vsg_legacy_of_alaric }
-		position = 10
+		position = 15
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -1942,7 +2239,7 @@ visigoths_fourth = {
 
 	vsg_tercios = {
 		icon = spa_reform_tercios
-		position = 11
+		position = 16
 		required_missions = { vsg_mass_mobilization }
 		
 		trigger = {
@@ -1980,7 +2277,7 @@ visigoths_fifth = {
 	vsg_fortify = {
 	    icon = alpine_defenses
 		required_missions = { }
-		position = 1
+		position = 6
 
 		ai_weight = {
 			factor = 1000
@@ -2076,7 +2373,7 @@ visigoths_fifth = {
 	vsg_invade_francia = {
 	    icon = mission_invade_occitania
 		required_missions = { vsg_fortify }
-		position = 2
+		position = 7
 		
 		trigger = {
 			if = {
@@ -2172,7 +2469,7 @@ visigoths_fifth = {
 	vsg_visigothic_aquitania = {
 	    icon = develop_provence
 		required_missions = { vsg_invade_francia }
-		position = 3
+		position = 8
 
 		ai_weight = {
 			factor = 1000
@@ -2281,7 +2578,7 @@ visigoths_fifth = {
 	vsg_soissons = {
 	    icon = carolingian_empire
 		required_missions = { vsg_visigothic_aquitania }
-		position = 4
+		position = 9
 		
 		trigger = {
 		    ile_de_france_area = {
@@ -2365,7 +2662,7 @@ visigoths_fifth = {
 	vsg_conquest_of_france = {
 		icon = centralize_france
 		required_missions = { vsg_soissons }
-		position = 6
+		position = 11
 
 		ai_weight = {
 			factor = 1000
@@ -2491,7 +2788,7 @@ visigoths_fifth = {
 	vsg_invade_britain = {
 		icon = mission_control_the_channel
 		required_missions = { vsg_conquest_of_france }
-		position = 7
+		position = 12
 
 		provinces_to_highlight = {
 			OR = {
@@ -2572,7 +2869,7 @@ visigoths_fifth = {
 	vsg_visigothic_britannia = {
 		icon = mission_frankishengland
 		required_missions = { vsg_invade_britain }
-		position = 9
+		position = 14
 
 		ai_weight = {
 			factor = 1000
@@ -2646,7 +2943,7 @@ visigoths_fifth = {
 	vsg_firepower_superiority = {
 		icon = mission_guns_of_urban
 		required_missions = { vsg_mass_mobilization }
-		position = 11
+		position = 16
 		
 		trigger = {
 			has_global_modifier_value = { 

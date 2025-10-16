@@ -56,7 +56,7 @@ country_event = {
 		}
 		ADU = {
 			country_event = {
-				id = ab_visigoths.7
+				id = tlw_jewish.5
 				days = 30
 			}
 		}
