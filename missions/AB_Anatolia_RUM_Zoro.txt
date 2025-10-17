@@ -429,6 +429,7 @@ ab_rum_zoro_first = {
 		}
 
 		trigger = {
+			NOT = { exists = ROM }
 			OR = {
 				NOT = { is_year = 1700 }
 				custom_trigger_tooltip = {
