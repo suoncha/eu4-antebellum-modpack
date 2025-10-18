@@ -199,6 +199,11 @@ rom_center_of_empire = {
 	local_governing_cost = -0.25
 }
 
+rom_colonial_growth = {
+	colonists = 1
+	colonist_placement_chance = 0.1
+}
+
 # Visigoths #
 rome_formedbyvisigoths = {
 	has_tercio = yes

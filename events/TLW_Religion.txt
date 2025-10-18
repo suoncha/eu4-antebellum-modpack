@@ -1850,6 +1850,96 @@ country_event = {
 				id = tlw_jewish.18
 			}
 		}
+		PU1 = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		PU5 = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		PU6 = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		PU9 = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		LEN = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		POW = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		COF = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		MLS = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		STA = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		OSH = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		ATT = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		FOX = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		CAO = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		OSA = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		JOA = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		PAW = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		BLA = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
+		NAK = {
+			country_event = {
+				id = tlw_jewish.19
+			}
+		}
 	}
 }
 
@@ -2918,6 +3008,330 @@ country_event = {
 				add_building = marketplace
 				add_permanent_province_modifier = {
 					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+# Jewish Communities of Buniq
+country_event = {
+	id = tlw_jewish.19
+	title = tlw_jewish.19.t
+	desc = tlw_jewish.19.d
+	picture = muslimgfx_SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = tlw_jewish.19.a
+		if = {
+			limit = {
+				tag = PU1
+			}
+			965 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PU5
+			}
+			953 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PU6
+			}
+			950 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PU9
+			}
+			932 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = LEN
+			}
+			956 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = POW
+			}
+			2011 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = COF
+			}
+			2544 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = MLS
+			}
+			986 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = STA
+			}
+			2583 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = OSH
+			}
+			994 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ATT
+			}
+			2670 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = FOX
+			}
+			944 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = CAO
+			}
+			917 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = OSA
+			}
+			899 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = JOA
+			}
+			4883 = {
+				add_building = marketplace
+				add_permanent_province_modifier = {
+					name = jewish_community_med
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PAW
+			}
+			2508 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = BLA
+			}
+			2502 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
+					duration = -1
+				}
+				hidden_effect = {
+					set_variable = {
+						which = jewish_community_dev
+						value = 0
+					}
+				}
+			}
+		}
+		else = {
+			1008 = {
+				add_permanent_province_modifier = {
+					name = jewish_community_small
 					duration = -1
 				}
 				hidden_effect = {
