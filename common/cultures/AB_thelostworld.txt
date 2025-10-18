@@ -405,6 +405,33 @@ roman_g = {
 		}
 	}
 
+	romano_hylinian = {
+	}
+
+	romano_punic = {
+	}
+
+	romano_hashdian = {
+	}
+
+	romano_cascadian = {
+	}
+
+	romano_mexican = {
+	}
+
+	romano_carib = {
+	}
+
+	romano_peruan = {
+	}
+
+	romano_brazilian = {
+	}
+
+	romano_australian = {
+	}
+
 	dynasty_names = {
 		"Menenius Agrippa" "Menenius Lanatus" "Servilius Ahala" "Servilius Caepio" "Servilius Gemellus" "Servilius Priscus" "Servilius Structus" "Servilius Axila"
 		"Domitius Ahenobarbus" "Domitius Calvinus" "Postumius Tubertus" "Postumius Albinus" "Postumius Albus"

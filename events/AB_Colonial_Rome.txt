@@ -1,5 +1,5 @@
+### Preset Colonial Nations ###
 namespace = colonial_rome
-normal_or_historical_nations = yes
 
 #Eastern America
 country_event = {
@@ -23,6 +23,18 @@ country_event = {
 		change_tag = RO1
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.1
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -48,6 +60,18 @@ country_event = {
 		change_tag = RO2
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.2
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -73,6 +97,18 @@ country_event = {
 		change_tag = RO3
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.3
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -98,6 +134,18 @@ country_event = {
 		change_tag = RO4
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.4
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -123,6 +171,18 @@ country_event = {
 		change_tag = RO5
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.5
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -148,6 +208,18 @@ country_event = {
 		change_tag = RO6
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.6
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -173,6 +245,18 @@ country_event = {
 		change_tag = RO7
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.7
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -198,6 +282,18 @@ country_event = {
 		change_tag = RO8
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.8
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -223,6 +319,18 @@ country_event = {
 		change_tag = RO9
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.9
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -248,6 +356,18 @@ country_event = {
 		change_tag = ROQ
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.10
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -273,6 +393,18 @@ country_event = {
 		change_tag = ROZ
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.11
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -298,5 +430,308 @@ country_event = {
 		change_tag = ROW
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					culture_group = roman_g
+				}
+				overlord = {
+					country_event = {
+						id = colonial_culture_rome.12
+					}
+				}
+			}
+		}
+	}
+}
+
+### Preset Colonial Nations ###
+namespace = colonial_culture_rome
+
+#Eastern America
+country_event = {
+	id = colonial_culture_rome.1
+	title = colonial_culture_rome.1.t
+	desc = colonial_culture_rome.1.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO1 = {
+			change_primary_culture = romano_punic
+			capital_scope = {
+				change_culture = romano_punic
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Carribean
+country_event = {
+	id = colonial_culture_rome.2
+	title = colonial_culture_rome.2.t
+	desc = colonial_culture_rome.2.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO2 = {
+			change_primary_culture = romano_carib
+			capital_scope = {
+				change_culture = romano_carib
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#California
+country_event = {
+	id = colonial_culture_rome.3
+	title = colonial_culture_rome.3.t
+	desc = colonial_culture_rome.3.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO3 = {
+			change_primary_culture = romano_cascadian
+			capital_scope = {
+				change_culture = romano_cascadian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Colombia
+country_event = {
+	id = colonial_culture_rome.4
+	title = colonial_culture_rome.4.t
+	desc = colonial_culture_rome.4.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO4 = {
+			change_primary_culture = romano_peruan
+			capital_scope = {
+				change_culture = romano_peruan
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Mexico
+country_event = {
+	id = colonial_culture_rome.5
+	title = colonial_culture_rome.5.t
+	desc = colonial_culture_rome.5.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO5 = {
+			change_primary_culture = romano_mexican
+			capital_scope = {
+				change_culture = romano_mexican
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Brazil
+country_event = {
+	id = colonial_culture_rome.6
+	title = colonial_culture_rome.6.t
+	desc = colonial_culture_rome.6.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO6 = {
+			change_primary_culture = romano_brazilian
+			capital_scope = {
+				change_culture = romano_brazilian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Canada
+country_event = {
+	id = colonial_culture_rome.7
+	title = colonial_culture_rome.7.t
+	desc = colonial_culture_rome.7.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO7 = {
+			change_primary_culture = romano_hylinian
+			capital_scope = {
+				change_culture = romano_hylinian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Peru
+country_event = {
+	id = colonial_culture_rome.8
+	title = colonial_culture_rome.8.t
+	desc = colonial_culture_rome.8.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO8 = {
+			change_primary_culture = romano_peruan
+			capital_scope = {
+				change_culture = romano_peruan
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Australia
+country_event = {
+	id = colonial_culture_rome.9
+	title = colonial_culture_rome.9.t
+	desc = colonial_culture_rome.9.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		RO9 = {
+			change_primary_culture = romano_australian
+			capital_scope = {
+				change_culture = romano_australian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Louisiana
+country_event = {
+	id = colonial_culture_rome.10
+	title = colonial_culture_rome.10.t
+	desc = colonial_culture_rome.10.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		ROQ = {
+			change_primary_culture = romano_hashdian
+			capital_scope = {
+				change_culture = romano_hashdian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Argentina
+country_event = {
+	id = colonial_culture_rome.11
+	title = colonial_culture_rome.11.t
+	desc = colonial_culture_rome.11.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		ROZ = {
+			change_primary_culture = romano_brazilian
+			capital_scope = {
+				change_culture = romano_brazilian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Alaska
+country_event = {
+	id = colonial_culture_rome.12
+	title = colonial_culture_rome.12.t
+	desc = colonial_culture_rome.12.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_culture_rome.1.a
+		ROW = {
+			change_primary_culture = romano_cascadian
+			capital_scope = {
+				change_culture = romano_cascadian
+			}
+			add_country_modifier = {
+				name = rom_colonial_growth
+				duration = 9125
+			}
+		}
 	}
 }
