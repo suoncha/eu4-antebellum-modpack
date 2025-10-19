@@ -724,3 +724,188 @@ TLW_jewish_loan_pay_effect = {
 		}
 	}
 }
+
+TLW_colonial_culture_event_rome_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_eastern_america
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.1
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_the_carribean
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.2
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_california
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.3
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_colombia
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.4
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_mexico
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.5
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_brazil
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.6
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_canada
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.7
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_peru
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.8
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_australia
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.9
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_louisiana
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.10
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_la_plata
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.11
+				days = 10
+				random = 30
+			}
+		}
+		if = {
+			limit = {
+				any_subject_country = {
+					capital_scope = {
+						colonial_region = colonial_alaska
+						culture_group = ROOT
+					}
+				}
+			}
+			country_event = {
+				id = colonial_culture_rome.12
+				days = 10
+				random = 30
+			}
+		}
+	}
+}

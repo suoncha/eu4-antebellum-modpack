@@ -459,7 +459,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO1 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_eastern_america
+				}
+			}
 			change_primary_culture = romano_punic
 			capital_scope = {
 				change_culture = romano_punic
@@ -483,7 +488,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO2 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_the_carribean
+				}
+			}
 			change_primary_culture = romano_carib
 			capital_scope = {
 				change_culture = romano_carib
@@ -507,7 +517,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO3 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_california
+				}
+			}
 			change_primary_culture = romano_cascadian
 			capital_scope = {
 				change_culture = romano_cascadian
@@ -531,7 +546,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO4 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_colombia
+				}
+			}
 			change_primary_culture = romano_peruan
 			capital_scope = {
 				change_culture = romano_peruan
@@ -555,7 +575,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO5 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_mexico
+				}
+			}
 			change_primary_culture = romano_mexican
 			capital_scope = {
 				change_culture = romano_mexican
@@ -579,7 +604,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO6 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_brazil
+				}
+			}
 			change_primary_culture = romano_brazilian
 			capital_scope = {
 				change_culture = romano_brazilian
@@ -603,7 +633,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO7 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_canada
+				}
+			}
 			change_primary_culture = romano_hylinian
 			capital_scope = {
 				change_culture = romano_hylinian
@@ -627,7 +662,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO8 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_peru
+				}
+			}
 			change_primary_culture = romano_peruan
 			capital_scope = {
 				change_culture = romano_peruan
@@ -651,7 +691,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		RO9 = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_australia
+				}
+			}
 			change_primary_culture = romano_australian
 			capital_scope = {
 				change_culture = romano_australian
@@ -675,7 +720,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		ROQ = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_louisiana
+				}
+			}
 			change_primary_culture = romano_hashdian
 			capital_scope = {
 				change_culture = romano_hashdian
@@ -699,7 +749,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		ROZ = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_la_plata
+				}
+			}
 			change_primary_culture = romano_brazilian
 			capital_scope = {
 				change_culture = romano_brazilian
@@ -723,7 +778,12 @@ country_event = {
 
 	option = {
 		name = colonial_culture_rome.1.a
-		ROW = {
+		random_subject_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_alaska
+				}
+			}
 			change_primary_culture = romano_cascadian
 			capital_scope = {
 				change_culture = romano_cascadian
