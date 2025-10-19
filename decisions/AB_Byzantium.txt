@@ -320,6 +320,8 @@ country_decisions = {
                     "
                 }
 			}
+			# Colonial Cultures
+			TLW_colonial_culture_event_rome_effect = yes
 			custom_tooltip = AB_EMPTY
 			# The rest
 			custom_tooltip = restore_roman_empire_tt
