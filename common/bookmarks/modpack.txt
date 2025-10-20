@@ -17,4 +17,5 @@ bookmark =
 	country = ZAZ
 	country = ROB
 	country = BUL
+	country = SLH
 }

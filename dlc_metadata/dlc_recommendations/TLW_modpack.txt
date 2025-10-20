@@ -16,6 +16,7 @@ updated_modpack = {
 				tag = BUL
 				culture = Wendish
 				culture = afghani
+				culture = Tocharian
 				culture_group = east_slavic
 				culture_group = scandinavian
 				culture_group = germanic
