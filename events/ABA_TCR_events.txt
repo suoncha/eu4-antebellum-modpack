@@ -1,0 +1,1151 @@
+namespace = ABA_tcr_event
+
+#Nexus of the World - Choose a direction
+country_event = {
+	id = ABA_tcr_event.1
+	title = ABA_tcr_event.1.t
+	desc = ABA_tcr_event.1.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	option = { #India
+		name = ABA_tcr_event.1.a
+		ai_chance = { factor = 33 }
+		override_country_name = aba_tcr_kushan
+		set_country_flag = ABA_TCR_India
+		swap_non_generic_missions = yes
+		country_event = { id = ABA_tcr_event.2 }
+		change_technology_group = indian
+		change_unit_type = indian
+		add_government_reform = ABA_kushan_confederacy
+		
+	}
+	option = { #Persia
+		name = ABA_tcr_event.1.b
+		ai_chance = { factor = 3 }
+		set_country_flag = ABA_TCR_Persia
+		swap_non_generic_missions = yes
+		country_event = { id = ABA_tcr_event.4 }
+		change_technology_group = iranian
+		change_unit_type = iranian
+		add_government_reform = ABA_tcr_persianempire
+	}
+
+	option = { #China
+		name = ABA_tcr_event.1.c
+		ai_chance = { factor = 33 }
+		override_country_name = aba_tcr_lesser_yuezhi
+		set_country_flag = ABA_TCR_China
+		swap_non_generic_missions = yes
+		country_event = { id = ABA_tcr_event.6 }
+		change_technology_group = chinese
+		change_unit_type = chinese
+		add_government_reform = ABA_tcr_yuezhi_warlord
+	 }
+	}
+
+
+#Indian Religion #1
+country_event = {
+	id = ABA_tcr_event.2
+	title = ABA_tcr_event.2.t
+	desc = ABA_tcr_event.2.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	option = { #Keep current religion
+		name = ABA_tcr_event.2.a 
+		ai_chance = { factor = 33 }
+		
+	}
+	option = { #Convert to Mahayana
+		name = ABA_tcr_event.2.b
+		ai_chance = { factor = 3 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = mahayana
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = mahayana
+		}
+		capital_scope = {
+			change_religion = mahayana
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #Convert to Theravada
+		name = ABA_tcr_event.2.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = buddhism
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = buddhism
+		}
+		capital_scope = {
+			change_religion = buddhism
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #More Options
+		name = ABA_tcr_event.2.e
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.3 }
+	}
+}
+
+#Indian Religion #2
+country_event = {
+	id = ABA_tcr_event.3
+	title = ABA_tcr_event.3.t
+	desc = ABA_tcr_event.3.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	option = { #Convert to Vajrayana
+		name = ABA_tcr_event.3.a
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = vajrayana
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = vajrayana
+		}
+		capital_scope = {
+			change_religion = vajrayana
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Hinduism
+		name = ABA_tcr_event.3.b
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = hinduism
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = hinduism
+		}
+		capital_scope = {
+			change_religion = hinduism
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Nestorian
+		name = ABA_tcr_event.3.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = nestorian
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = nestorian
+		}
+		capital_scope = {
+			change_religion = nestorian
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Zoroastrianism
+		name = ABA_tcr_event.3.e
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = zoroastrian
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = zoroastrian
+		}
+		capital_scope = {
+			change_religion = zoroastrian
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Go Back
+		name = ABA_tcr_event.3.f
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.2 }
+	}
+
+}
+
+#Persian Religion #1
+country_event = {
+	id = ABA_tcr_event.4
+	title = ABA_tcr_event.4.t
+	desc = ABA_tcr_event.4.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	option = { #Keep current religion
+		name = ABA_tcr_event.4.a
+		ai_chance = { factor = 33 }
+		
+	}
+	option = { #Convert to Zoroastrian
+		name = ABA_tcr_event.4.b
+		ai_chance = { factor = 3 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = zoroastrian
+			}
+		 }
+		}
+		override_country_name = aba_tcr_bactria
+		ROOT = {
+		change_religion = zoroastrian
+		}
+		capital_scope = {
+			change_religion = zoroastrian
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Manichean
+		name = ABA_tcr_event.4.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = manichaean
+			}
+		 }
+		}
+		override_country_name = aba_tcr_bactria
+		ROOT = {
+		change_religion = manichaean
+		}
+		capital_scope = {
+			change_religion = manichaean
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #More Options
+		name = ABA_tcr_event.4.e
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.5 }
+	}
+}
+
+#Persian Religion #2
+country_event = {
+	id = ABA_tcr_event.5
+	title = ABA_tcr_event.5.t
+	desc = ABA_tcr_event.5.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	option = { #Convert to Orthodox
+		name = ABA_tcr_event.5.a
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = orthodox
+			}
+		 }
+		}
+		override_country_name = aba_tcr_greco_bactria
+		ROOT = {
+		change_religion = orthodox
+		}
+		capital_scope = {
+			change_religion = orthodox
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+	option = { #Convert to Sunni
+		name = ABA_tcr_event.5.b
+		ai_chance = { factor = 3 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = sunni
+			}
+		 }
+		}
+		override_country_name = aba_tcr_tokharistan
+		ROOT = {
+		change_religion = sunni
+		}
+		capital_scope = {
+			change_religion = sunni
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Shia
+		name = ABA_tcr_event.5.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = shiite
+			}
+		 }
+		}
+		ROOT = {
+		override_country_name = aba_tcr_tokharistan
+		change_religion = shiite
+		}
+		capital_scope = {
+			change_religion = shiite
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #More Options
+		name = ABA_tcr_event.5.e
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.4 }
+	}
+}
+
+#Chinese Religion #1
+country_event = {
+	id = ABA_tcr_event.6
+	title = ABA_tcr_event.6.t
+	desc = ABA_tcr_event.6.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	option = { #Keep current religion
+		name = ABA_tcr_event.6.a 
+		ai_chance = { factor = 33 }
+		
+	}
+	option = { #Convert to Confucianism
+		name = ABA_tcr_event.6.b
+		ai_chance = { factor = 3 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = confucianism
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = confucianism
+		}
+		capital_scope = {
+			change_religion = confucianism
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Theravada
+		name = ABA_tcr_event.6.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = buddhism
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = buddhism
+		}
+		capital_scope = {
+			change_religion = buddhism
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #More Options
+		name = ABA_tcr_event.6.e
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.7 }
+	}
+}
+
+#Chinese Religion #2
+country_event = {
+	id = ABA_tcr_event.7
+	title = ABA_tcr_event.7.t
+	desc = ABA_tcr_event.7.d
+	picture = east_asian_ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	option = { #Convert to Vajrayana
+		name = ABA_tcr_event.7.a
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = vajrayana
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = vajrayana
+		}
+		capital_scope = {
+			change_religion = vajrayana
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Mahayana
+		name = ABA_tcr_event.7.b
+		ai_chance = { factor = 33 }
+			trigger = {
+			NOT = {
+				ROOT = {
+				religion = mahayana
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = mahayana
+		}
+		capital_scope = {
+			change_religion = mahayana
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to Nestorian
+		name = ABA_tcr_event.7.c
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = nestorian
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = nestorian
+		}
+		capital_scope = {
+			change_religion = nestorian
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}
+	}
+
+	option = { #Convert to maitreya
+		name = ABA_tcr_event.7.e
+		ai_chance = { factor = 33 }
+		trigger = {
+			NOT = {
+				ROOT = {
+				religion = maitreya
+			}
+		 }
+		}
+		ROOT = {
+		change_religion = maitreya
+		}
+		capital_scope = {
+			change_religion = maitreya
+		}
+		add_country_modifier = {
+				name = "aba_conversion_zeal"
+				duration = 3650
+			}
+		hidden_effect = {
+			add_prestige = 50
+			add_stability = 1
+		}	
+	}
+
+	option = { #Go Back
+		name = ABA_tcr_event.7.f
+		ai_chance = { factor = 33 }
+		country_event = { id = ABA_tcr_event.6 }
+	}
+
+}
+
+#Ark of the Covenant
+country_event = {
+	id = ABA_tcr_event.8
+	title = ABA_tcr_event.8.t
+	desc = ABA_tcr_event.8.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = ABA_tcr_event.8.a
+		if = {
+			limit = {
+				piety = 0
+			}
+			add_piety = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { piety = 0 }
+			}
+			add_piety = -0.25
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = "nizzarid_ark_covenant1"
+				duration = -1
+			}
+		}
+		custom_tooltip = NIZZARID_COPTIC_UNREST
+		tooltip = {
+			add_province_modifier = {
+				name = "nizzarid_stole_arc"
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					religion = coptic
+				}
+				add_province_modifier = {
+					name = "nizzarid_stole_arc"
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ABA_tcr_event.8.b
+		add_country_modifier = {
+				name = naz_integrated_copts
+				duration = -1
+			}
+		1227 = {
+			add_province_modifier = {
+				name = "nizzarid_ark_covenant2"
+				duration = -1
+			}
+		}
+		custom_tooltip = NIZZARID_COPTIC_UNREST2
+		tooltip = {
+			add_province_modifier = {
+				name = "nizzarid_kept_arc"
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					religion = coptic
+				}
+				add_province_modifier = {
+					name = "nizzarid_kept_arc"
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+#Capture of Khanbaliq
+country_event = {
+	id = ABA_tcr_event.9
+	title = ABA_tcr_event.9.t
+	desc = ABA_tcr_event.9.d
+	picture = AB_DRAGON_eventPicture
+	
+	is_triggered_only = yes 
+
+	major = yes
+	
+	option = {
+		name = ABA_tcr_event.9.a
+		change_monarch_points_or_power = {
+			points = 1
+			power = mil
+		}
+		add_prestige = 25
+		add_legitimacy = 25
+		add_country_modifier = {
+			name = "temugid_china_conquest"
+			duration = 9125
+		}
+	}
+}
+
+#Sinification of Tocharia
+country_event = {
+	id = ABA_tcr_event.10
+	title = ABA_tcr_event.10.t
+	desc = ABA_tcr_event.10.d
+	picture = IMPERIAL_SEAL_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = ABA_tcr_event.10.a
+		custom_tooltip = ABA_sinification_tocharian_tt
+		override_country_name = aba_tcr_yuezhi
+		hidden_effect = {
+			ROOT = {
+				change_primary_culture = aba_sino_tocharian_culture
+				set_heir_culture = aba_sino_tocharian_culture
+				set_ruler_culture = aba_sino_tocharian_culture
+			}
+			every_owned_province = {
+				limit = { 
+					culture = Tocharian
+				}
+				change_culture = aba_sino_tocharian_culture
+			}
+			1816 = {
+				change_culture = aba_sino_tocharian_culture
+			}
+			5123 = {
+				change_culture = aba_sino_tocharian_culture
+			}
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = mil
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = dip
+		}
+		change_monarch_points_or_power = {
+			points = 1
+			power = adm
+		}
+		ROOT = {
+		set_dynasty = "Yuezhi"
+		}
+		add_prestige = 25
+		add_legitimacy = 25
+	}
+}
+
+#Reunification of China
+country_event = {
+	id = ABA_tcr_event.11
+	title = ABA_tcr_event.11.t
+	desc = ABA_tcr_event.11.d
+	picture = CHINESE_GENERAL_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = ABA_tcr_event.11.a
+		override_country_name = aba_tcr_great_yuezhi
+		if = {
+			limit = {
+				ROOT = {
+					is_emperor_of_china = yes
+				}
+			}
+			add_mandate = 25
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					ROOT = {
+						is_emperor_of_china = yes
+					}
+				}
+			}
+			add_government_reform = ABA_tcr_celestial_empire
+		}
+		add_country_modifier = {
+			name = yua_reunited
+			duration = -1
+		}
+	}
+}
+
+#Masters of India
+country_event = {
+	id = ABA_tcr_event.12
+	title = ABA_tcr_event.12.t
+	desc = ABA_tcr_event.12.d
+	picture = CHINESE_GENERAL_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = ABA_tcr_event.12.a
+		override_country_name = ABA_tcr_kushan_empire
+		custom_tooltip = ZUN_PP
+		hidden_effect = {
+			add_power_projection = {
+				type = ZUN_perma_pp
+				amount = 50
+			}
+		}
+		add_country_modifier = {
+			name = "zun_master_india"
+			duration = -1
+		}
+	}
+
+	option = {
+		name = ABA_tcr_event.12.b
+		custom_tooltip = ZUN_PP
+		hidden_effect = {
+			add_power_projection = {
+				type = ZUN_perma_pp
+				amount = 50
+			}
+		}
+		add_country_modifier = {
+			name = "zun_master_india"
+			duration = -1
+		}
+	}
+}
+
+#Rajput Regiments
+country_event = {
+	id = ABA_tcr_event.13
+	title = ABA_tcr_event.13.t
+	desc = ABA_tcr_event.13.d
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = ABA_tcr_rajput_expansion_event
+	}
+	
+	option = {
+		name = ABA_tcr_event.13.a
+		custom_tooltip = ABA_tcr_rajput_expansion_tt
+		hidden_effect = {
+			capital_scope = {
+				for = {
+					amount = 10
+					effect = "
+						rajput_infantry = ROOT
+					"
+				}
+			}
+		}
+		country_event = {
+			id = ABA_tcr_event.13
+			days = 7300
+		}
+	}
+}
+
+country_event = {
+	id = ABA_tcr_event.14
+	title = ABA_tcr_event.14.t
+	desc = ABA_tcr_event.14.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	is_triggered_only = yes 
+	major = yes
+	
+	option = {
+		name = ABA_tcr_event.14.a
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		add_adm_power = 100
+		
+		custom_tooltip = " "
+		385 = {
+			if = {
+				limit = {
+					NOT = { has_tax_building_trigger = yes }
+				}
+				add_building = cathedral
+			}
+			else = {
+				add_or_upgrade_tax_building = yes
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			custom_tooltip = " "
+			custom_tooltip = ABA_tcr_mecca_church_tt
+			set_country_flag = BYZ_may_use_kaaba
+		}
+	}
+	
+	option = {
+		name = ABA_tcr_event.14.b
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		add_dip_power = 100
+		
+		custom_tooltip = " "
+		
+		custom_tooltip = ABA_tcr_relations_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = muslim
+				}
+				add_opinion = {
+					who = ROOT 
+					modifier = BYZ_spared_masjid
+				}
+			}
+		}
+		
+		custom_tooltip = " "
+		
+		385 = {
+			add_province_modifier = {
+				name = BYZ_masjid_local_pilgrimages
+				duration = -1
+			}
+		}
+	}
+}
+
+#Fall of Kyoto
+country_event = {
+	id = ABA_tcr_event.15
+	title = ABA_tcr_event.15.t
+	desc = ABA_tcr_event.15.d
+	picture = SENGOKU_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ABA_tcr_event.15.a
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		add_country_modifier = {
+			name = yua_control_japan
+			duration = -1
+		}
+		japan_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+
+}
+
+#City of the World's Desire 
+country_event = {
+	id = ABA_tcr_event.16
+	title = ABA_tcr_event.16.t
+	desc = ABA_tcr_event.16.d
+	picture = AB_JUSTINIAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = ABA_tcr_event.16.a
+		change_monarch_points_or_power = {
+			points = 1
+			power = mil
+		}
+		151 = {
+			add_devastation = 50
+		}
+		add_country_modifier = {
+			name = "per_nightmare"
+			duration = -1
+		}
+		if = {
+			limit = {
+				ROOT = {
+					religion = christian
+				}
+			}
+			151 = {
+				add_great_project_tier = {
+					type = hagia_sophia
+					tier = 1
+				}	
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					religion = muslim
+				}
+			}
+			151 = {
+				add_great_project_tier = {
+					type = hagia_sophia
+					tier = 1
+				}	
+			}
+			151 = {
+				add_great_project_tier = {
+					type = sultan_ahmed_mosque
+					tier = 1
+				}	
+			}
+		}
+		else = {
+		}
+	}
+
+}
+
+#Temple of Mathura 
+country_event = {
+	id = ABA_tcr_event.17
+	title = ABA_tcr_event.17.t
+	desc = ABA_tcr_event.17.d
+	picture = SHWEDAGON_PAGON_eventPicture
+	
+	is_triggered_only = yes
+	
+	#Buddhist/Hindu Option
+	option = {
+		name = ABA_tcr_event.17.a
+		trigger = {
+		OR = {
+			ROOT = {
+					religion = buddhism
+				}
+			ROOT = {
+					religion = hinduism
+				}
+			ROOT = {
+					religion = vajrayana
+				}	
+			ROOT = {
+					religion = mahayana
+				}
+			  }
+			}
+			524 = {
+				add_great_project = {
+				type = ABA_temple_of_mathura_buddhist_hindu
+				instant = yes
+				}
+			}
+			524 = {
+			add_great_project_tier = {
+					type = ABA_temple_of_mathura_buddhist_hindu
+					tier = 1
+				}
+			}
+		}
+
+		#Christian Option
+		option = {
+		name = ABA_tcr_event.17.b
+		trigger = {
+			ROOT = {
+					religion = nestorian
+				}
+			  }
+			524 = {
+				add_great_project = {
+				type = ABA_temple_of_mathura_christian
+				instant = yes
+				}
+			}
+			524 = {
+			add_great_project_tier = {
+					type = ABA_temple_of_mathura_christian
+					tier = 1
+				}
+			}
+		}
+
+		#Zorostrian Option
+		option = {
+		name = ABA_tcr_event.17.c
+		trigger = {
+			ROOT = {
+					religion = zoroastrian
+				}
+			  }
+			524 = {
+				add_great_project = {
+				type = ABA_temple_of_mathura_zoroastrianism
+				instant = yes
+				}
+			}
+			524 = {
+			add_great_project_tier = {
+					type = ABA_temple_of_mathura_zoroastrianism
+					tier = 1
+				}
+			}
+		}
+	}
+
+
+#Religious Policy  
+country_event = {
+	id = ABA_tcr_event.18
+	title = ABA_tcr_event.18.t
+	desc = ABA_tcr_event.18.d
+	picture = muslimgfx_RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { #tolerance
+		name = ABA_tcr_event.18.a
+		add_country_modifier = {
+			name = aba_tcr_tolerance
+			duration = -1
+		}
+		
+	}
+
+	option = {
+		name = ABA_tcr_event.18.b
+		add_country_modifier = {
+			name = aba_tcr_strict_religious_policy
+			duration = -1
+		}
+	}
+
+}
+

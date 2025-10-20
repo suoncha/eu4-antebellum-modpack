@@ -7,6 +7,10 @@ monarchy = {
 				aba_shahi_diwan
 				aba_GLH_golden_tsardom
 				ABA_danubian_federation
+				ABA_kushan_confederacy
+				ABA_tcr_persianempire
+				ABA_tcr_yuezhi_warlord
+				ABA_tcr_celestial_empire
 				# ]]]
 				feudalism_reform
 				autocracy_reform

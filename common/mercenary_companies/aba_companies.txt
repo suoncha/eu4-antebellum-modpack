@@ -1,0 +1,49 @@
+ABA_tcr_gorkhas_merc_1 = {
+    regiments_per_development = 0.055
+    cavalry_weight = 0.3
+	artillery_weight = 0.3 
+	cavalry_cap = 8
+    home_province = 557
+	cost_modifier = 0.75
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		OR = {
+			has_country_flag = ABA_tcr_gorkhas_unlocked
+			mission_completed = tcr_gorkhas
+		}
+		tag =  TCR
+	}
+	modifier = { 
+		shock_damage_received = -0.15
+		shock_damage = 0.15
+		land_morale = 0.15
+		discipline = 0.05
+		land_attrition = -0.20
+		 }
+}
+
+ABA_tcr_gorkhas_merc_2 = {
+    regiments_per_development = 0.055
+    cavalry_weight = 0.3
+	artillery_weight = 0.3 
+	cavalry_cap = 8
+    home_province = 4485
+	cost_modifier = 0.75
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		OR = {
+			has_country_flag = ABA_tcr_gorkhas_unlocked
+			mission_completed = tcr_gorkhas
+		}
+		tag =  TCR
+	}
+	modifier = { 
+		fire_damage_received = -0.15
+		fire_damage = 0.15
+		land_morale = 0.15
+		discipline = 0.05
+		land_attrition = -0.20
+		 }
+}
