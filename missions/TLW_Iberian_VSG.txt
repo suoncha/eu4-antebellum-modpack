@@ -12,6 +12,42 @@ vsg_gal_first = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_suebi_markets = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_suebi_pacts = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_suebi_markets vsg_unique_suebi_festivals }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_gal_second = {
@@ -27,6 +63,24 @@ vsg_gal_second = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_suebi_festivals = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_gal_third = {
@@ -42,6 +96,42 @@ vsg_gal_third = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_suebi_hostels = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_suebi_bards = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_suebi_festivals vsg_unique_suebi_hostels }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_gal_fourth = {
@@ -57,6 +147,42 @@ vsg_gal_fourth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_suebi_galleys = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_suebi_sailors = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { vsg_unique_suebi_galleys vsg_unique_suebi_routes }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_gal_fifth = {
@@ -72,6 +198,60 @@ vsg_gal_fifth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_suebi_routes = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_suebi_azores = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { vsg_unique_suebi_routes }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_suebi_cape_verde = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_suebi_azores }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_asu_first = {
@@ -87,6 +267,60 @@ vsg_asu_first = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_visigoths_training = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_visigoths_lancers = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { vsg_unique_visigoths_training }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_visigoths_cavalry = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_visigoths_lancers vsg_unique_visigoths_armor }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_asu_second = {
@@ -102,6 +336,24 @@ vsg_asu_second = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_visigoths_armor = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_asu_third = {
@@ -117,6 +369,42 @@ vsg_asu_third = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_visigoths_estates = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_visigoths_councils = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { vsg_unique_visigoths_estates vsg_unique_visigoths_titles }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_asu_fourth = {
@@ -132,6 +420,42 @@ vsg_asu_fourth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_visigoths_titles = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_visigoths_tournaments = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_visigoths_titles vsg_unique_visigoths_scriptoria }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_asu_fifth = {
@@ -147,6 +471,42 @@ vsg_asu_fifth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_visigoths_scriptoria = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_visigoths_scribes = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_visigoths_scriptoria }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_nav_first = {
@@ -162,6 +522,60 @@ vsg_nav_first = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_vasconia_watchtowers = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_vasconia_castros = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { vsg_unique_vasconia_watchtowers }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_vasconia_bastions = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_vasconia_castros vsg_unique_vasconia_trebuchets }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_nav_second = {
@@ -177,6 +591,42 @@ vsg_nav_second = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_vasconia_trebuchets = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_vasconia_sappers = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_vasconia_trebuchets }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_nav_third = {
@@ -192,6 +642,42 @@ vsg_nav_third = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_vasconia_bands = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_vasconia_companies = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_vasconia_bands vsg_unique_vasconia_trebuchets }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_nav_fourth = {
@@ -207,6 +693,24 @@ vsg_nav_fourth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_vasconia_wool = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 vsg_nav_fifth = {
@@ -222,6 +726,42 @@ vsg_nav_fifth = {
 		has_country_flag = ab_missionswitch_rome_default
 	}
 	has_country_shield = yes
+
+	vsg_unique_vasconia_euskara = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
+
+	vsg_unique_vasconia_festivals = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { vsg_unique_vasconia_euskara vsg_unique_vasconia_wool }
+		
+		provinces_to_highlight = {
+			#
+		}
+
+		trigger = {
+			#
+		}
+		
+		effect = {
+			#
+		}
+	}
 }
 
 ### VISIGOTHS ##
