@@ -4,4 +4,34 @@
         name = "GFX_great_project_ABA_ZUN_sahar_bahar"    
         texturefile  = "gfx//interface//great_projects//great_project_ABA_ZUN_sahar_bahar.dds"
     }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_ahin_posh"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_ahin_posh.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_chashma_i_shir"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_chashma_i_shir.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_temple_of_mathura_buddhist_hindu"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_temple_of_mathura_buddhist_hindu.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_temple_of_mathura_christian"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_temple_of_mathura_christian.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_temple_of_mathura_zoroastrianism"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_temple_of_mathura_zoroastrianism.dds"
+    }
+
+     spriteType = {
+        name = "GFX_great_project_ABA_kizil_caves"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_kizil_caves.dds"
+    }
 }

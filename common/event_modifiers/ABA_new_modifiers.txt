@@ -241,7 +241,7 @@ aba_zun_gunpowder = {
     infantry_fire = 0.25
     fire_damage = 0.10
     infantry_cost = -0.10
-    allowed_rajput_fraction = 0.25
+    allowed_rajput_fraction = 0.10
 }
 
 aba_zun_malacca = {
@@ -346,4 +346,298 @@ aba_bul_kazan_accepted = {
     local_manpower_modifier = 0.33
     local_sailors_modifier = 0.33
     trade_goods_size_modifier = 0.25
+}
+
+####### TCR Modifiers
+
+aba_conversion_zeal = {
+    global_missionary_strength = 0.10
+    missionaries = 1
+}
+
+aba_tcr_desert_training = {
+    land_attrition = -0.10
+    movement_speed = 0.05
+}
+
+aba_tcr_zamburak = {
+    artillery_cost = -0.15
+    fire_damage = 0.05
+}
+
+#province modifier 
+aba_tcr_manchurian_mines = {
+    local_production_efficiency = 0.25
+    local_development_cost = -0.10
+}
+
+#province modifier 
+aba_tcr_tea = {
+    local_production_efficiency = 0.25
+    trade_goods_size_modifier = 0.25
+    local_development_cost = -0.10
+
+}
+
+#province modifier
+aba_tcr_chinese_sec = {
+    local_development_cost = -0.15
+    local_production_efficiency = 0.10
+    province_trade_power_modifier = 0.15
+}
+
+#province modifier 
+aba_tcr_purushapura = {
+    allowed_num_of_manufactories = 2
+    development_cost = -0.10
+    allowed_num_of_buildings = 2
+    local_prosperity_growth = 0.25
+}
+
+#province modifier 
+aba_tcr_west_indian_ports = {
+    local_institution_spread = 0.1
+   trade_goods_size_modifier = 0.25
+   local_center_of_trade_upgrade_cost = -0.33
+   province_trade_power_modifier = 0.1
+}
+
+#province modifier 
+aba_tcr_rebuild_parsa = {
+    allowed_num_of_manufactories = 2
+    development_cost = -0.10
+    allowed_num_of_buildings = 2
+    local_great_project_upgrade_cost = -0.25
+    local_great_project_upgrade_time = -0.1
+    local_prosperity_growth = 0.25
+}
+
+aba_tcr_banners = {
+    has_banners = yes
+    amount_of_banners = 0.10
+}
+
+aba_tcr_banners_unlocked_prov = {
+    local_has_banners = yes
+}
+
+aba_tcr_china_gunpowder_empire = {
+    infantry_fire = 0.20
+    fire_damage = 0.10
+    infantry_cost = -0.10
+}
+
+aba_tcr_new_coinage = {
+    inflation_action_cost = -0.1
+    inflation_reduction = 0.05
+    global_tax_modifier = 0.10
+    prestige_decay = -0.5
+}
+
+aba_tcr_import_weapons = {
+    global_institution_spread = 0.1
+    mil_tech_cost_modifier = -0.05
+}
+
+aba_tcr_foreign_officiers = {
+    global_institution_spread = 0.1
+    free_leader_pool = 1
+    leader_cost = -0.10
+    drill_gain_modifier = 0.10
+    drill_decay_modifier = -0.10
+}
+
+aba_tcr_military_school = {
+    army_tradition_decay = -0.01
+    army_tradition = 1
+    army_tradition_from_battle = 0.50
+    yearly_army_professionalism = 0.03
+    special_unit_forcelimit = 0.10
+    special_unit_cost_modifier = -0.2
+}
+
+aba_tcr_selective_borrowing = {
+    institution_spread_from_true_faith = 0.25
+    idea_cost = -0.05
+}
+
+aba_tcr_jai_hind = {
+    	land_morale = 0.05
+        morale_damage_received = -0.05
+        recover_army_morale_speed = 0.10
+        warscore_from_battles_modifier = 0.1
+}
+
+aba_tcr_center_of_education = {
+    global_institution_spread = 0.10
+    free_policy = 1
+}
+
+aba_tcr_center_of_education_capital = {
+    local_development_cost = -0.10
+    institution_growth = 4
+}
+
+ABA_trc_commerical_giant = {
+    global_trade_power = 0.10
+    merchants = 1
+}
+
+aba_tcr_unlocked_immortals = {
+    has_carolean = yes 
+    amount_of_carolean = 10
+}
+
+#province modifier
+aba_tcr_unlocked_immortals_prov = {
+    local_has_carolean = yes
+}
+
+aba_tcr_maritime_dominance = {
+    naval_morale = 0.05
+    trade_efficiency = 0.10
+}
+
+aba_tcr_coromandel_trade = {
+    trade_goods_size_modifier = 0.25
+    global_trade_power = 0.10
+}
+
+ABA_tcr_kushan_confederacy_modifier = {
+    manpower_in_accepted_culture_provinces = 0.15
+    tolerance_of_heathens_capacity = 2
+    tolerance_of_heretics_capacity = 2
+    tolerance_heretic = 1
+    tolerance_heathen = 1
+    religious_unity = 0.35
+}
+
+aba_tcr_great_works = {
+    great_project_upgrade_cost = -0.25
+    great_project_upgrade_time = -0.15
+    build_time = -0.25
+    build_cost = -0.1
+}
+
+aba_tcr_turkmen_mercs = {
+    mercenary_manpower = 0.15
+    mercenary_discipline = 0.05
+    mercenary_cost = -0.20
+}
+
+aba_tcr_combined_arms = {
+    cavalry_power = 0.05
+    artillery_power = 0.05
+    infantry_power = 0.05
+    cavalry_cost = -0.10
+    infantry_cost = -0.10
+    artillery_cost = -0.10
+    cav_to_inf_ratio = 0.10
+}
+
+#Province modifier
+aba_tcr_new_capital = {
+local_development_cost = -0.15
+local_manpower_modifier = 0.33
+local_tax_modifier = 0.33
+allowed_num_of_buildings = 2
+allowed_num_of_manufactories = 2
+}
+
+#Province modifier
+aba_tcr_taiwan_port = {
+allowed_num_of_buildings = 1
+local_development_cost = -0.10
+trade_value_modifier = 0.15
+}
+
+aba_tcr_into_the_beyond = {
+    may_explore = yes
+    colonists = 1
+    colonist_placement_chance = 0.10
+    range = 0.25
+}
+
+aba_tcr_confucian_education = {
+    idea_cost = -0.075
+    harmonization_speed = 0.2
+    yearly_harmony = 0.25
+	religion = yes
+}
+
+aba_tcr_america = {
+    colonist_placement_chance = 0.20
+    trade_steering = 0.20
+}
+
+#Province Modifier 
+aba_tcr_mathura = {
+    allowed_num_of_manufactories = 2
+    development_cost = -0.10
+    allowed_num_of_buildings = 2
+    local_great_project_upgrade_cost = -0.25
+    local_great_project_upgrade_time = -0.1
+    local_prosperity_growth = 0.25
+}
+
+#Province Modifier 
+aba_tcr_sri_lanka = {
+    local_production_efficiency = 0.25
+    trade_value_modifier = 0.25
+    local_tax_modifier = 0.20
+}
+
+aba_tcr_tolerance = {
+    no_religion_penalty = yes
+    relation_with_heretics = 20
+    relation_with_heathens = 20
+    religious_unity = 0.25
+    tolerance_heretic = 2
+    tolerance_heathen = 2
+    tolerance_of_heathens_capacity = 1
+    tolerance_of_heretics_capacity = 1
+
+}
+
+aba_tcr_strict_religious_policy = {
+    missionaries = 2
+    global_missionary_strength = 0.03
+    enforce_religion_cost = -0.25
+    warscore_cost_vs_other_religion = -0.15
+    same_religion_advisor_cost = -0.2
+    extra_manpower_at_religious_war = yes
+    tolerance_heretic = -2
+    tolerance_heathen = -2
+    tolerance_of_heretics_capacity = -1
+    tolerance_of_heathens_capacity = -1
+}
+
+aba_tcr_tyrant = {
+    yearly_corruption = -0.05
+    yearly_absolutism = 0.1
+    max_absolutism = 10
+    max_absolutism_effect = 0.1
+}
+
+#Province Modifier 
+aba_tcr_rebuild_bactra = {
+    allowed_num_of_manufactories = 2
+    development_cost = -0.10
+    allowed_num_of_buildings = 2
+    local_great_project_upgrade_cost = -0.25
+    local_great_project_upgrade_time = -0.1
+    local_prosperity_growth = 0.25
+}
+
+ABA_TCR_Legacy_of_Alexander = {
+    	cavalry_power = 0.05
+        infantry_power = 0.05
+        artillery_power = 0.05
+        cavalry_flanking = 0.10
+        artillery_levels_available_vs_fort = 1
+}
+
+aba_tcr_decimal_system = {
+    land_maintenance_modifier = -0.10
+    land_forcelimit_modifier = 0.10
 }
