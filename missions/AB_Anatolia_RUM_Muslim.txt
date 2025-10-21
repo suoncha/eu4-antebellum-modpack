@@ -3301,7 +3301,10 @@ ab_rum_muslim_second_rome = {
 		trigger = {
 			ural_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		
@@ -3368,13 +3371,10 @@ ab_rum_muslim_second_rome = {
 		provinces_to_highlight = {
 			owner = {
 				technology_group = western
-				OR = {
-					NOT = { alliance_with = ROOT }
-					NOT = {
-						has_opinion = {
-							who = ROOT
-							value = 200
-						}
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 200
 					}
 				}
 			}
@@ -3382,7 +3382,6 @@ ab_rum_muslim_second_rome = {
 		
 		trigger = { 
 			any_country = {
-				alliance_with = ROOT
 				technology_group = western
 				has_opinion = {
 					who = ROOT
@@ -3802,7 +3801,7 @@ ab_rum_muslim_third_rome = {
 
 	rum_muslim_restored_rome = {
 		icon = mission_westrome
-		required_missions = { rum_muslim_muskets rum_muslim_money }
+		required_missions = { }
 		position = 16
 				
 		trigger = {

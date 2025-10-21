@@ -2170,12 +2170,17 @@ ab_rum_zoro_fourth = {
 		
 		provinces_to_highlight = {
 			superregion = india_superregion
-			has_fort_building_trigger = no
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_fort_building_trigger = yes
+				}
+			}
 		}
 		
 		trigger = {
 			army_tradition = 75
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
 				superregion = india_superregion
 				has_fort_building_trigger = yes
@@ -2248,11 +2253,11 @@ ab_rum_zoro_fourth = {
 		
 		provinces_to_highlight = {
 			superregion = india_superregion
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 100
 				superregion = india_superregion
 			}
@@ -3520,7 +3525,10 @@ ab_rum_zoro_second_rome = {
 		trigger = {
 			ural_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		
@@ -3587,13 +3595,10 @@ ab_rum_zoro_second_rome = {
 		provinces_to_highlight = {
 			owner = {
 				technology_group = western
-				OR = {
-					NOT = { alliance_with = ROOT }
-					NOT = {
-						has_opinion = {
-							who = ROOT
-							value = 200
-						}
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 200
 					}
 				}
 			}
@@ -3601,7 +3606,6 @@ ab_rum_zoro_second_rome = {
 		
 		trigger = { 
 			any_country = {
-				alliance_with = ROOT
 				technology_group = western
 				has_opinion = {
 					who = ROOT
@@ -4200,7 +4204,7 @@ ab_rum_zoro_third_rome = {
 
 	rum_zoroastrian_restored_rome = {
 		icon = mission_westrome
-		required_missions = { rum_zoroastrian_muskets rum_zoroastrian_money }
+		required_missions = { }
 		position = 18
 				
 		trigger = {
