@@ -431,7 +431,7 @@ aba_tcr_new_coinage = {
     inflation_action_cost = -0.1
     inflation_reduction = 0.05
     global_tax_modifier = 0.10
-    prestige_decay = -0.5
+    prestige_decay = -0.05
 }
 
 aba_tcr_import_weapons = {

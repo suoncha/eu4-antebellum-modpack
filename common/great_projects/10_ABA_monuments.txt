@@ -28,14 +28,13 @@ ABA_ZUN_sahar_bahar = {
 	#can we build it?
 	build_trigger = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_ZUN_sahar_bahar_allowed_tt
+					has_country_flag = ABA_ZUN_sahar_bahar_allowed
+				}
 				OR = {
 					tag = ROB
 					was_tag = ROB
-				}
-				OR = {
-					mission_completed = zunp_sah_bahar 
-					mission_completed = zuni_sah_bahar
-					mission_completed = zun_sah_bahar
 				}
 			}
 			province_is_or_accepts_religion = {
@@ -60,16 +59,15 @@ ABA_ZUN_sahar_bahar = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_ZUN_sahar_bahar_allowed_tt
+					has_country_flag = ABA_ZUN_sahar_bahar_allowed
+				}
 				OR = {
 					tag = ROB
 					was_tag = ROB
 				}
 				religion = zunist 
-				OR = {
-					mission_completed = zunp_sah_bahar 
-					mission_completed = zuni_sah_bahar
-					mission_completed = zun_sah_bahar
-				}
 			}
 			province_is_or_accepts_religion = {
 				religion = zunist
@@ -84,16 +82,15 @@ ABA_ZUN_sahar_bahar = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_ZUN_sahar_bahar_allowed_tt
+					has_country_flag = ABA_ZUN_sahar_bahar_allowed
+				}
 				OR = {
 					tag = ROB
 					was_tag = ROB
 				}
 				religion = zunist 
-				OR = {
-					mission_completed = zunp_sah_bahar 
-					mission_completed = zuni_sah_bahar
-					mission_completed = zun_sah_bahar
-				}
 			}
 			province_is_or_accepts_religion = {
 				religion = zunist
@@ -282,6 +279,10 @@ ABA_ahin_posh = {
 	#can we build it?
 	build_trigger = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_purushapura_ahin_posh_project_allowed_tt
+					has_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -289,12 +290,6 @@ ABA_ahin_posh = {
 					was_tag = SLH
 					was_tag = KRR
 					was_tag = KUC
-				}
-				OR = {
-					mission_completed = tcr_purushapura 
-				}
-				OR = {
-					has_country_flag = ABA_TCR_India
 				}
 			}
 			OR = {
@@ -325,11 +320,14 @@ ABA_ahin_posh = {
 					religion = mahayana
 				}
 			}
-	}
+		}
+    
 
 	#what to do when it's built
 	on_built = {
+	owner = {
 	add_splendor = 100
+	}
 	}
 	
 	#what to do when it's destroyed
@@ -341,6 +339,10 @@ ABA_ahin_posh = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_purushapura_ahin_posh_project_allowed_tt
+					has_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -348,12 +350,6 @@ ABA_ahin_posh = {
 					was_tag = SLH
 					was_tag = KRR
 					was_tag = KUC
-				}
-				OR = {
-					mission_completed = tcr_purushapura 
-				}
-				OR = {
-					has_country_flag = ABA_TCR_India
 				}
 			}
 		OR = {
@@ -391,6 +387,10 @@ ABA_ahin_posh = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_purushapura_ahin_posh_project_allowed_tt
+					has_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -398,12 +398,6 @@ ABA_ahin_posh = {
 					was_tag = SLH
 					was_tag = KRR
 					was_tag = KUC
-				}
-				OR = {
-					mission_completed = tcr_purushapura 
-				}
-				OR = {
-					has_country_flag = ABA_TCR_India
 				}
 			}
 			OR = {
@@ -596,6 +590,8 @@ ABA_ahin_posh = {
 		}
 	}
 }
+  
+  
 
 ABA_chashma_i_shir = {
 	# province it starts in
@@ -627,6 +623,10 @@ ABA_chashma_i_shir = {
 	#can we build it?
 	build_trigger = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_bactra_chashma_project_allowed_tt
+					has_country_flag = ABA_TCR_bactra_chashma_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -635,18 +635,14 @@ ABA_chashma_i_shir = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				OR = {
-					mission_completed = tcr_rebuild_bactra
-				}
-				OR = {
-					has_country_flag = ABA_TCR_Persia
-				}
 			}
 	}
 
 	#what to do when it's built
 	on_built = {
+	owner = {
 	add_splendor = 100
+	}
 	}
 	
 	#what to do when it's destroyed
@@ -658,6 +654,10 @@ ABA_chashma_i_shir = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_bactra_chashma_project_allowed_tt
+					has_country_flag = ABA_TCR_bactra_chashma_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -665,12 +665,6 @@ ABA_chashma_i_shir = {
 					was_tag = SLH
 					was_tag = KRR
 					was_tag = KUC
-				}
-				OR = {
-					mission_completed = tcr_rebuild_bactra
-				}
-				OR = {
-					has_country_flag = ABA_TCR_Persia
 				}
 			}
 		}
@@ -680,6 +674,10 @@ ABA_chashma_i_shir = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
+				custom_trigger_tooltip = {
+					tooltip = ABA_TCR_bactra_chashma_project_allowed_tt
+					has_country_flag = ABA_TCR_bactra_chashma_project_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -687,12 +685,6 @@ ABA_chashma_i_shir = {
 					was_tag = SLH
 					was_tag = KRR
 					was_tag = KUC
-				}
-				OR = {
-					mission_completed = tcr_rebuild_bactra
-				}
-				OR = {
-					has_country_flag = ABA_TCR_Persia
 				}
 			}
 		}
@@ -882,8 +874,10 @@ ABA_temple_of_mathura_buddhist_hindu = {
 	#can we build it?
 	build_trigger = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -892,9 +886,6 @@ ABA_temple_of_mathura_buddhist_hindu = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			OR = {
 			province_is_or_accepts_religion = {
@@ -940,8 +931,10 @@ ABA_temple_of_mathura_buddhist_hindu = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -950,9 +943,6 @@ ABA_temple_of_mathura_buddhist_hindu = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			OR = {
 			province_is_or_accepts_religion = {
@@ -989,8 +979,10 @@ ABA_temple_of_mathura_buddhist_hindu = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+			custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -999,9 +991,6 @@ ABA_temple_of_mathura_buddhist_hindu = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			OR = {
 			province_is_or_accepts_religion = {
@@ -1226,8 +1215,10 @@ ABA_temple_of_mathura_christian = {
 	#can we build it?
 	build_trigger = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1236,9 +1227,6 @@ ABA_temple_of_mathura_christian = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = nestorian
@@ -1262,8 +1250,10 @@ ABA_temple_of_mathura_christian = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1272,9 +1262,6 @@ ABA_temple_of_mathura_christian = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = nestorian
@@ -1289,8 +1276,10 @@ ABA_temple_of_mathura_christian = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1299,9 +1288,6 @@ ABA_temple_of_mathura_christian = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = nestorian
@@ -1504,8 +1490,10 @@ ABA_temple_of_mathura_zoroastrianism = {
 	#can we build it?
 	build_trigger = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1514,9 +1502,6 @@ ABA_temple_of_mathura_zoroastrianism = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = zoroastrian
@@ -1540,8 +1525,10 @@ ABA_temple_of_mathura_zoroastrianism = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1550,9 +1537,6 @@ ABA_temple_of_mathura_zoroastrianism = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = zoroastrian
@@ -1567,8 +1551,10 @@ ABA_temple_of_mathura_zoroastrianism = {
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
-				has_country_flag = ABA_TCR_India
-				mission_completed = tcr_temple_of_agra
+				custom_trigger_tooltip = {
+					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+					has_country_flag = ABA_tcr_built_mathura_temple_allowed
+				}
 				OR = {
 					tag = SLH
 					tag = KRR
@@ -1577,9 +1563,6 @@ ABA_temple_of_mathura_zoroastrianism = {
 					was_tag = KRR
 					was_tag = KUC
 				}
-				#OR = {
-				#	mission_completed = tcr_temple_of_agra 
-				#}
 			}
 			province_is_or_accepts_religion = {
 				religion = zoroastrian
