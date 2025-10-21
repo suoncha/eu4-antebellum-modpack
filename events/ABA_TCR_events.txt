@@ -1,4 +1,5 @@
 namespace = ABA_tcr_event
+normal_or_historical_nations = yes
 
 #Nexus of the World - Choose a direction
 country_event = {
@@ -7,6 +8,7 @@ country_event = {
 	desc = ABA_tcr_event.1.d
 	picture = CITY_DEVELOPMENT_eventPicture
 	is_triggered_only = yes
+
 	option = { #India
 		name = ABA_tcr_event.1.a
 		ai_chance = { factor = 33 }
@@ -17,8 +19,15 @@ country_event = {
 		change_technology_group = indian
 		change_unit_type = indian
 		add_government_reform = ABA_kushan_confederacy
-		
+		if = {
+ 				limit = { has_custom_ideas = no }
+ 				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		change_country_color = { 
+     	color = { 33  96  48 } 
+		}
 	}
+
 	option = { #Persia
 		name = ABA_tcr_event.1.b
 		ai_chance = { factor = 3 }
@@ -28,6 +37,13 @@ country_event = {
 		change_technology_group = iranian
 		change_unit_type = iranian
 		add_government_reform = ABA_tcr_persianempire
+		if = {
+ 				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+ 			}
+		change_country_color = { 
+     	color = { 86 17  62 }
+		}
 	}
 
 	option = { #China
@@ -40,8 +56,15 @@ country_event = {
 		change_technology_group = chinese
 		change_unit_type = chinese
 		add_government_reform = ABA_tcr_yuezhi_warlord
-	 }
+		if = {
+				limit = { has_custom_ideas = no }
+ 				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		change_country_color = { 
+     	color = { 249 191 1 }
+		}
 	}
+}
 
 
 #Indian Religion #1
@@ -1061,6 +1084,7 @@ country_event = {
 				}
 			  }
 			}
+			set_country_flag = ABA_tcr_built_mathura_temple_allowed
 			524 = {
 				add_great_project = {
 				type = ABA_temple_of_mathura_buddhist_hindu
@@ -1083,6 +1107,7 @@ country_event = {
 					religion = nestorian
 				}
 			  }
+			set_country_flag = ABA_tcr_built_mathura_temple_allowed  
 			524 = {
 				add_great_project = {
 				type = ABA_temple_of_mathura_christian
@@ -1105,6 +1130,7 @@ country_event = {
 					religion = zoroastrian
 				}
 			  }
+			set_country_flag = ABA_tcr_built_mathura_temple_allowed  
 			524 = {
 				add_great_project = {
 				type = ABA_temple_of_mathura_zoroastrianism

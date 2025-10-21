@@ -571,7 +571,7 @@ ab_persia_tcr_china_1 = {
 			tcr_indo_china_campaign
 		}
 		provinces_to_highlight = { 
-			region = malaya_region
+			area = malacca_area
 			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = { 
@@ -793,6 +793,7 @@ ab_persia_tcr_india_1 = {
 				}
 				custom_tooltip = ABA_TCR_purushapura_ahin_posh_project_tt
 				hidden_effect = {
+				set_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
 				578 = {
 					add_great_project = {
 						type = ABA_ahin_posh
@@ -1925,21 +1926,7 @@ ab_persia_tcr_2 = {
 				name = tcr_trade
 				duration = 7300
 			}
-			kyzylkum_area  = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			syr_darya_area  = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			balchasj_area  = {
+			central_asia_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -2071,6 +2058,13 @@ ab_persia_tcr_china_2 = {
 				}
 			}
 		}
+			korea_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			manchuria_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -2130,13 +2124,6 @@ ab_persia_tcr_china_2 = {
 			add_country_modifier = {
 				name = "yua_china_reconquest"
 				duration = 9125
-			}
-			xinan_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -3665,13 +3652,6 @@ ab_persia_tcr_china_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			mongolia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -3879,7 +3859,7 @@ ab_persia_tcr_china_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			vietnam_area = {
+			indo_china_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -4972,23 +4952,10 @@ ab_persia_tcr_persia_3 = {
 
 		effect = {
 			add_war_exhaustion = -3
+			add_mil_power = 50
 			add_country_modifier = {
 				name = per_march
 				duration = 5475
-			}
-			palestine_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			trans_jordan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -5710,6 +5677,28 @@ ab_persia_tcr_china_4 = {
 				name = "tcr_cutting"
 				duration = 5475
 			}
+			korea_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_hebei_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			hebei_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+
 		}
 	}
 
@@ -5792,8 +5781,8 @@ ab_persia_tcr_china_4 = {
 			}
 		}
 		effect = { 
-			custom_tooltip = abf_chi_japan_culture_convert_tt
-			set_country_flag = sinicized_japanese_culture_spread
+			custom_tooltip = abf_chi_japan_culture_convert_tcr_tt
+			set_country_flag = tcr_sinicized_japanese_culture_spread
 			country_event = { id = ABA_tcr_event.15 }
 		}
 	}
@@ -6451,21 +6440,7 @@ ab_persia_tcr_persia_4 = {
 				id = ab_persia.4
 			}
 			custom_tooltip = AB_EMPTY
-			aleppo_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			syria_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			syrian_desert_area = {
+			mashriq_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -7871,6 +7846,7 @@ ab_persia_tcr_perisa_5 = {
 		 }
 		 custom_tooltip = ABA_TCR_bactra_chashma_project_tt
 		 hidden_effect = {
+		 set_country_flag = ABA_TCR_bactra_chashma_project_allowed
 		 450 = {
 			add_great_project = {
 			type = ABA_chashma_i_shir

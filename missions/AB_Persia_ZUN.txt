@@ -4930,6 +4930,7 @@ ab_persia_zun_5 = {
 		 add_adm_power = -200
 		 custom_tooltip = ABA_ZUN_sahar_bahar_tt
 		 hidden_effect = {
+		 set_country_flag = ABA_ZUN_sahar_bahar_allowed
 				448 = {
 					add_great_project = {
 						type = ABA_ZUN_sahar_bahar

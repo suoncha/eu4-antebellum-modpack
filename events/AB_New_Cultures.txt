@@ -1324,6 +1324,37 @@ province_event = {
 
 }
 
+#Siniczed Japanese Spread for TCR
+province_event = {
+	id = ab_new_cultures.32
+	title = ab_new_cultures.32.t
+	desc = ab_new_cultures.32.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		religion = ROOT
+		owner = {
+			has_country_flag = tcr_sinicized_japanese_culture_spread
+		}
+		NOT = {
+			culture_group = sinico_japanese
+		}
+		OR = {
+		region = japan_region
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.32.a
+		change_culture = sinico_japanese
+	}
+}
 
 
 

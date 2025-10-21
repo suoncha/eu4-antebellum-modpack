@@ -82,6 +82,7 @@ ABA_tcr_celestial_empire_desc: "Having rejected the Mandate of Heaven but still 
 abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
 abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
 aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fusing §GIndian§! and §GAfghan§! ways of governance. We will recieve increased and unique rewards for assimilating Indian cultures!\n"
+abf_chi_japan_culture_convert_tcr_tt: "§YFusau§! culture will §Gnaturally spread§! throughout §YJapanese§! provinces of our §YReligion§!!"
 # IBE_PH_CULTURE: "The §YTornatrás§! culture will §Gnaturally spread§! throughout our §YCatholic Filipino§! provinces."
 # ADU_PH_CULTURE: "The §YMoro§! culture will §Gnaturally spread§! throughout our §YMuslim Filipino§! provinces." - TO DO 1.10
 # IBE_CH_CULTURE: "The §YHispano-Chinese§! culture will §Gnaturally spread§! throughout our §YCatholic Chinese§! provinces." - TO DO 1.10
@@ -146,6 +147,7 @@ ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlan
 ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
 ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
 aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
+
 #Tocharia
 abf_sinokorean_culture_convert_tt: "§YKorean§! culture will be moved to the §GChinese§! culture group."
 ABA_tcr_reward_coal_tt: "Two random provinces that are owned by §YTocharia§!, are §YMountain§! provinces, and produce §YLivestock§! or §YGrain§! will change their trade goods to §YCoal§!."
@@ -162,6 +164,10 @@ ABA_TCR_bactra_chashma_project_tt: "\nWe will construct the great palace and tem
 ABA_TCR_purushapura_ahin_posh_project_tt: "\nWe will construct the grand iron-covered monastery of §GAhin Posh§! in the newly restored city of §YPurushapura§!!\n"
 unlock_ABA_tcr_gorkhas_merc_1_tt: "\n§GMalaun Regiment§! mercenary company is now §Yavailable for hire§!!\n"
 unlock_ABA_tcr_gorkhas_merc_2_tt: "\n§GSecond Gorkha Rifles§! mercenary company is now §Yavailable for hire§!!\n"
+ABA_TCR_bactra_chashma_project_allowed_tt: "Allowed to construct §YChashma-i-Shir§!"
+ABA_tcr_built_mathura_temple_allowed_tt: "Allowed to construct §YThe Great Mathura Temple§!"
+ABA_TCR_purushapura_ahin_posh_project_allowed_tt: "Allowed to construct §YAhin Posh Tepe§!"
+ABA_ZUN_sahar_bahar_allowed_tt: "Allowed to construct §YSahar Bahar§!"
 
 #Events
 #Japan
@@ -323,7 +329,7 @@ aba_gal_release_celt_decision_desc:"After our conquest and conversion of the Bri
 
 #Monuments 
 ABA_ZUN_sahar_bahar: "Sah Bahar - Temple of the King"
-ABA_ahin_posh: "Ahan Posh Tape"
+ABA_ahin_posh: "Ahin Posh Tape"
 ABA_chashma_i_shir: "Chashma-i-Shir"
 ABA_temple_of_mathura_buddhist_hindu: "The Great Temple of Mathura"
 ABA_temple_of_mathura_christian: "The Great Cathedral of Mathura"
