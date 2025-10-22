@@ -169,7 +169,7 @@ vsg_gal_fourth = {
 	vsg_unique_suebi_sailors = {
 		icon = mission_unknown_mission
 		position = 2
-		required_missions = { vsg_unique_suebi_galleys vsg_unique_suebi_routes }
+		required_missions = { vsg_unique_suebi_galleys vsg_unique_suebi_map_atlantic }
 		
 		provinces_to_highlight = {
 			#
@@ -199,7 +199,7 @@ vsg_gal_fifth = {
 	}
 	has_country_shield = yes
 
-	vsg_unique_suebi_routes = {
+	vsg_unique_suebi_map_atlantic = {
 		icon = mission_unknown_mission
 		position = 1
 		required_missions = { }
@@ -217,10 +217,10 @@ vsg_gal_fifth = {
 		}
 	}
 
-	vsg_unique_suebi_azores = {
+	vsg_unique_suebi_new_frontier = {
 		icon = mission_unknown_mission
 		position = 2
-		required_missions = { vsg_unique_suebi_routes }
+		required_missions = { vsg_unique_suebi_map_atlantic }
 		
 		provinces_to_highlight = {
 			#
@@ -235,10 +235,10 @@ vsg_gal_fifth = {
 		}
 	}
 
-	vsg_unique_suebi_cape_verde = {
+	vsg_unique_suebi_route_asia = {
 		icon = mission_unknown_mission
 		position = 3
-		required_missions = { vsg_unique_suebi_azores }
+		required_missions = { vsg_unique_suebi_new_frontier }
 		
 		provinces_to_highlight = {
 			#
