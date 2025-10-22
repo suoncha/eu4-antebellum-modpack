@@ -4747,7 +4747,8 @@ ab_persia_tcr_india_3 = {
 			trc_confederal_army
 		}
 		provinces_to_highlight = { 
-			region = west_india_region
+			area = marwar_area
+			area = jangladesh_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = { 

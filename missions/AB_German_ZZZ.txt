@@ -2357,6 +2357,39 @@ ger_fourth_group = {
 					new_culture = Outremer_united_germanic
 					old_culture_1 = Outremer_germanic
 				}
+				#ABF New Cultures switch
+				replace_culture_with_effect = {
+					new_culture = schwarzmeerdeutsche_culture_new
+					old_culture_1 = schwarzmeerdeutsche_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = donauschwaben_culture_new
+					old_culture_1 = donauschwaben_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = mantaken_culture_new
+					old_culture_1 = mantaken_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = olender_culture_new
+					old_culture_1 = olender_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = jugoslawienschwaben_culture_new
+					old_culture_1 = jugoslawienschwaben_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = wolhynien_culture_new
+					old_culture_1 = wolhynien_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = weichseldeutsche_culture_new
+					old_culture_1 = weichseldeutsche_culture
+				}
+				replace_culture_with_effect = {
+					new_culture = russlanddeutsche_culture_new
+					old_culture_1 = russlanddeutsche_culture
+				}
 			}
 			hidden_effect = {
 				country_event = {
