@@ -20,6 +20,8 @@ country_event = {
 			complete_mission = zuni_forward
 			complete_mission = zuni_unite
 		}
+		set_country_flag = ab_unlock_mission_switch
+		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
 	}
 
 	option = {
@@ -33,6 +35,8 @@ country_event = {
 			complete_mission = zunp_forward
 			complete_mission = zunp_unite
 		}
+		set_country_flag = ab_unlock_mission_switch
+		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
 	}
 }
 
@@ -83,115 +87,31 @@ country_event = {
 	}
 }
 
-#Switch Focus Westward 
+#Mission Switch
 country_event = {
 	id = aba_zun_event.4
 	title = aba_zun_event.4.t
 	desc = aba_zun_event.4.d
 	picture = AB_ECLIPSE_eventPicture
 	
-	is_triggered_only = yes
-	
-	hidden = yes
+  is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = ABA_zun_persia_path
+            clr_country_flag = ABA_zun_india_path
+        }
+    }
 
 	option = {
 		name = aba_zun_event.4.a
-		clr_country_flag = ABA_zun_india_path
-		set_country_flag = ABA_zun_persia_path
-		swap_non_generic_missions = yes
-		complete_mission = zunp_overpower
-			complete_mission = zunp_zunbils
-			complete_mission = zunp_forward
-			complete_mission = zunp_unite
-		if = {
-			limit = {
-				mission_completed = zuni_rebuild
-			}
-			complete_mission = zunp_rebuild
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_court
-			}
-			complete_mission = zunp_court
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_cloth
-			}
-			complete_mission = zunp_cloth
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_caravans
-			}
-			complete_mission = zunp_caravans
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_silk_road
-			}
-			complete_mission = zunp_silk_road
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_industralize
-			}
-			complete_mission = zunp_industralize
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_cities
-			}
-			complete_mission = zunp_cities
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_shrines
-			}
-			complete_mission = zunp_shrines
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_wrath
-			}
-			complete_mission = zunp_wrath
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_sah_bahar
-			}
-			complete_mission = zunp_sah_bahar
-		}
-		if = {
-			limit = {
-				mission_completed = zuni_coast_2
-			}
-			complete_mission = zunp_coast_2
-		}
-	}
-}
-
-#Switch Focus Eastward 
-country_event = {
-	id = aba_zun_event.5
-	title = aba_zun_event.5.t
-	desc = aba_zun_event.5.d
-	picture = AB_ECLIPSE_eventPicture
-	
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	option = {
-		name = aba_zun_event.5.a
 		clr_country_flag = ABA_zun_persia_path
 		set_country_flag = ABA_zun_india_path
 		swap_non_generic_missions = yes
 		complete_mission = zuni_overpower
-			complete_mission = zuni_zunbils
-			complete_mission = zuni_forward
-			complete_mission = zuni_unite
+		complete_mission = zuni_zunbils
+		complete_mission = zuni_forward
+		complete_mission = zuni_unite
 		if = {
 			limit = {
 				mission_completed = zunp_rebuild
@@ -257,6 +177,82 @@ country_event = {
 				mission_completed = zunp_coast_2
 			}
 			complete_mission = zuni_coast_2
+		}
+	}
+
+	option = { #Persia Path
+		name = aba_zun_event.4.b
+		clr_country_flag = ABA_zun_india_path
+		set_country_flag = ABA_zun_persia_path
+		swap_non_generic_missions = yes
+		complete_mission = zunp_overpower
+		complete_mission = zunp_zunbils
+		complete_mission = zunp_unite
+		if = {
+			limit = {
+				mission_completed = zuni_rebuild
+			}
+			complete_mission = zunp_rebuild
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_court
+			}
+			complete_mission = zunp_court
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_cloth
+			}
+			complete_mission = zunp_cloth
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_caravans
+			}
+			complete_mission = zunp_caravans
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_silk_road
+			}
+			complete_mission = zunp_silk_road
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_industralize
+			}
+			complete_mission = zunp_industralize
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_cities
+			}
+			complete_mission = zunp_cities
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_shrines
+			}
+			complete_mission = zunp_shrines
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_wrath
+			}
+			complete_mission = zunp_wrath
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_sah_bahar
+			}
+			complete_mission = zunp_sah_bahar
+		}
+		if = {
+			limit = {
+				mission_completed = zuni_coast_2
+			}
+			complete_mission = zunp_coast_2
 		}
 	}
 }

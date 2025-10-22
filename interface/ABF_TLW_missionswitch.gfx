@@ -1,0 +1,9 @@
+
+spriteTypes = {
+   spriteType = {
+        name = "GFX_ab_switch_85_25"
+        texturefile = "gfx//interface//custom_gui//ab_switch_85_25.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        loadType = "INGAME"
+    }
+}
