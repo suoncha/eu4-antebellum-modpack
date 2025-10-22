@@ -586,7 +586,6 @@
  RUM_FASTER_ROMANIZATION_MUSLIM: "Increases the speed of §YRomanization§! by §G100.0%§! in §YLevantine§! provinces."
  RUM_FASTER_ROMANIZATION_ZORO: "Increases the speed of §YRomanization§! by §G100.0%§! in §YIranian§! provinces."
  ROME_CATHOLIC_ROMANIZATION_ON_DECISION: "Moves the §YByzantine§! and §Y[Root.Culture.GetGroupName]§! culture groups to the §YRoman§! culture group.\n\nThe §YRoman§! culture group will §Gnaturally spread§! throughout our provinces and Diocese provinces."
- AB_UNLOCK_MISSION_SWITCH: "§GUnlocks§! §YMission Switch§!, allows us to switch between different mission trees in the §YMission Tab§!."
 
 ### DIOCESE MANAGEMENT ###
  AB_OPEN_DIOCESE_MENU: "Open §YDiocese Management§!"
