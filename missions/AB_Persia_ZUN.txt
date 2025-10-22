@@ -3143,29 +3143,29 @@ ab_persia_zun_8 = {
 			}
 	}
 
-	zun_westward = {
-		icon = mam_persia
-		position = 12
-		required_missions = { zun_burma }
-		trigger = {
-		 NOT = {
-			has_country_flag = ABA_zun_persia_path_completed
-		 }
-		}
+	#  zun_westward = {
+	#  	icon = mam_persia
+	#  	position = 12
+	#  	required_missions = { zun_burma }
+	#  	trigger = {
+	#  	 NOT = {
+	#  		has_country_flag = ABA_zun_persia_path_completed
+	#  	 }
+	#  	}
 		
-		provinces_to_highlight = {
-		}
+	# 	provinces_to_highlight = {
+	#  	}
 		
-		effect = {
-		custom_tooltip = ABA_zun_shift_west_tt
-		set_country_flag = ABA_zun_india_path_completed
-		hidden_effect = {
-			country_event = {
-					id = aba_zun_event.4
-				}
-		  }
-		}
-	}
+	#  	effect = {
+	#  	custom_tooltip = ABA_zun_shift_west_tt
+	#  	set_country_flag = ABA_zun_india_path_completed
+	# 	hidden_effect = {
+	# 		country_event = {
+	#  				id = aba_zun_event.4
+	# 			}
+	#  	  }
+	# 	}
+	# }
 
 	zuni_rebuild = {
 		icon = mission_conquer_rewakantha
@@ -3886,29 +3886,29 @@ ab_persia_zun_4 = {
 		}
 	}
 
-	zun_eastward = {
-		icon = mam_persia
-		position = 13
-		required_missions = { zun_global_purification }
-		trigger = {
-		 NOT = {
-			has_country_flag = ABA_zun_india_path_completed
-		 }
-		}
+	# zun_eastward = {
+	# 	icon = mam_persia
+	# 	position = 13
+	# 	required_missions = { zun_global_purification }
+	# 	trigger = {
+	# 	 NOT = {
+	# 		has_country_flag = ABA_zun_india_path_completed
+	# 	 }
+	# 	}
 		
-		provinces_to_highlight = {
-		}
+	# 	provinces_to_highlight = {
+	# 	}
 		
-		effect = {
-		custom_tooltip = ABA_zun_shift_east_tt
-		set_country_flag = ABA_zun_persia_path_completed
-		hidden_effect = {
-			country_event = {
-					id = aba_zun_event.5
-				}
-		  }
-		}
-	}
+	# 	effect = {
+	# 	custom_tooltip = ABA_zun_shift_east_tt
+	# 	set_country_flag = ABA_zun_persia_path_completed
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 				id = aba_zun_event.5
+	# 			}
+	# 	  }
+	# 	}
+	# }
 
 	zunp_cities = {
 		icon = mission_market_place_with_asian_traders

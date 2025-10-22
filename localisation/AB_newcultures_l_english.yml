@@ -1,4 +1,7 @@
 ﻿l_english:
+#GUI Modding
+AB_UNLOCK_MISSION_SWITCH: "§GUnlocks§! §YMission Switch§!, allows us to switch between different mission trees in the §YMission Tab§!."
+
 # Cultures #
 #Asia
  japanese_nikkei: "Nikkei"
@@ -225,6 +228,12 @@ aba_zun_event.2.a: "The §YSynthesis§! of §JAfghan Culture§! and §OIndian§!
 aba_zun_event.2.b: "We shall enforce the §RZunist§! faith and §RAfghan§! culture on the world!"
 aba_zun_event.3.t: "Global Purification"
 aba_zun_event.3.d: "Our faith has guided us to victory, and now it is time to spread its light to the rest of the world. We will embark on a massive campaign to crush the false gods that many of these heretics and heathens pray to. We've already destroyed their holy sites, but this is simply not enough to show them the falsity of their ways. We will send missionaries to every corner of the globe, preaching the truth of Zun and converting those who are willing to listen. For those who refuse, we will show them the true power of our faith through force if necessary..."
+aba_zun_event.4.t: "Mission Switch"
+aba_zun_event.4.d: "We are able to swtich between differnet missions trees by choosing an option below. If there is only one option, that means we haven't unlocked other trees yet"
+aba_zun_event.4.a: "§OIndian§! Branch"
+aba_zun_event.4.b: "§YPersian§! Branch"
+
+
 ##### Bulgaria
 aba_bul_event.1.t: "Proclamation of the Third Bulgarian Empire"
 aba_bul_event.1.d: "With the fall of the perfidious Byzantine Empire, and our subsequent domination of the Balkans, we have come to see ourselves as the true heirs of something new. Not the inheritors of Rome or even a continuation of the Second Bulgarian Empire, but something entirely new. We are the Third Bulgarian Empire, a fusion of the old and new, a beacon of hope and strength in a world that is constantly changing. We will embrace our Slavic heritage, while also incorporating the best aspects of the cultures we have conquered. May a new age dawn of the Slavic World under our watchful eye, a new Rome in the East!"
