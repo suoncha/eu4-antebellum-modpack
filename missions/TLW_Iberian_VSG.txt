@@ -14,7 +14,7 @@ vsg_gal_first = {
 	has_country_shield = yes
 
 	vsg_unique_suebi_markets = {
-		icon = mission_unknown_mission
+		icon = mission_seize_north_sea_trade
 		position = 1
 		required_missions = { }
 		
@@ -32,7 +32,7 @@ vsg_gal_first = {
 	}
 
 	vsg_unique_suebi_pacts = {
-		icon = mission_unknown_mission
+		icon = mission_rb_into_ireland
 		position = 3
 		required_missions = { vsg_unique_suebi_markets vsg_unique_suebi_festivals }
 		
@@ -65,7 +65,7 @@ vsg_gal_second = {
 	has_country_shield = yes
 
 	vsg_unique_suebi_festivals = {
-		icon = mission_unknown_mission
+		icon = mission_forest
 		position = 2
 		required_missions = { }
 		
@@ -98,7 +98,7 @@ vsg_gal_third = {
 	has_country_shield = yes
 
 	vsg_unique_suebi_hostels = {
-		icon = mission_unknown_mission
+		icon = mission_santiago
 		position = 1
 		required_missions = { }
 		
@@ -116,7 +116,7 @@ vsg_gal_third = {
 	}
 
 	vsg_unique_suebi_bards = {
-		icon = mission_unknown_mission
+		icon = spa_infantes_aragon
 		position = 3
 		required_missions = { vsg_unique_suebi_festivals vsg_unique_suebi_hostels }
 		
@@ -149,7 +149,7 @@ vsg_gal_fourth = {
 	has_country_shield = yes
 
 	vsg_unique_suebi_galleys = {
-		icon = mission_unknown_mission
+		icon = mission_galleys_in_port
 		position = 1
 		required_missions = { }
 		
@@ -167,7 +167,7 @@ vsg_gal_fourth = {
 	}
 
 	vsg_unique_suebi_sailors = {
-		icon = mission_unknown_mission
+		icon = mission_plc_lifetime_of_war
 		position = 2
 		required_missions = { vsg_unique_suebi_galleys vsg_unique_suebi_map_atlantic }
 		
@@ -200,7 +200,7 @@ vsg_gal_fifth = {
 	has_country_shield = yes
 
 	vsg_unique_suebi_map_atlantic = {
-		icon = mission_unknown_mission
+		icon = mission_venus
 		position = 1
 		required_missions = { }
 		
@@ -218,7 +218,7 @@ vsg_gal_fifth = {
 	}
 
 	vsg_unique_suebi_new_frontier = {
-		icon = mission_unknown_mission
+		icon = mission_colonial
 		position = 2
 		required_missions = { vsg_unique_suebi_map_atlantic }
 		
@@ -236,7 +236,7 @@ vsg_gal_fifth = {
 	}
 
 	vsg_unique_suebi_route_asia = {
-		icon = mission_unknown_mission
+		icon = mission_west_african_ports
 		position = 3
 		required_missions = { vsg_unique_suebi_new_frontier }
 		
@@ -269,7 +269,7 @@ vsg_asu_first = {
 	has_country_shield = yes
 
 	vsg_unique_visigoths_training = {
-		icon = mission_unknown_mission
+		icon = mission_hundred_years_war
 		position = 1
 		required_missions = { }
 		
@@ -287,7 +287,7 @@ vsg_asu_first = {
 	}
 
 	vsg_unique_visigoths_lancers = {
-		icon = mission_unknown_mission
+		icon = mission_marwari_horses
 		position = 2
 		required_missions = { vsg_unique_visigoths_training }
 		
@@ -305,7 +305,7 @@ vsg_asu_first = {
 	}
 
 	vsg_unique_visigoths_cavalry = {
-		icon = mission_unknown_mission
+		icon = mission_pelagius
 		position = 3
 		required_missions = { vsg_unique_visigoths_lancers vsg_unique_visigoths_armor }
 		
@@ -338,7 +338,7 @@ vsg_asu_second = {
 	has_country_shield = yes
 
 	vsg_unique_visigoths_armor = {
-		icon = mission_unknown_mission
+		icon = mission_industrial_forging
 		position = 2
 		required_missions = { }
 		
@@ -371,7 +371,7 @@ vsg_asu_third = {
 	has_country_shield = yes
 
 	vsg_unique_visigoths_estates = {
-		icon = mission_unknown_mission
+		icon = spa_dominate_sevilla
 		position = 1
 		required_missions = { }
 		
@@ -389,7 +389,7 @@ vsg_asu_third = {
 	}
 
 	vsg_unique_visigoths_councils = {
-		icon = mission_unknown_mission
+		icon = spa_universal_monarchy
 		position = 2
 		required_missions = { vsg_unique_visigoths_estates vsg_unique_visigoths_titles }
 		
@@ -422,7 +422,7 @@ vsg_asu_fourth = {
 	has_country_shield = yes
 
 	vsg_unique_visigoths_titles = {
-		icon = mission_unknown_mission
+		icon = mission_plc_golden_liberty
 		position = 1
 		required_missions = { }
 		
@@ -440,7 +440,7 @@ vsg_asu_fourth = {
 	}
 
 	vsg_unique_visigoths_tournaments = {
-		icon = mission_unknown_mission
+		icon = mission_cossack_cavalry
 		position = 3
 		required_missions = { vsg_unique_visigoths_titles vsg_unique_visigoths_scriptoria }
 		
@@ -473,7 +473,7 @@ vsg_asu_fifth = {
 	has_country_shield = yes
 
 	vsg_unique_visigoths_scriptoria = {
-		icon = mission_unknown_mission
+		icon = found_the_vatican_library
 		position = 2
 		required_missions = { }
 		
@@ -491,7 +491,7 @@ vsg_asu_fifth = {
 	}
 
 	vsg_unique_visigoths_scribes = {
-		icon = mission_unknown_mission
+		icon = per_language_of_poetry
 		position = 3
 		required_missions = { vsg_unique_visigoths_scriptoria }
 		
@@ -524,7 +524,7 @@ vsg_nav_first = {
 	has_country_shield = yes
 
 	vsg_unique_vasconia_watchtowers = {
-		icon = mission_unknown_mission
+		icon = take_the_bishoprics
 		position = 1
 		required_missions = { }
 		
@@ -542,7 +542,7 @@ vsg_nav_first = {
 	}
 
 	vsg_unique_vasconia_castros = {
-		icon = mission_unknown_mission
+		icon = fortress_switzerland
 		position = 2
 		required_missions = { vsg_unique_vasconia_watchtowers }
 		
@@ -560,7 +560,7 @@ vsg_nav_first = {
 	}
 
 	vsg_unique_vasconia_bastions = {
-		icon = mission_unknown_mission
+		icon = fortress_of_belgrade
 		position = 3
 		required_missions = { vsg_unique_vasconia_castros vsg_unique_vasconia_trebuchets }
 		
@@ -593,7 +593,7 @@ vsg_nav_second = {
 	has_country_shield = yes
 
 	vsg_unique_vasconia_trebuchets = {
-		icon = mission_unknown_mission
+		icon = the_latin_empire
 		position = 2
 		required_missions = { }
 		
@@ -611,7 +611,7 @@ vsg_nav_second = {
 	}
 
 	vsg_unique_vasconia_sappers = {
-		icon = mission_unknown_mission
+		icon = mission_landsknecht_soldier
 		position = 3
 		required_missions = { vsg_unique_vasconia_trebuchets }
 		
@@ -644,7 +644,7 @@ vsg_nav_third = {
 	has_country_shield = yes
 
 	vsg_unique_vasconia_bands = {
-		icon = mission_unknown_mission
+		icon = mission_bandfalcon
 		position = 1
 		required_missions = { }
 		
@@ -662,7 +662,7 @@ vsg_nav_third = {
 	}
 
 	vsg_unique_vasconia_companies = {
-		icon = mission_unknown_mission
+		icon = mercenary_companies
 		position = 3
 		required_missions = { vsg_unique_vasconia_bands vsg_unique_vasconia_trebuchets }
 		
@@ -695,7 +695,7 @@ vsg_nav_fourth = {
 	has_country_shield = yes
 
 	vsg_unique_vasconia_wool = {
-		icon = mission_unknown_mission
+		icon = mission_rb_conquer_wales
 		position = 2
 		required_missions = { }
 		
@@ -728,7 +728,7 @@ vsg_nav_fifth = {
 	has_country_shield = yes
 
 	vsg_unique_vasconia_euskara = {
-		icon = mission_unknown_mission
+		icon = mission_spread_the_reformation
 		position = 1
 		required_missions = { }
 		
@@ -746,7 +746,7 @@ vsg_nav_fifth = {
 	}
 
 	vsg_unique_vasconia_festivals = {
-		icon = mission_unknown_mission
+		icon = mission_engelbrekt
 		position = 3
 		required_missions = { vsg_unique_vasconia_euskara vsg_unique_vasconia_wool }
 		

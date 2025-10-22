@@ -126,6 +126,22 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_nile.dds"
 	}
 	spriteType = {
+		name = "mission_levant"
+		texturefile = "gfx//interface//missions//mission_levant.dds"
+	}
+	spriteType = {
+		name = "mission_pelagius"
+		texturefile = "gfx//interface//missions//mission_pelagius.dds"
+	}
+	spriteType = {
+		name = "mission_santiago"
+		texturefile = "gfx//interface//missions//mission_santiago.dds"
+	}
+	spriteType = {
+		name = "mission_horn_africa"
+		texturefile = "gfx//interface//missions//mission_horn_africa.dds"
+	}
+	spriteType = {
 		name = "mission_cradle"
 		texturefile = "gfx//interface//missions//mission_cradle.dds"
 	}
