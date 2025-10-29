@@ -1,0 +1,46 @@
+LCT_ideas = {
+	start = {
+		global_autonomy = -0.1
+		global_manpower_modifier = 0.33
+	}
+	
+	bonus = {
+		governing_capacity_modifier = 0.1
+	}	
+
+	trigger = {
+		tag = LCT
+	}
+	free = yes
+	
+	LCT_first = {
+		extra_manpower_at_religious_war = yes
+		yearly_patriarch_authority = 0.01
+	}
+	LCT_second = {
+		production_efficiency = 0.15
+	}
+	LCT_third = {
+		core_creation = -0.15
+		ae_impact = -0.1
+		infantry_power = 0.05
+		discipline = 0.05
+	}
+	LCT_fourth = {
+		idea_cost = -0.10
+		global_institution_spread = 0.1
+	}
+	winged_hussars = {
+		cavalry_power = 0.20
+		can_recruit_hussars = yes
+	}
+	life_long_conscription  = {
+		land_forcelimit_modifier = 0.33
+	}
+	LCT_seventh = {
+	global_tax_modifier = 0.15
+	development_cost = -0.1
+	great_project_upgrade_cost = -0.25
+	global_allowed_num_of_buildings = 1
+	}
+}

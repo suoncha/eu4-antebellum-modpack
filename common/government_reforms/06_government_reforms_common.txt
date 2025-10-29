@@ -451,6 +451,13 @@ vodka_of_the_crown_reform = {
 			limit = { culture_group = east_slavic }
 			hidden_trigger = { always = yes }
 		}
+		if = {
+			custom_trigger_tooltip = {
+				tooltip = AB_invented_vodka_tt
+				was_tag = LUD
+				has_country_flag = pol_unlock_vodka_reform
+			}
+		}
 		else = {
 			custom_trigger_tooltip = {
 				tooltip = AB_invented_vodka_tt

@@ -533,12 +533,14 @@ abf_balkan_bul_2 = {
 			bulgaria_northern
 		}
 		provinces_to_highlight = { 
-			area = northern_greece_area
-			area = thrace_area
-			area = morea_area
-			area = wallachia_area
-
+			OR = {
+				area = northern_greece_area
+				area = thrace_area
+				area = morea_area
+				area = wallachia_area
+			}
 		}
+
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 10
@@ -1755,10 +1757,12 @@ abf_balkan_bul_3 = {
 		required_missions = { 
 
 		}
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
+		OR = {
 		province_id = 4704
 		province_id = 2750
 		province_id = 1765
+		  }
 		}
 		trigger = { 
 			4704 = {
@@ -2084,10 +2088,12 @@ abf_balkan_bul_4 = {
 			bulgaria_nicaea
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 316
 			province_id = 151
 			province_id = 4779
 			province_id = 2296
+			}
 		}
 		trigger = { 
 			316 = {
@@ -2697,8 +2703,10 @@ abf_balkan_bul_5 = {
 			bulgaria_nicaea
 		}
 		provinces_to_highlight = { 
+			OR = {
 			area = erzurum_area
 			area = kastamonu_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2803,10 +2811,12 @@ abf_balkan_bul_5 = {
 			bulgaria_dismantle_horde
 		}
 		provinces_to_highlight = { 
+			OR = {
 			area = samara_area
 			area = kazan_area
 			area = saratov_area
 			area = samara_area
+			}
 		}
 		trigger = { 
 			samara_area = {
@@ -2986,10 +2996,12 @@ abf_balkan_bul_5 = {
 			bul_three_cities
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 1765
 			province_id = 4703
 			province_id = 150
 			province_id = 5154
+			}
 		}
 		trigger = { 
 			1765 = {

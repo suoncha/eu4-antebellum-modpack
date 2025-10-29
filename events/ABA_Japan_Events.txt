@@ -39,6 +39,7 @@ country_event = {
 		every_province = {
 			limit = {
 				region = japan_region
+				owned_by = ROOT
 			}
 			add_unrest = 10
 		}
@@ -46,6 +47,7 @@ country_event = {
 		random_province = {
 			limit = {
 				region = japan_region
+				owned_by = ROOT
 			}
 
 			particularist_rebels = 20
@@ -55,6 +57,7 @@ country_event = {
 		random_province = {
 			limit = {
 				region = japan_region
+				owned_by = ROOT
 			}
 
 			particularist_rebels = 20
@@ -65,6 +68,7 @@ country_event = {
 		random_province = {
 			limit = {
 				region = japan_region
+				owned_by = ROOT
 			}
 
 			shinto_rebels = 20
@@ -74,6 +78,7 @@ country_event = {
 		random_province = {
 			limit = {
 				region = japan_region
+				owned_by = ROOT
 			}
 
 			shinto_rebels = 20

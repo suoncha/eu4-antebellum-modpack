@@ -22,6 +22,7 @@ country_event = {
 		}
 		set_country_flag = ab_unlock_mission_switch
 		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
+		country_event = { id = aba_zun_event.5 } #Trigger color choice event
 	}
 
 	option = {
@@ -37,6 +38,7 @@ country_event = {
 		}
 		set_country_flag = ab_unlock_mission_switch
 		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
+		country_event = { id = aba_zun_event.5 } #Trigger color choice event
 	}
 }
 
@@ -253,6 +255,27 @@ country_event = {
 				mission_completed = zuni_coast_2
 			}
 			complete_mission = zunp_coast_2
+		}
+	}
+}
+
+#Choose Color
+country_event = {
+	id = aba_zun_event.5
+	title = aba_zun_event.5.t
+	desc = aba_zun_event.5.d
+	picture = AB_ECLIPSE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Keep Rob Purple
+		name = aba_zun_event.5.a
+	}
+
+	option = { #Zun Pearl White
+		name = aba_zun_event.5.b
+		change_country_color = { 
+			color = { 255 255 255 }
 		}
 	}
 }

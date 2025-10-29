@@ -141,11 +141,14 @@ cossack_first_group = {
 			htm_military_treasury 
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 5172
 			province_id = 280
 			province_id = 2407
 			province_id = 1942
 			province_id = 2406
+			}
+			NOT = { base_production = 5}
 		}
 		trigger = { 
 			280 = {
@@ -1605,8 +1608,10 @@ cossack_fourth_group = {
 			htm_strike_popes_puppets
 		}
 		provinces_to_highlight = { 
+			OR = {
 			area = pripyat_area
 			area = podlasie_area
+			}
 		}
 		trigger = { 
 			pripyat_area = {
@@ -2152,7 +2157,10 @@ cossack_fifth_group = {
 		required_missions = {
 			htm_urbanize
 		}
-		provinces_to_highlight = { }
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = { base_manpower = 10 }
+		}
 		trigger = { 
 			num_of_owned_provinces_with = {
 			value = 5

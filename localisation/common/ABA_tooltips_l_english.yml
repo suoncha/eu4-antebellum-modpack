@@ -1,0 +1,69 @@
+﻿l_english:
+################################## Mission Tooltips ##################################
+
+#################### Asia ####################
+
+ #### Japan ####
+ JAP_SJ_tooltip: "§YFusau§! and §YSino-Korean§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese and Korean§! provinces!."
+ JAP_SJ_unrest_tooltip: "Our Japanese provinces won't take §Rkindly§! to this..."
+ JAP_SJ_decline_tooltip: "§RWe will reject Chinese influence, much to the Ire of our Chinese subjects...§!"
+ JAP_convert_culture: "§YSinification of Japan§!"
+ JAP_PH_CULTURE: "§YNikkei§! culture will §Gnaturally spread§! throughout our §YShinto Filipino§! provinces."
+ JAP_KR_CULTURE: "§YZainichi§! culture will §Gnaturally spread§! throughout our §YShinto Korean§! provinces."
+ abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
+ abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
+
+#################### Europe ####################
+
+# Mission Tooltips #
+
+#### Russia/Steppe/Slavs ####
+ abf_ukr_cossack_culture_spread_tt: "\n§YRuthenian Cossack§! cultures will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Steppe!\n"
+ abf_nov_pomor_culture_spread_tt: "\n§YPomorian§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the North!\n"
+ aba_kharbinskiye_cossack_culture_tt: "\n§YKharbinskiye§! culture will §Gnaturally spread§! throughout our §YOrthodox provinces§! in the Manchuria!\n"
+ aba_nagaybak_culture_spread_tt: "\n§YNagaybak§! culture will §Gnaturally spread§! throughout our §YOrthodox Kazakh§! and §YKyrgzy§! provinces!\n"
+ aba_malorussian_cossack_culture_tt: "\n§YMalorossian§! culture will §Gnaturally spread§! throughout our §YOrthodox§! in the Baltics!\n"
+ aba_htm_stables_tt: "We will now be able to use the §GGreat Stables of Szeged§! monument!"
+ ABA_LTV_CULTURE_SPREAD_tt: "\n§YLitvin§! culture will §Gnaturally spread§! throughout our §YOrthodox§! provinces in the Baltics!\n"
+ ABA_BUL_cossacks_tt: "\n 10 §YCossack§! regiments will spawn in our capital!\n"
+
+#### Germans ####
+ GER_wolgadeutsche_tooltip: "\nT§YWolga Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! along the Volga!\n"
+ GER_donauschwaben_tooltip: "\n§YDonauschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Basin!\n"
+ GER_mantaken_tooltip: "\nThe §YMantaken Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Carpathian Mountains!\n"
+ ABA_NED_BALTIC_SETTLEMENT_TT: "\n§YOlender Dutch§! culture will §Gnaturally spread§! throughout our §YChristian provinces§! in the Baltics!\n"
+ GER_weichseldeutsche_tooltip_2: "\n§YWeichseldeutsche Germanic§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Poland!\n"
+ GER_jugoslawienschwaben_tooltip: "The §YJugoslawienschwaben§! culture will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces§! in the Balkans!"
+ GER_ruthenian_germanic_cultures_tooltip: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in Ruthenia and Russia\n"
+ GER_ruthenian_germanic_cultures_tooltip_2: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian provinces in the Steppe§!\n"
+ aba_GER_hungarian_cultures: "\nNew §YGermanic§! cultures will §Gnaturally spread§! throughout our §YNon-Orthodox Christian§! provinces in in the Carpathian Basin\n"
+ aba_wendish_culture_spread_tt: "\n§YWendish§! culture will §Gnaturally spread§! throughout our §YSlavic§! provinces in in the Germany\n"
+
+#### SCANDINAVIA ####
+ aba_anglonorse_spread_tooltip: "\n§YAnglo-Norse§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in the British Isles!\n"
+ aba_nor_norsegaelic_spread_tooltip: "\n§YNorse-Gaelic§! culture will §Gnaturally spread§! throughout our §YNorse§! provinces in Ireland!\n"
+ aba_swe_move_finnish_culture_tooltip: "\n§YFinnish§! culture will be moved to the §GScandinavian§! culture group and spread throughout Karelia and Pomorye.\n"
+ aba_SWE_carolean_paladins_tooltip: "\nWe will gain the ability to recruit §GCarolean Paladins§!\n"
+ aba_swe_swe_aibofolke_culture_spread_tt: "\n§YAibofolke§! culture will §Gnaturally spread§! throughout our directly owned §YChristian§! provinces in the Baltic!\n"
+ abf_varangians_culture_spread_tt: "\n§YVarangian§! culture will §Gnaturally spread§! throughout our directly owned §YNorse§! provinces in the East!\n"
+ ABA_NOR_norman_nordic_tt: "\n§YNorman§! culture will be moved to the §GNordic§! Culture Group!\n"
+
+#### France/West Europe ####
+aba_breton_gallic_culture_spread_tt: "\n§YGallic§! culture will §Gnaturally spread§! throughout our §YFrench§! provinces!\n"
+
+#### British ####
+abf_albion_culture_spread_tt: "\n§YAlban§! culture will §Gnaturally spread§! throughout our §YBritish§! provinces!\n"
+
+#### Poland ####
+aba_pol_institutions_will_slowly_grow_in_262_tt: "\n§YInsitutions§! will §Gnaturally grow§! throughout our §YKrakow§!!\n"
+aba_unlock_lavra_tt: "\nWe will gain the ability to construct §GLavra§!!\n"
+ABA_POLISH_HUSSARS_TT: "\nUpon unlocking §YHussars§!, our maximum recruitment cap will be increased!\n"
+aba_pol_build_lavra_monument_tt: "Monument is enabled as a reward"
+
+#### Bulgaria ####
+ABA_BUL_slavic_tt: "\nA New §JRome§! Rises!\n"
+ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
+aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
+

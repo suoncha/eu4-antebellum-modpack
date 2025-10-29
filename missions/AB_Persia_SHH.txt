@@ -489,6 +489,7 @@ ab_shahi_missions_1 = {
 			ab_shahi_subdue_rajputs
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 504
 			province_id = 517
 			province_id = 2030
@@ -498,6 +499,7 @@ ab_shahi_missions_1 = {
 			province_id = 552
 			province_id = 4477
 			province_id = 564
+			}
 		}
 
 		trigger = { 
@@ -613,6 +615,7 @@ ab_shahi_missions_1 = {
 			ab_shahi_indian_century
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 4477
 			province_id = 558
 			province_id = 555
@@ -623,6 +626,7 @@ ab_shahi_missions_1 = {
 			province_id = 2075
 			province_id = 507
 			province_id = 578
+			}
 
 		}
 		trigger = { 
@@ -1155,12 +1159,14 @@ ab_shahi_missions_2 = {
 			ab_shahi_indian_century
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 2075
 			province_id = 552
 			province_id = 545
 			province_id = 541
 			province_id = 4421
 			province_id = 2026
+			}
 		}
 
 		trigger = { 
@@ -1823,10 +1829,16 @@ ab_shahi_missions_4 = {
 			monthly_adm = 10
 			monthly_dip = 10
 			monthly_mil = 10
+			OR = {
 			estate_loyalty = {
 				estate = estate_burghers
 				loyalty = 60
 			}
+			estate_loyalty = {
+				estate = estate_jains
+				loyalty = 60
+			}
+		}
 
 		}
 		effect = {

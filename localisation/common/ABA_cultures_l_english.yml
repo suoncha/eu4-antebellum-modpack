@@ -1,0 +1,83 @@
+﻿l_english:
+
+######## Cultures #######
+#Asia
+ japanese_nikkei: "Nikkei"
+#iberian_tornatras: "Tornatrás" - TODO 1.10
+#andalucian_moro: "Moro"# TODO 1.10
+#chino_hispano: "Hispano-Chinese" - 1.10
+#arb_kurdo_arabic: "Kurdo-Arabic" - 1.10
+ sinico_japanese: "Fusau"
+ japanese_zainichi: "Zainichi"
+ aba_sino_tocharian_culture: "Yuezhi"
+
+#German
+ wolgadeutsche_culture: "Wolgadeutsch"
+ schwarzmeerdeutsche_culture: "Schwarzmeerdeutsch"
+ donauschwaben_culture: "Donauschwäbisch"
+ mantaken_culture: "Mantakisch"
+ olender_culture: "Olender"
+ jugoslawienschwaben_culture: "Jugoschwäbisch"
+ wolhynien_culture: "Wolhynian"
+ weichseldeutsche_culture: "Weichseldeutsch"
+ russlanddeutsche_culture: "Russlanddeutsch"
+ wolgadeutsche_culture_new: "Wolgadeutsch"
+ schwarzmeerdeutsche_culture_new: "Schwarzmeerdeutsch"
+ donauschwaben_culture_new: "Donauschwäbisch"
+ mantaken_culture_new: "Mantakisch"
+ olender_culture_new: "Olender"
+ jugoslawienschwaben_culture_new: "Jugoschwäbisch"
+ wolhynien_culture_new: "Wolhynian"
+ weichseldeutsche_culture_new: "Weichseldeutsch"
+ russlanddeutsche_culture_new: "Russlanddeutsch"
+
+#Scandinavia
+ anglonorse_culture: "Anglo-Norse"
+ finnish_new_culture: "Finnish"
+ aibofolke_culture: "Aibofolke"
+ abf_varangians_culture: "Varangian"
+ aba_norman_nordic_culture: "Norman"
+
+#Russian
+ aba_chernomoriya_cossack_culture: "Chernomoriya"
+ aba_don_cossack_culture: "Dontsi"
+ aba_terek_cossack_culture: "Terek"
+ aba_povolzyhe_cossack_culture: "Povolzyhe"
+ aba_uralskiye_cossack_culture: "Uralskiye"
+ aba_kharbinskiye_cossack_culture: "Kharbinskiye"
+ abf_nagaybak_culture: "Nagaybak"
+ aba_malorussian_cossack_culture: "Malorossian"
+ aba_polish_eastern: "Lendish"
+
+#British
+ abf_albion_culture: "Alban"
+
+#Bulgarian:
+aba_bul_rostislavtsi: "Rostislavtsi"
+aba_bul_vlach: "Vlach"
+
+
+######## Country Names #######
+
+##### Tocharia #######
+aba_tcr_yuezhi: "Yuezhi"
+aba_tcr_yuezhi_ADJ: "Yuezhi"
+aba_tcr_great_yuezhi: "Great Yuezhi"
+aba_tcr_great_yuezhi_ADJ: "Great Yuezhi"
+aba_tcr_lesser_yuezhi: "Lesser Yuezhi"
+aba_tcr_lesser_yuezhi_ADJ: "Lesser Yuezhi"
+ABA_tcr_kushan_empire: "Kushan Empire"
+ABA_tcr_kushan_empire_ADJ: "Kushan"
+aba_tcr_kushan: "Kushan Confederation"
+aba_tcr_kushan_ADJ: "Kushan"
+aba_tcr_bactria: "Bactria"
+aba_tcr_bactria_ADJ: "Bactrian"
+aba_tcr_greco_bactria: "Greco-Bactria"
+aba_tcr_greco_bactria_ADJ: "Greco-Bactrian"
+aba_tcr_tokharistan: "Tokharistan"
+aba_tcr_tokharistan_ADJ: "Tokharistani"
+
+####### Shahi #######
+aba_SHH_shahistan: "Shahistan"
+aba_SHH_shahistan_ADJ: "Shahistani"
+

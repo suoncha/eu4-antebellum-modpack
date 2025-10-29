@@ -1,0 +1,41 @@
+﻿l_english:
+################################## Country Events ##################################
+############ Japan ############
+ aba_japan_events.1.t: "Sinification of Japan?"
+ aba_japan_events.1.d: "Once, long ago, Chinese and Confucian ideas spread across Japan, influencing our cultural and political development till this day. Taking the mantle of the emperor of China, many in our court are considering embracing our historical Chinese influence and adopting the customs and traditions of the Chinese, just as many invaders had done before. Some say this would allow us to better integrate with our Chinese subjects and strengthen our ties with the Middle Kingdom. Others claim that this would be a betrayal of our own culture and traditions, and that we should instead focus on strengthening our own identity. The question is, what path should we take?"
+ aba_japan_events.1.a: "It is time to complete what started years ago..."
+ aba_japan_events.1.b: "We will not bend the knee!" 
+
+############ Golden Horde ############
+ aba_glh_events.1.t: "The Golden Tsardom"
+ aba_glh_events.1.d: "We have truimphed over the squabbling states of Rus, asserting ourselves as the true heirs of Ruthenia. With our modernized bureaucracy and insitutions, we must fully embrace the traditions of the Ruthenians to ensure a lasting legacy and their loyalty."
+ aba_glh_events.1.a: "We are Ruthenians, God is with us!"
+
+############ Brittany/Galia ############
+ aba_brittany_event.1.d: "In the early 17th Century, the Welsh intelligencia began to formulate a new kind of thought around their culture and people. They harkened back to the period of legend and myth prior to the Anglo-Saxon invasion, when the Britons ruled the isle alongside the Romans. These Brittonic Revivalists were scoffed at by most as delusional, as fools that were pretending to be something they were not. However, some found this idea interesting, specifically the nobility who liked to dress themselves in titles and names as to feel more regal. Common folk cared little for it, as these prancing nobles still spoke Welsh or whatever language they were native to. Recently, however, the idea has seen another massive surge in popularity, spreading throughout the growing middle class and cities, with hundreds of thousands now calling themselves 'Britons'. This has been causing tensions with those who view the idea as ridiculous, and among those who are not Welsh, it is considered even more confusing and angering. Our lord, [Root.Monarch.GetName], pondered what to do about this growing movement, eventually deciding to sponsor and support this new movement, calling the subjects of the British Isles true Britons. This would be seen as the start of the Brittonic Revolution."
+ aba_brittany_event.1.t: "The Rise of the Britons"
+ aba_brittany_event.1.a: "The §GRevival§! of the §YBrittonic Culture§! begins"
+ aba_brittany_event.2.t: "The Revolution Spreads!"
+ aba_brittany_event.2.d: "Another noble accepts the truth of our heritage. It will take some time for the people to catch on, but with the nobility of the province on our side, it won't be long before the people too accept their Brittonic Past."
+ aba_brittany_event.3.t: "Britons Entrenched"
+ aba_brittany_event.3.d: "The populace of the province now accept Britons. While they still speak and act in the exact same ways as before, they now sing songs and write plays of the Britons. They speak of themselves less as residence of a town or village, but as a people of a community of Britons."
+ aba_brittany_event.4.t: "Resistance from Locals"
+ aba_brittany_event.4.d: "The local population refuses to withdraw their customs and heritage. Some believe that we are going to replace their language and faith and have accused our lord of being a tyrant. We stand against these accusations, but it is too late, and the populace has been whipped into a fury. We must calm them down somehow."
+ aba_brittany_event.5.t: "Nobles are Intrigued"
+ aba_brittany_event.5.d: "Nobles in this province have begun to look into the Brittonic Revolution and are interested in what they see. They are asking for us to help them understand it more, and even send money to set up institutions to study and theorize about their people's past. Should we support this venture, their acceptance of the new idea would be far more likely than if we simply leave it alone."
+ aba_brittany_event.6.t: "Briton Domination"
+ aba_brittany_event.6.d: "With the majority of our home islands joining the Brittonic Revolution, the anxiety and anger towards it has cooled down significantly. Now, we can once more focus on spreading and expanding our empire, but now we do so as Britons!"
+ aba_brittany_event.7.t: "The Essex Revolt"
+ aba_brittany_event.7.d: "The Lords of Essex found our Brittonic Revolution to be an opportunity. They used it to whip the local lords and peasants into a fury around our king, calling them a tyrant that wishes to wipe out all of the Anglo-Saxons. Many lords who both feared the revolution as well as those who simply wished for more authority and power, joined in with the lord. Across East Anglia, London, and Kent, lords tore down their banners and declared their support for their new lord in Essex!"
+ aba_brittany_event.8.t: "The Highlander Revolt"
+ aba_brittany_event.8.d: "The Highlanders of Scotland had disliked the Brittonic Revolution. A very real aspect of this revolution was the suppression and removal of local customs via the lords who practiced this new doctrine, some of whom would use their new authority from the crown to punish and imprison those who still followed the old traditions. This very case happened in the Highlands, and several lords of the old Kingdoms joined together to throw off their Briton lords, declaring themselves an independent Kingdom."
+ aba_brittany_event.9.t: "The Irish Revolt"
+ aba_brittany_event.9.d: "The Irish people have always had a separate and unique identity to that of the British. The revolt of 1395 and the subsequent liberation of Irish settlements in the south from English control only furthered that divide, viewing themselves as distinct from the other Isles. This new revival angered the remnants of the Old High King's court, who gathered in the southern Munster region to begin plotting their rebellion. When they gathered enough support from the populace, they declared their independence from the Britons, claiming the title of High King of Ireland once more."
+ ab_brittany.3.t: "The Gaelic Faith"
+ ab_brittany.3.d: "With the revival of the Gallic culture, many have begun to look into the old faith of our ancestors, the ancient Celtic polytheism that was practiced before the coming of Christianity. While many scoff at this idea, it has gained a significant following among the common folk and some of the nobility. Our lord, [Root.Monarch.GetName], has decided to combine aspects of this faith with those of Christianity, seeing it as a way to further distance ourselves from the French and their influence. This decision has been met with mixed reactions, with some seeing it as a bold move towards independence, while others view it as a dangerous step towards heresy. Regardless, we must now navigate the challenges that come with this new faith and its place in our society."
+ ab_brittany.3.a: "A new faith for a new age..."
+ ab_brittany.3.b: "These are only the delusions of a madman!"
+
+
+
+

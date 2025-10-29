@@ -390,11 +390,166 @@ ab_ghor_first = {
 			}
 		}
 	}
+
+	ghu_seljuks = {
+		icon = geo_turkoman
+		position = 10
+		required_missions = {
+			ghu_persianate
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 14
+				OR = {
+					area = north_kurdistan_area
+					area = erzurum_area
+					area = dulkadir_area
+					area = rum_area
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_kurdistan_area
+				area = erzurum_area
+				area = dulkadir_area
+				area = rum_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			add_army_tradition = 20
+			add_country_modifier = {
+				name = per_seljuk_betrayal
+				duration = 7300
+			}
+			anatolia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = { exists = SEL }
+				}
+				custom_tooltip = PER_SEL_EXIST
+				hidden_effect = {
+					every_province = {
+						limit = {
+							is_core = SEL
+						}
+						remove_core = SEL
+					}
+				}
+			}
+			else = {
+				custom_tooltip = PER_SEL_EXIST_NO
+			}
+		}
+	}
+
+	ghu_persianize_turks = {
+		icon = mission_persian_soldiers
+		required_missions = { 
+			ghu_seljuks
+		}
+		position = 11
+		
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					region = anatolia_region
+					OR = { 
+						unrest = 1 
+						nationalism = 1 
+						NOT = { owned_by = ROOT }
+					}
+				}
+				AND = {
+					culture = turkish
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		
+		trigger = {
+			owns_all_provinces = {
+				culture = turkish
+			}
+			accepted_culture = turkish
+			anatolia_region = {
+				type = all
+				owned_by = ROOT
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = PER_PERSIANIZATION
+			custom_tooltip = AB_EMPTY
+			change_monarch_points_or_power = {
+				points = 1
+				power = dip
+			}
+			set_country_flag = per_released_rum
+			move_turkish_into_iranian_group = yes
+			add_country_modifier = {
+				name = per_turks
+				duration = 9125
+			}
+			custom_tooltip = PER_RUM
+			hidden_effect = {
+				country_event = {
+					id = ab_pachiev.12
+				}
+			}
+		}
+	}
 	
 	ghu_cloth = {
 	    icon = mission_gujarati_textiles
 		required_missions = { }
-		position = 10
+		position = 13
 		
 		provinces_to_highlight = {
 			trade_goods = wool
@@ -446,7 +601,7 @@ ab_ghor_first = {
 	ghu_industrialize = {
 		icon = mission_industrialize_bengal
 		required_missions = { ghu_rebuild }
-		position = 12
+		position = 15
 		
 		trigger = {
 			calc_true_if = {
@@ -504,6 +659,99 @@ ab_ghor_first = {
 			add_country_modifier = {
 				name = zun_industrialized
 				duration = 9125
+			}
+		}
+	}
+
+	ghu_fortify = {
+	    icon = mission_fortify_mandu
+		required_missions = { }
+		position = 17
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_fort_building_trigger = no
+				NOT = { num_of_times_improved = 5 }
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					num_of_times_improved = 5
+					has_fort_building_trigger = yes
+				}
+				amount = 5
+			}
+		}
+		
+		effect = {
+			custom_tooltip = ZUN_FORTIFY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						num_of_times_improved = 5
+						has_fort_building_trigger = yes
+					}
+					add_base_manpower = 1
+				}
+			}
+			add_country_modifier = {
+				name = "zun_safeguard2"
+				duration = -1
+			}
+		}
+	}
+
+	ghu_graveyard = {
+	    icon = mission_prepare_an_invasion_force
+		required_missions = { ghu_fortify }
+		position = 18
+		
+		provinces_to_highlight = {
+			has_fort_building_trigger = no
+			owned_by = ROOT
+		}
+		
+		trigger = {
+			OR = {
+				MIL = 6
+				full_idea_group = defensive_ideas
+			}
+			army_tradition = 75
+			calc_true_if = {
+				all_owned_province = {
+					num_of_times_improved = 5
+					has_fort_building_trigger = yes
+				}
+				amount = 10
+			}
+		}
+		
+		effect = {
+			add_army_professionalism = 0.05
+			custom_tooltip = ZUN_GRAVEYARD
+			tooltip = {
+				add_province_modifier = {
+					name = "zun_graveyard"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = kabulistan_area
+							area = balkh_area
+							area = ghor_area
+						}
+					}
+					add_province_modifier = {
+						name = "zun_graveyard"
+						duration = -1
+					}
+				}
 			}
 		}
 	}
@@ -847,6 +1095,160 @@ ab_ghor_second = {
 		
 		effect = {
 			country_event = { id = ab_ghor.4 }
+			caucasia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_kurdistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			erzurum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dulkadir_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			rum_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ghu_mesopotamia = {
+		icon = mission_reclaim_lost_territory
+		required_missions = { ghu_persianate }
+		position = 10
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = iraq_arabi_area
+					area = basra_area
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		effect = {
+			iraq_arabi_area = {
+				add_prosperity = 100
+			}
+			add_country_modifier = {
+				name = per_crescent
+				duration = 5475
+			}
+			mashriq_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ghu_ctesiphon = {
+		icon = mission_cradle_of_civilization
+		required_missions = { ghu_mesopotamia }
+		position = 11
+		
+		provinces_to_highlight = {
+			province_id = 410
+		}
+		
+		trigger = {
+			owns = 410
+			410 = {
+				development = 30
+			}
+			410 = {
+				has_tax_building_trigger = yes
+			}
+			410 = {
+				has_production_building_trigger = yes
+			}
+			410 = {
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			410 = {
+				change_province_name = "Ctesiphon"
+				rename_capital = "Ctesiphon"
+			}
+			custom_tooltip = AB_EMPTY
+			410 = {
+				change_trade_goods = silk
+			}
+			custom_tooltip = AB_EMPTY
+			410 = {
+				add_province_modifier = {
+					name = per_ctesiphon
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ghu_nahrawan = {
+		icon = mission_coromandel_trade
+		required_missions = { ghu_ctesiphon }
+		position = 12
+		
+		provinces_to_highlight = {
+			province_id = 410
+		}
+		
+		trigger = {
+			410 = {
+				has_great_project = {
+					type = nahrawan
+					tier = 3
+				}
+			}
+		}
+		
+		effect = {
+			iraq_arabi_area = {
+				add_province_modifier = {
+					name = per_granary_empire
+					duration = -1
+				}
+			}
+			basra_area = {
+				add_province_modifier = {
+					name = per_granary_empire
+					duration = -1
+				}
+			}
 		}
 	}
 	
@@ -854,7 +1256,7 @@ ab_ghor_second = {
 	ghu_rebuild = {
 		icon = mission_central_asian_city
 		required_missions = { ghu_silk_road ghu_cloth }
-		position = 11
+		position = 14
 		
 		trigger = {
 			449 = {
@@ -910,7 +1312,7 @@ ab_ghor_second = {
 	ghu_statues = {
 		icon = mission_protect_jain_communities
 		required_missions = { ghu_rebuild }
-		position = 13
+		position = 16
 		
 		provinces_to_highlight = {
 			province_id = 2225
@@ -1233,11 +1635,114 @@ ab_ghor_third = {
 			}
 		}
 	}
+
+	ghu_georgia = {
+		icon = geo_preventing_collapse
+		position = 10
+		required_missions = {
+			ghu_persianate
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = samtskhe_area
+					area = kartli_kakheti_area
+					area = imereti_area
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = samtskhe_area
+				area = kartli_kakheti_area
+				area = imereti_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = per_looting
+				duration = 7300
+			}
+		}
+	}
+
+	ghu_fortify_caucasus = {
+		icon = mission_the_caucasus_tur
+		position = 11
+		required_missions = {
+			ghu_georgia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = shirvan_area
+				area = imereti_area
+				area = kartli_kakheti_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT	 }
+		}
+		
+		trigger = {
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			imereti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			kartli_kakheti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+
+		effect = {
+			custom_tooltip = ABA_tcr_CAUCASIAN_FORTS_tt
+			tooltip = {
+				add_province_modifier = {
+					name = rus_mountain_fort
+					duration = -1
+				}
+			}
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				421 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+				5149 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+				1856 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 	
 	ghu_silk_road = {
 		icon = mission_dominate_trade_in_bengal
 		required_missions = { }
-		position = 10
+		position = 13
 		
 		trigger = {
 			calc_true_if = {
@@ -1276,11 +1781,131 @@ ab_ghor_third = {
 			custom_tooltip = TUR_DEV_CENTER
 		}
 	}
+
+	ghu_great_trunk_road = {
+		icon = mission_the_grand_trunk_road_dlh
+		position = 14
+		required_missions = {
+			ghu_center_of_world
+		}
+		provinces_to_highlight = { 
+			OR = {
+			province_id = 4477
+			province_id = 558
+			province_id = 555
+			province_id = 2063
+			province_id = 524
+			province_id = 522
+			province_id = 510
+			province_id = 2075
+			province_id = 507
+			province_id = 578
+			}
+
+		}
+		trigger = { 
+			4477 = {
+				owned_by = ROOT
+			}
+			558 = {
+				owned_by = ROOT
+			}
+			555 = {
+				owned_by = ROOT
+			}
+			2063 = {
+				owned_by = ROOT
+			}
+			524 = {
+				owned_by = ROOT
+			}
+			522 = {
+				owned_by = ROOT
+			}
+			510 = {
+				owned_by = ROOT
+			}
+			2075 = {
+				owned_by = ROOT
+			}
+			507 = {
+				owned_by = ROOT
+			}
+			578 = {
+				owned_by = ROOT
+			}
+		}
+		effect = { 
+		custom_tooltip = ABA_SHH_great_trunk_road_tt
+			4447 = {
+				add_province_modifier = {
+					name = ABA_SHH_great_trunk_road
+					duration = -1
+				}
+			}
+		hidden_effect = {
+				558 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				555 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				2063 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				524 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				522 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				510 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				2075 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				507 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+				578 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
+			}
+		 }
+	}
 	
 	ghu_cities = {
 		icon = mission_the_chola_campaigns
 		required_missions = { ghu_rebuild }
-		position = 12
+		position = 15
 		
 		trigger = {
 			calc_true_if = {
@@ -1803,6 +2428,154 @@ ab_ghor_fourth_second = {
 			}
 		}
 	}
+
+	
+	ghu_center_of_world = {
+		icon = mission_indian_ocean_supremacy
+		position = 13
+		required_missions = { ghu_fund }
+		provinces_to_highlight = {
+			ROOT = {
+				home_trade_node = {
+					province_id = PREV_PREV
+				}
+			}
+
+		}
+		trigger = {
+			home_trade_node = {
+				highest_value_trade_node = yes
+				trade_node_value = 100
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = AB_SHH_center_world
+				duration = -1
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = scaling_trader_shh
+			custom_tooltip = AB_SHH_Merchant_trade_power_tt
+
+		}
+	}
+
+	ghu_industrial_ambitions = {
+		icon = mission_rb_build_furnaces
+		position = 15
+		required_missions = {
+			ghu_center_of_world
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_production_building_trigger = no
+						has_manufactory_trigger = no
+					}
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								has_production_building_trigger = yes
+								has_manufactory_trigger = yes
+							}
+						}
+					}
+				}
+				AND = {
+					region = khorasan_region
+					has_terrain = mountain
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							num_of_times_improved_by_owner = 5
+						}
+					}
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 5
+								has_terrain = mountain
+								region = khorasan_region
+								num_of_times_improved_by_owner = 5
+							}
+						}
+					}
+				}
+			}
+
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_production_building_trigger = yes
+				has_manufactory_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_terrain = mountain
+				region = khorasan_region
+				num_of_times_improved_by_owner = 5
+			}
+
+		}
+		effect = {
+			custom_tooltip = ABA_tcr_reward_coal_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_terrain = mountain
+						region = khorasan_region
+						OR = {
+							trade_goods = livestock
+							trade_goods = grain
+						}
+					}
+					change_trade_goods = coal
+					set_province_flag = AB_SHH_coal_province
+				}
+				random_owned_province = {
+					limit = {
+						has_terrain = mountain
+						region = khorasan_region
+						OR = {
+							trade_goods = livestock
+							trade_goods = grain
+						}
+						NOT = {
+							has_province_flag = AB_SHH_coal_province
+						}
+					}
+					change_trade_goods = coal
+				}
+			}
+			custom_tooltip = AB_SHH_gain_25_per_workshop_50_per_manufactory_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_production_building_trigger = yes
+					}
+					ROOT = {
+						add_treasury = 25
+					}
+				}
+				every_owned_province = {
+					limit = {
+						has_manufactory_trigger = yes
+					}
+					ROOT = {
+						add_treasury = 50
+					}
+				}
+			}
+
+		}
+	}
 	
 }
 
@@ -2144,98 +2917,155 @@ ab_ghor_fifth = {
 			factor = 500
 		}
 	}
-	
-	ghu_fortify = {
-	    icon = mission_fortify_mandu
-		required_missions = { }
-		position = 11
-		
-		provinces_to_highlight = {
-			owned_by = ROOT
-			OR = {
-				has_fort_building_trigger = no
-				NOT = { num_of_times_improved = 5 }
+
+	ghu_mysore_rockets = {
+		icon = mission_asian_cannon
+		position = 12
+		required_missions = {
+			ghu_elephants
+		}
+		provinces_to_highlight = { 
+		 area = mysore_area
+		}
+		trigger = { 
+		 army_tradition = 85
+		 army_professionalism = 0.5
+		 mysore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
 		}
-		
-		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					num_of_times_improved = 5
-					has_fort_building_trigger = yes
-				}
-				amount = 5
-			}
-		}
-		
-		effect = {
-			custom_tooltip = ZUN_FORTIFY
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						num_of_times_improved = 5
-						has_fort_building_trigger = yes
-					}
-					add_base_manpower = 1
-				}
-			}
-			add_country_modifier = {
-				name = "zun_safeguard2"
+		effect = { 
+		add_country_modifier = {
+				name = aba_ZNN_mysore_rockets
 				duration = -1
-			}
+			}	
 		}
 	}
 
-	ghu_graveyard = {
-	    icon = mission_prepare_an_invasion_force
-		required_missions = { ghu_fortify }
-		position = 13
-		
-		provinces_to_highlight = {
-			has_fort_building_trigger = no
-			owned_by = ROOT
+	ghu_staple_ports = {
+		icon = mission_dharma_mission_arabian_trade
+		position = 14
+		required_missions = {
+			ghu_center_of_world
 		}
-		
-		trigger = {
+		provinces_to_highlight = { 
 			OR = {
-				MIL = 6
-				full_idea_group = defensive_ideas
-			}
-			army_tradition = 75
-			calc_true_if = {
-				all_owned_province = {
-					num_of_times_improved = 5
-					has_fort_building_trigger = yes
-				}
-				amount = 10
+			province_id = 504
+			province_id = 517
+			province_id = 2030
+			province_id = 534
+			province_id = 2026
+			province_id = 539
+			province_id = 552
+			province_id = 4477
+			province_id = 564
 			}
 		}
-		
-		effect = {
-			add_army_professionalism = 0.05
-			custom_tooltip = ZUN_GRAVEYARD
-			tooltip = {
+
+		trigger = { 
+			504 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			517 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			2030 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			534 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			2026 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			539 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			552 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			4477 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+			564 = {
+				owned_by = ROOT
+				base_tax = 8
+			}
+
+		}
+		effect = { 
+			custom_tooltip = ABA_shh_staple_ports_of_india_tt
+			504 = {
 				add_province_modifier = {
-					name = "zun_graveyard"
+					name = ABA_shh_staple_ports_of_india
 					duration = -1
 				}
 			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							area = kabulistan_area
-							area = balkh_area
-							area = ghor_area
-						}
-					}
-					add_province_modifier = {
-						name = "zun_graveyard"
-						duration = -1
-					}
+			hidden_effect ={
+			504 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			517 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			2030 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			534 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			2026 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			539 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			552 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			4477 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
+				}
+			}
+			564 = {
+				add_province_modifier = {
+					name = ABA_shh_staple_ports_of_india
+					duration = -1
 				}
 			}
 		}
+	  }
 	}
-	
 }
