@@ -1,0 +1,29 @@
+country_decisions = {
+
+	aba_pol_orthodox_move_capital_decision = {
+		major = yes
+		potential = {
+			has_country_flag = aba_pol_orthodox_new_capital_decision_unlocked
+			NOT = { has_country_flag = aba_pol_orthodox_new_capital_decision_relocated }
+		}
+		allow = {
+			owns = 257
+			owns = 2407
+			owns = 295
+			owns = 310
+			adm_power = 100
+			is_at_war = no
+		}
+		effect = {
+			add_adm_power = -100
+			ROOT = {
+			country_event = { id = aba_poland_orthodox_event.8 }
+			}
+		set_country_flag = aba_pol_orthodox_new_capital_decision_relocated
+						
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

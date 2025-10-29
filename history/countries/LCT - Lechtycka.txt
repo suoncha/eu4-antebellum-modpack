@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = tsardom
+primary_culture = aba_polish_eastern
+religion = orthodox
+technology_group = eastern
+unit_type = eastern
+capital = 295 # Moskva
+government_rank = 3

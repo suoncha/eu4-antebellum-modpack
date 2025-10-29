@@ -288,6 +288,7 @@ ab_persia_zun_1 = {
 			else = {
 				custom_tooltip = PER_ELEPHANTS_NO
 			}
+			complete_mission = zun_indian_war_elephants
 		}
 	}
 
@@ -554,6 +555,7 @@ ab_persia_zun_6 = {
 			else = {
 				custom_tooltip = PER_ELEPHANTS_NO
 			}
+			complete_mission = zun_war_elephants
 		}
 	}
 
@@ -1474,6 +1476,7 @@ ab_persia_zun_7 = {
 			zun_master
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 4477
 			province_id = 558
 			province_id = 555
@@ -1484,7 +1487,7 @@ ab_persia_zun_7 = {
 			province_id = 2075
 			province_id = 507
 			province_id = 578
-
+			}
 		}
 		trigger = { 
 			4477 = {
@@ -2323,6 +2326,7 @@ ab_persia_zun_3 = {
 		}
 		
 		effect = {
+			custom_tooltip = ZUN_CRUSADE
 			country_event = { id = ab_zun.2 }
 		}
 	}
@@ -3479,7 +3483,10 @@ ab_persia_zun_19 = {
 			448 = {
 				has_tax_building_trigger = yes
 			}
+			custom_trigger_tooltip = {
+			tooltip = ABA_ZUN_UNLOCKED_PATH
 			has_country_flag = ABA_zun_ghazni
+			}
 		}
 		
 		provinces_to_highlight = {
@@ -3605,7 +3612,6 @@ ab_persia_zun_4 = {
 		}
 		
 		effect = {
-			custom_tooltip = ZUN_CRUSADE
 			add_country_modifier = {
 				name = zun_persian_conquest
 				duration = 9125
@@ -4203,11 +4209,13 @@ ab_persia_zun_9 = {
 			zun_master
 		}
 		provinces_to_highlight = {
+		OR = {
 		region = deccan_region 
 		region = bengal_region
 		region = hindusthan_region 
 		region = west_india_region 
 		region = coromandel_region 
+		}
 		 }
 		trigger = { 
 				deccan_region = {
@@ -5176,6 +5184,7 @@ ab_persia_zun_10 = {
 			zun_bengali
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 504
 			province_id = 517
 			province_id = 2030
@@ -5185,6 +5194,7 @@ ab_persia_zun_10 = {
 			province_id = 552
 			province_id = 4477
 			province_id = 564
+			}
 		}
 
 		trigger = { 

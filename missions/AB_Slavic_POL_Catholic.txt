@@ -1816,10 +1816,12 @@ pol_catholic_third = {
 			pol_catholic_develop_countryside
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 2961
 			province_id = 260
 			province_id = 277
 			province_id = 272
+			}
 		}
 
 		trigger = { 
@@ -2020,8 +2022,8 @@ pol_catholic_third = {
 			army_professionalism = 0.3
 		}
 		effect = { 
-			add_mil_power = 100
-			add_army_professionalism = 0.1
+			add_mil_power = 50
+			add_army_professionalism = 0.05
 			add_country_modifier = {
 					name = aba_pol_military_development
 					duration = -1
@@ -2394,6 +2396,7 @@ pol_catholic_fourth = {
 			pol_catholic_develop_countryside
 		}
 		provinces_to_highlight = { 
+			OR = {
 			province_id = 2961
 			province_id = 261
 			province_id = 4541
@@ -2407,6 +2410,7 @@ pol_catholic_fourth = {
 			province_id = 269
 			province_id = 1937
 			province_id = 4969
+			}
 		}
 
 		trigger = {
@@ -2513,9 +2517,11 @@ pol_catholic_fourth = {
 			pol_catholic_invest_in_manufactories
 		}
 		provinces_to_highlight = {
+			OR = {
 			province_id = 260
 			province_id = 2961
 			province_id = 262
+			}
 		 }
 		trigger = { 
 			260 = { has_building = furnace }
