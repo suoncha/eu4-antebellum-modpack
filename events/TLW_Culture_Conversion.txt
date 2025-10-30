@@ -15,6 +15,7 @@ province_event = {
 		NOT = { culture = owner }
 		owner = {
 			is_colonial_nation = yes
+			NOT = { is_subject_of_type = commercial_enterprise }
 		}
 	}
 		
