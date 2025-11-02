@@ -1,3 +1,4 @@
+# Roman names from KarrisEkaddus on AB's server
 roman_g = {
 	graphical_culture = easterngfx
 	
@@ -15,13 +16,18 @@ roman_g = {
 			Herbertus Hildebertus Humbertus Iacobus Iordanius Iulianus Leo Leonardus
 			Ludovicus Matthaeus Mauritius Nicolaus Philippus Petrus Radulphus Raimundus
 			Reginaldus Ricardus Robertus Robertinus Rogerius Sigismundus Simonus Caratacus 
-			Theodorici Thomas Valerianus Arturus
+			Theodorici Thomas Valerianus Arturus Etiennus Napoelonus Patricius Samsonius Tristanus
+            Arturus Corentinus Gvenaellus Maeldanus Paulus Paternus Primelius Servanus Sulionus 
+            Ioannes Alaricus Branoc Clementius Constantinus Davidus Gregorius Hamelinus Martinus 
 		}
 		female_names = {
 			Alicia Eleonora Agatha Anna Claudia Aurengardia Beatrix Berengaria
 			Bertha Blanca Burgundia Cecilia Catharina Carola Constantia Dionysia
 			Eglantina Elisabeth Emma Ermengardis Eustacia Eva Gisele Idea Johanna
-            Iudith Maria Mathilda Peronella Sophia Stephania Sibylla Valencia
+            Iudith Maria Mathilda Peronella Sophia Stephania Sibylla Valencia Lea
+            Adelaida Alana Avandria Christina
+            Helena Enora Gvendolina Gennara Isabella Iseulta Margareta
+            Maria Rhiannona Rosena Susanna Triphena Uriella
 		}
 	}
 
@@ -32,10 +38,16 @@ roman_g = {
 			Ismael Iosephus Abubacus Aladius Butrus Hadrius Abraham Muradus Rasimus Salaudus 
 			Shadius Iunus Caeliphus Amudus Antalius Asadus Aelius Badacus Badisus Bedius 
 			Capusius Dalus Firmus Gaius Ganimus Gildunus Hamadus Hashimus Hibanus Iphenus
+            Abdallahus Tashufinus Abumalecus Abusaidus Abdalcarimus Baracatus Basirus Davudus 
+            Farisus Haidarus Hashimus Jabbarus Najibus Rahimus Rashodus Safius Zahirus Jamalus 
+            Mustaphus Nazarius Ptolemaeus Saidus Solomonus Sifalus Sinbadus Taricus Tacfinus Tegamus 
+            Theophanus Umarus Xamidus Ioannes Zafirus Sirirus Zubeyrus
 		}
 		female_names = {
 			Ina Aesa Aisa Amira Badia Baria Bashira Monica Myasa Rusa Rasa Rahima Rula  
 			Sibylla Sima Tadula Tacama
+            Randa Tabassuma Dema Dimañha Dinarra Dua Durria Eleonora Faghissa Tazirita Tifita Tigmia Tintadephia 
+            Tinzerta Tisenta Tislita Titrita Tiziria Tuderta
 		}
 	}
 
@@ -48,11 +60,23 @@ roman_g = {
 			Georgius Mitrius Dragutinus Gabriel Goranus Ioannes Matthaeus Miloradus 
 			Martinus Marcus Nenadus Nicodemus Roman Symeon Lacovus Ianus Visarius
 			Ladimus Milutius Bogudanus Lupinus Vicomanus Simonus
+			Adamus Agathonus Aldimirus Angelus Besarus Bernardinus Boleslaus Borisus Bujarus 
+			Casparus Castimirus Constantinus Dardanius Demacius Demetrius Dobromirus Draganus Dragomirus 
+			Dragoslaus Dragutinus Dusanus Elidonis Emilius Florinus Gabrielus Georgius Godimirus
+			Gordanius Henricus Iohannes Josephus Clementius Kolomanus Kresimirus Lazarus 
+			Ljubomirus Malimus Mensurus Miroslaus Ninoslaus Ognenus Palus Paminus 
+			Petrus Porinus Prochorus Radomirus Radoslaus Samuilus Sermonus 
+			Slobodanus Stanislaus Sulvanus Svetoslavus Theodatus Theophanus 
+			Tomislaus Traianus Ulfus Vasilius Victor Vladislaus Zenelus Zoranus Zvonimirus
 		}
 		female_names = {
 			Agatha Barbara Branimira Elena Helena Hicela Carolina Maria Neda Radica 
 			Bastina Casna Dragana Dusica Gordana Joanna Johanna Malina Nada 
 			Namena Mirna
+			Adriana Aleksandrina Angela Anna, Antonia Bogdana Borislava Dardana Dragana 
+			Elenora Elisabetha Emilia Ecatherina Fatmira Flutura Gentiana Gordana  
+			Christina Iva Ivana Jadranka Catalina Crasimira Lidia Lucia Lyudmila Maria Nadejda Natalia 
+			Silvia Sophia Susanna  Tatiana Teresa Venera Iordanca Zlata Zvonimira
 		}
 	}
 
@@ -85,12 +109,18 @@ roman_g = {
 			Bernardus Hernandus Cristus Diegus Domingus Pheridus Garcius Gomelus Hermenegus
 			Ignacius Michael Odon Ramonus Rodrigus Valerianus Alvarus Bermudus Vermudus
 			Philippus Gulielmus Vilelmus Ludovicus Amalius Martinus Pelagius Salvadorus
-			Suerius Telus Vela
+			Suerius Telus Vela Alonsus Baltasar Bernardo Hernando
+			Estebanus Gonsalus Leonus Lopius Thomas Oliverus Diaconus 
+			Henricus Phedericus 
+			Egidius Gomesius Walterus Martin Munius Nuñus Ordonus 
+			Ramirus Rodericus Alexander
 		}
 		female_names = {
 			Aldonza Anderquina Beatricia Berenguela Berengaria Blanca Constanza 
 			Elvira Stephania Gontroda Gotruda Jimena Maphalda Matilda Maria
 			Mencia Milia Emilia Sancha Teresa
+			Fronilda Agnes 
+			Elisabetha Ioanna Eleonora Marianna Alexandra Toda Urraca Isabella
 		}
 	}
 
@@ -101,12 +131,27 @@ roman_g = {
 			Vintilius Cornelius Flavius Iulius Octavian Sergius Bagianus Balcus Bogdanus
 			Ciprianus Ciubarus Drago Dumitru Iacobus Gabriel Ladislaus Litovoius Lucius 
 			Marius Pirvus Romanus Stelianus Theodorius Timoteus Tudor Valentinus Basil Valadus
+			Adamus Adalbertus Alfredus Almus Amadeus Ambrosius Andreas Angelus Antonius Arpad
+			Atillus Augustinus Balintus Barnabas Bartholomaeus Basilius Bela Benedictus Bonifacius Carolus Cornelius
+			Constantinus Cyrillus Darius Dominicus Dragomirus Emmanuel Ernestus Eugenius Eusebius Fabianus
+			Franciscus Georgius Gerardus Gregorius Henricus Hieronymus Hugo Ignatius Ioannes Isidorus  Iosephus
+			Iulianus Iulius Leonardus Leontius Lucas Ludovicus Lucianus Marcus Martinus Matthaeus Melchior Michael 
+			Milos Mirceus Miroslaus Nicolaus Nicodemus Norbertus Octavianus Oliverius Paulus Petrus Philippus Radomirus
+			Radoslaus Raimundus Raphael Romanus Rostislaus Samuel Sebastianos Sergius 
+			Severinus Sigismundus Stanislaus Stephanus Thomas Tiborius Titus Valentinus Valerius Victor Vincentius
+			Vladislaus Vladimirus Wenceslaus Zacharias Zoltanus
 		}
 		female_names = {
 			Adelina Adriana Alexandra Alexia Anastasia Christina Clara Dana Ecatarina
 			Emilia Euphrosyna Felicia Ioana Ionela Irina Iulia Monica Natalia Paraschiva 
 			Petra Roxana Ruxandra Smaranda Sophia Teodora Rahela Cosmina Vasilica Violeta 
 			Yolanda Voica Zina
+			Agatha Alicia Amalia Anna Antonia Barbara Beata Benedicta Bianca
+			Brigitta Camilla Cassandra Cecilia Clementia Constantia Csilla Diana 
+			Dominica Eleonora Elisabetha Eugenia Eva Felicia Gabriella Helena Ilona Iosephina
+			Isabella Joanna Juditha Juliana Cunigunda Laura Lidia Luciana Magdalena Maria Martina Melania 
+			Octavia Olimpia Pannonia Patricia Philippa Priscilla Regina Rosalia Sabina Slavica
+			Teresa Ursula Valeria Veronica Victoria Virgilia Xenia
 		}
 	}
 	
@@ -141,41 +186,71 @@ roman_g = {
 	romano_germanic = {
 		primary = RD6
 		male_names = {
-			Albertus Phedericus Emilius Phedinatus Carlus Luvicius Willelmus Adophus Alphedus
+			Albertus Phedericus Emilius Phedinatus Carlus Luvicius Willelmus Adolphus Alphedus
 			Diedericus Erquinus Francus Gebohardus Gopheridus Harmanus Helmus Horstus Casparus 
 			Lucarius Manphedus Michael Nicolaus Otto Philippus Reineus Rudophus Siegmundus 
 			Victorius Arelius Auctunus Dagonius Galindaus Phaugutius Caratasus Nomedasus
 			Prusus Sergonus Ulitius
+			Christianus Heinricus Rudolfus August Ernstus Georgius Moritz Alexander Antonius Hectorius 
+			Ioannes Carolus Clementius Joachimus Iosephus Magnus Maximus Severinus Wolfgangus 
+			Andreas Bruno Guntherus Reimundus Ulrich Wilfridus Konradus Marcus Osmund Ralphus Reginaldus Sigehelmus
+			Alwinus Arnoldus Baltasar Benedictius Bernardus Bertoldus Claus Ericus Hans Herbertus Iacobus 
+			Mattheus Martinus Sigbertus Siegfriedus Simon Stephanus Thomas Waldemarus Wernerus Walterus
+			Premislius Franciscus Ferdinandus Vratislaus Boleslaus Otacarius
 		}
 		female_names = {
 			Raphaela Sabine Vera Bettena Daga Gelennisa Grasusa Gulbisa Mila Milyuna
+			Amalia Bianka Eleonora Agatha Christina Edithia Gunhilda Helga
+			Matilda Adelia Agnesia Anna Beatrix Bertha Brigida Brigid Elisabetha 
+			Gertrudia Gisela Helene Emma Catharina Margarita Rodelinda Sophia Wiencia
+			Maria Ludmila Anna Berta Dagmaria Danutea
 		}
 	}
 
 	romano_nordic = {
 		primary = RD8
 		male_names = {
-			Adophus Sigismundus Alphadus Edvardus Jacobus Michael Rangvaldus Sigvardus
+			Adolphus Sigismundus Alphadus Edvardus Jacobus Michael Rangvaldus Sigvardus
 			Algotus Bertilus Brorus Dyretius Einarus Gustavus Haraldus Holmgerus Ingemar
 			Magnus Nicholaus Olaphus Ragnar Starcadus Styphonus Torbrandus Torstenus Valdemar
+			Christian Christophorus Oscarus August Axelius Edvardus Michael Patricius Simon Sturius Svantius 
+			Thomas Anders Benedictus Bertil Birgerius Einarus Phedericus Philippus 
+			Folcus Gregorius Gunnarus Gustav Halsten Hans
+			Helgus Henricus Hjalmar Johannus Carolus Lars Mattheus Nicholaus Petrius Svenius
+			Andreas Ernest Godfridius Leifus Lennartus Ludovicus Severinus 
+			Valentinus Niels Vilhelmus Casperus Rudolphus Ernst
+			Arnoldus Emundus Einarus Eirikr Ericus Ragnar Sigurdus 
+			Torstenus Ulfus Ingvarus Haraldus Acselius Biornus Elias Cennetus Cnutus Odmundus
 		}
 		female_names = {
 			Christina Eleonora Beata Birgitta Brigida Iliana Inga 
 			Cristina Linda Margareta Martha Sara Sophia Thordisa Ulvhilde
+			Ulrica Anna Astrid Cecilia Elisabetha Helena Inga 
+			Karina Catharina Dorothea Benedicta Emilia Erika Freia Gretha Maria Thyra Åsa Gudrunia 
+			Saga Thora
 		}
 	}
 
 	perso_roman = {
 		primary = RDZ
-		male_names = { 
+		male_names = {
 			Rostamus Anoshaganus Andaragharus Mardanshanus Nakhiraganus Azadbedus Faruzadus 
 			Siyavacus Busburus Mushegus Varaztirotus Narses Gavanshirus Shahragus Khorshidus 
 			Pharukhanus Darius Khosraus Shapurus Boranducus Ardashirus Cavadus Vistamus Bahramus
 			Balashus Mihranus Artabacus Ardunus Raminus Sirous Phedunus Cyrus Manius
+			Guracus Divashticus Tuhunus Uracus Turgharus Lusanus Nanaifarnus Avyamanus Chachius Mechunus 
+			Tishifanus Tarxunus Uxushucanus Sheshcius Chaxrenus Ramchius Maxacus Ramtishus Burzus Dishebus Vandacus 
+			Khudayfarnus Silius Tishratus Chunaccus Namdarus Karzus Varzaccus Nizatus Patorus 
+			Maniacus Watchus Akhurmaztaccus Akhushfarnus Anushirvanus Ardavanus Arsachus Artivanus Avyamanus 
+			Babacus Bahramus Bandus Baracus Buddhadasus Chakarius Devadasus Alexander Faramarsus Farhadus Farroukhus 
+			Farzadus Ghobadus Hazaraspus Hormazdus Canaccus Cartirus Khunus Cundus 
+			Martius Marzubanus Mirenus Nanaius Narisafus Nithanus Parsacus Parvizus Pashangus Resanus Rokhshanus 
+			Shahbazus Shahinus Shahrokhus Shansus Uracus Zandus Zartoshtus Farius Farajius
 		}
 		female_names = { 
 			Amstrida Azar Bita Homa Khandan Darya Mihran Faraya Tishtar Meher Manize Mahzarina 
-			Lilya Katayun Kaidokht Gohar Feroza Farida Bostana Asha Arzu Arnaz Arnavaz Armindoca
+			Lilya Cataiun Kaidokht Gohar Feroza Farida Bostana Asha Arzu Arnaz Arnavaz Armindoca
+			Nana Upachia Chatia Cheta Golbahara Machia Nanaia Nazilla Parvina Roxana Shahrzadia Shahzadeh Tourania
 		}
 	}
 
@@ -187,10 +262,28 @@ roman_g = {
 			Gopalus Harshapalus Harshavarmanus Indrapalus Jayamalus Cumarapalus Mahendravarmanus Narayanavarmanus
 			Palamus Purandelapalus Pushyavarmanus Rataquapalus Ratnapalus Salastamus Samudravarmanus 
 			Sitavarmanus Supatavarmanus Timgadevus Umocaus Vanamalavarmadus Vigahasamus Vigianus Virabaus
+			Amritnarayanus Balabhatus Balinarayanus Ballalsenius Basudevnarayanus Bhagadattus Bhairabendranarayanus 
+			Bhattus Bhimsinghus Birnarayanus Chandrasenus Chandranarayanus Chaturananus Chilaraius Danujmadhavus 
+			Dasharathadevus Devakhadgus Devapalus Devendranarayanus Dhairjendranarayanus Dharendranarayanus Dharmapalus
+			Dhirsinghus Gajnarayanus Gopalaus Govindachalrus Govindapalus Hajo Harendranarayanus Haridevnarayanus 
+			Hariyamandalus Hemantasenus Indranarayanus Jadus Jagaddipendranarayanus Jatakhadgus Jayanarayanus 
+			Jayapalus Jitendranarayanus Calianachandrus Camalnaraianus Ceshabsenus Khadgodyama Krishnamishrus 
+			Crishnaroius Cumarapalus Ladahachandrus Lakshmansenus Lakshminarayanus Lomapadus Madanapalus Mahendrapalus 
+			Mahendrasinghus Mahindranarayanus Mahipalus Manavaus Mukundanarayanus Naranarayanus Narasinghus Narayanapalus 
+			Narendranarayanus Nayapalus Nripendranarayanus Parikshitnarayanus Prananarayanus Prannathus Pratapnarayanus Pushkaranadhipus 
+			Raghudevus Rajabhatus Rajadinus Rajaganeshus Rajendranarayanus Rajrajendranarayanus Rajyapalus Rampalus Ramnathus 
+			Ranasurus Ranjitsinghus Roopnarayanus Rudranarayanus Samudrasenus Shashanka Shivanarayanus Srichandrus 
+			Srimantus Suwarnachandrus Sulabhus Suryanarayanus Traillokyachandrus Udirnakhadgus Uditanarayanus Upendranarayanus 
+			Vakapalus Vapyatus Vigrahapalus Vijaynarayanus Vijaysenus Vijaysinghus Virajdendranarayanus Vishwarupsenus Bhairavsinghus
 		}
 		female_names = {
-			Mangalda Satia Kuranganayana Ahiavadeva Bogavata Datadeva Devavata Durlaba Gandaravata Culadeva 
-			Nayanadeva Ratnavata Suvrata Syamadeva Vasumata Vigianavata
+			Mangalda Satia Curanganayana Ahiavadeva Bogavata Datadeva Devavata Durlaba Gandaravata Culadeva
+			Nayanadeva Ratnavata Suvrata Siamadeva Vasumata Vigianavata
+			Abha Abhilashia Aditia Aishwaria Acansha Amala Amita Amritia Ananda Anandia Ananta 
+			Anicia Anila Anjalia Ancitia Anuja Anupama Aparajitia Aradhania Arundhatia Arya Asha Avania 
+			Avantia Chanda Chandania Chandra Deviña Divya Draupadia Eshia Gauria Gita Gulshania Ila Indira Indrania Indra
+			Jaswindera Jaya Jayantia Jyotia Kajalia Camala Kalyania Karishma Kirania Kumaria Lakshmia Lalita Lata Lavania Leela
+			Madhavia Malia Manisha Maya Meeria Minalia Nisha Padmia Padminia Parvatia Poornimia Preetia Priya
 		}
 	}
 
@@ -201,10 +294,17 @@ roman_g = {
 			Ismael Iosephus Abubacus Aladius Butrus Hadrius Abraham Muradus Rasimus Salaudus 
 			Shadius Iunus Caeliphus Amudus Antalius Asadus Aelius Badacus Badisus Bedius 
 			Capusius Dalus Firmus Gaius Ganimus Gildunus Hamadus Hashimus Hibanus Iphenus
+			Aaronus Abderrahmanus Abdulazizius Abdulmadjidus Abdulsalamus Abianosus Abisalomus Abrahamus Abubacrus 
+			Agathonius Ahmadus Andronius Andraeus Arsennius Athanasius Badrus Bashirus Victor Petrus Danielus 
+			Davidus Gabrielus Georgius Henricus Husainus Ibrahimus Eliasus 
+			Gregorius Khalilus Christophorus Lotarus Malicus Mathaeus Michael Muammarus Nassibus Paminus Raufus 
+			Raficus Salimus Sharifus Theodorus Thomas Zacharius Adilus Basharus Faisalus Majidus Masudus Mukhtarus Saudus Jacobus Zahirus
 		}
 		female_names = {
 			Ina Aesa Aisa Amira Badia Baria Bashira Monica Myasa Rusa Rasa Rahima Rula  
 			Sibylla Sima Tadula Tacama
+			Adila Amsha Faghira Habiba Hanifa Ñamala Layla Maria Nadia Parvena Rafiña Samana
+			Sabina Sagara Sajida Samira Sheva Simina Susanna Tanina Iasmina Zainaba
 		}
 	}
 
@@ -215,24 +315,44 @@ roman_g = {
 			Dominicus Gustavus Miecaus Miroslaus Siphidus Bogumilus Bonitus Domanus Giaquinus
 			Conradus Lambertus Nabodus Odo Remislaus Simolius Vetolaus Quadomilus Viseborus
 			Vegotius Ignatius Sigismundus
+			Adrianus Albertus Alexander Aleksios Ambrosius Andreas Antonius Augustinus Basilius 
+			Bogdanus Boguslaus Boleslaus Bonifacius Carolus Christianus Cornelius Cyrillus Dalimirus 
+			Damianus Dobrogostus Dobromirus Eustachius Eugenius Felix Ferdinandus Franciscus Gieraltus 
+			Gregorius Gustavus Hubertus Hyacinthus Ignatius Iosephus Ioannes Jacobus Jaroslaus Lambertus 
+			Laurentius Lechus Lucius Ludovicus Marcinus Miloslaus Moricius Nobilis Patricius Petrus Philipp 
+			Radomirus Rafalus Romanus Rostislaus Sviatoslaus Slavomirus Stephanus Sylvester Simon Theodorus 
+			Thomas Vaclavus Venceslaus Vincentius Vladislaus Vladimirus Voitechus Vartislaus Zbignievus
 		}
 		female_names = {
 			Agniesa Aldona Anastasia Anna Beata Danuta Euphemia Getruda Gertrude Giaiga Giolanta
-			Christina Lucia Magdalena Maria Kinga Richegia Matilda Milena Salomea Samboja Stanisla
+			Christina Lucia Magdalena Maria Cinga Richegia Matilda Milena Salomea Samboja Stanisla
+			Adela Agaphia Dobronega Dragoslava Helena Jadvigia Jolanta Ecatherina Constantia 
+			Cunegunda Ludmila Milena Radoslava Tomila Vislava Volislawa Vita Sophia
 		}
 	}
 
 	russo_roman = {
 		primary = UKR
 		male_names = {
-			Vasilius Ivanus Dimitrius Semenus Phidorus Alexander Anatolius Arcadius Pheodislaus
-			Innocentius Macarius Michael Paverus Petrus Sergius Athanasius Andrea Borisus Briachislaus 
-			Bretislaus Demetrius Gregorius Cyrillus Constantinus Leo Roman Ruricus Symeon Vitoslaus
+			Vasilius Ivanus Dimitrius Semenus Phedorus Alexander Anatolius Arcadius Pheodislaus
+			Innocentius Macarius Michael Paverus Petrus Sergius Athanasius Andreas Borisus Briachislaus
+			Bretislaus Demetrius Gregorius Cyrillus Constantinus Leo Roman Ruricus Simeon Vitoslaus
 			Triphonus Basilius Vadimius Laromius
+			Añimus Alexius Antonius Danielus Davidus Demidius Dorotheus
+			Emilius Eustathius Theodorus Theodosius Theofilactus Thedotus Gavriilus Georgius Glebus
+			Ignatius Igor Ilius Innocentius Ioannes Iosephus Iacovus Iseslaus Cosmas 
+			Laurentius Matthaeus Mstislaus Mitrophanus Nazarius Nicephorus Nicetas Olegus
+			Onisimus Paulus Procopius Putiatus Radomirus Radoslaus Rodislaus Rogvolodus Rostislaus Ruslanus
+			Savelius Stanislaus Stepanus Sudislaus Svetozarus Sviatopolcus Sviatoslaus Terentius Theodorus
+			Valerius Vasilius Viacheslaus Vladislaus Vladimirus Volodarus Vseslaus Vsevolodus Vysheslaus Ioacimus 
+			Yaroslaus Iaropolcus Euphimius Yeliseus Yemelianus Ieremius Eugenius Eustaphius Yurii
 		}
 		female_names = {
 			Agatha Anastasia Anna Boleslava Darya Dobronega Euphemia Euphrosyne Eudocia Theodora
-			Irene Xenia Malusha Maria Olena Helena Yuliya Rostislava Sophia Vasilisa Veleslava Verkhoslava
+			Irene Xenia Malusha Maria Olga Helena Yuliya Rostislava Sophia Vasilisa Veleslava Verkhoslava
+			Agrafena Alexandra Dobrava Dobroslava Ilona Cristina Carina Diana Inna Violetta Victoria Valeria Lyubov Ludmila Tamara Lidia Zoe Zinaida Eugenia
+			Gremislava Liubava Liudmila Pereyaslava Praxida Prebrana Predslava Praskovia Ecatherina Polina Margaretha Valentia Nina Larisa Inessa Angela
+			Rogneda Natalia Svetlana Tatyana Theodosia Ulyana Varvara Veronica Vseslava Yaroslava Zabava Zvenislava Alisia Assolia Clara Claudia Raisa Eleonora Oxana
 		}
 	}
 
@@ -243,10 +363,19 @@ roman_g = {
 			Delbegus Egenus Encelus Gunus Gulichius Irinchibalus Cublainus Cocea Ligdanus Marcus Moncelus
 			Mandulunus Oligius Ogodeus Saynus Temuquinus Temurus Toghunus Tolus Tocus Uscalus Aricus Batus 
 			Elgideius Gioichius Darayisungus
+			Bucurius Yongsonus Sibeocius Fiangus Dudus Mengtemus Huangus Taijius Chiovanus Inus Jenus 
+			Chungus Lius Yongus Yanus Minus Ningus Cungsanus Tolus Fumanus Giocangus Tacsus Nurachius Dorgonius
+			Hogeus Fulinus Fanca Hogleus Yinzhius Inrengus Intius Daisanus Abataius Ajigeus Dodus  
+			Yinsius Yintangius Hongshius Hongzhounus Iongius Acianus Ayanus Baohus Chengjunus Dorgideus Ejeus Encechenus 
+			Fisinus Fulus Ganiongus Ganzhanus Hurongus Jabsanus Jacdanus Lelius Lius
 		}
 		female_names = {
 			Temulena Bortea Manduca Sama Sauisha Mulan Aigia Conchaca Golanda Heluna 
 			Cultuluna Cocachina Mandugha Oghula Orqina Sorghaghtana Beca Toregena 
+			Fenia Heingia Hejia Hexia Zhuaningia Fatimia Ibtisamia
+			Jalilia Janania Lalia Sacinia Sharifia Acenithia Alia Amunetia Andalia 
+			Asenathia Badiatia Cenia Chalimia Ilcaia Ipecia Irgeia 
+			Jiacia Caracicia Malia Mutluia Pecsenia Samuria Saricia Satia Sevilaya
 		}
 	}
 
@@ -256,9 +385,15 @@ roman_g = {
 			Gendunus Traipanus Giantesenus Namgialus Setenus Carmanus Gusius Dalainus Lagianus Aratanus Sangiagus
 			Cegiagus Giaphelus Luntocus Sutrimus Gendunus Sonamus Sangaius Iesius Richenus Cuneus Padernus
 			Napoius Tasius Ratanus Galdanus Doteus Caldenus
+			Houzhaous Houcongius Saicous Changluous Iousongus Biaous Shuangus Gangus Tanus
+			Chunius Baius Guius Pianus Songus Nanus Caosuinius Ioushanius Cixuanus Cichuanus Cicanus Heius Ius Daus Iuchunus
+			Radsathus Naranus Daulius Ranaungus Salingathus Rasanus Gasapatinus Minbinus Palaungus Rasagrius 
+			Narapatheus Thadous Manidammus Naradipatius Sandivisius Madaritus Thammadus Thalunus Sanenus Senbius Marjitus
 		}
 		female_names = {
 			Camala Indila Dawa Decena Dicea Codena Dona Dolca Carma Sonama Sanmea
+			Heingia Chunmeia Tianchuia Conia Maoia Iuantongia Ianxiangia Xiurongia Shoingia Fuania Lucenia Ruirongia Sucenia
+			Azadevia Atulathiria Khinosita Khinseta Khinlata Magdalene Hira Tashia Tensina Sapunia Saimia
 		}
 	}
 
@@ -273,9 +408,14 @@ roman_g = {
 			Duanus Lius Tangus Liangus Cungous Tius Hualius Hanus Mianus Caius Mengus Hongus Danianus Taius Mingenus
 			Sanpheus Senus Jonus Palongus Hondaus Pengus Bangous Huancunus Sendous Simeius Sanphegus Dagionus Cecelius
 			Rucaius
+			Ious Ioutanus Ioulanus Iubinus Ioungus Iouchengus Saichanus Iliunus Changlus Changxunus Changcius Changrunus 
+			Iuxenus Iumonus Jusianus Ciranus Cionus Cihenus Shanbinus Cibanus
 		}
 		female_names = {
 			Heyina Cunmea Tianhua Cona Ma Iagina Iatona Iacina Cirona Sephina Phena Lucena Sucena Ciana Cia Cialia
+			Iancianga Iuronga Shouinga Fuiana Ruironga Ciella Cainga Cialua Meilinga Huaia Lianchua Rongia
+			Suina Thangua Lina Ruomeia Lanina Shua Venia Suchua Iuncia Minchua Ciumeia Haia
+			Cina Menghua Tancia Anna Luona Linga Suchana Caomia
 		}
 	}
 
@@ -286,10 +426,14 @@ roman_g = {
 			Seonus Heonus Conus Haengus Cangus Ripus Giomus Hongipus Munsus Hequonus Busicius Gangionus Sucugius Hongdous
 			Munshinus Caehonius Honghius Bonghius Giasangus Museonus Semanus Sunsinus Cangholius Dasengus Siminus
 			Gamchanus Inseonus Gangheonus Geonus Mocus Iulius Tacus
+			Haevngus Unus Gusius Chenius Ionus Chuonus Iacus
+			Ripus Iaeus Senorionus Chevonus Jiovonus Sucius
+			Iongbocus Jongunus Chungheus Eongsilus Miongshinus Chaeus Tsoius
 		}
 		female_names = {
 			Aegia Area Bina Bora Caquona Cagiona Cunqua Dahea Euna Eunbina Eunha Eungina Eunmia Eunsoca Gaina Gurina Hana
-			Hemina Hena Insuna Insoca Giamia Iaeuna Iagiona Iunsoca Nana Narina Sangmina Sora Iona Iumina 
+			Hemina Hena Insuna Insoca Giamia Iaeuna Iagiona Iunsoca Nana Narina Sangmina Sora Iona Iumina
+			Boionga Chaevona Chohea Chunhua Dachinea Eunchaea Euniuga Gaiounga Hieina
 		}
 	}
 
@@ -302,11 +446,13 @@ roman_g = {
 			Gioshimitus Gioshimocius Gioshicaus Gioshinolius Gioshimasus Gioshitanus Gioshiterus Gioshihidus
 			Nobutadus Hidenobus Hideiosius Iegiasius Hidetadus Iemisus Ienobus Iesugus Ieshigeus Ienarius
 			Iesadus Iemochius Ioshinobus
+			Teruchitus Hidechitus Aiachitus Ioshiacirus Ioshimitsus Ioshimochius  Hideiorius Tsunaioshius Ienarius
 		}
 		female_names = {
 			Sena Tama Aya Ina Aicoa Aimina Aina Acanea Acita Acira Asuca Ayaca Chica Emia Hana Harua Haruca Haruna Hina
 			Hinata Honoca Caedea Casumia Ceica Maia Manamia Meia Mica Misaca Momoca Nana Tacara Rina Sacura Subasa Quacana
 			Iua Iuanna
+			Tocua Cumicia Airia Acania Acemia Acia Acicoa Chiyoa Etsucia Hanaea Hicara Hiroca
 		}
 	}
 
@@ -317,9 +463,13 @@ roman_g = {
 			Naresenus Songthamus Cetanus Atitaquonus Pasatogus Sutamaracus Pheracus Boromacus Ramus Setathiratus
 			Saeunmenamus Samphacaenus Tilocaracus Iocianus Caeous Saicamus Mecutius Caiathipus Sisonmungus Insemagus
 			Manraenalius Cihutus Maiuguanus Aphecaminus Tammalancaus Caquilius
+			Thamaracus Naresuenus Songthamus Chetthas Naraius Phetrachus Tacsinus Ramus Tilocarachus 
+			Thammalancus Phagmus Visunaratus Photisaratus Saensurinus Monceus Dharmaragius Poneachanus
 		}
 		female_names = {
 			Ampona Chanarona Surita Pangiapa Comola Dara Mia Chirapa
+			Boupha Acharia Arunnia Champea Chamroeuna Chanmonia Chantrea 
+			Chariana Davia Calianna Malis Mealea Vanna Veasna Reasmia Rachania Manora
 		}
 	}
 
@@ -328,108 +478,329 @@ roman_g = {
 		male_names = {
 			Inagiatus Mugatus Isacalius Husanus Rigiatus Salengatus Gadabadius Mengecaus Girisanus Cetabumius 
 			Surapaquanus Hagialicus Radenus Sotolius Sumiratus Sinhaquanus
+			Samagius Paramesvarus Mohametus Musafarus Mansurus Abrahamus Rahmatus Casimus Innatus Menradsaus 
+			Certavijaius Suraprabhavus Vurucus Radenus Sumirat Singhavardhanus Sharifus Halimus Dinius Shihabus Shafius
+			Bantilanus Achmadus Abdalcaharius Alaus Tunitangcalopius Govanus Palongus Chocarius Parabungus Tunius Tumammaliangus
+			Bacrus Limbangparangus Jamilus Babullus Datus Baracatus Mandarus Siborius Harunus Achralus
 		}
 		female_names = {
 			Agiula Merena Metina Miria Moea Moeta Mohea Orama Poa Poehina Puatea Puaura Ranitea Taiana Taina Tania 
 			Tera Teora Titaina Titaua Tumata Vaea Vaiana Vaiata Vairea
+			Azura Moerania Nanihia Nutea Peara Poenunia Raimerea Rauria Taurua Tehea Tevaia Tuianua Unutea Uraria Vaimitia Suhita Anela Rima Cintra 
 		}
 	}
 
 	romano_cushitic = {
 		primary = RDY
 		male_names = {
-			Adrianos Adrian Akakios Alexandros Alexander Alexios Alexis Anastasios Anastasius Anatolios 
-			Andreas Andrew Andronikos Andronicus Anthemios Anthimos Antiochos Antonios Antonius Apollonios 
-			Arsenios Artemios Athanasios Athanasius Bardas
-			Bartholomaios Bartolomeus Basileios Basil Belisarios Belisarius Boethios Bosporios 
-			Christophoros Christopher Chrysanthos Chrysogonos Damianos Daniel Daniel David David Demetrios 
-			Demetrius Diogenes Dionysios Dionysus Dorotheos Eirenaios Eudoxios Eustratios
-			Eugenios Euphemios Eusebios Eustathios Eustace Evangelos Gabriel Gabriel Gennadios Georgios 
-			George Gerasimos Germanos Germanus Gregoras Gregory Gregorios Gregory Hektorios Helias 
-			Herakleios Heracles Hierotheos Himerios
-			Georgios Alexandros Konstantinos Pavlos Andreas Nikolaos Aineias Alexeios Ambrosios
-			Chrysanthos David Demetrios Diogenes Dionysos Eirenaios Elpidios Gregorios Hektor Herakles 
-			Kastor Manuel Matthaios Nestor Nikomedes Orestes Palaemon Pelagios Petros Philemon Philippos 
-			Skantarios Stefanos Theodoros Thomas Basileios Prokopios Ioannes Iason Bartholomaios
+			Abadirus Abdallus Aboubacar Abrahamius Abriños 
+			Adlianus Adlenus Admetus Adonis Adonaius Adonisus Agbarus Akakios Amadeus 
+			Ammonus Angelus Andreas Andronicus Antonius Apollonius Athmanius Baladus Balus 
+			Bartholomaeus Belarius Berikos Birulus Capampus Chaelus Chinonsus Chiomus 
+			Christophorus Ciriacus Cyrillus Danielus Demetrios Diogenes Efraimus Elias 
+			Eliezer Emmanuilus Ephannus Epimachus Epiphanus Eremius Enochus Ephremus Eusebius
+			Fetheus Folamus Gabrielus Gennadius Gondarus Haile Hamidus Hasanus Heraclius Hieremias Iacobus
+			Idrisus Iesus Iezekiel Imamus Ioannes Iordanius Iosephus Alexander Jonas Johannes Kallinikus Cassius 
+			Lazarus Leontius Mahmudus Makarius Mamadus Manganus Markos Marianos Marius Mattheus Menas Mercurius 
+			Michael Moses Mustafus Mutarus Nasserus Negus Ogbaeus Olabodus Oluphemus Olumidus Omerus 
+			Paulinus Paulus Petros Philippos Philemon Prochorus Raphaelus Rashidus Ruben Rubatus Rutendius 
+			Sabrus Safirus Salachus Salomonus Samsonus Sarsadengelus Sebastus Selassius Sergius Seth Simeonius Stephenus 
+			Suleimanus Tafarius Teferius Thaddeus Theodorus Theophilus Theodosius Thomas Titus Tumelus Iaredus Zacharius Zuberus Zosimus
 		}
 		female_names = {
-			Alexandra Adriane Adriana Agathe Agatha Agne Agnes Aikaterine Alexeia Anastasia Anastasia 
-			Anna Anthe Anthousa Antipatra Antonia Apollonia Athanasia Barbara Basillike
-			Chrysogone Damiane Demetra Dionysia Dorothea Dorothy Aigidia Eirene Irene Elaiodora Epiphania 
-			Eudokia Eudocia Eudoxia Eugenia Eulalia Eunike Euphemia Euphrasia Euphrosyne Euphrosyne
-			Eupraxia Eusebia Eustathia Evanthia Gabrielia Garyphallia Georgia Gregoria Helene Helen 
-			Ioanna Joan Ioulia Julia Iouliana Juliana Ioustina Justina Kale Konstantia Constantia 
-			Konstantine Constantina Kyra Kyriake Hypatia Zoe
+			Abene Abioduna Adea Adina Aisha Alitasha Alethia Amara Amharra Amida Athanasia Aziza 
+			Basra Berhana Berta Boitumela Chaussa Christina Cilesa Debra Dilla Ephemena Elenia 
+			Elisabetha Eirene Faduma Fana Fatima Folamia Fumnania Genata Habesha Ioanna Iustina Khadra 
+			Laila Louama Lumusa Maria Mariella Marthena Munasha Nomusa Olamidia Olubumnia Omolara Patricia
+			Penatia Pesanthia Petronia Priscilla Sahra Sana Selassia Semhara Sheba Simisola Sithembila 
+			Subira Sophia Sousanna Staurophania Tamandania Theodosia Themba Tumela Iamicania Iechuditha Zeina Xenia Zodita Zula Zoe
 		}
 	}
 
 	romano_nigerian = {
 		primary = RDY
 		male_names = {
-			Mahometus Alius Ahomadus Johannes Zacharias Assinus Iumanus Salius Salomo 
-			Ismael Iosephus Abubacus Aladius Butrus Hadrius Abraham Muradus Rasimus Salaudus 
-			Shadius Iunus Caeliphus Amudus Antalius Asadus Aelius Badacus Badisus Bedius 
-			Capusius Dalus Firmus Gaius Ganimus Gildunus Hamadus Hashimus Hibanus Iphenus
+			Abbas Agaias Agbangius
+			Agabus Alamonius Alagius
+			Alius Aloberus Ammarus Anonglus
+			Bachirius Bacarius Bacrus Bamarus Bancanus Bannus
+			Bardandomus Bassius Birachimus Buremus
+			Davidus Davachus Diarus Durus Enes Fagalaius Fodius
+			Ganius Gaonus Gumsarus Haddus Hammadus Harangius
+			Harunus Hessus Ebraimus Igomus
+			Isaacus Ismaelus Illus Ianhazus
+			Calabius Cantanus Cembus Codamus Cutambius
+			Labisius Loranus Magianus Magotus Mararandanus
+			Mahometus Moyses Muntanus Nguianus Nintasanius Niacumus
+			Ovalius Ofinranus Onislaus Orompotus Pocus 
+			Saidus Securus Salihus Salmannus Samsus Samsoberus Sandachius Seccarus Sobus
+			Solimanus Salomon Samuilus Tibus Thomas Tuncus Omarus Jacobus Ioannes Zenchus 
 		}
 		female_names = {
-			Ina Aesa Aisa Amira Badia Baria Bashira Monica Myasa Rusa Rasa Rahima Rula  
-			Sibylla Sima Tadula Tacama
+			Ada Aichata Aischa Alia Amala Amania Amina Amira
+			Aida Azra Afra Amara Anisa Aquila Basima Budura Chioma Chica Chisoba
+			Dalala Dana Deia Djeneba Djamila
+			Ebelea Fadia Fatima Fatumata Fara Farida Fumnania
+			Gamila Galia Habiba Hadia Halima Hiba Husna Icrama Ilama
+			Jamila Cadia Coloncana Laila Lamia Malica Maria Marva Mona Munia
+			Nabila Nadia Namandia Namissa Didia Nenna Nura
+			Salicha Salimata Salma Samara
+			Sania Sassuma Sausan Selima Sidibia Sia Sogolona Tabassuma Tahira Uzoma Vidada Iasmina Zahira Zeinaba Zulecha
 		}
 	}
 
 	romano_kongolese = {
 		primary = RDY
-		male_names = { 
-			Rostamus Anoshaganus Andaragharus Mardanshanus Nakhiraganus Azadbedus Faruzadus 
-			Siyavacus Busburus Mushegus Varaztirotus Narses Gavanshirus Shahragus Khorshidus 
-			Pharukhanus Darius Khosraus Shapurus Boranducus Ardashirus Cavadus Vistamus Bahramus
-			Balashus Mihranus Artabacus Ardunus Raminus Sirous Phedunus Cyrus Manius
+		male_names = {
+			Alexius Ambrosius Andreas Antonius Bacilius Bano Basvius Bernardus
+			Chicandus Chiramurus Chivere Cibindus Chombus Danielus Diogus Gallus
+			Henricus Inhamundus Josus Calongus Camborapasus Campinius Casongus Catengus
+			Kitambus Malobus Mambus Maurusus Matope Mavurus Mceperus Micetus Mucasus 
+			Muzurus Nicolaus Ningomoxus Petrus Sebastius Sosolus Tamasigus Vurius Mbirus
+			Mpembus Mutandus Sanza Ngwatus Niatsimbas Mupunzagutus Gatsius Caumbus Siti Samutumbus
 		}
-		female_names = { 
-			Amstrida Azar Bita Homa Khandan Darya Mihran Faraya Tishtar Meher Manize Mahzarina 
-			Lilya Katayun Kaidokht Gohar Feroza Farida Bostana Asha Arzu Arnaz Arnavaz Armindoca
+		female_names = {
+			Abena Adea Adebola Adetocunbia Alabia Bechata Boseda Eniola 
+			Folamia Igea Jetta Monifa Olamidia Olubumnia Oluvasegunia
+			Onia Simisola Vandana Winona Zodia
 		}
 	}
 
 	romano_bantu = {
 		primary = RDY
-		male_names = { 
-			Rostamus Anoshaganus Andaragharus Mardanshanus Nakhiraganus Azadbedus Faruzadus 
-			Siyavacus Busburus Mushegus Varaztirotus Narses Gavanshirus Shahragus Khorshidus 
-			Pharukhanus Darius Khosraus Shapurus Boranducus Ardashirus Cavadus Vistamus Bahramus
-			Balashus Mihranus Artabacus Ardunus Raminus Sirous Phedunus Cyrus Manius
+		male_names = {
+			Abidemius Abiodunus Adeus Adebaius Adebolus Adedaius Adisus Afolabus Ahmadus 
+			Amadius Athamus Baacus Babajidus Bamideius Berhanus Buchindus Cambarantamus 
+			Chibusus Chidius Chidubemus Chicerius Chicondius Chinonsus Chiomus Chisomus Chiumbus Cilimus 
+			Dacarius Destus Dumisanus Ememus Eniolus Enitanus Farajius Fatsanius Femius Folamus 
+			Ganizanus Hasanus Idirus Imanius Itrius Jengus Campinius Catengus Cofo Lanius Lecanus Limbanius 
+			Limbicanus Madius Mamadus Mephastus Mutagus Mutarus Nicolaus Niamchadus Obius Odchiambus Olabodus 
+			Oluphemus Olumidus Otienus Pempherus Piliranus Rudus Rugandus Rutendus Sanza Sebastius Simbasus 
+			Sipho Tafarius Temitopus Tendaius Thabus Thembus Thulanus Tumelus Usomus Vabena Xolanus Iaredus Iosephus Zephanius Zuberus
 		}
-		female_names = { 
-			Amstrida Azar Bita Homa Khandan Darya Mihran Faraya Tishtar Meher Manize Mahzarina 
-			Lilya Katayun Kaidokht Gohar Feroza Farida Bostana Asha Arzu Arnaz Arnavaz Armindoca
+		female_names = {
+			Abena Abimbola Abioduna Adanna Afia Alaba Amara Asha Chidia Chinasa Chioma 
+			Chisomia Desta Ephemena Eniola Fatsania Folamia Lesedia Limbania Makena Neona 
+			Nia Nenna Nomusa Nuria Ogechia Oluchia Omolara Onieca Pilirania Rudia Rufara Sauda Simisola 
+			Subira Tadala Taonga Tariria Tatendia Thema Themba Tidiria Titritia Udia Iamicania Zola Zuria		
 		}
 	}
 
 	romano_hylinian = {
+		primary = RO7
+		male_names = {
+			Gaius Lucius Drusus Aurelius Severus Maximus Cato 
+			Varro Lepidus Tacitus Horatius Publius Tullius Victor Octavianus 
+			Longinus Trebonius Regillus Rufus Valens Hadrianus Lucullus 
+			Damasus Nerva Sabinus Optatus Tiberius
+			Abishabius Tepastenamus Civashius
+			Montonius Singocius Sepevanius Endus			
+			Attanius Begamonius Uncas Chemaucumus
+			Donaconus Adarios Saragondius
+			Arnaldurus Axelius Baldur Draupnirus Fenrir Gunnarus Haconnus 
+			Jesperos Loki Magnus Merlin Nonnus Norbertus Olavius Ragnar 
+			Ruricus Teiturus Thor Thorvald Vilmundurus Wilhelmus
+			Adrianos Alexandros Alexis Andronicus Anthemios Antiochos Antonius Apollonios 
+			Artemios Athanasius Bardas Bartolomeus Belisarios Bosporios Chrysanthos Chrysogonos Demetrius 
+			Diogenes Dionysios Euphemios Eusebios Eustathios Helias Heracles Himerios Elpidios 
+			Hektor Nikomedes Orestes Philemon Philippos Iason 
+		}
+		female_names = {
+			Faustina Antonia Flavia Octavia Camilla Tullia 
+			Varinia Sabina Julia Aeliana Laurentia Quintia 
+			Fortunata Drusilla Valentina Martia Aquilia
+			Dorothea Elinia Pania Aiashia Mitena Camenia
+			Malia Maliazonia Azonia Liaratsonia Vitamia
+			Taima Catacia Pecama
+			Arja Astrid Birgittia Bogia Esmeralda Freja Greta Helga 
+			Herthia Inna Linda Monica Eraclea Renata Tamara Unia
+			Alexandra Adriana Agatha Agnes Anastasia Anna Apollonia Athanasia 
+			Demetra Dionysia Eirene Irene Eudoxia Eugenia Eulalia Helene Helen Justina Constantina Kyriake Hypatia 
+		}
 	}
 
 	romano_punic = {
+		primary = RO1
+		male_names = {
+			Abdalonymus Abimilcus Magus Anysus Asdrubal Astegal Bomilcar Boodes Bostar Carthalo Eshmunazar Fierelus 
+			Fuabal Haggith Hamilax Hamilcar Hampsicoras Hannibal Hannon Hasdrubal Himilcus Hiram Kandaulos Lulius Maharbal 
+			Mapen Mathos Merbal Muttinus Salicar Sirom Tetramnestus Sequoianius Moytoius Gansinius Chonostes Sketalos 
+			Necateus Sceleacus Ostaius Tlorene Johannes Chellocius Akohius Kanitta Nemetius Tulco 
+			Artorius Aeronus Caephaelus Edgarus Adrian Alexander Andreus Arcadius Artemius Damianus Ambrosius Octavius Claudius 
+			Vitalius Fergus Maximonus Sergius Justinanius Theodosius Tomasius Victorus Caelus Decius 
+			Drusus Faustus Gaius Gnaeus Lucius Secundus Septimus Servius Sextus 
+			Titus Tiberius Agrippa Aratus Asina Balbus Barbatus Bibulus Brutus Crispian 
+			Dentatus Eugenius Euphemius Falco Galerus Gorgonius Gracchus Libo Longinus Longus Lucan Lucullus Messalla Montanus  
+			Murena Mus Nasica Otho Peregrinus Petronax Pulcher Rufus Sabinus Senna Severus  Strabo Superbus Tertulus 
+			Trebonius Tullius Ursus Valens Vindex Zosimus Gaius Traianus Maximinus Constantinus Nepotianus Theodosius Honorius 
+		}
+		female_names = {
+			Asmita Naniechia Adsila Avinita Ayita Leotia Tayanita Sequoia Ama Inola Tsula 
+			Aeliana Antonina Aquilia Argentia Camilla Cassia Clemensia Decima Flavia Florentina 
+			Galle Dulcia Fabia Faustina Hilaria Julia Junia Laelia Laurentia Martia Mila Nerilla 
+			Octavia Priscilla Sabina Septima Tanaquil Tatana Tauria Urbana Valentina Vita
+		}
 	}
 
 	romano_hashdian = {
+		primary = ROQ
+		male_names = {
+			Hocolesis Paxinos Tecumsecius Napavitius Tamenetha Quetavachius 
+			Wechegalla Tachiota Avonacius Amanacius
+			Soacheas Tecachias Tevanias  Kendarinonus Aquleia Taronvagon
+			Petrius Sergius Denision Lutius Gechakius Sapius Glescius Oglius
+			Tashar Tevinnus Mattannus Arcadius Mordechaius Simonius Moscius 
+			Philius Chadcius Tuskenius Chomatius Isaacius Bibius
+			Lucius Severus Falco Quintus Longinus Gaius Tacitus Maximus Varro Publius Cotta Damasus Eugenius Euphemius 
+			Falco Galerus Gorgonius Gracchus
+			Aurelius Drusus Tullius Vitus Flaccus Rufus Lepidus Otho Scipio Cato Octavianus Aratus
+			Hadrianus Decius Regillus Tiberius Valens Seneca Victor Ambrosius Zosimus Vindex Catulus
+		}
+		female_names = {
+			Tacumvachia Sara Rosalia
+			Hanata Nuna Pulesia Vapunia Petha Sinopa
+			Aquilippa Genesseia Satecho
+			Kimimela  Macha Mika Vinonna Zonta Mina
+			Zacadia Arcadia
+			Manquia Piro Pitrel Quimey Rayen Luna
+			Faustina Antonia Octavia Camilla Flavia Varinia 
+			Tullia Sabina Maxima Julia Aeliana Quintia Laurentia Albia Vita
+		}
 	}
 
 	romano_cascadian = {
+		primary = RO3
+		male_names = {
+			Seatlius Helmitius Pattehius 
+			Kaisunius Howkanius
+			Nachtanius Chaconius
+			Apatius
+			Moitous Agitus Galisteos Xenom Tagus Bolsas 
+			Aurelius Falco Drusus Cato Quintus Tacitus Lucius 
+			Ursus Gaius Maximus Varro Publius Scipio Severus Lepidus 
+			Tiberius Flaccus Octavianus Longinus Horatius Valens Trebonius 
+			Hadrianus Victor Lucullus Regillus Brutus Seneca Optatus 
+			Murena Williamus Ioannus Curtius Iustinus
+		}
+		female_names = {
+			Elvamox Onavia Tara
+			Losenia Tochaia
+			Shila Iuralria
+			Sacagawea Chipeta Tocmetonia 
+			Faustina Antonia Flavia Octavia 
+			Tullia Camilla Varinia Sabina Maxima 
+			Julia Aeliana Laurentia Quintia Albia Victoria Silvia
+		}
 	}
 
 	romano_mexican = {
+		primary = RO5
+		male_names = {
+			Moctezuma Axaiacatlius Tlacotzinus Tenochius Huicton Mazatlius Timas Tlocinus Coltonius Panitzinus
+			Ollius Ozomatius Telocotlius Tizocius Tlalocius Yolotlius Xihuitl Xipilius Uemanus Zolinius
+			Achmodus Balamus Borius Chaobus Chiamus Nachanus Pacalus Tecumanus 
+			Vatacius Zotzius Xius Cocomus Nisa Roius			
+			Gaius Lucius Drusus Quintus Maximus Aurelius Falco Severus Rufus Cato Tullius 
+			Scipio Alexander Franciscus Emilius Varro Publius Longinus Lepidus Cicero Tacitus 
+			Flaccus Euphemius Horatius Dolabella Octavianus Martialis Valens Victor Seneca Trebonius 
+			Hadrianus Fimbria Optatus Damasus Lucullus Murena Regillus Superbus Otho Brutus Crispian 
+			Varus Gracchus Longus Sabinus Nerva Tiberius Vitus Dorotheus Emilius
+		}
+		female_names = {
+			Centechuania Nellia Patlia 
+			Sacnitia Tlacotlia Xilonia Zeltzinia Citalia Etapalia Talizoria
+			Ayasha Aitia Dena Halona Magena
+			Iarecia Zelitinia
+			Faustina Antonia Camilla Octavia Flavia Tullia Varinia 
+			Sabina Maxima Julia Laurentia Aeliana Albia Fortunata 
+			Drusilla Quintia Vita Valentina Martia Priscilla Salma Sophia Emilia
+		}
 	}
 
 	romano_carib = {
+		primary = RO2
+		male_names = {
+			Tharius Ebedimus Aratius
+			Decimus Gaius Lucius Drusus Falco 
+			Quintus Severus Aurelius Scipio Varro 
+			Maximus Tacitus Flaccus Lepidus Rufus Longinus 
+			Cato Publius Horatius Octavianus Theodoricus Victor 
+			Valens Regillus Cicero Trebonius Hadrianus Murena 
+			Lucullus Tiberius Romanus Raphaelus Rudolphus Fulgentius Anastasios 
+		}
+		female_names = {
+			Isania Tacuibia Tvengia
+			Faustina Antonia Flavia Octavia 
+			Camilla Varinia Sabina Maxima Julia 
+			Aeliana Laurentia Albia Vita Quintia 
+			Drusilla Anna Anastasia Marianna Valeria Ava 
+		}
 	}
 
 	romano_peruan = {
+		primary = RO8
+		male_names = {
+			Sopaius Caius Topius Marcavillus
+			Appius Aulus Decimus Decius Faustus Gnaeus Mamercus Manius 
+			Mettius Numerius Spurius Servius Titus Albinus Balbus Bibulus 
+			Calvus Cotta Dentatuû Gaius Eugenius Florus Fronto Galerus Caesar 
+			Gemellus Gracchus Habitus Laenas Lentulus Libo Marcus Marullus 
+			Messalla Montanus Artorius Oceanus Peregrinus Petronax Pulcher
+			Agrippa Michael Gechus Iacobus
+			Atocius Sopius Lucius Pumius Titus Valens
+			Atahualpa Anquimarca Zambizus Coillus Pascacius Ruminavus Surandamus 
+			Guarius Litunus Taracunus Menendus
+			Antonius Amanus Ancus Carius Amarus Intus
+		}
+		female_names = {
+			Nina Anna Maiara
+			Aquilia Argentia Clemensia Decima Florentina Fortunata Gaia 
+			Galle Dulcia Fabia Hilaria Junia Laelia Mercella 
+			Mila Nerilla Prima Sergia Tanaquil Tatana
+			Axomania Cavilacia Cantutia
+		}
 	}
 
 	romano_brazilian = {
+		primary = RO6
+		male_names = {
+			Caelus Decimus Decius Faustus Gnaeus Mamercus Mettius Numerius 
+			Spurius Septimus Servius Tertius Albus Agrippa Aratus Asina Rufus 
+			Barbatus Brutus Bubo Buteo Calvinus Catulus Cethegus Cinna Crispian Curio 
+			Damasus Dives Donatus Eugenius Falx Felix Fimbria Florus Fronto Galba 
+			Gemellus Gorgonius Gracilis Hadrianus Herma Hilarius Gaius Octavianus
+			Amarus Chavucius Cuarachus Mattheus Namandus Tecotus Aratus
+			Vaimacus Iandus Raonus Carupotius
+			Ancamillus Lautarus Huenerus Ñancus Mañillus Pelantarus
+		}
+		female_names = {
+			Aeliana Albia Antonia Aquilia Argentia Cassia Clemensia 
+			Decima Dulcia Fabia Flavia Florentina Fortunata Gaia Galle 
+			Junia Laelia Laurentia Mercella Nerilla 
+			Priscilla Quintia Sergia Tauria Tatana
+			Bartira Potira Iaima Curipia Lephlaia 
+			Mancia Piro Raienia Sagia Somoche
+		}
 	}
 
 	romano_australian = {
+		primary = RO9
+		male_names = {
+			Appius Aulus Caelus Decimus Drusus Faustus Gnaeus 
+			Victor Mettius Numerius Secundus Septimus Servius Spurius Tertius 
+			Albinus Agricola Aratus Gaius Balbus Traianus Calvus Cato Cethegus 
+			Cinna Valerius Damasus Dentatus Rufus Donatus Emeritus Euphemius Caesar Fimbria Galerus
+			Achicus Aperus Arianus Eterus Horatius Hektor Hunapus Ikaros Caichautus 
+			Manaius Matius Moanus Rongus Ropatus Taicus Tangarus Te-Aricus Temuerus Phettus
+			Adonius Acamus Marron Pindarius Tuartus Duralus Umbarus 
+		}
+		female_names = {
+			Aeliana Albia Antonina Aquilia Argentia Cassia Clemensia Decima Anna 
+			Flavia Florentina Gaia Junia Laelia Laurentia Mercella Nerilla 
+			Priscilla Quintia Sergia Victoria Tatana
+			Amaia Anachera Arochia Coria Maria Manaia Moana Te-Arochia
+			Alba Allora Amarina Gedala Noora Olba Iaralla
+		}
 	}
 
 	dynasty_names = {
