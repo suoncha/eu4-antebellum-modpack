@@ -528,17 +528,8 @@ ab_japan_first = {
 			}
 		}
 		effect = {
-			if = {
-				limit = { has_dlc = "Cradle of Civilization" }
-				custom_tooltip = JAP_ARMY_BUILDINGS_GRANT_ARMY_PROFESSIONALISM
-			}
-			else = {
-				add_country_modifier = {
-					name = jap_high_quality_weapons_modifier
-					duration = 9125
-				}
-			}
-
+			set_country_flag = jap_building_manpower
+			custom_tooltip = JAP_ARMY_BUILDINGS_GRANT_ARMY_PROFESSIONALISM
 			change_monarch_points_or_power = {
 				power = mil
 				points = 1

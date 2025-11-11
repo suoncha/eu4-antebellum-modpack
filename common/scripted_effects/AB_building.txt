@@ -395,6 +395,14 @@ ab_removing_courthouse_effect = {
 }
 
 ab_building_manpower_effect = {
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = jap_building_manpower
+            }
+        }
+        add_army_professionalism = 0.001
+    }
 	if = {
 		limit = {
 			FROM = {
@@ -443,6 +451,14 @@ ab_building_manpower_effect = {
 }
 
 ab_removing_manpower_effect = {
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = jap_building_manpower
+            }
+        }
+        add_army_professionalism = -0.001
+    }
 	if = {
 		limit = {
 			has_province_modifier = ivr_extra_manpower_1
@@ -463,6 +479,28 @@ ab_removing_manpower_effect = {
 		remove_province_modifier = punic_iscine_mod
 	}
 	# ]]]
+}
+
+ab_building_forcelimit_effect = {
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = jap_building_manpower
+            }
+        }
+        add_army_professionalism = 0.001
+    }
+}
+
+ab_removing_forcelimit_effect = {
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = jap_building_manpower
+            }
+        }
+        add_army_professionalism = -0.001
+    }
 }
 
 ab_building_shipyard_effect = {
