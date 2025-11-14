@@ -4078,6 +4078,11 @@ ger_fifth_group_styria = {
 					}
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
+			}
 		} 
 	}
 }
@@ -4210,6 +4215,11 @@ ger_fifth_group_tirol = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = jap_gain_access_to_naval_hegemon_tt
 			set_country_flag = jap_halve_naval_hegemony_requirements
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
+			}
 		}
 	}
 }
@@ -4325,6 +4335,11 @@ ger_fifth_group_saxony = {
 			add_country_modifier = {
 				name = sax_germanization
 				duration = -1
+			}
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
 			}
 		}
 	}
@@ -4698,6 +4713,7 @@ ger_fifth_group = {
 				name = "eng_scramble"
 				duration = 9125
 			}
+            set_country_flag = ab_inland_africa_colonizable
 			custom_tooltip = ENG_ALLOW_INLAND
 		}
 	}
