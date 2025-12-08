@@ -1321,6 +1321,7 @@ republic = {
 				ab_tuscan_military_reform
 				ab_tuscan_peasants_reform
 				rhl_confederation_reform
+				ab_roman_republic
 				# ]]]
 				# TLW [[[
 				rom_diocese
@@ -1688,6 +1689,7 @@ republic = {
 				ottoman_eyalets
 				ruskontsy
 				htm_kurin
+			    ab_roman_provinces
 				# ]]]
 				# TLW [[[
 				byzengineering

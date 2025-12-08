@@ -1,4 +1,13 @@
 aspect_zeus = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		shock_damage = 0.05
@@ -7,6 +16,15 @@ aspect_zeus = {
 }
 
 aspect_poseidon = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		galley_power = 0.1
@@ -15,6 +33,15 @@ aspect_poseidon = {
 }
 
 aspect_demeter = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {	
 		development_cost = -0.05
@@ -23,6 +50,15 @@ aspect_demeter = {
 }
 
 aspect_ares = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		land_morale = 0.05
@@ -31,6 +67,15 @@ aspect_ares = {
 }
 
 aspect_hera = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		diplomatic_reputation = 1
@@ -47,6 +92,15 @@ aspect_apollo = {
 }
 
 aspect_athena = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		discipline = 0.025
@@ -55,6 +109,15 @@ aspect_athena = {
 }
 
 aspect_hades = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		prestige_decay = -0.01
@@ -63,6 +126,15 @@ aspect_hades = {
 }
 
 aspect_artemis = {
+	trigger = {
+		NOT = {
+			OR = {
+				tag = RMR
+				was_tag = RMR
+				tag = ROM
+			}
+		}
+	}
 	cost = 100
 	modifier = {
 		global_trade_goods_size_modifier = 0.05
@@ -79,5 +151,125 @@ aspect_kratos = {
 		infantry_power = 0.1
 		cavalry_power = 0.05
 		artillery_power = 0.1
+	}
+}
+
+aspect_jupiter = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		shock_damage = 0.05
+		global_unrest = -2
+	}
+}
+
+aspect_neptune = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		galley_power = 0.1
+		naval_morale = 0.1
+	}
+}
+
+aspect_ceres = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {	
+		development_cost = -0.05
+		production_efficiency = 0.1
+	}
+}
+
+aspect_mars = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		land_morale = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+aspect_juno = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+}
+
+aspect_minerva = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		discipline = 0.025
+		war_exhaustion = -0.03
+	}
+}
+
+aspect_pluto = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		prestige_decay = -0.01
+		max_absolutism = 5
+	}
+}
+
+aspect_diana = {
+	trigger = {
+		OR = {
+			tag = RMR
+			was_tag = RMR
+			tag = ROM
+		}
+	}
+	cost = 100
+	modifier = {
+		global_trade_goods_size_modifier = 0.05
+		global_prosperity_growth = 0.25
 	}
 }
