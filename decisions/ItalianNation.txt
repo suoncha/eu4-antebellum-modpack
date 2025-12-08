@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { exists = ITA }
 			NOT = { exists = ITR }
 			NOT = { exists = ITT }
+			NOT = { tag = RMR }
 			NOT = { tag = PAP }
 			OR = {
 				ai = no

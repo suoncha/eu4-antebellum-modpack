@@ -1,4 +1,32 @@
 country_decisions = {
+	### HELLENIC ###
+	show_center_of_hellenization = {
+		potential = {
+			ai = no
+			religion = reformed_hellenic
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				has_province_modifier = nci_center_of_hellenisation
+			}
+		}
+		
+		provinces_to_highlight = {
+			has_province_modifier = nci_center_of_hellenisation
+		}
+
+		allow = {
+			always = no
+		}
+		
+		effect = {
+			custom_tooltip = SHOW_CENTER_OF_HELLENIZATION_TT
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	### SOL INVICTUS ###
 	hold_sol_festival = {
 		potential = {

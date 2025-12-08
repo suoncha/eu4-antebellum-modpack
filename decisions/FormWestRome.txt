@@ -20,6 +20,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
+			NOT = { tag = RMR }
 		}
 		provinces_to_highlight = {
 			if = {
