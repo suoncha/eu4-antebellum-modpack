@@ -3058,7 +3058,6 @@ ab_teu_fourth_ger = {
 			south_german_region = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
 				}
 				add_territorial_core = ROOT
 			}

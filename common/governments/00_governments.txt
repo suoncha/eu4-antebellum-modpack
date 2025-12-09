@@ -1729,6 +1729,9 @@ republic = {
 				# Blood and Iron
 				ab_customs_union
 				# ]]]
+				# Baltic
+                blt_amber_trade_charter
+				# ]]]
 				# TLW [[[
 				ctg_merchant_syndicate_reform
 				ctg_slave_economy_reform
@@ -2568,6 +2571,9 @@ theocracy = {
 				merchant_representation_reform
 				modern_economics_reform
 				chinampa_farms_reform
+				# Baltic
+                blt_amber_trade_charter
+				# ]]]
 				# TLW [[[
 				ozo_sanctified_trade_reform
 				# ]]]

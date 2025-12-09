@@ -129,19 +129,14 @@ country_event = {
 
 	option = {
 		name = fate_of_francia.2.b
-
-		custom_tooltip = fate_of_francia_frankish_win_benefits
-		hidden_effect = {
-			FRC = {
-				add_prestige = 50
-				add_legitimacy = 50
-				add_country_modifier = {
-					name = frc_carolingian_authority
-					duration = 7300
-				}
+		FRC = {
+			add_prestige = 50
+			add_legitimacy = 50
+			add_country_modifier = {
+				name = frc_carolingian_authority
+				duration = 18250
 			}
 		}
-
 		FRC = {
 			add_opinion = {
 				who = emperor
@@ -181,7 +176,7 @@ country_event = {
 			add_legitimacy = 50
 			add_country_modifier = {
 				name = frc_carolingian_authority
-				duration = 7300
+				duration = 18250
 			}
 		}
 		# Give every Imperial Prince a decision
@@ -313,7 +308,7 @@ country_event = {
 		add_legitimacy = 50
 		add_country_modifier = {
 			name = frc_carolingian_authority
-			duration = 7300
+			duration = 18250
 		}
 		hidden_effect = {
 			# Have set_emperor here because the tooltip is bad
@@ -324,6 +319,7 @@ country_event = {
 				}
 				clr_province_flag = fate_of_francia_retain_province
 			}
+			add_imperial_influence = 100
 		}
 	}
 }
@@ -363,12 +359,13 @@ country_event = {
 			add_legitimacy = 50
 			add_country_modifier = {
 				name = defender_of_the_empire
-				duration = 7300
+				duration = 18250
 			}
 		}
 
 		custom_tooltip = free_carolingian_imperial_subjects
 		hidden_effect = {
+			add_imperial_influence = 100
 			FRC = {
 				every_subject_country = {
 					limit = {
@@ -731,6 +728,16 @@ country_event = {
 		}
 		custom_tooltip = AB_EMPTY
 		custom_tooltip = fate_of_francia.6.imperial_victory_tooltip
+		tooltip = {
+			emperor = {
+				add_prestige = 50
+				add_legitimacy = 50
+				add_country_modifier = {
+					name = defender_of_the_empire
+					duration = 18250
+				}
+			}
+		}
 	}
 	option = {
 		name = fate_of_francia.6.c
@@ -776,6 +783,16 @@ country_event = {
 		}
 		custom_tooltip = AB_EMPTY
 		custom_tooltip = fate_of_francia.6.carolingian_victory_tooltip
+		tooltip = {
+			FRC = {
+				add_prestige = 50
+				add_legitimacy = 50
+				add_country_modifier = {
+					name = frc_carolingian_authority
+					duration = 18250
+				}
+			}
+		}
 	}
 }
 
@@ -790,6 +807,16 @@ country_event = {
 	option = {
 		name = fate_of_francia.7.a
 		custom_tooltip = fate_of_francia_imperial_victory
+		tooltip = {
+			emperor = {
+				add_prestige = 50
+				add_legitimacy = 50
+				add_country_modifier = {
+					name = defender_of_the_empire
+					duration = 18250
+				}
+			}
+		}
 	}
 }
 
@@ -850,6 +877,7 @@ country_event = {
 
 		custom_tooltip = fate_of_francia_provinces_leave_empire
 		hidden_effect = {
+			add_imperial_influence = -100
 			every_province = {
 				limit = {
 					country_or_non_sovereign_subject_holds = FRC
