@@ -2465,6 +2465,7 @@ aba_slavic_pol_orthodox_third = {
 		}
 		effect = { 
 			change_technology_group = western
+			change_unit_type = western
 			add_country_modifier = {
 					name = aba_pol_westernized_army
 					duration = -1	

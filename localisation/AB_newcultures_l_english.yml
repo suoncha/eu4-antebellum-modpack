@@ -2,6 +2,9 @@
 #GUI Modding
 AB_UNLOCK_MISSION_SWITCH: "§GUnlocks§! §YMission Switch§!, allows us to switch between different mission trees in the §YMission Tab§!."
 
+#GUI Modding
+AB_UNLOCK_MISSION_SWITCH: "§GUnlocks§! §YMission Switch§!, allows us to switch between different mission trees in the §YMission Tab§!."
+
 # Cultures #
 #Asia
  japanese_nikkei: "Nikkei"
@@ -49,8 +52,8 @@ AB_UNLOCK_MISSION_SWITCH: "§GUnlocks§! §YMission Switch§!, allows us to swit
 #British
  abf_albion_culture: "Alban"
 #Bulgarian:
-aba_bul_rostislavtsi: "Rostislavtsi"
-aba_bul_vlach: "Vlach"
+ aba_bul_rostislavtsi: "Rostislavtsi"
+ aba_bul_vlach: "Vlach"
 
  #government_reforms
 #Golden Horde
@@ -68,23 +71,23 @@ aba_bul_vlach: "Vlach"
  aba_shahi_diwan_tribal_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire.
 
 #Tocharia
-ABA_kushan_confederacy: "Kushan Confederacy"
-ABA_kushan_confederacy_desc: "The Kushan Confederacy represents a significant shift in governance, harkening back to the roots and foundations of the old Kushan Empire. Combining aspects of Greek, Indian, and Chinese governance, the Kushan Confederacy managed to adminster a vast and diverse empire unlike any other seen in history. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
-ABA_tcr_persianempire: "Persinate Empire"
-ABA_tcr_persianempire_desc: "With our shift toward the West, we have revived the ancient traditions of the Persian Empire. By adopting the administrative practices and cultural norms of the Persians, we aim to create a more efficient and unified state that can better manage our diverse populations and territories. This change is expected to strengthen our overall state capacity, foster greater unity and stability within our realm, and allow us to better navigate the complexities of ruling a vast and culturally rich empire."
-ABA_tcr_yuezhi_warlord: "Yuezhi Warlord State"
-ABA_tcr_yuezhi_warlord_desc: "While we are unable to claim the Mandate of Heaven for ourselves yet, we find ourselves in a percuilar situation. As the descendants of the ancient Yuezhi people, we have a unique claim to the lands of China, yet we are just another warlord in the race for the throne. This reform represents our attempt to embrace our Yuezhi heritage while still navigating the complex political landscape of China. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
-ABA_tcr_celestial_empire: "Yuezhi Celestial Empire"
-ABA_tcr_celestial_empire_desc: "Having rejected the Mandate of Heaven but still proclaiming ourselves the sole rulers of China, we find ourselves in a unique position. We have combined the ways of the Yuezhi with the traditions of the Chinese, creating a new form of governance that reflects our dual heritage. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ ABA_kushan_confederacy: "Kushan Confederacy"
+ ABA_kushan_confederacy_desc: "The Kushan Confederacy represents a significant shift in governance, harkening back to the roots and foundations of the old Kushan Empire. Combining aspects of Greek, Indian, and Chinese governance, the Kushan Confederacy managed to adminster a vast and diverse empire unlike any other seen in history. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ ABA_tcr_persianempire: "Persinate Empire"
+ ABA_tcr_persianempire_desc: "With our shift toward the West, we have revived the ancient traditions of the Persian Empire. By adopting the administrative practices and cultural norms of the Persians, we aim to create a more efficient and unified state that can better manage our diverse populations and territories. This change is expected to strengthen our overall state capacity, foster greater unity and stability within our realm, and allow us to better navigate the complexities of ruling a vast and culturally rich empire."
+ ABA_tcr_yuezhi_warlord: "Yuezhi Warlord State"
+ ABA_tcr_yuezhi_warlord_desc: "While we are unable to claim the Mandate of Heaven for ourselves yet, we find ourselves in a percuilar situation. As the descendants of the ancient Yuezhi people, we have a unique claim to the lands of China, yet we are just another warlord in the race for the throne. This reform represents our attempt to embrace our Yuezhi heritage while still navigating the complex political landscape of China. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ ABA_tcr_celestial_empire: "Yuezhi Celestial Empire"
+ ABA_tcr_celestial_empire_desc: "Having rejected the Mandate of Heaven but still proclaiming ourselves the sole rulers of China, we find ourselves in a unique position. We have combined the ways of the Yuezhi with the traditions of the Chinese, creating a new form of governance that reflects our dual heritage. By adopting this reform, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
 
 
 # Mission Tooltips #
 #Asia
  JAP_PH_CULTURE: "§YNikkei§! culture will §Gnaturally spread§! throughout our §YShinto Filipino§! provinces."
  JAP_KR_CULTURE: "§YZainichi§! culture will §Gnaturally spread§! throughout our §YShinto Korean§! provinces."
-abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
-abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
-aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fusing §GIndian§! and §GAfghan§! ways of governance. We will recieve increased and unique rewards for assimilating Indian cultures!\n"
+ abf_manchu_culture_convert_tt: "§YJurchen§! culture will be moved to the §GChinese§! culture group."
+ abf_chi_japan_culture_convert_tt: "§YFusau§! culture will §Gnaturally spread§! throughout our §YConfucian Japanese§! provinces!"
+ aba_shahi_diwan_tt: "\nWe will adopt the §YShahi Diwan§! government reform fusing §GIndian§! and §GAfghan§! ways of governance. We will recieve increased and unique rewards for assimilating Indian cultures!\n"
 abf_chi_japan_culture_convert_tcr_tt: "§YFusau§! culture will §Gnaturally spread§! throughout §YJapanese§! provinces of our §YReligion§!!"
 # IBE_PH_CULTURE: "The §YTornatrás§! culture will §Gnaturally spread§! throughout our §YCatholic Filipino§! provinces."
 # ADU_PH_CULTURE: "The §YMoro§! culture will §Gnaturally spread§! throughout our §YMuslim Filipino§! provinces." - TO DO 1.10
@@ -127,49 +130,49 @@ abf_chi_japan_culture_convert_tcr_tt: "§YFusau§! culture will §Gnaturally spr
 #British
  abf_albion_culture_spread_tt: "\n§YAlban§! culture will §Gnaturally spread§! throughout our §YBritish§! provinces!\n"
 #Poland
-aba_pol_institutions_will_slowly_grow_in_262_tt: "\n§YInsitutions§! will §Gnaturally grow§! throughout our §YKrakow§!!\n"
-aba_unlock_lavra_tt: "\nWe will gain the ability to construct §GLavra§!!\n"
-ABA_POLISH_HUSSARS_TT: "\nUpon unlocking §YHussars§!, our maximum recruitment cap will be increased!\n"
+ aba_pol_institutions_will_slowly_grow_in_262_tt: "\n§YInsitutions§! will §Gnaturally grow§! throughout our §YKrakow§!!\n"
+ aba_unlock_lavra_tt: "\nWe will gain the ability to construct §GLavra§!!\n"
+ ABA_POLISH_HUSSARS_TT: "\nUpon unlocking §YHussars§!, our maximum recruitment cap will be increased!\n"
 #Shahi
-ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, granting bonsues to the provinces it runs through!\n"
-ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
+ ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, granting bonsues to the provinces it runs through!\n"
+ ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
 #Hetmanate
-ABA_HTM_hussar_spawn_tt: "\nFive §GWinged Hussars§! will be raised in our Capital and every §G10 years§! we will recieve new regiments of winged hussars!\n"
+ ABA_HTM_hussar_spawn_tt: "\nFive §GWinged Hussars§! will be raised in our Capital and every §G10 years§! we will recieve new regiments of winged hussars!\n"
 #Zun
-ABA_ZNN_india_tt: "\nWe will abandon our ambitions in Persia to focus on the rich and fertile lands of §GHindustans§!!\n"
-ABA_ZNN_persia_tt: "\nWe will abandon our ambitions in the East to reclaim the long lost glory of the §GPersian Empire§!!\n"
-ABA_ZNN_global_purification_tt: "\nWe will begin a campaign of §RGlobal Purification§! to spread the §JZunist§! faith across our the World!\n"
-ABA_ZUN_UNLOCKED_PATH: "\nThis mission can be unlocked by completeing the §JBeyond The Horizon§! mission\n"
-ABA_zun_shift_west_tt: "\nWe will turn our attention §JWestward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
-ABA_zun_shift_east_tt: "\nWe will turn our attention §JEastward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
-ABA_ZUN_sahar_bahar_tt: "\nWe will be able to §Yrestore§! §GSah-Bahar - The Temple of the Kings§! in §YGhanzi§!!\n"
+ ABA_ZNN_india_tt: "\nWe will abandon our ambitions in Persia to focus on the rich and fertile lands of §GHindustans§!!\n"
+ ABA_ZNN_persia_tt: "\nWe will abandon our ambitions in the East to reclaim the long lost glory of the §GPersian Empire§!!\n"
+ ABA_ZNN_global_purification_tt: "\nWe will begin a campaign of §RGlobal Purification§! to spread the §JZunist§! faith across our the World!\n"
+ ABA_ZUN_UNLOCKED_PATH: "\nThis mission can be unlocked by completeing the §JBeyond The Horizon§! mission\n"
+ ABA_zun_shift_west_tt: "\nWe will turn our attention §JWestward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
+ ABA_zun_shift_east_tt: "\nWe will turn our attention §JEastward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
+ ABA_ZUN_sahar_bahar_tt: "\nWe will be able to §Yrestore§! §GSah-Bahar - The Temple of the Kings§! in §YGhanzi§!!\n"
 #Bulgaria
-ABA_BUL_slavic_tt: "\nA New §JRome§! Rises!\n"
-ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
-ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
-ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
-aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
+ ABA_BUL_slavic_tt: "\nA New §JRome§! Rises!\n"
+ ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
+ ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
+ aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
 
 #Tocharia
-abf_sinokorean_culture_convert_tt: "§YKorean§! culture will be moved to the §GChinese§! culture group."
-ABA_tcr_reward_coal_tt: "Two random provinces that are owned by §YTocharia§!, are §YMountain§! provinces, and produce §YLivestock§! or §YGrain§! will change their trade goods to §YCoal§!."
-ABA_tcr_CAUCASIAN_FORTS_tt: "§Y[421.GetName]§!, §Y[5149.GetName]§! and §Y[1856.GetName]§! will receive:"
-ABA_tcr_cawa_infantry_tt: "\n10 §JCawa Infantry§! will be spawned in our §YCapital§!!\n"
-ABA_sinification_tocharian_tt: "\n§YTocharian culture§! will turn into the §GSinified Yuezhi culture§!!\n"
-ABA_tcr_rajput_expansion_tt: "\nEvery 20 years §G10 Rajput Regiments§! will be raised in our Capital!\n"
-ABA_tcr_mecca_church_tt: "\n§GConvert§! §YMasjid al-Haram§! into a §JCathedral§!, but only benefit from §YPrestige§! and half of the §YReligious Unity§!\n"
-ABA_tcr_relations_tt: "\nEvery §YMuslim§! country will gain §G+35§! relations with us.\n"
-ABA_tcr_gorkhas_tt: "\nWe will now be able to recruit the legendary §JGorkha Regiments§! as mercenary companies that §Ydo not contribute§! to our force limit!\n"
-aba_tcr_sri_lanka_tt: "\nThe Island of Ceylon will gain a powerful §Jprovince modifier§! increasing §Yproduction efficiency§! and §Ytrade value§!!\n"
-ABA_tcr_mongolian_pastures_tt: "\nWe will gain §G5§! §YFarm Estates§! throughout our improved §YMongolian§! provinces!\n"
-ABA_TCR_bactra_chashma_project_tt: "\nWe will construct the great palace and temple complex of §GChasma-i-Shir§! in the newly restored city of §YBactra§!!\n"
-ABA_TCR_purushapura_ahin_posh_project_tt: "\nWe will construct the grand iron-covered monastery of §GAhin Posh§! in the newly restored city of §YPurushapura§!!\n"
-unlock_ABA_tcr_gorkhas_merc_1_tt: "\n§GMalaun Regiment§! mercenary company is now §Yavailable for hire§!!\n"
-unlock_ABA_tcr_gorkhas_merc_2_tt: "\n§GSecond Gorkha Rifles§! mercenary company is now §Yavailable for hire§!!\n"
-ABA_TCR_bactra_chashma_project_allowed_tt: "Allowed to construct §YChashma-i-Shir§!"
-ABA_tcr_built_mathura_temple_allowed_tt: "Allowed to construct §YThe Great Mathura Temple§!"
-ABA_TCR_purushapura_ahin_posh_project_allowed_tt: "Allowed to construct §YAhin Posh Tepe§!"
-ABA_ZUN_sahar_bahar_allowed_tt: "Allowed to construct §YSahar Bahar§!"
+ abf_sinokorean_culture_convert_tt: "§YKorean§! culture will be moved to the §GChinese§! culture group."
+ ABA_tcr_reward_coal_tt: "Two random provinces that are owned by §YTocharia§!, are §YMountain§! provinces, and produce §YLivestock§! or §YGrain§! will change their trade goods to §YCoal§!."
+ ABA_tcr_CAUCASIAN_FORTS_tt: "§Y[421.GetName]§!, §Y[5149.GetName]§! and §Y[1856.GetName]§! will receive:"
+ ABA_tcr_cawa_infantry_tt: "\n10 §JCawa Infantry§! will be spawned in our §YCapital§!!\n"
+ ABA_sinification_tocharian_tt: "\n§YTocharian culture§! will turn into the §GSinified Yuezhi culture§!!\n"
+ ABA_tcr_rajput_expansion_tt: "\nEvery 20 years §G10 Rajput Regiments§! will be raised in our Capital!\n"
+ ABA_tcr_mecca_church_tt: "\n§GConvert§! §YMasjid al-Haram§! into a §JCathedral§!, but only benefit from §YPrestige§! and half of the §YReligious Unity§!\n"
+ ABA_tcr_relations_tt: "\nEvery §YMuslim§! country will gain §G+35§! relations with us.\n"
+ ABA_tcr_gorkhas_tt: "\nWe will now be able to recruit the legendary §JGorkha Regiments§! as mercenary companies that §Ydo not contribute§! to our force limit!\n"
+ aba_tcr_sri_lanka_tt: "\nThe Island of Ceylon will gain a powerful §Jprovince modifier§! increasing §Yproduction efficiency§! and §Ytrade value§!!\n"
+ ABA_tcr_mongolian_pastures_tt: "\nWe will gain §G5§! §YFarm Estates§! throughout our improved §YMongolian§! provinces!\n"
+ ABA_TCR_bactra_chashma_project_tt: "\nWe will construct the great palace and temple complex of §GChasma-i-Shir§! in the newly restored city of §YBactra§!!\n"
+ ABA_TCR_purushapura_ahin_posh_project_tt: "\nWe will construct the grand iron-covered monastery of §GAhin Posh§! in the newly restored city of §YPurushapura§!!\n"
+ unlock_ABA_tcr_gorkhas_merc_1_tt: "\n§GMalaun Regiment§! mercenary company is now §Yavailable for hire§!!\n"
+ unlock_ABA_tcr_gorkhas_merc_2_tt: "\n§GSecond Gorkha Rifles§! mercenary company is now §Yavailable for hire§!!\n"
+ ABA_TCR_bactra_chashma_project_allowed_tt: "Allowed to construct §YChashma-i-Shir§!"
+ ABA_tcr_built_mathura_temple_allowed_tt: "Allowed to construct §YThe Great Mathura Temple§!"
+ ABA_TCR_purushapura_ahin_posh_project_allowed_tt: "Allowed to construct §YAhin Posh Tepe§!"
+ ABA_ZUN_sahar_bahar_allowed_tt: "Allowed to construct §YSahar Bahar§!"
 
 #Events
 #Japan
@@ -228,6 +231,12 @@ aba_zun_event.2.a: "The §YSynthesis§! of §JAfghan Culture§! and §OIndian§!
 aba_zun_event.2.b: "We shall enforce the §RZunist§! faith and §RAfghan§! culture on the world!"
 aba_zun_event.3.t: "Global Purification"
 aba_zun_event.3.d: "Our faith has guided us to victory, and now it is time to spread its light to the rest of the world. We will embark on a massive campaign to crush the false gods that many of these heretics and heathens pray to. We've already destroyed their holy sites, but this is simply not enough to show them the falsity of their ways. We will send missionaries to every corner of the globe, preaching the truth of Zun and converting those who are willing to listen. For those who refuse, we will show them the true power of our faith through force if necessary..."
+aba_zun_event.4.t: "Mission Switch"
+aba_zun_event.4.d: "We are able to swtich between differnet missions trees by choosing an option below. If there is only one option, that means we haven't unlocked other trees yet"
+aba_zun_event.4.a: "§OIndian§! Branch"
+aba_zun_event.4.b: "§YPersian§! Branch"
+
+
 aba_zun_event.4.t: "Mission Switch"
 aba_zun_event.4.d: "We are able to swtich between differnet missions trees by choosing an option below. If there is only one option, that means we haven't unlocked other trees yet"
 aba_zun_event.4.a: "§OIndian§! Branch"
@@ -337,6 +346,7 @@ aba_gal_release_celt_decision_desc:"After our conquest and conversion of the Bri
 
 #Monuments 
 ABA_ZUN_sahar_bahar: "Sah Bahar - Temple of the King"
+ABA_ahin_posh: "Ahin Posh Tape"
 ABA_ahin_posh: "Ahin Posh Tape"
 ABA_chashma_i_shir: "Chashma-i-Shir"
 ABA_temple_of_mathura_buddhist_hindu: "The Great Temple of Mathura"

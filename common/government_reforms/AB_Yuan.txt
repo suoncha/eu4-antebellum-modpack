@@ -9,6 +9,9 @@ yuainward = {
 			is_emperor_of_china = yes
 			culture_group = east_asian
 			culture_group = korean_g
+			# ABF [[[
+			has_mission = tcr_workshop_of_world
+			# ]]]
 		}
 	}
 	custom_attributes = {

@@ -11,6 +11,7 @@ country_event = {
 		name = AB_Shahi_Event.1.OPT1
 		ai_chance = { factor = 50 }
 		change_technology_group = indian
+		change_unit_type = indian
 		If = {
 			limit = {
 				government = monarchy
@@ -75,6 +76,7 @@ country_event = {
 			vassalize = TCR
 			TCR = {
 				change_technology_group = chinese
+				change_unit_type = chinese
 				change_religion = ROOT
 				change_primary_culture = Tocharian
 				add_idea_group = trade_ideas
