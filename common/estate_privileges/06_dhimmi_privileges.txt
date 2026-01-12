@@ -18,12 +18,8 @@ estate_dhimmi_land_rights = {
 	conditional_modifier = {
 		trigger = { has_country_flag = ned_land_rights_buff_flag }
 		modifier = {
-			governing_capacity = 50
+			governing_capacity = 20
 		}
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	ai_will_do = {
 		factor = 5
@@ -117,83 +113,6 @@ estate_dhimmi_land_rights = {
 			NOT = { government_rank = 1 }
 			governing_capacity_percentage = 0.65
 		}
-		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
-		modifier = {
-			factor = 1.25
-			tag = MOS
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = RUS
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = TUR
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = MNG
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = FRA
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = SPA
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = PLC
-			NOT = { adm_tech = 17 }
-		}
-		#Has already a similar privilege active
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_brahmins_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_nobles_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_church_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_maratha_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_burghers_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_vaisyas_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_cossacks_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_nomadic_tribes_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_jains_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_rajput_land_rights
-		}
 	}
 }
 
@@ -253,10 +172,6 @@ estate_dhimmi_lighter_dhimmi_taxes = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	ai_will_do = {
 		factor = 0
 	}
@@ -276,8 +191,13 @@ estate_dhimmi_dhimmi_nobles = {
 		free_leader_pool = 1
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
+		trigger = {
+			has_country_flag = hsn_dhimmni_nobles_flag
+		}
+		modifier = {
+			max_absolutism = 5
+			leader_siege = 1
+		}
 	}
 	ai_will_do = {
 		factor = 0
@@ -341,10 +261,6 @@ estate_dhimmi_manpower = {
 			remove_province_modifier = estate_dhimmi_manpower_mod
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	penalties = {
 	}
 	benefits = {
@@ -374,10 +290,6 @@ estate_dhimmi_tolerance = {
 	}
 	benefits = {
 		tolerance_heathen = 2
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	ai_will_do = {
 		factor = 1
@@ -489,10 +401,6 @@ estate_dhimmi_guaranteed_autonomy = {
 			dhimmi_influence_modifier = -0.05
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	ai_will_do = {
 		factor = 1000
 		modifier = {
@@ -540,10 +448,6 @@ estate_dhimmi_administrative_privileges = {
 	}
 	mechanics = {
 		exempt_from_seize_land
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	cooldown_years = 25
 	ai_will_do = {
@@ -679,10 +583,6 @@ estate_dhimmi_grant_liberties = {
 	}
 	benefits = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -777,6 +677,7 @@ estate_dhimmi_development_of_communities = {
 	influence = 0.05
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { trigger = { has_country_flag = ab_dhimmi_communities_no_abs } modifier = { max_absolutism = 5 tolerance_heathen = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -816,11 +717,6 @@ estate_dhimmi_development_of_communities = {
 			remove_province_modifier = estate_dhimmi_development_of_communities_mod
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
-
 	mechanics = {
 		no_estate_crownland_loss_from_developing
 	}
@@ -859,8 +755,13 @@ estate_dhimmi_grant_trading_privileges = {
 		}
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
+		trigger = {
+			has_country_flag = hsn_dhimmi_trading_flag
+		}
+		modifier = {
+			max_absolutism = 5
+			trade_efficiency = 0.15
+		}
 	}
 	ai_will_do = {
 		factor = 0
@@ -937,8 +838,13 @@ estate_dhimmi_dhimmi_education = {
 		}
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
+		trigger = {
+			has_country_flag = hsn_dhimmi_education_flag
+		}
+		modifier = {
+			max_absolutism = 5
+			prestige_decay = -0.015
+		}
 	}
 	ai_will_do = {
 		factor = 0
@@ -973,42 +879,10 @@ estate_dhimmi_promote_dhimmi_nobility = {
 	}
 	mechanics = {
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	ai_will_do = {
 		factor = 0
 	}
 }
-#estate_dhimmi_military_service = {
-#	icon = privilege_military
-#	loyalty = -0.05
-#	influence = 0.05
-#	max_absolutism = -5
-#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-#	is_valid = {
-#		has_dlc = "Domination"
-#	}
-#	on_granted = {
-#		enable_estate_action = {
-#			estate_action = RECRUIT_FROM_THE_DHIMMI_DHIMMI
-#		}
-#	}
-#	on_revoked = {
-#		disable_estate_action = {
-#			estate_action = RECRUIT_FROM_THE_DHIMMI_DHIMMI
-#		}
-#	}
-#	on_invalid = {
-#		disable_estate_action = {
-#			estate_action = RECRUIT_FROM_THE_DHIMMI_DHIMMI
-#		}
-#	}
-#	ai_will_do = {
-#		factor = 0
-#	}
-#}
 estate_dhimmi_protected_communities = {
 	icon = privilege_religious
 	loyalty = 0.0
@@ -1046,10 +920,6 @@ estate_dhimmi_protected_communities = {
 			religious_unity = 0.33
 		}
 	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
-	}
 	ai_will_do = {
 		factor = 0
 	}
@@ -1077,10 +947,6 @@ estate_dhimmi_contribution_demand = {
 		disable_estate_action = {
 			estate_action = DEMAND_CONTRIBUTION_DHIMMI
 		}
-	}
-	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	ai_will_do = {
 		factor = 0
