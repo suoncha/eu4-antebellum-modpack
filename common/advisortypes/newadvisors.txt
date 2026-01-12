@@ -1342,6 +1342,16 @@ dragoon = {
             morale_damage = 0.04
         }
     }
+    skill_scaled_modifier = {
+        trigger = {
+            owner = { 
+                has_country_flag = nnv_scaling_dragoon
+            }
+        }
+        modifier = { 
+            siege_ability = 0.05
+        }
+    }
 	# TLW [[[
 	skill_scaled_modifier = {
 		trigger = {
@@ -1632,6 +1642,16 @@ siegeengineer = {
 			discipline = 0.01
 		}
 	}
+    skill_scaled_modifier = {
+        trigger = {
+            owner = { 
+                has_country_flag = scaling_siegeengineer_sel
+            }
+        }
+        modifier = { 
+            assault_fort_cost_modifier = -0.1
+        }
+    }
 	# TLW [[[
 	skill_scaled_modifier = {
 		trigger = {
@@ -2621,6 +2641,16 @@ scholar = {
 			technology_cost = -0.02
 		}
 	}
+    skill_scaled_modifier = {
+        trigger = { 
+            owner = { 
+                has_country_flag = hsn_scaling_scholar
+            }
+        }
+        modifier = {
+            free_policy = 2
+        }
+    }
 
 	allow_only_male = yes
 
