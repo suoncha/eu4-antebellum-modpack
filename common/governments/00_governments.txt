@@ -104,6 +104,7 @@ monarchy = {
 				# irish_highkingdom_reform
 				# scottish_monarchy_reform
 				sharifate_reform
+				caliphate_reform
 				barbary_sultanate_reform
 				roman_empire_reform
 				persian_government_reform
@@ -115,7 +116,7 @@ monarchy = {
 				stadthalter_monarchy_reform
 				janissary_autocracy_reform
 				admiralty_regime_reform
-				system_of_councils_reform
+				# system_of_councils_reform
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
@@ -207,15 +208,6 @@ monarchy = {
 				prr_pruthenian_warchiefdom
 				est_council_of_chiefs
 				krz_tsardom_of_krievzeme
-				# 1.10
-				islamic_caliphate
-				fatimid_caliphate
-				sicromancaliphate
-				almohad_state
-				abbasid_caliphate
-				chorathi_kingdom
-				bedouin_monarchy
-				hsncaliphate_reform
 				# ]]]
 			}
 		}
@@ -343,15 +335,6 @@ monarchy = {
 				magdeburg_rights_reform
 				bav_council_of_eight
 				mgygyula
-				# 1.10
-				abbasid_second_golden_age
-				nazcaliph_naz
-				nazcaliph_abs
-				nazcaliph_co
-				xbh_arts_patronage_reform
-				pastoral_society
-				tribal_chief_authority
-				hsnatabegs_buffed
 				# ]]]
 			}
 		}
@@ -490,10 +473,6 @@ monarchy = {
 				# Blood and Iron
 				ger_state_captains_reform
 				# ]]]
-				# 1.10
-				xbh_temple_archivist_reform
-				contact_with_westerners
-				hsnwaqf_buffed
 			}
 		}
 		military_doctrines = {
@@ -660,13 +639,6 @@ monarchy = {
 				# Baltic
 				blt_forest_warfare
 				blt_pulka_system
-				# 1.10
-				xbh_bedouin_compact_reform
-				nnv_assyrian_chariots_reform
-				camel_cavalry
-				desert_corps
-				camel_cavalry_upgrade
-				otr_cavalry_buffed
 				# ]]]
 			}
 		}
@@ -727,9 +699,6 @@ monarchy = {
 				rhl_atheist_ideas
 				# Baltic
 				est_harmony
-				# 1.10
-				xbh_cult_yahweh_reform
-				travelling_scholars
 				# ]]]
 			}
 		}
@@ -800,10 +769,6 @@ monarchy = {
 				polempowertribal
 				# Blood and Iron
 				reformed_landstande_reform
-				# 1.10
-				xbh_scribes_torah_reform
-				modernized_bedouin_federation
-				otr_muslim_court_reform
 				# ]]]
 			}
 		}
@@ -864,9 +829,6 @@ monarchy = {
 				pacta_conventa
 				# pol
 				polestablishsejm
-				# 1.10
-				xbh_royal_assembly_reform
-				amh_mahdi
 				# ]]]
 			}
 		}
@@ -907,8 +869,6 @@ monarchy = {
 				poljews
 				# Baltic
 				blt_amber_trade_charter
-				# 1.10
-				xbh_forested_prosperity_reform
 				# ]]]
 			}
 		}
@@ -921,8 +881,6 @@ monarchy = {
 				the_social_contract_reform
 				# AB 1.9
 				slv_princes_stone_ceremony
-				# 1.10
-				xbh_crown_covenant_reform
 				# ]]]
 			}
 		}
@@ -969,8 +927,6 @@ monarchy = {
 				lit_power_tsar
 				# 100k
 				croatian_absolutism
-				# 1.10
-				xbh_will_of_elyon_reform
 				# ]]]
 			}
 		}
@@ -1261,6 +1217,7 @@ republic = {
 				ab_tuscan_military_reform
 				ab_tuscan_peasants_reform
 				rhl_confederation_reform
+				ab_roman_republic
 				# ]]]
 			}
 		}
@@ -1576,6 +1533,7 @@ republic = {
 				ottoman_eyalets
 				ruskontsy
 				htm_kurin
+				ab_roman_provinces
 				# ]]]
 			}
 		}
@@ -1609,6 +1567,9 @@ republic = {
 				chinampa_farms_reform
 				# Blood and Iron
 				ab_customs_union
+				# ]]]
+				# Baltic
+				blt_amber_trade_charter
 				# ]]]
 			}
 		}
@@ -1799,8 +1760,6 @@ tribal = {
 				ab_holy_horde_reform
 				grh_ashen_horde_reform
 				magyar_tribal_union
-				# 1.10
-				bedouin_tribal_monarchy
 				# ]]]
 			}
 		}
@@ -1816,8 +1775,6 @@ tribal = {
 				cmnmongol
 				mgs_ferghana
 				mgygyula
-				pastoral_society
-				tribal_chief_authority
 				# ]]]
 			}
 		}
@@ -1836,7 +1793,6 @@ tribal = {
 				mgs_footsteps
 				mgytaltos
 				mgygreek
-				travelling_scholars
 				# ]]]
 			}
 		}
@@ -1912,10 +1868,6 @@ tribal = {
 				russian_mercenary_guard_reform 
 				mgyslavic
 				mgyispan
-				# 1.10
-				camel_cavalry
-				desert_corps
-				camel_cavalry_upgrade
 			}
 		}
 		tribal_modernization = {
@@ -1930,7 +1882,6 @@ tribal = {
 				glh_kurultai
 				cmncanon
 				mgs_patriarchate
-				contact_with_westerners
 				# ]]]
 			}
 		}
@@ -1947,7 +1898,6 @@ tribal = {
 				# AB [[[
 				mch_jin
 				AB_SHH_Modernize_Tribal_Values
-				modernized_bedouin_federation
 				# ]]]
 			}
 		}
@@ -2064,10 +2014,8 @@ theocracy = {
 				fkn_holy_knights
 				rhl_confederation_reform
 				teu_order_of_steppes
-                ab_kingdom_of_god
+				ab_kingdom_of_god
 				# ]]]
-				# 1.10
-				jannabi_qarmatian_republic
 			}
 		}
 		internal_vs_external_mission = {
@@ -2120,7 +2068,6 @@ theocracy = {
 				# AB [[[
 				rusmetropolitanschools
 				# ]]]
-				QRM_education_of_the_nomads
 			}
 		}
 		military_doctrines = {
@@ -2370,6 +2317,9 @@ theocracy = {
 				merchant_representation_reform
 				modern_economics_reform
 				chinampa_farms_reform
+				# Baltic
+				blt_amber_trade_charter
+				# ]]]
 			}
 		}
 		divine_cause = {

@@ -185,22 +185,22 @@ ab_japan_first = {
 			}
 			else = { num_of_samurai = 10 }
 			if = {
-				limit = {
+				limit = { 
 					OR = {
 						has_country_modifier = jap_domineering_naval_focus_modifier
 						has_country_modifier = jap_naval_academy_of_japan_modifier
 					}
 				}
-				navy_size = 150
-				OR = {
-					num_of_marines = 20
-					full_idea_group = naval_ideas
-					full_idea_group = maritime_ideas
+				navy_size = 150 
+				OR = { 
+					num_of_marines = 20 
+					full_idea_group = naval_ideas 
+					full_idea_group = maritime_ideas 
 				}
 			}
 			else = {
-				has_completed_idea_group_of_category = { mil_ideas = yes }
-				army_tradition = 70
+				has_completed_idea_group_of_category = { mil_ideas = yes } 
+				army_tradition = 70 
 			}
 			reform_level = 5
 		}
@@ -215,10 +215,10 @@ ab_japan_first = {
 				custom_tooltip = JAP_REFORM_SAMURAI
 			}
 			else = {
-				custom_tooltip = JAP_REFORM_SAMURAI_NO
+				custom_tooltip = JAP_REFORM_SAMURAI_NO	
 			}
 			tooltip = { add_government_reform = reform_the_samurai_reform }
-
+			
 			custom_tooltip = AB_EMPTY
 
 			if = {
@@ -233,43 +233,43 @@ ab_japan_first = {
 			else = {
 				custom_tooltip = JAP_MARINE_SAMURAI_NO
 			}
-			tooltip = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Lions of the North"
-							has_dlc = "Rule Britannia"
-							has_dlc = "Golden Century"
+			tooltip = { 
+				if = { 
+					limit = { 
+						OR = { 
+							has_dlc = "Lions of the North" 
+							has_dlc = "Rule Britannia" 
+							has_dlc = "Golden Century" 
 						}
 					}
 					add_country_modifier = {
 						name = jap_marine_samurai_modifier
-						duration = -1
+						duration = -1 
 					}
 				}
 				else = {
 					add_country_modifier = {
 						name = jap_marine_samurai_modifier2
-						duration = -1
+						duration = -1 
 					}
 				}
 			}
 			hidden_effect = {
-				if = {
-					limit = {
+				if = { 
+					limit = { 
 						OR = {
 							has_country_modifier = jap_domineering_naval_focus_modifier
 							has_country_modifier = jap_naval_academy_of_japan_modifier
 						}
-						num_of_marines = 1
+						num_of_marines = 1 
 					}
 					add_country_modifier = {
 						name = jap_marine_samurai_modifier
-						duration = -1
+						duration = -1 
 					}
 				}
-				else_if = {
-					limit = {
+				else_if = { 
+					limit = { 
 						OR = {
 							has_country_modifier = jap_domineering_naval_focus_modifier
 							has_country_modifier = jap_naval_academy_of_japan_modifier
@@ -528,17 +528,8 @@ ab_japan_first = {
 			}
 		}
 		effect = {
-			if = {
-				limit = { has_dlc = "Cradle of Civilization" }
-				custom_tooltip = JAP_ARMY_BUILDINGS_GRANT_ARMY_PROFESSIONALISM
-			}
-			else = {
-				add_country_modifier = {
-					name = jap_high_quality_weapons_modifier
-					duration = 9125
-				}
-			}
-
+			set_country_flag = jap_building_manpower
+			custom_tooltip = JAP_ARMY_BUILDINGS_GRANT_ARMY_PROFESSIONALISM
 			change_monarch_points_or_power = {
 				power = mil
 				points = 1

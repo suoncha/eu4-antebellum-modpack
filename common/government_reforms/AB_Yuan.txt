@@ -6,11 +6,9 @@ yuainward = {
 	potential = {
 		NOT = { has_country_flag = abandoned_inward }
 		OR = {
-			has_mission = yua_china_tiger
-			has_mission = mch_china_tiger
-			has_mission = lio_china_tiger
-			has_mission = china_tiger
-			has_mission = jsn_koreana
+			is_emperor_of_china = yes
+			culture_group = east_asian
+			culture_group = korean_g
 			has_mission = tcr_workshop_of_world
 		}
 	}

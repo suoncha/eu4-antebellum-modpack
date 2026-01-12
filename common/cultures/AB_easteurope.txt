@@ -1023,9 +1023,9 @@ romanian_culture_group = {
 		primary = RMN
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
-			Brancoveanu Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
-			Kogalniceanu Movilesti Racovita
+			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Kogalniceanu Movilesti
 		}
 		male_names = {
 			Alexandru Radu Vlad Constantin Mihail Mircea George Grigore Mihnea Nicolae Besarab Vladislav Mattia 
@@ -1060,7 +1060,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
@@ -1096,7 +1096,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
@@ -1127,7 +1127,6 @@ romanian_culture_group = {
 		}
 	}
 }
-
 
 carpathian = {	
 	graphical_culture = easterngfx
