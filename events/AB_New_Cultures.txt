@@ -15,10 +15,10 @@ province_event = {
 
 #Will fire for all non japanese_g province in the philippines
 trigger = {
-	religion = shinto
-    owner = {
+	owner = {
         has_country_flag = nikkei_culture_spread
     }
+	religion = shinto
     NOT = {
         culture_group = japanese_g
     }
@@ -165,12 +165,12 @@ province_event = {
 	}
 
 	trigger = {
-		religion = confucianism
 		owner = {
 			has_country_flag = sinicized_japanese_culture_spread
 		}
+		religion = confucianism
 		NOT = {
-			culture_group = sinico_japanese
+			culture = sinico_japanese
 		}
 		OR = {
 		region = japan_region
@@ -202,8 +202,8 @@ trigger = {
     }
 	NOT = {
 		OR = {
-			culture_group = sinico_japanese
-		    culture_group = korean_new
+			culture = sinico_japanese
+		    culture = korean_new
 		}
 	}
     OR = {
@@ -231,24 +231,26 @@ province_event = {
 
 #Will fire for all non japanese_g province in the Korea region
 trigger = {
-	OR = {
-			religion = confucianism
-		}
-    owner = {
-        has_country_flag = japanese_zainichi_culture_spread
+	owner = {
+    	has_country_flag = japanese_zainichi_culture_spread
     }
+	OR = {
+		religion = confucianism
+	}
 	NOT = {
 		OR = {
-			culture_group = sinico_japanese
+			culture = sinico_japanese
 			culture_group = japanese_g
-		    culture_group = korean_new
+		    culture = korean_new
 		}
 	}
     OR = {
       region = korea_region
     }
 	NOT = {
-		has_country_flag = sinicized_korean_culture_spread
+		owner = {
+			has_country_flag = sinicized_korean_culture_spread
+		}
 	}
 }
 	
@@ -372,13 +374,13 @@ province_event = {
 	}
 
 	trigger = {
+		owner = {
+			has_country_flag = donauschwaben_culture_spread
+		}
 		OR = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
-		}
-		owner = {
-			has_country_flag = donauschwaben_culture_spread
 		}
 		NOT = {
 			OR = {
@@ -420,13 +422,13 @@ province_event = {
 	}
 
 	trigger = {
+		owner = {
+			has_country_flag = mantaken_culture_spread
+		}
 		OR = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
-		}
-		owner = {
-			has_country_flag = mantaken_culture_spread
 		}
 		NOT = {
 			OR = {
@@ -720,7 +722,7 @@ province_event = {
             change_culture = jugoslawienschwaben_culture_new
 		}
 		else = {
-         change_culture = jugoslawienschwaben_culture
+          change_culture = jugoslawienschwaben_culture
 		}
 	}
 
@@ -1145,10 +1147,10 @@ province_event = {
 	}
 
 	trigger = {
-		religion = orthodox
 		owner = {
 			has_country_flag = abf_nagaybak_culture_spread
 		}
+		religion = orthodox
 		NOT = {
 			OR = {
 				culture_group = east_slavic
@@ -1295,11 +1297,11 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = orthodox
-		}
 		owner = {
 			has_country_flag = aba_bul_rostislavtsi_spread
+		}
+		OR = {
+			religion = orthodox
 		}
 		NOT = {
 			OR = {
@@ -1338,15 +1340,15 @@ province_event = {
 	}
 
 	trigger = {
-		religion = ROOT
 		owner = {
 			has_country_flag = tcr_sinicized_japanese_culture_spread
 		}
+		religion = ROOT
 		NOT = {
-			culture_group = sinico_japanese
+			culture = sinico_japanese
 		}
 		OR = {
-		region = japan_region
+			region = japan_region
 		}
 	}
 

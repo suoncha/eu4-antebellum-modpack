@@ -632,44 +632,60 @@ ab_shahi_missions_1 = {
 		trigger = { 
 			4477 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			558 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			555 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			2063 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			524 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			522 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			510 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			2075 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			507 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			578 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 		}
 		effect = { 
-		custom_tooltip = ABA_SHH_great_trunk_road_tt
-			4447 = {
+			custom_tooltip = ABA_SHH_great_trunk_road_tt
+			tooltip = {
 				add_province_modifier = {
 					name = ABA_SHH_great_trunk_road
 					duration = -1
-				}
+				}			
 			}
-		hidden_effect = {
+			hidden_effect = {
+				4447 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}
 				558 = {
 					add_province_modifier = {
 						name = ABA_SHH_great_trunk_road
@@ -725,10 +741,10 @@ ab_shahi_missions_1 = {
 					}
 				}
 			}
-		 }
-
 		}
+
 	}
+}
 ab_shahi_missions_2 = {
 	slot = 2
 	generic = no

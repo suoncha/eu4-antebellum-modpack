@@ -60,10 +60,13 @@ LCT_ADJ: "Wszechrusian"
 ABA_pol_orthodox_noble_rebels_tt: "Our Nobles in our §Ymore urbanized§! provinces won't take §Rkindly§! to this..."
 ABA_pol_orthodox_peasant_rebels_tt: "Our Peasants in our §Yrural§! provinces won't take §Rkindly§! to this..."
 aba_pol_orthodox_no_rus_tt: "We will be able to form §YIntermarium§! but be unable to form §RWszechrus§! and lose all rewards relating to that path..."
-aba_pol_orthodox_no_intemarium_tt:"We will form §YWszechrus§! but be unable to form §RIntermarium§! and lose all rewards relating to that path..."
+aba_pol_orthodox_no_intemarium_tt: "We will form §YWszechrus§! but be unable to form §RIntermarium§! and lose all rewards relating to that path..."
 aba_pol_orthodox_unify_polish_culture_east_tt: "\nUnifies §YPolan§!, §YLendian§!, §YVistualn§!, and §YMazovian§! into the new §YLendish§! Culture!\n"
-ABA_pol_orthodox_uralic_mines_tt: "Any province meeting the §Ymission requirements§! will be granted a powerful §Yprovinical modifier§!!"
+ABA_pol_orthodox_uralic_mines_tt: "Any province meeting the §Ymission requirements§! will be granted a powerful §Yprovinical modifier§!:"
 aba_pol_orthodox_move_capital_tt: "We will §Gunlock§! a decision allowing us to §Yrelocate our capital§!!"
+ABA_POLAND_DOMESTIC_ARMS_TT: "All required provinces will receive: "
+ABA_POL_ORTHODOX_PLANNED_TT: "All §YEast Slavic§! provinces with at least §G15§! development will receive:"
+ABA_POL_ORTHODOX_CULTURE_CONVERT_TT: "§YCulture Converting§! provinces to §YLendish§! culture now gives the converted province §G1§! bonus Tax, Production, and Manpower development.\n\n§RThis can only happen once per province.§!"
 
 ################################## Poland Missions ##################################
 pol_orthodox_integrate_tribal_leaders_title: "Integrate Tribal Leaders"
@@ -189,6 +192,7 @@ aba_pol_orthodox_streltsy_elite_force_limit: "Streltsy Elite Force Limit"
 aba_pol_orthodox_streltsy_mass_force: "Streltsy Mass Force"
 aba_pol_orthodox_streltsy_mass_force_limit: "Streltsy Mass Force Expansion"
 aba_pol_orthodox_new_capital_modifier: "The New Capital"
+ABA_pol_orthodox_blood_and_iron: "State of Blood and Iron"
 
 ################################## National Ideas ##################################
 LCT_first: "Bearers of the Cross"

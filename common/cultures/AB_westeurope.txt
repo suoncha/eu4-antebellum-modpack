@@ -1353,11 +1353,57 @@ germanic = {
 		primary = FKN
 	}
 	#aba new German cultures 
+	jugoslawienschwaben_culture = {
+		primary = SWA
+		male_names = {
+			Friedrich Albrecht Christian Heinrich Rudolf August Ernst Georg Moritz Alexander Anton Hektor
+			Johann Karl Clemens Wenzel Franz Xaver Joachim Joseph Magnus Maximilian Severinus Wolfgang
+			Andreas Bruno Burkhard Günther Hermann Lukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
+			Alwin Adémar Alwin Adolf Albert Albrecht Arnold Baltasar
+			Benedict Bernd Bernard Bernhard Bertold Bertram Bertrand Burchard
+			Claus Nicholas Cobbo Cord Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard
+			Erik Albert Ewald Frederick Gerard Gebhard Giselmar Gottschalk Günther Hans
+			Heideke Herbert Hermann Hinrik Jacob Jaspar Caspar Jochim Joakim Johann Kersten
+			Christian Laurentz Lambert Liawizo Liemar Liudger Otto Ludolf Ludwig
+			Louis Mathias Matthew Meinwerk Merten Martin Michael Norbert Ordulf
+			Peter Philip Renard Reinmar Roger Rudolf Ralph Sigbert Sigisbert
+			Sigfrid Siegfried Sigward Sigurd Simon Steffen Thomas Waldemar
+			Werner Victor Werneke Weybrecht Wichbert Wichmann Wigebert Wolter Walter Wulff Ulf
+		}
+		female_names = {
+			Amalia Bianka Eleonora
+			Agatha Balthild
+			Christina Cuthburg
+			Cynehild Cyneswith Cynethryth Eadburg Edith
+			Gunhilda Gunhild Helga Judith
+			Maud Matilda Sigri
+			Wulfhild
+			Addila Adela Adelheid Alof Agnes Anna Athela Beatrix Beatrice Bertha Bertha
+			Bertrada Bia Beatrice Bisina Bithild Brigida Brigid Elisabeth
+			Elisabeth Enda Gertrud Gisela
+			Hedwig Heilwig Helene Hildegard Ida Emma Irmgard
+			Judith Katharina
+			Margarete Mathilde Matilda Mechthild Reginlint
+			Richardis Ricarda Rodelinda Sophia Sophia Suanhilde Swanahild Wienke
+			Wiltrud Wulfhild Ulfhild
+		}
+		dynasty_names = {
+			"Hohenstaufen" "von Schwarzburg" "von Schönburg" "von Schlotheim" "von Salza" "von Kospoth"
+			"von Knuth" "von Wettin" "Askanier" "von Hohenzollern" "von Erffa" "von Bodungen" "von Eckersberg" "von Brandenstein" "von Pappenheim" "von Wiehe"
+			"von Westernhagen" "von Jena" "von Trützschler" "von Plessen" "von Haugwitz" "von Kanitz" "von Falkenhayn" "von Thüna"
+			"von Thüringen" "von Nostitz" "von Bieberstein" "von Meerheimb" "von Freiberg" "von Neitschütz" "von Minckwitz" "von Arnswaldt" "von Auerswald" "aus dem Winckel"
+			"von Beichlingen" "von Bendeleben" "von Beneckendorff"  "von Berbisdorf" "von Bissingen" "von Bock" "von Bomsdorff" "von Bose" "von Breitenbach"
+			"von Breitenbuch" "von Brühl" "von Bünau" "von Hoym" "Holtzendorff" "von Hohenthal" "von Heynitz" "von Hessler" "von Helldorff" "von Harling" "von Görschen" "von Glaubitz"
+			"von Gfug" "von Gersdorff" "von Germar" "von Fritsch" "von Friesen" "von Flanss" "von Etzdorff" "von Erdmannsdorff" "von Einsiedel" "von Dyhrn" "von Dieskau" "von Creytzen" "von Carlowitz" "von Maltitz" "von Mansfeld" "von Miltitz" "von Mücheln" "von Pflugk" "von Pölnitz" "von Ponickau" "von Rackel"
+			"von Raumer" "von Rechenberg" "von Rex" "Sack" "von Scheidingen" "von Schleinitzstrasse" "von Schönberg" "Senfft von Pilsach" "von Stolberg" "von Kannewurf" "Karras" "von Keller" "von Kirchbach" "von Sternberg" "von Leisnig"
+			"von Liebenau" "von Loeben" "von Logau" "von Lüttichau" "von Taube" "von Tettau" Vitzthum "von Wolffersdorff" Wöhrmann "von Werthern" "von Wackerbarth" "von Bredow" "von Brandt"
+		}
+	}
 	schwarzmeerdeutsche_culture = {
 		male_names = {
 			Friedrich Albrecht Christian Heinrich Rudolf August Ernst Georg Moritz Alexander Anton Hektor
 			Johann Karl Clemens Wenzel Franz Xaver Joachim Joseph Magnus Maximilian Severinus Wolfgang
-			Andreas Bruno Burkhard Günther HermannLukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
+			Andreas Bruno Burkhard Günther Hermann Lukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
 			Alwin Adémar Alwin Adolf Albert Albrecht Arnold Baltasar
 			Benedict Bernd Bernard Bernhard Bertold Bertram Bertrand Burchard
 			Claus Nicholas Cobbo Cord Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard
@@ -1494,52 +1540,6 @@ germanic = {
 			Bertrada Bia Beatrice Bisina Bithild Brigida Brigid Elisabeth 
 			Elisabeth Enda Gertrud Gisela
 			Hedwig Heilwig Helene Hildegard Ida Emma Irmgard 
-			Judith Katharina
-			Margarete Mathilde Matilda Mechthild Reginlint
-			Richardis Ricarda Rodelinda Sophia Sophia Suanhilde Swanahild Wienke
-			Wiltrud Wulfhild Ulfhild
-		}
-		dynasty_names = {
-			"Hohenstaufen" "von Schwarzburg" "von Schönburg" "von Schlotheim" "von Salza" "von Kospoth"
-			"von Knuth" "von Wettin" "Askanier" "von Hohenzollern" "von Erffa" "von Bodungen" "von Eckersberg" "von Brandenstein" "von Pappenheim" "von Wiehe"
-			"von Westernhagen" "von Jena" "von Trützschler" "von Plessen" "von Haugwitz" "von Kanitz" "von Falkenhayn" "von Thüna"
-			"von Thüringen" "von Nostitz" "von Bieberstein" "von Meerheimb" "von Freiberg" "von Neitschütz" "von Minckwitz" "von Arnswaldt" "von Auerswald" "aus dem Winckel"
-			"von Beichlingen" "von Bendeleben" "von Beneckendorff"  "von Berbisdorf" "von Bissingen" "von Bock" "von Bomsdorff" "von Bose" "von Breitenbach"
-			"von Breitenbuch" "von Brühl" "von Bünau" "von Hoym" "Holtzendorff" "von Hohenthal" "von Heynitz" "von Hessler" "von Helldorff" "von Harling" "von Görschen" "von Glaubitz"
-			"von Gfug" "von Gersdorff" "von Germar" "von Fritsch" "von Friesen" "von Flanss" "von Etzdorff" "von Erdmannsdorff" "von Einsiedel" "von Dyhrn" "von Dieskau" "von Creytzen" "von Carlowitz" "von Maltitz" "von Mansfeld" "von Miltitz" "von Mücheln" "von Pflugk" "von Pölnitz" "von Ponickau" "von Rackel"
-			"von Raumer" "von Rechenberg" "von Rex" "Sack" "von Scheidingen" "von Schleinitzstrasse" "von Schönberg" "Senfft von Pilsach" "von Stolberg" "von Kannewurf" "Karras" "von Keller" "von Kirchbach" "von Sternberg" "von Leisnig"
-			"von Liebenau" "von Loeben" "von Logau" "von Lüttichau" "von Taube" "von Tettau" Vitzthum "von Wolffersdorff" Wöhrmann "von Werthern" "von Wackerbarth" "von Bredow" "von Brandt"
-		}
-	}
-	donauschwaben_culture = {
-		primary = SWA
-		male_names = {
-			Friedrich Albrecht Christian Heinrich Rudolf August Ernst Georg Moritz Alexander Anton Hektor
-			Johann Karl Clemens Wenzel Franz Xaver Joachim Joseph Magnus Maximilian Severinus Wolfgang
-			Andreas Bruno Burkhard Günther HermannLukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
-			Alwin Adémar Alwin Adolf Albert Albrecht Arnold Baltasar
-			Benedict Bernd Bernard Bernhard Bertold Bertram Bertrand Burchard
-			Claus Nicholas Cobbo Cord Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard
-			Erik Albert Ewald Frederick Gerard Gebhard Giselmar Gottschalk Günther Hans
-			Heideke Herbert Hermann Hinrik Jacob Jaspar Caspar Jochim Joakim Johann Kersten
-			Christian Laurentz Lambert Liawizo Liemar Liudger Otto Ludolf Ludwig
-			Louis Mathias Matthew Meinwerk Merten Martin Michael Norbert Ordulf
-			Peter Philip Renard Reinmar Roger Rudolf Ralph Sigbert Sigisbert
-			Sigfrid Siegfried Sigward Sigurd Simon Steffen Thomas Waldemar
-			Werner Victor Werneke Weybrecht Wichbert Wichmann Wigebert Wolter Walter Wulff Ulf
-		}
-		female_names = {
-			Amalia Bianka Eleonora
-			Agatha Balthild
-			Christina Cuthburg
-			Cynehild Cyneswith Cynethryth Eadburg Edith
-			Gunhilda Gunhild Helga Judith
-			Maud Matilda Sigri
-			Wulfhild
-			Addila Adela Adelheid Alof Agnes Anna Athela Beatrix Beatrice Bertha Bertha
-			Bertrada Bia Beatrice Bisina Bithild Brigida Brigid Elisabeth
-			Elisabeth Enda Gertrud Gisela
-			Hedwig Heilwig Helene Hildegard Ida Emma Irmgard
 			Judith Katharina
 			Margarete Mathilde Matilda Mechthild Reginlint
 			Richardis Ricarda Rodelinda Sophia Sophia Suanhilde Swanahild Wienke

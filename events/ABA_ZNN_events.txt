@@ -15,6 +15,10 @@ country_event = {
 		set_country_flag = ABA_zun_india_path
 		swap_non_generic_missions = yes
 		hidden_effect = {
+			complete_mission = zunp_overpower
+			complete_mission = zunp_zunbils
+			complete_mission = zunp_forward
+			complete_mission = zunp_unite
 			complete_mission = zuni_overpower
 			complete_mission = zuni_zunbils
 			complete_mission = zuni_forward
@@ -35,6 +39,10 @@ country_event = {
 			complete_mission = zunp_zunbils
 			complete_mission = zunp_forward
 			complete_mission = zunp_unite
+			complete_mission = zuni_overpower
+			complete_mission = zuni_zunbils
+			complete_mission = zuni_forward
+			complete_mission = zuni_unite
 		}
 		set_country_flag = ab_unlock_mission_switch
 		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
@@ -53,19 +61,25 @@ country_event = {
 
 	option = {
 		name = aba_zun_event.2.a
-		change_technology_group = indian
 		add_country_modifier ={
 			name = aba_ZNN_embrace_india
 			duration = -1
 		}
+		change_technology_group = indian
+		change_unit_type = indian
+		set_country_flag = ABA_ZUN_rajput_integration
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABA_ZUN_rajut_intergration_tt
 	}
 
-		option = {
+	option = {
 		name = aba_zun_event.2.b
 		add_country_modifier ={
 			name = aba_zun_afghan_indian_reject
 			duration = -1
 		}
+		set_country_flag = ABA_ZUN_unlock_qizilbash
+		custom_tooltip = ABA_ZUN_afghan_indian_reject_warriors_tt
 	}
 }
 
@@ -81,11 +95,25 @@ country_event = {
 	option = {
 		name = aba_zun_event.3.a
 		custom_tooltip = ABA_ZNN_global_purification_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						religion = zunist
+					}
+				}
+				reverse_add_casus_belli = {
+					type = cb_zun_crusade
+					months = 300
+					target = ROOT
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
 		add_country_modifier ={
 			name = aba_zun_global_purification
 			duration = -1
 		}	
-		#add cb
 	}
 }
 
@@ -180,6 +208,12 @@ country_event = {
 			}
 			complete_mission = zuni_coast_2
 		}
+		if = {
+			limit = {
+			mission_completed = zunp_forward
+			}
+			complete_mission = zuni_forward
+		}
 	}
 
 	option = { #Persia Path
@@ -195,6 +229,12 @@ country_event = {
 				mission_completed = zuni_rebuild
 			}
 			complete_mission = zunp_rebuild
+		}
+		if = {
+			limit = {
+			mission_completed = zuni_forward
+			}
+			complete_mission = zunp_forward
 		}
 		if = {
 			limit = {

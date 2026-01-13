@@ -56,14 +56,26 @@ abf_albion_culture_spread_tt: "\n§YAlban§! culture will §Gnaturally spread§!
 
 #### Poland ####
 aba_pol_institutions_will_slowly_grow_in_262_tt: "\n§YInsitutions§! will §Gnaturally grow§! throughout our §YKrakow§!!\n"
-aba_unlock_lavra_tt: "\nWe will gain the ability to construct §GLavra§!!\n"
+aba_unlock_lavra_tt: "We will gain the ability to convert the §YLavra§! into a §YCatholic§! Cathedral!"
 ABA_POLISH_HUSSARS_TT: "\nUpon unlocking §YHussars§!, our maximum recruitment cap will be increased!\n"
 aba_pol_build_lavra_monument_tt: "Monument is enabled as a reward"
 
 #### Bulgaria ####
-ABA_BUL_slavic_tt: "\nA New §JRome§! Rises!\n"
+ABA_BUL_slavic_tt: "A New §RRome§! Rises!"
 ABA_BUL_INHERIT_CMN_YES: "£yes£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
 ABA_BUL_INHERIT_CMN_NO: "£no£ If we complete this mission while @ALN §YAlania§! have §G200§! relations with us, we will §Ginstantly annex§! them."
 ABA_BUL_rostislavtsi_spread_tt: "\n§YRostislavtsi Bulgarian§! culture will §Gnaturally spread§! throughout our §YOrthodox Christian provinces§! in the Carpathia Region!\n"
-aba_bul_vlach_spread_tt: "\n§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!\n"
+aba_bul_vlach_spread_tt: "§YVlach South Slavic§! culture will §Gsupplant§! the Romanian Culture Group!"
 
+#### Monuments ####
+ABA_ZUN_sahar_bahar: "Sah Bahar - Temple of the King"
+ABA_ahin_posh: "Ahin Posh Tape"
+ABA_chashma_i_shir: "Chashma-i-Shir"
+ABA_temple_of_mathura_buddhist_hindu: "The Great Temple of Mathura"
+ABA_temple_of_mathura_christian: "The Great Cathedral of Mathura"
+ABA_temple_of_mathura_zoroastrianism: "The Great Fire Temple of Mathura"
+ABA_kizil_caves: "Kizil Caves - The Thousand Red Houses"
+
+#### Mercs ####:
+ABA_tcr_gorkhas_merc_1: "Malaun Regiment"
+ABA_tcr_gorkhas_merc_2: "Second Gorkha Rifles"

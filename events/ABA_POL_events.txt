@@ -44,3 +44,59 @@ country_event = {
 		}
 	}
 }
+
+#Foreign Legion Volunteers
+country_event = {
+	id = aba_pol_events.2
+	title = aba_pol_events.2.t
+	desc = aba_pol_events.2.d
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = ABF_pol_foreign_legion
+	}
+	
+	option = {
+		name = aba_pol_events.2.a
+		custom_tooltip = ABF_POL_FOREIGN_LEGION_TT
+		hidden_effect = {
+			capital_scope = {
+				for = {
+					amount = 2
+					effect = "
+						hussars_cavalry = ROOT
+					"
+				}
+			}
+			if = {
+				limit = {
+					num_of_carolean = 15
+				}
+				capital_scope = {
+					for = {
+						amount = 3
+						effect = "
+							streltsy_infantry = ROOT
+						"
+					}
+				}
+			}
+			else_if = {
+				capital_scope = {
+					for = {
+						amount = 3
+						effect = "
+							musketeer_infantry = ROOT
+						"
+					}
+				}
+			}
+			country_event = {
+				id = aba_pol_events.2
+				days = 3650
+			}
+		}
+	}
+}

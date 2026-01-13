@@ -47,3 +47,51 @@ ABA_tcr_gorkhas_merc_2 = {
 		land_attrition = -0.20
 		 }
 }
+
+ABF_pol_catholic_order_1 = {
+    regiments_per_development = 0.055
+    cavalry_weight = 0.3
+	artillery_weight = 0.3 
+	cavalry_cap = 8
+    home_province = 1841
+	cost_modifier = 0.75
+	counts_towards_force_limit = no
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		has_country_flag = abf_pol_catholic_orders_unlocked
+		OR = {
+			tag = POL
+			was_tag = PLN
+		}
+	}
+	modifier = { 
+		shock_damage_received = -0.10
+		shock_damage = 0.10
+		land_morale = 0.10
+		discipline = 0.05
+	}
+}
+
+ABF_pol_catholic_order_2 = {
+    regiments_per_development = 0.055
+    cavalry_weight = 0.3
+	artillery_weight = 0.3 
+	cavalry_cap = 8
+    home_province = 38
+	cost_modifier = 0.75
+	counts_towards_force_limit = no
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		has_country_flag = abf_pol_catholic_orders_unlocked
+		OR = {
+			tag = POL
+			was_tag = PLN
+		}
+	}
+	modifier = { 
+		shock_damage_received = -0.10
+		shock_damage = 0.10
+		land_morale = 0.10
+		discipline = 0.10
+	}
+}

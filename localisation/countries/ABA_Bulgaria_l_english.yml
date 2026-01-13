@@ -68,7 +68,7 @@ bul_mines_desc: "The mines of our empire are a vital source of wealth and resour
 bul_royal_arsenal__title:"The Royal Arsenal"
 bul_royal_arsenal__desc: "If we wish to maintain our status as a foremost European power, we must ensure that our armies are well-equipped and well-trained. The Royal Arsenal will serve as a center for the production of weapons and armor, ensuring that our soldiers have access to the finest equipment available. We must invest in the development of the Royal Arsenal, producing cannons and other gunpowder weapons for this new age of warfare."
 
-################################## Modifiers ##################################a
+################################## Modifiers ##################################
 aba_bul_new_rome: "A New Rome"
 aba_bul_pontic: "Pontic Trade Port"
 aba_bul_fortified: "Safeguarding the Tsarigrad"
@@ -83,3 +83,10 @@ aba_bul_three_cities: "Bulgarian Great City"
 aba_bulgaria_settle: "Population Exchange"
 aba_bul_kazan_accepted: "Volga Bulgarian Peace"
 
+################################# Ruler Personalities ############################
+abf_legacy_of_simeon_personality: "Legacy of Simeon The Great"
+
+################################# Tooltips ############################
+ABA_BUL_INTEGRATE_SERBIA_TT: "Every owned §YSerbian§! province will lose §G-25.00§! Autonomy."
+ABA_BUL_CULTURE_CONVERT_BONUS_TT: "§YCulture Converting§! provinces to §YBulgarian§! culture now gives the converted province §G1§! bonus Tax, Production, and Manpower development.\n\n§RThis can only happen once per province.§!"
+ABA_BUL_DEVELOPING_SOUTH_SLAVIC_TT: "Developing provinces of the §YSouth Slavic§! culture group now has a §G10.0%§! chance of granting §G1§! additional development."

@@ -1,0 +1,19 @@
+﻿l_english:
+################################## Ruler Personalities ##################################
+
+############ Polish (In General) ############
+abf_mieszko_descendant_personality: "Descendant of Mieszko"
+abf_mieszko_descendant_personality_desc: "Our bloodline traces back to Mieszko I, the first ruler of Poland. His legacy of uniting diverse tribes and establishing a strong foundation for our nation inspires us to continue his work. We are determined to uphold the values of unity, resilience, and cultural pride that Mieszko championed. As his descendant, we feel a profound responsibility to lead our people with the same vision and dedication that defined his reign."
+abf_heir_of_rus_personality: "Heir of Rus'"
+abf_heir_of_rus_personality_desc: "We are the heirs of the great Rus' legacy, carrying forward the traditions and values of our ancestors. Our lineage is steeped in the rich history of the Kievan Rus', and we are committed to preserving and enhancing this heritage. As rulers, we strive to embody the strength, wisdom, and cultural depth that defined our forebears. We are dedicated to fostering unity among our people and promoting the prosperity of our nation, honoring the legacy of Rus' in all our endeavors."
+abf_legacy_of_simeon_personality: "Legacy of Simeon The Great"
+abf_legacy_of_simeon_personality_desc: "We are the heirs of the legacy of Simeon the Great, a shining example of leadership from a bygone era. We strive to emulate his literary, ecclesiastical, and martial contributions to Bulgarian history. As the sucessors to the great empire he forged, we find the impact of his legacy inescapable, and our actions are guided by the invisible hand of his influence."
+
+
+################################## Tooltips ##################################
+
+############ Polish (In General) ############
+ABF_LEGACY_OF_MIESZKO_PERK_TT: "Every future ruler will gain the trait §YDescendant of Mieszko§!, giving §G-10.0%§! Core Creation Cost ,§G+5.0§! Yearly Papal Influence, and §G+2§! Number of Accepted Cultures!"
+ABF_HEIRS_OF_RUS_PERK_TT: "Every future ruler will gain the trait §YHeir of Rus'§!, giving §G-5.0%§! Core Creation Cost, §G+5.0§! Yearly Patriarch Authority, and §G-10.0%§! Warscore Cost vs Other Religions!"
+ABA_BUL_SIMEON_TRAIT_TT: "Every future ruler will gain the trait §YLegacy of Simeon the Great§!, giving §G-5.0%§! Idea Cost, §G+5.0§! Yearly Patriarch Authority, and §G+10.0%§! Governing Capacity!"
+

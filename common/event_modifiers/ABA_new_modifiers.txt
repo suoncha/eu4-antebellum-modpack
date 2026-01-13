@@ -127,6 +127,10 @@ aba_pol_patronage_of_the_west = {
     idea_cost = -0.10
 }
 
+abf_pol_catholic_mother_of_cities = {
+    local_development_cost = -0.10
+}
+
 ####### Hetmanate #######
 
 aba_htm_free_ruthenia = {
@@ -135,9 +139,9 @@ aba_htm_free_ruthenia = {
 }
 
 htm_danube_sich = {
-reform_progress_growth = 0.1
-manpower_in_accepted_culture_provinces = 0.10
-land_attrition = -0.10
+    reform_progress_growth = 0.1
+    manpower_in_accepted_culture_provinces = 0.10
+    land_attrition = -0.10
 }
 
 aba_htm_military_treasury = {
@@ -146,25 +150,34 @@ aba_htm_military_treasury = {
 }
 
 ABA_htm_new_horse_production = {
- cavalry_cost = -0.10
- movement_speed = 0.05
+    cavalry_cost = -0.10
+    movement_speed = 0.05
 }
 
 ABA_htm_regimental_rule = {
-state_maintenance_modifier = -0.25
-state_governing_cost = -0.25
+    state_maintenance_modifier = -0.25
+    state_governing_cost = -0.25
 }
 
 aba_htm_vodka = {
- global_unrest = -1
- idea_cost = 0.05
- global_supply_limit_modifier = 0.10
+    global_unrest = -1
+    idea_cost = 0.05
+    global_supply_limit_modifier = 0.10
 }
 
 aba_htm_new_coinage = {
     inflation_action_cost = -0.1
     inflation_reduction = 0.05
     global_tax_modifier = 0.10
+}
+
+ABA_htm_grain_center = {
+    production_efficiency = 0.10
+    supply_limit_modifier = 0.10
+}
+
+ABA_htm_steppe_dev = {
+    local_development_cost = -0.2
 }
 
 ####### Zun #######
@@ -214,9 +227,9 @@ aba_zun_sunset_india = {
 }
 
 aba_zun_damascus_steel = {
-army_tradition_decay = -0.01
-morale_damage_received = -0.025
-morale_damage = 0.025
+    army_tradition_decay = -0.01
+    morale_damage_received = -0.025
+    morale_damage = 0.025
 
 }
 
@@ -231,10 +244,10 @@ aba_ZNN_embrace_india = {
 }
 
 aba_zun_tattagird = {
-allowed_num_of_buildings = 1
-allowed_num_of_manufactories = 1
-local_development_cost = -0.25
-local_governing_cost = -0.10
+    allowed_num_of_buildings = 1
+    allowed_num_of_manufactories = 1
+    local_development_cost = -0.25
+    local_governing_cost = -0.10
 }
 
 aba_zun_gunpowder = {
@@ -260,6 +273,27 @@ aba_zun_afghan_indian_reject = {
     manpower_recovery_speed = 0.10
 }
 
+ABA_ZNN_qizilbash_integration = {
+    is_qizilbash_modifier = yes
+    movement_speed = 0.10
+    land_attrition = -0.10
+    fire_damage = 0.05
+}
+
+ABA_ZNN_qizilbash_cap_expansion = {
+    amount_of_qizilbash = 15
+}
+
+ABA_ZNN_rajput_cap_expansion = {
+    allowed_rajput_fraction = 0.15
+}
+
+ABA_ZNN_rajput_integration = {
+    is_rajput_modifier = yes
+    infantry_power = 0.025
+    discipline = 0.025
+}
+
 ###### Bulgaria #######
 
 aba_bul_new_rome = {
@@ -270,10 +304,9 @@ aba_bul_new_rome = {
 
 #Province
 aba_bul_pontic = { 
-    	province_trade_power_modifier = 0.15
-        province_trade_power_value = 0.10
-        trade_goods_size_modifier = 0.25
-
+    province_trade_power_modifier = 0.15
+    province_trade_power_value = 0.10
+    trade_goods_size_modifier = 0.25
 }
 
 #Province
@@ -287,8 +320,8 @@ aba_bulgarian_siberia = {
 }
 
 aba_bulgaria_cossacks = {
-can_recruit_cossacks = yes
-allowed_cossack_fraction = 0.15
+    can_recruit_cossacks = yes
+    allowed_cossack_fraction = 0.15
 }
 
 #Province
@@ -361,7 +394,7 @@ aba_tcr_desert_training = {
 }
 
 aba_tcr_zamburak = {
-    artillery_cost = -0.15
+    artillery_cost = -0.10
     fire_damage = 0.05
 }
 
@@ -537,18 +570,18 @@ aba_tcr_combined_arms = {
 
 #Province modifier
 aba_tcr_new_capital = {
-local_development_cost = -0.15
-local_manpower_modifier = 0.33
-local_tax_modifier = 0.33
-allowed_num_of_buildings = 2
-allowed_num_of_manufactories = 2
+    local_development_cost = -0.15
+    local_manpower_modifier = 0.33
+    local_tax_modifier = 0.33
+    allowed_num_of_buildings = 2
+    allowed_num_of_manufactories = 2
 }
 
 #Province modifier
 aba_tcr_taiwan_port = {
-allowed_num_of_buildings = 1
-local_development_cost = -0.10
-trade_value_modifier = 0.15
+    allowed_num_of_buildings = 1
+    local_development_cost = -0.10
+    trade_value_modifier = 0.15
 }
 
 aba_tcr_into_the_beyond = {
@@ -640,6 +673,10 @@ ABA_TCR_Legacy_of_Alexander = {
 aba_tcr_decimal_system = {
     land_maintenance_modifier = -0.10
     land_forcelimit_modifier = 0.10
+}
+
+ABA_tcr_temple_expansion = {
+    local_unrest =  -1
 }
 
 ####### Orthodox Poland #######
@@ -820,5 +857,10 @@ aba_pol_orthodox_new_capital_modifier = {
     allowed_num_of_manufactories = 1
     local_development_cost = -0.10
     local_prosperity_growth = 0.1
+}
+
+ABA_pol_orthodox_blood_and_iron = {
+	build_time = -0.1
+	fire_damage = 0.1
 }
 
