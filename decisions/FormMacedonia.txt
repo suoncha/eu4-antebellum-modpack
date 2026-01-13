@@ -1,1 +1,30 @@
-### KEEP THIS EMPTY FOR FORMING MACEDONIA VIA EVENT ###
+country_decisions = {
+
+	form_macedonia = {
+		major = yes
+		potential = {
+			has_country_flag = ABA_TCR_BACTRIA_MACEDONIA
+			NOT = { exists = HLE }
+			NOT = { exists = MAC }
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			add_prestige = 25
+			change_tag = MAC
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			custom_tooltip = cosmetic_tag_info
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
