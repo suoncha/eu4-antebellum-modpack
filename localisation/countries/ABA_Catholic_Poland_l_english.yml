@@ -2,6 +2,9 @@
 ################################## Country Events ##################################
 aba_pol_events.1.T: "The Founding of Krakow University"
 aba_pol_events.1.d: "The city of Krakow has long been a center of culture and learning in our nation. However, it lacks a formal institution of higher education that can rival those found in other European countries. To address this, we have decided to establish a university in Krakow. This university will serve as a hub for intellectual and cultural exchange, attracting scholars and students from across Europe. It will also help to promote the Polish language and culture, which has been overshadowed by Latin and German in academic circles. The university will be modeled after the great universities of Bologna and Paris, with a focus on theology, law, medicine, and the arts. We will also establish a library and a printing press to facilitate the dissemination of knowledge. The founding of Krakow University is a significant step forward for our nation, and we are confident that it will help to elevate Poland's status as a center of learning and culture in Europe."
+aba_pol_events.2.t: "Foreign Legion Regiments Arrive"
+aba_pol_events.2.d: "Our reputation and martial prowess has attracted the attention of warriors from across the world. Many seek to join our cause, and fight for the ideals of freedom and liberty that we hold dear. To harness this potential, we have established the Foreign Legion, a mixed composition of regiments made up of volunteers from various nations. These regiments will serve as a powerful force for our nation, bringing with them unique skills and experiences that will enhance our military capabilities."
+aba_pol_events.2.a: "And the Foreign LegionArrived!"
 
 ################################## Poland Missions ##################################
 pol_catholic_between_another_sea_title: "Between Another Sea"
@@ -48,6 +51,7 @@ pol_catholic_westerinization_title: "Westernization"
 pol_catholic_westerinization_desc: "While we have historically been viewed as part of the Eastern World, our enlightened ideas and economic progress have now set an example for the West. We must embrace Westernization, and ensure that our nation is seen as a beacon of progress and enlightenment."
 
 ################################## Modifiers ##################################
+
 aba_polish_america: "Polish America"
 aba_new_polish_city: "New Polish City"
 aba_pol_military_development: "Polish Military Development"
@@ -61,4 +65,16 @@ aba_pol_foreign_legion: "Foreign Legion"
 aba_pol_cossack_registry: "Cossack Registry"
 aba_pol_cossack_expansion: "Cossack Expansion"
 aba_pol_patronage_of_the_west: "Patronage of the West"
+abf_pol_catholic_mother_of_cities: "Mother of Cities"
 
+################################## Tooltips ##################################
+ABA_POLAND_TEND_EAST_TT: "Every province with §YGrain§! or §YLivestock§! trade goods and more than §G10§! development in the region of §YRuthenia§! will gain §G1§! bonus production."
+ABF_POL_RECRUIT_TRIBAL_LEADERS: "Recruiting a general now adds §G+2.50%§! §YNoble§! loyalty."
+ABF_CATHOLIC_MERC_ORDERS_TT: "We will now be able to recruit the legendary §GCatholic Crusader Orders§! as mercenary companies that §Ydo not contribute§! to our force limit!"
+ABF_POL_COSSACK_LOYALTY_BONUS_TT: "Winning battles while we have at least §Y20§! Cossacks in the §YArmy§! now grants §G3§! Cossack Loyalty."
+ABF_POL_PATRONAGE_TT: "Upon adopting a new technology, we will recieve: "
+ABF_POL_FOREIGN_LEGION_TT: "A mixed compositions of Five §JForeign Legion§! regiments will be raised in our Capital and every §G10 years§! we will recieve new §JForeign Legion§! volunteers!"
+
+################################## Mercs ##################################
+ABF_pol_catholic_order_1: "Teutonic Knights"
+ABF_pol_catholic_order_2: "Livonian Order"

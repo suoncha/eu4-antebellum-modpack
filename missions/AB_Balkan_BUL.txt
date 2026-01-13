@@ -81,8 +81,12 @@ abf_balkan_bul_1 = {
 						}
 				add_permanent_claim = ROOT
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = rmg_winning_war_ae
+			custom_tooltip = RMG_WINNING_WAR_REDUCE_AE
 		}
 	}
+	
 
 	bulgaria_transylvania = {
 		icon = mission_unite_home_region
@@ -131,6 +135,7 @@ abf_balkan_bul_1 = {
 					change_culture = aba_bul_vlach
 				}
 			}
+			custom_tooltip = AB_EMPTY
 		    alfold_area = {
 			        limit = {
 					        NOT = { is_core = ROOT}
@@ -154,26 +159,34 @@ abf_balkan_bul_1 = {
 		required_missions = {
 			bulgaria_intervention
 		}
+
 		provinces_to_highlight = { 
 			region = carpathia_region
 		}
+
 		trigger = { 
 			carpathia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
-				NOT = { average_autonomy_above_min = 10 }
+				NOT = { local_autonomy_above_min = 10 }
 			}
-
 		}
+
 		effect = { 
 			set_country_flag = aba_bul_rostislavtsi_spread
 			custom_tooltip = ABA_BUL_rostislavtsi_spread_tt
+			custom_tooltip = unlock_privilege_estate_burghers_highland_rights_tt
+			hidden_effect = {
+				unlock_estate_privilege = {
+					estate_privilege = estate_burghers_highland_rights
+				}
+		    }
 		}
 	}
 
 	bul_buh_cossacks = {
 		icon = mission_recruit_the_cossacks
-		position = 11
+		position = 12
 		required_missions = {
 			bul_dnieper
 		}
@@ -192,6 +205,8 @@ abf_balkan_bul_1 = {
 				name = "aba_bulgaria_cossacks"
 				duration = -1
 			}
+			set_country_flag = aba_htm_cossack_raised_loyalty
+			custom_tooltip = ABA_HTM_COSSACK_RAISED_LOYALTY_TT
 		}
 	}
 
@@ -208,18 +223,25 @@ abf_balkan_bul_1 = {
 			280 = {
 				owned_by = ROOT
 				is_core = ROOT
-				development = 25
+				development = 30
 			}
 		}
 		effect = { 
 			280 = {
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 2
+				add_province_modifier = {
+					name = "aba_bulgaria_kyiv"
+					duration = -1
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
-			add_province_modifier = {
-				name = "aba_bulgaria_kyiv"
-				duration = -1
+			custom_tooltip = AB_EMPTY
+			280 = {
+				add_great_project_tier = {
+					type = kiev_pechersk_lavra
+					tier = 1
+				}
 			}
 		}
 	}
@@ -272,6 +294,7 @@ abf_balkan_bul_1 = {
 				has_road_building_trigger = yes
 			}
 		}
+
 		effect = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = RUS_DUAL
@@ -280,6 +303,9 @@ abf_balkan_bul_1 = {
 					name = rus_dual_capital
 					duration = -1
 				}
+				upgrade_tax_building = yes
+				upgrade_trade_building = yes
+				upgrade_production_building = yes
 			}
 			hidden_effect = {
 				310 = {	
@@ -287,12 +313,18 @@ abf_balkan_bul_1 = {
 						name = rus_dual_capital
 						duration = -1
 					}
+					add_or_upgrade_tax_building = yes
+					add_or_upgrade_trade_building = yes
+					add_or_upgrade_production_building = yes
 				}
 				280 = {	
 					add_province_modifier = {
 						name = rus_dual_capital
 						duration = -1
 					}
+					add_or_upgrade_tax_building = yes
+					add_or_upgrade_trade_building = yes
+					add_or_upgrade_production_building = yes
 				}
 			}
 		}
@@ -468,6 +500,7 @@ abf_balkan_bul_1 = {
 		}
 	}
 }
+
 abf_balkan_bul_2 = {
 	slot = 2
 	generic = no
@@ -492,6 +525,7 @@ abf_balkan_bul_2 = {
 		
 		effect = {
 			add_manpower = 5
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = BULGARIA_SERBIA_CB
 			hidden_effect = {
 				if = {
@@ -554,42 +588,54 @@ abf_balkan_bul_2 = {
 		}
 		effect = { 
 			add_yearly_manpower = 1
-			northern_greece_area = {
-				limit = {
-					owned_by = ROOT
-				}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABA_POLAND_DOMESTIC_ARMS_TT
+			tooltip = {
 				add_province_modifier = {
 					name = "aba_bulgaria_settle"
 					duration = 7300
 				}
 			}
-			thrace_area = {
-				limit = {
-					owned_by = ROOT
+			hidden_effect ={
+				northern_greece_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = "aba_bulgaria_settle"
+						duration = 7300
+					}
 				}
-				add_province_modifier = {
-					name = "aba_bulgaria_settle"
-					duration = 7300
+				thrace_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = "aba_bulgaria_settle"
+						duration = 7300
+					}
+				}
+				morea_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = "aba_bulgaria_settle"
+						duration = 7300
+					}
+				}
+				wallachia_area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = "aba_bulgaria_settle"
+						duration = 7300
+					}
 				}
 			}
-			morea_area = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "aba_bulgaria_settle"
-					duration = 7300
-				}
-			}
-			wallachia_area = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "aba_bulgaria_settle"
-					duration = 7300
-				}
-			}
+			set_country_flag = ABA_bul_culture_convert_bonus
+			custom_tooltip = ABA_BUL_CULTURE_CONVERT_BONUS_TT
 		}
 	}
 
@@ -638,22 +684,33 @@ abf_balkan_bul_2 = {
 					}
 				}
 			}
-		    moravia_area = {
-			        limit = {
-					        NOT = { is_core = ROOT}
-							NOT = {owned_by = ROOT}
-						}
-					add_permanent_claim = ROOT
+			custom_tooltip = MVA_CARPATHIA_AUTONOMY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = carpathia_region
+					}
+					add_local_autonomy = -25
 				}
+			}
+			custom_tooltip = AB_EMPTY
+		    moravia_area = {
+			    limit = {
+					 NOT = { is_core = ROOT}
+					NOT = {owned_by = ROOT}
+				}
+					add_permanent_claim = ROOT
+			}
 		    carpathia_region = {
-			        limit = {
-					        NOT = { is_core = ROOT}
-							NOT = {owned_by = ROOT}
-						}
+			    limit = {
+					NOT = { is_core = ROOT}
+					NOT = {owned_by = ROOT}
+				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
+
 
 	bulgaria_union = {
 		icon = mission_slavic
@@ -780,8 +837,8 @@ abf_balkan_bul_2 = {
 
 	bul_dnieper = {
 		icon = mission_advance_to_the_dnieper
-		position = 10
-		required_missions = { }
+		position = 11
+		required_missions = { bulgaria_game }
 		provinces_to_highlight = {
 			OR = { 
 				area = east_dniepr_area
@@ -808,36 +865,36 @@ abf_balkan_bul_2 = {
 			}
 			custom_tooltip = ABA_BUL_cossacks_tt
 			hidden_effect = {
-			capital_scope = {
-    		cossack_cavalry = BUL
-			}
-			capital_scope = {
-    		cossack_cavalry = BUL
-			}
-			capital_scope = {
-    		cossack_cavalry = BUL
-			}
-			capital_scope = {
-    		cossack_cavalry = BUL
-			}
-			capital_scope = {
-    		cossack_cavalry = BUL
-			}
-			capital_scope = {
-    		cossack_infantry = BUL
-			}
-			capital_scope = {
-    		cossack_infantry = BUL
-			}
-			capital_scope = {
-    		cossack_infantry = BUL
-			}
-			capital_scope = {
-    		cossack_infantry = BUL
-			}
-			capital_scope = {
-    		cossack_infantry = BUL
-			}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
+				capital_scope = {
+					cossack_infantry = BUL
+				}
 			}
 		}
 	}
@@ -846,7 +903,7 @@ abf_balkan_bul_2 = {
 		icon = mission_rule_ruthenia
 		position = 12
 		required_missions = {
-			bulgaria_mother bul_buh_cossacks
+			bulgaria_mother
 		}
 		trigger = {
 		    ruthenia_region = {
@@ -863,9 +920,11 @@ abf_balkan_bul_2 = {
 		}	
 		
 		effect = {
-			add_legitimacy = 25
 			set_country_flag = bul_released_ruthenia
 			custom_tooltip = BUL_RELEASE_RUTHENIA
+			custom_tooltip = AB_EMPTY
+			add_legitimacy = 25
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bulgaria_rus"
 				duration = -1
@@ -910,10 +969,26 @@ abf_balkan_bul_2 = {
 				years = 1
 				custom_tooltip = eng_trade_income
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = rus_seize_wealth
 				duration = 5475
 			}
+			custom_tooltip = NOV_TRADE_DEV
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "
+						random_owned_province = {
+							limit = {
+								has_trade_building_trigger = yes
+							}
+							add_base_production = 1
+						}
+					"
+				}
+			}
+			custom_tooltip = AB_EMPTY
 			finland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1005,26 +1080,71 @@ abf_balkan_bul_2 = {
 		}
 		
 		trigger = {
-			num_of_estate_privileges = {
-				estate = estate_church
-				value = 4
+			OR = {
+				theologian = 1
+				missionary = 1
+				inquisitor = 1
 			}
-			calc_true_if = {
-				all_owned_province = {
-					OR = {
-						has_building = temple
-						has_building = cathedral
-					}
+			if = {
+				limit = {
+					has_estate = estate_church
 				}
-				amount = 15
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 3
+				}
 			}
 		}
 		
 		effect = {
-			add_estate_loyalty = { estate = estate_church loyalty = 10 }
+			custom_tooltip = RUS_DIP_ESTATE
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bulgaria_support_church"
 				duration = -1
+			}
+			custom_tooltip = RUS_CHURCH_UPGRADE
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							theologian = 3
+							missionary = 3
+							inquisitor = 3
+						}
+					}
+					for = {
+						amount = 5
+						effect = "
+							random_owned_province = {
+								limit = {
+									has_building = temple
+									NOT = {
+										has_building = cathedral
+									}
+								}
+								remove_building = temple
+								add_building = cathedral
+							}
+						"
+					}
+				}
+			}
+			hidden_effect = {
+				for_privilege_given_to_estate = {
+					max_privileges = 4
+					estate = church
+					effect = "add_dip_power = 25"
+				}
 			}
 		}
 	}
@@ -1098,6 +1218,7 @@ abf_balkan_bul_3 = {
 		
 		effect = {
 			country_event = { id = ab_bulgaria.1 }
+			custom_tooltip = AB_EMPTY
 			ionian_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1135,8 +1256,11 @@ abf_balkan_bul_3 = {
 		}
 		
 		effect = {
-			capital_scope = {
-				add_prosperity = 100
+			country_event = { id = aba_bul_event.1 }
+			custom_tooltip = AB_EMPTY
+			add_ruler_modifier = {
+				name = "bulgaria_golden_age"
+				duration = -1
 			}
 			bulgaria_area = {
 				add_base_production = 1
@@ -1144,11 +1268,9 @@ abf_balkan_bul_3 = {
 			silistria_area = {
 				add_base_production = 1
 			}
-			add_ruler_modifier = {
-				name = "bulgaria_golden_age"
-				duration = -1
+			capital_scope = {
+				add_prosperity = 100
 			}
-			country_event = { id = aba_bul_event.1 }
 		}
 	}
 
@@ -1193,7 +1315,16 @@ abf_balkan_bul_3 = {
 		}
 		
 		effect = {
-			add_adm_power = 75
+			custom_tooltip = ABA_BUL_INTEGRATE_SERBIA_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = serbian
+					}
+					add_local_autonomy = -25
+				}
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bulgaria_rising"
 				duration = 5475
@@ -1276,6 +1407,14 @@ abf_balkan_bul_3 = {
 				name = "bulgaria_balkan_campaign"
 				duration = 9125
 			}
+			add_accepted_culture_or_dip_power = {
+				culture = croatian
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = ABA_bul_developing_south_slavic
+			custom_tooltip = ABA_BUL_DEVELOPING_SOUTH_SLAVIC_TT
+			custom_tooltip = AB_EMPTY
 			carinthia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1317,7 +1456,11 @@ abf_balkan_bul_3 = {
 			hidden_effect = {
 				set_country_flag = has_unlocked_rostislav_icon
 			}
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = BUL_MORAVIA
+			set_country_flag = ab_russia_patriarchate_rus
+			custom_tooltip = PNN_METRO
+			custom_tooltip = AB_EMPTY
 		    silesia_area = {
 			        limit = {
 					        NOT = { is_core = ROOT}
@@ -1389,15 +1532,12 @@ abf_balkan_bul_3 = {
 		} 
 
 		effect = {  
-			custom_tooltip = HAB_EVERY_REQUIRED_PROVINCE_WILL_LOSE_AUTONOMY
-			
-			custom_tooltip = AB_EMPTY
-			
 			266 = {
 				add_base_production = 2
 				add_or_upgrade_fort_building = yes
 			}
-			
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = HAB_EVERY_REQUIRED_PROVINCE_WILL_LOSE_AUTONOMY
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -1409,8 +1549,61 @@ abf_balkan_bul_3 = {
 					add_local_autonomy = -25
 				}
 			}
-		} 
-	}
+			if = {
+				limit = {
+					266 = {
+						NOT = {
+							any_province = {
+								continent = europe
+								higher_development_than = PREV
+							}
+						}
+					}
+				}
+				custom_tooltip = BOH_PRAGUE_DEV
+				tooltip = {
+					266 = {
+						add_province_modifier = {
+							name = "boh_goldencity"
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = BOH_PRAGUE_DEV_NO
+				tooltip = {
+					266 = {
+						add_province_modifier = {
+							name = "boh_goldencity"
+							duration = -1
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						266 = {
+							NOT = {
+								any_province = {
+									continent = europe
+									higher_development_than = PREV
+								}
+							}
+						}
+					}
+					266 = {
+						add_province_modifier = {
+							name = "boh_goldencity"
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	} 
+
 
 	bulgaria_game = {
 		icon = mission_unite_the_princes
@@ -1442,6 +1635,7 @@ abf_balkan_bul_3 = {
 		
 		effect = {
 			add_prestige = 15
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = bulgaria_claim
 				duration = 9125
@@ -1484,15 +1678,21 @@ abf_balkan_bul_3 = {
 		}	
 		
 		effect = {
+			add_country_modifier = {
+				name = bulgaria_cossacks
+				duration = 5475
+			}
 			280 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
 			}
-			add_country_modifier = {
-				name = bulgaria_cossacks
-				duration = 5475
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = ruthenian
+				free = yes
 			}
+			custom_tooltip = AB_EMPTY
 			ruthenia_region  = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -1595,13 +1795,15 @@ abf_balkan_bul_3 = {
 				points = 1
 				power = mil
 			}
+			custom_tooltip = AB_EMPTY
+			add_ruler_modifier = {
+				name = "bulgaria_tsar"
+				duration = -1
+			}
+			custom_tooltip = AB_EMPTY
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 25
-			}
-			add_country_modifier = {
-				name = "bulgaria_tsar"
-				duration = 18250
 			}
 		}
 	}
@@ -1621,10 +1823,33 @@ abf_balkan_bul_3 = {
 		}
 		
 		effect = {
+			country_event = { id = ab_bulgaria.3 }
+			custom_tooltip = AB_EMPTY
 			unlock_estate_privilege = {
 				estate_privilege = estate_burghers_panslavism
 			}
-			country_event = { id = ab_bulgaria.3 }
+			custom_tooltip = AB_EMPTY
+			central_asia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ural_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			hidden_effect = {
 				country_event = {
 					id = ab_achiev.19
@@ -1739,9 +1964,20 @@ abf_balkan_bul_3 = {
 		
 		effect = {
 			add_patriarch_authority = 0.15
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bulgaria_jerusalem"
 				duration = -1
+			}
+			379 = {
+				change_culture = bulgarian
+				change_religion = orthodox
+			}
+			379 = {
+					add_great_project_tier = {
+						type = holy_city_jerusalem
+						tier = 1
+					}
 			}
 			hidden_effect = {
 				country_event = {
@@ -1779,9 +2015,6 @@ abf_balkan_bul_3 = {
 			}
 		}
 		effect = { 
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
 			4704  = {
 				add_province_modifier = {
 					name = aba_bul_three_cities
@@ -2027,6 +2260,7 @@ abf_balkan_bul_4 = {
 		}
 		effect = {
 			add_yearly_sailors = 3
+			custom_tooltip = AB_EMPTY
 			321 = {
 				add_province_modifier = {
 					name = "byzantium_cypriot"
@@ -2063,7 +2297,10 @@ abf_balkan_bul_4 = {
 		}
 		
 		effect = {
-			add_mil_power = 100
+			create_general = {
+				tradition = 60
+			}
+			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = commandant
 				skill = 3
@@ -2071,6 +2308,10 @@ abf_balkan_bul_4 = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = SAX_PRIMACY_PRIVILEGE
+			set_country_flag = sax_primacy_privilege_buff
+			custom_tooltip = AB_EMPTY
 			anatolia_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2087,6 +2328,7 @@ abf_balkan_bul_4 = {
 		required_missions = {
 			bulgaria_nicaea
 		}
+
 		provinces_to_highlight = { 
 			OR = {
 			province_id = 316
@@ -2095,6 +2337,7 @@ abf_balkan_bul_4 = {
 			province_id = 2296
 			}
 		}
+
 		trigger = { 
 			316 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2116,31 +2359,31 @@ abf_balkan_bul_4 = {
 				is_core = ROOT
 				fort_level = 2
 			}
-
+			mil_power = 200
+			manpower = 25
+			treasury = 2500
+			advisor = fortification_expert
 		}
+
 		effect = { 
-			316 = {
-				add_province_modifier = {
-					name = "aba_bul_fortified"
-					duration = -1
+			add_mil_power = -200
+			add_manpower = -25
+			add_treasury = -2500
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = BYZ_CREATE_MONUMENT
+			set_country_flag = byzantine_monument_flag
+			hidden_effect = {
+				151 = {
+					add_great_project = {
+						type = theodosian
+						instant = yes
+					}
 				}
-			}
-			151 = {
-				add_province_modifier = {
-					name = "aba_bul_fortified"
-					duration = -1
-				}
-			}
-			4779 = {
-				add_province_modifier = {
-					name = "aba_bul_fortified"
-					duration = -1
-				}
-			}
-			2296 = {
-				add_province_modifier = {
-					name = "aba_bul_fortified"
-					duration = -1
+				151 = {
+					add_great_project_tier = {
+						type = theodosian
+						tier = 1
+					}
 				}
 			}
 		}
@@ -2188,6 +2431,7 @@ abf_balkan_bul_4 = {
 					change_primary_culture = polish
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = boh_polish_cavalry
 				duration = -1
@@ -2249,7 +2493,6 @@ abf_balkan_bul_4 = {
 		}
 		
 		effect = {
-			add_adm_power = 150
 			baltic_region = {
 				add_province_modifier = {
 					name = rus_baltic_convert
@@ -2265,9 +2508,11 @@ abf_balkan_bul_4 = {
 			}
 			custom_tooltip = ABA_LTV_CULTURE_SPREAD_tt
 			set_country_flag = rus_litvin_culture_spread
-			272 = {
-				change_culture = Litvin
-				change_original_culture = Litvin
+			hidden_effect = {
+				272 = {
+					change_culture = Litvin
+					change_original_culture = Litvin
+				}
 			}
 		}
 	}
@@ -2325,7 +2570,22 @@ abf_balkan_bul_4 = {
 		}
 		
 		effect = {
-			285 = {
+			custom_tooltip = AB_RUS_SEVASTOPOL
+			upgrade_dock_building = yes
+			upgrade_shipyard_building = yes
+			hidden_effect = {
+				2410 = {
+					change_province_name = "Sevastopol"
+					rename_capital = "Sevastopol"
+				}
+			}
+			2410 = {
+				add_province_modifier = {
+					name = rus_sevastopol
+					duration = -1
+				}
+			}
+			2410 = {
 				if = {
 					limit = {
 						NOT = { province_has_center_of_trade_of_level = 1 }
@@ -2345,11 +2605,6 @@ abf_balkan_bul_4 = {
 					amount = 5
 					speed = 1
 					cost = 0
-				}
-			}
-			hidden_effect = {
-				country_event = {
-					id = ab_achiev.19
 				}
 			}
 		}
@@ -2373,15 +2628,24 @@ abf_balkan_bul_4 = {
 
 		}
 		effect = { 
+			create_admiral = { tradition = 60 }
+			custom_tooltip = AB_EMPTY
 			2447 = {
 				add_center_of_trade_level = 1
+				change_culture = bulgarian
+				change_religion = orthodox
 				add_province_modifier = {
 					name = "aba_bul_phanagoria"
 					duration = -1
 				}
-				change_culture = bulgarian
-				change_religion = orthodox
 			}
+			hidden_effect = {
+				2447 = {
+					change_province_name = "Phanagoria"
+					rename_capital = "Phanagoria"
+				}
+			}
+
 		}
 	}
 
@@ -2532,6 +2796,7 @@ abf_balkan_bul_4 = {
 		
 		effect = {
 			add_estate_loyalty = { estate = estate_church loyalty = 10 }
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = BYZ_TRUST
 			hidden_effect = {
 				every_country = {
@@ -2541,6 +2806,7 @@ abf_balkan_bul_4 = {
 					add_trust = { who = ROOT value = 10 mutual = yes }
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			151 = {
 				add_province_modifier = {
 					name = "byzantium_cathedral"
@@ -2641,12 +2907,33 @@ abf_balkan_bul_5 = {
 		effect = {
 			add_accepted_culture_or_dip_power = {
 				culture = greek
-				dip_reward = yes
+				free = yes
 			}
-			add_country_modifier = {
-				name = "bulgaria_greek"
-				duration = -1
+			custom_tooltip = AB_EMPTY
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = northern_greece_area
+						area = ionian_islands_area
+						area = morea_area
+					}
+					trade_goods = livestock
+				}
+				change_trade_goods = silk
+				add_province_modifier = {
+					name = rmg_greek_silk
+					duration = -1
+				}
+				add_base_production = 3
 			}
+			5152 = {
+				add_province_modifier = {
+					name = rmg_greek_silk
+					duration = -1
+				}
+				add_base_production = 3
+			}
+			custom_tooltip = AB_EMPTY
 			aegean_archipelago_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2654,11 +2941,7 @@ abf_balkan_bul_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			hudavendigar_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
+			321 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -2684,9 +2967,20 @@ abf_balkan_bul_5 = {
 		}
 		effect = {
 			add_navy_tradition = 10
+			create_admiral = {
+				tradition = 60
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bulgaria_protect_aegean"
 				duration = 9125
+			}
+			hudavendigar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			hidden_effect = {
 				country_event = {
@@ -2722,6 +3016,14 @@ abf_balkan_bul_5 = {
 			}
 		}
 		effect = { 
+			define_advisor = {
+				type = trader
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = AB_EMPTY
 			328 = {
 				add_province_modifier = {
 					name = "aba_bul_pontic"
@@ -2750,11 +3052,16 @@ abf_balkan_bul_5 = {
 		}
 		
 		effect = {
+			add_sailors = 5000
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = bulgarian_fleet
 				duration = 7300
 			}
-			crimea_area = {
+			set_country_flag = cro_private_trade_fleet
+			custom_tooltip = CRO_PRIVILEGE
+			custom_tooltip = AB_EMPTY
+			crimea_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -2783,13 +3090,13 @@ abf_balkan_bul_5 = {
 		}	
 		
 		effect = {
-			add_mil_power = 150
+			country_event = { id = ab_novgorod.6 }
+			set_country_flag = abf_ukr_cossack_culture_spread
+			custom_tooltip = abf_ukr_cossack_culture_spread_tt
 			add_ruler_modifier = {
 				name = bulgarian_bane_mongol
 				duration = -1
 			}
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
-			set_country_flag = abf_ukr_cossack_culture_spread
 			custom_tooltip = BUL_GLH_CLAIMS
 			hidden_effect = {
 			every_province = {
@@ -2899,22 +3206,14 @@ abf_balkan_bul_5 = {
 				name = "aba_bul_cuman_knights"
 				duration = -1
 			}
-			caucasia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+			define_advisor = {
+				type = dragoon
+				skill = 2
+				religion = tengri_pagan_reformed
+				culture = cuman_culture
+				cost_multiplier = 0.5
+					
 			}
-			tooltip = {
-					define_advisor = {
-						type = dragoon
-						skill = 2
-						religion = tengri_pagan_reformed
-						culture = cuman_culture
-						cost_multiplier = 0.5
-					}
-				}
 			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {

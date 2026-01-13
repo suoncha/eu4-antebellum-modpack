@@ -259,6 +259,20 @@ ab_building_tax_effect = {
 		}
 	}
     # ]]]
+	# ABF [[[
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ABA_TCR_temple_buff
+			}
+			religion = ROOT
+		}
+		add_province_modifier = {
+			name = ABA_tcr_temple_expansion
+			duration = -1
+		}
+	}
+	# ]]]
 }
 
 ab_removing_tax_effect = {
@@ -308,6 +322,14 @@ ab_removing_tax_effect = {
 		remove_province_modifier = wallachia_basilica_buff
 	}
     # ]]]
+	# ABF [[[
+	if = {
+		limit = {
+			has_province_modifier = ABA_tcr_temple_expansion
+		}
+		remove_province_modifier = ABA_tcr_temple_expansion
+	}
+	# ]]]
 }
 
 ab_building_production_effect = {
@@ -570,6 +592,16 @@ ab_building_manpower_effect = {
 		}
 	}
 	# ]]]
+	# ABF [[[
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+			}
+		}
+		add_army_tradition = 0.25
+	}
+	# ]]]
 }
 
 ab_removing_manpower_effect = {
@@ -601,6 +633,16 @@ ab_removing_manpower_effect = {
 		remove_province_modifier = punic_iscine_mod
 	}
 	# ]]]
+	# ABF [[[
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+			}
+		}
+		add_army_tradition = -0.25
+	}
+	# ]]]
 }
 
 ab_building_forcelimit_effect = {
@@ -612,6 +654,16 @@ ab_building_forcelimit_effect = {
         }
         add_army_professionalism = 0.001
     }
+	# ABF [[[
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+			}
+		}
+		add_army_tradition = 0.25
+	}
+	# ]]]
 }
 
 ab_removing_forcelimit_effect = {
@@ -623,6 +675,16 @@ ab_removing_forcelimit_effect = {
         }
         add_army_professionalism = -0.001
     }
+	# ABF [[[
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+			}
+		}
+		add_army_tradition = -0.25
+	}
+	# ]]]
 }
 
 ab_building_shipyard_effect = {

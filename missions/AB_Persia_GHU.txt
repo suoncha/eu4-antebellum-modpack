@@ -1806,44 +1806,61 @@ ab_ghor_third = {
 		trigger = { 
 			4477 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			558 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			555 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			2063 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			524 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			522 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			510 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			2075 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			507 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 			578 = {
 				owned_by = ROOT
+				has_road_building_trigger = yes
 			}
 		}
+
 		effect = { 
-		custom_tooltip = ABA_SHH_great_trunk_road_tt
-			4447 = {
+			custom_tooltip = ABA_SHH_great_trunk_road_tt
+			tooltip = {
 				add_province_modifier = {
 					name = ABA_SHH_great_trunk_road
 					duration = -1
-				}
+				}			
 			}
-		hidden_effect = {
+			hidden_effect = {
+				4447 = {
+					add_province_modifier = {
+						name = ABA_SHH_great_trunk_road
+						duration = -1
+					}
+				}	
 				558 = {
 					add_province_modifier = {
 						name = ABA_SHH_great_trunk_road
@@ -1899,7 +1916,7 @@ ab_ghor_third = {
 					}
 				}
 			}
-		 }
+		}
 	}
 	
 	ghu_cities = {
@@ -2921,12 +2938,15 @@ ab_ghor_fifth = {
 	ghu_mysore_rockets = {
 		icon = mission_asian_cannon
 		position = 12
+
 		required_missions = {
 			ghu_elephants
 		}
+
 		provinces_to_highlight = { 
 		 area = mysore_area
 		}
+
 		trigger = { 
 		 army_tradition = 85
 		 army_professionalism = 0.5
@@ -2934,12 +2954,30 @@ ab_ghor_fifth = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT 
 			}
+			533 = {
+				has_production_building_trigger = yes
+			}
 		}
+
 		effect = { 
-		add_country_modifier = {
+			add_country_modifier = {
 				name = aba_ZNN_mysore_rockets
 				duration = -1
 			}	
+			533 = {
+				add_or_upgrade_production_building = yes
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = siegeengineer
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = STY_GER_EASTERN_SPEAR_BATTLE
+			set_country_flag = sty_winning_battle_grant_morale
 		}
 	}
 

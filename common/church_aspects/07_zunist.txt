@@ -63,7 +63,7 @@ zun_crusade = {
 	trigger = {
 		OR = {
 			mission_completed = zun_sunset
-			mission_completed = zun_sunset_india
+			mission_completed = zun_master
 		}   
 	}
 }q

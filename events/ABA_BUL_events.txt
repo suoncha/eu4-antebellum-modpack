@@ -12,6 +12,18 @@ country_event = {
 	option = {
 		name = aba_bul_event.1.a
 		custom_tooltip = ABA_BUL_slavic_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = FRK_PP
+			hidden_effect = {
+				add_power_projection = {
+					type = FRK_REL_perma_pp
+					amount = 25
+				}
+			}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = ABA_bul_simeon_trait
+		custom_tooltip = ABA_BUL_SIMEON_TRAIT_TT
+
 	}
 
 }
@@ -32,9 +44,9 @@ country_event = {
 				owned_by = ROOT
 				culture = kazani 
 			}
-		 add_province_modifier = {
-					name = aba_bul_kazan_accepted
-					duration = -1
+			 add_province_modifier = {
+				name = aba_bul_kazan_accepted
+				duration = -1
 			}
 		 }
 	}
@@ -52,5 +64,4 @@ country_event = {
 			add_unrest = 5
 		}
 	}
-
 }

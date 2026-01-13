@@ -40,6 +40,7 @@ cossack_first_group = {
 		}
 		effect = {
 			add_army_tradition = 10
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_reclamation_kiev
 				duration = 7300
@@ -109,8 +110,6 @@ cossack_first_group = {
 			}
 		}
 		effect = {
-			custom_tooltip = aba_kharbinskiye_cossack_culture_tt
-			set_country_flag = aba_kharbinskiye_cossack_culture_spread
 			2106 = {
 				rename_capital = "Vladivostok"
 				change_province_name = "Vladivostok"
@@ -131,6 +130,8 @@ cossack_first_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			set_country_flag = aba_kharbinskiye_cossack_culture_spread
+			custom_tooltip = aba_kharbinskiye_cossack_culture_tt
 		}
 	}
 
@@ -165,18 +166,23 @@ cossack_first_group = {
 			}
 		}
 		effect = { 
+			add_war_exhaustion = -2
+			custom_tooltip = AB_EMPTY
 			280 = {
-				add_building = workshop
+				add_or_upgrade_production_building = yes
 			}
 			2407 = {
-				add_building = workshop
+				add_or_upgrade_production_building = yes
 			}
 			1942 = {
-				add_building = workshop
+				add_or_upgrade_production_building = yes
 			}
 			2406 = {
-				add_building = workshop
+				add_or_upgrade_production_building = yes
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = ABA_htm_mills
+			custom_tooltip =  ABA_HTM_MILLS_TT
 		}
 	}
 
@@ -202,11 +208,13 @@ cossack_first_group = {
 			}
 		}
 		effect = { 
+			add_years_of_income = 0.5
+			add_republican_tradition = 10
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = aba_htm_vodka
 				duration = -1
 			}
-			add_years_of_income = 0.5
 		}
 	}
 
@@ -224,9 +232,25 @@ cossack_first_group = {
 			monthly_income = 50
 		}
 		effect = { 
-		add_country_modifier = {
+			add_inflation = -2
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
 				name = aba_htm_new_coinage
 				duration = -1
+			}
+			custom_tooltip = hun_production_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owned_by = ROOT
+						OR = {
+							trade_goods = gold
+							trade_goods = copper
+							trade_goods = iron
+						}
+					}
+				add_base_production = 1
+				}
 			}
 		}
 	}
@@ -267,16 +291,17 @@ cossack_second_group = {
 
 		}
 		effect = {
-			custom_tooltip = HTM_FOG
 			add_country_modifier = {
 				name = htm_mongol_towns
 				duration = 5475
 			}
+			custom_tooltip = HTM_FOG
 			hidden_effect = {
 				GLH = {
 					remove_fow = 60
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			yedisan_area = {
 				limit = {
 					NOT = {
@@ -312,8 +337,7 @@ cossack_second_group = {
 		provinces_to_highlight = {
 			OR = {
 				area = chernigov_area
-				area = red_ruthenia_area
-				area = volhynia_area
+				area = sloboda_ukraine_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -325,18 +349,12 @@ cossack_second_group = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			red_ruthenia_area = {
+			sloboda_ukraine_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			volhynia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
 		}
 		effect = {
-			add_dip_power = 100
 			add_country_modifier = {
 				name = htm_unite_ruthenia
 				duration = 5475
@@ -352,7 +370,13 @@ cossack_second_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = LOM_AUTONOMY
+			hidden_effect = {
+				every_owned_province = {
+					add_local_autonomy = -25
+				}
+			}
 		}
 	}
 
@@ -377,11 +401,41 @@ cossack_second_group = {
 
 		}
 		effect = {
-			add_mercantilism = 3
+			add_mercantilism_or_monarch_power = { amount = 3 }
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_black_sea_trade
 				duration = 7300
 			}
+			2410 = {
+				change_province_name = "Sevastopol"
+				rename_capital = "Sevastopol"
+			}
+			2410 = {
+				add_province_modifier = {
+					name = rus_sevastopol
+					duration = -1
+				}
+				upgrade_dock_building = yes
+			    upgrade_shipyard_building = yes
+			}
+			custom_tooltip = AB_EMPTY
+			2410 = {
+				if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 1 }
+					}
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					1323 = {
@@ -441,7 +495,8 @@ cossack_second_group = {
 
 		}
 		effect = {
-			add_years_of_income = 0.5
+			add_years_of_income = 1
+			custom_tooltip = AB_EMPTY
 			310 = {
 				add_province_modifier = {
 					name = htm_great_city
@@ -500,6 +555,9 @@ cossack_second_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = rhl_building_fort
+			custom_tooltip = HLV_FORTS
 			hidden_effect = {
 				425 = {
 					add_province_modifier = {
@@ -528,10 +586,12 @@ cossack_second_group = {
 		position = 9
 		required_missions = { 
 			htm_baltic_host
-	}
+	    }
+
 		provinces_to_highlight = { 
-        region = carpathia_region
+        	region = carpathia_region
 		}
+
 		trigger = { 
           num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
@@ -539,12 +599,13 @@ cossack_second_group = {
 			}
 		}
 		effect = { 
-		custom_tooltip = aba_htm_stables_tt
-		set_country_flag = cmn_unlocked_magyar_project
-		add_country_modifier = {
-			name = htm_danube_sich
-			duration = -1
+			set_country_flag = cmn_unlocked_magyar_project
+			add_country_modifier = {
+				name = htm_danube_sich
+				duration = -1
 			}
+			custom_tooltip = aba_htm_stables_tt
+			custom_tooltip = AB_EMPTY
 			carpathia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -584,12 +645,14 @@ cossack_second_group = {
 
 		}
 		effect = {
-			add_yearly_manpower = 2
+			add_yearly_manpower = 1
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_stanitsa
 				duration = 9125
 			}
-
+			set_country_flag = rhl_unlock_planner_bonus
+			custom_tooltip = RHL_SCALING_PLANNER
 		}
 	}
 
@@ -615,13 +678,38 @@ cossack_second_group = {
 			}
 		}
 		effect = { 
-			add_yearly_manpower = 2
+			add_yearly_manpower = 1
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = rus_growth
 				duration = -1
-			 }
+			}
+			custom_tooltip = BAV_RANDOM_GRAIN
+			tooltip = {
+				add_province_modifier = {
+					name = ABA_htm_grain_center
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				for = {
+                    amount = 7
+                    effect = "
+                        random_owned_province = {
+							limit = {
+								has_building = farm_estate
+								trade_goods = grain
+							}
+							add_province_modifier = {
+								name = ABA_htm_grain_center
+								duration = -1
+							}
+                        }
+                    "
+                }
 			}
 		}
+	}
 
 	htm_mother = {
 		icon = mission_restore_kiev
@@ -647,11 +735,15 @@ cossack_second_group = {
 		}
 		effect = {
 			set_capital = 280
+			custom_tooltip = AB_EMPTY
 			280 = {
 				add_province_modifier = {
 					name = htm_kyiv
 					duration = -1
 				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 			280 = {
 				if = {
@@ -671,7 +763,6 @@ cossack_second_group = {
 					add_center_of_trade_level = 1
 				}
 			}
-
 		}
 	}
 
@@ -727,10 +818,14 @@ cossack_second_group = {
 					" 
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_kyiv_metro
 				duration = 7300
 			}
+			set_country_flag = ab_russia_patriarchate_rus
+			custom_tooltip = PNN_METRO
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					OR = {
@@ -885,13 +980,14 @@ cossack_third_group = {
 
 		}
 		effect = {
-			create_general = {
-				tradition = 50
-			}
 			add_country_modifier = {
 				name = htm_rally_cossacks
 				duration = 7300
 			}
+			create_general = {
+				tradition = 50
+			}
+			custom_tooltip = AB_EMPTY
 			azov_area = {
 				limit = {
 					NOT = {
@@ -904,6 +1000,28 @@ cossack_third_group = {
 				add_permanent_claim = ROOT
 			}
 			crimea_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_don_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			astrakhan_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -974,13 +1092,15 @@ cossack_third_group = {
 		}
 		effect = {
 			add_prestige = 25
-			466 = {
-				add_devastation = 100
-			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_ended_yoke
 				duration = 9125
 			}
+			466 = {
+				add_devastation = 100
+			}
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = ALN_GLH
 			hidden_effect = {
 				every_province = {
@@ -1021,7 +1141,6 @@ cossack_third_group = {
 
 		}
 		effect = {
-			custom_tooltip = HTM_CB
 			add_country_modifier = {
 				name = htm_heirs_ruthenia
 				duration = 9125
@@ -1030,6 +1149,7 @@ cossack_third_group = {
 				name = aba_htm_free_ruthenia
 				duration = -1
 			}
+			custom_tooltip = HTM_CB
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -1044,6 +1164,7 @@ cossack_third_group = {
 					}
 				}
 			}
+			custom_tooltip =  AB_EMPTY
 			russia_region = {
 				limit = {
 					NOT = {
@@ -1076,17 +1197,11 @@ cossack_third_group = {
 
 		}
 		effect = {
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
-			set_country_flag = abf_ukr_cossack_culture_spread
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 25
 			}
-			custom_tooltip = ALN_REMOVE_CORE
-			add_ruler_modifier = {
-				name = "aln_bane"
-				duration = -1
-			}
+			custom_tooltip =  AB_EMPTY
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -1095,7 +1210,13 @@ cossack_third_group = {
 					remove_core = GLH
 				}
 			}
-
+			add_ruler_modifier = {
+				name = "aln_bane"
+				duration = -1
+			}
+			custom_tooltip = ALN_REMOVE_CORE
+			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			set_country_flag = abf_ukr_cossack_culture_spread
 		}
 	}
 
@@ -1121,6 +1242,7 @@ cossack_third_group = {
 		}
 		effect = {
 			set_government_rank = 3
+			custom_tooltip = AB_EMPTY
 			add_ruler_modifier = {
 				name = htm_heir
 				duration = -1
@@ -1191,11 +1313,36 @@ cossack_third_group = {
 		}
 		effect = {
 			add_war_exhaustion = -3
+			create_conquistador = {
+				tradition = 100
+			}
+			custom_tooltip =  AB_EMPTY
 			add_ruler_modifier = {
 				name = htm_frontier
 				duration = 7300
 			}
-
+			west_siberia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_siberia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1214,13 +1361,24 @@ cossack_third_group = {
 				region = poland_region
 			}
 		}
-		effect = { 
-			custom_tooltip = ABA_HTM_hussar_spawn_tt
+		effect = {
+			unify_polish_cultures_effect = yes
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = polish
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			poland_region = {
+				add_nationalism = -20
+			}	
+			custom_tooltip = AB_EMPTY
 			set_country_flag = aba_htm_hussar_spawn_event
+			custom_tooltip = ABA_HTM_hussar_spawn_tt
 			hidden_effect = {
-			country_event = {
-				id = aba_hetmanate.1
-			 }
+				country_event = {
+					id = aba_hetmanate.1
+				}
 			}
 		}
 	}
@@ -1237,15 +1395,17 @@ cossack_third_group = {
 		}
 
 		trigger = { 
-		monthly_income = 12
-		is_in_deficit = no
+			monthly_income = 12
+			is_in_deficit = no
 		}
 
 		effect = { 
-		 add_country_modifier = {
-			name = aba_htm_military_treasury 
-			duration = -1
-		 }
+			add_country_modifier = {
+				name = aba_htm_military_treasury 
+				duration = -1
+			}
+			set_country_flag = aba_htm_cossack_raised_loyalty
+			custom_tooltip = ABA_HTM_COSSACK_RAISED_LOYALTY_TT
 		}
 	}
 
@@ -1365,6 +1525,7 @@ cossack_third_group = {
 					add_mil_power = 100
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_cossack_horde
 				duration = 9125
@@ -1381,7 +1542,6 @@ cossack_third_group = {
 					}
 				}
 			}
-
 		}
 	}
 
@@ -1417,11 +1577,13 @@ cossack_third_group = {
 				points = 1
 				power = mil
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_reformed_sich
 				duration = -1
 			}
-
+			set_country_flag = aba_htm_goverment_reform
+			custom_tooltip = ABA_HTM_GOVERMENT_REFORM_TT
 		}
 	}
 
@@ -1438,7 +1600,6 @@ cossack_third_group = {
 
 		}
 		effect = {
-			custom_tooltip = HTM_10_COSSACKS
 			custom_tooltip = HTM_COSSACK_THREAT
 			tooltip = {
 				custom_tooltip = HTM_THREAT
@@ -1460,6 +1621,7 @@ cossack_third_group = {
 					}
 				}
 			}
+			custom_tooltip = HTM_10_COSSACKS
 			hidden_effect = {
 				capital_scope = {
 					cossack_cavalry = ROOT
@@ -1492,7 +1654,9 @@ cossack_third_group = {
 					cossack_cavalry = ROOT
 				}
 			}
-
+			custom_tooltip = AB_EMPTY
+			set_country_flag = aba_HTM_raiding_upgrade_mechanic
+			custom_tooltip = ABA_HTM_RAIDING_UPGRADE_MECHANIC_TT
 		}
 	}
 
@@ -1512,14 +1676,15 @@ cossack_third_group = {
 		}
 		effect = { 
 			add_country_modifier = {
-					name = aba_pol_cossack_registry
-					duration = -1
-				}
-
-				add_country_modifier = {
-					name = aba_pol_cossack_expansion
-					duration = -1
-				}
+				name = aba_pol_cossack_registry
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aba_pol_cossack_expansion
+				duration = -1
+			}
+			set_country_flag = aba_HTM_host_upgrade_mechanic
+			custom_tooltip = ABA_HTM_HOST_UPGRADE_MECHANIC_TT
 		}
 	}
 }
@@ -1552,6 +1717,8 @@ cossack_fourth_group = {
 				name = htm_mongol_tactics
 				duration = 5475
 			}
+			add_yearly_manpower = 1.5
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					any_ally = {
@@ -1624,11 +1791,12 @@ cossack_fourth_group = {
 			}
 		}
 		effect = { 
-			add_war_exhaustion = -3
 			add_country_modifier = {
 				name = "pol_ruthenian_advance"
 				duration = 5475
 			}
+			add_war_exhaustion = -3
+			custom_tooltip = AB_EMPTY
 			poland_region = {
 				add_permanent_claim = ROOT
 			}
@@ -1674,6 +1842,7 @@ cossack_fourth_group = {
 					}
 				}
 			}
+
 			astrakhan_area = {
 				limit = {
 					NOT = {
@@ -1734,6 +1903,7 @@ cossack_fourth_group = {
 		}
 		effect = {
 			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = htm_consolidate
 				duration = 9125
@@ -1801,9 +1971,6 @@ cossack_fourth_group = {
 			}
 		}
 		effect = { 
-			add_adm_power = 150
-			custom_tooltip = aba_malorussian_cossack_culture_tt
-			set_country_flag = aba_malorussian_cossack_culture_spread
 			baltic_region = {
 				add_province_modifier = {
 					name = rus_baltic_convert
@@ -1816,10 +1983,11 @@ cossack_fourth_group = {
 				religion = ROOT
 				culture = ROOT
 				cost_multiplier = 0.5
-			  }
-		   }
-			
+			}
+			custom_tooltip = aba_malorussian_cossack_culture_tt
+		    set_country_flag = aba_malorussian_cossack_culture_spread
 		}
+	}
 
 	htm_balkan_host = {
 		icon = mission_balkan_conquest
@@ -1838,11 +2006,14 @@ cossack_fourth_group = {
 		}
 		effect = { 
 			add_manpower = 15
-			tooltip = {
-				unlock_estate_privilege = {
-					estate_privilege = estate_nobles_balkan_client
-				}
+			add_country_modifier = {
+				name = rmg_integrate_hajduks
+				duration = 7300
 			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_italo_balkan_unity
+			}
+			custom_tooltip = AB_EMPTY
 			balkan_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -1881,6 +2052,11 @@ cossack_fourth_group = {
 				fire = 6
 				manuever = 5
 				siege = 0
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = rmr_into_the_beyond
+				duration = 7300
 			}
 			custom_tooltip = HTM_SIBERIA
 			tooltip = {
@@ -1962,6 +2138,8 @@ cossack_fourth_group = {
 
 		}
 		effect = {
+			add_mercantilism_or_monarch_power = { amount = 3 }
+			custom_tooltip = AB_EMPTY
 			east_siberia_region = {
 				limit = {
 					trade_goods = fur
@@ -1972,7 +2150,16 @@ cossack_fourth_group = {
 					duration = 7300
 				}
 			}
-
+			west_siberia_region = {
+				limit = {
+					trade_goods = fur
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "siberian_fur_production"
+					duration = 7300
+				}
+			}
 		}
 	}
 
@@ -1991,6 +2178,10 @@ cossack_fourth_group = {
 
 		}
 		effect = {
+			add_country_modifier = {
+				name = "htm_fur_monopoly"
+				duration = -1
+			}
 			custom_tooltip = HTM_FUR
 			hidden_effect = {
 				for = {
@@ -2005,11 +2196,6 @@ cossack_fourth_group = {
 					" 
 				}
 			}
-			add_country_modifier = {
-				name = "htm_fur_monopoly"
-				duration = -1
-			}
-
 		}
 	}
 }
@@ -2044,7 +2230,13 @@ cossack_fifth_group = {
 			add_country_modifier = {
 				name = htm_unite_ruthenia
 				duration = 5475
-			} 
+			}
+			add_country_modifier = {
+				name = "gen_eur_defender"
+				duration = 5475
+			}
+			custom_tooltip = eu_defender_faith_bonus_tradition 
+			custom_tooltip = AB_EMPTY
 			pripyat_area = {
 				add_permanent_claim = ROOT
 			}
@@ -2073,9 +2265,6 @@ cossack_fifth_group = {
 		}
 
 		effect = { 
-            custom_tooltip = aba_nagaybak_culture_spread_tt
-			set_country_flag = abf_nagaybak_culture_spread
-			custom_tooltip = RUS_CENTRAL_ASIA
 			central_asia_region = {
 				limit = {
 					owned_by = ROOT
@@ -2092,6 +2281,7 @@ cossack_fifth_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			custom_tooltip = RUS_CENTRAL_ASIA
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -2100,8 +2290,9 @@ cossack_fifth_group = {
 					add_local_autonomy = -25
 				}
 			}
+			set_country_flag = abf_nagaybak_culture_spread
+			custom_tooltip = aba_nagaybak_culture_spread_tt
 		}
-
 	}
 
 	htm_urbanize = {
@@ -2128,6 +2319,10 @@ cossack_fifth_group = {
 
 		}
 		effect = {
+			add_country_modifier = {
+				name = "aba_pol_orthodox_new_settlements"
+				duration = 7300
+			}
 			custom_tooltip = HTM_NEW_TOWNS
 			tooltip = {
 				add_province_modifier = {
@@ -2147,7 +2342,18 @@ cossack_fifth_group = {
 					}
 				}
 			}
-
+			custom_tooltip = ABA_HTM_STEPPE_DEVELOPMENT_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_terrain = steppe
+					}
+					add_province_modifier = {
+						name = ABA_htm_steppe_dev
+						duration = -1
+					}
+				}
+			}
 		}
 	}
 
@@ -2157,33 +2363,35 @@ cossack_fifth_group = {
 		required_missions = {
 			htm_urbanize
 		}
+
 		provinces_to_highlight = { 
 			owned_by = ROOT
-			NOT = { base_manpower = 10 }
+			NOT = { base_manpower = 5 }
 		}
+
 		trigger = { 
 			num_of_owned_provinces_with = {
 			value = 5
-			base_manpower = 10
+			base_manpower = 5
 			}
 		}
+
 		effect = { 
 			add_country_modifier = {
-					name = ABA_htm_new_horse_production
-					duration = -1
+				name = ABA_htm_new_horse_production
+				duration = -1
 			}
 			282 = {
-			 add_building = barracks
+				add_or_upgrade_manpower_building = yes
 			}
 			1943 = {
-			 add_building = barracks
+				add_or_upgrade_manpower_building = yes
 			}
 			5013 = {
-			 add_building = barracks
-
+			 	add_or_upgrade_manpower_building = yes
 			}
 			283 = {
-			 add_building = barracks
+				add_or_upgrade_manpower_building = yes
 			}
 		}
 	}
@@ -2201,9 +2409,37 @@ cossack_fifth_group = {
 			government_rank = 3
 		}
 		effect = { 
+			add_army_tradition = 10
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-					name = ABA_htm_regimental_rule
-					duration = -1
+				name = ABA_htm_regimental_rule
+				duration = -1
+			}
+			if = {
+				limit = {
+					all_owned_province = {
+						has_road_building_trigger = yes
+					}
+				}
+				custom_tooltip = JLR_ROAD_BONUS
+			}
+			else = {
+				custom_tooltip = JLR_ROAD_BONUS_NO
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						all_owned_province = {
+							has_road_building_trigger = yes
+						}
+					}
+					every_owned_province = {
+						limit = {
+							has_road_building_trigger = yes
+						}
+						add_base_tax = 1
+					}
+				}
 			}
 		}
 	}

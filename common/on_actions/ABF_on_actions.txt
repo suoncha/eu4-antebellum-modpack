@@ -1,0 +1,277 @@
+on_new_monarch = {
+	if = {
+		limit = {
+			has_country_flag = abf_legacy_of_mieszko_personality
+		}
+		add_ruler_personality = abf_mieszko_descendant_personality
+	}
+	if = {
+		limit = {
+			has_country_flag = abf_heirs_of_rus_personality
+		}
+		add_ruler_personality = abf_heir_of_rus_personality
+	}
+	if = {
+		limit = {
+			has_country_flag = ABA_bul_simeon_trait
+		}
+		add_ruler_personality = abf_legacy_of_simeon_personality
+	}
+}
+
+on_general_recruited = {
+	if = {
+		limit = {
+			has_country_flag = abf_pol_tribal_leaders_loyalty
+		}
+		add_estate_loyalty = { estate = estate_nobles loyalty = 2.5 }
+	}
+}
+
+on_barrage = { #ROOT - barraging country, FROM - barraged province 
+	ROOT = {
+		if = {
+			limit = {
+				has_country_flag = ABA_tcr_barrage_buff
+			}
+			add_mil_power = 15
+		}
+	}
+}
+
+on_cossack_raised = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = aba_htm_cossack_raised_loyalty
+			}
+		}
+		add_estate_loyalty = { estate = estate_cossacks loyalty = 2.5 }
+	}
+}
+
+on_province_culture_converted = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = ABA_pol_orthodox_culture_convert
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = ABA_pol_orthodox_converted_culture_bonus
+				}
+				culture = aba_polish_eastern
+			}
+			set_province_flag = ABA_pol_orthodox_converted_culture_bonus
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = ABA_bul_culture_convert_bonus
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = ABA_bul_culture_convert_prov_bonus
+				}
+				culture = bulgarian
+			}
+			set_province_flag = ABA_pol_orthodox_converted_culture_prov_bonus
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+on_reform_enacted = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = aba_htm_goverment_reform
+			}
+		}
+		change_government_reform_progress = 25
+	}
+}
+
+on_battle_won_country = {
+	if = {
+		limit = {
+			has_country_flag = ABF_pol_cossack_loyalty_bonus
+			num_of_cossacks = 20
+		}
+		add_estate_loyalty = {
+			estate = estate_cossacks
+			loyalty = 3
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = ABA_TCR_winning_battles_movement
+		}
+		remove_country_modifier = rmg_winning_battle
+		add_country_modifier = {
+			name = rmg_winning_battle
+			duration = 30
+		}
+	}
+}
+
+on_tech_taken = {
+	if = {
+		limit = {
+			has_country_flag = ABF_pol_patronage
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+}
+
+on_dip_development = {
+	if = {
+		limit = {
+			owner = {
+				has_country_modifier = ABA_pol_orthodox_blood_and_iron
+			}
+			trade_goods = iron
+		}
+		random_list = { 
+			25 = { add_base_production = 1 } 
+			75 = { } 
+		}
+	}
+	if = { 
+		limit = { 
+			trade_goods = grain
+			trade_goods =  wine
+			owner = { has_country_flag = ABA_htm_mills } 
+		}
+		random_list = { 
+			20 = { add_base_production = 1 } 
+			80 = { } 
+		}
+	}
+	if = {
+		limit = {
+			culture_group = south_slavic
+			owner = { 
+				has_country_flag = ABA_bul_developing_south_slavic
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = ABA_ZUN_rajput_accomodated
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}
+}
+
+on_adm_development = {
+	if = {
+		limit = {
+			culture_group = south_slavic
+			owner = { 
+				has_country_flag = ABA_bul_developing_south_slavic
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = ABA_ZUN_rajput_accomodated
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}
+}
+
+on_mil_development = {
+	if = {
+		limit = {
+			culture_group = south_slavic
+			owner = { 
+				has_country_flag = ABA_bul_developing_south_slavic
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = ABA_ZUN_rajput_accomodated
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}
+	if = {
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}
+}

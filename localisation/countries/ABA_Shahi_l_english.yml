@@ -45,14 +45,7 @@ ABA_shh_staple_ports_of_india: "Staple Port of India"
 ################################## Mission Tooltips ##################################
 ABA_SHH_great_trunk_road_tt: "\nThe §GGreat Trunk Road§! will be revived, granting bonsues to the provinces it runs through!\n"
 ABA_shh_staple_ports_of_india_tt: "\nWe establish §Gstaple ports§! for trading with foreigners across the coast of India!\n"
-#Hetmanate
-ABA_HTM_hussar_spawn_tt: "\nFive §GWinged Hussars§! will be raised in our Capital and every §G10 years§! we will recieve new regiments of winged hussars!\n"
-#Zun
-ABA_ZNN_india_tt: "\nWe will abandon our ambitions in Persia to focus on the rich and fertile lands of §GHindustans§!!\n"
-ABA_ZNN_persia_tt: "\nWe will abandon our ambitions in the East to reclaim the long lost glory of the §GPersian Empire§!!\n"
-ABA_ZNN_global_purification_tt: "\nWe will begin a campaign of §RGlobal Purification§! to spread the §JZunist§! faith across our the World!\n"
-ABA_ZUN_UNLOCKED_PATH: "\nThis mission can be unlocked by completeing the §JBeyond The Horizon§! mission\n"
-ABA_zun_shift_west_tt: "\nWe will turn our attention §JWestward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
-ABA_zun_shift_east_tt: "\nWe will turn our attention §JEastward§!, but sacrifice the rewards of any §Runcompleteted missions on this path...§!\n"
-ABA_ZUN_sahar_bahar_tt: "\nWe will be able to §Yrestore§! §GSah-Bahar - The Temple of the Kings§! in §YGhanzi§!!\n"
 
+################################## Country Renames ##################################
+aba_SHH_shahistan: "Shahistan"
+aba_SHH_shahistan_ADJ: "Shahistani"

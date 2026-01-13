@@ -1,0 +1,62 @@
+abf_mieszko_descendant_personality = {
+	allow = {
+	}
+	core_creation = -0.1
+	papal_influence = 5
+	num_accepted_cultures = 2
+	nation_designer_cost = 1000
+	
+	easy_war_chance_multiplier = 1000
+	war_chance_multiplier = 1000
+	enemy_strength_multiplier = 0.5
+	building_budget_multiplier = 2
+	wants_land = yes
+	
+	chance = {
+		modifier = {
+			factor = -2
+		}
+	}
+}
+
+abf_heir_of_rus_personality = {
+	allow = {
+	}
+	core_creation = -0.1
+	yearly_patriarch_authority = 0.05
+	warscore_cost_vs_other_religion = -0.10
+	nation_designer_cost = 1000
+	
+	easy_war_chance_multiplier = 1000
+	war_chance_multiplier = 1000
+	enemy_strength_multiplier = 0.5
+	building_budget_multiplier = 2
+	wants_land = yes
+	
+	chance = {
+		modifier = {
+			factor = -2
+		}
+	}
+}
+
+abf_legacy_of_simeon_personality = {
+	allow = {
+	}
+	idea_cost = -0.05
+	governing_capacity_modifier = 0.1
+	yearly_patriarch_authority = 0.05
+	nation_designer_cost = 1000
+	
+	easy_war_chance_multiplier = 1000
+	war_chance_multiplier = 1000
+	enemy_strength_multiplier = 0.5
+	building_budget_multiplier = 2
+	wants_land = yes
+	
+	chance = {
+		modifier = {
+			factor = -2
+		}
+	}
+}
