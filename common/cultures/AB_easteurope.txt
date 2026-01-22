@@ -2542,37 +2542,52 @@ byzantine = {
 	goths = {
 		primary = FEO
 		dynasty_names = { 
-			"of Gothia"
+			"of Gothia" "Amaling" "Aþawulfing" "Balþing" "Ansiling" "Gainobalþing" "Winiþaring" "Adalgaring"
+			"Badwiling" "Aiwareiking" "Þiudawulfing" "Airmanareiking" "Randobalþing" "Wultulfing" "Þiudabalþing" "Þrafstiling" "Þrasamunding" "Þrasareiking" 
+			"Dagamersing" "Agiling" "Airmanagilding" "Alafunsing" "Alareiking" "Witjareiking" "Albireþing" "Friþureiking" "Swartsing" "Liuvageising" "Gutawinsing"
+			"Hunireiking" "Swinþiling" "Anagasting" "Gaujareiking" "Sigireiking" "Audamunding" "Austrowulfing" "Dagalaifing" "Konigasting" "Þiudareiking" "Hrabning"
+			"Gaisareiking"
+			# Gothicized Greek names
+			"Kaumnenus" "Angilus" "Keilikus" "Þaiaudaurokanus"
+			# some Gothicized Turkic names
+			"Saruxaning" "Karamaning" "Zanging"
 		}
 		male_names = {
-			Alexios Ioannes Manuel David Basileios Skantarios Andronikos Michael Georgios Aineias 
-			Aristoteles Bartholomaios Chrysanthos Diogenes Dionysos Eirenaios Elpidios Gregorios Hektor 
-			Iason Iosephos Kastor Kreon Matthaios Nestor Nikolaos Nikomedes Orestes Palaemon Pavlos 
-			Pelagios Alexandros
-			Philemon Philippos Prokopios Stefanos Theodoros Timotheos Ambrosios Petros Herakles Hermes 
-			Hippolytos Hypatios Iakobos Jacob Ignatios Ignatius Innokentios Ioannes John Ioannikios 
-			Iordanes Ioseph Joseph Isaakios Isaias Isidoros Ioulianos Julian Ioustinianos Justinian 
-			Ioustinos Justin Kaisarios Caesar
-			Kallinikos Kallistos Komitas Konstantinos Constantine Konstantios Constantius Konstas Constans 
-			Kosmas Cosmas Kyriakos Kyrillos Cyril Kyros Laurentios Laurence Lazaros Leon Leo Leontios 
-			Leontius Loukas Makarios Manuel Markos Marcus
-			Matthaios Matthew Maurikios Maximos Maximus Megistos Magnus Meletios Methodios Michael Michael 
-			Narses Neophytos Nikephoros Niketas Nikodemos Nikolaos Nicholas Niphon Orestes Pamphilios 
-			Pankratios Pantoleon Paschalis
-			Pavlos Paul Pelagios Pelagius Petros Peter Philaretos Philippos Philip Philotheos Phokas 
-			Photios Polykarpos Porphyrios Prokopios Procopius Pyrros Raphail Romanos Roman Sabas Samuel 
-			Samuel Serapion Sebastianos Sebastian Sergios Sergius Stephanos Stephen
-			Staurakios Symeon Simon Symmachos Symmachus Theocharistos Theodoros Theodore Theodosios 
-			Theodosios Theodotos Theodat Theodoulos Theoktistos Theophanes Theophilos Theophylaktos Thomas 
-			Thomas Tiberios Tiberius Traianos Trajan
-			Timotheos Tryphon Valerios Valerius Zacharias Zenobios Zenon
+			Agibrands Agila Agilmunþs Agiwulfs Agiþius Airmanagild Airmanareiks Airþaweihs Aiwareiks AiwþareiksAizagais Aizamereis Aizareiks Aizawulfs Aiþika Aiþiwulfs Alagais 
+			Alagild Alamanna Alareiks Alaweis Alaþius Albeis Albila Albireiks Albireþs Amalareiks Anagasts Ansibairhts Ansihilms Ansila Ansireþs Ansiwalds Ansiwins Arbogasts 
+			Argimunþs Arugands Arugeisls Arumers Aruswinþs Askalks Audagais Audamunds Audawakrs Audawins Audawulfs Audaþius Austrowulfs Aþalabairhts Aþalabalþs Aþalabrands 
+			Aþalafriþus Aþalagais Aþalagar AþalahardusAþalaharjis Aþalahilms Aþalamanna Aþalamers Aþalawins Aþalawulfs Aþanagild Aþanareiks Aþawulfs Baduharjis Badwila 
+			Bairahardus Bairamoþs Bairaþius Bairhtafriþus Bairika Bairnuhardus Balþabairhts Balþamers  Balþareiks Balþareþs Batwins Berimunþs Brandawulfs Dagabairhts 
+			Dagaharjis Dagalaifs Dagamers Dagawalds Dagila Dagisþius Egika Egilmers Fafila Frauja Fraujila Friþugairns Friþureiks Froia Frumagild Frumareiks Frumareþs
+			Fulkabairhts Gailamereis Gaizafriþus Gaizahardus Gaizalaifs Gaizalaiks Gaizamers Gaizareiks Gaizawalds Gaizaweig Gaizawins Gaizawulfs Gaujaharjis Gaujareiks 
+			Gauts Geila Genobalþs Geislamers Geislamereis Gibareiks Gibawulþus GibikaGudagibans Gudahardus Gudareiks Gunþibalþs Gunþimereis Gutawins Haifstawulfs Harjabrands 
+			Harjafidails Harjafriþus Harjawulfs Harjaweig Hildibadus Hildibalþs Hildireiks Hlûdaharjis Hlûdaweig Hroþabairhts Hroþireiks Hunibairhts Hunifriþus Hunila 
+			Hunimunþs Hunireiks Ibrawulfs Ingild Juggareiks Kinþila Kniwa Konigasts Konimunds Liuba Liubageis Liubagild Liudibairhts Liudibrands Liudigais Liudiwulfs 
+			Liubeis Ludawulfs Maloreiks Naudigais Naurþrabairhts Naurþramanna Oþalabairhts Oþalafriþus Oþalareiks Randobalþs Redagais Reikahardus Reikareþs Reikaswinþs 
+			Reikawulfs Reikjamereis Sabbas Segga Sigifriþus Sigimers Siginanþs Sigireiks Kindaswinþs Sigiswulþus Sunjafriþus Sunna Swerila Swinþila Totila Tulga Uftaharjis 
+			Uftila Wagrila Walahrafns Walamers Walhamereis Wamba Wandila Weitimers Widugauja Wiljahilms Wiljareiks Wingureiks Wisibadus Wisuwalds Witjagais Witjareiks Wulfareiks 
+			Wulfila Þaija Þaurismoþs Þiudabalþs Þiudabrands Þiudagais Þiudageisls Þiudahaifsts Þiudaharjis Þiudahaþus Þiudahilms Þiudahrabns Þiudalaifs Þiudamereis Þiudamers 
+			Þiudareiks Þiudawulfs Þiudeis  Þrafstila Þrasamunds Þrasareiks
+			# Greek/Christian imports
+			Aiþa Manuel Xrwsaustaumus Xristufaurus Ailaiwþerjus Herakljus Þaiaugnostus Pantailaiema Þaiaudausjus Staifanus Niketas Mixael Kwrillus Dawiþ Ambrwsjus
+			Hailladjus Aiwlaugjus Aiwdaukimus Ailpidjus Agaþaggailus Saulaumo Sokrates Gregaurius Gaiwargius Samuel Dauruþaius Filippus Paúrfirjus Áiþþius Þaddaius 
+			Elias Staifanus Laiwanidas Demetrjus Maiþaudjus Timauþaius Andraias Aiwgainjus Aiwsaibjus Damjanus Audwssaius Flâwjus Kâjus Herâkleitus Iûljus Mârkus Antonjus
+			Mârteinus Hadriânus Anastasjus Nauel
+			# Turkic Loans
+			Arslan Atakan Auzan Aurhan Auguz Gauxan Kagataï Saifilaï 
 		}
 		female_names = {
-			Agape Photine Sotiria Leontia Margarita Margaret Maria Maria Markia Marcia Martha Martha Melissa Melisende Nikarete 
-			Nikoletta Nonna Parthena Pavlina Paulina Pelagia Petronia Petronia Philippa Philippa Phyllis 
-			Pulcheria Pulcheria Rhodanthe Romane Romylia Sergia Sergia Sibylla Sibylla
-			Simonis Sophia Sophia Stephania Stephania Thekla Theochariste Theodora Theodora Theodosia 
-			Theodosia Theognosia Theoktiste Theophano Thomais Valeria Valeria Viviana Viviana Xene Zenobia 
+			Aileisabaiþ Airmanalinda Aiuwa Aiwwa Aizaliubo Amalabairga Amalafriþa Amalasunþa Amalaswinþa Anna Ansa Anselbairga Ansia Ansigardi Ansihilma Audafleda Austraguto 
+			Aþala Aþalabairga Aþalabairhta Aþalagunþi Aþalahaidus Aþalahaiþi Aþalahildi Aþalalinþi Aþalamodi Aþalaruna Aþalaxeisa Aþalaþruþi Aþawulfa Bado Brunhilda 
+			Brunihildi Egilona Friþunanþa Gairbairga Gaisahildi Gaisaþruþi Gaizaþrûþs Gaujaswinþa Geislatruda Glismoda Godaliuva Greimahildi Gudagiba Gunþiruna Gunþibairga 
+			Guntruda Gunþiruna Hildibairhta Hildigardi Hildigards Hildigunþi Hildiko Hildiruna Hildiwara Hildiþruþi Hlûdahilda Hrogilo Hroþaswinþa Hunibairhta Ibragardi 
+			Ibragunþs Ibrahildi Imma Ingunþs Krimhilda Liubaguta Liudibairga Liudigardi Liudiwina Mahtihilds Mahtiswinþa Marikreitus Marja Marþa Matasuntþa Menia Oþalareika Ragnahilda 
+			Raibaikka Reikabairga Rodelinda Rosamunda Rotruda Rumetruda Sarra Sigiruna Sigizaruna Sunigilda Sunilda Tilariss Wiljahildi Þiudabairga Þiudagardi Þiudagunþi Þiudaguta Þiudaguto 
+			Þiudahildi Þiudalinda Þiudalinþi Þiudamodi Þiudananþa Þiudarada Þiudaruna 
+			# Greek/Christian imports
+			Fwba Roksana Mailodja Aikatarina Kandaka Eirena Iudiþ Maria Wikturja Jûlia Aleiwia Qainaiwaira Anna Aïlaina Sena Paraskaiwa Râxel
+			# Turkic Loans
+			Auzlaim Aïla Sejlan Terxen Saihnaz Jasar Jeildeiz Zaihra Kausaim Sairap Hwma
 		}
 	}
 	dynasty_names = { 
