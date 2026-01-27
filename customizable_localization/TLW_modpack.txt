@@ -153,3 +153,39 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = Modpack_has_OE
+	random = no
+
+	text = {
+		localisation_key = Modpack_OE_YES
+		trigger = {
+			is_mod_active = "东正教强化 战争前夜兼容版 Orthodox enhancement Ante Bellum Compatible Version"
+		}
+	}
+	text = {
+		localisation_key = Modpack_OE_NO
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = Modpack_has_OEE
+	random = no
+
+	text = {
+		localisation_key = Modpack_OEE_YES
+		trigger = {
+			is_mod_active = "Alexiad: Komnenos' Glorious Finale (English Translation)"
+		}
+	}
+	text = {
+		localisation_key = Modpack_OEE_NO
+		trigger = {
+			always = yes
+		}
+	}
+}
