@@ -1,6 +1,6 @@
 ﻿l_english:
  tlw_start.1.t: "Ante Bellum - Ultimate Modpack Checklist"
- tlw_start.1.d: "This modpack already have these submods integrated, so if they are enabled, you need to turn them off:\n[Modpack_has_MBO]\n[Modpack_has_ABF]\n[Modpack_has_ABMP]\n---\n[Modpack_Version_TLW]\n---\nThis mod can also be played with ABE family by subscribing to the following mods:\n[Modpack_has_ABE]\n[Modpack_has_ABEE]\n[Modpack_has_ABEC]\n---\n[Modpack_Version_ABEC]"
+ tlw_start.1.d: "This modpack already have these submods integrated, so if they are enabled, you need to turn them off:\n[Modpack_has_MBO] (OPTIONAL)\n[Modpack_has_ABF]\n[Modpack_has_ABMP]\n---\n[Modpack_Version_TLW]\n---\nThis mod can also be played with ABE family by subscribing to the following mods:\n[Modpack_has_ABE]\n[Modpack_has_ABEE]\n[Modpack_has_ABEC]\n££Orthodox Enhancement: Eternal Radiance of Oikoumene (OPTIONAL):\n[Modpack_has_OE]\n[Modpack_has_OEE]\n---\n[Modpack_Version_ABEC]"
  tlw_start.1.a: "I understand"
 
 ### MODS ###
@@ -16,3 +16,7 @@
  Modpack_ABEE_NO: "£no£ Ante Bellum Expanded (English Translation)"
  Modpack_ABEC_YES: "£yes£ Ante Bellum Expanded - The Lost World Compatch"
  Modpack_ABEC_NO: "£no£ Ante Bellum Expanded - The Lost World Compatch"
+ Modpack_OE_YES: "£yes£ Orthodox enhancement - Ante Bellum Compatible Version"
+ Modpack_OE_NO: "£no£ Orthodox enhancement - Ante Bellum Compatible Version"
+ Modpack_OEE_YES: "£yes£ Alexiad: Komnenos' Glorious Finale (English Translation)"
+ Modpack_OEE_NO: "£no£ Alexiad: Komnenos' Glorious Finale (English Translation)"
