@@ -182,6 +182,15 @@ ab_building_tax_effect = {
             duration = -1
         }
     }
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ab_fra_church_upgrade
+			}
+		}
+		add_base_tax = 1
+		add_base_manpower = 1
+	}
 	# TLW [[[
 	if = {
 		limit = {
@@ -300,6 +309,15 @@ ab_removing_tax_effect = {
         }
         remove_province_modifier = sel_mosque_renovation
     }
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = ab_fra_church_upgrade
+			}
+		}
+		add_base_tax = -1
+		add_base_manpower = -1
+	}
 	# TLW [[[
 	if = {
 		limit = {

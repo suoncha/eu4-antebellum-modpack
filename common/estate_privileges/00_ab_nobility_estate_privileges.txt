@@ -23,7 +23,11 @@ estate_nobles_french_strong_duchies = {
 				is_subject_of_type = client_march
 				is_subject_of_type = client_vassal
 				is_subject_of_type = personal_union
+				is_subject_of_type = incorporated_vassal
+				is_subject_of_type = integrated_personal_union
 			}
+			capital_scope = { region = france_region }
+			culture_group = french
 		}
 	}
 	can_select = {
@@ -39,6 +43,8 @@ estate_nobles_french_strong_duchies = {
 						is_subject_of_type = client_march
 						is_subject_of_type = client_vassal
 						is_subject_of_type = personal_union
+						is_subject_of_type = incorporated_vassal
+						is_subject_of_type = integrated_personal_union
 					}
 				}
 			}
@@ -50,6 +56,12 @@ estate_nobles_french_strong_duchies = {
 	benefits = {
 		diplomatic_upkeep = 3
 		reduced_liberty_desire_on_same_continent = 10
+	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = buffed_strong_duchies }
+		modifier = {
+			nobles_loyalty_modifier = 0.05
+		}
 	}
 	ai_will_do = {
 		# AB [[[
@@ -91,12 +103,13 @@ estate_nobles_strong_duchies = {
 	is_valid = {
 		any_subject_country = {
 			OR = {
-				is_subject_of_type = appanage
 				is_subject_of_type = vassal
 				is_subject_of_type = client_vassal
 				is_subject_of_type = march
 				is_subject_of_type = client_march
 				is_subject_of_type = personal_union
+				is_subject_of_type = incorporated_vassal
+				is_subject_of_type = integrated_personal_union
 			}
 		}
 		NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
@@ -114,6 +127,8 @@ estate_nobles_strong_duchies = {
 						is_subject_of_type = march
 						is_subject_of_type = client_march
 						is_subject_of_type = personal_union
+					is_subject_of_type = incorporated_vassal
+					is_subject_of_type = integrated_personal_union
 					}
 				}
 			}
@@ -134,6 +149,27 @@ estate_nobles_strong_duchies = {
 		# ]]]
 	}
 	penalties = {
+	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = buffed_strong_duchies }
+		modifier = {
+			nobles_loyalty_modifier = 0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = hun_upgrade_strong_duchies }
+		modifier = { 	vassal_forcelimit_bonus = 0.5 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = hab_upgraded_strong_duchies }
+		modifier = { 
+			vassal_forcelimit_bonus = 0.25
+			vassal_income = 0.1
+		}
 	}
 	benefits = {
 		diplomatic_upkeep = 2

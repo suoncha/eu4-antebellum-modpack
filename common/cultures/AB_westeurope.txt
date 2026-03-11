@@ -4079,12 +4079,6 @@ french	= {
 	wallonian = {
 		primary = HAI
 	}
-	Outremer = {
-		primary = OTR
-	}
-	Anglois = {
-		primary = ANG
-	}
 	breton_new = {
 		primary = BRI
 		dynasty_names = {
@@ -4170,6 +4164,30 @@ french	= {
 			Tandrec Tanetbiu Tanetlowen Tanguistl Tancostyla Tedvil Tephaine Thomine Tibourge Tiburge
 			Trifine Tristana Uriell Seva Perenn Meonre Ilcum Guigoëdon Drichglur Berthildis Argantmoet
 		}
+	}
+	Outremer = {
+		primary = OTR
+	}
+	Anglois = {
+		primary = ANG
+	}
+	pied_noir_culture = {
+		primary = ALG
+	}
+	francatalan = {
+		primary = CAT
+	}
+	romandais = {
+		primary = HLV
+	}
+	batavois = {
+		primary = NED
+	}
+	rhenois = {
+		primary = RHL
+	}
+	transalpins = {
+		primary = ITA
 	}
 	french_culture = {
 		primary = FRA

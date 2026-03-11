@@ -209,6 +209,8 @@ monarchy = {
 				prr_pruthenian_warchiefdom
 				est_council_of_chiefs
 				krz_tsardom_of_krievzeme
+				# France
+				fraelective
 				# TLW [[[
 				rom_grand_diocese
 				byzromanempire
@@ -1322,6 +1324,10 @@ republic = {
 				ab_tuscan_peasants_reform
 				rhl_confederation_reform
 				ab_roman_republic
+				# France
+				frarepublic
+				fragrandrepublic
+				fradictatorialconsulship
 				# ]]]
 				# TLW [[[
 				rom_diocese

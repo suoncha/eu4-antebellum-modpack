@@ -275,6 +275,14 @@ estate_nobles_nobility_primacy = {
 			army_tradition_decay = -0.01
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_country_flag = AB_FRA_land_rights_buff }
+		modifier = {
+			max_absolutism = 5
+			max_absolutism_effect = 0.10
+			nobles_loyalty_modifier = 0.05
+		}
+	}
 	# ]]]
 	# TLW [[[
 	conditional_modifier = {
