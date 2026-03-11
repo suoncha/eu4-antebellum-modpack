@@ -2956,7 +2956,7 @@ commandant = {
             }
         }
         modifier = { 
-            army_tradition = 0.2
+            army_tradition = 0.1
         }
     }
 	# ]]]
