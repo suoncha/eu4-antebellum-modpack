@@ -1,3 +1,15 @@
+
+on_startup = {
+	if = {
+		limit = {
+			ai = no
+		}
+		country_event = {
+			id = ABA_start.0
+		}
+	}
+}
+
 on_new_monarch = {
 	if = {
 		limit = {
@@ -16,6 +28,12 @@ on_new_monarch = {
 			has_country_flag = ABA_bul_simeon_trait
 		}
 		add_ruler_personality = abf_legacy_of_simeon_personality
+	}
+	if = {
+		limit = {
+			has_country_flag = ABA_lva_conquerer_of_slavs
+		}
+		add_ruler_personality = abf_lva_vanquisher_of_slavs
 	}
 }
 
@@ -122,6 +140,18 @@ on_battle_won_country = {
 			name = rmg_winning_battle
 			duration = 30
 		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_mission = lva_sword_of_perkunas
+				has_mission = lva_thunderer
+			}
+			FROM = {
+				religion_group = christian
+			}
+		}
+		change_variable = { which = ABF_num_of_won_battles_against_christians value = 1 }
 	}
 }
 

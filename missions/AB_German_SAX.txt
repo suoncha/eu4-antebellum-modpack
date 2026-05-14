@@ -1326,7 +1326,9 @@ sax_fifth_group = {
 			set_country_flag = aba_ger_russlanddeutsche_spread
 			set_country_flag = aba_ger_wolhynien_spread
 			custom_tooltip = BRA_OSTSIEDLUNG
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_weichseldeutsche_tooltip_2
 		}
 	}

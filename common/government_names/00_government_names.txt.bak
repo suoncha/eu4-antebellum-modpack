@@ -846,30 +846,6 @@ iberian_kingdom = {
 	}
 }
 
-iberian_kingdom_most_catholic = {
-	rank = {
-		1 = DUCHY
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = CAT_DUQUE
-		2 = CAT_REY
-		3 = CAT_EMPERADOR
-	}
-
-	ruler_female = {
-		1 = CAT_DUQUESA
-		2 = CAT_REINA
-		3 = CAT_EMPERATRIZ
-	}
-
-	trigger = {
-		has_country_flag = ibe_most_catholic_monarchs
-	}
-}
-
 magyar_horde = {
 	rank = {
 		1 = HORDE
@@ -1298,7 +1274,10 @@ islamic_caliphate = {
 	}
 
 	trigger = {
-		has_country_modifier = unified_islam
+		OR = {
+			has_country_modifier = unified_islam
+			has_country_modifier = hsn_ayyubid_caliphate
+		}
 	}
 }
 

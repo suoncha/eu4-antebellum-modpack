@@ -22,6 +22,7 @@ country_event = {
 		change_tag = GLL
 		swap_non_generic_missions = yes
 		swap_free_idea_group = yes
+		custom_tooltip = AB_EMPTY
 		custom_tooltip = BRETON_BECOMES_GALLIC
 		change_primary_culture = Gallic
 		set_country_flag = aba_gallic_culture_spread # Used to spread Gallic culture in cores
@@ -30,6 +31,7 @@ country_event = {
 			new_culture = Gallic
 			old_culture_1 = breton
 		}
+		custom_tooltip = AB_EMPTY
 		hidden_effect = {
 			complete_mission = bri_restoration
 			ROOT = {

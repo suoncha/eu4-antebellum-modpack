@@ -8,6 +8,8 @@ abf_heir_of_rus_personality: "Heir of Rus'"
 abf_heir_of_rus_personality_desc: "We are the heirs of the great Rus' legacy, carrying forward the traditions and values of our ancestors. Our lineage is steeped in the rich history of the Kievan Rus', and we are committed to preserving and enhancing this heritage. As rulers, we strive to embody the strength, wisdom, and cultural depth that defined our forebears. We are dedicated to fostering unity among our people and promoting the prosperity of our nation, honoring the legacy of Rus' in all our endeavors."
 abf_legacy_of_simeon_personality: "Legacy of Simeon The Great"
 abf_legacy_of_simeon_personality_desc: "We are the heirs of the legacy of Simeon the Great, a shining example of leadership from a bygone era. We strive to emulate his literary, ecclesiastical, and martial contributions to Bulgarian history. As the sucessors to the great empire he forged, we find the impact of his legacy inescapable, and our actions are guided by the invisible hand of his influence."
+abf_lva_vanquisher_of_slavs: "Vanquisher Of The Slavs"
+abf_lva_vanquisher_of_slavs: "We have done what many thought impossible: conquer the East. We fought the wiley Cossacks of the Wild Fields, the wealthy merchants of Novgorod, the Patriarch of Kiev, and the bickering princes of the interior. We have proven ourselves to be the true rulers of Krievzeme, and no one can take our new birthright away from us. For just as we vanquished the Slavs, so too shall we vanquish all those who challenge our rule. "
 
 
 ################################## Tooltips ##################################
@@ -16,4 +18,5 @@ abf_legacy_of_simeon_personality_desc: "We are the heirs of the legacy of Simeon
 ABF_LEGACY_OF_MIESZKO_PERK_TT: "Every future ruler will gain the trait §YDescendant of Mieszko§!, giving §G-10.0%§! Core Creation Cost ,§G+5.0§! Yearly Papal Influence, and §G+2§! Number of Accepted Cultures!"
 ABF_HEIRS_OF_RUS_PERK_TT: "Every future ruler will gain the trait §YHeir of Rus'§!, giving §G-5.0%§! Core Creation Cost, §G+5.0§! Yearly Patriarch Authority, and §G-10.0%§! Warscore Cost vs Other Religions!"
 ABA_BUL_SIMEON_TRAIT_TT: "Every future ruler will gain the trait §YLegacy of Simeon the Great§!, giving §G-5.0%§! Idea Cost, §G+5.0§! Yearly Patriarch Authority, and §G+10.0%§! Governing Capacity!"
+ABA_LVA_RULER_TRAIT_TT: "Every future ruler will gain the trait §YVanquisher Of The Slavs§!, giving §G+10.0%§! Governing Capacity!, §G+10.0%§! Manpower in Provinces Of Our Culture, and §G-25.0%§! Culture Conversion Cost, and §G-10.0%§! Culture Conversion Time!"
 

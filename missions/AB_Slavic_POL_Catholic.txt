@@ -2856,11 +2856,11 @@ pol_catholic_fourth = {
 			num_of_cavalry = 40
 		}
 		effect = { 
-			custom_tooltip = ABA_POLISH_HUSSARS_TT
 			add_country_modifier = {
 				name = aba_pol_expansion_of_hussars
 				duration = -1
 			}
+			custom_tooltip = ABA_POLISH_HUSSARS_TT
 		}
 
 	}

@@ -273,8 +273,6 @@ ab_brandenburg_first = {
 		
 		effect = {
 			set_country_flag = can_release_polish_union
-			set_country_flag = aba_ger_weichseldeutsche_spread
-			custom_tooltip = GER_weichseldeutsche_tooltip_2
 			custom_tooltip = LIT_POLAND
 			tooltip = {
 				add_country_modifier = {
@@ -283,6 +281,9 @@ ab_brandenburg_first = {
 					desc = litc_crown_poland
 				}
 			}
+			set_country_flag = aba_ger_weichseldeutsche_spread
+			custom_tooltip = GER_weichseldeutsche_tooltip_2
+			custom_tooltip = AB_EMPTY
 			ruthenia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -327,12 +328,12 @@ ab_prussia_first = {
 			add_army_professionalism = 0.1
 			set_country_flag = bra_expansionist_zealotry_buff
 			custom_tooltip = SWA_HOLY_WAR_ESTATE_BUFF
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
 			set_country_flag = wolgadeutsche_culture_spread
 			set_country_flag = schwarzmeerdeutsche_culture_spread
 			set_country_flag = aba_ger_russlanddeutsche_spread
 			set_country_flag = aba_ger_wolhynien_spread
-			
 			ruthenia_region = {
 				limit = {
 					NOT = { is_core = ROOT}

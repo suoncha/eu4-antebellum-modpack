@@ -82,17 +82,6 @@ ab_building_trade_effect = {
 		}
 		add_base_production = 1
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = arb_dhf_building_trade
-			}
-		}
-		add_province_modifier = {
-			name = arb_trade_grant_production
-			duration = -1
-		}
-	}
 }
 
 ab_removing_trade_effect = {
@@ -103,12 +92,6 @@ ab_removing_trade_effect = {
 			}
 		}
 		add_base_production = -1
-	}
-	if = {
-		limit = {
-			has_province_modifier = arb_trade_grant_production
-		}
-		remove_province_modifier = arb_trade_grant_production
 	}
 }
 
@@ -153,26 +136,6 @@ ab_building_tax_effect = {
 			duration = -1
 		}
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = sel_tax_buff
-			}
-		}
-		add_province_modifier = {
-			name = sel_mosque_renovation
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = ab_fra_church_upgrade
-			}
-		}
-		add_base_tax = 1
-		add_base_manpower = 1
-	}
 }
 
 ab_removing_tax_effect = {
@@ -194,21 +157,6 @@ ab_removing_tax_effect = {
 		}
 		remove_province_modifier = pol_slavic_holy_grounds
 	}
-		if = {
-		limit = {
-			has_province_modifier = sel_mosque_renovation
-		}
-		remove_province_modifier = sel_mosque_renovation
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = ab_fra_church_upgrade
-			}
-		}
-		add_base_tax = -1
-		add_base_manpower = -1
-	}
 	#ABF
 	if = {
 		limit = {
@@ -227,39 +175,6 @@ ab_building_production_effect = {
 		}
 		add_base_production = 1
 	}
-if = {
-		limit = {
-			FROM = {
-				has_country_flag = sel_build_production
-			}
-		}
-		add_province_modifier = {
-			name = sel_production_build_prov
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = nnv_building_production
-			}
-		}
-		add_province_modifier = {
-			name = nnv_building_prod_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = arb_ybr_building_production
-			}
-		}
-		add_province_modifier = {
-			name = arb_ybr_prod_mod
-			duration = -1
-		}
-	}
 }
 
 ab_removing_production_effect = {
@@ -273,24 +188,6 @@ ab_removing_production_effect = {
 			}
 		}
 		add_base_production = -1
-	}
- if = {
-		limit = {
-			has_province_modifier = sel_production_build_prov
-		}
-		remove_province_modifier = sel_production_build_prov
-	}
-	if = {
-		limit = {
-			has_province_modifier = nnv_building_prod_mod
-		}
-		remove_province_modifier = nnv_building_prod_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = arb_ybr_prod_mod
-		}
-		remove_province_modifier = arb_ybr_prod_mod
 	}
 }
 
@@ -322,25 +219,6 @@ ab_building_courthouse_effect = {
 		}
 		add_base_tax = 1
 	}
-if = {
-		limit = {
-			FROM = {
-				has_country_flag = arb_building_courthouse
-			}
-		}
-		add_province_modifier = {
-			name = arb_egyptian_adm_mod
-			duration = -1
-		}
-	}
-	if = {
-        limit = {
-            FROM = {
-                has_country_flag = ab_france_absolutism_courthouse
-            }
-        }
-        add_absolutism = 0.2
-    }
 }
 
 ab_removing_courthouse_effect = {
@@ -369,20 +247,6 @@ ab_removing_courthouse_effect = {
 		}
 		add_base_tax = -1
 	}
-if = {
-		limit = {
-			has_province_modifier = arb_egyptian_adm_mod
-		}
-		remove_province_modifier = arb_egyptian_adm_mod
-	}
-	if = {
-        limit = {
-            FROM = {
-                has_country_flag = ab_france_absolutism_courthouse
-            }
-        }
-        add_absolutism = -0.2
-    }
 }
 
 ab_building_manpower_effect = {
@@ -672,17 +536,6 @@ ab_building_university_effect = {
 			duration = -1
 		}
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = nnv_building_uni
-			}
-		}
-		add_province_modifier = {
-			name = nnv_higher_education
-			duration = -1
-		}
-	}
 }
 
 ab_removing_university_effect = {
@@ -704,12 +557,6 @@ ab_removing_university_effect = {
 		}
 		remove_province_modifier = tus_university_buff
 	}
-if = {
-		limit = {
-			has_province_modifier = nnv_higher_education
-		}
-		remove_province_modifier = nnv_higher_education
-	}
 }
 
 ab_building_road_effect = {
@@ -724,17 +571,6 @@ ab_building_road_effect = {
 			duration = -1
 		}
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = nnv_building_roads
-			}
-		}
-		add_province_modifier = {
-			name = nnv_assimilating_population
-			duration = -1
-		}
-	}	
 }
 
 ab_removing_road_effect = {
@@ -743,12 +579,6 @@ ab_removing_road_effect = {
 			has_province_modifier = swa_imperial_builders_province
 		}
 		remove_province_modifier = swa_imperial_builders_province
-	}
-	if = {
-		limit = {
-			has_province_modifier = nnv_assimilating_population
-		}
-		remove_province_modifier = nnv_assimilating_population
 	}
 }
 

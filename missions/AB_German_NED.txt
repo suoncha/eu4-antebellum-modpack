@@ -2893,12 +2893,12 @@ ned_second_branching_baltic = {
 		}
 		
 		effect = {
-			custom_tooltip = ABA_NED_BALTIC_SETTLEMENT_TT
-			set_country_flag = aba_ned_baltic_settlement
 			add_country_modifier = {
 				name = ned_mare_nostrum
 				duration = -1
 			}
+			custom_tooltip = ABA_NED_BALTIC_SETTLEMENT_TT
+			set_country_flag = aba_ned_baltic_settlement
 		}
 	}
 }

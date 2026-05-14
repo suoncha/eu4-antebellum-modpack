@@ -1182,8 +1182,9 @@ ab_novgorod_third = {
 		
 		effect = {
 			country_event = { id = ab_novgorod.6 }
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			set_country_flag = abf_ukr_cossack_culture_spread
+			custom_tooltip = abf_ukr_cossack_culture_spread_tt
 		}
 	}
 	
@@ -1762,8 +1763,6 @@ ab_novgorod_fifth = {
 		
 		effect = {
 			custom_tooltip = RUS_FINNIC
-			custom_tooltip = abf_nov_pomor_culture_spread_tt
-			set_country_flag = abf_nov_pomor_culture_spread
 			tooltip = {
 				add_province_modifier = {
 					name = rus_finnic
@@ -1781,6 +1780,9 @@ ab_novgorod_fifth = {
 					}
 				}
 			}
+			set_country_flag = abf_nov_pomor_culture_spread
+			custom_tooltip = abf_nov_pomor_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = RUS_SWEDISH
 			hidden_effect = {
 				every_province = {

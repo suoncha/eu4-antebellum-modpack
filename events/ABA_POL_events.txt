@@ -32,6 +32,7 @@ country_event = {
 		else = { 
 			262 = { add_base_tax = 1 } 
 		}
+		custom_tooltip = AB_EMPTY
 		custom_tooltip = aba_pol_institutions_will_slowly_grow_in_262_tt
 		hidden_effect = {
 			262 = { 

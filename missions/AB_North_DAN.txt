@@ -145,6 +145,7 @@ ab_danish_first = {
 				duration = -1
 			}
 			custom_tooltip = DAN_CULTURE
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = aba_nor_norsegaelic_spread_tooltip
 			set_country_flag = aba_nor_norsegaelic_spread
 		}
@@ -2389,13 +2390,14 @@ ab_danish_fifth5 = {
 		}
 		
 		effect = {
-			set_country_flag = abf_varangians_culture_spread
-			custom_tooltip = abf_varangians_culture_spread_tt
 			add_army_professionalism = 0.05
 			add_country_modifier = {
 				name = "dan_wends"
 				duration = 7300
 			}
+			set_country_flag = abf_varangians_culture_spread
+			custom_tooltip = abf_varangians_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			43 = {
 				if = {
 					limit = {

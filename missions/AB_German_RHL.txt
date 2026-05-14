@@ -702,7 +702,9 @@ ab_rhineland_second = {
 			}
 			set_country_flag = bra_ostsiedlung_flag
 			custom_tooltip = BRA_OSTSIEDLUNG
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_weichseldeutsche_tooltip_2
 			set_country_flag = aba_ger_weichseldeutsche_spread
 			set_country_flag = wolgadeutsche_culture_spread

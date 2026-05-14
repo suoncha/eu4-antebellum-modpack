@@ -3136,9 +3136,6 @@ ab_teu_second_horde = {
 		}
 		
 		effect = {
-			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
-			set_country_flag = aba_ger_russlanddeutsche_spread
-			set_country_flag = aba_ger_wolhynien_spread
 			unlock_estate_privilege = {
 				estate_privilege = estate_nobles_integrate_rus
 			}
@@ -3147,6 +3144,10 @@ ab_teu_second_horde = {
 				name = teu_invasion_of_rus
 				duration = -1
 			}
+			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
+			set_country_flag = aba_ger_russlanddeutsche_spread
+			set_country_flag = aba_ger_wolhynien_spread
+			custom_tooltip = AB_EMPTY
 			crimea_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -3204,6 +3205,9 @@ ab_teu_second_horde = {
 				name = teu_cossack_expansion
 				duration = -1
 			}
+			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip_2
+			set_country_flag = wolgadeutsche_culture_spread
+			set_country_flag = schwarzmeerdeutsche_culture_spread
 			tartary_superregion = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -3211,9 +3215,6 @@ ab_teu_second_horde = {
 				}
 				add_permanent_claim = ROOT
 			}
-			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip_2
-			set_country_flag = wolgadeutsche_culture_spread
-			set_country_flag = schwarzmeerdeutsche_culture_spread
 		}
 	}
 

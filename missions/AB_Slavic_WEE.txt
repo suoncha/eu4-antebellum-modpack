@@ -1463,8 +1463,6 @@ wendia_fourth_group = {
 		
 		effect = {
 			add_army_tradition = 20
-			custom_tooltip = aba_wendish_culture_spread_tt
-			set_country_flag = abf_wendish_culture_spread
 			custom_tooltip = WEE_SLAVICIZATION
 			tooltip = {
 				add_province_modifier = {
@@ -1473,6 +1471,8 @@ wendia_fourth_group = {
 				}
 			}
 			set_country_flag = wee_slavicization_flag
+			custom_tooltip = aba_wendish_culture_spread_tt
+			set_country_flag = abf_wendish_culture_spread
 		}
 	}
 	

@@ -864,3 +864,11 @@ ABA_pol_orthodox_blood_and_iron = {
 	fire_damage = 0.1
 }
 
+
+#Livonia 
+aba_lva_visby_city = {
+    allowed_num_of_buildings = 1
+    allowed_num_of_manufactories = 1
+    local_development_cost = -0.10
+    local_prosperity_growth = 0.1
+}

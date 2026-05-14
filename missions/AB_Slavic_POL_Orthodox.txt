@@ -435,13 +435,6 @@ aba_slavic_pol_orthodox_first = {
 					duration = 7300
 				}
 			}
-			central_asia_region = {
-				limit = {
-					NOT = { is_core = ROOT}
-					NOT = { owned_by = ROOT}
-				}
-				add_permanent_claim = ROOT
-			}
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = RUS_CENTRAL_ASIA
 			hidden_effect = {
@@ -1225,12 +1218,13 @@ aba_slavic_pol_orthodox_second = {
 		
 		effect = {
 			country_event = { id = ab_rus.7 }
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					has_country_flag = ABF_pol_orthodox_rus_culture_spread
 				}
-				custom_tooltip = abf_ukr_cossack_culture_spread_tt
-			set_country_flag = abf_ukr_cossack_culture_spread	
+				set_country_flag = abf_ukr_cossack_culture_spread
+				custom_tooltip = abf_ukr_cossack_culture_spread_tt	
 			}
 			custom_tooltip = AB_EMPTY
 			if = {
@@ -1386,13 +1380,6 @@ aba_slavic_pol_orthodox_second = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_country_flag = ABF_pol_orthodox_rus_culture_spread
-				}	
-				custom_tooltip = aba_kharbinskiye_cossack_culture_tt
-				set_country_flag = aba_kharbinskiye_cossack_culture_spread
-			}
 			2106 = {
 				add_province_modifier = {
 					name = "russian_pacific_port"
@@ -1407,6 +1394,14 @@ aba_slavic_pol_orthodox_second = {
 				add_base_manpower = 1
 			}
 			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					has_country_flag = ABF_pol_orthodox_rus_culture_spread
+				}	
+				custom_tooltip = aba_kharbinskiye_cossack_culture_tt
+				set_country_flag = aba_kharbinskiye_cossack_culture_spread
+				custom_tooltip = AB_EMPTY
+			}
 			manchuria_region = {
 				limit = {
 					NOT = { is_core = ROOT}

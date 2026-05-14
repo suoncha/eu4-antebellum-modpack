@@ -2299,21 +2299,17 @@ ab_austria_4 = {
 				skill = 2
 				cost_multiplier = 0.5
 			}
-			
 			custom_tooltip = AB_EMPTY
-			
 			custom_tooltip = HAB_EVERY_TENGRI_PROVINCE_GAINS_MODIFIER
-
-			custom_tooltip = aba_GER_hungarian_cultures
-			set_country_flag = donauschwaben_culture_spread
-			set_country_flag = mantaken_culture_spread
-
 			tooltip = {
 				add_province_modifier = {
 					name = hab_crusade_against_magyars
 					duration = 7300
 				}
 			}
+			custom_tooltip = aba_GER_hungarian_cultures
+			set_country_flag = donauschwaben_culture_spread
+			set_country_flag = mantaken_culture_spread
 		} 
 	}
 
@@ -2840,18 +2836,15 @@ ab_austria_5 = {
 			add_country_modifier = {
 				name = hab_conquest_of_poland
 				duration = 7300
-			}
-			
+			}	
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = 10
 			}
-
+			custom_tooltip = AB_EMPTY
 			set_country_flag = aba_ger_weichseldeutsche_spread
 			custom_tooltip = GER_weichseldeutsche_tooltip_2
-			
 			custom_tooltip = AB_EMPTY
-			
 			if = {
 				limit = {
 					257 = {
