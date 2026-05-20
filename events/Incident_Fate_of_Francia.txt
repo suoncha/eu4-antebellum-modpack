@@ -376,6 +376,7 @@ country_event = {
 					}
 					grant_independence = yes
 					set_in_empire = yes
+					restore_country_color = yes
 				}
 			}
 		}

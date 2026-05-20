@@ -123,6 +123,9 @@ cossack_first_group = {
 					duration = -1
 				}
 			}
+			set_country_flag = aba_kharbinskiye_cossack_culture_spread
+			custom_tooltip = aba_kharbinskiye_cossack_culture_tt
+			custom_tooltip = AB_EMPTY
 			manchuria_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -130,8 +133,6 @@ cossack_first_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			set_country_flag = aba_kharbinskiye_cossack_culture_spread
-			custom_tooltip = aba_kharbinskiye_cossack_culture_tt
 		}
 	}
 
@@ -1202,6 +1203,14 @@ cossack_third_group = {
 				amount = 25
 			}
 			custom_tooltip =  AB_EMPTY
+			add_ruler_modifier = {
+				name = "aln_bane"
+				duration = -1
+			}
+			set_country_flag = abf_ukr_cossack_culture_spread
+			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			custom_tooltip =  AB_EMPTY
+			custom_tooltip = ALN_REMOVE_CORE
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -1210,13 +1219,6 @@ cossack_third_group = {
 					remove_core = GLH
 				}
 			}
-			add_ruler_modifier = {
-				name = "aln_bane"
-				duration = -1
-			}
-			custom_tooltip = ALN_REMOVE_CORE
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
-			set_country_flag = abf_ukr_cossack_culture_spread
 		}
 	}
 
@@ -1977,6 +1979,9 @@ cossack_fourth_group = {
 					duration = 9125
 				}
 			}
+			custom_tooltip = aba_malorussian_cossack_culture_tt
+		    set_country_flag = aba_malorussian_cossack_culture_spread
+			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = inquisitor
 				skill = 2
@@ -1984,8 +1989,6 @@ cossack_fourth_group = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
-			custom_tooltip = aba_malorussian_cossack_culture_tt
-		    set_country_flag = aba_malorussian_cossack_culture_spread
 		}
 	}
 
@@ -2274,13 +2277,9 @@ cossack_fifth_group = {
 					duration = 7300
 				}
 			}
-			central_asia_region = {
-				limit = {
-					NOT = { is_core = ROOT}
-					NOT = { owned_by = ROOT}
-				}
-				add_permanent_claim = ROOT
-			}
+			set_country_flag = abf_nagaybak_culture_spread
+			custom_tooltip = aba_nagaybak_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = RUS_CENTRAL_ASIA
 			hidden_effect = {
 				every_owned_province = {
@@ -2290,8 +2289,13 @@ cossack_fifth_group = {
 					add_local_autonomy = -25
 				}
 			}
-			set_country_flag = abf_nagaybak_culture_spread
-			custom_tooltip = aba_nagaybak_culture_spread_tt
+			central_asia_region = {
+				limit = {
+					NOT = { is_core = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 

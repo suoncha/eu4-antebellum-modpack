@@ -4,7 +4,14 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
-			is_institution_enabled = enlightenment
+			OR = { 
+				IF = { 
+					limit = { tag = SCA 
+					}
+					mission_completed = ab_swe_king
+				}
+				is_institution_enabled = enlightenment
+			}
 			NOT = { has_country_flag = ab_united_cultures_flag }
 		}
 		provinces_to_highlight = {
@@ -13,7 +20,14 @@ country_decisions = {
 		}
 		allow = {
 			ai = no
-			has_institution = enlightenment
+			OR = { 
+				IF = { 
+					limit = { tag = SCA 
+					}
+					mission_completed = ab_swe_king
+				}
+				has_institution = enlightenment
+			}
 			hidden_trigger = {
 				NOT = { has_country_flag = ab_united_cultures_flag }
 			}

@@ -702,7 +702,9 @@ ab_rhineland_second = {
 			}
 			set_country_flag = bra_ostsiedlung_flag
 			custom_tooltip = BRA_OSTSIEDLUNG
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = GER_weichseldeutsche_tooltip_2
 			set_country_flag = aba_ger_weichseldeutsche_spread
 			set_country_flag = wolgadeutsche_culture_spread
@@ -1371,8 +1373,8 @@ ab_rhineland_third = {
 
 		effect = {
 			84 = {
-				change_province_name = "Düsseldorf"
-				rename_capital = "Düsseldorf"
+				change_province_name = "Dï¿½sseldorf"
+				rename_capital = "Dï¿½sseldorf"
 				custom_tooltip = AB_EMPTY
 				add_or_upgrade_courthouse_building = yes
 				custom_tooltip = AB_EMPTY

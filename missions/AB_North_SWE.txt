@@ -1320,6 +1320,7 @@ ab_sweden_slot2 = {
 			set_country_flag = swe_release_livonia
 			set_country_flag = aba_swe_aibofolke_culture_spread
 			custom_tooltip = SWE_RELEASE_ORDERS
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = aba_swe_swe_aibofolke_culture_spread_tt
 		}
 	}
@@ -2878,6 +2879,7 @@ ab_sweden_slot5 = {
 		
 		effect = {
 			custom_tooltip = SWE_ORDER
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = aba_SWE_carolean_paladins_tooltip
 			add_country_modifier = {
 				name = swe_orders
@@ -3001,8 +3003,6 @@ ab_sweden_slot5 = {
 		effect = {
 			add_adm_power = 100
 			custom_tooltip = SWE_GRAND_DUCHY
-			custom_tooltip = aba_swe_move_finnish_culture_tooltip
-			set_country_flag = aba_swe_finnish_culture_spread
 			tooltip = {
 				add_province_modifier = {
 					name = swe_grand_duchy
@@ -3016,6 +3016,9 @@ ab_sweden_slot5 = {
 					duration = 5475
 				}
 			}
+			custom_tooltip = aba_swe_move_finnish_culture_tooltip
+			set_country_flag = aba_swe_finnish_culture_spread
+			custom_tooltip = AB_EMPTY
 			karelia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

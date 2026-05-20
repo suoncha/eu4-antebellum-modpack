@@ -18,7 +18,7 @@ trigger = {
 	owner = {
         has_country_flag = nikkei_culture_spread
     }
-	religion = shinto
+	religion = ROOT
     NOT = {
         culture_group = japanese_g
     }
@@ -168,7 +168,7 @@ province_event = {
 		owner = {
 			has_country_flag = sinicized_japanese_culture_spread
 		}
-		religion = confucianism
+		religion = ROOT
 		NOT = {
 			culture = sinico_japanese
 		}
@@ -277,11 +277,7 @@ province_event = {
 		owner = {
 			has_country_flag = wolgadeutsche_culture_spread
 		}
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -328,11 +324,7 @@ province_event = {
 		owner = {
 			has_country_flag = schwarzmeerdeutsche_culture_spread
 		}
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -377,11 +369,7 @@ province_event = {
 		owner = {
 			has_country_flag = donauschwaben_culture_spread
 		}
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -425,11 +413,7 @@ province_event = {
 		owner = {
 			has_country_flag = mantaken_culture_spread
 		}
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -500,14 +484,10 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
 		owner = {
 			has_country_flag = aba_ned_baltic_settlement
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -549,14 +529,10 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
 		owner = {
 			has_country_flag = aba_ger_weichseldeutsche_spread
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -601,14 +577,10 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
 		owner = {
 			has_country_flag = aba_ger_russlanddeutsche_spread
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -648,14 +620,10 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
 		owner = {
 			has_country_flag = aba_ger_wolhynien_spread
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -695,14 +663,10 @@ province_event = {
 	}
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-		}
 		owner = {
 			has_country_flag = aba_ger_wolhynien_spread
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = germanic
@@ -746,10 +710,7 @@ province_event = {
 			has_country_flag = aba_nor_anglonorse_spread
 		}
 		culture = english
-		OR = {
-			religion = reformed_norse
-			religion = norse_pagan_reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = scandinavian
@@ -788,10 +749,7 @@ province_event = {
 			culture = norse_gael
 			culture = irish
 		}
-		OR = {
-			religion = reformed_norse
-			religion = norse_pagan_reformed
-		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = scandinavian
@@ -929,7 +887,7 @@ province_event = {
 		owner = {
 			has_country_flag = abf_ukr_cossack_culture_spread
 		}
-		religion = orthodox
+		religion = ROOT
 		NOT = {
 			culture_group = east_slavic
 		}
@@ -1041,9 +999,7 @@ province_event = {
 				culture_group = east_slavic
 			}
 		}
-		OR = {
-			religion = orthodox
-	  }
+		religion = ROOT
 		OR = {
 			area = karelia_area
 			area = finland_area
@@ -1084,10 +1040,8 @@ province_event = {
 		}
 		OR = {
 			region = manchuria_region
-	  }
-	  OR = {
-			religion = orthodox
-	  }
+	  	}
+		religion = ROOT
 	}
 
 	option = {
@@ -1150,7 +1104,7 @@ province_event = {
 		owner = {
 			has_country_flag = abf_nagaybak_culture_spread
 		}
-		religion = orthodox
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = east_slavic
@@ -1201,10 +1155,7 @@ province_event = {
 		 province_id = 4745
 		 province_id = 151
 	  }
-	  OR = {
-			religion = reformed_norse
-			religion = norse_pagan_reformed
-		}
+		religion = ROOT
 	}
 
 	option = {
@@ -1231,19 +1182,16 @@ province_event = {
 		owner = {
 			has_country_flag = abf_wendish_culture_spread
 		}
+		religion = ROOT
 		NOT = {
 			OR = {
 				culture_group = west_slavic
 			}
 		}
 		OR = {
-		region = north_german_region
-		region = south_german_region
-	  }
-	  OR = {
-			religion = slavic_pagan
-			religion = reformed_slavic
-		}
+			region = north_german_region
+			region = south_german_region
+	  	}
 	}
 
 	option = {
@@ -1269,7 +1217,7 @@ province_event = {
 		owner = {
 			has_country_flag = aba_malorussian_cossack_culture_spread
 		}
-		religion = orthodox
+		religion = ROOT
 		NOT = {
 			culture_group = east_slavic
 		}
@@ -1283,7 +1231,7 @@ province_event = {
 	}
 }
 
-#Donauschwaben (German cultures Spread 
+#Donauschwaben German cultures Spread 
 province_event = {
 	id = ab_new_cultures.31
 	title = ab_new_cultures.31.t
@@ -1301,7 +1249,7 @@ province_event = {
 			has_country_flag = aba_bul_rostislavtsi_spread
 		}
 		OR = {
-			religion = orthodox
+			religion = ROOT
 		}
 		NOT = {
 			OR = {

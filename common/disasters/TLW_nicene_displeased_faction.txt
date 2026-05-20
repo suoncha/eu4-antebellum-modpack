@@ -86,6 +86,6 @@ nicene_displeased_faction = {
 		}
 	}
 	
-	on_start = ab_nicaea.14
-	on_end = ab_nicaea.15
+	on_start = ab_nicaea.114
+	on_end = ab_nicaea.115
 }

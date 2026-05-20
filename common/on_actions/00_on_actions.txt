@@ -707,6 +707,10 @@ on_death_election = {
 		remove_government_reform = presidential_despot_reform
 	}
 	if = {
+		limit = { has_reform = fradictatorialconsulship }
+		remove_government_reform = fradictatorialconsulship
+	}
+	if = {
 		limit = {
 			has_government_attribute = is_pirate_republic_reform
 		}

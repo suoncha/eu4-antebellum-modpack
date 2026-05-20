@@ -1374,6 +1374,7 @@ ab_bavaria_third = {
 			}
 			custom_tooltip = GER_donauschwaben_tooltip
 		    set_country_flag = donauschwaben_culture_spread
+			custom_tooltip = AB_EMPTY
 			hidden_effect = {
 				every_owned_province = {
 					limit = {

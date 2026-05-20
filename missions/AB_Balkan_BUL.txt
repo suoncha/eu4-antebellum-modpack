@@ -173,14 +173,15 @@ abf_balkan_bul_1 = {
 		}
 
 		effect = { 
-			set_country_flag = aba_bul_rostislavtsi_spread
-			custom_tooltip = ABA_BUL_rostislavtsi_spread_tt
 			custom_tooltip = unlock_privilege_estate_burghers_highland_rights_tt
 			hidden_effect = {
 				unlock_estate_privilege = {
 					estate_privilege = estate_burghers_highland_rights
 				}
 		    }
+			custom_tooltip = AB_EMPTY
+			set_country_flag = aba_bul_rostislavtsi_spread
+			custom_tooltip = ABA_BUL_rostislavtsi_spread_tt
 		}
 	}
 
@@ -2499,13 +2500,6 @@ abf_balkan_bul_4 = {
 					duration = 9125
 				}
 			}
-			define_advisor = {
-				type = inquisitor
-				skill = 2
-				religion = ROOT
-				culture = ROOT
-				cost_multiplier = 0.5
-			}
 			custom_tooltip = ABA_LTV_CULTURE_SPREAD_tt
 			set_country_flag = rus_litvin_culture_spread
 			hidden_effect = {
@@ -2513,6 +2507,14 @@ abf_balkan_bul_4 = {
 					change_culture = Litvin
 					change_original_culture = Litvin
 				}
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
 			}
 		}
 	}
@@ -3091,12 +3093,14 @@ abf_balkan_bul_5 = {
 		
 		effect = {
 			country_event = { id = ab_novgorod.6 }
-			set_country_flag = abf_ukr_cossack_culture_spread
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			add_ruler_modifier = {
 				name = bulgarian_bane_mongol
 				duration = -1
 			}
+			set_country_flag = abf_ukr_cossack_culture_spread
+			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = BUL_GLH_CLAIMS
 			hidden_effect = {
 			every_province = {

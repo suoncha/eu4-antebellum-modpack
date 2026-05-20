@@ -278,21 +278,21 @@ ABA_ahin_posh = {
 
 	#can we build it?
 	build_trigger = {
-			owner = {
-				custom_trigger_tooltip = {
-					tooltip = ABA_TCR_purushapura_ahin_posh_project_allowed_tt
-					has_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
-				}
-				OR = {
-					tag = SLH
-					tag = KRR
-					tag = KUC
-					was_tag = SLH
-					was_tag = KRR
-					was_tag = KUC
-				}
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = ABA_TCR_purushapura_ahin_posh_project_allowed_tt
+				has_country_flag = ABA_TCR_purushapura_ahin_posh_project_allowed
 			}
 			OR = {
+				tag = SLH
+				tag = KRR
+				tag = KUC
+				was_tag = SLH
+				was_tag = KRR
+				was_tag = KUC
+			}
+		}
+		OR = {
 			province_is_or_accepts_religion = {
 				religion = buddhism
 			}
@@ -872,21 +872,21 @@ ABA_temple_of_mathura_buddhist_hindu = {
 
 	#can we build it?
 	build_trigger = {
-			owner = {
-				custom_trigger_tooltip = {
-					tooltip = ABA_tcr_built_mathura_temple_allowed_tt
-					has_country_flag = ABA_tcr_built_mathura_temple_allowed
-				}
-				OR = {
-					tag = SLH
-					tag = KRR
-					tag = KUC
-					was_tag = SLH
-					was_tag = KRR
-					was_tag = KUC
-				}
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = ABA_tcr_built_mathura_temple_allowed_tt
+				has_country_flag = ABA_tcr_built_mathura_temple_allowed
 			}
 			OR = {
+				tag = SLH
+				tag = KRR
+				tag = KUC
+				was_tag = SLH
+				was_tag = KRR
+				was_tag = KUC
+			}
+		}
+		OR = {
 			province_is_or_accepts_religion = {
 				religion = buddhism
 			}
@@ -913,7 +913,7 @@ ABA_temple_of_mathura_buddhist_hindu = {
 			owner = {
 					religion = mahayana
 				}
-			}
+		}
 	}
 
 	#what to do when it's built
@@ -1227,9 +1227,6 @@ ABA_temple_of_mathura_christian = {
 					was_tag = KUC
 				}
 			}
-			province_is_or_accepts_religion = {
-				religion = nestorian
-			}
 			owner = {
 				religion = nestorian
 			}
@@ -1502,9 +1499,6 @@ ABA_temple_of_mathura_zoroastrianism = {
 					was_tag = KUC
 				}
 			}
-			province_is_or_accepts_religion = {
-				religion = zoroastrian
-			}
 			owner = {
 				religion = zoroastrian
 			}
@@ -1763,17 +1757,17 @@ ABA_kizil_caves = {
 
 	#can we build it?
 	build_trigger = {
-			owner = {
-				OR = {
-					tag = SLH
-					tag = KRR
-					tag = KUC
-					was_tag = SLH
-					was_tag = KRR
-					was_tag = KUC
-				}
-			}
+		owner = {
 			OR = {
+				tag = SLH
+				tag = KRR
+				tag = KUC
+				was_tag = SLH
+				was_tag = KRR
+				was_tag = KUC
+			}
+		}
+		OR = {
 			province_is_or_accepts_religion = {
 				religion = buddhism
 			}
@@ -1803,10 +1797,10 @@ ABA_kizil_caves = {
 			owner = {
 					religion = mahayana
 				}
-				owner = {
-					religion = confucianism
-				}
+			owner = {
+				religion = confucianism
 			}
+		}
 	}
 
 	#what to do when it's built

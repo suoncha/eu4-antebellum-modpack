@@ -1668,7 +1668,7 @@ TLW_on_province_owner_change_effect = {
 			}
 		}
 		province_event = {
-			id = ab_nicaea.18
+			id = ab_nicaea.118
 		}
 	}
 	if = {
@@ -1739,7 +1739,7 @@ TLW_on_province_owner_change_effect = {
 			}
 			event_target:hellenicEmpire = {
 				country_event = {
-					id = ab_nicaea.20
+					id = ab_nicaea.120
 				}
 			}
 		}
@@ -1766,7 +1766,7 @@ TLW_on_province_owner_change_effect = {
 					value = 12
 				}
 				province_event = {
-					id = ab_nicaea.21
+					id = ab_nicaea.121
 					days = 30
 				}
 			}
@@ -2388,7 +2388,7 @@ TLW_on_province_religion_changed = {
 			}
 			event_target:hellenicEmpire = {
 				country_event = {
-					id = ab_nicaea.20
+					id = ab_nicaea.120
 				}
 			}
 		}
@@ -2409,7 +2409,7 @@ TLW_on_province_religion_changed = {
 					value = 12
 				}
 				province_event = {
-					id = ab_nicaea.21
+					id = ab_nicaea.121
 					days = 30
 				}
 			}

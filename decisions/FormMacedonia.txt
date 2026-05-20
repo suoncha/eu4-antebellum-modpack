@@ -3,9 +3,15 @@ country_decisions = {
 	form_macedonia = {
 		major = yes
 		potential = {
-			has_country_flag = ABA_TCR_BACTRIA_MACEDONIA
-			NOT = { exists = HLE }
-			NOT = { exists = MAC }
+			OR = {
+				AND = {
+					tag = HLE
+					mission_completed = nicene_macedonian_restoration
+				}
+				has_country_flag = ABA_TCR_BACTRIA_MACEDONIA
+			}
+#			NOT = { exists = HLE }
+#			NOT = { exists = MAC }
 		}
 		
 		allow = {
@@ -14,6 +20,7 @@ country_decisions = {
 		effect = {
 			add_prestige = 25
 			change_tag = MAC
+			set_country_flag = formed_macedonian_empire_flag
 			if = {
 				limit = {
 					NOT = { government_rank = 3 }

@@ -113,6 +113,7 @@ nor_1_group = {
 		
 		effect = {
 			country_event = { id = ab_norway.8 }
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = aba_nor_norsegaelic_spread_tooltip
 			set_country_flag = aba_nor_norsegaelic_spread
 		}
@@ -360,6 +361,9 @@ nor_2_group = {
 				name = norway_kings
 				duration = -1
 			}
+			set_country_flag = aba_nor_anglonorse_spread
+			custom_tooltip = aba_anglonorse_spread_tooltip
+			custom_tooltip = AB_EMPTY
 			normandy_area  = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -367,9 +371,6 @@ nor_2_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			set_country_flag = aba_nor_anglonorse_spread
-			custom_tooltip = aba_anglonorse_spread_tooltip
-			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					accepted_culture = english
@@ -411,6 +412,7 @@ nor_2_group = {
 		
 		effect = {
 			add_dip_power = 75
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = ABA_NOR_norman_nordic_tt
 			hidden_effect = {
 				every_province = {
@@ -420,6 +422,7 @@ nor_2_group = {
 					change_culture = aba_norman_nordic_culture
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			183 = {
 				if = {
 					limit = {
@@ -486,8 +489,6 @@ nor_2_group = {
 		}
 		
 		effect = {
-			set_country_flag = abf_varangians_culture_spread
-			custom_tooltip = abf_varangians_culture_spread_tt
 			add_mercantilism = 5
 			define_advisor = {
 				type = trader
@@ -500,6 +501,9 @@ nor_2_group = {
 				name = "norway_wealth"
 				duration = 9125
 			}
+			set_country_flag = abf_varangians_culture_spread
+			custom_tooltip = abf_varangians_culture_spread_tt
+			custom_tooltip = AB_EMPTY
 			pskov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
