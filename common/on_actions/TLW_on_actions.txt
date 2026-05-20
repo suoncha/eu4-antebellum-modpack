@@ -10,6 +10,24 @@ on_startup = {
 			id = tlw_start.1
 		}
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = TLW_NCI_CHOSE_MISSIONS
+			}
+			OR = {
+				tag = NCI
+				tag = HLE
+				tag = MAC
+
+			}
+		}
+		set_country_flag = TLW_NCI_preview
+		swap_non_generic_missions = yes
+		country_event = {
+			id = ab_nicaea.122
+		}
+	}
 }
 
 on_monthly_pulse = {

@@ -174,6 +174,26 @@ byz_slot1_balkan = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					calc_true_if = {
+						accepted_culture = croatian
+						accepted_culture = serbian
+						accepted_culture = slovene
+						accepted_culture = carantanian
+						accepted_culture = bosnian
+						accepted_culture = bulgarian
+						accepted_culture = jadranian_culture
+						accepted_culture = talian_culture
+						amount = 3
+					}
+				}
+				custom_tooltip = BYZ_SCLAVINIAN_YES
+				set_country_flag = byz_balkan_cultures
+			}
+			else = {
+				custom_tooltip = BYZ_SCLAVINIAN_NO
+			}
 		}
 	}
 
@@ -1893,8 +1913,10 @@ byz_slot2_balkan = {
 				name = byzantium_belisar
 				duration = 9125
 			}
-			set_country_flag = italy_greek_flag
-			custom_tooltip = BYZ_UNLOCK_SETTLE_ITALY
+#			set_country_flag = italy_greek_flag
+#			custom_tooltip = BYZ_UNLOCK_SETTLE_ITALY
+			custom_tooltip = BYZ_GRIKO_CULTURE
+			set_country_flag = byz_griko_culture
 			custom_tooltip = AB_EMPTY
 			sicily_area = {
 				limit = {
@@ -2578,11 +2600,18 @@ byz_slot3_balkan = {
 				add_permanent_claim = ROOT
 			}
 			hidden_effect = {
-				every_owned_province = {
+				if = {
 					limit = {
-						is_core = NCI
+						NCI = {
+							ai = yes
+						}
 					}
-					remove_core = NCI
+					every_owned_province = {
+						limit = {
+							is_core = NCI
+						}
+						remove_core = NCI
+					}
 				}
 				add_government_power = { 
 					mechanic_type = byzantine_decadence_mechanic
@@ -6156,6 +6185,7 @@ byz_slot3_tall = {
 		effect = {
 			add_treasury = -1500
 			custom_tooltip = BYZANTIUM_OSMAN
+			custom_tooltip = AB_EMPTY
 			tooltip = {
 				151 = {
 					add_base_production = 3

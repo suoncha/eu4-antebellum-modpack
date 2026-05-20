@@ -18,7 +18,3 @@ historical_rival = BUL
 		mil = 4
 	}
 }
-
-
-
-
