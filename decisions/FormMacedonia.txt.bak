@@ -8,7 +8,6 @@ country_decisions = {
 					tag = HLE
 					mission_completed = nicene_bactria
 				}
-				mission_completed = nicene_macedonian_restoration
 				has_country_flag = ABA_TCR_BACTRIA_MACEDONIA
 			}
 			NOT = {

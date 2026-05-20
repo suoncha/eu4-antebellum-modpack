@@ -363,48 +363,53 @@ weichseldeutsche_culture_new = {
 	}
 	gothic_new_new = {
 		primary = GTH
+		dynasty_names = { 
+			"of Gothia" "Amaling" "A awulfing" "Bal ing" "Ansiling" "Gainobal ing" "Wini aring" "Adalgaring"
+			"Badwiling" "Aiwareiking" " iudawulfing" "Airmanareiking" "Randobal ing" "Wultulfing" " iudabal ing" " rafstiling" " rasamunding" " rasareiking" 
+			"Dagamersing" "Agiling" "Airmanagilding" "Alafunsing" "Alareiking" "Witjareiking" "Albire ing" "Fri ureiking" "Swartsing" "Liuvageising" "Gutawinsing"
+			"Hunireiking" "Swin iling" "Anagasting" "Gaujareiking" "Sigireiking" "Audamunding" "Austrowulfing" "Dagalaifing" "Konigasting" " iudareiking" "Hrabning"
+			"Gaisareiking"
+			# Gothicized Greek names
+			"Kaumnenus" "Angilus" "Keilikus" " aiaudaurokanus"
+			# some Gothicized Turkic names
+			"Saruxaning" "Karamaning" "Zanging"
+		}
 		male_names = {
-			Friedrich Albrecht Christian Heinrich Rudolf August Ernst Georg Moritz Alexander Anton Hektor 
-			Johann Karl Clemens Wenzel Franz Xaver Joachim Joseph Magnus Maximilian Severinus Wolfgang 
-			Andreas Bruno Burkhard Günther HermannLukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
-			Alwin Adémar Alwin Adolf Albert Albrecht Arnold Baltasar
-			Benedict Bernd Bernard Bernhard Bertold Bertram Bertrand Burchard 
-			Claus Nicholas Cobbo Cord Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard 
-			Erik Albert Ewald Frederick Gerard Gebhard Giselmar Gottschalk Günther Hans 
-			Heideke Herbert Hermann Hinrik Jacob Jaspar Caspar Jochim Joakim Johann Kersten 
-			Christian Laurentz Lambert Liawizo Liemar Liudger Otto Ludolf Ludwig
-			Louis Mathias Matthew Meinwerk Merten Martin Michael Norbert Ordulf 
-			Peter Philip Renard Reinmar Roger Rudolf Ralph Sigbert Sigisbert
-			Sigfrid Siegfried Sigward Sigurd Simon Steffen Thomas Waldemar
-			Werner Victor Werneke Weybrecht Wichbert Wichmann Wigebert Wolter Walter Wulff Ulf
+			Agibrands Agila Agilmun s Agiwulfs Agi ius Airmanagild Airmanareiks Air aweihs Aiwareiks Aiw areiksAizagais Aizamereis Aizareiks Aizawulfs Ai ika Ai iwulfs Alagais 
+			Alagild Alamanna Alareiks Alaweis Ala ius Albeis Albila Albireiks Albire s Amalareiks Anagasts Ansibairhts Ansihilms Ansila Ansire s Ansiwalds Ansiwins Arbogasts 
+			Argimun s Arugands Arugeisls Arumers Aruswin s Askalks Audagais Audamunds Audawakrs Audawins Audawulfs Auda ius Austrowulfs A alabairhts A alabal s A alabrands 
+			A alafri us A alagais A alagar A alahardusA alaharjis A alahilms A alamanna A alamers A alawins A alawulfs A anagild A anareiks A awulfs Baduharjis Badwila 
+			Bairahardus Bairamo s Baira ius Bairhtafri us Bairika Bairnuhardus Bal abairhts Bal amers  Bal areiks Bal are s Batwins Berimun s Brandawulfs Dagabairhts 
+			Dagaharjis Dagalaifs Dagamers Dagawalds Dagila Dagis ius Egika Egilmers Fafila Frauja Fraujila Fri ugairns Fri ureiks Froia Frumagild Frumareiks Frumare s
+			Fulkabairhts Gailamereis Gaizafri us Gaizahardus Gaizalaifs Gaizalaiks Gaizamers Gaizareiks Gaizawalds Gaizaweig Gaizawins Gaizawulfs Gaujaharjis Gaujareiks 
+			Gauts Geila Genobal s Geislamers Geislamereis Gibareiks Gibawul us GibikaGudagibans Gudahardus Gudareiks Gun ibal s Gun imereis Gutawins Haifstawulfs Harjabrands 
+			Harjafidails Harjafri us Harjawulfs Harjaweig Hildibadus Hildibal s Hildireiks Hl daharjis Hl daweig Hro abairhts Hro ireiks Hunibairhts Hunifri us Hunila 
+			Hunimun s Hunireiks Ibrawulfs Ingild Juggareiks Kin ila Kniwa Konigasts Konimunds Liuba Liubageis Liubagild Liudibairhts Liudibrands Liudigais Liudiwulfs 
+			Liubeis Ludawulfs Maloreiks Naudigais Naur rabairhts Naur ramanna O alabairhts O alafri us O alareiks Randobal s Redagais Reikahardus Reikare s Reikaswin s 
+			Reikawulfs Reikjamereis Sabbas Segga Sigifri us Sigimers Siginan s Sigireiks Kindaswin s Sigiswul us Sunjafri us Sunna Swerila Swin ila Totila Tulga Uftaharjis 
+			Uftila Wagrila Walahrafns Walamers Walhamereis Wamba Wandila Weitimers Widugauja Wiljahilms Wiljareiks Wingureiks Wisibadus Wisuwalds Witjagais Witjareiks Wulfareiks 
+			Wulfila  aija  aurismo s  iudabal s  iudabrands  iudagais  iudageisls  iudahaifsts  iudaharjis  iudaha us  iudahilms  iudahrabns  iudalaifs  iudamereis  iudamers 
+			 iudareiks  iudawulfs  iudeis   rafstila  rasamunds  rasareiks
+			# Greek/Christian imports
+			Ai a Manuel Xrwsaustaumus Xristufaurus Ailaiw erjus Herakljus  aiaugnostus Pantailaiema  aiaudausjus Staifanus Niketas Mixael Kwrillus Dawi  Ambrwsjus
+			Hailladjus Aiwlaugjus Aiwdaukimus Ailpidjus Aga aggailus Saulaumo Sokrates Gregaurius Gaiwargius Samuel Dauru aius Filippus Pa rfirjus  i  ius  addaius 
+			Elias Staifanus Laiwanidas Demetrjus Mai audjus Timau aius Andraias Aiwgainjus Aiwsaibjus Damjanus Audwssaius Fl wjus K jus Her kleitus I ljus M rkus Antonjus
+			M rteinus Hadri nus Anastasjus Nauel
+			# Turkic Loans
+			Arslan Atakan Auzan Aurhan Auguz Gauxan Kagata  Saifila  
 		}
-		female_names = { 
-			Amalia Bianka Eleonora
-			Agatha Balthild
-			Christina Cuthburg 
-			Cynehild Cyneswith Cynethryth Eadburg Edith 
-			Gunhilda Gunhild Helga Judith
-			Maud Matilda Sigri 
-			Wulfhild
-			Addila Adela Adelheid Alof Agnes Anna Athela Beatrix Beatrice Bertha Bertha 
-			Bertrada Bia Beatrice Bisina Bithild Brigida Brigid Elisabeth 
-			Elisabeth Enda Gertrud Gisela
-			Hedwig Heilwig Helene Hildegard Ida Emma Irmgard 
-			Judith Katharina
-			Margarete Mathilde Matilda Mechthild Reginlint 
-			Richardis Ricarda Rodelinda Sophia Sophia Suanhilde Swanahild Wienke 
-			Wiltrud Wulfhild Ulfhild
-		}
-		dynasty_names = {
-			"von Schwarzburg" "von Schönburg" "von Schlotheim" "von Salza" "von Kospoth"
-			"von Knuth" "von Wettin" "Askanier" "von Hohenzollern" "von Erffa" "von Bodungen" "von Eckersberg" "von Brandenstein" "von Pappenheim" "von Wiehe"
-			"von Westernhagen" "von Jena" "von Trützschler" "von Plessen" "von Haugwitz" "von Kanitz" "von Falkenhayn" "von Thüna"
-			"von Thüringen" "von Nostitz" "von Bieberstein" "von Meerheimb" "von Freiberg" "von Neitschütz" "von Minckwitz" "von Arnswaldt" "von Auerswald" "aus dem Winckel"
-			"von Beichlingen" "von Bendeleben" "von Beneckendorff"  "von Berbisdorf" "von Bissingen" "von Bock" "von Bomsdorff" "von Bose" "von Breitenbach"
-			"von Breitenbuch" "von Brühl" "von Bünau" "von Hoym" "Holtzendorff" "von Hohenthal" "von Heynitz" "von Hessler" "von Helldorff" "von Harling" "von Görschen" "von Glaubitz"
-			"von Gfug" "von Gersdorff" "von Germar" "von Fritsch" "von Friesen" "von Flanss" "von Etzdorff" "von Erdmannsdorff" "von Einsiedel" "von Dyhrn" "von Dieskau" "von Creytzen" "von Carlowitz" "von Maltitz" "von Mansfeld" "von Miltitz" "von Mücheln" "von Pflugk" "von Pölnitz" "von Ponickau" "von Rackel"
-			"von Raumer" "von Rechenberg" "von Rex" "Sack" "von Scheidingen" "von Schleinitzstrasse" "von Schönberg" "Senfft von Pilsach" "von Stolberg" "von Kannewurf" "Karras" "von Keller" "von Kirchbach" "von Sternberg" "von Leisnig"
-			"von Liebenau" "von Loeben" "von Logau" "von Lüttichau" "von Taube" "von Tettau" Vitzthum "von Wolffersdorff" Wöhrmann "von Werthern" "von Wackerbarth" "von Bredow" "von Brandt"
+		female_names = {
+			Aileisabai  Airmanalinda Aiuwa Aiwwa Aizaliubo Amalabairga Amalafri a Amalasun a Amalaswin a Anna Ansa Anselbairga Ansia Ansigardi Ansihilma Audafleda Austraguto 
+			A ala A alabairga A alabairhta A alagun i A alahaidus A alahai i A alahildi A alalin i A alamodi A alaruna A alaxeisa A ala ru i A awulfa Bado Brunhilda 
+			Brunihildi Egilona Fri unan a Gairbairga Gaisahildi Gaisa ru i Gaiza r  s Gaujaswin a Geislatruda Glismoda Godaliuva Greimahildi Gudagiba Gun iruna Gun ibairga 
+			Guntruda Gun iruna Hildibairhta Hildigardi Hildigards Hildigun i Hildiko Hildiruna Hildiwara Hildi ru i Hl dahilda Hrogilo Hro aswin a Hunibairhta Ibragardi 
+			Ibragun s Ibrahildi Imma Ingun s Krimhilda Liubaguta Liudibairga Liudigardi Liudiwina Mahtihilds Mahtiswin a Marikreitus Marja Mar a Matasunt a Menia O alareika Ragnahilda 
+			Raibaikka Reikabairga Rodelinda Rosamunda Rotruda Rumetruda Sarra Sigiruna Sigizaruna Sunigilda Sunilda Tilariss Wiljahildi  iudabairga  iudagardi  iudagun i  iudaguta  iudaguto 
+			 iudahildi  iudalinda  iudalin i  iudamodi  iudanan a  iudarada  iudaruna 
+			# Greek/Christian imports
+			Fwba Roksana Mailodja Aikatarina Kandaka Eirena Iudi  Maria Wikturja J lia Aleiwia Qainaiwaira Anna A laina Sena Paraskaiwa R xel
+			# Turkic Loans
+			Auzlaim A la Sejlan Terxen Saihnaz Jasar Jeildeiz Zaihra Kausaim Sairap Hwma
 		}
 	}
 	markish_culture_new = {
@@ -4062,7 +4067,7 @@ iberian	= {
 		}
 	}
 }
-
+	
 french	= {
 	graphical_culture = westerngfx
 
@@ -4183,6 +4188,30 @@ french	= {
 			Tandrec Tanetbiu Tanetlowen Tanguistl Tancostyla Tedvil Tephaine Thomine Tibourge Tiburge 
 			Trifine Tristana Uriell Seva Perenn Meonre Ilcum Guigoëdon Drichglur Berthildis Argantmoet
 		}
+	}
+	Outremer = {
+		primary = OTR
+	}
+	Anglois = {
+		primary = ANG
+	}
+	pied_noir_culture = {
+		primary = ALG
+	}
+	francatalan = {
+		primary = CAT
+	}
+	romandais = {
+		primary = HLV
+	}
+	batavois = {
+		primary = NED
+	}
+	rhenois = {
+		primary = RHL
+	}
+	transalpins = {
+		primary = ITA
 	}
 	french_culture = {
 		primary = FRA

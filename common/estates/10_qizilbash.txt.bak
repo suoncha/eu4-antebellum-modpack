@@ -7,7 +7,7 @@ estate_qizilbash = {
 	trigger = {
 		# AB [[[
 		# Disable this for now
-		always = no
+		# always = no
 		# ]]]
 		has_dlc = "King of Kings"
 		NOT = { has_government_attribute = disables_estate_qizilbash }
@@ -23,7 +23,7 @@ estate_qizilbash = {
 					tag = PMN # Mani Persia
 					tag = PRC # Nestorian Persia
 					# ]]]
-					tag = ARL
+					# tag = ARL
 					has_unlocked_estate = { estate = estate_qizilbash }
 					has_country_flag = ABA_ZUN_unlock_qizilbash
 				}

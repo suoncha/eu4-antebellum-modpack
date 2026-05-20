@@ -987,9 +987,9 @@ romanian_culture_group = {
 		primary = WAL
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
-			Callimachi Ghica Brancoveanu Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hajdau
-			Kogalniceanu Movilesti Racovita
+			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Kogalniceanu Movilesti
 		}
 		male_names = {
 			Alexandru Radu Vlad Constantin Mihail Mircea George Grigore Mihnea Nicolae Besarab Vladislav Mattia 

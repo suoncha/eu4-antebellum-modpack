@@ -4228,6 +4228,10 @@ byzantine_monarchy = {
 			# AB [[[
 			tag = HLE
 			tag = NCI
+			tag = SUC
+			tag = AEG
+			tag = BCT
+			tag = MAC
 			# ]]]
 		}
 	}
