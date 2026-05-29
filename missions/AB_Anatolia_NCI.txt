@@ -1481,7 +1481,7 @@ HLE_missions_2 = {
 	}
 	has_country_shield = yes
 
-	nicene_hellespont = {
+	nicene_hellespont_tlw = {
 		icon = mission_the_bospborus
 		required_missions = { nicene_hellenic }
 		position = 6
@@ -1543,7 +1543,7 @@ HLE_missions_2 = {
 
 	nicene_countryside = {
 		icon = prosperity_for_all
-		required_missions = { nicene_hellespont }
+		required_missions = { nicene_hellespont_tlw }
 		position = 7
 
 		provinces_to_highlight = {
@@ -1646,7 +1646,7 @@ HLE_missions_2 = {
 		}
 	}
 
-	nicene_sack = {
+	nicene_sack_tlw = {
 		icon = ven_capital_of_europe
 		required_missions = { nicene_malta nicene_balkan }
 		position = 9
@@ -2527,7 +2527,7 @@ NCI_missions_3_tlw = {
 	
 	nicene_byzantium = {
 		icon = mission_plc_purple_phoenix
-		required_missions = { nicene_smyrna nicene_refugees }
+		required_missions = { nicene_smyrna nicene_refugees_tlw }
 		position = 3
 		
 		provinces_to_highlight = {
@@ -4165,7 +4165,7 @@ NCI_missions_4_tlw = {
 		}
 	}
 
-	nicene_refugees = {
+	nicene_refugees_tlw = {
 		icon = mission_cope_with_refugees
 		required_missions = { }
 		position = 2
