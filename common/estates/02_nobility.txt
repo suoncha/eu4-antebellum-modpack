@@ -38,6 +38,7 @@ estate_nobles = {
 		# TLW [[[
 		faction_byzlatin_influence = 0.2
 		# ]]]
+		monthly_commonwealth_popular_sovereignity = 0.03
 	}
 	country_modifier_neutral = {
 		manpower_recovery_speed = 0.2 
@@ -55,6 +56,7 @@ estate_nobles = {
 		# TLW [[[
 		faction_byzlatin_influence = -0.1
 		# ]]]
+		monthly_commonwealth_popular_sovereignity = -0.03
 	}
 	land_ownership_modifier = {
 		nobles_loyalty_modifier = 0.2
@@ -470,6 +472,10 @@ estate_nobles = {
 		# ABMP [[[
 		estate_nobles_dominance_of_the_boierime
 		estate_nobles_integrate_german_nobility
+		# ]]]
+		# ABA [[[
+		ABA_estate_nobles_POL_serdom_enforced
+		ABA_estate_nobles_POL_serdom_abolished
 		# ]]]
 	}
 

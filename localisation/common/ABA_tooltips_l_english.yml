@@ -26,6 +26,7 @@
  aba_htm_stables_tt: "We will now be able to use the §GGreat Stables of Szeged§! monument!"
  ABA_LTV_CULTURE_SPREAD_tt: "§YLitvin§! culture will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region."
  ABA_BUL_cossacks_tt: "10 §YCossack§! regiments will spawn in our capital!"
+ ABA_POL_POLONIZE_RUS_SPREAD_TT: "New §YPolonized§! cultures will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! §YEast Slavic§!, §YTartar§!, §YAltatic§!, and §YEvenki§! Provinces."
 
 #### Germans ####
  GER_wolgadeutsche_tooltip: "T§YWolga Germanic§! culture will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YAstrakhan§!, §YLower Don§!, and §YSaratov§! areas."
@@ -79,3 +80,7 @@ ABA_kizil_caves: "Kizil Caves - The Thousand Red Houses"
 #### Mercs ####:
 ABA_tcr_gorkhas_merc_1: "Malaun Regiment"
 ABA_tcr_gorkhas_merc_2: "Second Gorkha Rifles"
+
+#### GENERAL ####
+ABA_GRANTED_CLERGY_LAND_RIGHTS_REWARD_YES: "£yes£ If we have granted the '§Y[Root.GetClergyName] Land Rights§!' Estate Privilege, we will gain:"
+ABA_GRANTED_CLERGY_LAND_RIGHTS_REWARD_NO: "£no£ If we have granted the '§Y[Root.GetClergyName] Land Rights§!' Estate Privilege, we will gain:"

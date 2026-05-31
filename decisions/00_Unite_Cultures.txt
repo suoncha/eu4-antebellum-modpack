@@ -4,15 +4,19 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
-			OR = { 
-				IF = { 
-					limit = { tag = SCA 
-					}
-					mission_completed = ab_swe_king
+			IF = { 
+				limit = { 
+					tag = SCA 
 				}
+				OR = { 
+						mission_completed = ab_swe_king
+						is_institution_enabled = enlightenment
+				}
+			}
+			else = {
+				NOT = { has_country_flag = ab_united_cultures_flag }
 				is_institution_enabled = enlightenment
 			}
-			NOT = { has_country_flag = ab_united_cultures_flag }
 		}
 		provinces_to_highlight = {
 			culture_group = ROOT
@@ -20,16 +24,20 @@ country_decisions = {
 		}
 		allow = {
 			ai = no
-			OR = { 
-				IF = { 
-					limit = { tag = SCA 
-					}
-					mission_completed = ab_swe_king
+			IF = { 
+				limit = { 
+					tag = SCA 
 				}
-				has_institution = enlightenment
+				OR = { 
+						mission_completed = ab_swe_king
+						is_institution_enabled = enlightenment
+				}
 			}
-			hidden_trigger = {
+			else = {
+				hidden_trigger = {
 				NOT = { has_country_flag = ab_united_cultures_flag }
+				}
+				is_institution_enabled = enlightenment
 			}
 			dip_power = 200
 			stability = 3

@@ -1016,7 +1016,7 @@ province_event = {
 
 }
 
-#Pomorian Culture Spread in North (Novogorod) Spread 
+#Kharbinskiye Spread
 province_event = {
 	id = ab_new_cultures.24
 	title = ab_new_cultures.24.t
@@ -1303,6 +1303,223 @@ province_event = {
 	option = {
 		name = ab_new_cultures.32.a
 		change_culture = sinico_japanese
+	}
+}
+
+#Polonized Borderlands (Kresy) Spread
+province_event = {
+	id = ab_new_cultures.33
+	title = ab_new_cultures.33.t
+	desc = ab_new_cultures.33.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = byelorussian
+			culture = volhynian
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.33.a
+		change_culture = aba_polish_west_kresy
+	}
+}
+
+#Polonized Ruthenia (Gente Ruthenus) Spread
+province_event = {
+	id = ab_new_cultures.34
+	title = ab_new_cultures.34.t
+	desc = ab_new_cultures.34.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = ruthenian
+			area = crimea_area
+			area = yedisan_area
+			area = zaporizhia_area
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.34.a
+		change_culture = aba_polish_west_gente_ruthenus
+	}
+}
+
+#Polonized Russia (Rosyjski) Spread
+province_event = {
+	id = ab_new_cultures.35
+	title = ab_new_cultures.35.t
+	desc = ab_new_cultures.35.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = novgorodian
+			culture = pomorian
+			culture = russian
+			culture = ryazanian
+			culture = karelian
+
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.35.a
+		change_culture = aba_polish_west_rosyjski
+	}
+}
+
+#Polonized Steppe (Lipkowie) Spread
+province_event = {
+	id = ab_new_cultures.36
+	title = ab_new_cultures.36.t
+	desc = ab_new_cultures.36.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture_group = tartar
+			area = circassia_area
+			area = dagestan_area
+		}
+		NOT = {
+			OR = {
+				area = crimea_area
+				area = yedisan_area
+				area = zaporizhia_area
+			}
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.36.a
+		change_culture = aba_polish_west_lipkowie
+	}
+}
+
+#Polonized Central Asia (Nagaibaks) Spread
+province_event = {
+	id = ab_new_cultures.37
+	title = ab_new_cultures.37.t
+	desc = ab_new_cultures.37.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		AND = {
+			OR = {
+				culture_group = altaic
+				culture = Chorasmian
+				culture = Sogdian
+			}
+			NOT = {
+				culture = turkish
+			}
+		}
+	}
+
+	option = {
+		name = ab_new_cultures.37.a
+		change_culture = aba_polish_west_nagaibaks
+	}
+}
+
+#Polonized Central Asia (Nagaibaks) Spread
+province_event = {
+	id = ab_new_cultures.38
+	title = ab_new_cultures.38.t
+	desc = ab_new_cultures.38.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_pol_polonize_rus
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			region = manchuria_region
+	  	}
+	}
+
+	option = {
+		name = ab_new_cultures.38.a
+		change_culture = aba_polish_west_harbiner
 	}
 }
 

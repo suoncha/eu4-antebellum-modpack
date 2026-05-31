@@ -550,6 +550,39 @@ estate_cossacks_recruit_cossack_generals = {
 	}
 }
 
+### ABA ####
+ABA_estate_cossacks_pln_cossack_szlachta = {
+	icon = estate_nobles_ITA_military_governors
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.20
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_pln_cossack_szlachta }
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unlocked_privilege_estate_cossacks_pln_cossack_szlachta_tt
+			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_pln_cossack_szlachta }
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		army_tradition = 0.25
+		army_tradition_decay = -0.01
+		allowed_cossack_fraction = 0.10
+		nobles_influence_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
 #DLC Privileges
 estate_cossacks_prime_herding_rights = {
 	icon = privilege_monopoly_of_goods_livestock

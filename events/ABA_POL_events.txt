@@ -2,13 +2,13 @@ namespace = aba_pol_events
 
 #Krakow University Event
 country_event = {
-	id = aba_pol_events.1
-	title = aba_pol_events.1.T
-	desc = aba_pol_events.1.D
+	id = aba_pol_events.99
+	title = aba_pol_events.99.t
+	desc = aba_pol_events.99.d
 	picture = CITY_DEVELOPMENT_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = aba_pol_events.1.a
+		name = aba_pol_events.99.a
 		if = {
 			limit = { has_dlc = "Rule Britannia" } 
 			change_innovativeness = 3 
@@ -51,7 +51,7 @@ country_event = {
 	id = aba_pol_events.2
 	title = aba_pol_events.2.t
 	desc = aba_pol_events.2.d
-	picture = JANISSARIES_IN_FORMATION_eventPicture
+	picture = BATTLE_eventPicture
 	
 	is_triggered_only = yes
 
@@ -61,6 +61,14 @@ country_event = {
 	
 	option = {
 		name = aba_pol_events.2.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ABF_pol_foreign_legion
+				}
+			}
+			set_country_flag = ABF_pol_foreign_legion
+		}
 		custom_tooltip = ABF_POL_FOREIGN_LEGION_TT
 		hidden_effect = {
 			capital_scope = {
@@ -73,7 +81,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_of_carolean = 15
+					num_of_musketeer = 15
 				}
 				capital_scope = {
 					for = {
@@ -101,3 +109,282 @@ country_event = {
 		}
 	}
 }
+
+#Fate of The Steppe
+country_event = {
+	id = aba_pol_events.3
+	title = aba_pol_events.3.t
+	desc = aba_pol_events.3.d
+	picture = ORTHODOX_ICON_FLAG_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	after = {
+		every_province = {
+			limit = {
+				has_province_flag = was_golden_horde_core
+			}
+			clr_province_flag = was_golden_horde_core
+		}
+	}
+	
+	option = {
+		name = aba_pol_events.3.a
+		add_army_tradition = 25
+		466 = {
+			add_devastation = 100
+		}
+		466 = {
+			change_culture = ROOT
+		}
+		466 = {
+			change_religion = ROOT
+		}
+		custom_tooltip = RUS_RELCLAIMING_STEPPE
+		tooltip = {
+			add_province_modifier = {
+				name = rus_reclaiming
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						is_core = GLH
+						has_province_flag = was_golden_horde_core
+					}
+				}
+				add_province_modifier = {
+					name = rus_reclaiming
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = aba_pol_events.3.b
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = rus_bloodshed
+			duration = 9125
+		}
+		custom_tooltip = ABA_POL_tartar_accept_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = crimean
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = crimean
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = mishary
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = mishary
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = astrakhani
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = astrakhani
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = kazani
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = kazani
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = nogaybak
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = nogaybak
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = cuman_culture
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = cuman_culture
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = bashkir
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = bashkir
+					free = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = siberian
+					}
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = siberian
+					free = yes
+				}
+			}
+		}
+	}
+}
+
+#Fusion of East and West
+country_event = {
+	id = aba_pol_events.4
+	title = aba_pol_events.4.t
+	desc = aba_pol_events.4.d
+	picture = PRINCE_AND_BOYARS_eventPicture
+	
+	is_triggered_only = yes
+
+	#Merge Cultures
+	option = {
+		name = aba_pol_events.4.a
+		add_country_modifier = {
+			name = aba_pol_catholic_embraced_polonization
+			duration = -1
+		}
+		custom_tooltip = ABA_POL_POLONIZE_RUS_SPREAD_TT
+		set_country_flag = aba_pol_polonize_rus
+		custom_tooltip = AB_EMPTY
+		set_country_flag = est_unlocked_winterplace_project
+		custom_tooltip = EST_UNLOCK_GP
+	}
+
+	#Embrace Diversity 
+	option = {
+		name = aba_pol_events.4.b
+		add_country_modifier = {
+			name = aba_pol_catholic_embraced_diversity
+			duration = -1
+		}
+		custom_tooltip = ABA_POL_EMBRACE_DIVERSITY
+		set_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					NOT = { culture_group = west_slavic }
+					has_owner_accepted_culture = no
+				}
+				add_province_modifier = {
+					name = aba_pol_culture_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Golden Liberty
+country_event = {
+	id = aba_pol_events.5
+	title = aba_pol_events.5.t
+	desc = aba_pol_events.5.d
+	picture = SEJM_eventPicture
+	
+	is_triggered_only = yes
+
+	#Accept
+	option = {
+		name = aba_pol_events.5.a
+		add_ruler_modifier = {
+			name = ABA_POL_golden_liberty_accepted
+			duration = -1
+		}
+		add_legitimacy = 25
+		custom_tooltip = AB_EMPTY
+		random_list = {
+			33 = {
+				change_monarch_points_or_power = {
+					points = 1
+					power = dip
+				}
+			}
+			33 = {
+				change_monarch_points_or_power = {
+					points = 1
+					power = mil
+				}
+			}
+			33 = {
+				change_monarch_points_or_power = {
+					points = 1
+					power = adm
+				}
+			}
+		}
+	}
+
+	#Reject
+	option = {
+		name = aba_pol_events.5.b
+		add_ruler_modifier = {
+			name = ABA_POL_golden_liberty_reject
+			duration = -1
+		}
+		add_legitimacy = -50
+	}
+}
+
+#Union of Many Peoples
+country_event = {
+	id = aba_pol_events.6
+	title = aba_pol_events.6.t
+	desc = aba_pol_events.6.d
+	picture = LIBERUM_VETO_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aba_pol_events.6.a
+		unlock_government_reform = {
+			government_reform = aba_pol_catholic_commonwealth_of_crowns
+		}
+		hidden_effect = {
+			add_government_reform = aba_pol_catholic_commonwealth_of_crowns
+		}
+	}
+}
+
+
+
+
+

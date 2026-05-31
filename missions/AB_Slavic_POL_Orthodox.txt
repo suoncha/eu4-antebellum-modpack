@@ -779,7 +779,6 @@ aba_slavic_pol_orthodox_first = {
 					duration = -1
 				}
 			}
-
 		}
 	}
 
@@ -1218,12 +1217,13 @@ aba_slavic_pol_orthodox_second = {
 		
 		effect = {
 			country_event = { id = ab_rus.7 }
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					has_country_flag = ABF_pol_orthodox_rus_culture_spread
 				}
 				set_country_flag = abf_ukr_cossack_culture_spread
-				custom_tooltip = abf_ukr_cossack_culture_spread_tt
+				custom_tooltip = abf_ukr_cossack_culture_spread_tt	
 			}
 			custom_tooltip = AB_EMPTY
 			if = {

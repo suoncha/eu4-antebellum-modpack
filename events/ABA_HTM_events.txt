@@ -32,3 +32,164 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = aba_hetmanate.2
+	title = aba_hetmanate.2.t
+	desc = aba_hetmanate.2.d
+	picture = {
+	   trigger = { has_dlc = "The Cossacks" }
+	   picture = COSSACK_ESTATE_eventPicture
+	}
+	picture = {
+	   trigger = { NOT = { has_dlc = "The Cossacks" } }
+	   picture = COURT_eventPicture
+	}
+
+	is_triggered_only = yes
+
+	option = {	
+		name = aba_hetmanate.2.a	
+		ai_chance = { factor = 2 }
+		feo_integrate_cossacks_event_opt_1 = yes
+	}
+	option = {	
+		name = aba_hetmanate.2.b	
+		ai_chance = { factor = 1 }
+		feo_integrate_cossacks_event_opt_2 = yes
+	}
+}
+
+country_event = {
+	id = aba_hetmanate.3
+	title = aba_hetmanate.3.t
+	desc = aba_hetmanate.3.d
+	picture = CHURCH_ESTATE_1_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {	
+		name = aba_hetmanate.3.a	
+		ai_chance = { factor = 2 }
+		tooltip = {
+			custom_tooltip = ABA_HTM_CATHOLIC_PROVINCES
+			volhynia_area = {
+				add_devastation = 50
+				change_religion = orthodox
+			}
+			red_ruthenia_area = {
+				add_devastation = 50
+				change_religion = orthodox
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						area = volhynia_area
+						religion = catholic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						area = volhynia_area
+						religion = catholic
+					}
+					add_devastation = 50
+					change_religion = orthodox
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						area = red_ruthenia_area
+						religion = catholic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						area = red_ruthenia_area
+						religion = catholic
+					}
+					add_devastation = 50
+					change_religion = orthodox
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = ab_russia_patriarchate_rus
+		custom_tooltip = PNN_METRO
+		custom_tooltip = AB_EMPTY
+		set_country_flag = htm_enforced_unity_privilege_buff
+		custom_tooltip = HTM_ENFORCED_UNITY_PRIVILEGE
+	}
+	option = {	
+		name = aba_hetmanate.3.b	
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = theologian
+			skill = 3
+			cost_multiplier = 0.67
+		}
+		custom_tooltip = AB_EMPTY
+		tooltip = {
+			custom_tooltip = ABA_HTM_CATHOLIC_PROVINCES
+			volhynia_area = {
+				add_prosperity = 50
+				add_province_modifier = {
+					name = aba_htm_uniate_church
+					duration = -1
+				}
+			}
+			red_ruthenia_area = {
+				add_prosperity = 50
+				add_province_modifier = {
+					name = aba_htm_uniate_church
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						area = volhynia_area
+						religion = catholic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						area = volhynia_area
+						religion = catholic
+					}
+					add_prosperity = 50
+					add_province_modifier = {
+						name = aba_htm_uniate_church
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						area = red_ruthenia_area
+						religion = catholic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						area = red_ruthenia_area
+						religion = catholic
+					}
+					add_prosperity = 50
+					add_province_modifier = {
+						name = aba_htm_uniate_church
+						duration = -1
+					}
+				}
+			}
+		}
+		set_country_flag = htm_interfaith_buff
+		custom_tooltip = HTM_ENFORCED_INTERFAITH_PRIVILEGE
+	}
+}

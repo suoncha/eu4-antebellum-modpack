@@ -1437,3 +1437,82 @@ estate_burghers_german_woods_expansion = {
 		}
 	}
 }
+
+### ABA ####
+ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION = {
+	icon = estate_church_union_of_the_churches
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION }
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unlocked_privilege_estate_burghers_pln_freedom_of_religion_tt
+			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION }
+		}
+		any_owned_province = {
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_pln_freedom_of_religion_gt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = {
+					religion = ROOT
+				}
+			}
+			add_province_modifier = {
+				name = estate_burghers_pln_freedom_of_religion
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_pln_freedom_of_religion_revoke
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_pln_freedom_of_religion
+			}
+			remove_province_modifier = estate_burghers_pln_freedom_of_religion
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_pln_freedom_of_religion
+			}
+			remove_province_modifier = estate_burghers_pln_freedom_of_religion
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				NOT = {
+					religion = ROOT
+				}
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}

@@ -848,7 +848,7 @@ cossack_second_group = {
 				tooltip = {
 					add_country_modifier = {
 						name = htm_warriors
-						duration = 9125
+						duration = -1
 					}
 				}
 			}
@@ -857,7 +857,7 @@ cossack_second_group = {
 				tooltip = {
 					add_country_modifier = {
 						name = htm_warriors
-						duration = 9125
+						duration = -1
 					}
 				}
 			}

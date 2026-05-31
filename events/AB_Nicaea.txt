@@ -2204,7 +2204,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ab_byzantium.40.b
+		name = ab_nicaea.12.b
 		add_patriarch_authority = 0.05
 	}
 }
@@ -2833,7 +2833,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ab_byzantium.22.b
+		name = ab_nicaea.22.b
 		add_prestige_or_monarch_power = { amount = 10 } 
 		capital_scope = {
 			spawn_rebels = {
@@ -2890,7 +2890,7 @@ country_event = {
 	}
 	
 	option = {
-		name = ab_byzantium.23.b
+		name = ab_nicaea.23.b
 		add_legitimacy = 10
 		capital_scope = {
 			spawn_rebels = {
