@@ -234,6 +234,15 @@ estate_burghers_enforced_interfaith_dialogue = {
 		}
 	}
 	# ]]]
+	# ABA [[[
+	conditional_modifier = {
+		trigger = { has_country_flag = htm_interfaith_buff }
+		modifier = {
+			global_manpower_modifier = 0.10
+			max_absolutism = 5
+		}
+	}
+	# ]]]
 	ai_will_do = {
 		factor = 0
 	}
