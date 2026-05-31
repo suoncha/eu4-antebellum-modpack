@@ -1,0 +1,50 @@
+guiTypes = {
+	windowType = { # Copied and adjusted from government_interaction_type
+		name = "commonwealth_gov_mech"
+		size = { x = 300 y = 28 }
+		moveable = 0
+		
+
+		# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_egyptian_westernization_power_bar"
+			position = { x = 28 y = 4 }
+		}
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_egyptian_westernization_frame"
+			alwaystransparent = yes
+			position = { x = 4 y = 0 }
+		}
+	}
+
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "commonwealth_interaction_button"
+		size = { x = 95 y = 82 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		#bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_government_power_bar"
+			position = { x = 20 y = 77 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_government_power_bar_frame"
+			position = { x = 6 y = 74 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}

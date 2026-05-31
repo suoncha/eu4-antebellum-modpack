@@ -8043,6 +8043,15 @@ kiev_pechersk_lavra = {
 				mission_completed = litc_mother
 			}
 			owner = {
+				AND = {
+					OR = {
+						tag = PLN
+						was_tag = PLN
+					}
+					mission_completed = pol_catholic_mother_of_cities
+				}
+			}
+			owner = {
 				tag = UKR
 				religion = catholic
 			}
@@ -8054,10 +8063,6 @@ kiev_pechersk_lavra = {
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
-			custom_trigger_tooltip = {
-             tooltip = aba_pol_build_lavra_monument_tt
-             has_country_flag = aba_unlock_lavra_tt
-            }
 		}
 	}
 
@@ -8088,11 +8093,13 @@ kiev_pechersk_lavra = {
 				mission_completed = glh_restore_kiev
 			}
 			owner = {
-				OR = {
-					tag = PLN
-					was_tag = PLN
+				AND = {
+					OR = {
+						tag = PLN
+						was_tag = PLN
+					}
+					mission_completed = pol_catholic_mother_of_cities
 				}
-				mission_completed = pol_catholic_convert_the_larva
 			}
 			province_is_or_accepts_religion = {
 				religion = orthodox
@@ -8120,11 +8127,13 @@ kiev_pechersk_lavra = {
 				religion = orthodox
 			}
 			owner = {
-				OR = {
-					tag = PLN
-					was_tag = PLN
+				AND = {
+					OR = {
+						tag = PLN
+						was_tag = PLN
+					}
+					mission_completed = pol_catholic_mother_of_cities
 				}
-				mission_completed = pol_catholic_convert_the_larva
 			}
 		}
 	}
@@ -18218,8 +18227,13 @@ st_basil_cathedral = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = christian
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = christian
+			}
+			owner = {
+				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+			}
 		}
 	}
 
@@ -18230,14 +18244,24 @@ st_basil_cathedral = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = christian
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = christian
+			}
+			owner = {
+				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = christian
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = christian
+			}
+			owner = {
+				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+			}
 		}
 	}
 

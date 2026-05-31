@@ -1,0 +1,913 @@
+commonwealth_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 14
+	available = {
+		OR = {
+			has_reform = aba_pol_catholic_commonwealth_of_crowns
+			AND = {
+				was_tag = PLN
+				has_reform = aba_crownpoland
+			}
+		}
+	}
+	
+	powers = {
+		commonwealth_adm_power = {
+			max = 150
+			monarch_power = ADM
+			base_monthly_growth = 0.25
+		}
+		commonwealth_dip_power = {
+			max = 150
+			monarch_power = DIP
+			base_monthly_growth = 0.25
+		}
+		commonwealth_mil_power = {
+			max = 150
+			monarch_power = MIL
+			base_monthly_growth = 0.25
+		}
+		commonwealth_popular_sovereignity = {
+			gui = commonwealth_gov_mech
+			show_before_interactions = yes
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0.01
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					manpower_in_accepted_culture_provinces = 0.25
+					all_power_cost = -0.03
+					land_morale = 0.10
+					culture_conversion_time = 1
+					global_autonomy = 0.15
+				}
+			}
+			scaled_modifier = {
+				start_value = 99
+				trigger = {
+					mission_completed = pol_catholic_freedom_of_religion
+				}
+				modifier = {
+					no_religion_penalty = yes
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					mission_completed = pol_catholic_forge_the_intermarium
+				}
+				modifier = {
+					global_autonomy = -0.05
+					governing_capacity_modifier = 0.10
+					max_absolutism = 10
+				}
+			}
+		}
+	}
+
+	interactions = {
+		commonwealth_appoint_chancellor = {
+			icon = GFX_commonwealth_adm_button
+			cost_type = commonwealth_adm_power
+			trigger = {
+				AND = {
+					stability = 1
+					legitimacy = 75
+					OR = {
+						has_adm_advisor = yes
+						has_dip_advisor = yes
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_adm_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_adm_power
+				 		value = 100
+					}
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_adm_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_adm_power
+				 		value = -100
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = RUSABIL_SUDEBNIK_EFFECT_TT
+				tooltip = {
+					add_unrest = -1
+					add_local_autonomy = -5
+				}
+				hidden_effect = {
+					every_owned_province = {
+						add_unrest = -1
+						add_local_autonomy = -5
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = ABA_POL_COMMONWEALTH_CHANCELLOR_ADVISOR_TT
+				hidden_effect = {
+					random_list = {
+						33 = {
+							define_advisor = {
+								type = treasurer
+								skill = 3
+								cost_multiplier = 0.67
+							}
+						}
+						33 = {
+							define_advisor = {
+								type = statesman
+								skill = 3
+								cost_multiplier = 0.67
+							}
+						}
+						33 = {
+							define_advisor = {
+								type = diplomat
+								skill = 3
+								cost_multiplier = 0.67
+							}
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = aba_pol_commonwealth_appointed_grand_chancellor
+						}
+					}
+					custom_tooltip = ABA_POL_COMMONONWEALTH_CHANCELLOR_EVENT_YES
+					country_event = {
+						id = aba_commonwealth_mechanic_events.1
+					}
+				}
+				else = {
+					custom_tooltip = ABA_POL_COMMONONWEALTH_CHANCELLOR_EVENT_NO
+					tooltip = {
+						country_event = {
+							id = aba_commonwealth_mechanic_events.1
+						}
+					}
+				}
+			}
+			cooldown_years = 20
+			ai_chance = {
+				factor = 100
+			}
+		}
+		commonwealth_cooperate_with_magnates = {
+			icon = GFX_commonwealth_dip_button
+			cost_type = commonwealth_dip_power
+			trigger = {
+				OR = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_cossacks
+						loyalty = 60
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ABA_POL_COMMONWEALTH_ACCEPTED_CULTURES_MAGNATES
+						AND = {
+							OR = {
+								accepted_culture = russian
+								calc_true_if = {
+									amount = 1
+									accepted_culture = ruthenian
+									accepted_culture = russian_culture
+									accepted_culture = byelorussian
+									accepted_culture = volhynian
+								}
+							}
+							OR = {
+								accepted_culture = litvin_westslavic
+								accepted_culture = lithuanian
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ABA_POL_POLONIZED_COMMONWEALTH
+						has_country_flag = aba_pol_polonize_rus
+						NOT = {
+							has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_dip_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_dip_power
+				 		value = 100
+					}
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_dip_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_dip_power
+				 		value = -100
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = ABA_POL_COMMONWEALTH_MAGNATE_POPULAR_SOVEREIGNTY_SCALING
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								num_of_estate_privileges = {
+									estate = estate_cossacks
+									value = 5
+								}
+								num_of_estate_privileges = {
+									estate = estate_nobles
+									value = 5
+								}
+								num_of_estate_privileges = {
+									estate = estate_church
+									value = 5
+								}
+								num_of_estate_privileges = {
+									estate = estate_burghers
+									value = 5
+								}
+							}
+						}
+						add_government_power = {
+							mechanic_type = commonwealth_mechanic
+							power_type = commonwealth_popular_sovereignity
+				 			value = 5
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								num_of_estate_privileges = {
+									estate = estate_cossacks
+									value = 4
+								}
+								num_of_estate_privileges = {
+									estate = estate_nobles
+									value = 4
+								}
+								num_of_estate_privileges = {
+									estate = estate_church
+									value = 4
+								}
+								num_of_estate_privileges = {
+									estate = estate_burghers
+									value = 4
+								}
+							}
+						}
+						add_government_power = {
+							mechanic_type = commonwealth_mechanic
+							power_type = commonwealth_popular_sovereignity
+				 			value = 4
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								num_of_estate_privileges = {
+									estate = estate_cossacks
+									value = 3
+								}
+								num_of_estate_privileges = {
+									estate = estate_nobles
+									value = 3
+								}
+								num_of_estate_privileges = {
+									estate = estate_church
+									value = 3
+								}
+								num_of_estate_privileges = {
+									estate = estate_burghers
+									value = 3
+								}
+							}
+						}
+						add_government_power = {
+							mechanic_type = commonwealth_mechanic
+							power_type = commonwealth_popular_sovereignity
+				 			value = 3
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								num_of_estate_privileges = {
+									estate = estate_cossacks
+									value = 2
+								}
+								num_of_estate_privileges = {
+									estate = estate_nobles
+									value = 2
+								}
+								num_of_estate_privileges = {
+									estate = estate_church
+									value = 2
+								}
+								num_of_estate_privileges = {
+									estate = estate_burghers
+									value = 2
+								}
+							}
+						}	
+						add_government_power = {
+							mechanic_type = commonwealth_mechanic
+							power_type = commonwealth_popular_sovereignity
+				 			value = 2
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								num_of_estate_privileges = {
+									estate = estate_cossacks
+									value = 1
+								}
+								num_of_estate_privileges = {
+									estate = estate_nobles
+									value = 1
+								}
+								num_of_estate_privileges = {
+									estate = estate_church
+									value = 1
+								}
+								num_of_estate_privileges = {
+									estate = estate_burghers
+									value = 1
+								}
+							}
+						}
+						add_government_power = {
+							mechanic_type = commonwealth_mechanic
+							power_type = commonwealth_popular_sovereignity
+				 			value = 1
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = ABA_POL_COMMONWEALTH_MAGNATE_ESTATE_INCREASE
+				hidden_effect = {
+					if = {
+						limit = {
+							has_estate = estate_nobles
+							NOT = {
+								has_estate_influence_modifier = {
+									estate = estate_nobles
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+								has_estate_loyalty_modifier = {
+									estate = estate_nobles
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+							}
+						}
+						add_estate_loyalty_modifier = {
+							estate = estate_nobles
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							loyalty = 5
+							duration = 7300
+						}
+						add_estate_influence_modifier = {
+							estate = estate_nobles
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							influence = 10
+							duration = 7300
+						}
+					}
+					if = {
+						limit = {
+							has_estate = estate_burghers
+							NOT = {
+								has_estate_influence_modifier = {
+									estate = estate_burghers
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+								has_estate_loyalty_modifier = {
+									estate = estate_burghers
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+							}
+						}
+						add_estate_loyalty_modifier = {
+							estate = estate_burghers
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							loyalty = 5
+							duration = 7300
+						}
+						add_estate_influence_modifier = {
+							estate = estate_burghers
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							influence = 10
+							duration = 7300
+						}
+					}
+					if = {
+						limit = {
+							has_estate = estate_cossacks
+							NOT = {
+								has_estate_influence_modifier = {
+									estate = estate_cossacks
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+								has_estate_loyalty_modifier = {
+									estate = estate_cossacks
+									modifier = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+								}
+							}
+						}
+						add_estate_loyalty_modifier = {
+							estate = estate_cossacks
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							loyalty = 5
+							duration = 7300
+						}
+						add_estate_influence_modifier = {
+							estate = estate_cossacks
+							desc = ABA_POL_COMMONWEALTH_MAGNATE_LI_INCREASE
+							influence = 10
+							duration = 7300
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = aba_pol_cooperated_with_magnates
+						}
+					}
+					custom_tooltip = ABA_POL_COMMONONWEALTH_MAGNATE_EVENT_YES
+					country_event = {
+						id = aba_commonwealth_mechanic_events.2
+					}
+				}
+				else = {
+					custom_tooltip = ABA_POL_COMMONONWEALTH_MAGNATE_EVENT_NO
+					tooltip = {
+						country_event = {
+							id = aba_commonwealth_mechanic_events.2
+						}
+					}
+				}
+			}
+			cooldown_years = 20
+			ai_chance = {
+				factor = 100
+			}
+		}
+		commonwealth_appoint_new_grand_hetman = {
+			icon = GFX_commonwealth_mil_button
+			cost_type = commonwealth_mil_power
+			trigger = {
+				army_tradition = 30
+				army_professionalism = 0.2
+				num_of_generals = 3
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_mil_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_mil_power
+				 		value = 100
+					}
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_country_flag = aba_pol_interaction_cost_buff
+					}
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_mil_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = commonwealth_mechanic
+						power_type = commonwealth_mil_power
+				 		value = -100
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = aba_pol_catholic_mil_interaction_buff1
+						}
+					}
+					tooltip = {
+						if = {
+							limit = {
+								NOT = {
+									army_tradition = 30
+								}	
+							}
+							create_general = { tradition = 30 }
+						}
+						else = {
+							create_general = { tradition = 50 }
+						}
+					}
+					custom_tooltip = ABA_POL_COMMONWEALTH_MIL_GENERAL_TT_1
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = {
+									army_tradition = 30
+								}
+							}
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_shock = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_fire = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_manuever  = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_siege = 1
+									}
+								}
+							}
+						}
+						else = {
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_shock = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_fire = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_manuever  = 1
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_siege = 1
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					tooltip = {
+						if = {
+							limit = {
+								NOT = {
+									army_tradition = 30
+								}	
+							}
+							create_general = { tradition = 30 }
+						}
+						else_if = {
+							limit = {
+								NOT = { army_tradition = 50 }
+							}
+							create_general = { tradition = 50 }
+						}
+						else_if = {
+							limit = {
+								NOT = { army_tradition = 75 } 
+							}
+							create_general = { tradition = 75 }
+						}
+						else = {
+							create_general = { tradition = 100 }
+						}
+					}
+					custom_tooltip = ABA_POL_COMMONWEALTH_MIL_GENERAL_TT_2
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = {
+									army_tradition = 30
+								}
+							}
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_shock = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_fire = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_manuever  = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 30
+										add_siege = 2
+									}
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								NOT = {
+									army_tradition = 50
+								}
+							}
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_shock = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_fire = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_manuever  = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 50
+										add_siege = 2
+									}
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								NOT = {
+									army_tradition = 75
+								}
+							}
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 75
+										add_shock = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 75
+										add_fire = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 75
+										add_manuever  = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 75
+										add_siege = 2
+									}
+								}
+							}
+						}
+						else = {
+							random_list = {
+								25 = {
+									create_general_with_pips = {
+										tradition = 100
+										add_shock = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 100
+										add_fire = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 100
+										add_manuever  = 2
+									}
+								}
+								25 = {
+									create_general_with_pips = {
+										tradition = 100
+										add_siege = 2
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip =  ABA_POL_COMMONWEALTH_MIL_ADVISOR_BUFF
+				hidden_effect = {
+					if = {
+						limit = {
+							employed_advisor = {
+								type = army_reformer
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_1
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = army_organiser
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_2
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = commandant
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_3
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = grand_captain
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_4
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = recruitmaster
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_5
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = fortification_expert
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_6
+							duration = 7300
+							hidden = yes
+						}
+					}
+					else_if = {
+						limit = {
+							employed_advisor = {
+								type = quartermaster
+							}
+						}
+						add_country_modifier = {
+							name = aba_pol_commonwealth_hetman_advisor_7
+							duration = 7300
+							hidden = yes
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = aba_pol_commonwealth_appointed_hetman
+						}
+					}
+					custom_tooltip = ABA_POL_COMMONONWEALTH_HETMAN_EVENT_YES
+					country_event = {
+						id = aba_commonwealth_mechanic_events.3
+					}
+				}
+				else = {
+					custom_tooltip = ABA_POL_COMMONONWEALTH_HETMAN_EVENT_NO
+					tooltip = {
+						country_event = {
+							id = aba_commonwealth_mechanic_events.3
+						}
+					}
+				}
+			}
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+}

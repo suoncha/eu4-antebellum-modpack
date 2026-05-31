@@ -13,12 +13,29 @@ crownpoland = {
 			was_tag = LUD
 			tag = MAZ
 			tag = VIS
-			tag = PLN
+		}
+		NOT = {
+			OR = {
+				was_tag = PLN
+				tag = PLN
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = AB_EMPTY
+			NOT = {
+				has_country_flag = aba_pln_crownpoland_popular
+			}
 		}
 	}
 	trigger = {
 		if = {
 			limit = {
+				custom_trigger_tooltip = {
+					tooltip = AB_EMPTY
+					NOT = {
+						has_country_flag = aba_pln_crownpoland_popular
+					}
+				}
 				OR = {
 					has_reform = crownpoland
 					tag = POL
@@ -39,6 +56,59 @@ crownpoland = {
 		legitimacy = 1
 		global_unrest = -1
 	}
+
+}
+
+aba_crownpoland = {
+	icon = "integrated_sejmiks_reform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+		OR = {
+			tag = PLN
+			was_tag = PLN
+		}
+		custom_trigger_tooltip = {
+			tooltip = AB_EMPTY
+			has_country_flag = aba_pln_crownpoland_popular
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				custom_trigger_tooltip = {
+					tooltip = AB_EMPTY
+					has_country_flag = aba_pln_crownpoland_popular
+				}
+				AND = {
+					has_reform = aba_crownpoland
+					OR = {
+						tag = POL
+						tag = PLC
+					}
+				}
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = AB_CROWN_POLAND_VIA_DECISION
+				always = no
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		legitimacy = 1
+		global_unrest = -1
+	}
+
+	government_abilities = {
+		commonwealth_mechanic
+	}
+
 }
 
 polszlachta = {
@@ -64,6 +134,93 @@ polszlachta = {
 	custom_attributes = {
 		recruiting_generals_increases_nobles_loyalty = yes
 	}
+	ai = {
+		factor = 3
+	}
+}
+
+aba_pol_catholic_henrician_articles = {
+	icon = "house_of_lords"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = aba_pol_catholic_henrician_articles
+		}
+	}
+	modifiers = {
+		num_accepted_cultures = 3
+		all_estate_influence_modifier = 0.05
+		all_estate_loyalty_equilibrium = 0.05
+		reform_progress_growth = 0.15
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+aba_pol_catholic_commonwealth_of_crowns = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = no
+
+	lock_level_when_selected = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = aba_pol_catholic_commonwealth_of_crowns
+		}
+	}
+
+	fixed_rank = 3
+
+	modifiers = {
+		governing_capacity = 350
+		global_unrest = -2
+		possible_policy = 1
+		global_autonomy = -0.05
+		no_stability_loss_on_monarch_death = yes
+		parliament_backing_chance = 0.25
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.20
+	}
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+
+	government_abilities = {
+		commonwealth_mechanic
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+
+aba_pol_catholic_republic_of_three_nations_reform = {
+	icon = "fist_in_air"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = aba_pol_catholic_republic_of_three_nations_reform
+		}
+	}
+	modifiers = {
+		administrative_efficiency = 0.05
+		state_governing_cost = -0.15
+		province_warscore_cost = -0.15
+		max_absolutism = -15
+		min_autonomy_in_territories = 0.1
+	}
+	custom_attributes = {
+		enables_recruit_foreign_generals = yes
+		manpower_from_defeating_armies = yes
+	}
+
 	ai = {
 		factor = 3
 	}
@@ -145,10 +302,36 @@ polhusaria = {
 			tag = VIS
 			tag = PLN
 		}
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = aba_pol_catholic_husaria_buffed
+			}
+		}
 	}
 	modifiers = {
 		amount_of_hussars = 6
 		cav_to_inf_ratio = 0.25
+	}
+	custom_attributes = {
+		army_tradition_on_stackwipe = yes
+	}
+	ai = {
+		factor = 300
+	}
+}
+
+aba_pol_catholic_husaria_buffed = {
+	icon = "polhusaria"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Lions of the North"
+		has_unlocked_government_reform = {
+			government_reform = aba_pol_catholic_husaria_buffed
+		}
+	}
+	modifiers = {
+		amount_of_hussars = 12
+		cav_to_inf_ratio = 0.50
 	}
 	custom_attributes = {
 		army_tradition_on_stackwipe = yes

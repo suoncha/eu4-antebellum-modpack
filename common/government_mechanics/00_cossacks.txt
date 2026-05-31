@@ -41,6 +41,9 @@ cossacks_mechanic = {
 						power_type = cossacks_adm_power
 						value = -100
 				}
+				custom_tooltip = AB_EMPTY
+				add_yearly_manpower = 0.5
+				custom_tooltip = AB_EMPTY
 				hidden_effect = {
 					random_rival_country = {
 						limit = {
@@ -63,22 +66,46 @@ cossacks_mechanic = {
 					}
 				}			
 				custom_tooltip = fleeing_serfs_tt
+				custom_tooltip = AB_EMPTY
 				hidden_effect = {
-					random_owned_province = {
+					if = {
 						limit = {
-							OR = {
-								not = { religion = event_target:source_country }
-								AND = {
-									not = { 
-										event_target:source_country = {
-											accepted_culture = prev
+							has_country_flag = aba_htm_recieve_fleeing_serfs_buff
+						}
+						random_owned_province = {
+							limit = {
+								OR = {
+									not = { religion = event_target:source_country }
+									AND = {
+										not = { 
+											event_target:source_country = {
+												accepted_culture = prev
+											}
 										}
+										not = { culture = event_target:source_country }
 									}
-									not = { culture = event_target:source_country }
 								}
 							}
+							add_random_development = 2
 						}
-						add_random_development = 1
+					}
+					else = {
+						random_owned_province = {
+							limit = {
+								OR = {
+									not = { religion = event_target:source_country }
+									AND = {
+										not = { 
+											event_target:source_country = {
+												accepted_culture = prev
+											}
+										}
+										not = { culture = event_target:source_country }
+									}
+								}
+							}
+							add_random_development = 1
+						}
 					}
 				}
 				event_target:source_country = {

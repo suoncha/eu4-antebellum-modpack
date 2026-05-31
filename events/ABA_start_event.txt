@@ -19,6 +19,9 @@ country_event = {
 				value = 0
 			}
 		}
+		PLN = {
+			set_country_flag = aba_pln_crownpoland_popular
+		}
     }
 }
 

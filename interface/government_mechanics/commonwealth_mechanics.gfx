@@ -1,0 +1,25 @@
+spriteTypes = {
+
+	### 11 TABLE OF RANKS ###
+	spriteType = {
+		name = "GFX_commonwealth_adm_button"
+		texturefile = "gfx/interface/government_mechanics/table_of_ranks/table_of_ranks_adm_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_commonwealth_dip_button"
+		texturefile = "gfx/interface/government_mechanics/table_of_ranks/table_of_ranks_dip_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_commonwealth_mil_button"
+		texturefile = "gfx/interface/government_mechanics/table_of_ranks/table_of_ranks_mil_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+}

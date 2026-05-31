@@ -779,7 +779,6 @@ aba_slavic_pol_orthodox_first = {
 					duration = -1
 				}
 			}
-
 		}
 	}
 

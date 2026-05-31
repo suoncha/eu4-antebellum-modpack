@@ -1,0 +1,355 @@
+namespace = aba_commonwealth_mechanic_events
+
+
+#Appoint a Grand Chancellor of the Crown
+country_event = {
+	id = aba_commonwealth_mechanic_events.1
+	title = aba_commonwealth_mechanic_events.1.t
+	desc = aba_commonwealth_mechanic_events.1.d
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = aba_pol_commonwealth_appointed_grand_chancellor
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.1.a
+		trigger = {
+			poland_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = aba_pol_catholic_adm_interaction_buff1
+			}
+			add_ruler_modifier = {
+				name = aba_pol_polish_chancellor_buffed
+				duration = -1
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = aba_pol_polish_chancellor_default
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.1.b
+		trigger = {
+			ruthenia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = aba_pol_catholic_adm_interaction_buff2
+			}
+			add_ruler_modifier = {
+				name = aba_pol_ruthenian_chancellor_buffed
+				duration = -1
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = aba_pol_ruthenian_chancellor_default
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.1.c
+		trigger = {
+			baltic_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = aba_pol_catholic_adm_interaction_buff3
+			}
+			add_ruler_modifier = {
+				name = aba_pol_litvin_chancellor_buffed
+				duration = -1
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = aba_pol_litvin_chancellor_default
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.1.f
+		add_ruler_modifier = {
+			name = aba_pol_russian_chancellor_default
+			duration = -1
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.1.e
+		trigger = {
+			has_country_flag = aba_pol_commonwealth_tartar_access
+		}
+		add_ruler_modifier = {
+			name = aba_pol_tartar_chancellor_default
+			duration = -1
+		}
+	}
+}
+
+#Cooperate with Magnates
+country_event = {
+	id = aba_commonwealth_mechanic_events.2
+	title = aba_commonwealth_mechanic_events.2.t
+	desc = aba_commonwealth_mechanic_events.2.d
+	picture = PARLIAMENT_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = aba_pol_commonwealth_cooperated_with_magnates
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.2.a
+		trigger = {
+			poland_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		random_list = {
+			33 = {
+				add_ruler_modifier = {
+					name = aba_pol_potocki_magnates
+					duration = -1
+				}
+			}
+			33 = {
+				add_ruler_modifier = {
+					name = aba_pol_kniecpolski_magnates
+					duration = -1
+				}
+			}
+			33 = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = aba_pol_commonwealth_zamosc_buff
+						}
+					}
+					add_ruler_modifier = {
+						name = aba_pol_zamoyski_magnates
+						duration = -1
+					}
+				}
+				else  = {
+					add_ruler_modifier = {
+						name = aba_pol_zamoyski_magnates_buffed
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.2.b
+		trigger = {
+			ruthenia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		random_list = {
+			33 = {
+				add_ruler_modifier = {
+					name = aba_pol_czartorsyki_magnates
+					duration = -1
+				}
+			}
+			33 = {
+				add_ruler_modifier = {
+					name = aba_pol_ostrogski_magnates
+					duration = -1
+				}
+			}
+			33 = {
+				add_ruler_modifier = {
+					name = aba_pol_wisniowiecki_magnates
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.2.c
+		trigger = {
+			baltic_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_country_flag = aba_pol_catholic_dip_interaction_buff1
+		}
+		random_list = {
+			50 = {
+				add_ruler_modifier = {
+					name = aba_pol_kesglia_magnates
+					duration = -1
+				}
+			}
+			50 = {
+				add_ruler_modifier = {
+				name = aba_pol_radziwill_magnates
+				duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.2.f
+		trigger = {
+			russia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_country_flag = aba_pol_catholic_dip_interaction_buff2
+		}
+		random_list = {
+			50 = {
+				add_ruler_modifier = {
+					name = aba_pol_bogdanov_magnates
+					duration = -1
+				}
+			}
+			50 = {
+				add_ruler_modifier = {
+				name = aba_pol_rurikids_magnates
+				duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.2.e
+		trigger = {
+			has_country_flag = aba_pol_commonwealth_tartar_access
+		}
+		random_list = {
+			50 = {
+				add_ruler_modifier = {
+					name = aba_pol_tokhtamysh_magnates
+					duration = -1
+				}
+			}
+			50 = {
+				add_ruler_modifier = {
+				name = aba_pol_tartarzy_gorscy_magnates
+				duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Appoint Grand Crown Hetman
+country_event = {
+	id = aba_commonwealth_mechanic_events.3
+	title = aba_commonwealth_mechanic_events.3.t
+	desc = aba_commonwealth_mechanic_events.3.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = aba_pol_commonwealth_appointed_hetman
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.3.a
+		trigger = {
+			poland_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		add_ruler_modifier = {
+			name = aba_pol_polish_hetman
+			duration = -1
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.3.b
+		trigger = {
+			ruthenia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		add_ruler_modifier = {
+			name = aba_pol_ruthenian_hetman
+			duration = -1
+		}
+		add_ruler_modifier = {
+			name = aba_pol_ruthenian_hetman_cossacks
+			duration = -1
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.3.c
+		trigger = {
+			baltic_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		add_ruler_modifier = {
+			name = aba_pol_litvin_hetman
+			duration = -1
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.3.f
+		trigger = {
+			russia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		add_ruler_modifier = {
+			name = aba_pol_russian_hetman
+			duration = -1
+		}
+	}
+
+	option = {
+		name = aba_commonwealth_mechanic_events.3.e
+		trigger = {
+			has_country_flag = aba_pol_commonwealth_tartar_access
+		}
+		add_ruler_modifier = {
+			name = aba_pol_tartar_hetman
+			duration = -1
+		}
+	}
+}
+
+
