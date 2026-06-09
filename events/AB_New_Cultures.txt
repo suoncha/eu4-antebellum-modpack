@@ -872,109 +872,159 @@ province_event = {
 
 #Cossack Culture Spread (UKR/Russ/HET) Spread 
 province_event = {
-	id = ab_new_cultures.23
-	title = ab_new_cultures.23.t
-	desc = ab_new_cultures.23.d
-	picture = CULTURE_eventPicture
+    id = ab_new_cultures.23
+    title = ab_new_cultures.23.t
+    desc = ab_new_cultures.23.d
+    picture = CULTURE_eventPicture
 
-	hidden = yes
+    hidden = yes
 
-	mean_time_to_happen = {
-		months = 240
-	}
+    mean_time_to_happen = {
+        months = 240
 
-	trigger = {
-		owner = {
-			has_country_flag = abf_ukr_cossack_culture_spread
-		}
-		religion = ROOT
-		NOT = {
-			culture_group = east_slavic
-		}
-		OR = {
-			    area = crimea_area
-				area = yedisan_area
-				area = zaporizhia_area 
-				area = azov_area
-				area = lower_don_area
-				area = circassia_area
-				area = dagestan_area
-				area = astrakhan_area
-				area = saratov_area
-				area = samara_area
-				area = volga_area
-				area = kazan_area
-				area = lower_yik_area
-				area = bashkiria_area
-				area = galich_area
-				area = perm_area
-				area = kama_area
-				area = nogai_area
-	  }
-	}
+        modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
 
-	option = {
-		name = ab_new_cultures.23.a
-		if = { 
-			limit = {  #Black Sea 
-				OR = {
-				area = crimea_area
-				area = yedisan_area
-				area = zaporizhia_area 
-				}
-			}
-			change_culture = aba_chernomoriya_cossack_culture
-		}
-		else_if = {
-			limit = { #Don
-				OR = {
-				area = azov_area
-				area = lower_don_area
+    trigger = {
+        religion = ROOT
+        NOT = {
+            culture_group = east_slavic
+        }
+        OR = {
+            AND = {
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = aba_htm_chernomoriya_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = azov_area
+                    area = lower_don_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = aba_htm_don_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = circassia_area
+                    area = dagestan_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = aba_htm_terek_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                    area = samara_area
+                    area = volga_area
+                    area = kazan_area
+                    area = tambov_area 
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = aba_htm_povolzyhe_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = lower_yik_area
+                    area = bashkiria_area
+                    area = galich_area
+                    area = perm_area
+                    area = kama_area
+                    area = nogai_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = aba_htm_uralskyie_culture_spread
+                    }
+                }
+            }
+        }
+    }
 
-				}
-			}
-			change_culture = aba_don_cossack_culture
-		}
-		else_if = { #Caucausia
-			limit = {
-				OR = {
-				area = circassia_area
-				area = dagestan_area
-				}
-			}
-			change_culture = aba_terek_cossack_culture
-		}
-		else_if = { # Volga
-			limit = {
-				OR = {
-				area = astrakhan_area
-				area = saratov_area
-				area = samara_area
-				area = volga_area
-				area = kazan_area
-				area = tambov_area
-				}
-			}
-			change_culture = aba_povolzyhe_cossack_culture
-		}
-		else_if = { # Yik
-			limit = {
-				OR = {
-				area = lower_yik_area
-				area = bashkiria_area
-				area = galich_area
-				area = perm_area
-				area = kama_area
-				area = nogai_area
-				}
-			}
-			change_culture = aba_uralskiye_cossack_culture
-		}
-		else = {
-			change_culture = ruthenian
-		}
-	}
-
+    option = {
+        name = ab_new_cultures.23.a
+        if = { 
+            limit = {  #Black Sea 
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+            }
+            change_culture = aba_chernomoriya_cossack_culture
+        }
+        else_if = {
+            limit = { #Don
+                OR = {
+                    area = azov_area
+                    area = lower_don_area
+                }
+            }
+            change_culture = aba_don_cossack_culture
+        }
+        else_if = { #Caucausia
+            limit = {
+                OR = {
+                    area = circassia_area
+                    area = dagestan_area
+                }
+            }
+            change_culture = aba_terek_cossack_culture
+        }
+        else_if = { # Volga
+            limit = {
+                OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                    area = samara_area
+                    area = volga_area
+                    area = kazan_area
+                    area = tambov_area
+                }
+            }
+            change_culture = aba_povolzyhe_cossack_culture
+        }
+        else_if = { # Yik
+            limit = {
+                OR = {
+                    area = lower_yik_area
+                    area = bashkiria_area
+                    area = galich_area
+                    area = perm_area
+                    area = kama_area
+                    area = nogai_area
+                }
+            }
+            change_culture = aba_uralskiye_cossack_culture
+        }
+    }
 }
 
 #Pomorian Culture Spread in North (Novogorod) Spread 
@@ -1027,6 +1077,13 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
 	}
 
 	trigger = {
@@ -1098,6 +1155,13 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
 	}
 
 	trigger = {
@@ -1110,10 +1174,23 @@ province_event = {
 				culture_group = east_slavic
 			}
 		}
-		OR = {
-		 culture = khazak
-		 culture = kirgiz
-	  }
+		if = { 
+			limit = {
+				owner = {
+					AND = {
+						has_country_flag = abf_nagaybak_culture_spread
+						has_country_flag = aba_htm_nagaybak_culture_expanded_spread
+					}
+				}
+			}
+			region = central_asia_region
+		}
+		else  = {
+			OR = {
+				culture = khazak
+				culture = kirgiz
+	  		}
+		}
 	}
 
 	option = {
@@ -1210,6 +1287,13 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
 	}
 
 	trigger = {
@@ -1488,7 +1572,7 @@ province_event = {
 	}
 }
 
-#Polonized Central Asia (Nagaibaks) Spread
+#Polonized Manchuria (Harbiner) Spread
 province_event = {
 	id = ab_new_cultures.38
 	title = ab_new_cultures.38.t
@@ -1516,6 +1600,45 @@ province_event = {
 
 	option = {
 		name = ab_new_cultures.38.a
+		change_culture = aba_polish_west_harbiner
+	}
+}
+
+#Cossack Budjak (Carpathia) Spread
+province_event = {
+	id = ab_new_cultures.39
+	title = ab_new_cultures.39.t
+	desc = ab_new_cultures.39.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			has_country_flag = aba_budjak_culture_spread
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = east_slavic
+		}
+		OR = {
+			region = carpathia_region
+	  	}
+	}
+
+	option = {
+		name = ab_new_cultures.39.a
 		change_culture = aba_polish_west_harbiner
 	}
 }

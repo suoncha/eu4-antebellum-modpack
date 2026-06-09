@@ -7,6 +7,18 @@ on_startup = {
 		country_event = {
 			id = ABA_start.0
 		}
+		#HTM
+		if = {
+			limit = {
+				OR = {
+					has_government_mechanic = cossacks_mechanic
+					has_government_mechanic = cossack_militarization_abilities_mechanic
+				}
+			}
+			country_event = {
+				id = ABA_start.1
+			}
+		}
 	}
 }
 
@@ -68,11 +80,25 @@ on_new_monarch = {
 }
 
 on_general_recruited = {
+	#POL/LUD
 	if = {
 		limit = {
 			has_country_flag = abf_pol_tribal_leaders_loyalty
 		}
 		add_estate_loyalty = { estate = estate_nobles loyalty = 2.5 }
+	}
+	#HTM 
+	if = {
+		limit = {
+			has_country_modifier = aba_htm_expand_military_council
+		}
+		change_government_reform_progress = 10
+	}
+	if = {
+		limit = {
+			has_country_flag = aba_htm_cossack_general_loyalty_gain
+		}
+		add_estate_loyalty = { estate = estate_cossacks loyalty = 2.50 }
 	}
 }
 
@@ -95,20 +121,57 @@ on_cossack_raised = {
 				has_country_flag = aba_htm_cossack_raised_loyalty
 			}
 		}
-		add_estate_loyalty = { estate = estate_cossacks loyalty = 2.5 }
+		add_estate_loyalty = { estate = estate_cossacks loyalty = 0.25 }
 	}
-	#HTM
 	if = {
 		limit = {
 			owner = {
 				has_country_flag = aba_htm_cossack_refund
 			}
 		}
-		add_manpower = 0.25
+		owner = {
+			add_manpower = 0.25
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = enables_aba_htm_cossack_professionalism 
+			}
+		}
+		owner = {
+			add_army_professionalism = 0.001
+		}
+	}
+}
+
+on_holy_order_established = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = aba_htm_regiment_district_buff_flag
+			}
+			OR = {
+				holy_order = aba_htm_chyhyryn_order
+				holy_order = aba_htm_poltava_order
+				holy_order = aba_htm_nizhyn_order
+				holy_order = aba_htm_lubny_order
+				holy_order = aba_htm_starodub_order
+				holy_order = aba_htm_chernihiv_order
+			}
+			NOT = {
+				has_province_modifier = aba_htm_efficient_colonels
+			}
+		}
+		add_province_modifier = {
+            name = aba_htm_efficient_colonels
+            duration = -1
+        }
 	}
 }
 
 on_province_culture_converted = {
+	#POL/LUD
 	if = {
 		limit = {
 			owner = {
@@ -128,6 +191,7 @@ on_province_culture_converted = {
 			add_base_manpower = 1
 		}
 	}
+	#BUL
 	if = {
 		limit = {
 			owner = {
@@ -179,6 +243,49 @@ on_province_owner_change = {
 			name = aba_pol_culture_modifier
 			duration = -1
 		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+			development = 25
+		}
+		add_province_modifier = { 
+			name = aba_thriving_cities_gov_mod
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = {
+					has_government_attribute = thriving_cities_modifier	
+				}
+			}
+			has_province_modifier = aba_thriving_cities_gov_mod 
+		}
+		remove_province_modifier = aba_thriving_cities_gov_mod 
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = aba_htm_regiment_district_buff_flag
+			}
+		}
+		aba_check_buff_regiment_effect = yes
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = {
+					has_country_flag = aba_htm_regiment_district_buff_flag
+				}
+			}
+			has_province_modifier = aba_htm_efficient_colonels
+		}
+		remove_province_modifier = aba_htm_efficient_colonels
 	}
 }
 
@@ -310,6 +417,7 @@ on_culture_demoted = {
 }
 
 on_reform_enacted = {
+	#HTM
 	if = {
 		limit = {
 			owner = {
@@ -318,9 +426,57 @@ on_reform_enacted = {
 		}
 		change_government_reform_progress = 25
 	}
+	if = {
+		limit = {
+			has_government_attribute = thriving_cities_modifier
+		}
+		every_owned_province = {
+			limit = {
+				development = 25
+			}
+			add_province_modifier = { 
+				name = aba_thriving_cities_gov_mod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+
+on_reform_changed = {
+	#HTM
+	if = {
+		limit = {
+			has_government_attribute = thriving_cities_modifier
+		}
+		every_owned_province = {
+			limit = {
+				development = 25
+			}
+			add_province_modifier = { 
+				name = aba_thriving_cities_gov_mod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_government_attribute = thriving_cities_modifier
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = aba_thriving_cities_gov_mod
+			}
+			remove_province_modifier = aba_thriving_cities_gov_mod
+		}
+	}
 }
 
 on_battle_won_country = {
+	#POL
 	if = {
 		limit = {
 			has_country_flag = ABF_pol_cossack_loyalty_bonus
@@ -330,28 +486,6 @@ on_battle_won_country = {
 			estate = estate_cossacks
 			loyalty = 3
 		}
-	}
-	if = {
-		limit = {
-			has_country_flag = ABA_TCR_winning_battles_movement
-		}
-		remove_country_modifier = rmg_winning_battle
-		add_country_modifier = {
-			name = rmg_winning_battle
-			duration = 30
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_mission = lva_sword_of_perkunas
-				has_mission = lva_thunderer
-			}
-			FROM = {
-				religion_group = christian
-			}
-		}
-		change_variable = { which = ABF_num_of_won_battles_against_christians value = 1 }
 	}
 	if = {
 		limit = {
@@ -379,9 +513,69 @@ on_battle_won_country = {
 		}
 		add_war_exhaustion = -0.05
 	}
+	#TCR
+	if = {
+		limit = {
+			has_country_flag = ABA_TCR_winning_battles_movement
+		}
+		remove_country_modifier = rmg_winning_battle
+		add_country_modifier = {
+			name = rmg_winning_battle
+			duration = 30
+		}
+	}
+	#LVA
+	if = {
+		limit = {
+			OR = {
+				has_mission = lva_sword_of_perkunas
+				has_mission = lva_thunderer
+			}
+			FROM = {
+				religion_group = christian
+			}
+		}
+		change_variable = { which = ABF_num_of_won_battles_against_christians value = 1 }
+	}
+	#HTM
+	if = {
+		limit = {
+			has_country_flag = aba_htm_free_slaves_battles
+			FROM = {
+				government = tribal
+			}
+		}
+		add_yearly_manpower = 0.1
+	}
+	if = {
+		limit = {
+			has_country_flag = aba_htm_winning_battles_monarchies_rtradition
+			FROM = {
+				government = monarchy
+			}
+		}
+		add_republican_tradition = 0.05
+	}
+}
+
+on_battle_lost_country = {
+	#HTM
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_battles_cossack_fury
+			}
+		}
+		remove_country_modifier = aba_htm_cossack_fury_debuff
+		add_country_modifier = {
+			name = aba_htm_cossack_fury_debuff
+			duration = 30
+		}
+	}
 }
 
 on_tech_taken = {
+	#POL
 	if = {
 		limit = {
 			has_country_flag = ABF_pol_patronage
@@ -393,6 +587,7 @@ on_tech_taken = {
 }
 
 on_dip_development = {
+	#POL/LUD
 	if = {
 		limit = {
 			owner = {
@@ -420,17 +615,7 @@ on_dip_development = {
 			90 = { } 
 		}
 	}
-	if = { 
-		limit = { 
-			trade_goods = grain
-			trade_goods =  wine
-			owner = { has_country_flag = ABA_htm_mills } 
-		}
-		random_list = { 
-			20 = { add_base_production = 1 } 
-			80 = { } 
-		}
-	}
+	#BUL
 	if = {
 		limit = {
 			culture_group = south_slavic
@@ -443,6 +628,7 @@ on_dip_development = {
 			90 = { } 
 		}
 	}
+	#TCR
 	if = {
 		limit = {
 			has_terrain = farmlands
@@ -455,6 +641,7 @@ on_dip_development = {
 			90 = { } 
 		}
 	}
+	#ZUN
 	if = {
 		limit = {
 			culture_group = western_aryan
@@ -466,10 +653,20 @@ on_dip_development = {
 			10 = { add_base_production = 1 } 
 			90 = { } 
 		}
+	}
+	#HTM
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		aba_check_urbanization_effect = yes
 	}
 }
 
 on_adm_development = {
+	#BUL
 	if = {
 		limit = {
 			culture_group = south_slavic
@@ -497,6 +694,7 @@ on_adm_development = {
 			90 = { } 
 		}
 	}
+	#ZUN
 	if = {
 		limit = {
 			culture_group = western_aryan
@@ -509,6 +707,7 @@ on_adm_development = {
 			90 = { } 
 		}
 	}
+	#TCR
 	if = {
 		limit = {
 			has_terrain = farmlands
@@ -520,10 +719,20 @@ on_adm_development = {
 			10 = { add_base_tax = 1 } 
 			90 = { } 
 		}
+	}
+	#HTM
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		aba_check_urbanization_effect = yes
 	}
 }
 
 on_mil_development = {
+	#BUL
 	if = {
 		limit = {
 			culture_group = south_slavic
@@ -551,6 +760,7 @@ on_mil_development = {
 			90 = { } 
 		}
 	}
+	#ZUN
 	if = {
 		limit = {
 			culture_group = western_aryan
@@ -563,6 +773,7 @@ on_mil_development = {
 			90 = { } 
 		}
 	}
+	#TCR
 	if = {
 		limit = {
 			has_terrain = farmlands
@@ -574,6 +785,15 @@ on_mil_development = {
 			10 = { add_base_manpower = 1 } 
 			90 = { } 
 		}
+	}
+	#HTM
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		aba_check_urbanization_effect = yes
 	}
 }
 
@@ -590,6 +810,7 @@ on_new_monarch = {
 }
 
 on_alliance_broken = {
+	#POL
 	if = {
 		limit = {
 			has_country_modifier = ab_pol_baltic_peace
@@ -657,6 +878,7 @@ on_alliance_broken = {
 }
 
 on_culture_promoted = {
+	#POL COMMONWEALTH MECHANIC
 	if = {
 		limit = {
 			has_government_mechanic = commonwealth_mechanic
@@ -670,6 +892,7 @@ on_culture_promoted = {
 }
 
 on_culture_demoted = {
+	#POL COMMONWEALTH MECHANIC
 	if = {
 		limit = {
 			has_government_mechanic = commonwealth_mechanic
@@ -681,3 +904,93 @@ on_culture_demoted = {
 		}
 	}
 }
+
+on_monthly_pulse = {
+    #HTM/COSSACK MECHANIC --- FIRST MECHANIC: FLEEING SERFS TARGETING ---
+    if = {
+        limit = {
+            OR = {
+                has_government_mechanic = cossacks_mechanic
+                has_government_mechanic = cossack_militarization_abilities_mechanic 
+            }
+        }
+        
+        clear_global_event_target = htm_cossack_current_serf_target
+        
+        random_rival_country = {
+            limit = { is_neighbor_of = ROOT }
+            save_global_event_target_as = htm_cossack_current_serf_target
+        }
+        
+        # Fallback: If no rival was found, pick a random neighbor country
+        if = {
+            limit = {
+                NOT = { has_saved_global_event_target = htm_cossack_current_serf_target }
+            }
+            random_neighbor_country = {
+                save_global_event_target_as = htm_cossack_current_serf_target
+            }
+        }
+    }
+
+    #HTM/COSSACK MECHANIC --- SECOND MECHANIC: RAIDING TARGETING ---
+    if = {
+        limit = {
+            has_country_flag = aba_htm_raiding_parties_interaction_buff 
+            OR = {
+                has_government_mechanic = cossacks_mechanic
+                has_government_mechanic = cossack_militarization_abilities_mechanic 
+            }
+        }
+        
+        clear_global_event_target = htm_cossack_current_raid_target
+		clear_global_event_target = htm_cossack_province_raid_target
+        
+        random_war_enemy_country = {
+            limit = {
+                is_neighbor_of = ROOT
+                NOT = { tag = event_target:htm_cossack_current_serf_target }
+            }
+            save_global_event_target_as = htm_cossack_current_raid_target
+        }
+        
+        # Fallback: If not at war with a neighbor, pick an unallied neighbor
+        if = {
+            limit = {
+                NOT = { has_saved_global_event_target = htm_cossack_current_raid_target }
+            }
+            random_neighbor_country = {
+                limit = {
+                    NOT = { tag = event_target:htm_cossack_current_serf_target }
+                    NOT = {
+                        has_opinion = {
+                            who = ROOT
+                            value = 0
+                        }
+                    }
+                }
+                save_global_event_target_as = htm_cossack_current_raid_target
+            }
+        }
+
+		# PROVINCE LOCK: Now that a valid raid target country is guaranteed, 
+        # look inside them, pick ONE random border province, and lock it down for the month.
+        if = {
+            limit = {
+                has_saved_global_event_target = htm_cossack_current_raid_target
+            }
+            event_target:htm_cossack_current_raid_target = {
+                random_owned_province = {
+                    limit = {
+                        OR = {
+                            is_neighbor_of = HTM
+                            is_neighbor_of = ZAZ
+                        }
+                    }
+                    save_global_event_target_as = htm_cossack_province_raid_target
+                }
+            }
+        }
+    }
+}
+

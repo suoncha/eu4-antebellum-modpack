@@ -359,7 +359,7 @@ ABA_TCR_TEMPLE_UNREST_BUFF: "Building §YTaxations§! buildings in provinces of 
 ABA_TCR_NODE_YES: "£yes£ If we complete this mission while we control at least §G75%§! of trade in the §YBengal§! trade node, we will gain §G1§! Mercantilism for every §YCenter of Trade§! we own in the node."
 ABA_TCR_NODE_NO: "£no£ If we complete this mission while we control at least §G75%§! of trade in the §YBengal§! trade node, we will gain §G1§! Mercantilism for every §YCenter of Trade§! we own in the node."
 ABA_TCR_JAIN_C_PRIVILEGE_BUFF: "The '§YJains Crown Possesion§!' Jain Estate Privilege no longer grants §R-5§! Max Absolutism and now also grants §G-33.0%§! Cost to Promote Mercantilism and §G+10.0%§! Trade Efficiency."
-ABA_TCR_MANPOWER_BUILDINGS_GRANT_TRADITION: "Building §YManpower§! or §YForcelimit§! buildings gives §G+0.25§! Army Tradition."
+ABA_TCR_MANPOWER_BUILDINGS_GRANT_TRADITION: "Building §YManpower§! or §YForcelimit§! Buildings grants §G+0.25§! Army Tradition."
 ABA_TCR_SPAWN_BANNERS: "10 §PBanner Infantry§! will be raised in our §YCapital§!."
 ABA_TCR_CHINA_FARMLANDS: "Developing §YFarmland§! provinces now has a §G10.0%§! chance of granting §G1§! bonus development."
 AB_TCR_TAIWAN: "§YSakam§! and §YKelang§! will receive:"

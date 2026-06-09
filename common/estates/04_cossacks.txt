@@ -166,6 +166,7 @@ estate_cossacks = {
 		estate_cossacks_expand_cossacks_raiders
 		# ABA ]]]
 		ABA_estate_cossacks_pln_cossack_szlachta
+		ABA_estate_cossacks_htm_starshyna_council
 		# ]]]
 	}
 

@@ -1,0 +1,188 @@
+aba_check_urbanization_effect = {
+	# ROOT is the province scope
+	if = {
+		limit = {
+			# Condition to HAVE the modifier
+			owner = { has_government_attribute = thriving_cities_modifier }
+			development = 25
+		}
+		if = {
+			limit = { NOT = { has_province_modifier = aba_thriving_cities_gov_mod } }
+			add_province_modifier = {
+				name = "aba_thriving_cities_gov_mod"
+				duration = -1
+			}
+		}
+	}
+	else = {
+		# If they don't meet the requirements anymore, strip it
+		if = {
+			limit = { has_province_modifier = aba_thriving_cities_gov_mod }
+			remove_province_modifier = aba_thriving_cities_gov_mod
+		}
+	}
+}
+
+aba_check_monopoly_effect = {
+	# ROOT is the province scope
+	if = {
+		limit = {
+			# Condition to HAVE the modifier
+			owner = { has_country_flag = aba_htm_monopoly_enacted }
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_province_modifier = aba_htm_monopoly
+				}
+				owner = {
+					has_country_flag = aba_htm_iron_monopoly
+				} 
+				trade_goods = iron
+			}
+			add_province_modifier = {
+				name = "aba_htm_monopoly"
+				duration = -1
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_province_modifier = aba_htm_monopoly
+				}
+				owner = {
+					has_country_flag = aba_htm_copper_monopoly
+				} 
+				trade_goods = copper
+			}
+			add_province_modifier = {
+				name = "aba_htm_monopoly"
+				duration = -1
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_province_modifier = aba_htm_monopoly
+				}
+				owner = {
+					has_country_flag = aba_htm_cloth_monopoly
+				} 
+				trade_goods = cloth
+			}
+			add_province_modifier = {
+				name = "aba_htm_monopoly"
+				duration = -1
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_province_modifier = aba_htm_monopoly
+				}
+				owner = {
+					has_country_flag = aba_htm_salt_monopoly
+				} 
+				trade_goods = salt
+			}
+			add_province_modifier = {
+				name = "aba_htm_monopoly"
+				duration = -1
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_province_modifier = aba_htm_monopoly
+				}
+				owner = {
+					has_country_flag = aba_htm_wool_monopoly
+				} 
+				trade_goods = wool
+			}
+			add_province_modifier = {
+				name = "aba_htm_monopoly"
+				duration = -1
+			}
+		}
+	}
+	else = {
+		# If they don't meet the requirements anymore, strip it
+		if = {
+			limit = { has_province_modifier = aba_htm_monopoly }
+			remove_province_modifier = aba_htm_monopoly
+		}
+	}
+}
+
+aba_check_buff_regiment_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = aba_htm_regiment_district_buff_flag
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_chernihiv_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_chyhyryn_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_lubny_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_nizhyn_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_poltava_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				holy_order = aba_htm_starodub_order
+			}
+			add_province_modifier = {
+				name = aba_htm_efficient_colonels
+				duration = -1
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = aba_htm_efficient_colonels
+			}
+			remove_province_modifier = aba_htm_efficient_colonels
+		}
+	}
+}

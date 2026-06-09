@@ -1,3 +1,5 @@
+
+### TCR
 ABA_tcr_gorkhas_merc_1 = {
     regiments_per_development = 0.055
     cavalry_weight = 0.3
@@ -12,7 +14,7 @@ ABA_tcr_gorkhas_merc_1 = {
 			has_country_flag = ABA_tcr_gorkhas_unlocked
 			mission_completed = tcr_gorkhas
 		}
-		tag =  TCR
+		was_tag =  TCR
 	}
 	modifier = { 
 		shock_damage_received = -0.15
@@ -37,7 +39,7 @@ ABA_tcr_gorkhas_merc_2 = {
 			has_country_flag = ABA_tcr_gorkhas_unlocked
 			mission_completed = tcr_gorkhas
 		}
-		tag =  TCR
+		was_tag =  TCR
 	}
 	modifier = { 
 		fire_damage_received = -0.15
@@ -48,6 +50,7 @@ ABA_tcr_gorkhas_merc_2 = {
 		 }
 }
 
+### POL
 ABF_pol_catholic_order_1 = {
     regiments_per_development = 0.055
     cavalry_weight = 0.3
@@ -94,4 +97,61 @@ ABF_pol_catholic_order_2 = {
 		land_morale = 0.10
 		discipline = 0.10
 	}
+}
+
+#### HTM
+aba_merc_chernomoriya_host = {
+    regiments_per_development = 0.055
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.3
+    home_province = 2410
+	cost_modifier = 0.5
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		has_country_flag = aba_htm_chernomoriya_host_mercs_unlock
+	}
+	modifier = { discipline = 0.05 merc_leader_army_tradition = 0.5 allow_mercenary_drill = yes }
+}
+
+aba_merc_don_kuban_host = {
+    regiments_per_development = 0.055
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.5
+    home_province = 286
+	cost_modifier = 0.5
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		has_country_flag = aba_htm_don_kuban_host_mercs_unlock
+	}
+	modifier = { movement_speed = 0.10 cavalry_flanking = 0.25 cavalry_power = 0.10 allow_mercenary_drill = yes }
+}
+
+aba_merc_malorossian_host = {
+    regiments_per_development = 0.055
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.2
+    home_province = 38
+	cost_modifier = 0.5
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		has_country_flag = aba_malorossian_mercs_unlock
+	}
+	modifier = { fire_damage_received = -0.10 shock_damage_received = -0.10 allow_mercenary_drill = yes }
+}
+
+aba_merc_terek_host = {
+    regiments_per_development = 0.055
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    cavalry_weight = 0.3
+    home_province = 38
+	cost_modifier = 0.5
+	counts_towards_force_limit = no
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		has_country_flag = aba_terek_mercs_unlock
+	}
+	modifier = { land_attrition = -0.20 reinforce_speed = 0.20 allow_mercenary_drill = yes }
 }

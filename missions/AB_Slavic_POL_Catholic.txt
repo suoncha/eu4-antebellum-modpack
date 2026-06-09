@@ -557,7 +557,6 @@ pol_catholic_first = {
 					has_dock_building_trigger = yes
 				}
 			}
-
 		}
 
 		effect = {

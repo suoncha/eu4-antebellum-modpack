@@ -1504,3 +1504,108 @@ ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION = {
 		}
 	}
 }
+
+ABA_estate_burghers_htm_belyana_trade = {
+	icon = estate_burghers_reliance_on_republics
+	max_absolutism = -5
+	influence = 0.10
+	loyalty = 0.10
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_burghers_htm_belyana_trade }
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unlocked_privilege_estate_burghers_htm_belyana_trade_tt
+			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_burghers_htm_belyana_trade }
+		}
+		num_of_owned_provinces_with = {
+			value = 1
+			OR  = {
+				province_id = 2414
+				province_id = 2413
+				province_id = 288
+				province_id = 468
+				province_id = 1971
+				province_id = 466
+				province_id = 464
+				province_id = 2418
+				province_id = 303
+				province_id = 473
+				province_id = 2419
+				province_id = 1081
+				province_id = 4267
+				province_id = 4264
+				province_id = 1082
+				province_id = 2421
+				province_id = 4265
+				province_id = 1972
+				province_id = 305
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_htm_belyana_trade_gt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR  = {
+					province_id = 2414
+					province_id = 2413
+					province_id = 288
+					province_id = 468
+					province_id = 1971
+					province_id = 466
+					province_id = 464
+					province_id = 2418
+					province_id = 303
+					province_id = 473
+					province_id = 2419
+					province_id = 1081
+					province_id = 4267
+					province_id = 4264
+					province_id = 1082
+					province_id = 2421
+					province_id = 4265
+					province_id = 1972
+					province_id = 305
+				}
+			}
+			add_province_modifier = {
+				name = estate_burghers_htm_belyana_trade
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_htm_belyana_trade_revoke
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_htm_belyana_trade
+			}
+			remove_province_modifier = estate_burghers_htm_belyana_trade
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_htm_belyana_trade
+			}
+			remove_province_modifier = estate_burghers_htm_belyana_trade
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		merchants = 1
+		global_ship_cost = -0.1
+		global_ship_recruit_speed = -0.1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

@@ -30,8 +30,14 @@
         texturefile  = "gfx//interface//great_projects//great_project_ABA_temple_of_mathura_zoroastrianism.dds"
     }
 
-     spriteType = {
+    spriteType = {
         name = "GFX_great_project_ABA_kizil_caves"    
         texturefile  = "gfx//interface//great_projects//great_project_ABA_kizil_caves.dds"
     }
+
+    spriteType = {
+        name = "GFX_great_project_ABA_nova_sich"    
+        texturefile  = "gfx//interface//great_projects//great_project_ABA_nova_sich.dds"
+    }
 }
+

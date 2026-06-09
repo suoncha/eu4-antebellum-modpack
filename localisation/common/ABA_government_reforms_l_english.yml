@@ -10,3 +10,7 @@
  ABA_danubian_federation: "The Danubian Federation"
  ABA_danubian_federation_desc: "As we've spread our influence over the Carpathian Basin, we've come to realize that the various peoples of this region would be better served under a single federal government. By fusing the Hungarian culture and traditions with that of our various subjects, we can create a more unified and stable state that will be better equipped to face the challenges of the future."
 
+
+###### custom attributes #####
+mechanic_thriving_cities_modifier_yes: "Every owned province with §Y25§! or more development gets the following bonuses:\n§G+0.25§! Local Prosperity Growth\n§G+25.0%§! Local Production Efficiency\n§G+25.0%§! Local Tax Modifier\n§G-25.0%§! Local Province Governing Cost"
+

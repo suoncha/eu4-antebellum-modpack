@@ -2,7 +2,15 @@ estate_cossacks_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
@@ -24,6 +32,12 @@ estate_cossacks_land_rights = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.01 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = aba_htm_cossack_land_right_buff }
+		modifier = {
+			allowed_cossack_fraction = 0.15
+		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -201,7 +215,18 @@ estate_cossacks_exploration_expedition = {
 	icon = privilege_grant_new_world_charter
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+			NOT = {
+				has_country_flag = aba_htm_exploration_expeditions_upgrade
+			}
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	loyalty = 0.05
 	influence = 0.05
 	
@@ -287,6 +312,14 @@ estate_cossacks_exploration_expedition = {
 		trigger = { has_country_flag = hun_upgrade_cossack_priv }
 		modifier = { max_absolutism = 5 }
 	}
+	conditional_modifier = {
+		trigger = { has_country_flag = aba_htm_exploration_expeditions_upgrade }
+		modifier = { 
+			max_absolutism = 5
+			global_colonial_growth = 20
+			range = 0.20
+		}
+	}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -317,7 +350,15 @@ estate_cossacks_exploration_expedition = {
 estate_cossacks_cossack_self_governance = {
 	icon = privilege_permit_self_governance
 	max_absolutism = -10
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 2 } 
+	}
 	loyalty = 0.1
 	influence = 0.1
 	penalties = {
@@ -368,7 +409,15 @@ estate_cossacks_establish_the_cossack_regiments = {
 	icon = privilege_raise_host
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	influence = 0.05
 	can_select = {
 	}
@@ -418,7 +467,15 @@ estate_cossacks_expand_the_cossack_regiments = {
 	icon = privilege_conscript_cossack_elite
 	land_share = 5
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	influence = 0.05
 	is_valid = {
 		has_estate_privilege = estate_cossacks_establish_the_cossack_regiments
@@ -507,7 +564,15 @@ estate_cossacks_expand_the_cossack_regiments = {
 estate_cossacks_recruit_cossack_generals = {
 	icon = privilege_conscript_cossack_elite
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	influence = 0.1
 	penalties = {
 	}
@@ -561,11 +626,63 @@ ABA_estate_cossacks_pln_cossack_szlachta = {
 	}
 }
 
+ABA_estate_cossacks_htm_starshyna_council = {
+	icon = estate_nobles_ITA_military_governors
+	max_absolutism = -15
+	conditional_modifier = { 
+		trigger = { 
+			OR = {
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				has_absolutism_reduction_for_estate_privileges = yes
+			}  
+		}
+		modifier = { max_absolutism = 1 } 
+	}
+	influence = 0.1
+	loyalty = 0.15
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_htm_starshyna_council }
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unlocked_privilege_estate_cossacks_htm_starshyna_council_tt
+			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_htm_starshyna_council }
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		mil_advisor_cost = -0.05
+		army_tradition_decay = -0.005
+		free_leader_pool = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+######
+
 #DLC Privileges
 estate_cossacks_prime_herding_rights = {
 	icon = privilege_monopoly_of_goods_livestock
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+			NOT = {
+				has_country_flag = aba_htm_upgrade_prime_herding_rights_flag
+			}
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	influence = 0.05
 	loyalty = 0.05
 	is_valid = {
@@ -586,6 +703,16 @@ estate_cossacks_prime_herding_rights = {
 				}
 			}
 		}
+		if = {
+			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = aba_htm_upgrade_prime_herding_rights_gt
+			tooltip = {
+				add_province_modifier = {
+					name = aba_htm_upgrade_prime_herding_rights_mod
+					duration = -1
+				}
+			}
+		}
 	}
 	on_granted_province = {
 		if = {
@@ -601,6 +728,13 @@ estate_cossacks_prime_herding_rights = {
 					duration = -1
 				}
 			}
+			if = {
+				limit = { owner = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag } }
+				add_province_modifier = {
+					name = aba_htm_upgrade_prime_herding_rights_mod
+					duration = -1
+				}
+			}
 		}
 		else_if = {
 			limit = { has_province_modifier = estate_cossacks_prime_herding_rights_mod }
@@ -609,6 +743,10 @@ estate_cossacks_prime_herding_rights = {
 				limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 				remove_province_modifier = feo_upgrade_prime_herding_rights_mod
 			}
+			if = {
+				limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
+				remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
+			}
 		}
 	}
 	on_revoked = {
@@ -616,6 +754,10 @@ estate_cossacks_prime_herding_rights = {
 		if = {
 			limit = { has_country_flag = feo_upgrade_prime_herding_rights_flag }
 			custom_tooltip = feo_upgrade_prime_herding_rights_rt
+		}
+		if = {
+			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = aba_htm_upgrade_prime_herding_rights_rt
 		}
 	}
 	on_revoked_province = {
@@ -627,12 +769,20 @@ estate_cossacks_prime_herding_rights = {
 			limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 			remove_province_modifier = feo_upgrade_prime_herding_rights_mod
 		}
+		if = {
+			limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
+			remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
+		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
 		if = {
 			limit = { has_country_flag = feo_upgrade_prime_herding_rights_flag }
 			custom_tooltip = feo_upgrade_prime_herding_rights_rt
+		}
+		if = {
+			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = aba_htm_upgrade_prime_herding_rights_rt
 		}
 	}
 	on_invalid_province = {
@@ -643,6 +793,10 @@ estate_cossacks_prime_herding_rights = {
 		if = {
 			limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 			remove_province_modifier = feo_upgrade_prime_herding_rights_mod
+		}
+		if = {
+			limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
+			remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
 		}
 	}
 	penalties = {
@@ -661,6 +815,14 @@ estate_cossacks_prime_herding_rights = {
 		trigger = { has_country_flag = feo_upgrade_prime_herding_rights_flag has_absolutism_reduction_for_estate_privileges = yes }
 		modifier = { max_absolutism = 4 }
 	}
+	conditional_modifier = {
+		trigger = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
+		modifier = { 
+			max_absolutism = 5
+			cavalry_cost = -0.20
+			global_regiment_recruit_speed = -0.10 
+		}
+	}
 	ai_will_do = {
 		factor = 0
 	}
@@ -672,7 +834,15 @@ estate_cossacks_freedom_of_the_steppes = {
 	loyalty = 0.05
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	is_valid = {
 		OR = {
 			has_dlc = "Domination"
@@ -680,11 +850,28 @@ estate_cossacks_freedom_of_the_steppes = {
 		}
 	}
 	on_granted = {
-		custom_tooltip = estate_cossacks_freedom_of_the_steppes_gt
-		tooltip = {
-			add_province_modifier = {
-				name = estate_cossacks_freedom_of_the_steppes_mod
-				duration = -1
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade
+				}
+			}
+			custom_tooltip = estate_cossacks_freedom_of_the_steppes_gt
+			tooltip = {
+				add_province_modifier = {
+					name = estate_cossacks_freedom_of_the_steppes_mod
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade }
+			custom_tooltip = estate_cossacks_freedom_of_the_steppes_gt
+			tooltip = {
+				add_province_modifier = {
+					name = aba_htm_hosts_of_steppe_mod
+					duration = -1
+				}
 			}
 		}
 		if = {
@@ -704,11 +891,16 @@ estate_cossacks_freedom_of_the_steppes = {
 			limit = { has_country_flag = feo_buffed_freedom_of_steppes_flag }
 			custom_tooltip = feo_buffed_freedom_of_steppes_rt
 		}
+		if = {
+			limit = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade }
+			custom_tooltip = estate_cossacks_aba_htm_hosts_of_steppe_mod_rt
+		}
 	}
 	on_granted_province = {
 		if = {
 			limit = {
 				has_terrain = steppe
+				NOT = { owner = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade } }
 			}
 			add_province_modifier = {
 				name = estate_cossacks_freedom_of_the_steppes_mod
@@ -722,6 +914,16 @@ estate_cossacks_freedom_of_the_steppes = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				has_terrain = steppe
+				owner = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade } 
+			}
+			add_province_modifier = {
+				name = aba_htm_hosts_of_steppe_mod
+				duration = -1
+			}
+		}
 	}
 	on_invalid_province = {
 		if = {
@@ -732,6 +934,10 @@ estate_cossacks_freedom_of_the_steppes = {
 			limit = { has_province_modifier = feo_buffed_freedom_of_steppes_mod }
 			remove_province_modifier = feo_buffed_freedom_of_steppes_mod
 		}
+		if = {
+			limit = { has_province_modifier = aba_htm_hosts_of_steppe_mod }
+			remove_province_modifier = aba_htm_hosts_of_steppe_mod
+		}
 	}
 	on_revoked_province = {
 		if = {
@@ -741,6 +947,10 @@ estate_cossacks_freedom_of_the_steppes = {
 		if = {
 			limit = { has_province_modifier = feo_buffed_freedom_of_steppes_mod }
 			remove_province_modifier = feo_buffed_freedom_of_steppes_mod
+		}
+		if = {
+			limit = { has_province_modifier = aba_htm_hosts_of_steppe_mod }
+			remove_province_modifier = aba_htm_hosts_of_steppe_mod
 		}
 	}
 
@@ -760,7 +970,15 @@ estate_cossacks_grant_military_leadership = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -794,7 +1012,15 @@ estate_cossacks_exempt_from_bureaucracy = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	is_valid = {
 		OR = {
 			has_dlc = "Winds of Change"
@@ -877,7 +1103,15 @@ estate_cossacks_military_service = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -911,7 +1145,15 @@ estate_cossacks_expand_cossacks_raiders = {
 	loyalty = 0.0
 	influence = 0.05
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			OR = { 
+				has_absolutism_reduction_for_estate_privileges = yes
+				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+			} 
+		} 
+		modifier = { max_absolutism = 1 } 
+	}
 	is_valid = {
 		has_dlc = "Domination"
 	}

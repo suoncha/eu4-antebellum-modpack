@@ -1,0 +1,320 @@
+
+aba_htm_chyhyryn_order = {
+    icon = GFX_aba_order_chyhyrn
+    trigger = {
+		has_government_attribute = enables_aba_htm_chyhyryn_order
+    }
+    cost = 50
+    cost_type = adm_power
+    color = { 9 98 30 }
+    per_province_effect = {
+        add_base_tax = 1
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+       add_base_tax = -1
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        local_governing_cost = -0.10
+        local_tax_modifier = 0.10
+        min_local_autonomy = 5
+    }
+    ai_priority = {
+        factor = 1
+    }
+    localization = aba_htm_regimental_district
+}
+
+aba_htm_poltava_order = {
+    icon = GFX_aba_order_poltava
+    trigger = {
+		has_government_attribute = enables_aba_htm_poltava_order
+    }
+    cost = 50
+    cost_type = mil_power
+    color = { 32 162 97 }
+    per_province_effect = {
+        add_base_manpower = 1
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+         if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        local_manpower_modifier = 0.10
+        local_unrest = -1
+        min_local_autonomy = 5
+    }
+    ai_priority = {
+        factor = 1
+    }               
+    localization = aba_htm_regimental_district
+}
+
+aba_htm_nizhyn_order = {
+    icon = GFX_aba_order_nizhyn
+    trigger = {
+		has_government_attribute = enables_aba_htm_nizhyn_order 
+    }
+    cost = 50
+    cost_type = dip_power
+    color = { 110 162 32 }
+    per_province_effect = {
+        add_base_production = 1
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_base_production = -1
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        trade_goods_size = 0.25
+        local_development_cost_modifier = -0.10
+        min_local_autonomy = 5
+    }
+    ai_priority = {
+        factor = 1
+    }
+    localization = aba_htm_regimental_district
+}
+
+aba_htm_lubny_order = {
+    icon = GFX_aba_order_lubny
+    trigger = {
+		has_country_flag = aba_htm_lubny_order_unlocked
+        OR = {
+            has_government_attribute = enables_aba_htm_chyhyryn_order
+            has_government_attribute = enables_aba_htm_poltava_order
+            has_government_attribute = enables_aba_htm_nizhyn_order
+        }
+    }
+    cost = 50
+    cost_type = dip_power
+    color = { 110 162 32 }
+    per_province_effect = {
+       add_prosperity = 10
+       if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+       add_prosperity = -10
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        local_build_cost = -0.10
+        allowed_num_of_buildings = 1
+        min_local_autonomy = 10
+    }
+    ai_priority = {
+        factor = 1
+    }
+    localization = aba_htm_regimental_district
+}
+
+aba_htm_starodub_order = {
+    icon = GFX_aba_order_starodub
+    trigger = {
+		has_country_flag = aba_htm_starodub_order_unlocked
+        OR = {
+            has_government_attribute = enables_aba_htm_chyhyryn_order
+            has_government_attribute = enables_aba_htm_poltava_order
+            has_government_attribute = enables_aba_htm_nizhyn_order
+        }
+    }
+    cost = 50
+    cost_type = mil_power
+    color = { 110 162 32 }
+    per_province_effect = {
+        custom_tooltip = ABA_HTM_STARODUB_ADD_EFFECT
+        hidden_effect = {
+            owner = {
+                add_army_tradition = 0.01
+            }
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        custom_tooltip = ABA_HTM_STARODUB_REMOVE_EFFECT
+        hidden_effect = {
+            owner = {
+                add_army_tradition = -0.01
+            }
+        }
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        local_defensiveness = 0.10
+        supply_limit_modifier = 0.10
+        local_hostile_movement_speed = -0.10
+        min_local_autonomy = 5
+    }
+    ai_priority = {
+        factor = 1
+    }
+    localization = aba_htm_regimental_district
+}
+
+aba_htm_chernihiv_order = {
+    icon = GFX_aba_order_chernihiv
+    trigger = {
+		has_country_flag = aba_htm_chernihiv_order_unlocked
+        OR = {
+            has_government_attribute = enables_aba_htm_chyhyryn_order
+            has_government_attribute = enables_aba_htm_poltava_order
+            has_government_attribute = enables_aba_htm_nizhyn_order
+        }
+    }
+    cost = 50
+    cost_type = adm_power
+    color = { 110 162 32 }
+    per_province_effect = {
+        custom_tooltip = ABA_HTM_CHERNIHIV_ADD_EFFECT
+         hidden_effect = {
+             owner = {
+                 add_republican_tradition = 0.01
+             }
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_country_flag = aba_htm_regiment_district_buff_flag
+                }
+            }
+            add_province_modifier = {
+                name = aba_htm_efficient_colonels
+                duration = -1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        custom_tooltip = ABA_HTM_CHERNIHIV_REMOVE_EFFECT
+        hidden_effect = {
+             owner = {
+                 add_republican_tradition = -0.01
+             }
+        }
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_country_flag = aba_htm_regiment_district_buff_flag
+                    }
+                }
+                has_province_modifier = aba_htm_efficient_colonels
+            }
+           remove_province_modifier = aba_htm_efficient_colonels
+        }
+    }
+    modifier = {
+        local_missionary_strength = 0.03
+        local_institution_spread = 0.10
+        local_governing_cost = -0.15
+        min_local_autonomy = 10
+    }
+    ai_priority = {
+        factor = 1
+    }
+    localization = aba_htm_regimental_district
+}
+

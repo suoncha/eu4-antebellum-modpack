@@ -19999,6 +19999,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}
@@ -20014,6 +20015,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}
@@ -20027,6 +20029,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}

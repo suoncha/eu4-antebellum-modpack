@@ -79,29 +79,14 @@ country_event = {
 					"
 				}
 			}
-			if = {
-				limit = {
-					num_of_musketeer = 15
+			capital_scope = {
+				for = {
+					amount = 3
+					effect = "
+						streltsy_infantry = ROOT
+					"
 				}
-				capital_scope = {
-					for = {
-						amount = 3
-						effect = "
-							streltsy_infantry = ROOT
-						"
-					}
-				}
-			}
-			else_if = {
-				capital_scope = {
-					for = {
-						amount = 3
-						effect = "
-							musketeer_infantry = ROOT
-						"
-					}
-				}
-			}
+			}			
 			country_event = {
 				id = aba_pol_events.2
 				days = 3650

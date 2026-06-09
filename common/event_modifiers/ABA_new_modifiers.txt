@@ -482,35 +482,24 @@ aba_pol_commonwealth_hetman_advisor_7 = { reinforce_cost_modifier = -0.25 }
 ####### Hetmanate #######
 
 aba_htm_free_ruthenia = {
-    republican_tradition = 0.5
+    reelection_cost = -0.20
     candidate_random_bonus = 1
-}
-
-htm_danube_sich = {
-    reform_progress_growth = 0.1
-    manpower_in_accepted_culture_provinces = 0.10
-    land_attrition = -0.10
-}
-
-aba_htm_military_treasury = {
-    war_taxes_cost_modifier = -0.25
-    land_maintenance_modifier = -0.10
-}
-
-ABA_htm_new_horse_production = {
-    cavalry_cost = -0.10
-    movement_speed = 0.05
-}
-
-ABA_htm_regimental_rule = {
-    state_maintenance_modifier = -0.25
-    state_governing_cost = -0.25
 }
 
 aba_htm_vodka = {
     global_unrest = -1
     idea_cost = 0.05
-    global_supply_limit_modifier = 0.10
+    global_trade_goods_size_modifier = 0.10
+}
+
+htm_danube_sich = {
+    reform_progress_growth = 0.1
+    manpower_in_culture_group_provinces = 0.1 
+}
+
+ABA_htm_regimental_rule = {
+    state_maintenance_modifier = -0.25
+    state_governing_cost = -0.25
 }
 
 aba_htm_new_coinage = {
@@ -539,6 +528,153 @@ aba_htm_uniate_church = {
     trade_goods_size_modifier = 0.33
     local_tax_modifier = 0.33
 }
+
+aba_htm_wagon_trade = {
+    province_trade_power_modifier = 0.05
+}
+
+aba_htm_chumaks = {
+    local_prosperity_growth = 0.25
+    local_build_cost = -0.10
+    local_build_time = -0.10
+    trade_goods_size_modifier = 0.10
+}
+
+aba_htm_chernomoriya_cossacks = {
+    is_cossack_modifier = yes
+    regiment_disembark_speed = 0.25
+    landing_penalty = -1
+}
+
+aba_htm_rostov = {
+    trade_value = 10
+    local_institution_spread = 0.25
+    local_development_cost = -0.10
+    local_prosperity_growth = 0.1
+    allowed_num_of_buildings = 1
+    allowed_num_of_manufactories = 1
+}
+
+estate_burghers_htm_belyana_trade = {
+    trade_goods_size = 0.5
+    trade_value_modifier = 0.10
+    local_prosperity_growth = 0.10
+}
+
+aba_htm_don_kuban_cossacks = {
+    is_cossack_modifier = yes
+    recover_army_morale_speed = 0.10
+    reinforce_cost_modifier = -0.10
+}
+
+aba_htm_cossacks_high_seas_1 = {
+    is_marine_modifier = yes
+    shock_damage_received = -0.05
+    shock_damage = 0.10
+}
+
+aba_htm_cossack_naval_school = {
+    has_marines = yes
+    navy_tradition = 0.5
+    navy_tradition_decay = -0.01
+    allowed_marine_fraction = 0.1
+}
+
+aba_htm_streltsy = {
+    has_streltsy = yes
+    allowed_streltsy_fraction = 0.10
+    amount_of_streltsy = 10
+ }
+
+aba_htm_malorossian_host = {
+    is_cossack_modifier = yes
+    shock_damage_received = -0.025
+    fire_damage_received = -0.025
+ }
+
+aba_htm_terek_host = {
+    is_cossack_modifier = yes
+    land_attrition = -0.10
+    assault_fort_ability = 0.25
+ }
+
+aba_htm_nagaybak_host = {
+    is_cossack_modifier = yes
+    cavalry_shock = 0.10
+    cavalry_fire = 0.10
+ }
+
+aba_htm_hosts_of_steppe_mod = {
+    local_governing_cost = -0.5
+	min_local_autonomy = 10
+	local_development_cost = -0.10
+ }
+
+aba_htm_military_housing = {
+    local_development_cost_modifier = -0.10
+ }
+
+ aba_htm_military_presence = {
+    local_autonomy = -0.05
+ }
+
+ aba_htm_kyiv_collegium = {
+    technology_cost = -0.05
+    yearly_innovativeness = 0.10
+    global_institution_spread = 0.10
+    monthly_splendor = 1
+ }
+
+ aba_htm_upgrade_prime_herding_rights_mod = {
+    local_tax_modifier = 0.25
+    local_production_efficiency = 0.10
+    local_friendly_movement_speed = 0.10
+ }
+
+ aba_htm_monopoly = {
+    local_production_efficiency = 0.15
+    trade_goods_size = 0.5
+ }
+
+ aba_htm_levy_customs = {
+    embargo_efficiency = 0.5
+    mercantilism_cost = -0.33
+    trade_efficiency = 0.10
+ }
+
+ aba_htm_empowered_hosts_mod = {
+    is_mercenary_modifier = yes
+    mercenary_discipline = 0.025
+    mercenary_manpower = 0.10
+ }
+
+ aba_htm_cossack_fury_debuff = {
+    shock_damage_received = 0.05
+    war_exhaustion = 0.025
+    manpower_recovery_speed = -0.05
+ }
+
+ aba_htm_expand_military_council = {
+   same_culture_advisor_cost = -0.25
+   same_religion_advisor_cost = -0.25
+   advisor_pool = 1
+ }
+
+ aba_htm_appoint_colonels = {
+    establish_order_cost = -0.1
+ }
+
+ aba_htm_efficient_colonels = {
+    min_local_autonomy = -2.50
+    local_governing_cost = -0.10
+ }
+
+ aba_htm_flourshing_arts = {
+    monthly_splendor = 2
+    prestige_decay = -0.03
+    stability_cost_modifier = -0.33
+ }
+
 
 ####### Zun #######
 
@@ -855,10 +991,10 @@ aba_tcr_selective_borrowing = {
 }
 
 aba_tcr_jai_hind = {
-    	land_morale = 0.05
-        morale_damage_received = -0.05
-        recover_army_morale_speed = 0.10
-        warscore_from_battles_modifier = 0.1
+    land_morale = 0.05
+    morale_damage_received = -0.05
+    recover_army_morale_speed = 0.10
+    warscore_from_battles_modifier = 0.1
 }
 
 aba_tcr_center_of_education = {
@@ -1207,4 +1343,11 @@ aba_lva_visby_city = {
     allowed_num_of_manufactories = 1
     local_development_cost = -0.10
     local_prosperity_growth = 0.1
+}
+
+
+##### General ####
+aba_thriving_cities_gov_mod = {
+    local_production_efficiency = 0.15
+    local_tax_modifier = 0.15
 }

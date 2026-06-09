@@ -1237,6 +1237,9 @@ republic = {
 				fragrandrepublic
 				fradictatorialconsulship
 				# ]]]
+				# ABA ]]]
+				aba_hetmanate_buffed
+				# ]]]
 			}
 		}
 		republican_virtues = {
@@ -1288,6 +1291,9 @@ republic = {
 				# ]]]
 				# Blood and Iron
 				bav_council_of_eight
+				# ]]]
+				# ABA ]]]
+				aba_htm_refuge_buffed
 				# ]]]
 			}
 		}
@@ -1462,6 +1468,9 @@ republic = {
 				ab_condottiero_reform
 				rhl_imperial_guards
 				# ]]]
+				# ABA ]]]
+				aba_htm_cossacks_registry_reform
+				# ]]]
 			}
 		}
 		republic_and_religion = {
@@ -1534,6 +1543,9 @@ republic = {
 				enforced_autocracy_reform
 				#1.37
 				seven_provinces_reform
+				## ABA ]]]]
+				aba_htm_regimental_rule
+				### ]]]]
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -1552,6 +1564,9 @@ republic = {
 				ruskontsy
 				htm_kurin
 				ab_roman_provinces
+				# ]]]
+				# ABA ]]]
+				aba_htm_kurin_buffed
 				# ]]]
 			}
 		}
@@ -1589,6 +1604,11 @@ republic = {
 				# Baltic
 				blt_amber_trade_charter
 				# ]]]
+				# ABA ]]]
+				aba_htm_urbanization
+				aba_htm_agrarianism
+				aba_htm_mixed_economy
+				#]]]
 			}
 		}
 		consolidation_of_power_category = {
@@ -1642,6 +1662,9 @@ republic = {
 				hansacolonial
 				htm_council
 				# ]]]
+				# ABA [[[
+				aba_htm_council_buffed
+				# [[[
 			}
 		}
 		office_selection = {
@@ -1653,6 +1676,10 @@ republic = {
 				# AB [[[
 				ottoman_lodge
 				# ]]]
+				# ABA [[[
+				aba_htm_cossack_meritocracy 
+				aba_htm_starshyna_oligarchy
+				# ]]] 
 			}
 		}
 		question_of_dictatorship = {

@@ -355,6 +355,7 @@ estate_burghers = {
 		# ]]]
 		# ABA ]]]
 		ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+		ABA_estate_burghers_htm_belyana_trade
 		# ]]]
 	}
 
