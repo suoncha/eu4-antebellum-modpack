@@ -2839,6 +2839,9 @@ sich = {
 			OR = {
 				has_reform = cossacks_reform
 				has_reform = hetmanate
+				### ABA
+				has_reform = aba_hetmanate_buffed
+				###
 			}
 		}
 	}
@@ -2857,6 +2860,9 @@ sich = {
 			OR = {
 				has_reform = cossacks_reform
 				has_reform = hetmanate
+				### ABA
+				has_reform = aba_hetmanate_buffed
+				###
 			}
 		}
 	}
@@ -2867,6 +2873,9 @@ sich = {
 			OR = {
 				has_reform = cossacks_reform
 				has_reform = hetmanate
+				### ABA
+				has_reform = aba_hetmanate_buffed
+				###
 			}
 		}
 	}

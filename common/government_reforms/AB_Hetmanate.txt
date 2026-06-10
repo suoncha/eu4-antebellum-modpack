@@ -1,0 +1,616 @@
+hetmanate = {
+	icon = "horde_riding"
+	legacy_equivalent = cossacks_legacy_reform
+	allow_normal_conversion = no
+	potential = {
+		tag = HTM
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = aba_hetmanate_buffed
+			}
+		}
+	}
+	
+	raze_province = yes
+	government_abilities = {
+		cossacks_mechanic
+	}
+
+	conditional = {
+		allow = { has_dlc = "Origins" }
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+
+	valid_for_new_country = yes
+	lock_level_when_selected = yes
+
+	nation_designer_trigger = {
+		any_owned_province = {
+			has_terrain = steppe
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	modifiers = {
+		cavalry_power = 0.25
+		cavalry_cost = -0.25
+		cav_to_inf_ratio = 0.25
+		governing_capacity = 200
+		allowed_cossack_fraction = 0.25
+	}
+	duration = 4
+
+	conditional = {
+		allow = {
+			has_dlc = "The Cossacks"
+		}
+		custom_attributes = {
+			enables_estate_cossacks = yes
+		}
+	}
+
+	custom_attributes = {
+		# AB [[[
+		locked_government_type = yes
+		# ]]]
+		enables_horde_idea_group = yes
+		disables_estate_nobles = yes
+		# AB {{{
+		# Original is inversed, but people were requesting as it
+		# it was more realistic
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
+		# }}}
+	}
+}
+
+htm_refuge = {
+	icon = "bulboyar"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = aba_htm_refuge_buffed
+			}
+		}
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.1
+		manpower_in_accepted_culture_provinces = 0.15
+	}
+}
+
+htm_faith = {
+	icon = "ncipatriarch"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		num_accepted_cultures = 2
+		manpower_in_true_faith_provinces = 0.1
+	}
+}
+
+htm_kurin = {
+	icon = "russloboda"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = aba_htm_kurin_buffed
+			}
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		core_creation = -0.05
+		may_build_supply_depot = yes
+	}
+}
+
+htm_autonomous = {
+	icon = "mvareform"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.1
+		state_governing_cost = -0.2
+	}
+}
+
+htm_council = {
+	icon = "bulkavkhan"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = aba_htm_council_buffed
+			}
+		}
+	}
+	modifiers = {
+		candidate_random_bonus = 1
+		general_cost = -0.1
+		max_absolutism = 5
+	}
+}
+
+#ABA
+aba_hetmanate_buffed = {
+	icon = "horde_riding"
+	legacy_equivalent = cossacks_legacy_reform
+	allow_normal_conversion = no
+	potential = {
+		tag = HTM
+		has_unlocked_government_reform = {
+			government_reform = aba_hetmanate_buffed
+		}
+	}
+	
+	raze_province = yes
+	government_abilities = {
+		cossack_militarization_mechanic
+		cossack_militarization_abilities_mechanic
+	}
+
+	conditional = {
+		allow = { has_dlc = "Origins" }
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+
+	valid_for_new_country = yes
+	lock_level_when_selected = yes
+
+	nation_designer_trigger = {
+		any_owned_province = {
+			has_terrain = steppe
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	modifiers = {
+		cavalry_power = 0.25
+		cavalry_cost = -0.25
+		cav_to_inf_ratio = 0.25
+		governing_capacity = 200
+		allowed_cossack_fraction = 0.25
+	}
+	duration = 4
+
+	conditional = {
+		allow = {
+			has_dlc = "The Cossacks"
+		}
+		custom_attributes = {
+			enables_estate_cossacks = yes
+		}
+	}
+
+	custom_attributes = {
+		# AB [[[
+		locked_government_type = yes
+		# ]]]
+		enables_horde_idea_group = yes
+		disables_estate_nobles = yes
+		# AB {{{
+		# Original is inversed, but people were requesting as it
+		# it was more realistic
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
+		# }}}
+	}
+}
+
+aba_htm_kurin_buffed = {
+	icon = "russloboda"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_kurin_buffed
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		core_creation = -0.10
+		development_cost_modifier = -0.1
+		may_build_supply_depot = yes
+	}
+
+	custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
+}
+
+aba_htm_refuge_buffed = {
+	icon = "bulboyar"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_refuge_buffed
+		}
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.1
+		manpower_in_accepted_culture_provinces = 0.15
+		idea_cost = -0.05
+	}
+
+	custom_attributes = {
+		metropolitans_spread_institution = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_state_patriach = yes
+				}
+				add_province_modifier = {
+					name = rus_metropolitan_institution_spread
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = rus_metropolitan_institution_spread
+				}
+				remove_province_modifier = rus_metropolitan_institution_spread
+			}
+		}
+	}
+}
+
+aba_htm_urbanization = {
+	icon = "private_enterprise_colony_government"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_urbanization
+		}
+	}
+	modifiers = {
+		merchants = 1
+		global_prov_trade_power_modifier = 0.1
+		development_cost = -0.15
+		global_manpower_modifier = -0.10
+	}
+	custom_attributes = {
+		thriving_cities_modifier = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					development = 25
+				}
+				add_province_modifier = {
+					name = aba_thriving_cities_gov_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = aba_thriving_cities_gov_mod
+				}
+				remove_province_modifier = aba_thriving_cities_gov_mod
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+
+aba_htm_agrarianism = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_agrarianism
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.10
+		global_trade_goods_size_modifier = 0.1
+		global_manpower_modifier = 0.10
+		global_autonomy = 0.075
+		technology_cost = 0.05
+	}
+
+	custom_attributes = {
+		extra_trade_goods_from_grain = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = grain_vodka_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = grain_vodka_bonus_prod
+				}
+				remove_province_modifier = grain_vodka_bonus_prod
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+
+aba_htm_mixed_economy = {
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_mixed_economy
+		}
+	}
+	modifiers = {
+		technology_cost = -0.05
+		global_tax_modifier = 0.10
+		global_trade_power = 0.1
+		global_allowed_num_of_buildings = 1
+	}
+
+	custom_attributes = {
+		GER_buff_mining_provinces = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			custom_tooltip = GER_mining_provinces
+			tooltip = {
+				add_province_modifier = {
+					name = GER_mining_provinces_saxon
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = gold
+						trade_goods = copper
+					}
+				}
+				add_province_modifier = { 
+					name = GER_mining_provinces_saxon
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = GER_mining_provinces_saxon
+				}
+				remove_province_modifier = GER_mining_provinces_saxon
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+
+aba_htm_regimental_rule = {
+	icon = "organized_military_staff"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_regimental_rule
+		}
+	}
+
+	custom_attributes = {
+		enables_aba_htm_chyhyryn_order = yes
+		enables_aba_htm_poltava_order = yes
+		enables_aba_htm_nizhyn_order = yes
+	}
+
+	modifiers = {
+		regiment_manpower_usage = -0.1
+		defensiveness = 0.10
+		governing_capacity = 100
+		max_absolutism = 10
+	}
+}
+
+aba_htm_cossacks_registry_reform = {
+	icon = "cossacks"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_cossacks_registry_reform
+		}
+	}
+
+	modifiers = {
+		special_unit_forcelimit = 0.15
+		cossacks_loyalty_modifier = 0.15
+		cossacks_influence_modifier = 0.1
+		cossacks_privilege_slots = 2
+	}
+
+	custom_attributes = {
+		enables_aba_htm_cossack_professionalism = yes
+		enables_aba_htm_reduce_cossack_absolutism = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+aba_htm_council_buffed = {
+	icon = "bulkavkhan"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_council_buffed
+		}
+	}
+	modifiers = {
+		candidate_random_bonus = 1
+		general_cost = -0.15
+		max_absolutism = 15
+		army_tradition = 0.25
+	}
+}
+
+aba_htm_cossack_meritocracy = {
+	icon = "neutral_ground"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_cossack_meritocracy
+		}
+	}
+	modifiers = {
+		republican_tradition = 1
+		global_unrest = -2
+		parliament_backing_chance = 0.33
+		max_absolutism = -15
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+}
+
+aba_htm_starshyna_oligarchy = {
+	icon = "blackmailing"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = aba_htm_starshyna_oligarchy
+		}
+	}
+	modifiers = {
+		republican_tradition = -1
+		max_absolutism_effect = 0.10
+		yearly_absolutism = 0.5
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		generals_become_rulers = yes
+		has_term_election = no
+		election_on_death = yes
+	}
+}

@@ -1,0 +1,34 @@
+spriteTypes = {
+	# Holy Orders
+	#HTM
+	spriteType = {
+		name = "GFX_aba_order_chyhyrn"
+		texturefile = "gfx/interface/holy_orders/aba_chyhyryn_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_aba_order_poltava"
+		texturefile = "gfx/interface/holy_orders/aba_poltava_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_aba_order_nizhyn"
+		texturefile = "gfx/interface/holy_orders/aba_nizhyn_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_aba_order_lubny"
+		texturefile = "gfx/interface/holy_orders/aba_lubny_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_aba_order_starodub"
+		texturefile = "gfx/interface/holy_orders/aba_starodub_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_aba_order_chernihiv"
+		texturefile = "gfx/interface/holy_orders/aba_chernihiv_order_icon_gfx.dds"
+		noOfFrames = 4
+	}
+}

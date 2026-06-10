@@ -1,0 +1,398 @@
+cossack_militarization_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 6
+	available = {
+		has_dlc = "The Cossacks"
+		has_reform = aba_hetmanate_buffed
+	}
+	
+	powers = {
+		cossack_militarized_society = {
+			max = 100
+			show_before_interactions = yes
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					movement_speed = 0.10
+					land_attrition = -0.10
+					allowed_cossack_fraction = 0.25
+					war_taxes_cost_modifier = -1
+					raze_power_gain = 0.33
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = aba_htm_reification_buff1
+				}
+				modifier = { 
+					land_maintenance_modifier = -0.15
+					global_regiment_cost = -0.10
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = aba_htm_cossack_militarzation_loyalty_governing_buff1
+				}
+				modifier = { 
+					governing_capacity = 150
+					overextension_impact_modifier = -0.25
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = aba_htm_reification_mil_buff
+				}
+				modifier = { 
+					discipline = 0.05
+					fire_damage_received = -0.05
+					shock_damage_received = -0.05
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		boost_cossack_militarization = {
+			gui = cossack_militarization_gov_mech
+			cost_type = cossack_militarized_society
+			center = no
+			trigger = {
+				mil_power_cost = 50
+				not = {
+					has_government_power = {
+						mechanic_type = cossack_militarization_mechanic
+						power_type = cossack_militarized_society
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				mil_power_cost = 50
+				add_government_power = {
+					mechanic_type = cossack_militarization_mechanic
+					power_type = cossack_militarized_society
+					value = 10
+				}
+			}
+			cooldown_years = 0
+		}
+	}
+}
+
+cossack_militarization_abilities_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 6
+	available = {
+		has_dlc = "The Cossacks"
+		has_reform = aba_hetmanate_buffed
+	}
+	
+	powers = {
+		cossack_militarization_adm_power = {
+			max = 150
+			monarch_power = ADM
+			base_monthly_growth = 3
+		}
+		cossack_militarization_dip_power = {
+			max = 150
+			monarch_power = DIP
+			base_monthly_growth = 3
+		}
+		cossack_militarization_mil_power = {
+			max = 150
+			monarch_power = MIL
+			base_monthly_growth = 3
+		}
+	}
+	
+	interactions = {
+		cossack_militarization_mechanic_ability_receive_serfs = {
+			icon = GFX_cossacks_ability_ADM
+			cost_type = cossack_militarization_adm_power
+			trigger = {
+				has_neighbor = yes
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_adm_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_adm_power
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_adm_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_adm_power
+						value = -100
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_htm_recieve_fleeing_serfs_buff
+					}
+					add_yearly_manpower = 0.5
+				}
+				custom_tooltip = AB_EMPTY			
+				custom_tooltip = fleeing_serfs_tt
+				custom_tooltip = AB_EMPTY
+				hidden_effect = {
+					if = {
+						limit = {
+							has_country_flag = aba_htm_recieve_fleeing_serfs_buff
+						}
+						random_owned_province = {
+							limit = {
+								OR = {
+									not = { religion = event_target:htm_cossack_current_serf_target }
+									AND = {
+										not = { 
+											event_target:htm_cossack_current_serf_target = {
+												accepted_culture = prev
+											}
+										}
+										not = { culture = event_target:htm_cossack_current_serf_target }
+									}
+								}
+							}
+							add_random_development = 2
+						}
+					}
+					else = {
+						random_owned_province = {
+							limit = {
+								OR = {
+									not = { religion = event_target:htm_cossack_current_serf_target }
+									AND = {
+										not = { 
+											event_target:htm_cossack_current_serf_target = {
+												accepted_culture = prev
+											}
+										}
+										not = { culture = event_target:htm_cossack_current_serf_target }
+									}
+								}
+							}
+							add_random_development = 1
+						}
+					}
+				}
+				event_target:htm_cossack_current_serf_target = {
+					add_country_modifier = {
+						name = serfs_recieved_by_cossacks
+						duration = 3650
+					}
+				}
+				clear_global_event_target = htm_cossack_current_serf_target
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 7
+			}
+		}
+		cossack_militarization_mechanic_ability_raiding_parties = {
+			icon = GFX_cossacks_ability_DIP
+			cost_type = cossack_militarization_dip_power
+			trigger = { 
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_dip_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_dip_power
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_dip_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_dip_power
+						value = -100
+					}
+				}
+				add_country_modifier = {
+					name = raiding_parties_modifier
+					duration = 3650
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_htm_raiding_parties_interaction_buff
+					}
+					event_target:htm_cossack_province_raid_target = {
+						add_devastation = 25
+						remove_loot = {
+							who = ROOT
+							amount = 25
+						}
+					}
+				}
+				clear_global_event_target = htm_cossack_current_raid_target
+				clear_global_event_target = htm_cossack_province_raid_target
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 10
+					is_at_war = yes
+				}
+				modifier = {
+					factor = 10
+					is_in_important_war = yes
+				}
+			}
+		}
+		cossack_militarization_mechanic_ability_cossacks = {
+			icon = GFX_cossacks_ability_MIL
+			cost_type = cossack_militarization_mil_power
+			trigger = {
+				capital_scope = {
+					controller = { 
+						tag = ROOT
+					}
+					has_siege = no
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_mil_power
+						value = 80
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_mil_power
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				if = {
+					limit = {
+						has_country_flag = aba_htm_cossack_militarization_interactions_buff1
+					}
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_mil_power
+						value = -80
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = cossack_militarization_abilities_mechanic
+						power_type = cossack_militarization_mil_power
+						value = -100
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = aba_HTM_host_upgrade_mechanic
+					}
+					add_war_exhaustion = -5
+					create_unit_forcelimit_percentage = {
+						type = cavalry
+						special_unit_category = cossacks
+						force_limit_percentage = 0.10
+						capped_by_special_force_limit = yes
+					}
+					create_unit_forcelimit_percentage = {
+						type = infantry
+						special_unit_category = cossacks
+						force_limit_percentage = 0.15
+						capped_by_special_force_limit = yes
+					}
+				}
+				else = {
+					create_unit_forcelimit_percentage = {
+					type = infantry
+						special_unit_category = cossacks
+						force_limit_percentage = 0.15
+						capped_by_special_force_limit = yes
+					}
+					create_unit_forcelimit_percentage = {
+						type = cavalry
+						special_unit_category = cossacks
+						force_limit_percentage = 0.05
+						capped_by_special_force_limit = yes
+					}
+					add_war_exhaustion = -2
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					is_at_war = no
+					OR = {
+						num_of_loans = 3
+						is_in_deficit = yes
+					}
+				}
+				modifier = {
+					factor = 0
+					is_bankrupt = yes
+				}
+				modifier = {
+					factor = 10
+					needs_regiment_type = cossacks
+				}
+				modifier = {
+					factor = 10
+					is_at_war = yes
+					NOT = { army_size_percentage = 0.8 }
+				}
+				modifier = {
+					factor = 10
+					is_in_important_war = yes
+					NOT = { army_size_percentage = 1 }
+				}
+			}
+		}
+	}
+}

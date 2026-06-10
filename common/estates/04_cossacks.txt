@@ -173,6 +173,7 @@ estate_cossacks = {
 		estate_cossacks_monopoly_on_steppe_herds
 		# ABA [[[
 		ABA_estate_cossacks_pln_cossack_szlachta
+		ABA_estate_cossacks_htm_starshyna_council
 		# ]]]
 	}
 

@@ -619,6 +619,17 @@ ab_building_manpower_effect = {
 		}
 		add_army_tradition = 0.25
 	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_barrack_dev_cost_flag
+			}
+		}
+		add_province_modifier = {
+			name = aba_htm_military_housing
+			duration = -1
+		}
+	}
 	# ]]]
 }
 
@@ -660,6 +671,14 @@ ab_removing_manpower_effect = {
 		}
 		add_army_tradition = -0.25
 	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_barrack_dev_cost_flag
+			}
+		}
+		remove_province_modifier = aba_htm_military_housing
+	}
 	# ]]]
 }
 
@@ -681,6 +700,17 @@ ab_building_forcelimit_effect = {
 		}
 		add_army_tradition = 0.25
 	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_forcelimit_autonomy_flag
+			}
+		}
+		add_province_modifier = {
+			name = aba_htm_military_presence
+			duration = -1
+		}
+	}
 	# ]]]
 }
 
@@ -701,6 +731,14 @@ ab_removing_forcelimit_effect = {
 			}
 		}
 		add_army_tradition = -0.25
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_forcelimit_autonomy_flag
+			}
+		}
+		remove_province_modifier = aba_htm_military_presence		
 	}
 	# ]]]
 }
@@ -1044,6 +1082,17 @@ ab_building_road_effect = {
             duration = -1
         }
     }
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = aba_htm_road_building_bonus
+			}
+		}
+		add_province_modifier = {
+			name = aba_htm_wagon_trade
+			duration = -1
+		}
+	}
 	# TLW [[[
 	if = {
 		limit = {
@@ -1135,6 +1184,12 @@ ab_removing_road_effect = {
         }
         remove_province_modifier = nnv_assimilating_population
     }
+	if = {
+		limit = {
+			has_province_modifier = aba_htm_wagon_trade
+		}
+		remove_province_modifier = aba_htm_wagon_trade
+	}
 	# TLW [[[
 	if = {
 		limit = {

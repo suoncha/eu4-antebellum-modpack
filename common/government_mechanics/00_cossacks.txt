@@ -41,30 +41,13 @@ cossacks_mechanic = {
 						power_type = cossacks_adm_power
 						value = -100
 				}
-				custom_tooltip = AB_EMPTY
-				add_yearly_manpower = 0.5
-				custom_tooltip = AB_EMPTY
-				hidden_effect = {
-					random_rival_country = {
-						limit = {
-							is_neighbor_of = root
-						}
-						save_event_target_as = source_country
+				if = {
+					limit = {
+						has_country_flag = aba_htm_recieve_fleeing_serfs_buff
 					}
-					if = {
-						limit = {
-							#use NOT here because changing the scopt to a non-existent country will fail anyway, giving us the check we want
-							NOT = {
-								event_target:source_country = {
-									exists = yes
-								}
-							}
-						}
-						random_neighbor_country = {
-							save_event_target_as = source_country
-						}
-					}
-				}			
+					add_yearly_manpower = 0.5
+				}
+				custom_tooltip = AB_EMPTY			
 				custom_tooltip = fleeing_serfs_tt
 				custom_tooltip = AB_EMPTY
 				hidden_effect = {
@@ -75,14 +58,14 @@ cossacks_mechanic = {
 						random_owned_province = {
 							limit = {
 								OR = {
-									not = { religion = event_target:source_country }
+									not = { religion = event_target:htm_cossack_current_serf_target }
 									AND = {
 										not = { 
-											event_target:source_country = {
+											event_target:htm_cossack_current_serf_target = {
 												accepted_culture = prev
 											}
 										}
-										not = { culture = event_target:source_country }
+										not = { culture = event_target:htm_cossack_current_serf_target }
 									}
 								}
 							}
@@ -93,14 +76,14 @@ cossacks_mechanic = {
 						random_owned_province = {
 							limit = {
 								OR = {
-									not = { religion = event_target:source_country }
+									not = { religion = event_target:htm_cossack_current_serf_target }
 									AND = {
 										not = { 
-											event_target:source_country = {
+											event_target:htm_cossack_current_serf_target = {
 												accepted_culture = prev
 											}
 										}
-										not = { culture = event_target:source_country }
+										not = { culture = event_target:htm_cossack_current_serf_target }
 									}
 								}
 							}
@@ -108,12 +91,13 @@ cossacks_mechanic = {
 						}
 					}
 				}
-				event_target:source_country = {
+				event_target:htm_cossack_current_serf_target = {
 					add_country_modifier = {
 						name = serfs_recieved_by_cossacks
 						duration = 3650
 					}
 				}
+				clear_global_event_target = htm_cossack_current_serf_target
 			}
 			cooldown_years = 0
 			ai_chance = {
@@ -147,24 +131,26 @@ cossacks_mechanic = {
 					name = raiding_parties_modifier
 					duration = 3650
 				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -100
+				}
+				custom_tooltip = AB_EMPTY
 				if = {
 					limit = {
-						has_country_flag = aba_HTM_raiding_upgrade_mechanic
+						has_country_flag = aba_htm_raiding_parties_interaction_buff
 					}
-					add_government_power = {
-						mechanic_type = cossacks_mechanic
-						power_type = cossacks_dip_power
-						value = -80
-					}
-					add_yearly_manpower = 0.10
-				}
-				else = {
-					add_government_power = {
-						mechanic_type = cossacks_mechanic
-						power_type = cossacks_dip_power
-						value = -100
+					event_target:htm_cossack_province_raid_target = {
+						add_devastation = 25
+						remove_loot = {
+							who = ROOT
+							amount = 25
+						}
 					}
 				}
+				clear_global_event_target = htm_cossack_current_raid_target
+				clear_global_event_target = htm_cossack_province_raid_target
 			}
 			cooldown_years = 10
 			ai_chance = {

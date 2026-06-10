@@ -5,7 +5,7 @@ country_event = {
 	id = aba_hetmanate.1
 	title = aba_hetmanate.1.t
 	desc = aba_hetmanate.1.d
-	picture = JANISSARIES_IN_FORMATION_eventPicture
+	picture = TRANSYLVANIA_BETHLEN_INVASION_eventPicture
 	
 	is_triggered_only = yes
 
@@ -28,11 +28,12 @@ country_event = {
 		}
 		country_event = {
 			id = aba_hetmanate.1
-			days = 3650
+			days = 9125
 		}
 	}
 }
 
+#Integration of the Tatars
 country_event = {
 	id = aba_hetmanate.2
 	title = aba_hetmanate.2.t
@@ -60,6 +61,7 @@ country_event = {
 	}
 }
 
+#Fate of the Uniate Churcch
 country_event = {
 	id = aba_hetmanate.3
 	title = aba_hetmanate.3.t
@@ -193,3 +195,385 @@ country_event = {
 		custom_tooltip = HTM_ENFORCED_INTERFAITH_PRIVILEGE
 	}
 }
+
+#Dawn of the Hetmanate
+country_event = {
+	id = aba_hetmanate.4
+	title = aba_hetmanate.4.t
+	desc = aba_hetmanate.4.d
+	picture = COSSACK_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aba_hetmanate.4.a
+		add_prestige = 25
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABA_HTM_COSSACK_MILITARIZATION_UNLOCKED
+		hidden_effect = {
+			unlock_government_reform = {
+				government_reform = aba_hetmanate_buffed
+			}
+			hidden_effect = {
+				add_government_reform = aba_hetmanate_buffed
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = RUSABIL_SUDEBNIK_EFFECT_TT
+		tooltip = {
+			add_local_autonomy = -10
+			add_nationalism = -5
+		}
+		hidden_effect = {
+			every_owned_province = {
+				add_local_autonomy = -10
+				add_nationalism = -5
+			}
+		}
+	}
+}
+
+#Cossacks of The High Seas
+country_event = {
+	id = aba_hetmanate.5
+	title = aba_hetmanate.5.t
+	desc = aba_hetmanate.5.d
+	picture = SHIP_SAILING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = aba_htm_dev_neva
+		owns = 33
+		33 = {
+			development = 30
+		}
+	}
+	
+	option = {
+		name = aba_hetmanate.5.a
+		create_admiral = { tradition = 75 }
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = aba_htm_cossacks_high_seas_1
+			duration = -1
+		}
+		33 = {
+			add_province_modifier = {
+				name = aba_htm_cossack_naval_school
+				duration = -1
+			}
+			add_or_upgrade_dock_building = yes
+			add_or_upgrade_shipyard_building = yes
+		}
+	}
+}
+
+#Country Rename
+country_event = {
+	id = aba_hetmanate.6
+	title = aba_hetmanate.6.t
+	desc = aba_hetmanate.6.d
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aba_hetmanate.6.a
+		override_country_name = ABA_FREE_RUTHENIA
+	}
+
+	option = {
+		name = aba_hetmanate.6.b
+		override_country_name = ABA_UNITED_HOSTS
+	}
+
+	option = {
+		name = aba_hetmanate.6.c
+		override_country_name = ABA_HETMANSHCHYNA
+	}
+
+	option = {
+		name = aba_hetmanate.6.de
+	}
+}
+
+#Malorossian Host 
+country_event = {
+	id = aba_hetmanate.7
+	title = aba_hetmanate.7.t
+	desc = aba_hetmanate.7.d
+	picture = FARMING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = aba_baltic_host_event_unlock
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 15
+			region = baltic_region
+			culture = aba_malorussian_cossack_culture
+		}
+	}
+	
+	option = {
+		name = aba_hetmanate.7.a
+		add_country_modifier = {
+			name = aba_htm_malorossian_host
+			duration = -1
+		}
+		set_country_flag = aba_malorossian_mercs_unlock
+		custom_tooltip = ABA_HTM_MALOROSSIAN_HOST_MERCS_UNLOCK_TT
+	}
+}
+
+#Terek Host 
+country_event = {
+	id = aba_hetmanate.8
+	title = aba_hetmanate.8.t
+	desc = aba_hetmanate.8.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = aba_htm_terek_host_event_unlock
+		circassia_area = {
+			culture = aba_terek_cossack_culture
+		}
+		dagestan_area = {
+			culture = aba_terek_cossack_culture
+		}
+	}
+	
+	option = {
+		name = aba_hetmanate.8.a
+		add_country_modifier = {
+			name = aba_htm_terek_host
+			duration = -1
+		}
+		set_country_flag = aba_terek_mercs_unlock
+		custom_tooltip = ABA_HTM_TEREK_HOST_MERCS_UNLOCK_TT
+	}
+}
+
+#Haven for the Oppressed
+country_event = {
+	id = aba_hetmanate.9
+	title = aba_hetmanate.9.t
+	desc = aba_hetmanate.9.d
+	picture = FAMINE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = aba_htm_haven_mechanic
+		any_ally = {
+			OR = {
+				government = monarchy
+				government = dictatorship
+				government = tribal
+			}
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.9.a
+		add_yearly_manpower = 1.5
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = aba_hetmanate.9
+			days = 3650
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.9.b
+		custom_tooltip = NED_TEN_ADM_DEV
+		hidden_effect = {
+			distribute_development = {
+				type = tax
+				amount = 10
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = aba_hetmanate.9
+			days = 3650
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.9.c
+		custom_tooltip = ABA_5_COSSACKS
+		hidden_effect = {
+			capital_scope = {
+				cossack_cavalry = ROOT
+			}
+			capital_scope = {
+				cossack_cavalry = ROOT
+			}
+			capital_scope = {
+				cossack_cavalry = ROOT
+			}
+			capital_scope = {
+				cossack_cavalry = ROOT
+			}
+			capital_scope = {
+				cossack_cavalry = ROOT
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = aba_hetmanate.9
+			days = 3650
+		}
+	}
+}
+
+#Hetman's Monopolies
+country_event = {
+	id = aba_hetmanate.10
+	title = aba_hetmanate.10.t
+	desc = aba_hetmanate.10.d
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aba_hetmanate.10.a
+		trigger = {
+			any_owned_province = {
+				trade_goods = iron
+			}
+		}
+		custom_tooltip = ABA_IRON_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = aba_htm_monopoly
+				duration = -1 
+			}
+		}
+		hidden_effect = {
+			set_country_flag = aba_htm_monopoly_enacted
+			set_country_flag = aba_htm_iron_monopoly
+			aba_check_monopoly_effect = yes 
+		}	
+	}
+
+	option = {
+		name = aba_hetmanate.10.b
+		trigger = {
+			any_owned_province = {
+				trade_goods = copper
+			}
+		}
+		custom_tooltip = ABA_COPPER_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = aba_htm_monopoly
+				duration = -1 
+			}
+		}
+		hidden_effect = {
+			set_country_flag = aba_htm_monopoly_enacted
+			set_country_flag = aba_htm_copper_monopoly
+			aba_check_monopoly_effect = yes 
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.10.c
+		trigger = {
+			any_owned_province = {
+				trade_goods = cloth
+			}
+		}
+		custom_tooltip = ABA_CLOTH_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = aba_htm_monopoly
+				duration = -1 
+			}
+		}
+		hidden_effect = {
+			set_country_flag = aba_htm_monopoly_enacted
+			set_country_flag = aba_htm_cloth_monopoly
+			aba_check_monopoly_effect = yes 
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.10.de
+		trigger = {
+			any_owned_province = {
+				trade_goods = salt
+			}
+		}
+		custom_tooltip = ABA_SALT_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = aba_htm_monopoly
+				duration = -1 
+			}
+		}
+		hidden_effect = {
+			set_country_flag = aba_htm_monopoly_enacted
+			set_country_flag = aba_htm_salt_monopoly
+			aba_check_monopoly_effect = yes 
+		}
+	}
+
+	option = {
+		name = aba_hetmanate.10.f
+		trigger = {
+			any_owned_province = {
+				trade_goods = wool
+			}
+		}
+		custom_tooltip = ABA_WOOL_PROVINCES
+		tooltip = {
+			add_province_modifier = {
+				name = aba_htm_monopoly
+				duration = -1 
+			}
+		}
+		hidden_effect = {
+			set_country_flag = aba_htm_monopoly_enacted
+			set_country_flag = aba_htm_wool_monopoly
+			aba_check_monopoly_effect = yes 
+		}
+	}
+}
+
+#Fate of the Elected Cossacks
+country_event = {
+	id = aba_hetmanate.11
+	title = aba_hetmanate.11.t
+	desc = aba_hetmanate.11.d
+	picture = COSSACK_ESTATE_UPSET_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { # Equality
+		name = aba_hetmanate.11.a
+		unlock_government_reform = {
+			government_reform = aba_htm_cossack_meritocracy
+		}
+		hidden_effect = {
+			add_government_reform = aba_htm_cossack_meritocracy
+		}
+	}
+
+	option = { #All power to the Starshyna 
+		name = aba_hetmanate.11.b
+		unlock_government_reform = {
+			government_reform = aba_htm_starshyna_oligarchy
+		}
+		hidden_effect = {
+			add_government_reform = aba_htm_starshyna_oligarchy
+		}
+	}
+}
+
+
