@@ -1,6 +1,6 @@
 ﻿l_english:
 # Base #
- AB_TLW_VERSION: "The Lost World: 0.7.1\nVersion: 31 May 2026"
+ AB_TLW_VERSION: "The Lost World: 0.7.1\nVersion: 10 June 2026"
 
 # Legacy of Rome #
  the_lost_world05: "£bookmark_TLW05£"
@@ -40,4 +40,4 @@
  modpack_updated_desc: "This nation has received custom content in Ante Bellum 'Ultimate Modpack'."
  DLC_updated_modpack_TOOLTIP_INSTANT: "§YAnte Bellum 'Ultimate Modpack'§!"
  LANDING_updated_modpack_TEXT: "Integrated Mods:\n- Map Border Overhaul\n- Ante Bellum Flavor\n- Ante Bellum Mission Pack"
- LANDING_updated_modpack_FLAVOR_TEXT: "Enjoy more expanded content with nations from Ante Bellum 'Ultimate Modpack'. Featuring: @WAL Wallachia, @PLN Polans, @CLE China, @HUN Hungary, @BRI Brittany, @GLH Tartaria, @SCO Scotland, @MVA Moravia, @BUL Bulgaria, @WEE Wendia, @SHH Shahi, @GHU Ghor, @ZNN Zun @GER Germany, @UKR Rus, @HTM Hetmanate, @JAP Japan, @SWE Sweden, @NOR Norway, @DAN Denmark, @TCR Tocharia"
+ LANDING_updated_modpack_FLAVOR_TEXT: "Enjoy more expanded content with nations from Ante Bellum 'Ultimate Modpack'. Featuring: @WAL Wallachia, @HTM Hetmanate (Zaporizhzhia), @PLN Polans, @LUD Lendia, @TCR Tocharia, @SHH Shahi, @GHU Ghor, @ZNN Zun (Rob), @CLE China, @HUN Hungary, @BRI Brittany, @GLH Tartaria, @SCO Scotland, @MVA Moravia, @BUL Bulgaria, @WEE Wendia, @GER Germany, @UKR Rus, @JAP Japan, @SWE Sweden, @NOR Norway, @DAN Denmark"

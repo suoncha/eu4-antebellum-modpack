@@ -9829,6 +9829,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.05
@@ -9871,6 +9874,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.075
@@ -9914,6 +9920,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.1
@@ -20190,6 +20199,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}
@@ -20205,6 +20215,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}
@@ -20218,6 +20229,7 @@ city_of_sarai = {
 				has_reform = cossacks_reform
 				# AB [[[
 				has_reform = hetmanate
+				has_reform = aba_hetmanate_buffed
 				# ]]]
 			}
 		}
