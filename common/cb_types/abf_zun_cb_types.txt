@@ -1,0 +1,16 @@
+cb_abf_zun_crusade = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		has_country_flag = ABF_ZNN_GLOBAL_PURIFICATION_CB
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		NOT = { religion_group = FROM }
+		NOT = {	has_matching_religion = FROM }
+	}
+
+	war_goal = superiority_zun_crusade
+}

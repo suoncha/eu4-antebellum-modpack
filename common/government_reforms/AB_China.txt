@@ -11,7 +11,13 @@ chinawarlord = {
 		}
 		is_colonial_nation = no
 		is_emperor_of_china = no
-		
+		### ABF Modified Potential [[[
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = ABF_tcr_yuezhi_warlord
+			}
+		}
+		### ]]]
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -34,7 +40,9 @@ chinafire = {
 		OR = {
 			culture_group = east_asian
 			tag = CDL
-			has_country_flag = ABA_TCR_China
+			### ABF modified potential [[[
+			has_country_flag = abf_tcr_china_path
+			### ]]]
 		}
 		NOT = {
 			tag = YUA
@@ -53,7 +61,9 @@ chinasecretariat = {
 		OR = {
 			culture_group = east_asian
 			tag = CDL
-			has_country_flag = ABA_TCR_China
+			### ABF modified potential [[[
+			has_country_flag = abf_tcr_china_path
+			### ]]]
 		}
 		NOT = {
 			tag = YUA
@@ -72,7 +82,9 @@ chinamongols = {
 		OR = {
 			culture_group = east_asian
 			tag = CDL
-			has_country_flag = ABA_TCR_China
+			### ABF modified potential [[[
+			has_country_flag = abf_tcr_china_path
+			### ]]]
 		}
 		NOT = {
 			tag = YUA
@@ -92,7 +104,9 @@ chinawall = {
 		OR = {
 			culture_group = east_asian
 			tag = CDL
-			has_country_flag = ABA_TCR_China
+			### ABF modified potential [[[
+			has_country_flag = abf_tcr_china_path
+			### ]]]
 		}
 		NOT = {
 			tag = YUA
@@ -112,7 +126,9 @@ chintreasure = {
 		OR = {
 			culture_group = east_asian
 			tag = CDL
-			has_country_flag = ABA_TCR_China
+			### ABF modified potential [[[
+			has_country_flag = abf_tcr_china_path
+			### ]]]
 		}
 		NOT = {
 			tag = YUA
@@ -156,10 +172,7 @@ min_persian_admin = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		OR = {
-			has_country_flag = ABA_TCR_China
-			has_country_flag = persian_admin
-		}
+		has_country_flag = persian_admin
 	}
 	modifiers = {
 		trade_efficiency = 0.1

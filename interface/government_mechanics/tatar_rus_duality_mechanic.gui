@@ -1,0 +1,254 @@
+guiTypes = {
+	windowType = { # Copied and adjusted from government_interaction_type
+		name = "tatar_rus_duality_gov_mech"
+		size = { x = 291 y = 71 }
+		moveable = 0
+
+		# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_tatar_rus_duality_progressbar"
+			position = { x = 25 y = 40 }
+		}
+
+		# Progressbar Frame
+		iconType = {
+			name = "frame_background"
+			spriteType = "GFX_tatar_rus_duality_frame"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+	
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_interaction_left_button"
+		size = { x = 123 y = 135 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		# Background
+		iconType = {
+			name = "background"
+			spriteType = "GFX_russomongolian_mechanic_left_bg"
+			alwaystransparent = yes
+			position = { x = 0 y = 0 }
+		}
+
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM" #placeholder so we don't get an assert - you have to set something - but this will be overridden by the interaction's icon
+			position = { x = 15 y = 6 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_russomongolian_progressbar"
+			position = { x = 50 y = 120 }
+			Orientation = "UPPER_LEFT"
+			scale = 1.25
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_russomongolian_gov_power_frame"
+			position = { x = 42 y = 118 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+	}
+	
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_interaction_middle_button"
+		size = { x = 87 y = 135 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		# Background
+		iconType = {
+			name = "background"
+			spriteType = "GFX_russomongolian_mechanic_middle_bg"
+			alwaystransparent = yes
+			position = { x = -15 y = 0 }
+		}
+
+		### interaction button
+
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM" #placeholder so we don't get an assert - you have to set something - but this will be overridden by the interaction's icon
+			position = { x = -14 y = 6 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_russomongolian_progressbar"
+			position = { x = 4 y = 120 }
+			Orientation = "UPPER_LEFT"
+			scale = 1.25
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_russomongolian_gov_power_frame"
+			position = { x = -4 y = 118 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+	}
+	
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_interaction_right_button"
+		size = { x = 118 y = 135 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		# Background
+		iconType = {
+			name = "background"
+			spriteType = "GFX_russomongolian_mechanic_right_bg"
+			alwaystransparent = yes
+			position = { x = -16 y = -1 }
+		}
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM" #placeholder so we don't get an assert - you have to set something - but this will be overridden by the interaction's icon
+			position = { x = -40 y = 4 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_russomongolian_progressbar"
+			position = { x = -6 y = 120}
+			Orientation = "UPPER_LEFT"
+			scale = 1.25
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_russomongolian_gov_power_frame"
+			position = { x = -14 y = 118 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+	}
+
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_sub_interaction_left"
+		size = { x = 123 y = 48 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+			name = "sub_circle_frame"
+			spriteType = "GFX_russomongolian_gov_power_circle_frame"
+			position = { x = 47 y = -4 }
+			alwaystransparent = yes
+		}
+
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			position = { x = 16 y = -3 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_sub_interaction_middle"
+		size = { x = 87 y = 48 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+			name = "sub_circle_frame"
+			spriteType = "GFX_russomongolian_gov_power_circle_frame"
+			position = { x = 1 y = -4 }
+			alwaystransparent = yes
+		}
+
+		# 	# sub button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+			position = { x = -12 y = -3 }
+		}
+	}
+
+	# Interactions, copied from government_interaction_type but we want a different size than default
+	windowType = {
+		name = "russomongolian_sub_interaction_right"
+		size = { x = 118 y = 48 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+			name = "sub_circle_frame"
+			spriteType = "GFX_russomongolian_gov_power_circle_frame"
+			position = { x = -9 y = -4 }
+			alwaystransparent = yes
+		}
+
+		# Sub button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+			position = { x = -37 y = -3 }
+		}
+	}
+}

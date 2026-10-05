@@ -2,10 +2,12 @@ globaldomination_ideas = {
 	category = DIP
 
 	trigger = {
+		### ABF - Early dominiation ideas unlock reward trigger [[[
 		OR = {
 			has_global_flag = domination_ideas_enabled
-			has_country_flag = aba_pol_domination_ideas_unlocked
+			has_country_flag = abf_domination_ideas_unlocked_flag
 		}
+		### ]]]
 		OR = {
 			current_age = age_of_revolutions
 			current_age = age_of_imperialism

@@ -1,0 +1,26 @@
+﻿l_english:
+######## Events (primarily for nations that have only been slightly modified by ABF) ####### [[[
+
+#### EAST ASIA ####
+
+ #----Japanese----#
+ abf_japan_events.1.t: "Sinification of Japan?"
+ abf_japan_events.1.d: "Once, long ago, Chinese and Confucian ideas spread across Japan, influencing our cultural and political development till this day. Taking the mantle of the emperor of China, many in our court are considering embracing our historical Chinese influence and adopting the customs and traditions of the Chinese, just as many invaders had done before. Some say this would allow us to better integrate with our Chinese subjects and strengthen our ties with the Middle Kingdom. Others claim that this would be a betrayal of our own culture and traditions, and that we should instead focus on strengthening our own identity. The question is, what path should we take?"
+ abf_japan_events.1.a: "It is time to complete what started years ago..."
+ abf_japan_events.1.b: "We will not bend the knee!" 
+ #-----------------------------#
+
+#### WESTERN EUROPE ####
+
+ #----Brittany/Gallia----#
+ ab_brittany.3.t: "The Gaelic Faith"
+ ab_brittany.3.d: "With the revival of the Gallic culture, many have begun to look into the old faith of our ancestors, the ancient Celtic polytheism that was practiced before the coming of Christianity. While many scoff at this idea, it has gained a significant following among the common folk and some of the nobility. Our lord, [Root.Monarch.GetName], has decided to combine aspects of this faith with those of Christianity, seeing it as a way to further distance ourselves from the French and their influence. This decision has been met with mixed reactions, with some seeing it as a bold move towards independence, while others view it as a dangerous step towards heresy. Regardless, we must now navigate the challenges that come with this new faith and its place in our society."
+ ab_brittany.3.a: "A new faith for a new age..."
+ ab_brittany.3.b: "These are only the delusions of a madman!"
+ #-----------------------------#
+
+################################## ]]]]
+
+
+
+

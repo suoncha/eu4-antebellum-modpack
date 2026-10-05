@@ -47,11 +47,7 @@ zun_wrath = {
 		global_missionary_strength = 0.02
 	}
 	trigger = {
-		OR =  {
-			mission_completed = zun_wrath
-			mission_completed = zuni_wrath
-			mission_completed = zunp_wrath
-		}
+		mission_completed = zun_wrath
 	}
 }
 
@@ -60,12 +56,31 @@ zun_crusade = {
 	modifier = {
 		extra_manpower_at_religious_war = yes
 	}
+	### ABF Modified Trigger [[[
 	trigger = {
 		OR = {
 			mission_completed = zun_sunset
 			mission_completed = zun_master
-		}   
+		}
 	}
-}q
+	### ]]]
+}
 
+###### ABF Additional Church Zunist Aspects ]]]
+
+	### Purifying Light ### [[[
+	zun_abf_purifying_light_aspect = {
+		cost = 100
+		modifier = {
+			can_claim_states = yes
+		}
+		trigger = {
+			mission_completed = zun_capture_jerusalem
+		}
+	}
+	############# ]]]
+
+
+
+################ ]]]
 

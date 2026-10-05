@@ -1,0 +1,26 @@
+﻿l_english:
+
+################################## ABF General/Mini-Expansion Government Reforms [[[
+
+### PERSIA/PERSIANATE ###
+
+#----Shahi---#
+ abf_shahi_diwan: "Shahi Diwan"
+ abf_shahi_diwan_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ unlock_abf_shahi_diwan_tt: "§GUnlocks§! the §YShahi Diwan§! §MTier 1§! Government Reform, giving the following effects:\n\nYearly Legitimacy: §G+1§!\nNational Unrest: §G-1§!\nGoverning Capacity Modifier: §G+25.0%§!\n\nThis reform includes the following Government Mechanic:\nCan §Ronly§! assimilate §YIndian§! and §YPersian§! cultures into adminstration."
+ abf_shahi_diwan_tribal: "Shahi Diwan"
+ abf_shahi_diwan_tribal_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ unlock_abf_shahi_diwan_tribal_tt: "§GUnlocks§! the §YShahi Diwan§! §MTier 1§! Government Reform, giving the following effects:\n\nYearly Legitimacy: §G+1§!\nNational Unrest: §G-1§!\nGoverning Capacity Modifier: §G+25.0%§!\n\nThis reform includes the following Government Mechanic:\nCan §Ronly§! assimilate §YIndian§! and §YPersian§! cultures into adminstration."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Ghor/Ghurids---#
+ abf_shahi_diwan: "Shahi Diwan"
+ abf_shahi_diwan_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ unlock_abf_shahi_diwan_tt: "§GUnlocks§! the §YShahi Diwan§! §MTier 1§! Government Reform, giving the following effects:\n\nYearly Legitimacy: §G+1§!\nNational Unrest: §G-1§!\nGoverning Capacity Modifier: §G+25.0%§!\n\nThis reform includes the following Government Mechanic:\nCan §Ronly§! assimilate §YIndian§! and §YPersian§! cultures into adminstration."
+ abf_shahi_diwan_tribal: "Shahi Diwan"
+ abf_shahi_diwan_tribal_desc: "The Shahi Diwan represents a significant shift in governance, emphasizing a more centralized and efficient administration. By fusing Indian and Afghan ways of governance, we aim to streamline our bureaucratic processes, enhance our ability to manage diverse populations, and strengthen our overall state capacity. This change is expected to foster greater unity and stability within our realm, allowing us to better navigate the complexities of ruling a vast and culturally rich empire."
+ unlock_abf_shahi_diwan_tribal_tt: "§GUnlocks§! the §YShahi Diwan§! §MTier 1§! Government Reform, giving the following effects:\n\nYearly Legitimacy: §G+1§!\nNational Unrest: §G-1§!\nGoverning Capacity Modifier: §G+25.0%§!\n\nThis reform includes the following Government Mechanic:\nCan §Ronly§! assimilate §YIndian§! and §YPersian§! cultures into adminstration."
+#--------------------------------------------------------------------------------------------------------------------#
+
+################################## ]]]
+

@@ -1,7 +1,7 @@
 namespace = AB_Shahi_Event
 
 #Indian Sweep
-country_event = {
+country_event = { ### ABF new rewards and formatting [[[
 	id = AB_Shahi_Event.1
 	title = AB_Shahi_Event.1.T
 	desc = AB_Shahi_Event.1.D
@@ -11,39 +11,77 @@ country_event = {
 		name = AB_Shahi_Event.1.OPT1
 		ai_chance = { factor = 50 }
 		change_technology_group = indian
-		change_unit_type = indian
-		If = {
+		custom_tooltip = AB_SHH_CB_tt
+		hidden_effect = { set_country_flag = AB_SHH_activate_CB }
+		### ABF Cemented Monarchy Government Reform Grant + Brahmin Adminstration gov reform [[[
+		custom_tooltip = AB_EMPTY
+		if = {
 			limit = {
 				government = monarchy
 			}
-			custom_tooltip = aba_shahi_diwan_tt
-		    add_government_reform = aba_shahi_diwan
+			unlock_government_reform = {
+				government_reform = abf_shahi_diwan
+			}
+			hidden_effect = {
+				add_government_reform = abf_shahi_diwan
+			}
 		}
 		else_if = {
-			limit = {
+			limit = { 
 				government = tribal
 			}
-			custom_tooltip = aba_shahi_diwan_tt
-		    add_government_reform = aba_shahi_diwan_tribal
+			unlock_government_reform = {
+				government_reform = abf_shahi_diwan_tribal
+			}
+			hidden_effect = {
+				add_government_reform = abf_shahi_diwan_tribal
+			}
 		}
-		custom_tooltip = AB_SHH_CB_tt
 		custom_tooltip = GHU_REFORMSHH
-		hidden_effect = { 
-			set_country_flag = AB_SHH_activate_CB 
-	   }
+		set_country_flag = unlocked_shhdharmic
+		### ]]]
 	}
 	option = {
 		name = AB_Shahi_Event.1.OPT2
 		ai_chance = { factor = 50 }
 		custom_tooltip = AB_SHH_decision_available_tt
 		custom_tooltip = AB_SHH_decision_explanation_tt
+		### ABF - formatting addition [[[
+		custom_tooltip = AB_EMPTY
+		### ]]]
 		hidden_effect = { set_country_flag = AB_SHH_activate_rajput_decision }
 		add_country_modifier = {
 			name = AB_SHH_empowered_indian_warriors
 			duration = -1
 		}
+		### ABF Tribal Monarchy Government Reform Grant + Brahmin Adminstration gov reform [[[
+		if = {
+			limit = {
+				government = monarchy
+			}
+			unlock_government_reform = {
+				government_reform = abf_shahi_diwan
+			}
+			hidden_effect = {
+				add_government_reform = abf_shahi_diwan
+			}
+		}
+		else_if = {
+			limit = { 
+				government = tribal
+			}
+			unlock_government_reform = {
+				government_reform = abf_shahi_diwan_tribal
+			}
+			hidden_effect = {
+				add_government_reform = abf_shahi_diwan_tribal
+			}
+		}
+		custom_tooltip = GHU_REFORMSHH
+		set_country_flag = unlocked_shhdharmic
+		### ]]]
 	}
-}
+} ### ]]]
 
 #The Tarim Basin
 country_event = {
@@ -76,7 +114,6 @@ country_event = {
 			vassalize = TCR
 			TCR = {
 				change_technology_group = chinese
-				change_unit_type = chinese
 				change_religion = ROOT
 				change_primary_culture = Tocharian
 				add_idea_group = trade_ideas
@@ -325,48 +362,6 @@ country_event = {
 				which = global_trade
 				value = 100
 			}
-		}
-	}
-}
-
-#Indian Centry 
-country_event = {
-	id = AB_Shahi_Event.8
-	title = AB_Shahi_Event.8.T
-	desc = AB_Shahi_Event.8.D
-	picture = CITY_DEVELOPMENT_eventPicture
-	is_triggered_only = yes
-	
-	option = {
-		name = AB_Shahi_Event.8.a
-		add_prestige = 20
-		override_country_name = aba_SHH_shahistan
-		custom_tooltip = ZUN_PP
-		hidden_effect = {
-			add_power_projection = {
-				type = ZUN_perma_pp
-				amount = 50
-			}
-		}
-		add_country_modifier = {
-			name = "zun_master_india"
-			duration = -1
-		}
-	}
-
-	option = {
-		name = AB_Shahi_Event.8.b
-		add_prestige = 20
-		custom_tooltip = ZUN_PP
-		hidden_effect = {
-			add_power_projection = {
-				type = ZUN_perma_pp
-				amount = 50
-			}
-		}
-		add_country_modifier = {
-			name = "zun_master_india"
-			duration = -1
 		}
 	}
 }

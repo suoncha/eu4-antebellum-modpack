@@ -2530,19 +2530,20 @@ BRN_branch_4 = {
 					duration = -1
 				}
 			}
-			custom_tooltip = frc_every_court_house_tt
-			hidden_effect = {
-				set_country_flag = fra_courthouse_bonus_flag
-				every_owned_province = {
-					limit = {
-						has_courthouse_building_trigger = yes
-					}
-					add_province_modifier = {
-						name = fra_improved_court_houses_modifier
-						duration = -1
-					}
+			### ABF - new conditional culture spread reward  [[[
+			if = {
+				limit = {
+					mission_completed = land_of_britons
 				}
+				custom_tooltip = ABF_BRN_BRITTONIC_REVIVAL_YES
+				set_country_flag = abf_gallic_culture_spread
+				custom_tooltip = ABF_GALLIC_CULTURE_SPREAD_TT
 			}
+			else = {
+				custom_tooltip = ABF_BRN_BRITTONIC_REVIVAL_NO
+				custom_tooltip = ABF_GALLIC_CULTURE_SPREAD_TT
+			}
+			### ]]]
 		}
 	}
 	

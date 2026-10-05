@@ -64,7 +64,6 @@ pol_catholic_first = {
 				}
 				add_claim = ROOT
 			}
-
 		}
 	}
 
@@ -341,12 +340,14 @@ pol_catholic_first = {
 		required_missions = {
 			pol_catholic_mother_of_cities
 		}
+
 		provinces_to_highlight = {
 			country_or_non_sovereign_subject_holds = ROOT
 			trade_goods = grain
 			has_production_building_trigger = no
 
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				trade_goods = grain
@@ -371,28 +372,6 @@ pol_catholic_first = {
 					duration = 7300
 				}
 			}
-			custom_tooltip = RHL_TEN_FOOD_PROVINCE
-			tooltip = {
-				upgrade_production_building = yes
-			}
-			hidden_effect = {
-				for = {
-					amount = 10
-					effect = "
-						random_owned_province = {
-							limit = {
-								OR = {
-									trade_goods = grain
-									trade_goods = livestock
-								}
-								has_production_building_trigger = yes
-							}
-							upgrade_production_building = yes
-						}
-					"
-				}
-			}
-			custom_tooltip = AB_EMPTY
 			change_price = {
 				trade_goods = grain
 				key = polish_grain
@@ -411,7 +390,6 @@ pol_catholic_first = {
 					}
 				}
 			}
-
 		}
 	}
 
@@ -446,10 +424,6 @@ pol_catholic_first = {
 		}
 		
 		effect = {
-			add_years_of_trade_income = {
-				years = 1
-				custom_tooltip = eng_trade_income
-			}
 			add_country_modifier = {
 				name = rus_seize_wealth
 				duration = 5475
@@ -469,8 +443,8 @@ pol_catholic_first = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_dip_interaction_buff2
-			custom_tooltip = ABA_POL_CATHOLIC_dip_interaction_buff2
+			set_country_flag = abf_pol_catholic_dip_interaction_buff2
+			custom_tooltip = ABF_POL_CATHOLIC_DIP_INTERACTION_BUFF2_TT
 			custom_tooltip = AB_EMPTY
 			set_country_flag = est_unlocked_winterplace_project
 			custom_tooltip = EST_UNLOCK_GP
@@ -483,7 +457,7 @@ pol_catholic_first = {
 						has_production_building_trigger = yes
 					}
 				}
-				custom_tooltip = ABA_POL_RUSA_BONUS_YES
+				custom_tooltip = ABF_POL_RUSA_BONUS_YES
 				tooltip = {
 					5176 = {
 						add_province_modifier = {
@@ -494,7 +468,7 @@ pol_catholic_first = {
 				}
 			}
 			else = {
-				custom_tooltip = ABA_POL_RUSA_BONUS_NO
+				custom_tooltip = ABF_POL_RUSA_BONUS_NO
 				tooltip = {
 					5176 = {
 						add_province_modifier = {
@@ -568,6 +542,7 @@ pol_catholic_first = {
 			1955 = {
 				change_province_name = "Archangielsk"
 				rename_capital = "Archangielsk"
+				custom_tooltip = AB_EMPTY
 				add_province_modifier = {
 					name = "arkhangelsk_modifier"
 					duration = -1
@@ -578,14 +553,12 @@ pol_catholic_first = {
 			}
 			custom_tooltip = AB_EMPTY
 			33 = {
+				change_culture = novgorodian
+				custom_tooltip = AB_EMPTY
 				add_province_modifier = {
 					name = "neva_fleet"
 					duration = -1
 				}
-				change_culture = novgorodian
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
 			}
 		}
 	}
@@ -679,10 +652,10 @@ pol_catholic_first = {
 				}
 				custom_tooltip = AB_MNG_DIPLOMATIC_REWARD
 				hidden_effect = {
-					remove_country_modifier = ab_pol_baltic_peace
+					remove_country_modifier = abf_pol_baltic_peace
 				}
 				add_country_modifier = {
-					name = ab_pol_shared_sea
+					name = abf_pol_shared_sea
 					duration = -1
 					desc = "for as long as we are allied to them"
 				}
@@ -725,7 +698,7 @@ pol_catholic_first = {
 				custom_tooltip = AB_MNG_DIPLOMATIC_REWARD_NO
 				tooltip = { 	
 					add_country_modifier = {
-						name = ab_pol_shared_sea
+						name = abf_pol_shared_sea
 						duration = -1
 						desc = "for as long as we are allied to them"
 					}
@@ -766,10 +739,10 @@ pol_catholic_first = {
 					}
 				}
 				custom_tooltip = NED_JAP_CONQUEST_YES
-				set_country_flag = ABA_POL_SWE_UNLOCK_ORDER
-				custom_tooltip = SWE_UNLOCK_ORDER
-				custom_tooltip = AB_EMPTY
 				custom_tooltip = UNITE_SCANDINAVIAN_CULTURE
+				custom_tooltip = AB_EMPTY
+				set_country_flag = abf_pol_unlock_carolean_orders_flag
+				custom_tooltip = SWE_UNLOCK_ORDER
 				custom_tooltip = AB_EMPTY
 				scandinavia_region = {
 					add_local_autonomy = -25
@@ -790,9 +763,9 @@ pol_catholic_first = {
 			else = {
 				custom_tooltip = NED_JAP_CONQUEST_NO
 				tooltip = {
-					custom_tooltip = SWE_UNLOCK_ORDER
-					custom_tooltip = AB_EMPTY
 					custom_tooltip = UNITE_SCANDINAVIAN_CULTURE
+					custom_tooltip = AB_EMPTY
+					custom_tooltip = SWE_UNLOCK_ORDER
 					custom_tooltip = AB_EMPTY
 					scandinavia_region = {
 						add_local_autonomy = -25
@@ -1013,15 +986,9 @@ pol_catholic_first = {
 		}
 
 		effect = { 
-			define_advisor = {
-				type = natural_scientist
-				skill = 3
-				cost_multiplier = 0.33
-			}
-			custom_tooltip = AB_EMPTY
 			poland_region = {
 				add_province_modifier = {
-					name = aba_crown_of_poland_modifier
+					name = abf_crown_of_poland_modifier
 					duration = -1
 				}
 				add_local_autonomy = -10
@@ -1034,8 +1001,8 @@ pol_catholic_first = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_adm_interaction_buff1
-			custom_tooltip = ABA_POL_CATHOLIC_adm_interaction_buff1
+			set_country_flag = abf_pol_catholic_adm_interaction_buff1
+			custom_tooltip = ABF_POL_CATHOLIC_ADM_INTERACTION_BUFF1_TT
 		}
 	}
 
@@ -1069,20 +1036,18 @@ pol_catholic_first = {
 			}
 		}
 		effect = { 
-			change_innovativeness = 3
-			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-				name = "aba_pol_orthodox_lublin_marketplace_country"
+				name = "abf_pol_orthodox_lublin_marketplace_country"
 				duration = 7300
 			}
 			260 = {
 				add_province_modifier = {
-					name = "aba_pol_orthodox_lublin_marketplace"
+					name = "abf_pol_orthodox_lublin_marketplace"
 					duration = -1
 				}
 			}
-			set_country_flag = aba_pol_commonwealth_zamosc_buff
-			custom_tooltip = ABA_POL_CATHOLIC_dip_zamosc_magnate_buff
+			set_country_flag = abf_pol_commonwealth_zamosc_buff
+			custom_tooltip = ABF_POL_CATHOLIC_DIP_ZAMOSC_MAGNATE_BUFF_TT
 		}
 	}
 
@@ -1113,16 +1078,16 @@ pol_catholic_first = {
 			}
 			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-				name = aba_pol_patronage_of_the_west
+				name = abf_pol_patronage_of_the_west
 				duration = -1
 			}
+			set_country_flag = abf_monarch_on_tech_flag
 			custom_tooltip = ABF_POL_PATRONAGE_TT
 			tooltip = {
 				add_adm_power = 50
 				add_dip_power = 50
 				add_mil_power = 50
 			}
-			set_country_flag = ABF_pol_patronage
 		}
 	}
 
@@ -1132,8 +1097,13 @@ pol_catholic_first = {
 		required_missions = {
 			pol_catholic_cossack_szachta pol_catholic_patronage_of_west
 		}
+
 		provinces_to_highlight = { 
-			
+			OR = {
+				culture_group = west_slavic
+				culture_group = east_slavic
+			}
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 
 		trigger = { 
@@ -1159,14 +1129,14 @@ pol_catholic_first = {
 				accepted_culture = Litvin
 				accepted_culture = volhynian
 				accepted_culture = pomorian
-				accepted_culture = aba_polish_eastern
-				accepted_culture = aba_malorussian_cossack_culture
-				accepted_culture = aba_chernomoriya_cossack_culture
-				accepted_culture = aba_don_cossack_culture
-				accepted_culture = aba_terek_cossack_culture
-				accepted_culture = aba_povolzyhe_cossack_culture
-				accepted_culture = aba_uralskiye_cossack_culture
-				accepted_culture = aba_kharbinskiye_cossack_culture
+				accepted_culture = abf_polish_eastern
+				accepted_culture = abf_malorussian_cossack_culture
+				accepted_culture = abf_chernomoriya_cossack_culture
+				accepted_culture = abf_don_cossack_culture
+				accepted_culture = abf_terek_cossack_culture
+				accepted_culture = abf_povolzyhe_cossack_culture
+				accepted_culture = abf_uralskiye_cossack_culture
+				accepted_culture = abf_kharbinskiye_cossack_culture
 				accepted_culture = abf_nagaybak_culture
 				accepted_culture = czech
 				accepted_culture = slovak
@@ -1181,9 +1151,8 @@ pol_catholic_first = {
 
 		effect = {
 			country_event = {
-				id = aba_pol_events.4
+				id = abf_pol_events.4
 			}
-			custom_tooltip = AB_EMPTY
 		}
 	}
 
@@ -1357,7 +1326,20 @@ pol_catholic_second = {
 
 		}
 		effect = {
-			add_mil_power = 100
+			if = {
+				limit = {
+					religion = catholic
+				}
+				add_papal_influence = 25
+			}
+			else = {
+				define_advisor = {
+					type = theologian
+					skill = 2
+					 cost_multiplier = 0.33
+				}
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = pol_purge_heathens
 				duration = 3650
@@ -1431,12 +1413,11 @@ pol_catholic_second = {
 			}
 			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-				name = aba_pol_integrate_tribal_leaders
+				name = abf_pol_integrate_tribal_leaders
 				duration = -1
 			}
-			custom_tooltip = ABF_POL_RECRUIT_TRIBAL_LEADERS
-			set_country_flag = abf_pol_tribal_leaders_loyalty
-
+			set_country_flag = abf_recruiting_generals_grant_noble_loyalty_flag
+			custom_tooltip = ABF_GENERALS_GIVE_LOYALTY_TT
 		}
 	}
 
@@ -1599,7 +1580,6 @@ pol_catholic_second = {
 					}
 				}
 			}
-
 		}
 	}
 
@@ -1665,30 +1645,14 @@ pol_catholic_second = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
+				set_country_flag = abf_enabled_lavra_flag
 				custom_tooltip = LTV_KIEV_LAVRA
-				custom_tooltip = AB_EMPTY
-				define_advisor = {
-					type = theologian
-					skill = 3
-					religion = ROOT
-					culture = ROOT
-					cost_multiplier = 0.5
-				}
 			}
 			else = {
 				west_dniepr_area = {
 					add_prosperity = 100
 				}
-				custom_tooltip = AB_EMPTY
-				define_advisor = {
-					type = theologian
-					skill = 3
-					religion = ROOT
-					culture = ROOT
-					cost_multiplier = 0.5
-				}
 			}
-
 		}
 	}
 
@@ -1713,29 +1677,25 @@ pol_catholic_second = {
 
 		}
 		effect = {
+			add_permanent_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "pol_vastness_of_rus"
 				duration = 7300
 			}
-			custom_tooltip = ABA_POL_STRELTSY_REGIMENTS_TT
+			custom_tooltip = ABF_POL_STRELTSY_REGIMENTS_TT
 			hidden_effect = {
 				capital_scope = {
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
-					streltsy_infantry = ROOT
+					for = {
+						amount = 10
+						effect = "
+							streltsy_infantry = ROOT
+						"
+					}
 				}
-			}
-			custom_tooltip = AB_EMPTY
-			add_permanent_power_projection = {
-				type = 25_permanent_power_projection
-				amount = 25
 			}
 		}
 	}
@@ -1774,7 +1734,7 @@ pol_catholic_second = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = ABA_POL_WAR_AGAINST_SCANS
+					tooltip = ABF_POL_WAR_AGAINST_SCANS_TT
 					OR = {
 						if = {
 							limit = {
@@ -1899,7 +1859,7 @@ pol_catholic_second = {
 				}
 				custom_tooltip = AB_MNG_DIPLOMATIC_REWARD
 				add_country_modifier = {
-					name = ab_pol_baltic_peace
+					name = abf_pol_baltic_peace
 					duration = -1
 					desc = "for as long as we are allied to them"
 				}
@@ -1918,20 +1878,11 @@ pol_catholic_second = {
 					add_historical_friend = ROOT
 				}
 			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_ally = {
-							capital_scope = {
-								region = scandinavia_region 
-							}
-						}
-					}
-				}
+			else = {
 				custom_tooltip = AB_MNG_DIPLOMATIC_REWARD_NO
 				tooltip = { 
 					add_country_modifier = {
-						name = ab_pol_baltic_peace
+						name = abf_pol_baltic_peace
 						duration = -1
 						desc = "for as long as we are allied to them"
 					}
@@ -2096,6 +2047,7 @@ pol_catholic_second = {
 		required_missions = {
 			pol_catholic_dominate_central_asia
 		}
+
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -2111,6 +2063,7 @@ pol_catholic_second = {
 			}
 
 		}
+
 		trigger = {
 			owns_core_province = 2106
 			730 = {
@@ -2122,23 +2075,21 @@ pol_catholic_second = {
 			}
 
 		}
+
 		effect = {
 			2106 = {
-				add_province_modifier = {
-					name = "russian_pacific_port"
-					duration = -1
-				}
 				rename_capital = "Wladywostok"
 				change_province_name = "Wladywostok"
 				change_religion = ROOT
 				change_culture = ROOT
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = "russian_pacific_port"
+					duration = -1
+				}
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
-			}
-			custom_tooltip = AB_EMPTY
-			add_mercantilism_or_monarch_power = {
-				amount = 3
 			}
 			custom_tooltip = AB_EMPTY
 			manchuria_region = {
@@ -2155,12 +2106,9 @@ pol_catholic_second = {
 			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
-					NOT = {
-						has_country_flag = aba_pol_polonize_rus
-					}
-					has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
+					has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
 				}
-				custom_tooltip = ABA_POL_MANCHU_REWARD_YES
+				custom_tooltip = ABF_POL_MANCHU_REWARD_YES
 				hidden_effect = {
 					every_province = {
 						limit = {
@@ -2172,7 +2120,7 @@ pol_catholic_second = {
 				}
 			}
 			else = {
-				custom_tooltip = ABA_POL_MANCHU_REWARD_NO
+				custom_tooltip = ABF_POL_MANCHU_REWARD_NO
 			}
 		}
 	}
@@ -2205,7 +2153,6 @@ pol_catholic_second = {
 				duration = 7300
 			}
 			custom_tooltip = POL_BONUS_DEV
-
 		}
 	}
 
@@ -2215,10 +2162,12 @@ pol_catholic_second = {
 		required_missions = {
 			pol_catholic_urbanize_poland
 		}
+
 		provinces_to_highlight = {
 			is_capital_of = ROOT
 
 		}
+
 		trigger = {
 			capital_scope = {
 				development = 25
@@ -2243,8 +2192,6 @@ pol_catholic_second = {
 					name = pol_heart_of_poland
 					duration = -1
 				}
-			}
-			capital_scope = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
@@ -2277,7 +2224,6 @@ pol_catholic_second = {
 					add_splendor = 200
 				}
 			}
-
 		}
 	}
 
@@ -2287,10 +2233,12 @@ pol_catholic_second = {
 		required_missions = {
 			pol_catholic_splendor_of_capital
 		}
+
 		provinces_to_highlight = {
 			is_capital_of = ROOT
 
 		}
+
 		trigger = {
 			capital_scope = {
 				development = 40
@@ -2301,14 +2249,15 @@ pol_catholic_second = {
 			crown_land_share = 60
 
 		}
+
 		effect = {
-			set_country_flag = ab_expand_infrastructure_capital_bonus_dev
 			capital_scope = {
 				add_province_modifier = {
 					name = pol_seat_of_power
 					duration = -1
 				}
 			}
+			set_country_flag = ab_expand_infrastructure_capital_bonus_dev
 			custom_tooltip = AB_EXPAND_INFRA_BONUS_DEV
 
 		}
@@ -2320,7 +2269,9 @@ pol_catholic_second = {
 		required_missions = {
 			pol_catholic_henrician_articles
 		}
+
 		provinces_to_highlight = { }
+
 		trigger = { 
 			religious_unity = 1
 			has_reform = polreligion
@@ -2331,6 +2282,7 @@ pol_catholic_second = {
 				hussite = 2
 			}
 		}
+		
 		effect = { 
 			define_advisor = {
 				type = theologian
@@ -2338,13 +2290,12 @@ pol_catholic_second = {
 				cost_multiplier = 0.33
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_POL_BUFF_MECHANIC1
+			custom_tooltip = ABF_POL_BUFF_MECHANIC_RELIGIOUS_FREEDOM_TT
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_freedom_of_religion_estate_unlock
-			custom_tooltip = ABA_UNLOCK_FREEDOM_OF_RELIGION_ESTATE_PRIVILEGE
+			custom_tooltip = ABF_UNLOCK_FREEDOM_OF_RELIGION_ESTATE_PRIVILEGE
 			hidden_effect = {
 				unlock_estate_privilege = {
-					estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+					estate_privilege = estate_burghers_abf_pol_freedom_of_religion_privilege
 				}
 			} 
 		}
@@ -2357,22 +2308,24 @@ pol_catholic_second = {
 			pol_catholic_crown_poland pol_catholic_ruthenian_crown
 		}
 		provinces_to_highlight = { }
+
 		trigger = { 
            	num_of_cossacks = 6
 			army_professionalism = 0.2
 			army_tradition = 50
 		}
+
 		effect = { 
 			add_country_modifier = {
-				name = aba_pol_cossack_registry
+				name = abf_pol_cossack_registry
 				duration = -1
 			}
 			add_country_modifier = {
-				name = aba_pol_cossack_expansion
+				name = abf_pol_cossack_expansion
 				duration = -1
 			}
+			set_country_flag = abf_pol_cossack_loyalty_bonus_flag
 			custom_tooltip = ABF_POL_COSSACK_LOYALTY_BONUS_TT
-			set_country_flag = ABF_pol_cossack_loyalty_bonus
 		}
 	}
 
@@ -2383,6 +2336,7 @@ pol_catholic_second = {
 			pol_catholic_cossack_registry
 		}
 		provinces_to_highlight = { }
+
 		trigger = { 
 			num_of_cossacks = 50
 			army_professionalism = 0.4
@@ -2405,15 +2359,14 @@ pol_catholic_second = {
 				name = ABF_pol_cossack_szlachta_drill
 				duration = -1
 			} 
-			set_country_flag = pln_cossack_szlachta_estate_unlock
-			custom_tooltip = ABA_UNLOCK_COSSACK_SZLACHTA
+			custom_tooltip = ABF_UNLOCK_COSSACK_SZLACHTA
 			hidden_effect = {
 				unlock_estate_privilege = {
-					estate_privilege = ABA_estate_cossacks_pln_cossack_szlachta
+					estate_privilege = estate_cossacks_abf_pol_cossack_szlachta
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = ABF_pol_cossack_battle_win_bonus
+			set_country_flag = abf_pol_cossack_battle_win_bonus_flag
 			custom_tooltip = HSN_WINNING_BATTLE
 			tooltip = {
 				add_country_modifier = {
@@ -2430,6 +2383,7 @@ pol_catholic_second = {
 		required_missions = {
 			pol_catholic_military_development
 		}
+
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
@@ -2440,18 +2394,21 @@ pol_catholic_second = {
 					base_manpower = 5
 				}
 			}
-
 		}
+
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
 				province_has_current_tech_fort_trigger = yes
 				base_manpower = 5
 			}
-
 		}
+
 		effect = {
 			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
+			set_country_flag = ab_expand_fortifications_update
+			custom_tooltip = AB_POLAND_FORTIFICATIONS
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = HLV_FREE_FORT_UPGRADE
 			hidden_effect = {
@@ -2467,9 +2424,6 @@ pol_catholic_second = {
 					"
 				}
 			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = ab_expand_fortifications_update
-			custom_tooltip = AB_POLAND_FORTIFICATIONS
 		}
 	}
 
@@ -2494,9 +2448,9 @@ pol_catholic_second = {
 		}
 
 		effect = {
-			set_country_flag = ABF_pol_foreign_legion
+			set_country_flag = abf_pol_foreign_legion_flag
 			country_event = {
-				id = aba_pol_events.2
+				id = abf_pol_events.2
 			}
 		}
 	}
@@ -2525,6 +2479,7 @@ pol_catholic_third = {
 		required_missions = {
 			pol_catholic_warriors_of_christendom
 		}
+
 		provinces_to_highlight = {
 			area = sandomierz_area
 			NOT = {
@@ -2532,19 +2487,22 @@ pol_catholic_third = {
 			}
 
 		}
+
 		trigger = {
 			sandomierz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
 		}
+
 		effect = {
-			add_dip_power = 100
 			add_country_modifier = {
 				name = "pol_orthodox_traitors"
 				duration = 3650
 			}
+			set_country_flag = abf_htm_enforced_unity_privilege_buff_flag
+			custom_tooltip = ABF_HTM_ENFORCED_UNITY_PRIVILEGE_TT
+			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					NOT = {
@@ -2580,20 +2538,21 @@ pol_catholic_third = {
 		required_missions = {
 			pol_catholic_purge_pagan_heathens pol_catholic_crush_the_lendians
 		}
+
 		provinces_to_highlight = {
 			region = poland_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = poland_region
 				value = 25
 			}
-
 		}
+
 		effect = {
 			add_adm_power = 100
 			add_country_modifier = {
@@ -2611,7 +2570,6 @@ pol_catholic_third = {
 					add_core = ROOT
 				}
 			}
-
 		}
 	}
 
@@ -2622,17 +2580,18 @@ pol_catholic_third = {
 			pol_catholic_sons_of_lech
 		}
 		provinces_to_highlight = { }
+
 		trigger = {
 			tag = POL
-
 		}
+
 		effect = {
 			country_event = {
 				id = ab_poland.7
 			}
 			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_legacy_of_mieszko_personality_unlocked_flag
 			custom_tooltip = ABF_LEGACY_OF_MIESZKO_PERK_TT
-			set_country_flag = abf_legacy_of_mieszko_personality
 			custom_tooltip = AB_EMPTY
 			moravia_area = {
 				limit = {
@@ -2733,7 +2692,6 @@ pol_catholic_third = {
 				}
 				add_permanent_claim = ROOT
 			}
-
 		}
 	}
 
@@ -2805,7 +2763,6 @@ pol_catholic_third = {
 				}
 				add_permanent_claim = ROOT
 			}
-
 		}
 	}
 
@@ -2824,7 +2781,6 @@ pol_catholic_third = {
 
 		}
 		effect = {
-			custom_tooltip = POL_AE_EAST_SLAVS
 			add_accepted_culture_or_dip_power = {
 				culture = ruthenian
 				free = yes
@@ -2835,6 +2791,7 @@ pol_catholic_third = {
 				duration = -1
 				desc = pol_ruthenian_union_desc
 			}
+			custom_tooltip = POL_AE_EAST_SLAVS
 			ruthenia_region = {
 				limit = {
 					NOT = {
@@ -2858,7 +2815,6 @@ pol_catholic_third = {
 					}
 				}
 			}
-
 		}
 	}
 
@@ -2878,7 +2834,7 @@ pol_catholic_third = {
 				id = ab_poland.8
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_POL_COMMONWEALTH_AUTONOMY_BUFF
+			custom_tooltip = ABF_POL_COMMONWEALTH_AUTONOMY_BUFF_UNLOCK_TT
 			custom_tooltip = AB_EMPTY
 			russia_region = {
 				limit = {
@@ -2975,7 +2931,7 @@ pol_catholic_third = {
 			OR = {
 				AND = {
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_ACCEPTED_TARTAR_UNION
+						tooltip = ABF_POL_ACCEPTED_TARTAR_UNION
 						OR = {
 							calc_true_if = {
 								amount = 2
@@ -2991,7 +2947,7 @@ pol_catholic_third = {
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_ACCEPTED_EAST_SLAVIC_UNION
+						tooltip = ABF_POL_ACCEPTED_EAST_SLAVIC_UNION
 						calc_true_if = {
 						amount = 3
 							accepted_culture = ruthenian
@@ -3003,14 +2959,14 @@ pol_catholic_third = {
 							accepted_culture = Litvin
 							accepted_culture = volhynian
 							accepted_culture = pomorian
-							accepted_culture = aba_polish_eastern
-							accepted_culture = aba_malorussian_cossack_culture
-							accepted_culture = aba_chernomoriya_cossack_culture
-							accepted_culture = aba_don_cossack_culture
-							accepted_culture = aba_terek_cossack_culture
-							accepted_culture = aba_povolzyhe_cossack_culture
-							accepted_culture = aba_uralskiye_cossack_culture
-							accepted_culture = aba_kharbinskiye_cossack_culture
+							accepted_culture = abf_polish_eastern
+							accepted_culture = abf_malorussian_cossack_culture
+							accepted_culture = abf_chernomoriya_cossack_culture
+							accepted_culture = abf_don_cossack_culture
+							accepted_culture = abf_terek_cossack_culture
+							accepted_culture = abf_povolzyhe_cossack_culture
+							accepted_culture = abf_uralskiye_cossack_culture
+							accepted_culture = abf_kharbinskiye_cossack_culture
 							accepted_culture = abf_nagaybak_culture
 						}
 					}
@@ -3018,17 +2974,17 @@ pol_catholic_third = {
 				}
 				OR = {
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_EMBRACED_DIVERSITY
-						has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
+						tooltip = ABF_POL_EMBRACED_DIVERSITY
+						has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
 						NOT = {
-							has_country_flag = aba_pol_polonize_rus
+							has_country_flag = abf_pol_polonize_rus
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_POLONIZED_COMMONWEALTH
-						has_country_flag = aba_pol_polonize_rus
+						tooltip = ABF_POL_POLONIZED_COMMONWEALTH
+						has_country_flag = abf_pol_polonize_rus
 						NOT = {
-							has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
+							has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
 						}
 					}
 				}
@@ -3062,11 +3018,11 @@ pol_catholic_third = {
 
 		effect = { 
 			country_event = {
-				id = aba_pol_events.6
+				id = abf_pol_events.6
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_interaction_cost_buff
-			custom_tooltip = ABA_POL_BUFF_INTERACTIONS1
+			set_country_flag = abf_pol_interaction_cost_buff_flag
+			custom_tooltip = ABF_POL_REDUCE_COM_INTERACTIONS_COST_TT
 		}
 	}
 
@@ -3091,14 +3047,14 @@ pol_catholic_third = {
 
 		}
 		effect = {
-			add_country_modifier = {
-				name = teu_cossack_expansion
-				duration = -1
-			}
 			create_conquistador = {
 				tradition = 100
 			}
 			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = teu_cossack_expansion
+				duration = -1
+			}
 			west_siberia_region = {
 				limit = {
 					NOT = {
@@ -3176,6 +3132,16 @@ pol_catholic_third = {
 					duration = 7300
 				}
 			}
+			custom_tooltip = RUS_CENTRAL_ASIA
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					add_local_autonomy = -25
+				}
+			}
+			custom_tooltip = AB_EMPTY
 			central_asia_region = {
 				limit = {
 					NOT = {
@@ -3198,17 +3164,6 @@ pol_catholic_third = {
 				}
 				add_permanent_claim = ROOT
 			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = RUS_CENTRAL_ASIA
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						region = central_asia_region
-					}
-					add_local_autonomy = -25
-				}
-			}
-
 		}
 	}
 
@@ -3249,11 +3204,11 @@ pol_catholic_third = {
 		}
 
 		effect = { 
-			set_country_flag = aba_pol_domination_ideas_unlocked
-			custom_tooltip = ABA_POL_UNLOCK_DOMINATION_IDEAS
+			set_country_flag = abf_domination_ideas_unlocked_flag
+			custom_tooltip = ABF_UNLOCK_DOMINATION_IDEAS_TT
 			set_country_flag = ab_unlocked_imperialism
 			custom_tooltip = AB_UNLOCK_IMPERIALISM
-			custom_tooltip = ABA_POL_CLAIM_ALL_ABSOLUTIST
+			custom_tooltip = ABF_POL_CLAIM_ALL_ABSOLUTIST_TT
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -3271,6 +3226,7 @@ pol_catholic_third = {
 		icon = mission_pol_develop_countryside
 		position = 16
 		required_missions = { }
+
 		provinces_to_highlight = {
 			region = poland_region
 			OR = {
@@ -3285,6 +3241,7 @@ pol_catholic_third = {
 			}
 
 		}
+
 		trigger = {
 			stability = 3
 			poland_region = {
@@ -3298,15 +3255,9 @@ pol_catholic_third = {
 					local_autonomy_above_min = 5
 				}
 			}
-
 		}
+
 		effect = {
-			poland_region = {
-				add_province_modifier = {
-					name = pol_growing_prosperity_modifier
-					duration = 9125
-				}
-			}
 			define_advisor = {
 				type = planner
 				skill = 2
@@ -3314,7 +3265,13 @@ pol_catholic_third = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
-
+			custom_tooltip = AB_EMPTY
+			poland_region = {
+				add_province_modifier = {
+					name = pol_growing_prosperity_modifier
+					duration = 9125
+				}
+			}
 		}
 	}
 
@@ -3369,18 +3326,6 @@ pol_catholic_third = {
 
 		}
 		effect = {
-			custom_tooltip = RMG_ALL_NORTHERN_FORT_PROVINCE
-			tooltip = {
-				add_province_modifier = {
-					name = "aba_new_polish_city"
-					duration = -1
-				}
-				add_base_production = 2
-				add_base_manpower = 2
-				add_base_tax = 2
-				add_prosperity = 100
-			}
-			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = treasurer
 				skill = 3
@@ -3388,15 +3333,21 @@ pol_catholic_third = {
 				culture = ROOT
 				cost_multiplier = 0.33
 			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = RMG_ALL_NORTHERN_FORT_PROVINCE
+			tooltip = {
+				add_province_modifier = {
+					name = "abf_new_polish_city"
+					duration = -1
+				}
+				add_prosperity = 100
+			}
 			hidden_effect = {
 				2961 = {
 					add_province_modifier = {
-						name = "aba_new_polish_city"
+						name = "abf_new_polish_city"
 						duration = -1
 					}
-					add_base_production = 2
-					add_base_manpower = 2
-					add_base_tax = 2
 					add_prosperity = 100
 					if = {
 						limit = {
@@ -3409,36 +3360,26 @@ pol_catholic_third = {
 				}
 				260 = {
 					add_province_modifier = {
-						name = "aba_new_polish_city"
+						name = "abf_new_polish_city"
 						duration = -1
 					}
-					add_base_production = 2
-					add_base_manpower = 2
-					add_base_tax = 2
 					add_prosperity = 100
 				}
 				277 = {
 					add_province_modifier = {
-						name = "aba_new_polish_city"
+						name = "abf_new_polish_city"
 						duration = -1
 					}
-					add_base_production = 2
-					add_base_manpower = 2
-					add_base_tax = 2
 					add_prosperity = 100
 				}
 				272 = {
 					add_province_modifier = {
-						name = "aba_new_polish_city"
+						name = "abf_new_polish_city"
 						duration = -1
 					}
-					add_base_production = 2
-					add_base_manpower = 2
-					add_base_tax = 2
 					add_prosperity = 100
 				}
 			}
-
 		}
 	}
 
@@ -3448,9 +3389,11 @@ pol_catholic_third = {
 		required_missions = {
 			pol_catholic_splendor_of_capital
 		}
+
 		provinces_to_highlight = {
 			province_id = 262
 		}
+
 		trigger = {
 			262 = {
 				OR = {
@@ -3462,9 +3405,8 @@ pol_catholic_third = {
 		}
 		effect = {
 			country_event = {
-				id = aba_pol_events.99
+				id = abf_pol_events.99
 			}
-
 		}
 	}
 
@@ -3483,10 +3425,10 @@ pol_catholic_third = {
 
 		effect = { 
 			unlock_government_reform = {
-				government_reform = aba_pol_catholic_henrician_articles
+				government_reform = abf_pol_catholic_henrician_articles
 			}
 			hidden_effect = {
-				add_government_reform = aba_pol_catholic_henrician_articles
+				add_government_reform = abf_pol_catholic_henrician_articles
 			}
 		}
 
@@ -3520,15 +3462,9 @@ pol_catholic_third = {
 		}
 
 		effect = { 
-			define_advisor = {
-				type = theologian
-				skill = 3 
-				cost_multiplier = 0.33
-			}
-			custom_tooltip = AB_EMPTY
 			ruthenia_region = {
 				add_province_modifier = {
-					name = aba_crown_of_ruthenia_modifier
+					name = abf_crown_of_ruthenia_modifier
 					duration = -1
 				}
 			}
@@ -3547,8 +3483,8 @@ pol_catholic_third = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_adm_interaction_buff2
-			custom_tooltip = ABA_POL_CATHOLIC_adm_interaction_buff2
+			set_country_flag = abf_pol_catholic_adm_interaction_buff2
+			custom_tooltip = ABF_POL_CATHOLIC_ADM_INTERACTION_BUFF2_TT
 		}
 	}
 
@@ -3558,6 +3494,7 @@ pol_catholic_third = {
 		required_missions = {
 			pol_catholic_ruthenian_crown
 		}
+
 		provinces_to_highlight = { 
 			OR = {
 				region = ruthenia_region
@@ -3567,6 +3504,7 @@ pol_catholic_third = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+
 		trigger = { 
 			government_reform_progress = 100
 			calc_true_if = {
@@ -3580,14 +3518,14 @@ pol_catholic_third = {
 				accepted_culture = Litvin
 				accepted_culture = volhynian
 				accepted_culture = pomorian
-				accepted_culture = aba_polish_eastern
-				accepted_culture = aba_malorussian_cossack_culture
-				accepted_culture = aba_chernomoriya_cossack_culture
-				accepted_culture = aba_don_cossack_culture
-				accepted_culture = aba_terek_cossack_culture
-				accepted_culture = aba_povolzyhe_cossack_culture
-				accepted_culture = aba_uralskiye_cossack_culture
-				accepted_culture = aba_kharbinskiye_cossack_culture
+				accepted_culture = abf_polish_eastern
+				accepted_culture = abf_malorussian_cossack_culture
+				accepted_culture = abf_chernomoriya_cossack_culture
+				accepted_culture = abf_don_cossack_culture
+				accepted_culture = abf_terek_cossack_culture
+				accepted_culture = abf_povolzyhe_cossack_culture
+				accepted_culture = abf_uralskiye_cossack_culture
+				accepted_culture = abf_kharbinskiye_cossack_culture
 				accepted_culture = abf_nagaybak_culture
 			}
 			num_of_owned_provinces_with = {
@@ -3597,13 +3535,14 @@ pol_catholic_third = {
 				value = 20
 			}
 		}
+
 		effect = { 
 			change_government_reform_progress = -100
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_adapt_ruthenian_customs
-			custom_tooltip = ABA_POL_ADAPT_RUTHENIAN_CUSTOMS_TT
+			set_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+			custom_tooltip = ABF_POL_ADAPT_RUTHENIAN_CUSTOMS_TT
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_POL_RUTHENIAN_DEVELOPMENT
+			custom_tooltip = ABF_POL_RUTHENIAN_DEVELOPMENT_TT
 			hidden_effect = {
 				for = {
 					amount = 10
@@ -3615,7 +3554,6 @@ pol_catholic_third = {
 					"
 				}
 			}
-
 		}
 	}
 
@@ -3635,7 +3573,7 @@ pol_catholic_third = {
 			mil_power = 100
 		}
 		effect = { 
-			country_event = { id = aba_poland_orthodox_event.1 }
+			country_event = { id = abf_poland_orthodox_event.1 }
 		}
 	}
 
@@ -3742,10 +3680,10 @@ pol_catholic_third = {
 
 		effect = { 
 			unlock_government_reform = {
-				government_reform = aba_pol_catholic_republic_of_three_nations_reform
+				government_reform = abf_pol_catholic_republic_of_three_nations_reform
 			}
 			hidden_effect = {
-				add_government_reform = aba_pol_catholic_republic_of_three_nations_reform
+				add_government_reform = abf_pol_catholic_republic_of_three_nations_reform
 			}
 		}
 	}
@@ -3761,7 +3699,7 @@ pol_catholic_third = {
 		}
 		effect = { 
 			add_country_modifier = {
-				name = aba_pol_military_development
+				name = abf_pol_military_development
 				duration = -1
 			}
 			set_country_flag = scaling_commandant_naz
@@ -3791,22 +3729,17 @@ pol_catholic_third = {
 			army_size = 35
 		}
 		effect = { 
-			create_general_with_pips = {
-				tradition = 50
-				add_shock = 2
-			}
-			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = commandant
 				skill = 2
 				cost_multiplier = 0.33
 			}
 			custom_tooltip = AB_EMPTY	
-			set_country_flag = ABA_pol_officier_corps_buffed_flag
-			custom_tooltip = ABA_POL_OFFICER_CORP_HETMAN_BUFF
+			set_country_flag = abf_pol_officier_corps_buffed_flag
+			custom_tooltip = ABF_POL_OFFICER_CORP_HETMAN_BUFF_TT
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_mil_interaction_buff1
-			custom_tooltip = ABA_POL_CATHOLIC_mil_interaction_buff1
+			set_country_flag = abf_pol_catholic_mil_interaction_buff1
+			custom_tooltip = ABF_POL_CATHOLIC_MIL_INTERACTION_BUFF1_TT
 		}
 	}
 
@@ -3824,7 +3757,7 @@ pol_catholic_third = {
 			manpower_percentage = 0.75
 			army_size = 50
 			NOT = {
-				has_country_modifier = aba_pol_pospolite_ruzenie
+				has_country_modifier = abf_pol_pospolite_ruzenie
 			}
 			OR = {
 				monthly_mil = 9
@@ -3836,10 +3769,6 @@ pol_catholic_third = {
 		}
 
 		effect = { 
-			add_country_modifier = {
-				name = aba_pol_wojsko_kwarciane
-				duration = -1
-			} 
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = -5
@@ -3851,6 +3780,10 @@ pol_catholic_third = {
 				duration = 7300
 			}
 			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = abf_pol_wojsko_kwarciane
+				duration = -1
+			}
 			set_country_flag = jap_building_manpower
 			custom_tooltip = JAP_ARMY_BUILDINGS_GRANT_ARMY_PROFESSIONALISM
 		}
@@ -3863,6 +3796,7 @@ pol_catholic_third = {
 			pol_catholic_foreign_legion pol_catholic_hussars
 		}
 		provinces_to_highlight = { }
+
 		trigger = { 
 			army_professionalism = 1
 			army_tradition = 100
@@ -3872,19 +3806,25 @@ pol_catholic_third = {
 				full_idea_group = defensive_ideas
 			}
 		}
+
 		effect = { 
-			set_country_flag = aba_pol_westernization_cossacks
+			hidden_effect = {
+				unlock_estate = {
+					estate = estate_cossacks
+				}
+			}
 			add_country_modifier = {
-					name = aba_pol_westernized_army
+					name = abf_pol_westernized_army
 					duration = -1	
 		  	}
 			change_unit_type = western
 			custom_tooltip = AB_EMPTY
-			set_country_flag = ABA_tcr_barrage_buff
-			custom_tooltip = ABA_TCR_BARRAGE_BUFF_TT
+			set_country_flag = abf_on_barrage_10_chance_flag
+			custom_tooltip = ABF_WIN_BARRAGE_10_TT
 		}
 	}
 }
+
 pol_catholic_fourth = {
 	slot = 4
 	generic = no
@@ -3937,10 +3877,6 @@ pol_catholic_fourth = {
 
 		}
 		effect = {
-			capital_scope = {
-				upgrade_tax_building = yes
-			}
-			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = inquisitor
 				skill = 2
@@ -3948,7 +3884,10 @@ pol_catholic_fourth = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
-
+			custom_tooltip = AB_EMPTY
+			capital_scope = {
+				upgrade_tax_building = yes
+			}
 		}
 	}
 
@@ -3977,7 +3916,6 @@ pol_catholic_fourth = {
 				name = pol_incentives_modifier
 				duration = -1
 			}
-
 		}
 	}
 
@@ -4052,13 +3990,6 @@ pol_catholic_fourth = {
 				name = prr_new_baltic_power
 				duration = 7300
 			}
-			270 = {
-				add_great_project_tier = {
-					type = trakai_castle
-					tier = 1
-				}
-			}
-			custom_tooltip = AB_EMPTY
 			baltic_region = {
 				limit = {
 					NOT = {
@@ -4095,6 +4026,15 @@ pol_catholic_fourth = {
 
 		}
 		effect = {
+			baltic_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = "pol_baptize_the_baltics"
+					duration = 7300
+				}
+			}
 			custom_tooltip = POL_LITVIN
 			hidden_effect = {
 				every_province = {
@@ -4105,15 +4045,6 @@ pol_catholic_fourth = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			baltic_region = {
-				limit = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				add_province_modifier = {
-					name = "pol_baptize_the_baltics"
-					duration = 7300
-				}
-			}
 			pskov_area = {
 				limit = {
 					NOT = {
@@ -4183,7 +4114,7 @@ pol_catholic_fourth = {
 		}
 
 		effect = { 
-			country_event = { id = aba_pol_events.3 }
+			country_event = { id = abf_pol_events.3 }
 			custom_tooltip = AB_EMPTY
 			add_ruler_modifier = {
 				name = rus_mongolbreaker
@@ -4262,6 +4193,9 @@ pol_catholic_fourth = {
 					duration = -1
 				}
 			}
+			set_country_flag = rhl_building_fort
+			custom_tooltip = HLV_FORTS
+			custom_tooltip = AB_EMPTY
 			caucasia_region = {
 				limit = {
 					NOT = {
@@ -4284,9 +4218,6 @@ pol_catholic_fourth = {
 				}
 				add_permanent_claim = ROOT
 			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = rhl_building_fort
-			custom_tooltip = HLV_FORTS
 			hidden_effect = {
 				425 = {
 					add_province_modifier = {
@@ -4335,10 +4266,6 @@ pol_catholic_fourth = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "aba_polish_america"
-				duration = 7300
-			}
 			2613 = {
 				change_province_name = "Panna Maria"
 				rename_capital = "Panna Maria"
@@ -4347,9 +4274,12 @@ pol_catholic_fourth = {
 				add_base_manpower = 1
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = NED_BUFF_NEW_WORLD_CHARTERS
+			add_country_modifier = {
+				name = "abf_polish_america"
+				duration = 7300
+			}
 			set_country_flag = ned_new_world_charters_buff_flag
-
+			custom_tooltip = NED_BUFF_NEW_WORLD_CHARTERS
 		}
 	}
 
@@ -4375,14 +4305,6 @@ pol_catholic_fourth = {
 
 		}
 		effect = {
-			add_country_modifier = {
-				name = lot_expand_industry
-				duration = 7300
-			}
-			capital_scope = {
-				add_or_upgrade_production_building = yes
-			}
-			custom_tooltip = AB_EMPTY
 			add_years_of_owned_provinces_production_income = {
 				years = 2
 				trigger = {
@@ -4391,6 +4313,13 @@ pol_catholic_fourth = {
 				custom_tooltip = pol_from_2_years_of_prod_income
 			}
 			custom_tooltip = AB_EMPTY
+			capital_scope = {
+				add_or_upgrade_production_building = yes
+			}
+			add_country_modifier = {
+				name = lot_expand_industry
+				duration = 7300
+			}
 			custom_tooltip = LOT_PROD_BOOST
 
 		}
@@ -4402,6 +4331,7 @@ pol_catholic_fourth = {
 		required_missions = {
 			pol_catholic_increase_the_production
 		}
+
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = {
@@ -4418,22 +4348,15 @@ pol_catholic_fourth = {
 			}
 
 		}
+
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
-				OR = {
-					has_building = mills
-					has_building = farm_estate
-					has_building = tradecompany
-					has_building = plantations
-					has_building = textile
-					has_building = weapons
-					has_building = wharf
-					has_building = furnace
-				}
+				has_manufactory_trigger = yes
 			}
 
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = pol_invest_manufactories
@@ -4453,7 +4376,6 @@ pol_catholic_fourth = {
 					"
 				}
 			}
-
 		}
 	}
 
@@ -4489,7 +4411,7 @@ pol_catholic_fourth = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = aba_pol_harness_the_industry
+				name = abf_pol_harness_the_industry
 				duration = -1
 			}
 			custom_tooltip = LOT_COAL
@@ -4582,12 +4504,12 @@ pol_catholic_fourth = {
 			unlock_estate_privilege = {
 				estate_privilege = estate_nobles_golden_liberty
 			}
-			set_country_flag = ABA_pol_catholic_golden_liberty_ruler
+			set_country_flag = ABF_pol_catholic_golden_liberty_ruler
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = EVERY_FUTURE_RULER
 			tooltip = {
 				country_event = {
-					id = aba_pol_events.5
+					id = abf_pol_events.5
 				}
 			}
 			custom_tooltip = AB_EMPTY
@@ -4595,11 +4517,11 @@ pol_catholic_fourth = {
 				limit = {
 					has_estate_privilege = estate_nobles_land_rights 
 				}
-				custom_tooltip = ABA_POL_GRANTED_NOBILITY_LAND_RIGHTS_YES
-				set_country_flag = ABA_golden_liberty_pol_catholic_upgrade
+				custom_tooltip = ABF_POL_GRANTED_NOBILITY_LAND_RIGHTS_YES
+				set_country_flag = abf_golden_liberty_pol_catholic_upgrade
 			}
 			else = {
-				custom_tooltip = ABA_POL_GRANTED_NOBILITY_LAND_RIGHTS_NO
+				custom_tooltip = ABF_POL_GRANTED_NOBILITY_LAND_RIGHTS_NO
 			}
 		}
 	}
@@ -4637,12 +4559,11 @@ pol_catholic_fourth = {
 				cost_multiplier = 0.5
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = LIT_NEGATE_DEV
-			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = lit_draining
 				duration = 5475
 			}
+			custom_tooltip = LIT_NEGATE_DEV
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -4654,9 +4575,11 @@ pol_catholic_fourth = {
 					}
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			unlock_estate_privilege = {
 				estate_privilege = estate_burghers_lit_deforestation
 			}
+			
 		}
 	}
 
@@ -4706,11 +4629,8 @@ pol_catholic_fourth = {
 				years = 4
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = BOH_SCALING
-			set_country_flag = boh_scientist_scaling_flag
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_POL_DEVELOPING_GRAIN_LIVESTOCK
-			set_country_flag = aba_developing_food_bonus
+			custom_tooltip = ABF_POL_DEVELOPING_GRAIN_LIVESTOCK_TT
+			set_country_flag = abf_developing_food_bonus_flag
 			custom_tooltip = AB_EMPTY
 			change_price = {
 				trade_goods = grain
@@ -4760,11 +4680,11 @@ pol_catholic_fourth = {
 			add_yearly_manpower = 1
 			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-				name = aba_pol_pospolite_ruzenie
+				name = abf_pol_pospolite_ruzenie
 				duration = 7300
 			}
-			set_country_flag = aba_pol_winning_battles_warx_reduce
-			custom_tooltip = ABA_POL_WINNING_BATTLES_EXHAUSTION
+			set_country_flag = abf_pol_winning_battles_warx_reduce
+			custom_tooltip = ABF_POL_WINNING_BATTLES_EXHAUSTION_TT
 		}
 	}
 
@@ -4788,14 +4708,14 @@ pol_catholic_fourth = {
 
 		effect = { 
 			unlock_government_reform = {
-				government_reform = aba_pol_catholic_husaria_buffed
+				government_reform = abf_pol_catholic_husaria_buffed
 			}
 			hidden_effect = {
 				if = {
 					limit = {
 						has_reform = polhusaria
 					}
-					add_government_reform = aba_pol_catholic_husaria_buffed
+					add_government_reform = abf_pol_catholic_husaria_buffed
 				}
 			}
 			custom_tooltip = AB_EMPTY
@@ -4832,6 +4752,7 @@ pol_catholic_fifth = {
 		icon = catholic_confraternity
 		position = 1
 		required_missions = { }
+
 		provinces_to_highlight = {
 			country_or_non_sovereign_subject_holds = ROOT
 			NOT = {
@@ -4839,6 +4760,7 @@ pol_catholic_fifth = {
 			}
 
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
@@ -4857,8 +4779,8 @@ pol_catholic_fifth = {
 					value = 3
 				}
 			}
-
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = "pol_warriors_of_true_faith"
@@ -4883,7 +4805,6 @@ pol_catholic_fifth = {
 				}
 				add_church_power = 25
 			}
-
 		}
 	}
 
@@ -5079,13 +5000,14 @@ pol_catholic_fifth = {
 		required_missions = {
 			pol_catholic_unity_by_faith
 		}
+
 		provinces_to_highlight = {
 			owner = {
 				religion = ROOT
 				army_size = ROOT
 			}
-
 		}
+
 		trigger = {
 			development_in_provinces = {
 				value = 500
@@ -5098,20 +5020,20 @@ pol_catholic_fifth = {
 					army_size = ROOT
 				}
 			}
-
 		}
+		
 		effect = {
 			create_general_with_pips = {
 				tradition = 100
 				add_shock = 2
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "pol_bulwark_of_christianity"
 				duration = -1
 			}
 			set_country_flag = ab_mnk_professionalism_vs_heretics
 			custom_tooltip = ab_mnk_winning_battles_gives_professionalism
-
 		}
 	}
 
@@ -5121,6 +5043,7 @@ pol_catholic_fifth = {
 		required_missions = {
 			pol_catholic_mater_polonia
 		}
+		
 		provinces_to_highlight = {
 			OR = {
 				area = west_prussia_area
@@ -5131,6 +5054,7 @@ pol_catholic_fifth = {
 			}
 
 		}
+
 		trigger = {
 			west_prussia_area = {
 				type = all
@@ -5140,8 +5064,8 @@ pol_catholic_fifth = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = "pol_construct_a_fleet"
@@ -5167,6 +5091,9 @@ pol_catholic_fifth = {
 				add_base_production = 2
 			}
 			custom_tooltip = AB_EMPTY
+			set_country_flag = teu_private_trade_fleets
+			custom_tooltip = TEU_PRIVATE_TRADE_FLEETS
+			custom_tooltip = AB_EMPTY
 			samogitia_area = {
 				limit = {
 					NOT = {
@@ -5189,10 +5116,6 @@ pol_catholic_fifth = {
 				}
 				add_permanent_claim = ROOT
 			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = teu_private_trade_fleets
-			custom_tooltip = TEU_PRIVATE_TRADE_FLEETS
-
 		}
 	}
 
@@ -5202,10 +5125,12 @@ pol_catholic_fifth = {
 		required_missions = {
 			pol_catholic_access_the_baltic_sea
 		}
+
 		provinces_to_highlight = {
 			province_id = 43
 
 		}
+
 		trigger = {
 			43 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -5233,11 +5158,11 @@ pol_catholic_fifth = {
 			}
 
 		}
+
 		effect = {
 			country_event = {
 				id = flavor_pol.31
 			}
-
 		}
 	}
 
@@ -5270,10 +5195,6 @@ pol_catholic_fifth = {
 		}
 
 		effect = {
-			add_years_of_trade_income = {
-				years = 2
-				custom_tooltip = pol_trade_income
-			}	
 			custom_tooltip = POL_ALL_COT_BALTIC
 			tooltip = {
 				add_province_modifier = {
@@ -5367,12 +5288,20 @@ pol_catholic_fifth = {
 
 		}
 		effect = {
-			custom_tooltip = SWE_RELEASE_ORDERS
 			set_country_flag = swe_release_teuton
 			set_country_flag = swe_release_livonia
+			custom_tooltip = SWE_RELEASE_ORDERS
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABF_CATHOLIC_MERC_ORDERS_TT
-			set_country_flag = abf_pol_catholic_orders_unlocked
+			set_country_flag = abf_merc_catholic_baltic_crusaders_unlocked_flag
+			custom_tooltip = ABF_CATHOLIC_MERC_ORDERS_UNLOCK_TT
+			hidden_effect = {
+				unlock_merc_company = {
+					merc_company = abf_merc_teutons
+				}
+				unlock_merc_company = {
+					merc_company = abf_merc_livonian
+				}
+			}
 			custom_tooltip = AB_EMPTY
 			set_country_flag = teu_unlock_malbork_flag
 			custom_tooltip = TEU_MALBORK_UPGRADE
@@ -5428,8 +5357,6 @@ pol_catholic_fifth = {
 			}
 		}
 		effect = {
-			add_yearly_manpower = 1.5
-			custom_tooltip = AB_EMPTY
 			custom_tooltip = lit_every_overlord_owned_or_subject_prov_1_random_dev
 			tooltip = {
 				add_province_modifier = {
@@ -5468,34 +5395,12 @@ pol_catholic_fifth = {
 			custom_tooltip = AB_RUS_COSSACK
 			hidden_effect = {
 				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
+					for = {
+						amount = 10
+						effect = "
+							cossack_cavalry = ROOT
+						"
+					}
 				}
 			}
 		}
@@ -5522,7 +5427,7 @@ pol_catholic_fifth = {
 				}
 				OR = {
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_ACCEPTED_TARTAR_UNION
+						tooltip = ABF_POL_ACCEPTED_TARTAR_UNION
 						OR = {
 							calc_true_if = {
 								accepted_culture = mishary
@@ -5538,9 +5443,9 @@ pol_catholic_fifth = {
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = ABA_POL_POLONIZED_COMMONWEALTH
+						tooltip = ABF_POL_POLONIZED_COMMONWEALTH
 						any_owned_province = {
-							culture = aba_polish_west_lipkowie
+							culture = abf_polish_west_lipkowie
 						}
 					}
 				}
@@ -5548,17 +5453,41 @@ pol_catholic_fifth = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = aba_pol_catholic_integrated_tartars
+				name = abf_pol_catholic_integrated_tartars
 				duration = -1
 			}
 			466 = {
 				add_province_modifier = {
-					name = "aba_pol_orthodox_tsaritysn"
+					name = "abf_pol_orthodox_tsaritysn"
 					duration = -1
 				}
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
+			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					OR = {
+						calc_true_if = {
+							amount = 2
+							accepted_culture = mishary
+							accepted_culture = bashkir
+							accepted_culture = astrakhani
+							accepted_culture = crimean
+							accepted_culture = cuman_culture
+							accepted_culture = kazani
+							accepted_culture = nogaybak
+						}
+						accepted_culture = tatar_culture
+						accepted_culture = abf_polish_west_lipkowie
+					}
+				}
+				custom_tooltip = ABF_POL_TARTAR_COMMMONWEALTH_INTERACTION_BUFF_YES
+				set_country_flag = abf_pol_commonwealth_tartar_access
+			}
+			else = {
+				custom_tooltip = ABF_POL_TARTAR_COMMMONWEALTH_INTERACTION_BUFF_NO
 			}
 			custom_tooltip = AB_EMPTY
 			if = {
@@ -5598,30 +5527,6 @@ pol_catholic_fifth = {
 					}
 				}
 			}
-			custom_tooltip = AB_EMPTY
-			if = {
-				limit = {
-					OR = {
-						calc_true_if = {
-							amount = 2
-							accepted_culture = mishary
-							accepted_culture = bashkir
-							accepted_culture = astrakhani
-							accepted_culture = crimean
-							accepted_culture = cuman_culture
-							accepted_culture = kazani
-							accepted_culture = nogaybak
-						}
-						accepted_culture = tatar_culture
-						accepted_culture = aba_polish_west_lipkowie
-					}
-				}
-				custom_tooltip = ABF_POL_TARTAR_COMMMONWEALTH_INTERACTION_BUFF_YES
-				set_country_flag = aba_pol_commonwealth_tartar_access
-			}
-			else = {
-				custom_tooltip = ABF_POL_TARTAR_COMMMONWEALTH_INTERACTION_BUFF_NO
-			}
 		}
 	}
 
@@ -5650,13 +5555,13 @@ pol_catholic_fifth = {
 		}
 
 		effect = { 
+			set_country_flag = rus_release_byz
+			custom_tooltip = RUS_RESTORE_LATIN
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = koj_latin_empire
 				duration = -1
 			}
-			set_country_flag = rus_release_byz
-			custom_tooltip = RUS_RESTORE_LATIN
-			custom_tooltip = AB_EMPTY
 			custom_tooltip = FEO_GREEK
 			hidden_effect = {
 				every_province = {
@@ -5673,11 +5578,11 @@ pol_catholic_fifth = {
 				}
 				custom_tooltip = CRO_TRADITION_YES
 				set_country_flag = ab_unlocked_greek_fire
-				custom_tooltip = ABA_POL_STEAL_GREEK_FIRE
+				custom_tooltip = ABF_POL_STEAL_GREEK_FIRE_TT
 			}
 			else = {
 				custom_tooltip = CRO_TRADITION_NO
-				custom_tooltip = ABA_POL_STEAL_GREEK_FIRE
+				custom_tooltip = ABF_POL_STEAL_GREEK_FIRE_TT
 			}
 		}
 	}
@@ -5715,18 +5620,13 @@ pol_catholic_fifth = {
 
 		}
 		effect = {
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 10
-			}
-			custom_tooltip = AB_EMPTY
 			ruthenia_region = {
 				add_province_modifier = {
 					name = pol_growing_prosperity_modifier
 					duration = 9125
 				}
 			}
-			custom_tooltip = ABA_POLAND_TEND_EAST_TT
+			custom_tooltip = ABF_POLAND_TEND_EAST_TT
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -5830,14 +5730,6 @@ pol_catholic_fifth = {
 				name = "pol_heavy_industry"
 				duration = 7300
 			}
-			define_advisor = {
-				type = natural_scientist
-				skill = 3
-				culture = ROOT
-				religion = ROOT
-				cost_multiplier = 0.25
-			}
-
 		}
 	}
 
@@ -5869,15 +5761,9 @@ pol_catholic_fifth = {
 		}
 
 		effect = { 
-			define_advisor = {
-				type = trader
-				skill = 3 
-				cost_multiplier = 0.33
-			}
-			custom_tooltip = AB_EMPTY
 			baltic_region = {
 				add_province_modifier = {
-					name = aba_duchy_of_lithuania_modifier
+					name = abf_duchy_of_lithuania_modifier
 					duration = -1
 				}
 			}
@@ -5895,8 +5781,8 @@ pol_catholic_fifth = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_adm_interaction_buff3
-			custom_tooltip = ABA_POL_CATHOLIC_adm_interaction_buff3
+			set_country_flag = abf_pol_catholic_adm_interaction_buff3
+			custom_tooltip = ABF_POL_CATHOLIC_ADM_INTERACTION_BUFF3_TT
 		}
 	}
 
@@ -5937,21 +5823,21 @@ pol_catholic_fifth = {
 				}
 				add_local_autonomy = 10
 				add_province_modifier = {
-					name = aba_pol_baltic_magnates
+					name = abf_pol_baltic_magnates
 					duration = 7300
 				}
 			}
+			set_country_flag = abf_pol_catholic_dip_interaction_buff1
+			custom_tooltip = ABF_POL_CATHOLIC_DIP_INTERACTION_BUFF1_TT
+			custom_tooltip = AB_EMPTY
 			38 = {
 				add_trade_modifier = {
     				who = ROOT
    					duration = -1
     				power = 20
-    				key = ABA_LVA_HEART_OF_BALTIC
+    				key = ABF_LVA_HEART_OF_BALTIC
 				}
 			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_pol_catholic_dip_interaction_buff1
-			custom_tooltip = ABA_POL_CATHOLIC_dip_interaction_buff1
 		 }
 	}
 
@@ -5983,9 +5869,6 @@ pol_catholic_fifth = {
 				skill = 5
 				cost_multiplier = 0.5
 			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = GER_upgrade_traders
-			set_country_flag = GER_upgrade_traders_flag
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = EST_METROPOLISES
 			tooltip = {
@@ -6027,6 +5910,8 @@ pol_catholic_fifth = {
 					}
 				}
 			} 
+			custom_tooltip = GER_upgrade_traders
+			set_country_flag = GER_upgrade_traders_flag
 		}
 	}
 
@@ -6062,30 +5947,10 @@ pol_catholic_fifth = {
 		}
 
 		effect = { 
-			custom_tooltip = aba_duchy_of_litvinia_upgrade_tt
-			tooltip = {
-				add_province_modifier = {
-					name = aba_grand_duchy_of_litvinia_modifier
-					duration = -1
-				}
-			}
-			hidden_effect = {
-				baltic_region = {
-					remove_province_modifier = aba_duchy_of_lithuania_modifier
-				}
-				baltic_region = {
-					add_province_modifier = {
-						name = aba_grand_duchy_of_litvinia_modifier
-						duration = -1
-					}
-				}
-			}
 			41 = {
 				change_province_name = "Karaliaucius"
 				rename_capital = "Karaliaucius"
-			}
-			custom_tooltip = AB_EMPTY
-			41 = {
+				custom_tooltip = AB_EMPTY
 				add_province_modifier = {
 					name = lit_baltic_entrepot
 					duration = -1
@@ -6093,6 +5958,25 @@ pol_catholic_fifth = {
 			}
 			43 = {
 				change_trade_goods = gems
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABF_DUCHY_LITVINIA_UPGRADE_MOD_TT
+			tooltip = {
+				add_province_modifier = {
+					name = abf_grand_duchy_of_litvinia_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				baltic_region = {
+					remove_province_modifier = abf_duchy_of_lithuania_modifier
+				}
+				baltic_region = {
+					add_province_modifier = {
+						name = abf_grand_duchy_of_litvinia_modifier
+						duration = -1
+					}
+				}
 			}
 		}
 	}
@@ -6107,8 +5991,10 @@ pol_catholic_fifth = {
 		provinces_to_highlight = { 
 			country_or_non_sovereign_subject_holds = ROOT
 			NOT = { 
-				base_manpower = 5 
-				has_manpower_building_trigger = yes
+				AND = {
+					base_manpower = 5 
+					has_manpower_building_trigger = yes
+				}
 			}
 		}
 
@@ -6134,7 +6020,7 @@ pol_catholic_fifth = {
 
 		effect = { 
 			add_country_modifier = {
-				name = aba_pol_modern_conscription
+				name = abf_pol_modern_conscription
 				duration = -1
 			}
 			set_country_flag = ab_barrack_grant_extra_manpower_flag
@@ -6149,15 +6035,29 @@ pol_catholic_fifth = {
 					}
 				}
 				custom_tooltip = NAZ_OWN_20_MANPOWER_PROVINCE_YES
-				hidden_effect = {
+				custom_tooltip = ABF_POLAND_DOMESTIC_ARMS_TT
+				tooltip = {
 					upgrade_manpower_building = yes
 					upgrade_forcelimit_building = yes
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							base_manpower = 5
+							AND = {
+								has_manpower_building_trigger = yes
+								has_forcelimit_building_trigger = yes
+							}
+						}
+						upgrade_manpower_building = yes
+						upgrade_forcelimit_building = yes
+					}
 				}
 			}
 			else = {
 				custom_tooltip = NAZ_OWN_20_MANPOWER_PROVINCE_NO
 			}
-			custom_tooltip = all_required_provinces_will_gain_tt
+			custom_tooltip = ABF_POLAND_DOMESTIC_ARMS_TT
 			tooltip = {
 				upgrade_manpower_building = yes
 				upgrade_forcelimit_building = yes

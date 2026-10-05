@@ -1,0 +1,117 @@
+﻿l_english:
+
+######## Cultures (paired and organized by culture group) ####### [[[
+
+#### EAST ASIA ####
+
+#----Japanese----#
+ abf_japanese_nikkei: "Nikkei"
+ abf_japanese_zainichi: "Zainichi"
+#-----------------------------#
+
+#----Chinese----#
+ abf_sinico_japanese: "Fusau"
+ abf_sino_tocharian_culture: "Yuezhi"
+ abf_sino_mengguzu_culture: "Mengguzu"
+ abf_sino_burmese_culture: "Mian"
+ abf_sino_malayan_culture: "Hokkien"
+#-----------------------------#
+
+#----Tatar----#
+ abf_tartar_lipka_culture: "Lipka"
+ abf_tartar_qipchaq_culture: "Qipchaq"
+ abf_tartar_mongol_culture: "Mongol"
+ abf_tartar_daur_culture: "Daur"
+ abf_tatar_qasiym_culture: "Qasiym"
+ abf_tatar_urus_culture: "Urus"
+ abf_tatar_yomyshly_urus_culture: "Yomyshly Urus"
+ abf_tatar_cherkasy_urus_culture: "Cherkasy" 
+ abf_glh_tatar_qaraylar_culture: "Leh-Qaraylar"
+ abf_glh_tatar_onoghur_culture: "Onoghur"
+#-----------------------------#
+
+#### WEST EUROPEAN ####
+
+#----East Germanic (ABF)----#
+ abf_wolgadeutsche_culture: "Wolgadeutsch"
+ abf_schwarzmeerdeutsche_culture: "Schwarzmeerdeutsch"
+ abf_donauschwaben_culture: "Donauschwäbisch"
+ abf_mantaken_culture: "Mantakisch"
+ abf_jugoslawienschwaben_culture: "Jugoschwäbisch"
+ abf_wolhynien_culture: "Wolhynian"
+ abf_weichseldeutsche_culture: "Weichseldeutsch"
+ abf_russlanddeutsche_culture: "Russlanddeutsch"
+ abf_wolgadeutsche_culture_new: "Wolgadeutsch"
+ abf_schwarzmeerdeutsche_culture_new: "Schwarzmeerdeutsch"
+ abf_donauschwaben_culture_new: "Donauschwäbisch"
+ abf_mantaken_culture_new: "Mantakisch"
+ abf_jugoslawienschwaben_culture_new: "Jugoschwäbisch"
+ abf_wolhynien_culture_new: "Wolhynian"
+ abf_weichseldeutsche_culture_new: "Weichseldeutsch"
+ abf_russlanddeutsche_culture_new: "Russlanddeutsch"
+#-----------------------------#
+
+#----West Germanic (ABF)----#
+ abf_olender_culture_new: "Olender"
+ abf_olender_culture: "Olender"
+ abf_albion_culture: "Alban"
+#----------------------#
+
+#----Scandi/Nordic (ABF)----#
+ abf_anglonorse_culture: "Anglo-Norse"
+ abf_finnish_new_culture: "Finnish"
+ abf_aibofolke_culture: "Aibofolke"
+ abf_varangians_culture: "Varangian"
+ abf_norman_nordic_culture: "Norman"
+#----------------------#
+
+#### EAST EUROPEAN #### 
+
+#----Ruthenian/Russian----#
+ abf_chernomoriya_cossack_culture: "Chernomoriya"
+ abf_don_cossack_culture: "Dontsi"
+ abf_terek_cossack_culture: "Terek"
+ abf_povolzyhe_cossack_culture: "Povolzhye"
+ abf_uralskiye_cossack_culture: "Uralskiye"
+ abf_kharbinskiye_cossack_culture: "Kharbinskiye"
+ abf_nagaybak_culture: "Nagaybak"
+ abf_malorussian_cossack_culture: "Malorossian"
+ abf_polish_eastern: "Lendish"
+ abf_budjak_cossack_culture: "Budjak"
+ #----------------------#
+
+#----Slavicized Tatars (ABF)----#
+ abf_kalymk_culture: "Kalymk"
+ abf_meshcheryak_east_culture: "Meshcheryak"
+ abf_yurtovtsy_east_culture: "Yurtovtsy"
+ abf_bashkorttar_east_culture: "Bashkorttar"
+ abf_kazanskiye_east_culture: "Kazanskiye"
+ #----------------------#
+
+#----Polish (ABF)----#
+ abf_polish_west_kresy: "Kresy"
+ abf_polish_west_harbiner: "Harbiner"
+ abf_polish_west_lipkowie: "Lipkowie"
+ abf_polish_west_gente_ruthenus: "Gente Ruthenus"
+ abf_polish_west_rosyjski: "Rosyjski"
+ abf_polish_west_nagaibaks: "Nagaibaks"
+ #----------------------#
+
+#----Baltic (ABF)----#
+ abf_balto_finnic_culture: "Balto-Finnic"
+ abf_baltic_milograd_culture: "Milograd"
+ abf_baltic_dneprdvina_culture: "Dnepr-Dvina"
+ abf_baltic_krievi_culture: "Krievi"
+#----------------------#
+
+################################## ]]]]
+
+######## Country Names #######
+
+#----Shahi----#
+ abf_SHH_shahistan: "Shahistan"
+ abf_SHH_shahistan_ADJ: "Shahistani"
+#----------------------#
+
+################################## ]]]]
+

@@ -1,0 +1,3299 @@
+namespace = abf_new_cultures
+normal_or_historical_nations = yes
+
+## Nikkei (Japanese) Spread [[[
+province_event = {
+	id = abf_new_cultures.1
+	title = abf_new_cultures.1.t
+	desc = abf_new_cultures.1.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+#Will fire for all non japanese_g province in the philippines
+trigger = {
+	owner = {
+		OR = {
+			NOT = {
+				tag = RMR 
+			}
+			NOT = {
+				tag = ROM
+			}
+		}
+	}
+	owner = {
+        has_country_flag = abf_nikkei_culture_spread
+    }
+	NOT = {
+		owner = {
+			has_country_flag = abf_japan_embraced_chinese_culture
+		}
+	}
+	religion = owner
+    NOT = {
+        culture_group = japanese_g
+    }
+    OR = {
+        area = palawan_area
+        area = luzon_area
+        area = visayas_area
+        area = west_mindanao_area
+        area = mindanao_area
+        area = southern_luzon_area
+    }
+}
+	
+	option = {
+		name = abf_new_cultures.1.a	
+		change_culture = abf_japanese_nikkei
+	}
+}
+
+## Fusau (Sino-Japanese) Spread [[[
+province_event = {
+	id = abf_new_cultures.2
+	title = abf_new_cultures.2.t
+	desc = abf_new_cultures.2.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_sinicized_japanese_culture_spread
+		}
+		OR = {
+			religion = owner
+			has_owner_harmonized_religion = yes
+		}
+		NOT = {
+			OR = {
+				culture_group = east_asian
+				culture = abf_sinico_japanese
+			}
+		}
+		OR = {
+			region = japan_region
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.2.a
+		change_culture = abf_sinico_japanese
+	}
+}
+
+## Sino-Korean Spread [[[
+province_event = {
+	id = abf_new_cultures.3
+	title = abf_new_cultures.3.t
+	desc = abf_new_cultures.3.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = abf_sinicized_korean_culture_spread_buff
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_sinicized_korean_culture_spread
+		}
+		NOT = {
+			owner = {
+				has_country_flag = abf_zainichi_culture_spread
+			}
+		}
+		OR = {
+			religion = owner
+			has_owner_harmonized_religion = yes
+		}
+		NOT = {
+			OR = {
+				culture = abf_sinico_japanese
+				culture = korean_new
+			}
+		}
+		OR = {
+			region = korea_region
+		}
+	}
+	
+	option = {
+		name = abf_new_cultures.3.a	
+		change_culture = korean_new
+	}
+}
+
+### Zainichi (Japanese-Korean) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.4
+	title = abf_new_cultures.4.t
+	desc = abf_new_cultures.4.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+#Will fire for all non japanese_g province in the Korea region
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_zainichi_culture_spread
+			NOT = {
+				has_country_flag = abf_sinicized_korean_culture_spread
+			}
+		}
+		religion = owner
+		NOT = {
+			culture_group = japanese_g
+		}
+		OR = {
+			region = korea_region
+		}
+	}
+	
+	option = {
+		name = abf_new_cultures.4.a	
+		change_culture = abf_japanese_zainichi
+	}
+}
+
+### Wolgadeutsche (German) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.5
+	title = abf_new_cultures.5.t
+	desc = abf_new_cultures.5.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_wolgadeutsche_culture_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			area = astrakhan_area
+			area = lower_don_area
+			area = saratov_area
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.5.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_wolgadeutsche_culture_new
+		}
+		else = {
+         	change_culture = abf_wolgadeutsche_culture
+		}
+	}
+}
+
+### Schwarzmeerdeutsche (German) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.6
+	title = abf_new_cultures.6.t
+	desc = abf_new_cultures.6.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_schwarzmeerdeutsche_culture_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			area = crimea_area
+			area = zaporizhia_area
+			area = azov_area
+			area = yedisan_area
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.6.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_schwarzmeerdeutsche_culture_new
+		}
+		else = {
+         	change_culture = abf_schwarzmeerdeutsche_culture
+		}
+	}
+}
+
+### Donauschwaben (German) Spread  [[[
+province_event = {
+	id = abf_new_cultures.7
+	title = abf_new_cultures.7.t
+	desc = abf_new_cultures.7.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_donauschwaben_culture_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			area = transdanubia_area
+			area = centralhungary_area
+			area = alfold_area
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.7.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_donauschwaben_culture_new
+		}
+		else = {
+         	change_culture = abf_donauschwaben_culture
+		}
+	}
+}
+
+### Mantaken (German) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.8
+	title = abf_new_cultures.8.t
+	desc = abf_new_cultures.8.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_mantaken_culture_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			area = southern_transylvania_area
+			area = transylvania_area
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.8.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_mantaken_culture_new
+		}
+		else = {
+         	change_culture = abf_mantaken_culture
+		}
+	}
+}
+
+### Litvin (East Slavic/West Slavic) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.9
+	title = abf_new_cultures.9.t
+	desc = abf_new_cultures.9.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+        owner = {
+            has_country_flag = abf_litvin_culture_spread
+        }
+        religion = owner 
+        NOT = {
+            culture_group = owner
+        }
+        OR = {
+            region = baltic_region
+        }
+    }
+
+    option = {
+        name = abf_new_cultures.9.a
+        if = {
+            limit = {
+                owner = {
+                    culture_group = east_slavic
+                }
+            }
+            change_culture = Litvin
+            change_original_culture = Litvin
+        }
+        else = {
+            change_culture = litvin_westslavic
+            change_original_culture = litvin_westslavic
+        }
+    }
+}
+
+### Olender (Dutch) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.10
+	title = abf_new_cultures.10.t
+	desc = abf_new_cultures.10.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_ned_olender_culture_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = west_germanic
+				}
+				NOT = {
+					culture_group = west_germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			region = baltic_region
+	 	}
+	}
+
+	option = {
+		name = abf_new_cultures.10.a
+	    if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_olender_culture_new
+		    change_original_culture = abf_olender_culture_new
+		}
+		else = {
+         change_culture = abf_olender_culture
+		 change_original_culture = abf_olender_culture
+		}
+	}
+}
+
+### Weichseldeutsche (German) Spread [[[
+province_event = {
+	id = abf_new_cultures.11
+	title = abf_new_cultures.11.t
+	desc = abf_new_cultures.11.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_ger_weichseldeutsche_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			area = wielkopolska_area
+			area = malopolska_area
+			area = mazovia_area
+			area = central_poland_area
+			area = sandomierz_area
+			area = kuyavia_area
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.11.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_weichseldeutsche_culture_new
+		}
+		else = {
+         	change_culture = abf_weichseldeutsche_culture
+		}
+	}
+}
+
+### Russlanddeutsche (German) Spread [[[
+province_event = {
+	id = abf_new_cultures.12
+	title = abf_new_cultures.12.t
+	desc = abf_new_cultures.12.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_ger_russlanddeutsche_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			region = russia_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.12.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_russlanddeutsche_culture_new
+		}
+		else = {
+         	change_culture = abf_russlanddeutsche_culture
+		}
+	}
+}
+
+### Wolhyian (German) Spread [[[
+province_event = {
+	id = abf_new_cultures.13
+	title = abf_new_cultures.13.t
+	desc = abf_new_cultures.13.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_ger_wolhynien_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			region = ruthenia_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.13.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_wolhynien_culture_new
+		}
+		else = {
+         	change_culture = abf_wolhynien_culture
+		}
+	}
+}
+
+###Jugoslawienschwaben (German) Spread - currently unutilizied [[[
+province_event = {
+	id = abf_new_cultures.14
+	title = abf_new_cultures.14.t
+	desc = abf_new_cultures.14.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_ger_jugoslawienschwaben_spread
+		}
+		religion = owner
+		OR = {
+			AND = {
+				owner = {
+					culture_group = germanic
+				}
+				NOT = {
+					culture_group = germanic
+				}
+			}
+			AND = {
+				owner = {
+					culture_group = united_germanic
+				}
+				NOT = {
+					culture_group = united_germanic
+				}
+			}
+		}
+		OR = {
+			region = balkan_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.14.a
+		if = {
+			limit = { 
+				owner = {
+					culture_group = united_germanic 
+				}
+			}
+            change_culture = abf_jugoslawienschwaben_culture_new
+		}
+		else = {
+         	change_culture = abf_jugoslawienschwaben_culture
+		}
+	}
+}
+
+### Anglo-Norse (Norwegian) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.15
+	title = abf_new_cultures.15.t
+	desc = abf_new_cultures.15.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_nor_anglonorse_spread
+		}
+		religion = owner
+		OR = {
+			culture = english
+			culture = anglois
+		}
+		NOT = {
+			culture_group = scandinavian
+		}
+		OR = {
+			region = british_isles_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.15.a
+		change_culture = abf_anglonorse_culture
+	}
+}
+
+### Norse-Gaelic (Norwegian) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.16
+	title = abf_new_cultures.16.t
+	desc = abf_new_cultures.16.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_nor_norsegaelic_spread
+		}
+		religion = owner
+		OR = {
+			culture = norse_gael
+			culture = irish
+		}
+		NOT = {
+			culture_group = scandinavian
+		}
+		OR = {
+			region = british_isles_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.16.a
+		change_culture = norse_gael_nordic
+	}
+}
+
+### Gallic Culture Spread (Gallia/Britanny) Spread [[[
+province_event = {
+	id = abf_new_cultures.17
+	title = abf_new_cultures.17.t
+	desc = abf_new_cultures.17.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_gallic_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = gaelic
+		}
+		OR = {
+			region = france_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.17.a
+		change_culture = Gallic
+	}
+}
+
+### Brittonic Culture Spread (Gallia/Britanny) Spread [[[
+province_event = {
+	id = abf_new_cultures.18
+	title = abf_new_cultures.18.t
+	desc = abf_new_cultures.18.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_brittonic_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = gaelic
+		}
+		OR = {
+			region = british_isles_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.18.a
+		change_culture = briton
+	}
+}
+
+### Aibofolke Culture Spread (Swedish) Spread [[[
+province_event = {
+	id = abf_new_cultures.19
+	title = abf_new_cultures.19.t
+	desc = abf_new_cultures.19.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_swe_aibofolke_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = scandinavian
+		}
+		OR = {
+			region = baltic_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.19.a
+		change_culture = abf_aibofolke_culture
+	}
+}
+
+#### ABF Finnish Nordic Culture 
+province_event = {
+	id = abf_new_cultures.20
+	title = abf_new_cultures.20.t
+	desc = abf_new_cultures.20.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_finnish_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = scandinavian
+		}
+		OR = {
+			area = karelia_area
+			area = pomor_area
+	 	}
+	}
+
+	option = {
+		name = abf_new_cultures.20.a
+		change_culture = abf_finnish_new_culture
+	}
+}
+
+### Cossack Culture Spread (UKR/Rus/HET) Spread [[[ 
+province_event = {
+    id = abf_new_cultures.21
+    title = abf_new_cultures.21.t
+    desc = abf_new_cultures.21.d
+    picture = CULTURE_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {
+        months = 240
+
+        modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
+
+    trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+        religion = owner
+        NOT = {
+            culture_group = east_slavic
+        }
+        OR = {
+            AND = {
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = abf_htm_chernomoriya_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = azov_area
+                    area = lower_don_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = abf_htm_don_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = circassia_area
+                    area = dagestan_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = abf_htm_terek_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                    area = samara_area
+                    area = volga_area
+                    area = kazan_area
+                    area = tambov_area 
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = abf_htm_povolzyhe_cossack_culture_spread
+                    }
+                }
+            }
+            AND = {
+                OR = {
+                    area = lower_yik_area
+                    area = bashkiria_area
+                    area = galich_area
+                    area = perm_area
+                    area = kama_area
+                    area = nogai_area
+                }
+                owner = {
+                    OR = {
+                        has_country_flag = abf_ukr_cossack_culture_spread
+                        has_country_flag = abf_htm_uralskyie_culture_spread
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = abf_new_cultures.21.a
+        if = { 
+            limit = {  #Black Sea 
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+            }
+            change_culture = abf_chernomoriya_cossack_culture
+        }
+        else_if = {
+            limit = { #Don
+                OR = {
+                    area = azov_area
+                    area = lower_don_area
+                }
+            }
+            change_culture = abf_don_cossack_culture
+        }
+        else_if = { #Caucausia
+            limit = {
+                OR = {
+                    area = circassia_area
+                    area = dagestan_area
+                }
+            }
+            change_culture = abf_terek_cossack_culture
+        }
+        else_if = { # Volga
+            limit = {
+                OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                    area = samara_area
+                    area = volga_area
+                    area = kazan_area
+                    area = tambov_area
+                }
+            }
+            change_culture = abf_povolzyhe_cossack_culture
+        }
+        else_if = { # Yik
+            limit = {
+                OR = {
+                    area = lower_yik_area
+                    area = bashkiria_area
+                    area = galich_area
+                    area = perm_area
+                    area = kama_area
+                    area = nogai_area
+                }
+            }
+            change_culture = abf_uralskiye_cossack_culture
+        }
+    }
+}
+
+### Pomorian Culture (Novogorod) Finalnd Spread [[[ 
+province_event = {
+	id = abf_new_cultures.22
+	title = abf_new_cultures.22.t
+	desc = abf_new_cultures.22.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_nov_pomor_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = east_slavic
+		}
+		culture_group = Finnic
+		OR = {
+			region = scandinavia_region
+			region = russia_region
+	 	}
+	}
+
+	option = {
+		name = abf_new_cultures.22.a
+		change_culture = pomorian
+	}
+}
+
+### Kharbinskiye (East Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.23
+	title = abf_new_cultures.23.t
+	desc = abf_new_cultures.23.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_kharbinskiye_cossack_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = east_slavic
+		}
+		OR = {
+			region = manchuria_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.23.a
+		change_culture = abf_kharbinskiye_cossack_culture
+	}
+}
+
+### Alban (Scottish/West Germanic) Spread  [[[
+province_event = {
+	id = abf_new_cultures.24
+	title = abf_new_cultures.24.t
+	desc = abf_new_cultures.24.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_albion_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture = abf_albion_culture
+		}
+		OR = {
+			culture = scottish
+		 	culture = anglois
+		 	culture = english
+	  	}
+		OR = {
+			region = british_isles_region
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.24.a
+		change_culture = abf_albion_culture
+	}
+}
+
+### Nagaybak (East Slavic) Central Asia Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.25
+	title = abf_new_cultures.25.t
+	desc = abf_new_cultures.25.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_nagaybak_culture_spread
+		}
+		religion = owner
+		NOT = {
+			OR = {
+				culture_group = east_slavic
+			}
+		}
+		if = { # Expanded Spread
+			limit = {
+				owner = {
+					AND = {
+						has_country_flag = abf_nagaybak_culture_spread
+						has_country_flag = abf_htm_nagaybak_culture_expanded_spread
+					}
+				}
+			}
+			region = central_asia_region
+		}
+		else  = { #Base limited spread
+			OR = {
+				culture = khazak
+				culture = kirgiz
+	  		}
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.25.a
+		change_culture = abf_nagaybak_culture
+	}
+}
+
+### Varangian (Nordic) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.26
+	title = abf_new_cultures.26.t
+	desc = abf_new_cultures.26.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_varangians_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = scandinavian
+		}
+		OR = {
+			region = russia_region
+			region = ruthenia_region
+			province_id = 38
+			province_id = 43
+			province_id = 4745
+			province_id = 151
+	 	}
+	}
+	option = {
+		name = abf_new_cultures.26.a
+		change_culture = abf_varangians_culture
+	}
+}
+
+### Wendish (West Slavic) Germany Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.27
+	title = abf_new_cultures.27.t
+	desc = abf_new_cultures.27.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_wendish_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			region = north_german_region
+			region = south_german_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.27.a
+		change_culture = Wendish
+	}
+}
+
+### Malorussian (East Slavic) Baltic Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.28
+	title = abf_new_cultures.28.t
+	desc = abf_new_cultures.28.d
+	picture = CULTURE_eventPicture
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_malorussian_cossack_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = east_slavic
+		}
+		region = baltic_region
+	}
+
+	option = {
+		name = abf_new_cultures.28.a
+		change_culture = abf_malorussian_cossack_culture
+		change_original_culture = abf_malorussian_cossack_culture
+	}
+}
+
+### Kresy-Polonized Borderlands (West Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.29
+	title = abf_new_cultures.29.t
+	desc = abf_new_cultures.29.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = byelorussian
+			culture = volhynian
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.29.a
+		change_culture = abf_polish_west_kresy
+	}
+}
+
+### Gente Ruthenus-Polonized Ruthenia (West Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.30
+	title = abf_new_cultures.30.t
+	desc = abf_new_cultures.30.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = ruthenian
+			area = crimea_area
+			area = yedisan_area
+			area = zaporizhia_area
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.30.a
+		change_culture = abf_polish_west_gente_ruthenus
+	}
+}
+
+### Rosyjski-Polonized Russia (East Slavic) Spread  [[[ 
+province_event = {
+	id = abf_new_cultures.31
+	title = abf_new_cultures.31.t
+	desc = abf_new_cultures.31.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture = novgorodian
+			culture = pomorian
+			culture = russian
+			culture = ryazanian
+			culture = karelian
+
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.31.a
+		change_culture = abf_polish_west_rosyjski
+	}
+}
+
+### Lipkowie-Polonized Steppe (West Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.32
+	title = abf_new_cultures.32.t
+	desc = abf_new_cultures.32.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			culture_group = tartar
+			area = circassia_area
+			area = dagestan_area
+		}
+		NOT = {
+			OR = {
+				area = crimea_area
+				area = yedisan_area
+				area = zaporizhia_area
+			}
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.32.a
+		change_culture = abf_polish_west_lipkowie
+	}
+}
+
+### Nagaibaks-Polonized Central Asia  (West Slavic) Spread [[[
+province_event = {
+	id = abf_new_cultures.33
+	title = abf_new_cultures.33.t
+	desc = abf_new_cultures.33.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		AND = {
+			OR = {
+				culture_group = altaic
+				culture = Chorasmian
+				culture = Sogdian
+			}
+			NOT = {
+				culture = turkish
+			}
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.33.a
+		change_culture = abf_polish_west_nagaibaks
+	}
+}
+
+### Harbiner-Polonized Manchuria (West Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.34
+	title = abf_new_cultures.34.t
+	desc = abf_new_cultures.34.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_pol_polonize_rus
+		}
+		religion = owner
+		NOT = {
+			culture_group = west_slavic
+		}
+		OR = {
+			region = manchuria_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.34.a
+		change_culture = abf_polish_west_harbiner
+	}
+}
+
+### Budjak (East Slavic) Spread [[[ 
+province_event = {
+	id = abf_new_cultures.35
+	title = abf_new_cultures.35.t
+	desc = abf_new_cultures.35.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_budjak_culture_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = east_slavic
+		}
+		OR = {
+			region = carpathia_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.35.a
+		change_culture = abf_budjak_cossack_culture
+	}
+}
+
+### Lipka (Tatar) Spread [[[
+province_event = {
+	id = abf_new_cultures.36
+	title = abf_new_cultures.36.t
+	desc = abf_new_cultures.36.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_glh_lipka_culture_spread_flag
+		}
+		religion = owner
+		NOT = {
+			culture_group = tartar
+		}
+		OR = {
+			region = baltic_region
+	  	}
+	}
+
+	option = {
+		name = abf_new_cultures.36.a
+		change_culture = abf_tartar_lipka_culture
+	}
+}
+
+### Tatar Spread (GLH) Central Asia [[[
+province_event = {
+    id = abf_new_cultures.37
+    title = abf_new_cultures.37.t
+    desc = abf_new_cultures.37.d
+    picture = CULTURE_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {
+        months = 240
+
+        modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
+
+    trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		religion = owner
+		NOT = {
+			culture_group = tartar
+		}
+		OR = {
+			region = central_asia_region
+			region = west_siberia_region
+		}
+		OR = {
+			culture_group = altaic
+			culture_group = iranian
+		}
+		owner = {
+			has_country_flag = abf_glh_tatar_altaic_culture_spread_flag
+		}
+    }
+
+    option = {
+        name = abf_new_cultures.37.a
+        if = { 
+            limit = {  #Nogai
+                OR = {
+                    province_id = 2353
+                    province_id = 2351
+					province_id = 439
+					province_id = 443
+                }
+            }
+            change_culture = nogaybak
+        }
+        else_if = {
+            limit = { #Siberian
+                region = west_siberia_region
+            }
+            change_culture = siberian
+        }
+        else = { #Qipchaq
+            change_culture = abf_tartar_qipchaq_culture
+        }
+    }
+}
+
+### Kalmyk (East Slavic) Spread [[[
+province_event = {
+    id = abf_new_cultures.38
+    title = abf_new_cultures.38.t
+    desc = abf_new_cultures.38.d
+    picture = CULTURE_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {
+        months = 240
+
+        modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
+
+    trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		religion = owner
+		owner = {
+			has_country_flag = abf_kalymk_culture_spread
+		}
+		NOT = {
+			culture_group = east_slavic
+		}
+		region = mongolia_region
+		culture_group = Mongolian
+    }
+
+    option = {
+        name = abf_new_cultures.38.a
+        change_culture = abf_kalymk_culture
+    }
+}
+
+### Daur (Tatar) Evenki Spread [[[
+province_event = {
+	id = abf_new_cultures.39
+	title = abf_new_cultures.39.t
+	desc = abf_new_cultures.39.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.7
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_glh_daur_culture_spread_flag
+		}
+		religion = owner
+		NOT = {
+			culture_group = tartar
+		}
+		culture_group = evenks
+	}
+
+	option = {
+		name = abf_new_cultures.39.a
+		change_culture = abf_tartar_daur_culture
+	}
+}
+
+### Qaraylar (Tatar) Spread [[[
+province_event = {
+	id = abf_new_cultures.40
+	title = abf_new_cultures.40.t
+	desc = abf_new_cultures.40.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_glh_tatar_qaraylar_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = tartar
+		}
+		region = poland_region
+	}
+
+	option = {
+		name = abf_new_cultures.40.a
+		change_culture = abf_glh_tatar_qaraylar_culture
+	}
+}
+
+### Onoghur (Tatar) Spread
+province_event = {
+	id = abf_new_cultures.41
+	title = abf_new_cultures.41.t
+	desc = abf_new_cultures.41.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_glh_tatar_onoghur_spread
+		}
+		religion = owner
+		NOT = {
+			culture_group = tartar
+		}
+		region = carpathia_region
+	}
+
+	option = {
+		name = abf_new_cultures.41.a
+		change_culture = abf_glh_tatar_onoghur_culture
+	}
+}
+
+### Tatarization of Rus Culture Spread Event [[[
+province_event = {
+    id = abf_new_cultures.42
+    title = abf_new_cultures.42.t
+    desc = abf_new_cultures.42.d
+    picture = CULTURE_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {
+        months = 240
+
+    	modifier = {
+            factor = 0.6
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
+
+    trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+        religion = owner
+        NOT = {
+            culture_group = tartar
+        }
+        OR = {
+            AND = {
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+                owner = {
+                    has_country_flag = abf_glh_tatarized_slavic_spread
+                }
+            }
+            AND = {
+				OR = {
+					area = sloboda_ukraine_area
+					area = ryazan_area
+					area = smolensk_area
+					area = chernigov_area
+					area = oka_area
+				}   
+                owner = {
+                   	has_country_flag = abf_glh_tatarized_slavic_spread
+				}
+            }
+            AND = {
+                OR = {
+                    area = west_dniepr_area
+                    area = east_dniepr_area
+					area = chernigov_area
+					area = sloboda_ukraine_area
+					area = red_ruthenia_area
+					area = volhynia_area
+					area = podolia_volhynia_area
+                }
+                owner = {
+                   	has_country_flag = abf_glh_tatarized_slavic_spread
+				}
+            }
+            AND = {
+                OR = {
+                  area = minsk_area
+				  area = pripyat_area
+				  area = podlasie_area
+				  area = pskov_area
+				  area = white_ruthenia_area
+                }
+               owner = {
+                   	has_country_flag = abf_glh_tatarized_slavic_spread
+				}
+            }
+            AND = {
+                OR = {
+                    area = oka_area
+                    area = moscow_area
+                    area = vladimir_area
+                    area = perm_area
+                    area = samara_area
+                    area = galich_area
+					area = suzdal_area
+					area = yaroslavl_area
+					area = vologda_area
+					area = perm_area
+					area = beloozero_area
+					area = tver_area
+                }
+               owner = {
+                   	has_country_flag = abf_glh_tatarized_slavic_spread
+				}
+            }
+			AND = {
+				OR = {
+					area = pskov_area
+					area = novgorod_area
+					area = tver_area
+					area = yaroslavl_area
+					area = beloozero_area
+					area = karelia_area
+					area = arkhangelsk_area
+					area = pomor_area
+				}
+				owner = {
+					has_country_flag = abf_glh_tatarized_slavic_spread
+				}
+			}
+        }
+    }
+
+    option = {
+        name = abf_new_cultures.42.a
+        if = { 
+            limit = {  #Black Sea 
+                OR = {
+                    area = crimea_area
+                    area = yedisan_area
+                    area = zaporizhia_area 
+                }
+            }
+            change_culture = crimean
+        }
+        else_if = {
+            limit = { #Severian
+              OR = {
+					area = sloboda_ukraine_area
+					area = ryazan_area
+					area = smolensk_area
+					area = chernigov_area
+					area = oka_area
+				}   
+				culture = ryazanian
+				NOT = {
+					culture = ruthenian
+				}
+            }
+            change_culture = abf_tatar_qasiym_culture
+        }
+		else_if = {
+            limit = { #Ruthenian Middle
+               OR = {
+					area = sloboda_ukraine_area
+					area = ryazan_area
+					area = smolensk_area
+					area = chernigov_area
+					area = oka_area
+				}   
+				culture = ruthenian
+				NOT = {
+					culture = ryazanian
+				}
+            }
+            change_culture = abf_tatar_cherkasy_urus_culture
+        }
+        else_if = { #Ruthenia
+            limit = {
+                OR = {
+                    area = west_dniepr_area
+                    area = east_dniepr_area
+					area = chernigov_area
+					area = sloboda_ukraine_area
+					area = red_ruthenia_area
+					area = volhynia_area
+					area = podolia_volhynia_area
+                }
+				NOT = {
+					culture = ryazanian
+				}
+            }
+            change_culture = abf_tatar_cherkasy_urus_culture
+        }
+        else_if = { # Byleorussia
+            limit = {
+                OR = {
+                  area = minsk_area
+				  area = pripyat_area
+				  area = podlasie_area
+				  area = pskov_area
+				  area = white_ruthenia_area
+                }
+				NOT = {
+					culture = novgorodian
+				}
+            }
+            change_culture = abf_tartar_lipka_culture
+        }
+        else_if = { # Moscovite
+            limit = {
+                OR = {
+                    area = oka_area
+                    area = moscow_area
+                    area = vladimir_area
+                    area = perm_area
+                    area = samara_area
+                    area = galich_area
+					area = suzdal_area
+					area = yaroslavl_area
+					area = vologda_area
+					area = perm_area
+					area = beloozero_area
+					area = tver_area
+                }
+				culture = russian
+            }
+            change_culture = abf_tatar_urus_culture
+        }
+		else_if = { # Northern Areas
+            limit = {
+                  OR = {
+					area = pskov_area
+					area = novgorod_area
+					area = tver_area
+					area = yaroslavl_area
+					area = beloozero_area
+					area = karelia_area
+					area = arkhangelsk_area
+					area = pomor_area
+				}
+				OR = {
+					culture = novgorodian
+					culture = pomorian
+				}
+            }
+            change_culture = abf_tatar_yomyshly_urus_culture
+        }
+    }
+}
+
+### Russification of the Tatars Culture Spread event [[[
+province_event = {
+    id = abf_new_cultures.43
+    title = abf_new_cultures.43.t
+    desc = abf_new_cultures.43.d
+    picture = CULTURE_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {
+        months = 360
+
+        modifier = {
+            factor = 0.6
+            owner = {
+                has_country_flag = nci_speed_up_cultures
+            }
+        }
+    }
+
+    trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+        religion = owner
+        NOT = {
+            culture_group = east_slavic
+        }
+        OR = {
+            AND = {
+                region = crimea_region
+                owner = {
+                    has_country_flag = abf_glh_slavic_tatar_spread
+                }
+            }
+            AND = {
+				OR = {
+					area = sloboda_ukraine_area
+					area = lower_don_area
+					area = tambov_area
+					area = saratov_area
+				}   
+                owner = {
+                   	has_country_flag = abf_glh_slavic_tatar_spread
+				}
+            }
+            AND = {
+                OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                }
+                owner = {
+                   	has_country_flag = abf_glh_slavic_tatar_spread
+				}
+            }
+            AND = {
+                OR = {
+                  area = saratov_area
+				  area = samara_area
+				  area = tambov_area
+				  area = volga_area
+				  area = kazan_area
+                }
+               owner = {
+                   	has_country_flag = abf_glh_slavic_tatar_spread
+				}
+            }
+            AND = {
+                OR = {
+                    area = lower_yik_area
+                    area = nogai_area
+					area = bashkiria_area
+                }
+               owner = {
+                   	has_country_flag = abf_glh_slavic_tatar_spread
+				}
+            }
+			AND = {
+				area = bashkiria_area
+				owner = {
+					has_country_flag = abf_glh_slavic_tatar_spread
+				}
+			}
+        }
+    }
+
+    option = {
+        name = abf_new_cultures.43.a
+        if = { 
+            limit = {  #Black Sea 
+                region = crimea_region
+            }
+            change_culture = abf_chernomoriya_cossack_culture
+        }
+        else_if = {
+            limit = { #Mishar Slavic
+              OR = {
+					area = sloboda_ukraine_area
+					area = lower_don_area
+					area = tambov_area
+					area = saratov_area
+				}     
+				culture = mishary
+				OR = {
+					NOT = {
+						culture = kazani
+					}
+					NOT = {
+						culture = astrakhani
+					}
+				}
+            }
+            change_culture = abf_meshcheryak_east_culture
+        }
+		 else_if = {
+            limit = { #Yurtovtsy
+              	OR = {
+                    area = astrakhan_area
+                    area = saratov_area
+                }    
+				culture = astrakhani
+				OR = {
+					NOT = {
+						culture = kazani
+					}
+					NOT = {
+						culture = mishary
+					}
+				}
+            }
+            change_culture = abf_yurtovtsy_east_culture
+        }
+		else_if = {
+            limit = { #Kazani
+               OR = {
+                  area = saratov_area
+				  area = samara_area
+				  area = tambov_area
+				  area = volga_area
+				  area = kazan_area
+                }   
+				culture = kazani
+				OR = {
+					NOT = {
+						culture = mishary
+					}
+					NOT = {
+						culture = astrakhani
+					}	
+				}
+            }
+            change_culture = abf_kazanskiye_east_culture
+        }
+        else_if = { #Nogai
+            limit = {
+               OR = {
+                    area = lower_yik_area
+                    area = nogai_area
+					area = bashkiria_area
+                }
+				NOT = {
+					culture = bashkir
+				}
+            }
+            change_culture = abf_nagaybak_culture
+        }
+        else_if = { # Bashkir
+            limit = {
+                area = bashkiria_area
+				NOT = {
+					culture = nogaybak
+				}
+            }
+            change_culture = abf_bashkorttar_east_culture
+        }
+    }
+}
+
+### Sino-Tibetan (Chinese)
+province_event = {
+	id = abf_new_cultures.44
+	title = abf_new_cultures.44.t
+	desc = abf_new_cultures.44.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_sino_tibetan_culture_spread_flag
+		}
+		OR = {
+			religion = owner
+			has_owner_harmonized_religion = yes
+		}
+		NOT = {
+			culture_group = east_asian
+		}
+		culture_group = tibetan_group
+	}
+
+	option = {
+		name = abf_new_cultures.44.a
+		change_culture = tibetan_new
+	}
+}
+
+### Sino-Burmese (Mian) (Chinese)
+province_event = {
+	id = abf_new_cultures.45
+	title = abf_new_cultures.45.t
+	desc = abf_new_cultures.45.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_tcr_sino_burmese_spread_flag
+		}
+		OR = {
+			religion = owner
+			has_owner_harmonized_religion = yes
+		}
+		NOT = {
+			culture_group = east_asian
+		}
+		region = burma_region
+	}
+
+	option = {
+		name = abf_new_cultures.45.a
+		change_culture = abf_sino_burmese_culture
+	}
+}
+
+### Sino-Malayan (Chinese)
+province_event = {
+	id = abf_new_cultures.46
+	title = abf_new_cultures.46.t
+	desc = abf_new_cultures.46.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_tcr_china_sino_malayan_spread_flag
+		}
+		OR = {
+			religion = owner
+			has_owner_harmonized_religion = yes
+		}
+		NOT = {
+			culture_group = east_asian
+		}
+		culture = malayan
+	}
+
+	option = {
+		name = abf_new_cultures.46.a
+		change_culture = abf_sino_malayan_culture
+	}
+}
+
+### Balto-Finnic (Baltic)
+province_event = {
+	id = abf_new_cultures.47
+	title = abf_new_cultures.47.t
+	desc = abf_new_cultures.47.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_balto_finnic_culture_spread_flag
+		}
+		OR = {
+			religion = owner
+			AND = {
+				OR = {
+					religion_group = pagan
+					religion_group = reformed_pagan
+				}
+				owner = {
+					has_estate_privilege = estate_church_pagan_reconciliation
+				}
+			}
+		}
+		NOT = {
+			culture_group = baltic
+		}
+		culture_group = Finnic
+	}
+
+	option = {
+		name = abf_new_cultures.47.a
+		change_culture = abf_balto_finnic_culture
+	}
+}
+
+### Milograd (Baltic)
+province_event = {
+	id = abf_new_cultures.48
+	title = abf_new_cultures.48.t
+	desc = abf_new_cultures.48.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_baltic_milograd_culture_spread_flag
+		}
+		religion = owner
+		NOT = {
+			culture_group = baltic
+		}
+		region = ruthenia_region
+	}
+
+	option = {
+		name = abf_new_cultures.48.a
+		change_culture = abf_baltic_milograd_culture
+	}
+}
+
+### Dnepr-Dvina (Baltic)
+province_event = {
+	id = abf_new_cultures.49
+	title = abf_new_cultures.49.t
+	desc = abf_new_cultures.49.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_baltic_dneprdvina_culture_spread_flag
+		}
+		religion = owner
+		NOT = {
+			OR = {
+				culture_group = baltic
+				culture_group = Finnic
+			}
+		}
+		region = russia_region
+	}
+
+	option = {
+		name = abf_new_cultures.49.a
+		change_culture = abf_baltic_dneprdvina_culture
+	}
+}
+
+### Krievi (Baltic)
+province_event = {
+	id = abf_new_cultures.50
+	title = abf_new_cultures.50.t
+	desc = abf_new_cultures.50.d
+	picture = CULTURE_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.7
+			owner = {
+				has_country_flag = nci_speed_up_cultures
+			}
+		}
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				NOT = {
+					tag = RMR 
+				}
+				NOT = {
+					tag = ROM
+				}
+			}
+		}
+		owner = {
+			has_country_flag = abf_baltic_krievi_culture_spread_flag
+		}
+		religion = owner
+		NOT = {
+			culture_group = baltic
+		}
+		OR = {
+			region = crimea_region
+			region = ural_region
+			AND = {
+				region = manchuria_region
+				owner = {
+					has_country_flag = abf_lva_krievi_expanded_spread_flag
+				}
+			}
+		}
+	}
+
+	option = {
+		name = abf_new_cultures.50.a
+		if = {
+			limit = {
+				OR = {
+					region = crimea_region
+					region = ural_region
+				}
+			}
+			change_culture = abf_baltic_krievi_culture
+		}
+		else_if = {
+			limit = {
+				AND = {
+					region = manchuria_region
+					owner = {
+						has_country_flag = abf_lva_krievi_expanded_spread_flag
+					}
+				}
+			}
+			change_culture = abf_baltic_krievi_culture
+		}
+	}
+}
+
+
+ 

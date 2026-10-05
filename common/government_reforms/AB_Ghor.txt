@@ -27,6 +27,7 @@ ghuriddynasty = {
 	}
 }
 
+### ABF - Modified Ghurid Persianate Empire Reform - adding further bonsues and assimilation mechanic [[[
 ghuridempire = {
 	icon = "ghuridreform"
 	allow_convert = no
@@ -46,8 +47,9 @@ ghuridempire = {
 	fixed_rank = 3
 	modifiers = {
 		legitimacy = 1
+		### ABF - added bonsues [[[
 		governing_capacity_modifier = 0.1
-		num_accepted_cultures = 3
+		### ]]]
 	}
 
 	conditional = {
@@ -57,6 +59,7 @@ ghuridempire = {
 		}
 	}
 	
+	#ABF - Assimilation Added  
 	assimilation_cultures = {
 		Finnic = {
 			cav_to_inf_ratio = 0.25
@@ -210,6 +213,7 @@ ghuridempire = {
 		}
 	}
 }
+### ]]]
 
 ghutribal = {
 	icon = "indian_crown"

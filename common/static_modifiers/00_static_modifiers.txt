@@ -1658,7 +1658,7 @@ autonomy_increased = {
 	monthly_royalistsvpeasants = -0.05
 	#]]]]
 
-	### ABA [[[
+	### ABF Commonwealth Mechanic [[[
 	monthly_commonwealth_popular_sovereignity = 0.01
 	###]]]
 }
@@ -1670,7 +1670,7 @@ autonomy_decreased = {
 	monthly_royalistsvpeasants = 0.05
 	#]]]]
 
-	### ABA [[[
+	### ABF Commonwealth Mechanic [[[
 	monthly_commonwealth_popular_sovereignity = -0.01
 	###]]]
 }

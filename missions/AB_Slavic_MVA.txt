@@ -227,27 +227,23 @@ mva_first_branching_group2 = {
 		}
 		
 		effect = {
-			custom_tooltip = POL_LITVIN
-			hidden_effect = {
-				every_province = {
-					limit = {
-						culture_group = baltic
-					}
-					change_culture = litvin_westslavic
-				}
-			}
-			baltic_region = {
-				add_province_modifier = {
-					name = "mva_purge"
-					duration = 9125
-				}
-			}
+			### ABF - culture spread reward and reworked formatting [[[
 			define_advisor = {
 				type = theologian
 				skill = 3
 				religion = ROOT
 				cost_multiplier = 0.5
 			}
+			custom_tooltip = AB_EMPTY
+			baltic_region = {
+				add_province_modifier = {
+					name = "mva_purge"
+					duration = 9125
+				}
+			}
+			set_country_flag = abf_litvin_culture_spread
+			custom_tooltip = ABF_LITVIN_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -1603,6 +1599,7 @@ mva_fourth_group = {
 		}
 		
 		effect = {
+			### ABF - new culture conditional reward and reformatting [[[
 			custom_tooltip = MVA_CARPATHIA_AUTONOMY
 			hidden_effect = {
 				every_owned_province = {
@@ -1612,6 +1609,7 @@ mva_fourth_group = {
 					add_local_autonomy = -25
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = MVA_CONSOLIDATE_CARPATHIA
 			tooltip = {
 				add_province_modifier = {
@@ -1669,6 +1667,94 @@ mva_fourth_group = {
 					}
 				}
 			}
+			# ABF conditional reward 
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					tag = GMA
+					transdanubia_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					centralhungary_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					alfold_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					southern_transylvania_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					transylvania_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					eastslovakia_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = ABF_CARPATHIAN_SHIFT_GMA_YES
+				custom_tooltip = PNN_CULTURE
+				replace_culture_with_effect = {
+					new_culture = slavichungarian
+					old_culture_1 = hungarian
+					old_culture_2 = Szekler
+					old_culture_3 = alfoldian_culture
+					old_culture_4 = dunavian_culture
+					old_culture_5 = karpataljai_culture
+					old_culture_6 = magyar_culture
+				}
+				hidden_effect = {
+					4126 = {
+						change_original_culture = slavichungarian
+					}
+					1954 = {
+						change_original_culture = slavichungarian
+					}
+					156 = {
+						change_original_culture = slavichungarian
+					}
+					4955 = {
+						change_original_culture = slavichungarian
+					}
+					155 = {
+						change_original_culture = slavichungarian
+					}
+					4950 = {
+						change_original_culture = slavichungarian
+					}
+					153 = {
+						change_original_culture = slavichungarian
+					}
+					4125 = {
+						change_original_culture = slavichungarian
+					}
+					1953 = {
+						change_original_culture = slavichungarian
+					}
+					157 = {
+						change_original_culture = slavichungarian
+					}
+					4954 = {
+						change_original_culture = slavichungarian
+					}
+					162 = {
+						change_original_culture = slavichungarian
+					}
+					1952 = {
+						change_original_culture = slavichungarian
+					}
+					4953 = {
+						change_original_culture = slavichungarian
+					}
+					158 = {
+						change_original_culture = slavichungarian
+					}
+				}
+			}
+			else = {
+				custom_tooltip = ABF_CARPATHIAN_SHIFT_GMA_NO
+				custom_tooltip = PNN_CULTURE
+			}
+			### ]]]
 		}
 	}
 	

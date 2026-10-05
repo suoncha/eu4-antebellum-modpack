@@ -1,0 +1,498 @@
+namespace = abf_tcr_yuezhi_crisis
+
+#TCR - Begin Crisis Information
+country_event = {
+	id = abf_tcr_yuezhi_crisis.1
+	title = abf_tcr_yuezhi_crisis.1.t
+	desc = abf_tcr_yuezhi_crisis.1.d
+	picture = MONGOL_BANNERS_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			# Save ROOT as event target
+			ROOT = {
+				save_global_event_target_as = abf_tcr_yuezhi_crisis_invader
+			}
+			# Set global flag for crisis beginning 
+			if = {
+				limit = {
+					NOT = {
+						has_saved_global_event_target = abf_tcr_yuezhi_crisis_target
+					}	
+				}
+				set_global_flag = abf_tcr_yuezhi_crisis_begun_flag
+			}
+			# Save Event Target/Country flag for EOC 
+			if = {
+				limit = {
+					1816 = {
+						owner = {
+							is_neighbor_of = ROOT
+						}
+					}
+				}
+				hidden_effect = {
+					1816 = {
+						owner = {
+							save_global_event_target_as = abf_tcr_yuezhi_crisis_target
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					event_target:abf_tcr_yuezhi_crisis_target = {
+						exists = no
+					}
+					event_target:EmperorOfChina = {
+						is_neighbor_of = ROOT
+						owns = 1816
+					}
+				}
+				event_target:EmperorOfChina = {
+					save_global_event_target_as = abf_tcr_yuezhi_crisis_target
+					set_country_flag = abf_eoc_yuezhi_target
+				}
+			}
+		}
+	}
+
+
+	#Demand their surrender 
+	option = {
+		name = abf_tcr_yuezhi_crisis.1.c
+		custom_tooltip = ABF_YUEZHI_CRISIS_YUEZHI_DEMANDS_TT
+		custom_tooltip = AB_EMPTY
+		event_target:abf_tcr_yuezhi_crisis_target = {
+			country_event = {
+				id = abf_tcr_yuezhi_crisis.2
+			}
+		}
+	}
+}
+
+#Event Target receives demands 
+country_event = {
+	id = abf_tcr_yuezhi_crisis.2
+	title = abf_tcr_yuezhi_crisis.2.t
+	desc = abf_tcr_yuezhi_crisis.2.d
+	
+	picture = CHINESE_GENERAL_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+
+	#Surrender Northern China
+	option = {
+		name = abf_tcr_yuezhi_crisis.2.a
+
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = { 
+					event_target:abf_tcr_yuezhi_crisis_invader = {
+						military_strength = {
+							who = event_target:abf_tcr_yuezhi_crisis_target
+							value = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				event_target:abf_tcr_yuezhi_crisis_invader = {
+					military_strength = {
+						who = event_target:abf_tcr_yuezhi_crisis_target
+						value = 1.5
+					}
+				}
+			}
+		}
+		# Add prestige and a modifier to the emperor
+		add_stability = -3
+		add_prestige = -50
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_mandate = -50
+		}
+		else = {
+			add_legitimacy = -50
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_YUEZHI_CRISIS_YUEZHI_TARGET_SURRENDER_1_TT
+		hidden_effect = {
+			mongolia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			manchuria_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			west_gansu_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			gansu_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			shanxi_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			shaanxi_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			hebei_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			east_siberia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			west_siberia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			#Info Event for Victory 
+			event_target:abf_tcr_yuezhi_crisis_invader = {
+				country_event = {
+					id = abf_tcr_yuezhi_crisis.3
+				}
+			}
+		}
+	}
+
+	#Don't surrender
+	option = {
+		name = abf_tcr_yuezhi_crisis.2.b
+
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 90
+				NOT = { 
+					event_target:abf_tcr_yuezhi_crisis_invader = {
+						military_strength = {
+							who = event_target:abf_tcr_yuezhi_crisis_target
+							value = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				event_target:abf_tcr_yuezhi_crisis_invader = {
+					military_strength = {
+						who = event_target:abf_tcr_yuezhi_crisis_target
+						value = 1.5
+					}
+				}
+			}
+		}
+
+		add_stability = -1
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_YUEZHI_CRISIS_TARGET_DEFEND_TT
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = abf_tcr_china_yuezhi_crisis_debuff
+			duration = -1
+			desc = abf_until_crisis_is_over_desc
+		}
+		# Declare war event for Invader
+		event_target:abf_tcr_yuezhi_crisis_invader = {
+			country_event = {
+				id = abf_tcr_yuezhi_crisis.4
+			}
+		}
+	}
+}
+
+
+#Yuezhi Victory - Information Event for Target 
+country_event = {
+	id = abf_tcr_yuezhi_crisis.3
+	title = abf_tcr_yuezhi_crisis.3.t
+	desc = abf_tcr_yuezhi_crisis.3.d
+	
+	picture = GIFTS_TO_EMPEROR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	#Surrender
+	option = {
+		name = abf_tcr_yuezhi_crisis.3.a
+		add_prestige = 25
+		add_legitimacy = 25
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_YUEZHI_CRISIS_YUEZHI_INVADER_VICTORY_TT
+	}
+}
+
+
+#Target Rejects Demands - Yuezhi go to war 
+country_event = {
+	id = abf_tcr_yuezhi_crisis.4
+	title = abf_tcr_yuezhi_crisis.4.t
+	desc = abf_tcr_yuezhi_crisis.4.d
+	
+	picture = SENGOKU_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	#To War
+	option = {
+		name = abf_tcr_yuezhi_crisis.4.a
+		declare_war_with_cb = {
+			casus_belli = cb_abf_yuezhi_crisis
+			who = event_target:abf_tcr_yuezhi_crisis_target
+		}
+		hidden_effect = {
+			set_global_flag = abf_yuezhi_crisis_in_war
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_TCR_YUEZHI_CRISIS_GOALS_TT
+		custom_tooltip = AB_EMPTY
+		tooltip = {
+			event_target:abf_tcr_yuezhi_crisis_target = {
+				add_stability = -1
+				custom_tooltip = AB_EMPTY
+				add_country_modifier = {
+					name = abf_tcr_china_yuezhi_crisis_debuff
+					duration = -1
+					desc = abf_until_crisis_is_over_desc
+				}
+			}
+		}
+		custom_tooltip = ABF_YUEZHI_INVADER_REMOVE_FOW_TT
+		hidden_effect = {
+			event_target:abf_tcr_yuezhi_crisis_target = {
+				remove_fow = 60
+			}
+		}
+	}
+}
+
+# Yuezhi Victory - Take borderlands/capital 
+country_event = {
+	id = abf_tcr_yuezhi_crisis.5
+	title = abf_tcr_yuezhi_crisis.5.t
+	desc = abf_tcr_yuezhi_crisis.5.d
+	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = abf_yuezhi_crisis_in_war
+			clr_global_flag = abf_yuezhi_crisis_decisive_war
+		}
+	}
+
+	option = {
+		name = abf_tcr_yuezhi_crisis.5.a
+		add_prestige = 25
+		add_legitimacy = 25
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_YUEZHI_CRISIS_YUEZHI_INVADER_VICTORY_TT
+		hidden_effect = {
+			event_target:abf_tcr_yuezhi_crisis_target = {
+				remove_country_modifier = abf_tcr_china_yuezhi_crisis_debuff
+			}
+			mongolia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			manchuria_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			west_gansu_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			gansu_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			shanxi_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			shaanxi_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			hebei_area = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			east_siberia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+			west_siberia_region = {
+				limit = {
+					owned_by = event_target:abf_tcr_yuezhi_crisis_target
+				}
+				add_core = event_target:abf_tcr_yuezhi_crisis_invader
+				cede_province = event_target:abf_tcr_yuezhi_crisis_invader
+			}
+		}
+	}
+}
+
+# Status Quo Victory - Annex Yuezhi
+country_event = {
+	id = abf_tcr_yuezhi_crisis.6
+	title = abf_tcr_yuezhi_crisis.6.t
+	desc = abf_tcr_yuezhi_crisis.6.d
+	picture = GIFTS_TO_EMPEROR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = abf_yuezhi_crisis_in_war
+			clr_global_flag = abf_yuezhi_crisis_decisive_war
+		}
+	}
+
+	option = {
+		name = abf_tcr_yuezhi_crisis.6.a
+		add_prestige = 50
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_mandate = 50
+			add_meritocracy = 50
+		}
+		else = {
+			add_legitimacy = 50
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_YUEZHI_CRISIS_YUEZHI_DEFENDER_VICTORY_TT
+		hidden_effect = {
+			event_target:abf_tcr_yuezhi_crisis_target = {
+				remove_country_modifier = abf_tcr_china_yuezhi_crisis_debuff
+			}
+			inherit = event_target:abf_tcr_yuezhi_crisis_invader
+		}
+	}
+}
+
+# General Peace Event 
+country_event = {
+	id = abf_tcr_yuezhi_crisis.7
+	title = abf_tcr_yuezhi_crisis.7.t
+	desc = abf_tcr_yuezhi_crisis.7.d
+	picture = IMPERIAL_SEAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # The peace of [PeaceTreatyCity.GetName]
+		name = abf_tcr_yuezhi_crisis.7.a
+		custom_tooltip = ABF_TCR_YUEZHI_CRISIS_WHITE_PEACE_TT
+	}
+}
+
+# Invader version of above event
+country_event = {
+	id = abf_tcr_yuezhi_crisis.8
+	title = abf_tcr_yuezhi_crisis.7.t
+	desc = abf_tcr_yuezhi_crisis.7.d
+	picture = IMPERIAL_SEAL_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	# Don't fire for those nations as they
+	# get their own event
+	major_trigger = {
+		NOT = {
+			OR = {
+				tag = event_target:abf_tcr_yuezhi_crisis_invader
+				tag = event_target:abf_tcr_yuezhi_crisis_target
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = abf_yuezhi_crisis_in_war
+			clr_global_flag = abf_yuezhi_crisis_decisive_war
+		}
+	}
+
+	option = { # The peace of [PeaceTreatyCity.GetName]
+		name = abf_tcr_yuezhi_crisis.7.a
+		custom_tooltip = ABF_TCR_YUEZHI_CRISIS_WHITE_PEACE_TT
+	}
+}

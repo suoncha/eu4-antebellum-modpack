@@ -1,0 +1,36 @@
+# Unite Persia Prince
+cb_persian_unification = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		is_free_or_tributary_trigger = yes
+		OR = {
+			### ABF - add availability for Persian focused Zun [[[
+			has_country_flag = abf_zun_unify_persia_cb
+			### ]]]
+			has_reform = persianprince
+			has_reform = persianprincet
+			tag = ZKD
+		}
+	}
+
+	prerequisites = {
+		FROM = {
+			NOT = { is_subject_of = ROOT }
+			OR = {
+				has_reform = persianprince
+				has_reform = persianprincet
+				tag = ZKD
+			}
+			any_owned_province = {
+				OR = {
+					region = persia_region
+					region = khorasan_region
+				}
+			}
+		}
+		is_neighbor_of = FROM
+	}
+
+	war_goal = superiority_iranian_unification
+}

@@ -149,19 +149,21 @@ latin_templars = {
 
 sweden_order = {
     icon = GFX_holy_order_sweden_order
+    ### ABF - modified trigger to make holy order additional unlockable as a reward [[[
     trigger = {
         OR = {
             AND = {
                 OR = {
-                  tag = SWE
-			      was_tag = SWE
+                    tag = SWE
+                    was_tag = SWE
                 }
-              mission_completed = ab_swe_religious_mission
-		    }
-            has_country_flag = ABA_POL_SWE_UNLOCK_ORDER
+                mission_completed = ab_swe_religious_mission
+            }
+            has_country_flag = abf_pol_unlock_carolean_orders_flag
         }
-		religion = catholic
+        religion = catholic
     }
+    ### ]]]
     cost = 50
     cost_type = mil_power
     color = { 0 106 167 }

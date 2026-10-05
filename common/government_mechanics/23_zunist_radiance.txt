@@ -1,0 +1,58 @@
+zunist_radiance_mechanic = {
+	available = {
+		has_dlc = "Domination"
+	}
+	
+	powers = {
+		zunist_radiance = {
+			gui = zunist_radiance_gov_mech
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					enforce_religion_cost = -0.5
+					manpower_in_true_faith_provinces = 0.2
+					same_religion_advisor_cost = -0.1
+				}
+			}
+			#### ABF Scaled Mods [[[
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = abf_znn_radiance_missionary_buff
+				}
+				modifier = {
+					missionaries = 1
+					global_missionary_strength = 0.02
+					missionary_maintenance_cost = -0.10
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = abf_znn_radiance_manpower_buff
+				}
+				modifier = {
+					manpower_in_true_faith_provinces = 0.10
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = abf_znn_radiance_innovatiness_gain_flag
+				}
+				modifier = {
+					yearly_innovativeness = 0.25
+				}
+			}
+			#### ]]]
+			is_good = yes
+			on_max_reached = {
+				hidden_effect = {
+					country_event = {
+						id = ab_pachiev.17
+					}
+				}
+			}
+		}
+	}
+}

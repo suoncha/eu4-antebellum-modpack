@@ -1,0 +1,15 @@
+spriteTypes = {
+    # Events
+    spriteType = {
+		name = "ABF_GLH_TSAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_abf_tataria/GOLDENTSAR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	# Reforms
+    spriteType = {
+		name = "government_reform_abagoldentsardom"
+		texturefile = "gfx/interface/government_reform_icons/abf_glh_golden_tsardom_reform.dds"
+	}
+}
+	

@@ -35,6 +35,11 @@ BRI_missions_1 = {
 				name = "bri_normand"
 				duration = 9125
 			}
+			### ABF [[[
+			set_country_flag = abf_brittonic_culture_spread
+			custom_tooltip = ABF_GLL_BRITTONIC_SPREAD_TT
+			### ]]]
+			custom_tooltip = AB_EMPTY
 		    loire_area = {
 			        limit = {
 					        NOT = { is_core = ROOT}
@@ -402,7 +407,6 @@ BRI_missions_2 = {
 				name = "bri_overthrow"
 				duration = 9125
 			}
-			country_event = { id = aba_brittany_event.1 }
 			british_isles_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -419,33 +423,32 @@ BRI_missions_2 = {
 		position = 3
 
 		provinces_to_highlight = {
-			region = british_isles_region
-			NOT = { culture = briton }
+			OR = {
+				region = british_isles_region
+			}
+			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-		    calc_true_if = {
-				all_owned_province = {
-					region = british_isles_region
-					culture = briton
-				}
-				amount = 25
+		    british_isles_region = {
+			    type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			stability = 1
-			num_of_rebel_controlled_provinces = 0
-			british_isles_region = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		effect = {
-			country_event = { id = aba_brittany_event.6 }
-			set_country_flag = aba_gal_release_celt
+			### ABF - celtic releasable decision reward and reformatting [[[
 			grant_all_mana = {
 				mana = 150
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "bri_celtic_union"
 				duration = -1
 			}
+			set_country_flag = abf_gal_release_celt_dec
+			custom_tooltip = ABF_RELEASE_CELTICA_DECISION_UNLOCK_TT
+			### ]]]
 		}
 	}
 	

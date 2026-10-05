@@ -43,7 +43,7 @@ cossacks_mechanic = {
 				}
 				if = {
 					limit = {
-						has_country_flag = aba_htm_recieve_fleeing_serfs_buff
+						has_country_flag = abf_htm_recieve_fleeing_serfs_buff
 					}
 					add_yearly_manpower = 0.5
 				}
@@ -53,7 +53,7 @@ cossacks_mechanic = {
 				hidden_effect = {
 					if = {
 						limit = {
-							has_country_flag = aba_htm_recieve_fleeing_serfs_buff
+							has_country_flag = abf_htm_recieve_fleeing_serfs_buff
 						}
 						random_owned_province = {
 							limit = {
@@ -110,7 +110,7 @@ cossacks_mechanic = {
 			trigger = { 
 				if = {
 					limit = {
-						has_country_flag = aba_HTM_raiding_upgrade_mechanic
+						has_country_flag = abf_HTM_raiding_upgrade_mechanic
 					}
 					has_government_power = {
 						mechanic_type = cossacks_mechanic
@@ -139,7 +139,7 @@ cossacks_mechanic = {
 				custom_tooltip = AB_EMPTY
 				if = {
 					limit = {
-						has_country_flag = aba_htm_raiding_parties_interaction_buff
+						has_country_flag = ABF_htm_raiding_parties_interaction_buff
 					}
 					event_target:htm_cossack_province_raid_target = {
 						add_devastation = 25
@@ -177,7 +177,7 @@ cossacks_mechanic = {
 				}
 				if = {
 					limit = {
-						has_country_flag = aba_HTM_host_upgrade_mechanic
+						has_country_flag = abf_htm_host_upgrade_mechanic_flag
 					}
 					has_government_power = {
 						mechanic_type = cossacks_mechanic
@@ -196,7 +196,7 @@ cossacks_mechanic = {
 			effect = { 
 				if = {
 					limit = {
-						has_country_flag = aba_HTM_host_upgrade_mechanic
+						has_country_flag = abf_htm_host_upgrade_mechanic_flag
 					}
 					add_government_power = {
 						mechanic_type = cossacks_mechanic

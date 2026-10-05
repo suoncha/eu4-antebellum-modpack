@@ -68,7 +68,9 @@ russloboda = {
 				tag = ROM
 				was_tag = UKR
 			}
-			has_country_flag = aba_pol_adapt_ruthenian_customs
+			### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+			### ]]]
 		}
 	}
 	modifiers = {
@@ -102,7 +104,9 @@ rusmestnichestvo = {
 				tag = ROM
 				was_tag = UKR
 			}
-			has_country_flag = aba_pol_adapt_ruthenian_customs
+			### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+			### ]]]
 		}
 	}
 	custom_attributes = {
@@ -128,10 +132,12 @@ rusprikazy = {
 	potential = {
 		is_revolutionary = no
 		government = monarchy
+		### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
 		OR = {
-			has_country_flag = aba_pol_adapt_ruthenian_customs
 			culture_group = east_slavic
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
 		}
+		### ]]]
 	}
 	modifiers = {
 		min_autonomy_in_territories = -0.1
@@ -154,6 +160,9 @@ russtreletsky = {
 				tag = ROM
 				was_tag = UKR
 			}
+			### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+			### ]]]
 		}
 	}
 	modifiers = {
@@ -186,10 +195,12 @@ rustable = {
 	potential = {
 		is_revolutionary = no
 		government = monarchy
+		### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
 		OR = {
-			has_country_flag = aba_pol_adapt_ruthenian_customs
 			culture_group = east_slavic
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
 		}
+		### ]]]
 	}
 	modifiers = {
 		advisor_cost = -0.1
@@ -211,7 +222,12 @@ rusboyarduma = {
 	potential = {
 		is_revolutionary = no
 		government = monarchy
-		culture_group = east_slavic
+		### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
+		OR = {
+			culture_group = east_slavic
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+		}
+		### ]]]
 	}
 	modifiers = {
 		mil_advisor_cost = -0.1
@@ -232,7 +248,12 @@ russenate = {
 	potential = {
 		is_revolutionary = no
 		government = monarchy
-		culture_group = east_slavic
+		### ABF - Unlocked Ruthenian Reforms for other countries (Catholic Poland) [[[
+		OR = {
+			culture_group = east_slavic
+			has_country_flag = abf_adapt_ruthenian_customs_unlock_flag
+		}
+		### ]]]
 	}
 	modifiers = {
 		max_absolutism = 10

@@ -3,7 +3,739 @@ lva_missions_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
+	potential = {
+		tag = LVA
 
+	}
+
+	lva_gotland = {
+		icon = mission_longships
+		position = 3
+		required_missions = {
+			lva_estonia
+		}
+
+		provinces_to_highlight = {
+			province_id = 25
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			25 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = abf_lva_event.1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "lva_safe_trade_routes"
+				duration = 5475
+			}
+			1926 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 10
+					key = lva_pirate_free_waters
+				}
+			}
+		}
+	}
+
+	lva_settle_north = {
+		icon = the_great_city_of_buda
+		position = 5
+		required_missions = {
+			lva_gotland lva_across_the_gulf
+		}
+
+		provinces_to_highlight = { 
+			province_id = 27
+			province_id = 28
+		}
+
+		trigger = { 
+			27 = {
+				development = 15
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			28 = {
+				development = 20
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { 
+			define_advisor = {
+				type = planner
+				skill = 2
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = AB_EMPTY
+			27 = {
+				change_province_name = "Turku"
+				rename_capital = "Turku"
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = abf_lva_finnic_settlement
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_center_of_trade_level = 1
+				}
+				custom_tooltip = AB_EMPTY
+				change_trade_goods = naval_supplies
+			}
+			custom_tooltip = AB_EMPTY
+			28 = {
+				change_province_name = "Helsinki"
+				rename_capital = "Helsinki"
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = abf_lva_finnic_settlement
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+
+	lva_arctic_expansion = {
+		icon = mission_rb_settle_the_north
+		position = 7
+		required_missions = {
+			lva_settle_north
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = laponia_area
+				area = norrland_area
+			}
+			OR = { 
+				unrest = 1 
+				nationalism = 1 
+				NOT = { owned_by = ROOT }
+			}
+		}
+
+		trigger = {
+			accepted_culture = sapmi
+			laponia_area = { 
+				type = all
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 } 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			norrland_area = { 
+				type = all
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 } 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			finland_area = {
+				type = all
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 } 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bothnia_area = {
+				type = all
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 } 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { 
+			custom_tooltip = swe_forest_expansion_ct
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = scandinavia_region
+						has_climate = arctic
+					}
+					add_province_modifier = {
+						name = swe_arctic_expansion
+						duration = -1
+					}
+				}
+				scandinavia_region = {
+					limit = { owned_by = ROOT }
+					add_prosperity = 10
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			finland_area = {
+				add_province_modifier = {
+					name = lit_military_frontier
+					duration = -1
+				}
+			}
+			bothnia_area = {
+				add_province_modifier = {
+					name = lit_military_frontier
+					duration = -1
+				}
+			}
+		}
+	}
+
+	lva_seat_of_domination = {
+		icon = mission_develop_kiev
+		position = 9
+		required_missions = {
+			lva_ruthenia
+		}
+
+		provinces_to_highlight = {
+			province_id = 280
+		}
+
+		trigger = {
+			owns_core_province = 280
+			280 = {
+				development = 20
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			set_capital = 280
+			custom_tooltip = AB_EMPTY
+			280 = {
+				change_culture = ROOT
+				change_religion = ROOT
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = abf_pol_catholic_mother_of_cities
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					religion = reformed_baltic
+					280 = {
+						development = 25
+					}
+				}
+				custom_tooltip = ABF_LVA_LAVRA_REFORMED_YES
+				set_country_flag = abf_enabled_lavra_flag
+				set_country_flag = abf_lva_reformed_romuva_lavra_flag
+				custom_tooltip = ABF_LVA_KYIEVO_PECHERSHKA_LAVRA_GP_BUFF_TT
+			}
+			else = {
+				custom_tooltip = ABF_LVA_LAVRA_REFORMED_NO
+				custom_tooltip = ABF_LVA_KYIEVO_PECHERSHKA_LAVRA_GP_BUFF_TT
+			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				custom_tooltip = ABF_CHRISTIAN_YES
+				custom_tooltip = AB_EMPTY
+				set_country_flag = abf_enabled_lavra_flag
+				custom_tooltip = LTV_KIEV_LAVRA
+			}
+			else = {
+				custom_tooltip = ABF_CHRISTIAN_NO
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = LTV_KIEV_LAVRA
+			}
+		}
+	}
+
+	lva_riches_of_ruthenia = {
+		icon = mission_iron_and_copper
+		position = 11
+		required_missions = {
+			lva_bread lva_seat_of_domination
+		}
+
+		provinces_to_highlight = { 
+			region = ruthenia_region
+			NOT = {
+				OR = {
+					base_production = 6
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+				}
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+
+		trigger = { 
+			employed_advisor = {
+				type = natural_scientist
+				skill = 2
+			}
+			production_income_percentage = 0.25
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				base_production = 6
+				OR = {
+					has_manufactory_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
+		}
+
+		effect = { 
+			define_advisor = {
+				type = natural_scientist
+				skill = 2 
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = AB_EMPTY
+			ruthenia_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = abf_lva_riches_ruthenia_mod
+					duration = -1
+				}
+			}
+			custom_tooltip = BOH_SCALING
+			set_country_flag = boh_scientist_scaling_flag
+		}
+	}
+
+	lva_baltoscandia = {
+		icon = mission_unite_scandinavia
+		position = 12
+		required_missions = {
+			lva_sweden
+		}
+		provinces_to_highlight = {
+			region = scandinavia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = scandinavia_region
+			}
+
+		}
+		effect = {
+			custom_tooltip = LIT_PP_PERMA
+			hidden_effect = {
+				add_power_projection = {
+					type = LIT_perma_pp
+					amount = 25
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "norway_dominate"
+				duration = -1
+			}
+			set_country_flag = lit_negate_cultures
+			custom_tooltip = LIT_CULTURE
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture_group = scandinavian
+							culture_group = Finnic
+						}
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = lit_culture_modifier
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	lva_lessons_of_norse = {
+		icon = mission_north_sea_empire
+		position = 13
+		required_missions = {
+			lva_baltoscandia
+		}
+
+		provinces_to_highlight = { 
+			OR = {
+				scandinavia_region = {
+				local_autonomy_above_min = 10
+					nationalism = 1
+					NOT = {
+						devastation = 0
+					}
+				}
+				culture_group = scandinavian
+			}
+		}
+
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+			}
+			army_tradition = 75 
+			calc_true_if = {
+				amount = 2
+				accepted_culture = scandinavian_culture
+				accepted_culture = swedish
+				accepted_culture = danish
+				accepted_culture = norwegian
+			}
+			scandinavia_region = {
+				type = all
+				NOT = {
+					local_autonomy_above_min = 10
+				}
+				NOT = {
+					nationalism = 1
+				}
+				NOT = {
+					devastation = 0
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = norway_berserk
+				duration = -1
+			}
+			12 = {
+				add_great_project_tier = {
+					type = sound_toll
+					tier = 1 
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_shipyard_nidaros_gp_unlock_flag
+			custom_tooltip = ABF_UNLOCK_NIDAROS_GP_TT
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					NOT = { num_of_colonists = 1 }
+				}
+				custom_tooltip = BAV_NOT_HAVE_COLONIST_YES
+				hidden_effect = {
+					add_country_modifier = {
+						name = trc_unknown
+						duration = 9125
+					}
+				}
+			}
+			else = {
+				custom_tooltip = BAV_NOT_HAVE_COLONIST_NO
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = trc_unknown
+					duration = 9125
+				}
+			}
+		}
+
+	}
+
+	lva_westward = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 14
+		required_missions = {
+			lva_lessons_of_norse
+		}
+
+		provinces_to_highlight = { 
+			superregion = north_america_superregion
+			has_discovered = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				superregion = north_america_superregion
+			}
+		}
+
+		effect = { 
+			create_explorer = {
+				tradition = 75
+			}
+			add_country_modifier = {
+				name = japan_new_world
+				duration = 7300
+			}
+			set_country_flag = pap_new_world_missions
+			custom_tooltip = PAP_NEW_WORLD_MISSIONS
+			custom_tooltip = AB_EMPTY
+			north_america_superregion = {
+				limit = {
+					NOT = {
+						is_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	lva_forest = {
+		icon = mission_forest
+		position = 16
+		required_missions = {
+			lva_daugava
+		}
+
+		provinces_to_highlight = {
+			has_terrain = woods
+			owned_by = ROOT
+			NOT = {
+				num_of_times_improved_by_owner = 3
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_terrain = woods
+					num_of_times_improved_by_owner = 3
+				}
+				amount = 6
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = abf_pol_orthodox_lumber_industry
+				duration = 5475
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_lit_deforestation
+			}
+		}
+	}
+
+	lva_valmiera = {
+		icon = the_great_city_of_buda
+		position = 17
+		required_missions = {
+			lva_forest lva_drain_marshes
+		}
+
+		provinces_to_highlight = {
+			province_id = 37
+		}
+
+		trigger = {
+			37 = {
+				owned_by = ROOT
+				development = 15
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			37 = {
+				add_province_modifier = {
+					name = abf_lva_37_mod
+					duration = -1
+				}
+				change_trade_goods = gems
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+					}
+					add_center_of_trade_level = 2
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+
+	lva_baltic_metropolises = {
+		icon = mlo_renaissance_city
+		position = 19
+		required_missions = {
+			lva_fusion_of_ideas lva_valmiera
+		}
+
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = baltic_region
+			development = 40
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				development = 40
+				has_trade_building_trigger = yes
+				province_has_center_of_trade_of_level = 3
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				development = 40
+				region = baltic_region
+			}
+		}
+
+		effect = {
+			custom_tooltip = EST_METROPOLISES
+			tooltip = {
+				add_province_modifier = {
+					name = est_metropolises
+					duration = -1
+				}
+			}
+			set_country_flag = abf_tcr_land_of_commerce_buff
+			custom_tooltip = ABF_TCR_LAND_OF_COMMERCE_BUFF_TT
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							any_province = {
+								continent = europe
+								higher_development_than = PREV
+							}
+						}
+					}
+				}
+				custom_tooltip = capital_most_developed_yes
+				tooltip = {
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+			}
+			else = {
+				custom_tooltip = capital_most_developed_no
+				tooltip = {
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = baltic_region
+						development = 40
+					}
+					add_province_modifier = {
+						name = est_metropolises
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							NOT = {
+								any_province = {
+									continent = europe
+									higher_development_than = PREV
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_dlc = "Mandate of Heaven"
+						}
+						add_splendor = 200
+					}
+					else = {
+						change_government_reform_progress = 100
+					}
+				}
+			}
+		}
+	}
+}
+
+lva_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
 	potential = {
 		tag = LVA
 
@@ -15,6 +747,7 @@ lva_missions_1 = {
 		required_missions = {
 			lva_rally_the_tribes
 		}
+
 		provinces_to_highlight = {
 			area = estonia_ingria_area
 			NOT = {
@@ -22,13 +755,14 @@ lva_missions_1 = {
 			}
 
 		}
+
 		trigger = {
 			estonia_ingria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
 		}
+
 		effect = {
 			custom_tooltip = LVA_ESTONIA
 			tooltip = {
@@ -51,9 +785,7 @@ lva_missions_1 = {
 			}
 			36 = {
 				change_trade_goods = gems
-			}
-			custom_tooltip = AB_EMPTY
-			36 = {
+				custom_tooltip = AB_EMPTY
 				center_of_trade = 1
 			}
 			custom_tooltip = AB_EMPTY
@@ -92,15 +824,29 @@ lva_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			25 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 
 	lva_across_the_gulf = {
 		icon = mission_conquer_finland
-		position = 3
+		position = 4
 		required_missions = {
 			lva_estonia
 		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = finland_area
@@ -110,8 +856,8 @@ lva_missions_1 = {
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
 		}
+		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -121,106 +867,186 @@ lva_missions_1 = {
 				}
 				value = 6
 			}
-
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = est_baltofinnic
 				duration = -1
 			}
-			finland_area = {
-				add_province_modifier = {
-					name = lit_military_frontier
-					duration = -1
-				}
-			}
-			bothnia_area = {
-				add_province_modifier = {
-					name = lit_military_frontier
-					duration = -1
-				}
-			}
 			unlock_estate_privilege = {
 				estate_privilege = estate_church_pagan_reconciliation
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABF_SAMPI_CLAIM_TT
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture  = sapmi
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
 
 	lva_cultural_baltization = {
 		icon = mission_conquer_baltic_region
-		position = 5
+		position = 6
 		required_missions = {
-			lva_punish_crusaders
+			lva_across_the_gulf lva_unite_baltic lva_settle_north
 		}
+
 		provinces_to_highlight = {
 			NOT = {
 				culture = latvian
 			}
 			country_or_non_sovereign_subject_holds = ROOT
-
 		}
+
 		trigger = {
 			primary_culture = latvian
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				culture = latvian
 				value = 6
 			}
-
 		}
+
 		effect = {
+			set_country_flag = abf_balto_finnic_culture_spread_flag
+			custom_tooltip = ABF_BALTO_FINNIC_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			set_country_flag = nci_speed_up_cultures
+			custom_tooltip = NCI_SPEED_UP
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = LVA_CULTURE_CONVERT
 			set_country_flag = lva_culture_convert
-
 		}
 	}
 
-	lva_seat_of_domination = {
-		icon = mission_develop_kiev
+	lva_ruthenia = {
+		icon = mission_restore_kiev
 		position = 8
+		required_missions = {
+			lva_invade_rus
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = red_ruthenia_area
+				area = volhynia_area
+				area = podolia_volhynia_area
+				area = west_dniepr_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+
+		trigger = {
+			280 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = red_ruthenia_area
+					area = volhynia_area
+					area = podolia_volhynia_area
+					area = west_dniepr_area
+				}
+			}
+		}
+
+		effect = {
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = LIT_RUTHENIA_CB
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							region = ruthenia_region
+						}
+						NOT = {
+							army_size = ROOT
+						}
+					}
+					reverse_add_casus_belli = {
+						type = cb_vassalize_mission
+						months = 300
+						target = ROOT
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "lit_heritage"
+				duration = 5475
+			}
+		}
+	}
+
+	lva_dnieper_balts = {
+		icon = mission_advance_to_the_dnieper
+		position = 9
 		required_missions = {
 			lva_ruthenia
 		}
-		provinces_to_highlight = {
-			province_id = 280
 
+		provinces_to_highlight = { 
+			OR = {
+				local_autonomy_above_min = 10
+				nationalism = 1
+			}
+			NOT = {
+				religion = ROOT
+			}
+			region = ruthenia_region
+			country_or_non_sovereign_subject_holds = ROOT
 		}
-		trigger = {
-			owns_core_province = 280
-			280 = {
-				development = 25
-			}
-			280 = {
-				has_tax_building_trigger = yes
-			}
-			280 = {
-				has_trade_building_trigger = yes
-			}
-			280 = {
-				has_production_building_trigger = yes
-			}
 
-		}
-		effect = {
-			set_capital = 280
-			custom_tooltip = AB_EMPTY
-			280 = {
-				add_province_modifier = {
-					name = abf_pol_catholic_mother_of_cities
-					duration = -1
+		trigger = { 
+			ruthenia_region = {
+				type = all
+				NOT = {
+					local_autonomy_above_min = 10
 				}
-				change_culture = ROOT
-				change_religion = ROOT
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
-				
+				NOT = {
+					nationalism = 1
+				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				religion = ROOT
+				region = ruthenia_region
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = abf_lva_milograd_return
+				duration = -1
+			}
+			set_country_flag = abf_baltic_milograd_culture_spread_flag
+			custom_tooltip = ABF_BALTIC_MILOGRAD_CULTURE_SPREAD_TT
 		}
 	}
 
 	lva_bread = {
 		icon = mission_pol_breadbasket_europe
-		position = 9
+		position = 10
 		required_missions = {
 			lva_seat_of_domination
 		}
@@ -238,17 +1064,19 @@ lva_missions_1 = {
 
 		}
 		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					OR = {
-						region = ruthenia_region
-						region = russia_region
-						region = crimea_region
-					}
-					trade_goods = grain
-					has_production_building_trigger = yes
+			trading_part = {
+				trade_goods = grain
+				value = 0.15
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				trade_goods = grain
+				has_production_building_trigger = yes
+				OR = {
+					region = ruthenia_region
+					region = russia_region
+					region = crimea_region
 				}
-				amount = 15
 			}
 
 		}
@@ -259,143 +1087,323 @@ lva_missions_1 = {
 				name = lit_growth
 				duration = -1
 			}
-			custom_tooltip = LIT_DEV
-
+			custom_tooltip = ABF_POL_DEVELOPING_GRAIN_LIVESTOCK_TT
+			set_country_flag = abf_developing_food_bonus_flag
 		}
 	}
 
-	lva_baltoscandia = {
-		icon = mission_unite_scandinavia
+	lva_sweden = {
+		icon = mission_swedish_great_power
 		position = 11
-
 		required_missions = {
-			lva_lechia
+			lva_vanquisher_of_slavs
 		}
 
 		provinces_to_highlight = { 
-			region = scandinavia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				owned_by = SWE
+				owned_by = SCA
+				area = ostra_svealand_area
+				area = vastra_gotaland_area
+				area = gotaland_area
+				area = svealand_area
+			}
 		}
 
 		trigger = { 
+			1 = {
+				owned_by = ROOT
+			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20
-				region = scandinavia_region
+				value = 12
+				OR = {
+					area = ostra_svealand_area
+					area = vastra_gotaland_area
+					area = gotaland_area
+					area = svealand_area
+				}
 			}
 		}
 
 		effect = { 
-			custom_tooltip = LIT_PP_PERMA
-			hidden_effect = {
-				add_power_projection = {
-					type = LIT_perma_pp
-					amount = 25
-				}
-			}
+			add_army_tradition = 25
 			custom_tooltip = AB_EMPTY
-			set_country_flag = lit_negate_cultures
-			custom_tooltip = LIT_CULTURE
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							culture_group = scandinavian
-							culture_group = Finnic
-						}
-						has_owner_accepted_culture = no
-					}
-					add_province_modifier = {
-						name = lit_culture_modifier
-						duration = -1
-					}
-				}
+			add_country_modifier = {
+				name = "fin_crusaders"
+				duration = 7300
 			}
-			custom_tooltip = AB_EMPTY
+			set_country_flag = est_building_shipyard
+			custom_tooltip = EST_SHIPYARD_BONUS
 			scandinavia_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
 
-	lva_valmiera = {
-		icon = the_great_city_of_buda
-		position = 16
-
+	lva_caucasia = {
+		icon = mission_the_caucasus_rus
+		position = 12
 		required_missions = {
-			lva_forest
+			lva_crush_horde
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = circassia_area
+				area = dagestan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			circassia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dagestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = RUS_CAUCASIAN_FORTS
+			tooltip = {
+				add_province_modifier = {
+					name = rus_mountain_fort
+					duration = -1
+				}
+			}
+			set_country_flag = rhl_building_fort
+			custom_tooltip = HLV_FORTS
+			custom_tooltip = AB_EMPTY
+			caucasia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				425 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+				2201 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+				2195 = {
+					add_province_modifier = {
+						name = rus_mountain_fort
+						duration = -1
+					}
+				}
+			}
+
+		}
+	}
+
+	lva_east_siberia = {
+		icon = mission_collect_yasak
+		position = 13
+		required_missions = {
+			lva_reach_ural
 		}
 
 		provinces_to_highlight = {
-			province_id = 37
+			region = east_siberia_region 
+			has_discovered = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
 		trigger = { 
-			37 = {
-				owned_by = ROOT
-				development = 15
-				has_tax_building_trigger = yes
-				has_trade_building_trigger = yes
-			}
-		}
-
-		effect = { 
-			37 = {
-				change_trade_goods = gems
-			}
-			custom_tooltip = AB_EMPTY
-			37 = {
-				center_of_trade = 1
-			}
-			custom_tooltip = AB_EMPTY
-			37 = {
-				add_or_upgrade_tax_building = yes
-				add_or_upgrade_trade_building = yes
-				add_or_upgrade_production_building = yes
-			}
-		}
-	}
-
-	lva_sword_of_perkunas = {
-		icon = mission_perkunas
-		position = 21
-		required_missions = {
-			lva_thunderer
-		}
-		provinces_to_highlight = { }
-		trigger = {
-			OR = {
-				army_tradition = 60
-				army_professionalism = 0.4
-			}
-			army_size = 50
-			custom_trigger_tooltip = {
-				tooltip = ABA_LVA_50_CHRISTIAN_BATTLE_WIN
-				check_variable = {
-					which = ABF_num_of_won_battles_against_christians
-					value = 50
-				}
+			num_of_owned_provinces_with = {
+				region = east_siberia_region
+				value = 15
 			}
 		}
 		
-		effect = {
-			create_general_with_pips = {
-				tradition = 100
-				add_shock = 2
+		effect = { 
+			east_siberia_region = {
+				limit = {
+					trade_goods = fur
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "siberian_fur_production"
+					duration = 7300
+				}
 			}
+			set_country_flag = pap_scaling_colonist
+			custom_tooltip = PAP_SCALING_COLONIST
 			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = "prr_sword_of_perkunas"
-				duration = -1
+			custom_tooltip = RUS_EAST_SIBERIA
+			hidden_effect = {
+				for = {
+					amount = 10
+					effect = "
+						random_owned_province = {
+							limit = {
+								region = east_siberia_region
+							}
+							add_base_production = 1
+						}
+					"
+				}
 			}
 		}
 	}
+
+	lva_drain_marshes = {
+		icon = mission_plain
+		position = 16
+		required_missions = {
+			lva_daugava
+		}
+
+		provinces_to_highlight = {
+			has_terrain = marsh
+			owned_by = ROOT
+			NOT = {
+				development = 8
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_terrain = marsh
+				development = 8
+			}
+		}
+
+		effect = {
+			define_advisor = {
+				type = architect
+				skill = 2
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = lit_draining
+				duration = 5475
+			}
+			custom_tooltip = LIT_NEGATE_DEV
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_terrain = marsh
+					}
+					add_province_modifier = {
+						name = lit_marsh_negate
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	lva_universities = {
+		icon = pontifical_universities
+		position = 17
+		required_missions = {
+			lva_baltic_renaissance
+		}
+
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = university
+			}
+		}
+
+		trigger = {
+			university = 10
+		}
+
+		effect = {
+			define_advisor = {
+				type = in_advisor
+				skill = 3
+				cost_multiplier = 0.50
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = fra_education_reforms
+				duration = 7300
+			}
+			custom_tooltip = eu_refund_mana_on_tech
+			set_country_flag = eu_refund_mana_on_tech
+
+		}
+	}
+
+	lva_fusion_of_ideas = {
+		icon = mission_book_of_royal_degrees
+		position = 18
+		required_missions = {
+			lva_universities
+		}
+
+		provinces_to_highlight = { 
+			NOT = {
+				has_building = university
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+
+		trigger = { 
+			monthly_adm = 10
+			monthly_dip = 10
+			monthly_mil = 10
+			innovativeness = 25
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				has_building = university
+			}
+		}
+
+		effect = {
+			change_innovativeness = 3
+			custom_tooltip = AB_EMPTY
+			set_country_flag = teu_scaling_scientist
+			custom_tooltip = TEU_SCALING_SCIENTIST
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_institution_embrace_apc_inno_flag
+			custom_tooltip = ABF_INSTIUTION_EMBRACE_APC_INNO_TT
+		}
+	}
 }
-lva_missions_2 = {
-	slot = 2
+lva_missions_3 = {
+	slot = 3
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -404,12 +1412,104 @@ lva_missions_2 = {
 
 	}
 
+	lva_rally_the_tribes = {
+		icon = mission_pagan_warriors
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = { }
+
+		trigger = {
+			OR = {
+				army_size_percentage = 0.9
+				manpower_percentage = 0.9
+			}
+		}
+
+		effect = {
+			create_general_with_pips = {
+				tradition = 40
+				add_shock = 1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "lva_tribal_host"
+				duration = 5475
+			}
+			38 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			estonia_ingria_area = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			curonia_area = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			lithuania_area = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			samogitia_area = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
 	lva_overthrow_lithuania = {
 		icon = mission_king_of_eastern_europe
 		position = 2
 		required_missions = {
 			lva_rally_the_tribes
 		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = curonia_area
@@ -421,6 +1521,7 @@ lva_missions_2 = {
 			}
 
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -430,10 +1531,9 @@ lva_missions_2 = {
 				}
 				value = 6
 			}
-
 		}
+
 		effect = {
-			add_mil_power = 100
 			add_country_modifier = {
 				name = "lva_new_baltic_hegemon"
 				duration = 7300
@@ -443,7 +1543,7 @@ lva_missions_2 = {
 				free = yes
 			}
 			custom_tooltip = AB_EMPTY
-			4969 = {
+			east_prussia_area = {
 				if = {
 					limit = {
 						NOT = {
@@ -456,7 +1556,7 @@ lva_missions_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			1937 = {
+			west_prussia_area = {
 				if = {
 					limit = {
 						NOT = {
@@ -469,7 +1569,7 @@ lva_missions_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			1859 = {
+			podlasie_area = {
 				if = {
 					limit = {
 						NOT = {
@@ -482,11 +1582,18 @@ lva_missions_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			give_claims = {
-				area = west_prussia_area
-			}
-			give_claims = {
-				area = east_prussia_area
+			kuyavia_area = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			if = {
 				limit = {
@@ -558,37 +1665,51 @@ lva_missions_2 = {
 				province_id = 1859
 				province_id = 2997
 			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			east_prussia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			1841 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			1859 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			2997 = {
-				country_or_non_sovereign_subject_holds = ROOT	
+			NOT = {
+				owned_by = ROOT
 			}
 		}
 
-		effect = { 
+		trigger = {
+			east_prussia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1841 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1859 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2997 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+
+		effect = {
 			add_army_tradition = 10
 			custom_tooltip = AB_EMPTY
-            add_country_modifier = {
-                name = "wee_pruthenians"
+			add_country_modifier = {
+				name = "wee_pruthenians"
 				duration = 7300
-			}	
-			set_country_flag = scaling_theologian_rmg
-			custom_tooltip = RMG_SCALING_THEOLOGIAN
-			custom_tooltip = AB_EMPTY
+			}
 			set_country_flag = rmg_religious_culture_flag
 			custom_tooltip = RMG_RELIGIOUS_CULTURE_BUFF
+			custom_tooltip = AB_EMPTY
+			43 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 
@@ -599,11 +1720,12 @@ lva_missions_2 = {
 			lva_united_with_pruthenia
 		}
 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			province_id = 43
+
 		}
 
-		trigger = { 
+		trigger = {
 			43 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -615,8 +1737,15 @@ lva_missions_2 = {
 				duration = -1
 			}
 			43 = {
+				change_province_name = "Gdanskas"
+				rename_capital = "Gdanskas"
+				change_culture = ROOT
+				change_religion = ROOT
+				custom_tooltip = AB_EMPTY
+				change_trade_goods = gems
+				custom_tooltip = AB_EMPTY
 				if = {
-					limit = {	
+					limit = {
 						NOT = {
 							province_has_center_of_trade_of_level = 2
 						}
@@ -624,23 +1753,13 @@ lva_missions_2 = {
 					add_center_of_trade_level = 2
 				}
 				else_if = {
-					limit = {	
+					limit = {
 						NOT = {
 							province_has_center_of_trade_of_level = 3
 						}
 					}
 					add_center_of_trade_level = 1
 				}
-			}
-			custom_tooltip = AB_EMPTY
-			43 = {
-				change_culture = ROOT
-			}
-			43 = {
-				change_religion = ROOT
-			}
-			43 = {
-				rename_capital = "Gdanskas"
 			}
 			if = {
 				limit = {
@@ -650,7 +1769,7 @@ lva_missions_2 = {
 					}
 				}
 				custom_tooltip = PRR_DEFEAT_HANSA_YES
-				tooltip = {	
+				tooltip = {
 					add_prestige_or_monarch_power = {
 						amount = 20
 					}
@@ -658,7 +1777,7 @@ lva_missions_2 = {
 			}
 			else = {
 				custom_tooltip = PRR_DEFEAT_HANSA_NO
-				tooltip = {	
+				tooltip = {
 					add_prestige_or_monarch_power = {
 						amount = 20
 					}
@@ -675,544 +1794,6 @@ lva_missions_2 = {
 					add_prestige_or_monarch_power = {
 						amount = 20
 					}
-				}
-			}
-		}
-	}
-
-	lva_ruthenia = {
-		icon = mission_restore_kiev
-		position = 7
-
-		required_missions = {
-			lva_invade_rus
-		}
-
-		provinces_to_highlight = { 
-			OR = {
-				area = red_ruthenia_area
-				area = volhynia_area
-				area = podolia_volhynia_area
-				area = west_dniepr_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = { 
-			red_ruthenia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			volhynia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			podolia_volhynia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_dniepr_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = { 
-			add_country_modifier = {
-				name = "lit_heritage"
-				duration = 5475
-			}
-			ruthenia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			custom_tooltip = LIT_RUTHENIA_CB
-			hidden_effect = {
-				every_country = {
-					limit = {
-						capital_scope = {
-							region = ruthenia_region
-						}
-						NOT = {
-							army_size = ROOT
-						}
-					}
-					reverse_add_casus_belli = {
-						type = cb_vassalize_mission
-						months = 300
-						target = ROOT
-					}
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = POL_AE_EAST_SLAVS
-			hidden_effect = {
-				every_country = {
-					limit = {
-						culture_group = east_slavic
-					}
-					add_aggressive_expansion = {
-						who = ROOT
-						value = -10
-						apply_calc = no
-					}
-				}
-			}
-		}
-	}
-
-	lva_lechia = {
-		icon = polish_diplomacy
-		position = 10
-		required_missions = {
-			lva_vanquisher_of_slavs
-		}
-
-		provinces_to_highlight = { 
-			region = poland_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = { 
-			poland_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = { 
-			poland_region = {
-				add_nationalism = -10
-				add_province_modifier = {
-					name = "prr_lechitic_consolidation"
-					duration = 7300
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_LVA_BALTO_LECHITIC
-			hidden_effect = {
-				replace_culture_with_effect = {
-					new_culture = Balto-Lechitic
-					old_culture_1 = schlesian
-					old_culture_2 = Vistulan
-					old_culture_3 = Lendian
-					old_culture_4 = Polan
-					old_culture_5 = Mazovian
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			scandinavia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	lva_caucasia = {
-		icon = mission_the_caucasus_rus
-		position = 12
-		required_missions = {
-			lva_reach_ural
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = circassia_area
-				area = dagestan_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT	 }
-		}
-		
-		trigger = {
-			circassia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			dagestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-		}
-
-		effect = {
-			custom_tooltip = RUS_CAUCASIAN_FORTS
-			tooltip = {
-				add_province_modifier = {
-					name = rus_mountain_fort
-					duration = -1
-				}
-			}
-			caucasia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = rhl_building_fort
-			custom_tooltip = HLV_FORTS
-			hidden_effect = {
-				425 = {
-					add_province_modifier = {
-						name = rus_mountain_fort
-						duration = -1
-					}
-				}
-				2201 = {
-					add_province_modifier = {
-						name = rus_mountain_fort
-						duration = -1
-					}
-				}
-				2195 = {
-					add_province_modifier = {
-						name = rus_mountain_fort
-						duration = -1
-					}
-				}
-			}
-		}
-	}
-
-	lva_forest = {
-		icon = mission_forest
-		position = 15
-		required_missions = {
-			lva_daugava
-		}
-		provinces_to_highlight = {
-			has_terrain = woods
-			owned_by = ROOT
-			NOT = {
-				num_of_times_improved_by_owner = 3
-			}
-
-		}
-		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					has_terrain = woods
-					num_of_times_improved_by_owner = 3
-				}
-				amount = 6
-			}
-
-		}
-		effect = {
-			define_advisor = {
-				type = architect
-				skill = 2
-				cost_multiplier = 0.5
-			}
-			custom_tooltip = AB_EMPTY
-			unlock_estate_privilege = {
-				estate_privilege = estate_burghers_lit_deforestation
-			}
-		}
-	}
-
-	lva_universities = {
-		icon = pontifical_universities
-		position = 17
-		required_missions = {
-			lva_baltic_renaissance
-		}
-		provinces_to_highlight = {
-			owned_by = ROOT
-			NOT = {
-				has_building = university
-			}
-
-		}
-		trigger = {
-			university = 10
-
-		}
-		effect = {
-			custom_tooltip = eu_refund_mana_on_tech
-			set_country_flag = eu_refund_mana_on_tech
-
-		}
-	}
-
-	lva_thunderer = {
-		icon = mission_invoke_peruns_wrath
-		position = 20
-		required_missions = {
-			lva_appease_the_old_gods
-		}
-
-		trigger = {
-			OR = {
-				army_tradition = 40
-				army_professionalism = 0.2
-			}
-			army_size = 25
-			custom_trigger_tooltip = {
-				tooltip = ABA_LVA_20_CHRISTIAN_BATTLE_WIN
-				check_variable = {
-					which = num_of_won_battles_against_christians
-					value = 20
-				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = ab_unlocked_thunderer
-			custom_tooltip = PRR_THUNDERER
-		}
-	}
-}
-lva_missions_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = LVA
-
-	}
-
-	lva_rally_the_tribes = {
-		icon = mission_pagan_warriors
-		position = 1
-		required_missions = { }
-		provinces_to_highlight = { }
-		trigger = {
-			OR = {
-				army_size_percentage = 0.9
-				manpower_percentage = 0.9
-			}
-			num_of_generals = 1
-
-		}
-		effect = {
-			create_general_with_pips = {
-				tradition = 40
-				add_shock = 1
-			}
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = "lva_tribal_host"
-				duration = 5475
-			}
-			38 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			give_claims = {
-				area = estonia_ingria_area
-			}
-			give_claims = {
-				area = curonia_area
-			}
-			give_claims = {
-				area = lithuania_area
-			}
-			give_claims = {
-				area = samogitia_area
-			}
-
-		}
-	}
-
-	lva_riga = {
-		icon = mission_conquer_riga
-		position = 2
-		required_missions = {
-			lva_rally_the_tribes lva_protect_coastline
-		}
-		provinces_to_highlight = {
-			province_id = 38
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
-		}
-		trigger = {
-			38 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
-		}
-		effect = {
-			add_mercantilism_or_monarch_power = {
-				amount = 3
-			}
-			custom_tooltip = AB_EMPTY
-			38 = {
-				change_religion = ROOT
-				change_culture = ROOT
-			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = cro_private_trade_fleet
-			custom_tooltip = CRO_PRIVILEGE
-			custom_tooltip = AB_EMPTY
-			25 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			43 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
-					has_won_war_against = {
-						who = HAS
-						max_years_since = 10
-					}
-				}
-				custom_tooltip = LVA_HANSA_WAR_YES
-				tooltip = {
-					add_treasury = 350
-				}
-			}
-			else = {
-				custom_tooltip = LVA_HANSA_WAR_NO
-				tooltip = {
-					add_treasury = 350
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_won_war_against = {
-							who = HAS
-							max_years_since = 10
-						}
-					}
-					add_treasury = 350
-				}
-			}
-
-		}
-	}
-
-	lva_heart_of_the_baltics = {
-		icon = mission_seize_north_sea_trade
-		position = 3
-		required_missions = {
-			lva_riga
-		}
-		provinces_to_highlight = {
-			province_id = 38
-
-		}
-		trigger = {
-			owns_core_province = 38
-			38 = {
-				development = 25
-			}
-			38 = {
-				has_trade_building_trigger = yes
-			}
-			38 = {
-				has_tax_building_trigger = yes
-			}
-			38 = {
-				has_production_building_trigger = yes
-			}
-
-		}
-		effect = {
-			38 = {
-				add_or_upgrade_tax_building = yes
-				add_or_upgrade_production_building = yes
-				add_or_upgrade_trade_building = yes	
-			}
-			custom_tooltip = AB_EMPTY
-			38 = {
-				if = {
-					limit = {
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-					}
-					add_center_of_trade_level = 2
-				}
-				else_if = {
-					limit = {
-						NOT = {
-							province_has_center_of_trade_of_level = 3
-						}
-					}
-					add_center_of_trade_level = 1
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			38 = {
-				add_trade_modifier = {
-    				who = ROOT
-   					duration = -1
-    				power = 20
-    				key = ABA_LVA_HEART_OF_BALTIC
-				}
-			}
-			if = {
-				limit = {
-					38 = {
-						NOT = {
-							any_province = {
-								region = baltic_region
-								higher_development_than = PREV
-							}
-						}
-					}
-				}
-				custom_tooltip = LVA_SPLENDOR_YES
-				tooltip = {
-					add_splendor = 200
-				}
-			}
-			else = {
-				custom_tooltip = LVA_SPLENDOR_NO
-				tooltip = {
-					add_splendor = 200
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						38 = {
-							NOT = {
-								any_province = {
-									region = baltic_region
-									higher_development_than = PREV
-								}
-							}
-						}
-					}
-					add_splendor = 200
 				}
 			}
 
@@ -1223,7 +1804,7 @@ lva_missions_3 = {
 		icon = mission_baltia
 		position = 5
 		required_missions = {
-			lva_punish_crusaders lva_musu_jura
+			lva_punish_crusaders
 		}
 		provinces_to_highlight = {
 			region = baltic_region
@@ -1330,7 +1911,7 @@ lva_missions_3 = {
 
 	lva_invade_rus = {
 		icon = mission_early_russian_army
-		position = 6
+		position = 7
 		required_missions = {
 			lva_unite_baltic
 		}
@@ -1367,6 +1948,19 @@ lva_missions_3 = {
 				name = lva_wrath
 				duration = 7300
 			}
+			custom_tooltip = POL_AE_EAST_SLAVS
+			hidden_effect = {
+				every_country = {
+					limit = {
+						culture_group = east_slavic
+					}
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -10
+						apply_calc = no
+					}
+				}
+			}
 			custom_tooltip = LVA_ARMY_TRADITION
 			hidden_effect = {
 				every_owned_province = {
@@ -1381,7 +1975,6 @@ lva_missions_3 = {
 					}
 				}
 			}
-			custom_tooltip = AB_EMPTY
 			ruthenia_region = {
 				limit = {
 					NOT = {
@@ -1393,13 +1986,23 @@ lva_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-
+			russia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
 	lva_rule_krievzeme = {
 		icon = mission_rule_ruthenia
-		position = 8
+		position = 9
 		required_missions = {
 			lva_ruthenia lva_novogorod
 		}
@@ -1421,7 +2024,7 @@ lva_missions_3 = {
 			set_country_flag = lva_unlock_krievzemia
 			custom_tooltip = LVA_UNLOCK_KRIEVZEMIA
 			custom_tooltip = MGY_RUSSIA_CB
-			poland_region = {
+			crimea_region = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -1432,7 +2035,7 @@ lva_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			russia_region = {
+			ural_region = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -1499,10 +2102,11 @@ lva_missions_3 = {
 
 	lva_vanquisher_of_slavs = {
 		icon = mission_fall_of_third_rome
-		position = 9
+		position = 10
 		required_missions = {
 			lva_rule_krievzeme
 		}
+
 		provinces_to_highlight = {
 			region = russia_region
 			NOT = {
@@ -1510,73 +2114,29 @@ lva_missions_3 = {
 			}
 
 		}
+		
 		trigger = {
 			tag = KRZ
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = russia_region
 				value = 30
 			}
-
+			ruthenia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
+
 		effect = {
-			set_country_flag = ABA_lva_conquerer_of_slavs
-			custom_tooltip = ABA_LVA_RULER_TRAIT_TT
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = KRZ_EVOLVING_IDEA_1
-			hidden_effect = {
-				set_country_flag = krz_evolved_ideas1
-				swap_free_idea_group = yes
-			}
-			ural_region = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			crimea_region = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			poland_region = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			wendia_region = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
+			country_event = {
+				id = abf_lva_event.2
 			}
 		}
 	}
 
 	lva_crush_horde = {
 		icon = mission_ghorde
-		position = 10
+		position = 11
 		required_missions = {
 			lva_vanquisher_of_slavs
 		}
@@ -1587,48 +2147,65 @@ lva_missions_3 = {
 				area = lower_don_area
 				area = azov_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
-		
+
 		trigger = {
 			astrakhan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_don_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			azov_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
-		effect = { 
-			custom_tooltip = HTM_AZOV
+
+		effect = {
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.33
+			}
+			custom_tooltip = AB_EMPTY
+			add_ruler_modifier = {
+				name = "aln_bane"
+				duration = -1
+			}
+			custom_tooltip = RUS_RELCLAIMING_STEPPE
 			tooltip = {
 				add_province_modifier = {
-					name = htm_settle_azov
-					duration = 18250
+					name = rus_reclaiming
+					duration = 9125
 				}
 			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture = crimean
+						is_core = GLH
+					}
+					set_province_flag = was_golden_horde_core
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							is_core = GLH
+							has_province_flag = was_golden_horde_core
+						}
 					}
 					add_province_modifier = {
-						name = htm_settle_azov
-						duration = 18250
+						name = rus_reclaiming
+						duration = 9125
 					}
 				}
 			}
-			add_ruler_modifier = {
-				name = "aln_bane"
-				duration = -1
-			}
-			west_siberia_region = {
+			circassia_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -1639,7 +2216,18 @@ lva_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_siberia_region = {
+			dagestan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_asia_region = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -1653,7 +2241,9 @@ lva_missions_3 = {
 			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
-					NOT = { exists = GLH }
+					NOT = {
+						exists = GLH
+					}
 				}
 				custom_tooltip = RUS_NO_GLH
 			}
@@ -1663,20 +2253,11 @@ lva_missions_3 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = { exists = GLH }
+						NOT = {
+							exists = GLH
+						}
 					}
 					add_prestige = 25
-					# Set the province flag in our provinces for the
-					# AB_Rus.7, where you can pick an option to grant
-					# modifier to all cores of GLH in your owned
-					# provinces, this needs to be come before the
-					# removal for obvious reasons
-					every_owned_province = {
-						limit = {
-							is_core = GLH
-						}
-						set_province_flag = was_golden_horde_core
-					}
 					every_province = {
 						limit = {
 							is_core = GLH
@@ -1690,10 +2271,11 @@ lva_missions_3 = {
 
 	lva_reach_ural = {
 		icon = mission_beyond_the_urals
-		position = 11
+		position = 12
 		required_missions = {
 			lva_crush_horde
 		}
+
 		provinces_to_highlight = {
 			region = ural_region
 			NOT = {
@@ -1701,14 +2283,19 @@ lva_missions_3 = {
 			}
 
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = ural_region
 				value = 15
 			}
-
 		}
+
 		effect = {
+			create_conquistador = {
+				tradition = 100
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = lit_siberian
 				duration = -1
@@ -1717,82 +2304,21 @@ lva_missions_3 = {
 				name = htm_frontier
 				duration = 7300
 			}
-			custom_tooltip = AB_EMPTY
-			create_conquistador = {
-				tradition = 100
-			}
-
-		}
-	}
-
-	lva_siberian_control = {
-		icon = mission_windsofwinter
-		position = 12
-		required_missions = {
-			lva_reach_ural
-		}
-		provinces_to_highlight = { 
-			region = west_siberia_region
-			region = east_siberia_region
-			has_discovered = ROOT
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		trigger = { 
-			num_of_owned_provinces_with = {
-				region = west_siberia_region
-				value = 15
-			}
-			num_of_owned_provinces_with = {
-				region = east_siberia_region
-				value = 15
-			}
-		}
-
-		effect = { 
-			add_mercantilism_or_monarch_power = { amount = 3 }
-			custom_tooltip = AB_EMPTY
-			east_siberia_region = {
-				limit = {
-					trade_goods = fur
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "siberian_fur_production"
-					duration = 7300
-				}
-			}
 			west_siberia_region = {
 				limit = {
-					trade_goods = fur
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "siberian_fur_production"
-					duration = 7300
-				}
-			}
-			custom_tooltip = HTM_FUR
-			hidden_effect = {
-				for = {
-					amount = 10
-					effect = "
-					random_owned_province = {
-						limit = {
-							trade_goods = fur
-						}
-						add_base_production = 1
+					NOT = {
+						is_core = ROOT
 					}
-					" 
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
+				add_permanent_claim = ROOT
 			}
-			custom_tooltip = AB_EMPTY
-			manchuria_region = {
+			east_siberia_region = {
 				limit = {
 					NOT = {
-		
+						is_core = ROOT
 					}
 					NOT = {
 						is_permanent_claim = ROOT
@@ -1805,33 +2331,36 @@ lva_missions_3 = {
 
 	lva_manchurian_crown = {
 		icon = mission_manchu_warrior
-		position = 13
+		position = 14
 		required_missions = {
-			lva_siberian_control
+			lva_east_siberia lva_siberian_control
 		}
+
 		provinces_to_highlight = { 
-
+			region = manchuria_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
-		trigger = {
-
-		 }
-
-		effect = { 
-
+		trigger = { 
 			2106 = {
-				rename_capital = "Austrumu Valdnieks"
-				change_province_name = "Austrumu Valdnieks"
-				change_religion = ROOT
-				change_culture = ROOT
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-				add_province_modifier = {
-					name = "russian_pacific_port"
-					duration = -1
+				development = 15
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
 				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				region = manchuria_region
+			}
+		}
+
+		effect = {
 			add_years_of_owned_provinces_production_income = {
 				years = 1
 				trigger = {
@@ -1844,19 +2373,25 @@ lva_missions_3 = {
 				custom_tooltip = AB_INCOME_FROM_IRON_AND_COPPER_PRODUCTION
 			}
 			custom_tooltip = AB_EMPTY
-			manchuria_region = {
-				limit = {
-					NOT = { is_core = ROOT}
-					NOT = { owned_by = ROOT}
+			2106 = {
+				rename_capital = "Austrumu Valdnieks"
+				change_province_name = "Austrumu Valdnieks"
+				change_religion = ROOT
+				change_culture = ROOT
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = "russian_pacific_port"
+					duration = -1
 				}
-				add_permanent_claim = ROOT
 			}
+			set_country_flag = abf_lva_krievi_expanded_spread_flag
+			custom_tooltip = ABF_LVA_KRIEVI_EXPANDED_SPREAD_TT
 		}
 	}
 
 	lva_daugava = {
 		icon = mission_rhine
-		position = 14
+		position = 15
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
@@ -1881,14 +2416,38 @@ lva_missions_3 = {
 
 		}
 		effect = {
-			add_mercantilism_or_monarch_power = { amount = 3 }
+			add_mercantilism_or_monarch_power = {
+				amount = 3
+			}
 			custom_tooltip = AB_EMPTY
 			add_yearly_manpower = 1.5
 			custom_tooltip = AB_EMPTY
-			livonia_area = {
-				add_base_production = 1
+			custom_tooltip = ABF_POLAND_DOMESTIC_ARMS_TT
+			tooltip = {
+				add_province_modifier = {
+					name = abf_lva_daugava_mod
+					duration = -1
+				}
 				add_prosperity = 100
 			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = curonia_area
+							area = livonia_area
+						}
+						development = 10
+					}
+					add_province_modifier = {
+						name = abf_lva_daugava_mod
+						duration = -1
+					}
+					add_prosperity = 100
+				}
+			}
+			
+
 		}
 	}
 
@@ -2018,83 +2577,7 @@ lva_missions_3 = {
 
 		}
 	}
-
-	lva_appease_the_old_gods = {
-		icon = mission_passage
-		position = 19
-		required_missions = { }
-		provinces_to_highlight = {
-			owned_by = ROOT
-			NOT = {
-				has_tax_building_trigger = yes
-			}
-
-		}
-		trigger = {
-			num_of_owned_provinces_with = {
-				has_tax_building_trigger = yes
-				value = 10
-			}
-
-		}
-		effect = {
-			custom_tooltip = LVA_CHURCH_DEV
-			define_advisor = {
-				type = inquisitor
-				skill = 2
-				religion = ROOT
-				culture = ROOT
-				cost_multiplier = 0.5
-			}
-			hidden_effect = {
-				for = {
-					amount = 5
-					effect = "
-						random_owned_province = {
-							limit = {
-								has_tax_building_trigger = yes
-							}
-							add_base_tax = 1
-						}
-					"
-				}
-			}
-		}
-	}
-
-	lva_reform_the_faith = {
-		icon = mission_romuva
-		position = 21
-		required_missions = {
-			lva_appease_the_old_gods
-		}
-		provinces_to_highlight = { }
-		trigger = {
-			religion = reformed_baltic
-
-		}
-		effect = {
-			custom_tooltip = LVA_CHURCH_POWER
-			custom_tooltip = LVA_PROVINCE_FLIP
-			hidden_effect = {
-				add_church_power = 50
-				for = {
-					amount = 10
-					effect = "
-						random_owned_province = {
-							limit = {
-								religion = baltic_pagan
-							}
-							change_religion = reformed_baltic
-						}
-					"
-				}
-			}
-
-		}
-	}
 }
-
 lva_missions_4 = {
 	slot = 4
 	generic = no
@@ -2105,93 +2588,170 @@ lva_missions_4 = {
 
 	}
 
-	lva_gotland = {
-		icon = mission_longships
+	lva_riga = {
+		icon = mission_conquer_riga
 		position = 2
 		required_missions = {
-			lva_protect_coastline
+			lva_rally_the_tribes lva_protect_coastline
 		}
 		provinces_to_highlight = {
-			province_id = 25
+			province_id = 38
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 
 		}
 		trigger = {
-			25 = {
+			38 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 
 		}
 		effect = {
-			add_navy_tradition = 10
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = "lva_safe_trade_routes"
-				duration = 5475
+			add_mercantilism_or_monarch_power = {
+				amount = 3
 			}
-			1926 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 10
-					key = lva_pirate_free_waters
+			custom_tooltip = AB_EMPTY
+			38 = {
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = cro_private_trade_fleet
+			custom_tooltip = CRO_PRIVILEGE
+			if = {
+				limit = {
+					has_won_war_against = {
+						who = HAS
+						max_years_since = 10
+					}
+				}
+				custom_tooltip = LVA_HANSA_WAR_YES
+				tooltip = {
+					add_treasury = 350
+				}
+			}
+			else = {
+				custom_tooltip = LVA_HANSA_WAR_NO
+				tooltip = {
+					add_treasury = 350
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_won_war_against = {
+							who = HAS
+							max_years_since = 10
+						}
+					}
+					add_treasury = 350
 				}
 			}
 
 		}
 	}
 
-	lva_revitalize_visby_city = {
-		icon = mission_develop_visby
-		position = 3
+	lva_heart_of_the_baltics = {
+		icon = mission_seize_north_sea_trade
+		position = 4
 		required_missions = {
-			lva_gotland
+			lva_support_the_guilds lva_riga
 		}
-		provinces_to_highlight = { 
-			province_id = 25
-		}
+		provinces_to_highlight = {
+			province_id = 38
 
-		trigger = { 
-			25 = {
-				owned_by = ROOT
+		}
+		trigger = {
+			owns_core_province = 38
+			38 = {
 				development = 25
-				has_tax_building_trigger = yes
 				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
 				has_production_building_trigger = yes
 				has_road_building_trigger = yes
 			}
-
 		}
-		effect = { 
-			25 = {
+		effect = {
+			38 = {
 				add_province_modifier = {
-					name = aba_lva_visby_city
+					name = lit_baltic_entrepot
 					duration = -1
 				}
-			}
-			custom_tooltip = AB_EMPTY
-			25 = {
-				add_or_upgrade_production_building = yes
-				add_or_upgrade_tax_building = yes
-				add_or_upgrade_trade_building = yes 
-			}
-			custom_tooltip = AB_EMPTY
-			25 = {
-				add_great_project_tier = {
-					type = visby_city
-					tier = 1
+				change_trade_goods = gems
+				custom_tooltip = AB_EMPTY
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+					}
+					add_center_of_trade_level = 2
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_center_of_trade_level = 1
 				}
 			}
+			custom_tooltip = AB_EMPTY
+			38 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 20
+					key = ABF_LVA_HEART_OF_BALTIC
+				}
+			}
+			if = {
+				limit = {
+					38 = {
+						NOT = {
+							any_province = {
+								region = baltic_region
+								higher_development_than = PREV
+							}
+						}
+					}
+				}
+				custom_tooltip = LVA_SPLENDOR_YES
+				tooltip = {
+					add_splendor = 200
+				}
+			}
+			else = {
+				custom_tooltip = LVA_SPLENDOR_NO
+				tooltip = {
+					add_splendor = 200
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						38 = {
+							NOT = {
+								any_province = {
+									region = baltic_region
+									higher_development_than = PREV
+								}
+							}
+						}
+					}
+					add_splendor = 200
+				}
+			}
+
 		}
 	}
 
 	lva_musu_jura = {
 		icon = mission_conquer_sweden
-		position = 4
+		position = 6
 		required_missions = {
-			lva_amber_road lva_heart_of_the_baltics
+			lva_heart_of_the_baltics lva_amber_road lva_unite_baltic
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -2235,10 +2795,6 @@ lva_missions_4 = {
 		effect = {
 			add_years_of_income = 1.5
 			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = lit_musu_jura
-				duration = -1
-			}
 			define_advisor = {
 				type = trader
 				skill = 3
@@ -2247,29 +2803,20 @@ lva_missions_4 = {
 				cost_multiplier = 0.35
 			}
 			custom_tooltip = AB_EMPTY
-			25 = {
-				if = {
-					limit = {
-						NOT = {
-							is_core = ROOT
-						}
-						NOT = {
-							is_permanent_claim = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+			add_country_modifier = {
+				name = lit_musu_jura
+				duration = -1
 			}
-
 		}
 	}
 
 	lva_novogorod = {
 		icon = mission_conquer_novgorod
-		position = 7
+		position = 8
 		required_missions = {
 			lva_invade_rus
 		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = novgorod_area
@@ -2279,14 +2826,9 @@ lva_missions_4 = {
 			NOT = {
 				owned_by = ROOT
 			}
+		}
 
-		 }
-
-
-		trigger = { 
-			NOV = {
-				exists = NO
-			}
+		trigger = {
 			novgorod_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2295,15 +2837,11 @@ lva_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
 
-		effect = { 
+		}
+		effect = {
 			add_years_of_income = 1
 			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = rus_seize_wealth
-				duration = 5475
-			}
 			310 = {
 				add_province_modifier = {
 					name = htm_great_city
@@ -2318,66 +2856,219 @@ lva_missions_4 = {
 					cost = 0
 				}
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_znn_great_trunk_road_privilege_flag
+			custom_tooltip = ABF_ZNN_CITY_EXPANSION_PRIVILEGE_BUFF_TT
 		}
 	}
 
-	lva_seize_pomerania = {
-		icon = mission_conquer_pomerania
-		position = 10
+	lva_milograd = {
+		icon = mission_paganfury
+		position = 9
 		required_missions = {
-			lva_vanquisher_of_slavs
+			lva_novogorod
 		}
 
 		provinces_to_highlight = { 
 			OR = {
-				area = hinter_pommern_area
-				area = neumark_area
+				local_autonomy_above_min = 10
+				nationalism = 1
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				religion = ROOT
+			}
+			region = russia_region
+			country_or_non_sovereign_subject_holds = ROOT
 		}
 
 		trigger = { 
-			hinter_pommern_area = {
+			russia_region = {
+				type = all
+				NOT = {
+					local_autonomy_above_min = 10
+				}
+				NOT = {
+					nationalism = 1
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				religion = ROOT
+				region = russia_region
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = abf_lva_dneprdvina_return
+				duration = -1
+			}
+			set_country_flag = abf_baltic_dneprdvina_culture_spread_flag
+			custom_tooltip = ABF_BALTIC_DNEPRDVINA_CULTURE_SPREAD_TT
+		}
+	}
+
+	lva_white_sea = {
+		icon = mission_protect_white_sea_trade
+		position = 10
+		required_missions = {
+			lva_atslegpils
+		}
+
+		provinces_to_highlight = { 
+			OR = {
+				area = pomor_area
+				area = arkhangelsk_area
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+
+		trigger = { 
+			1955 = {
+				development = 15
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_road_building_trigger = yes
+				province_has_center_of_trade_of_level = 2
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pomor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			neumark_area = {
+			arkhangelsk_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
-		effect = {
-			add_mercantilism_or_monarch_power = { amount = 3 }
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = "tur_trading_cities"
-				duration = 9125
+		effect = { 
+			1955 = {
+				change_province_name = "Dvinaskas"
+				rename_capital = "Dvinaskas"
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = abf_baltic_dneprdvina_culture_spread_flag
+						}
+					}
+					change_culture = abf_baltic_dneprdvina_culture
+				}
+				else = {
+					change_culture = ROOT
+				}
+				change_religion = ROOT
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = abf_lva_1955_mod
+					duration = -1
+				}
 			}
-			custom_tooltip = TUR_DEV_CENTER
-		 }
+			1955 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = abf_lva_white_sea_trade
+				}
+			}
+		}
+	}
+
+	lva_lechia = {
+		icon = polish_diplomacy
+		position = 11
+		required_missions = {
+			lva_vanquisher_of_slavs
+		}
+		provinces_to_highlight = {
+			region = poland_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			poland_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			poland_region = {
+				add_province_modifier = {
+					name = "prr_lechitic_consolidation"
+					duration = 7300
+				}
+				add_nationalism = -10
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABF_LVA_BALTO_LECHITIC
+			hidden_effect = {
+				replace_culture_with_effect = {
+					new_culture = Balto-Lechitic
+					old_culture_1 = schlesian
+					old_culture_2 = Vistulan
+					old_culture_3 = Lendian
+					old_culture_4 = Polan
+					old_culture_5 = Mazovian
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = fkn_scaling_dragoon
+			custom_tooltip = FKN_DRAGOON_SCALING
+			custom_tooltip = AB_EMPTY
+			hinter_pommern_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			neumark_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 
 	lva_central_asian_expediton = {
 		icon = mission_central_asian_steppes
 		position = 12
 		required_missions = {
-			lva_reach_ural
+			lva_crush_horde
 		}
-
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			region = central_asia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 
-		trigger = { 
+		}
+		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
 				region = central_asia_region
 			}
-		}
 
-		effect = { 
+		}
+		effect = {
+			custom_tooltip = ab_unlock_steppe_warriors_privilege
+            set_country_flag = ab_mnk_steppe_warriors
+			custom_tooltip = AB_EMPTY
 			central_asia_region = {
 				limit = {
 					owned_by = ROOT
@@ -2387,7 +3078,6 @@ lva_missions_4 = {
 					duration = 7300
 				}
 			}
-			custom_tooltip = AB_EMPTY
 			custom_tooltip = RUS_CENTRAL_ASIA
 			hidden_effect = {
 				every_owned_province = {
@@ -2397,62 +3087,99 @@ lva_missions_4 = {
 					add_local_autonomy = -25
 				}
 			}
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = trader
-				skill = 3
-				cost_multiplier = 0.5
-			}
 		}
 	}
 
-	lva_drain_marshes = {
-		icon = mission_plain
-		position = 15
+	lva_siberian_control = {
+		icon = mission_windsofwinter
+		position = 13
+		required_missions = {
+			lva_reach_ural
+		}
+
+		provinces_to_highlight = {
+			region = west_siberia_region
+			has_discovered = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = west_siberia_region
+				value = 15
+			}
+		}
+
+		effect = {
+			add_mercantilism_or_monarch_power = {
+				amount = 3
+			}
+			custom_tooltip = AB_EMPTY
+			west_siberia_region = {
+				limit = {
+					trade_goods = fur
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "siberian_fur_production"
+					duration = 7300
+				}
+			}
+			set_country_flag = abf_siberian_frontier_boost_flag
+			custom_tooltip = ABF_SIBERIAN_FRONTIER_BOOST_TT
+		}
+	}
+
+	lva_appease_the_old_gods = {
+		icon = mission_passage
+		position = 16
 		required_missions = {
 			lva_daugava
 		}
 
 		provinces_to_highlight = {
-			has_terrain = marsh
 			owned_by = ROOT
 			NOT = {
-				development = 8
+				has_tax_building_trigger = yes
 			}
 		}
 
-		trigger = { 
+		trigger = {
 			num_of_owned_provinces_with = {
-				value = 5
-				has_terrain = marsh
-				development = 8
+				has_tax_building_trigger = yes
+				value = 10
 			}
 		}
 
 		effect = {
-			custom_tooltip = LIT_NEGATE_DEV
-			add_country_modifier = {
-				name = lit_draining
-				duration = 5475
-			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						has_terrain = marsh
-					}
-					add_province_modifier = {
-						name = lit_marsh_negate
-						duration = -1
-					}
-				}
-			}
 			define_advisor = {
-				type = architect
+				type = inquisitor
 				skill = 2
 				religion = ROOT
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = bra_expansionist_zealotry_buff
+			custom_tooltip = SWA_HOLY_WAR_ESTATE_BUFF
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = LVA_CHURCH_DEV
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "
+						random_owned_province = {
+							limit = {
+								has_tax_building_trigger = yes
+							}
+							add_base_tax = 1
+						}
+					"
+				}
+			}
+
 		}
 	}
 
@@ -2507,51 +3234,35 @@ lva_missions_4 = {
 		}
 	}
 
-	lva_defend_against_christendom = {
-		icon = mission_rb_control_state_religion
-		position = 20
+	lva_thunderer = {
+		icon = mission_invoke_peruns_wrath
+		position = 18
 		required_missions = {
-			lva_appease_the_old_gods
+			lva_reform_the_faith
 		}
-		provinces_to_highlight = {
-			owned_by = ROOT
-			NOT = {
-				has_tax_building_trigger = yes
-			}
-
-		}
+		provinces_to_highlight = { }
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = obj_convert_10_provinces_tooltip
-				check_variable = {
-					which = num_converted_religion
-					value = 10
-				}
-			}
 			OR = {
-				custom_trigger_tooltip = {
-					tooltip = lva_defend_christendom
-					NOT = {
-						any_neighbor_country = {
-							religion_group = christian
-							army_size = ROOT
-						}
-					}
+				army_tradition = 40
+				army_professionalism = 0.2
+			}
+			army_size = 25
+			custom_trigger_tooltip = {
+				tooltip = ABF_LVA_20_CHRISTIAN_BATTLE_WIN
+				check_variable = {
+					which = num_of_won_battles_against_christians
+					value = 20
 				}
-				army_size = 40
 			}
 
 		}
 		effect = {
-			add_country_modifier = {
-				name = lva_blessing_perkunas
-				duration = 9125
-			}
-			custom_tooltip = LVA_WHILE_ACTIVE
-
+			set_country_flag = ab_unlocked_thunderer
+			custom_tooltip = PRR_THUNDERER
 		}
 	}
 }
+
 lva_missions_5 = {
 	slot = 5
 	generic = no
@@ -2577,6 +3288,7 @@ lva_missions_5 = {
 		}
 		effect = {
 			add_sailors = 350
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "lva_navy"
 				duration = 7300
@@ -2616,9 +3328,9 @@ lva_missions_5 = {
 
 	lva_support_the_guilds = {
 		icon = mission_lit_reform_magdeburg_laws
-		position = 2
+		position = 3
 		required_missions = {
-			lva_protect_coastline
+			lva_riga
 		}
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -2650,15 +3362,41 @@ lva_missions_5 = {
 				religion = ROOT
 				cost_multiplier = 0.5
 			}
-
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					any_ally = {
+						OR = {
+							culture_group = germanic
+							culture_group = united_germanic
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				custom_tooltip = ABF_LVA_GERMAN_TRADE_ALLY_YES
+				set_country_flag = abf_lva_aut_trade_ger_buff_flag
+				custom_tooltip = ABF_LVA_AUT_TRADE_GER_BUFF_TT
+				hidden_effect = {
+					unlock_estate_privilege = {
+						estate_privilege = estate_burghers_autonomous_trade_companies
+					}
+				}
+			}
+			else = {
+				custom_tooltip = ABF_LVA_GERMAN_TRADE_ALLY_NO
+				custom_tooltip = ABF_LVA_AUT_TRADE_GER_BUFF_TT
+			}
 		}
 	}
 
 	lva_amber_road = {
 		icon = mission_amber
-		position = 3
+		position = 5
 		required_missions = {
-			lva_support_the_guilds
+			lva_heart_of_the_baltics lva_support_the_guilds
 		}
 		provinces_to_highlight = {
 			owned_by = ROOT
@@ -2673,20 +3411,24 @@ lva_missions_5 = {
 
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				has_road_building_trigger = yes
-				value = 10
-			}
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
 				has_trade_building_trigger = yes
-				value = 10
+				OR = {
+					region = baltic_region
+					region = poland_region
+				}
 			}
-
+			num_of_owned_provinces_with = {
+				value = 10
+				has_road_building_trigger = yes
+				OR = {
+					region = baltic_region
+					region = poland_region
+				}
+			}
 		}
 		effect = {
-			capital_scope = {
-				add_base_production = 3
-			}
 			add_country_modifier = {
 				name = lit_amber_road
 				duration = 9125
@@ -2712,186 +3454,133 @@ lva_missions_5 = {
 			}
 			if = {
 				limit = {
-					trade_income_percentage = 0.5
-				}
-				custom_tooltip = LIT_50_TRADE_YES
-				hidden_effect = {
-					for = {
-						amount = 10
-						effect = "
-							random_owned_province = {
-								add_base_production = 1
-							}
-						"
+					1926 = {
+						trade_share = {
+							country = ROOT
+							share = 75
+						}
+					}
+					262 = {
+						trade_share = {
+							country = ROOT
+							share = 75
+						}
 					}
 				}
+				custom_tooltip = POL_AMBER_POLAND_YES
 			}
 			else = {
-				custom_tooltip = LIT_50_TRADE_NO
-			}
-
-		}
-	}
-
-	lva_baltic_trade_metropolises = {
-		icon = mission_livonian_castle
-		position = 5
-		required_missions = {
-			lva_musu_jura
-		}
-
-		provinces_to_highlight = {
-			owned_by = ROOT
-			region = baltic_region
-			development = 40
-		}
-		
-		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					region = baltic_region
-					development = 40
-				}
-				amount = 10
-			}
-		}
-
-		effect = {
-			custom_tooltip = EST_METROPOLISES
-			tooltip = {
-				add_province_modifier = {
-					name = est_metropolises
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							any_province = {
-								continent = europe
-								higher_development_than = PREV
-							}
-						}
-					}
-				}
-				custom_tooltip = capital_most_developed_yes
-				tooltip = {
-					if = {
-						limit = {
-							has_dlc = "Mandate of Heaven"
-						}
-						add_splendor = 200
-					}
-					else = {
-						change_government_reform_progress = 100
-					}
-				}
-			}
-			else = {
-				custom_tooltip = capital_most_developed_no
-				tooltip = {
-					if = {
-						limit = {
-							has_dlc = "Mandate of Heaven"
-						}
-						add_splendor = 200
-					}
-					else = {
-						change_government_reform_progress = 100
-					}
-				}
+				custom_tooltip = POL_AMBER_POLAND_NO
 			}
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						region = baltic_region
-						development = 40
-					}
-					add_province_modifier = {
-						name = est_metropolises
-						duration = -1
-					}
-				}
 				if = {
 					limit = {
-						capital_scope = {
-							NOT = {
-								any_province = {
-									continent = europe
-									higher_development_than = PREV
-								}
+						1926 = {
+							trade_share = {
+								country = ROOT
+								share = 75
+							}
+						}
+						262 = {
+							trade_share = {
+								country = ROOT
+								share = 75
 							}
 						}
 					}
-					if = {
+					every_owned_province = {
 						limit = {
-							has_dlc = "Mandate of Heaven"
+							region = poland_region
+							province_has_center_of_trade_of_level = 1
 						}
-						add_splendor = 200
-					}
-					else = {
-						change_government_reform_progress = 100
+						add_province_modifier = {
+							name = "pol_amber_road_outpost"
+							duration = -1
+						}
 					}
 				}
 			}
+
 		}
 	}
-	
 
 	lva_atslegpils = {
 		icon = mission_develop_nevas_port
-		position = 8
+		position = 9
 		required_missions = {
 			lva_novogorod
 		}
 		provinces_to_highlight = {
 			province_id = 33
+
 		}
-		
 		trigger = {
 			owns_core_province = 33
 			33 = {
 				development = 25
-			}
-			33 = {
 				has_trade_building_trigger = yes
-			}
-			33 = {
 				has_production_building_trigger = yes
-			}
-			33 = {
 				has_tax_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
 			}
 		}
-		
 		effect = {
-			33 = {
-				rename_capital = "Atslegpils"
-			}
-			33 = {
-				change_province_name = "Atslegpis"
+			define_advisor = {
+				type = trader
+				skill = 2
+				cost_multiplier = 0.33
 			}
 			custom_tooltip = AB_EMPTY
 			33 = {
+				change_province_name = "Atslegpis"
+				rename_capital = "Atslegpils"
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = abf_baltic_dneprdvina_culture_spread_flag
+						}
+					}
+					change_culture = abf_baltic_dneprdvina_culture
+				}
+				else = {
+					change_culture = ROOT
+				}
+				change_religion = ROOT
+				custom_tooltip = AB_EMPTY
 				add_province_modifier = {
 					name = est_jewel_north
 					duration = -1
 				}
 			}
-			set_country_flag = est_unlocked_winterplace_project
-			custom_tooltip = EST_UNLOCK_GP
+			if = {
+				limit = {
+					310 = {
+						NOT = {
+							higher_development_than = 33
+						}
+					}
+				}
+				custom_tooltip = ABF_LVA_33_DEV_YES
+				set_country_flag = est_unlocked_winterplace_project
+				custom_tooltip = EST_UNLOCK_GP
+			}
+			else = {
+				custom_tooltip = ABF_LVA_33_DEV_NO
+				custom_tooltip = EST_UNLOCK_GP
+			}
 		}
 	}
 
 	lva_control_fur_trade = {
 		icon = mission_control_fur_trade
-		position = 9
+		position = 11
 		required_missions = {
-			lva_atslegpils
+			lva_white_sea lva_atslegpils
 		}
 		provinces_to_highlight = { }
-
 		trigger = {
 			trading_bonus = {
 				trade_goods = fur
@@ -2899,8 +3588,9 @@ lva_missions_5 = {
 			}
 
 		}
-
 		effect = {
+			add_mercantilism = 5
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "htm_fur_monopoly"
 				duration = -1
@@ -2910,30 +3600,84 @@ lva_missions_5 = {
 				for = {
 					amount = 10
 					effect = "
-					random_owned_province = {
-						limit = {
-							trade_goods = fur
+						random_owned_province = {
+							limit = {
+								trade_goods = fur
+							}
+							add_base_production = 1
 						}
-						add_base_production = 1
-					}
-					" 
+					"
 				}
+			}
+
+		}
+	}
+
+	lva_seize_pomerania = {
+		icon = mission_conquer_pomerania
+		position = 12
+		required_missions = {
+			lva_lechia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hinter_pommern_area
+				area = neumark_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		trigger = {
+			hinter_pommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			neumark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+		}
+		effect = {
+			add_mercantilism_or_monarch_power = {
+				amount = 3
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "tur_trading_cities"
+				duration = 9125
+			}
+			custom_tooltip = TUR_DEV_CENTER
+			custom_tooltip = AB_EMPTY
+			wendia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 
 	lva_control_wendia = {
 		icon = mission_wendia
-		position = 11
+		position = 13
 		required_missions = {
 			lva_seize_pomerania
 		}
-
 		provinces_to_highlight = {
 			region = wendia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
 		}
-		
 		trigger = {
 			4745 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2944,7 +3688,7 @@ lva_missions_5 = {
 			}
 		}
 
-		effect = { 
+		effect = {
 			add_prestige_or_monarch_power = {
 				amount = 25
 			}
@@ -2953,7 +3697,7 @@ lva_missions_5 = {
 				name = "prr_balto_slavic"
 				duration = -1
 			}
-			custom_tooltip = ABA_LVA_BALTO_WENDISH
+			custom_tooltip = ABF_LVA_BALTO_WENDISH
 			hidden_effect = {
 				replace_culture_with_effect = {
 					new_culture = Balto-Wendish
@@ -2962,30 +3706,188 @@ lva_missions_5 = {
 					old_culture_3 = sorbian
 				}
 			}
+			custom_tooltip = AB_EMPTY
+			south_german_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_german_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
-	# lva_new_farmland = {
-	# 	icon = mission_farm
-	# 	position = 16
-	# 	required_missions = {
-	# 		lva_drain_marshes
-	# 	}
-	# 	provinces_to_highlight = { }
-		
-	# 	trigger = { }
+	lva_german_crusade = {
+		icon = interfere_in_germany
+		position = 14
+		required_missions = {
+			lva_control_wendia
+		}
 
-	# 	effect = { }
-	# }
+		provinces_to_highlight = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 
-	# lva_perkunas_shield = {
-	# 	icon = mission_sword_of_the_reformation
-	# 	position = 21
-	# 	required_missions = {
-	# 		lva_defend_against_christendom
-	# 	}
-	# 	provinces_to_highlight = { }
-	# 	trigger = { }
-	# 	effect = { }
-	# }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+		}
+
+		effect = { 
+			add_army_tradition = 25
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = prr_bane_of_the_empire
+				duration = -1
+			}
+			set_country_flag = rmg_winning_war_ae
+			custom_tooltip = RMG_WINNING_WAR_REDUCE_AE
+		}
+
+	}
+
+	lva_defend_against_christendom = {
+		icon = mission_rb_control_state_religion
+		position = 16
+		required_missions = {
+			lva_daugava
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_tax_building_trigger = yes
+			}
+
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = {
+					which = num_converted_religion
+					value = 10
+				}
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = lva_defend_christendom
+					NOT = {
+						any_neighbor_country = {
+							religion_group = christian
+							army_size = ROOT
+						}
+					}
+				}
+				army_size = 40
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = lva_blessing_perkunas
+				duration = 9125
+			}
+			custom_tooltip = LVA_WHILE_ACTIVE
+
+		}
+	}
+
+	lva_reform_the_faith = {
+		icon = mission_romuva
+		position = 17
+		required_missions = {
+			lva_appease_the_old_gods lva_defend_against_christendom
+		}
+
+		provinces_to_highlight = { }
+
+		trigger = {
+			religion = reformed_baltic
+		}
+
+		effect = {
+			custom_tooltip = LVA_CHURCH_POWER
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_temple_unrest_buff_flag
+			custom_tooltip = ABF_TCR_TEMPLE_UNREST_BUFF_TT
+			custom_tooltip = LVA_PROVINCE_FLIP
+			hidden_effect = {
+				add_church_power = 50
+				for = {
+					amount = 10
+					effect = "
+						random_owned_province = {
+							limit = {
+								religion = baltic_pagan
+							}
+							change_religion = reformed_baltic
+						}
+					"
+				}
+			}
+
+		}
+	}
+
+	lva_sword_of_perkunas = {
+		icon = mission_perkunas
+		position = 19
+		required_missions = {
+			lva_thunderer lva_reform_the_faith
+		}
+		provinces_to_highlight = { }
+		trigger = {
+			OR = {
+				army_tradition = 60
+				army_professionalism = 0.4
+			}
+			army_size = 50
+			custom_trigger_tooltip = {
+				tooltip = ABF_LVA_50_CHRISTIAN_BATTLE_WIN
+				check_variable = {
+					which = ABF_num_of_won_battles_against_christians
+					value = 50
+				}
+			}
+
+		}
+		effect = {
+			create_general_with_pips = {
+				tradition = 100
+				add_shock = 2
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = "prr_sword_of_perkunas"
+				duration = -1
+			}
+			set_country_flag = sel_convert_steppe
+			custom_tooltip = SEL_CONVERT_STEPPE
+		}
+	}
 }

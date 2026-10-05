@@ -1,0 +1,498 @@
+#### ABF Hetmanate T1 [[[
+#----Hetmanate with Cossackdom Mechanic/ABF's Cossack interactions work around----#
+abf_hetmanate_buffed = {
+	icon = "horde_riding"
+	legacy_equivalent = cossacks_legacy_reform
+	allow_normal_conversion = no
+	valid_for_new_country = yes
+	lock_level_when_selected = yes
+
+	potential = {
+		tag = HTM
+		has_unlocked_government_reform = {
+			government_reform = abf_hetmanate_buffed
+		}
+	}
+	
+	modifiers = {
+		cavalry_power = 0.25
+		cavalry_cost = -0.25
+		cav_to_inf_ratio = 0.25
+		governing_capacity = 200
+		allowed_cossack_fraction = 0.25
+	}
+	duration = 4
+	raze_province = yes
+
+	conditional = {
+		allow = { has_dlc = "Origins" }
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "The Cossacks"
+		}
+		custom_attributes = {
+			enables_estate_cossacks = yes
+		}
+	}
+
+	custom_attributes = {
+		# AB [[[
+		locked_government_type = yes
+		# ]]]
+		enables_horde_idea_group = yes
+		disables_estate_nobles = yes
+		# AB {{{
+		# Original is inversed, but people were requesting as it
+		# it was more realistic
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
+		# }}}
+	}
+
+	government_abilities = {
+		cossack_militarization_mechanic
+		cossack_militarization_abilities_mechanic
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF Hetmanate T2 [[[
+#----Refuge from Tyrants Buffed----#
+abf_htm_refuge_buffed = {
+	icon = "bulboyar"
+	allow_normal_conversion = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_refuge_buffed
+		}
+	}
+
+	modifiers = {
+		land_maintenance_modifier = -0.1
+		manpower_in_accepted_culture_provinces = 0.15
+		idea_cost = -0.05
+	}
+
+	custom_attributes = {
+		metropolitans_spread_institution = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_state_patriach = yes
+				}
+				add_province_modifier = {
+					name = rus_metropolitan_institution_spread
+					duration = -1
+				}
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = rus_metropolitan_institution_spread
+				}
+				remove_province_modifier = rus_metropolitan_institution_spread
+			}
+		}
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF ZAZ/Hetmanate T4 [[[
+#----Hetmanate Cossack Registry----#
+abf_htm_cossacks_registry_reform = {
+	icon = "cossacks"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_cossacks_registry_reform
+		}
+	}
+
+	modifiers = {
+		special_unit_forcelimit = 0.15
+		cossacks_loyalty_modifier = 0.15
+		cossacks_influence_modifier = 0.1
+		cossacks_privilege_slots = 2
+	}
+
+	custom_attributes = {
+		enables_abf_htm_cossack_professionalism = yes
+		enables_abf_htm_reduce_cossack_absolutism = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF ZAZ/Hetmanate T6 [[[
+#----Regimental Rule----#
+abf_htm_regimental_rule = {
+	icon = "organized_military_staff"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_regimental_rule
+		}
+	}
+
+	modifiers = {
+		regiment_manpower_usage = -0.1
+		defensiveness = 0.10
+		governing_capacity = 100
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		enables_abf_htm_chyhyryn_order = yes
+		enables_abf_htm_poltava_order = yes
+		enables_abf_htm_nizhyn_order = yes
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF Hetmanate T7 [[[
+#----Kurin Buffed----#
+abf_htm_kurin_buffed = {
+	icon = "russloboda"
+	allow_normal_conversion = yes
+	
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_kurin_buffed
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		core_creation = -0.10
+		development_cost_modifier = -0.1
+		may_build_supply_depot = yes
+	}
+
+	custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF Hetmanate T8 [[[
+#----Urbanization Eco Reform----#
+abf_htm_urbanization = {
+	icon = "private_enterprise_colony_government"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_urbanization
+		}
+	}
+
+	modifiers = {
+		merchants = 1
+		global_prov_trade_power_modifier = 0.1
+		development_cost = -0.15
+		global_manpower_modifier = -0.10
+	}
+
+	custom_attributes = {
+		thriving_cities_modifier = yes
+	}
+
+	effect = {
+		hidden_effect = { 
+		 	every_owned_province = {
+				limit = {
+		 			development = 25
+		 		}
+		 		add_province_modifier = {
+		 			name = abf_thriving_cities_gov_mod
+		 			duration = -1
+		 		}
+		 	}
+		 }
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					 has_province_modifier = abf_thriving_cities_gov_mod
+				}
+				 remove_province_modifier = abf_thriving_cities_gov_mod
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+#------------------------------#
+
+#----Agrarianism Eco Reform----#
+abf_htm_agrarianism = {
+	icon = "peasants"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_agrarianism
+		}
+	}
+
+	modifiers = {
+		production_efficiency = 0.10
+		global_trade_goods_size_modifier = 0.1
+		global_manpower_modifier = 0.10
+		global_autonomy = 0.075
+		technology_cost = 0.05
+	}
+
+	custom_attributes = {
+		extra_trade_goods_from_grain = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = grain_vodka_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = grain_vodka_bonus_prod
+				}
+				remove_province_modifier = grain_vodka_bonus_prod
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+#------------------------------#
+
+#----Mixed Economy Eco Reform----#
+abf_htm_mixed_economy = {
+	icon = "generic_people"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_mixed_economy
+		}
+	}
+	modifiers = {
+		technology_cost = -0.05
+		global_tax_modifier = 0.10
+		global_trade_power = 0.1
+		global_allowed_num_of_buildings = 1
+	}
+
+	custom_attributes = {
+		GER_buff_mining_provinces = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			custom_tooltip = GER_mining_provinces
+			tooltip = {
+				add_province_modifier = {
+					name = GER_mining_provinces_saxon
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = gold
+						trade_goods = copper
+					}
+				}
+				add_province_modifier = { 
+					name = GER_mining_provinces_saxon
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = GER_mining_provinces_saxon
+				}
+				remove_province_modifier = GER_mining_provinces_saxon
+			}
+		}
+	}
+	
+	ai = {
+		factor = 3
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF Hetmanate T11 [[[
+#----Buffed Council reform----#
+abf_htm_council_buffed = {
+	icon = "bulkavkhan"
+	allow_normal_conversion = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_council_buffed
+		}
+	}
+	modifiers = {
+		candidate_random_bonus = 1
+		general_cost = -0.15
+		max_absolutism = 15
+		army_tradition = 0.25
+	}
+}
+#------------------------------#
+#### ]]]
+
+#### ABF Hetmanate T12 [[[
+#----Cossack Meritocracy----#
+abf_htm_cossack_meritocracy = {
+	icon = "neutral_ground"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_cossack_meritocracy
+		}
+	}
+
+	modifiers = {
+		republican_tradition = 1
+		global_unrest = -2
+		parliament_backing_chance = 0.33
+		max_absolutism = -15
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+}
+#------------------------------#
+
+#----Starshyna Oligarchy----#
+abf_htm_starshyna_oligarchy = {
+	icon = "blackmailing"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			tag = ZAZ
+			was_tag = ZAZ
+		}
+		has_unlocked_government_reform = {
+			government_reform = abf_htm_starshyna_oligarchy
+		}
+	}
+
+	modifiers = {
+		republican_tradition = -1
+		max_absolutism_effect = 0.10
+		yearly_absolutism = 0.5
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		generals_become_rulers = yes
+		has_term_election = no
+		election_on_death = yes
+	}
+}
+#------------------------------#
+#### ]]]

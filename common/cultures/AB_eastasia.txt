@@ -1,30 +1,12 @@
 east_asian = {	# Chinese Group
 	graphical_culture = asiangfx
 
-	manchu_new = {
-		country = { has_banners = yes }
-		province = { local_has_banners = yes }
-		primary = MCH
-		dynasty_names = {
-			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
-			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
-		}
-		male_names = {
-			"Bukuri Yongson" "Sibeoci Fiyanggu" "Dudu Mengtemu" "Huang Taiji" "Hiowan Yei" "In Jen" "Hung Li" "Yong Yan"
-			"Min Ning" Cungsan Tolo Fuman Giocangga Taksi Nurhachi Dorgon Hooge Fulin Fanca Hoogle Yinzhi Yinreng 
-			Yinti Daisan Abatai Ajige Dodo Yinxiang Yinsi Yintang Hongshi Hongzhou Yongqi Akjan Ayan Baohu Chengjun 
-			Dorgide Eje Encehen Fisin Fulu Ganyong Ganzhan Hurong Jabsan Jakdan Leli Liyi Lung Mergen Muduri Mujin Oori 
-			Radi Talman Wehe Yelu Yongyi Zhanhung Zhenghu Zhengrong Zhongcheng Zhongchun Zhongho Zhonghu Zhonghung 
-			Zongqian Zhongxian Zhongyong Zhongyu
-		}
-		female_names = {
-			Fen Jian Wen Hejing Hejia Hexiao Zhuangjing
-		}
-	}
-	#ABF New Culture
-	sinico_japanese = { #Saigoku / Western Japanese
-	country = { has_samurai = yes }
-	province = { local_has_samurai = yes }
+
+	####### ABF CHINESE GROUP [[[
+
+	abf_sinico_japanese = { 
+		country = { has_samurai = yes }
+		province = { local_has_samurai = yes }
 		dynasty_names = {
 			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa
 			Kuni Nashimoto Takeda Yamashina
@@ -49,19 +31,124 @@ east_asian = {	# Chinese Group
 			Yuuka Yuuki Yuuko Yuuna Yuzuki
 		}
 	}
-	aba_sino_tocharian_culture = {	
-		primary = TCR
+
+	abf_sino_tocharian_culture = {	
    	    male_names = {
-   		 Airawanta Ajatasatru Ajite Alp Ambare Ambara Ampr�tasarme Amr�taraksite Amr�todane Anande Anathapindike Aniruddhe Andhave Anktsas Arjune Arjuna Aranemi Arnyartate Arslam Arslan Arthadarsi Aryamarg Aryaske Aryatewe Aryawarme Aryottame Asokamitre Asokaraksite Asoke Ashoka As�rte Astawi Atakke Atidivakare Atyuccagami Atraikatte Bimbasare Caitike Caiytiska Cakravar Cakule Candramukhe Candravasu Candre Caracate Cina Cinatyuti Citre Cittaraksite Cowaske Dandakamal Devarakste Dhanike Dharma Dharmacandre Dharmadase Dharmakame Dharmakamiske Dharmaraksite Dharmasome Dharmatrate Dharmawarme Dipankar Dirghanakhe Dravyasvare Durmukhe Ekasrinke Erk�tsole Esmine Etrise Gayakasyape Gayasirs Gaye Gaya Gunacamdre Gunasampade Hariscandre Hastake Hetubalike Indradhvaje Indratewe Indre Indra Indriske Issapake Jatisrone Jetavam Jnanacamndre Jnanaghose Jnanakame Jnanakupte Jnanamokse Jnanasene Jnanasome Jnanasthite Jnanawirye Kadike Kalodaye Kalyanamokse Kalyanavraddhi Kalyanawartane Kanake Kanaka Kanaske Kanth�ke Kapilavarne Kapilavastu Kas Kasyap Katakarni Kaundinye
-		Kauravye Kausal Kemarcune Kentarske Kercampey Kercapiske Kerdipole Kereptanne Kimne Klenkarako Klpapatre Klyotiska Kotile Koysam Ksemankare Ksmarjune Ksmawarme Ksmate Ksmateworsa Ksmika Kulkera Kumarapunye Kumpante Kunacamttrakau Kunacamttre Kwirapabhadra Virabhadra Lariska Mahasammate Mahisvare Manisvare Mitrakseme Mitraske Mitre Moksasene Moksasome Moksawarme Molyoke Mukalanti Munkhare Murdhagate Nandabala Nandake Nande Nanda Nandipale Nasme Natte Naradeve Nirot Nupura Nyagrodhe Padmakesar Padmottare Pakacandre Pancasikhi Pawaske Pesane Prabhankare Prabhase Pranada Prasamnake Pravare Pravara Priyadeve Ptompile Punaiyse Punakame Punaraksite Punicamndre Punyamitre Purtas Rahule Rahula Raktadewe Ratnacuda Ratnasikhi Rsivadam Rudramukhe Rudrasarme Sagare Samantatir Samcite Samghatrate Sanavasi Sanghasarme Sankene Sanum Saputanase Sarasike Sarmacamdre Sarsire Satuma Satyake Satyaraksite Siddharthe Siddhartha Sidhasamgha Siladewe Silamitre Silarakite Silaraksi Silasoma Silavande Silawarne Silayase Silopake Simpraye Sincake Sinke Sinku Skanatatte Skwarle Slacamndre Solarke Some Srestake Sudarse Sudas Suddhodane Sujate Sukase Suklodane Sunaksatre Sunetre Sutasome Sutate Swarnabuspe Swarnatepe Tarmacandre Tarmaraksite Tenare Tohkem Tonke Tukik Tunka Tusi Udanalankar Udayi Ulkamukhe Uluke Upage Upagupte Upanande Uposathe Urbilvakasyape Uttaraphalguni Uttare Vaisravane Vaitike Varddhane Vidusake Vimalapuspe Vinaise Visale Wamsok Warwattaske W�ryaruci W�ryasene Wasampile Wasave Wiryadewe Wiryamitre Wiryasanti Wiryasini Wisikke Wrauske Yanayase Yarpal�ske Yasa Yasawine Yase Yasonaka Yastare Yiswe Jesus Yonge Yonu Ype Yudhisthire Yugaraje
+   			Airawanta Ajatasatru Ajite Alp Ambare Ambara Ampratasarme Amrataraksite Amratodane Anande Anathapindike Aniruddhe Andhave Anktsas Arjune Arjuna Aranemi Arnyartate Arslam Arslan Arthadarsi Aryamarg Aryaske Aryatewe Aryawarme Aryottame Asokamitre Asokaraksite Asoke Ashoka Asarte Astawi Atakke Atidivakare Atyuccagami Atraikatte Bimbasare Caitike Caiytiska Cakravar Cakule Candramukhe Candravasu Candre Caracate Cina Cinatyuti Citre Cittaraksite Cowaske Dandakamal Devarakste Dhanike Dharma Dharmacandre Dharmadase Dharmakame Dharmakamiske Dharmaraksite Dharmasome Dharmatrate Dharmawarme Dipankar Dirghanakhe Dravyasvare Durmukhe Ekasrinke Erkatsole Esmine Etrise Gayakasyape Gayasirs Gaye Gaya Gunacamdre Gunasampade Hariscandre Hastake Hetubalike Indradhvaje Indratewe Indre Indra Indriske Issapake Jatisrone Jetavam Jnanacamndre Jnanaghose Jnanakame Jnanakupte Jnanamokse Jnanasene Jnanasome Jnanasthite Jnanawirye Kadike Kalodaye Kalyanamokse Kalyanavraddhi Kalyanawartane Kanake Kanaka Kanaske Kanthake Kapilavarne Kapilavastu Kas Kasyap Katakarni Kaundinye
+			Kauravye Kausal Kemarcune Kentarske Kercampey Kercapiske Kerdipole Kereptanne Kimne Klenkarako Klpapatre Klyotiska Kotile Koysam Ksemankare Ksmarjune Ksmawarme Ksmate Ksmateworsa Ksmika Kulkera Kumarapunye Kumpante Kunacamttrakau Kunacamttre Kwirapabhadra Virabhadra Lariska Mahasammate Mahisvare Manisvare Mitrakseme Mitraske Mitre Moksasene Moksasome Moksawarme Molyoke Mukalanti Munkhare Murdhagate Nandabala Nandake Nande Nanda Nandipale Nasme Natte Naradeve Nirot Nupura Nyagrodhe Padmakesar Padmottare Pakacandre Pancasikhi Pawaske Pesane Prabhankare Prabhase Pranada Prasamnake Pravare Pravara Priyadeve Ptompile Punaiyse Punakame Punaraksite Punicamndre Punyamitre Purtas Rahule Rahula Raktadewe Ratnacuda Ratnasikhi Rsivadam Rudramukhe Rudrasarme Sagare Samantatir Samcite Samghatrate Sanavasi Sanghasarme Sankene Sanum Saputanase Sarasike Sarmacamdre Sarsire Satuma Satyake Satyaraksite Siddharthe Siddhartha Sidhasamgha Siladewe Silamitre Silarakite Silaraksi Silasoma Silavande Silawarne Silayase Silopake Simpraye Sincake Sinke Sinku Skanatatte Skwarle Slacamndre Solarke Some Srestake Sudarse Sudas Suddhodane Sujate Sukase Suklodane Sunaksatre Sunetre Sutasome Sutate Swarnabuspe Swarnatepe Tarmacandre Tarmaraksite Tenare Tohkem Tonke Tukik Tunka Tusi Udanalankar Udayi Ulkamukhe Uluke Upage Upagupte Upanande Uposathe Urbilvakasyape Uttaraphalguni Uttare Vaisravane Vaitike Varddhane Vidusake Vimalapuspe Vinaise Visale Wamsok Warwattaske Waryaruci Waryasene Wasampile Wasave Wiryadewe Wiryamitre Wiryasanti Wiryasini Wisikke Wrauske Yanayase Yarpalaske Yasa Yasawine Yase Yasonaka Yastare Yiswe Jesus Yonge Yonu Ype Yudhisthire Yugaraje
 		}
 		female_names = {
-   		 Ampr�tasene Amr�tasene Arjuna Arunavati Aryakose Aryaraksite Ayardhyame Bhadra Canca Dhrtirastre Jnati Kolite Kosthile Malika Maya Nagasene Priyasarini Punyasene Purike Purnaya Purohite Putere R�knaska Revati Roce Saci Santa Santisene Sari Sthulananda Sudarsane Sumagati Sumaise Sumati Sundari Suwarte Tarma Dharma Tarmawirne T�rtvisara Tati  Tisye Upatisye Uppal Uppalavarna Vajrapani Vasisthe Vitasake Yasaraksite Yasodhara
+   			 Ampratasene Amratasene Arjuna Arunavati Aryakose Aryaraksite Ayardhyame Bhadra Canca Dhrtirastre Jnati Kolite Kosthile Malika Maya Nagasene Priyasarini Punyasene Purike Purnaya Purohite Putere Raknaska Revati Roce Saci Santa Santisene Sari Sthulananda Sudarsane Sumagati Sumaise Sumati Sundari Suwarte Tarma Dharma Tarmawirne Tartvisara Tati  Tisye Upatisye Uppal Uppalavarna Vajrapani Vasisthe Vitasake Yasaraksite Yasodhara
 		}
    	    dynasty_names = {
-   		 Airawanta Ajatasatru Ajite Alp Ambare Ambara Ampr�tasarme Amr�taraksite Amr�todane Anande Anathapindike Aniruddhe Andhave Anktsas Arjune Arjuna Aranemi Arnyartate Arslam Arslan Arthadarsi Aryamarg Aryaske Aryatewe Aryawarme Aryottame Asokamitre Asokaraksite Asoke Ashoka As�rte Astawi Atakke Atidivakare Atyuccagami Atraikatte Bimbasare Caitike Caiytiska Cakravar Cakule Candramukhe Candravasu Candre Caracate Cina Cinatyuti Citre Cittaraksite Cowaske Dandakamal Devarakste Dhanike Dharma Dharmacandre Dharmadase Dharmakame Dharmakamiske Dharmaraksite Dharmasome Dharmatrate Dharmawarme Dipankar Dirghanakhe Dravyasvare Durmukhe Ekasrinke Erk�tsole Esmine Etrise Gayakasyape Gayasirs Gaye Gaya Gunacamdre Gunasampade Hariscandre Hastake Hetubalike Indradhvaje Indratewe Indre Indra Indriske Issapake Jatisrone Jetavam Jnanacamndre Jnanaghose Jnanakame Jnanakupte Jnanamokse Jnanasene Jnanasome Jnanasthite Jnanawirye Kadike Kalodaye Kalyanamokse Kalyanavraddhi Kalyanawartane Kanake Kanaka Kanaske Kanth�ke Kapilavarne Kapilavastu Kas Kasyap Katakarni Kaundinye
-		Kauravye Kausal Kemarcune Kentarske Kercampey Kercapiske Kerdipole Kereptanne Kimne Klenkarako Klpapatre Klyotiska Kotile Koysam Ksemankare Ksmarjune Ksmawarme Ksmate Ksmateworsa Ksmika Kulkera Kumarapunye Kumpante Kunacamttrakau Kunacamttre Kwirapabhadra Virabhadra Lariska Mahasammate Mahisvare Manisvare Mitrakseme Mitraske Mitre Moksasene Moksasome Moksawarme Molyoke Mukalanti Munkhare Murdhagate Nandabala Nandake Nande Nanda Nandipale Nasme Natte Naradeve Nirot Nupura Nyagrodhe Padmakesar Padmottare Pakacandre Pancasikhi Pawaske Pesane Prabhankare Prabhase Pranada Prasamnake Pravare Pravara Priyadeve Ptompile Punaiyse Punakame Punaraksite Punicamndre Punyamitre Purtas Rahule Rahula Raktadewe Ratnacuda Ratnasikhi Rsivadam Rudramukhe Rudrasarme Sagare Samantatir Samcite Samghatrate Sanavasi Sanghasarme Sankene Sanum Saputanase Sarasike Sarmacamdre Sarsire Satuma Satyake Satyaraksite Siddharthe Siddhartha Sidhasamgha Siladewe Silamitre Silarakite Silaraksi Silasoma Silavande Silawarne Silayase Silopake Simpraye Sincake Sinke Sinku Skanatatte Skwarle Slacamndre Solarke Some Srestake Sudarse Sudas Suddhodane Sujate Sukase Suklodane Sunaksatre Sunetre Sutasome Sutate Swarnabuspe Swarnatepe Tarmacandre Tarmaraksite Tenare Tohkem Tonke Tukik Tunka Tusi Udanalankar Udayi Ulkamukhe Uluke Upage Upagupte Upanande Uposathe Urbilvakasyape Uttaraphalguni Uttare Vaisravane Vaitike Varddhane Vidusake Vimalapuspe Vinaise Visale Wamsok Warwattaske W�ryaruci W�ryasene Wasampile Wasave Wiryadewe Wiryamitre Wiryasanti Wiryasini Wisikke Wrauske Yanayase Yarpal�ske Yasa Yasawine Yase Yasonaka Yastare Yiswe Jesus Yonge Yonu Ype Yudhisthire Yugaraje
-		Yuezhi
+   		 Airawanta Ajatasatru Ajite Alp Ambare Ambara Ampratasarme Amrataraksite Amratodane Anande Anathapindike Aniruddhe Andhave Anktsas Arjune Arjuna Aranemi Arnyartate Arslam Arslan Arthadarsi Aryamarg Aryaske Aryatewe Aryawarme Aryottame Asokamitre Asokaraksite Asoke Ashoka Asarte Astawi Atakke Atidivakare Atyuccagami Atraikatte Bimbasare Caitike Caiytiska Cakravar Cakule Candramukhe Candravasu Candre Caracate Cina Cinatyuti Citre Cittaraksite Cowaske Dandakamal Devarakste Dhanike Dharma Dharmacandre Dharmadase Dharmakame Dharmakamiske Dharmaraksite Dharmasome Dharmatrate Dharmawarme Dipankar Dirghanakhe Dravyasvare Durmukhe Ekasrinke Erkatsole Esmine Etrise Gayakasyape Gayasirs Gaye Gaya Gunacamdre Gunasampade Hariscandre Hastake Hetubalike Indradhvaje Indratewe Indre Indra Indriske Issapake Jatisrone Jetavam Jnanacamndre Jnanaghose Jnanakame Jnanakupte Jnanamokse Jnanasene Jnanasome Jnanasthite Jnanawirye Kadike Kalodaye Kalyanamokse Kalyanavraddhi Kalyanawartane Kanake Kanaka Kanaske Kanthake Kapilavarne Kapilavastu Kas Kasyap Katakarni Kaundinye
+			Kauravye Kausal Kemarcune Kentarske Kercampey Kercapiske Kerdipole Kereptanne Kimne Klenkarako Klpapatre Klyotiska Kotile Koysam Ksemankare Ksmarjune Ksmawarme Ksmate Ksmateworsa Ksmika Kulkera Kumarapunye Kumpante Kunacamttrakau Kunacamttre Kwirapabhadra Virabhadra Lariska Mahasammate Mahisvare Manisvare Mitrakseme Mitraske Mitre Moksasene Moksasome Moksawarme Molyoke Mukalanti Munkhare Murdhagate Nandabala Nandake Nande Nanda Nandipale Nasme Natte Naradeve Nirot Nupura Nyagrodhe Padmakesar Padmottare Pakacandre Pancasikhi Pawaske Pesane Prabhankare Prabhase Pranada Prasamnake Pravare Pravara Priyadeve Ptompile Punaiyse Punakame Punaraksite Punicamndre Punyamitre Purtas Rahule Rahula Raktadewe Ratnacuda Ratnasikhi Rsivadam Rudramukhe Rudrasarme Sagare Samantatir Samcite Samghatrate Sanavasi Sanghasarme Sankene Sanum Saputanase Sarasike Sarmacamdre Sarsire Satuma Satyake Satyaraksite Siddharthe Siddhartha Sidhasamgha Siladewe Silamitre Silarakite Silaraksi Silasoma Silavande Silawarne Silayase Silopake Simpraye Sincake Sinke Sinku Skanatatte Skwarle Slacamndre Solarke Some Srestake Sudarse Sudas Suddhodane Sujate Sukase Suklodane Sunaksatre Sunetre Sutasome Sutate Swarnabuspe Swarnatepe Tarmacandre Tarmaraksite Tenare Tohkem Tonke Tukik Tunka Tusi Udanalankar Udayi Ulkamukhe Uluke Upage Upagupte Upanande Uposathe Urbilvakasyape Uttaraphalguni Uttare Vaisravane Vaitike Varddhane Vidusake Vimalapuspe Vinaise Visale Wamsok Warwattaske Waryaruci Waryasene Wasampile Wasave Wiryadewe Wiryamitre Wiryasanti Wiryasini Wisikke Wrauske Yanayase Yarpalaske Yasa Yasawine Yase Yasonaka Yastare Yiswe Jesus Yonge Yonu Ype Yudhisthire Yugaraje
+			Yuezhi
+		}
+	}
+
+	abf_sino_mengguzu_culture = {
+		male_names = {
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi Darayisung Tümen
+			Zhanji Zhanjun Zhanyong Zhanyin Zhanshan Zhangang Zhan'ao Zhankai Zhanyan Jianrui Jianlin Jianti Jianchun 
+			Jianze Jianjun Jianzhi Jianpei Jianji Youji Youtang Youwan Youlun Youbing Youyun Youheng You'kai Houzhao 
+			Houwei Houxi Houcong Zaiji Zairui Zaihou Yiling Yijun Yiliu Changluo Changxu Changxun Changzhi Changhao 
+			Changrun Changyin Changbo Youxiao Youxue Youmo Youjian Youyi Youshan Ciran Ciyu Cijiong Cilang Ciheng 
+			Cizhao Cihuan Cican Shangbing Shanglie Shangyi Shanghong Zhijun Zhibao Gongxi Gongjian Gongtang Gongming 
+			Jixi Jiye Jihuang Jihuan Jixuan Meigui Meiyuan Zhongxuan Zhongduo Qiyuan Qiying Qirong Youdun Zishi Linmei 
+			Cijue Ciwei Cikai Youhua Linyuan Qisheng Biao Shuang Gang Su Zhen Bo Zi Chun Bo Gui Xuntan Xunquan Ying 
+			Zhanyan Zhi Quan Chenhao Bian Hui Song Mo Yin Jing Dong Nan Shouqian Xiongying Yuntong Yunjian Wengui 
+			Wenkui Gaoxu Gaosui Houyu ZhanYong Zhanshan Yousi Jianchun Jianshu Jianzhi Yourong Houjue Zailun Zaiji 
+			Changfang Changxu Changxun Changzhi Changrun Cilang Cihuan Guan Keqin Fu Dounan Chengzu Zixiang Bingyi Guan 
+			Zongren Yuan Fu Xingui Zonglian Ji Xiang Yu Quan Zhong Ji Xizheng Jian Shao'en Jiusi Song Chun Youxue Zugan 
+			Yingfang Kekuan Mo Juren Qing Qinshun Duan Zhencheng Bao Li Xiao Xian Tang Boyuan Chunyao Xianzhang Liang 
+			Ruoshui Shouyi De Ti Hongxian Shihuai Shixi Yizan Huali Zhide Yuanxi Xixue Weizhen Han Boheng Mian Zongyi 
+			Kai Meng Hong Du Danian Tai Minzheng Mengyang Jingming Zhenqing Gong Shanfu Shen Zhengming Zuo Weiqi 
+			Shenzhong Panlong Youguang Weizhen Shisheng Qichang Hongdao Nanying Shaozong Peng Wenshi Liangxiang Wannian 
+			Zongyan Tingkui Bangzuo Ruxiu Guochang Huanchun Xianming Shengdou Zhaochen Shimei Guoxi Shangzhen Daoxing 
+			Tingbiao Yunrang Wan Jin Ding Wuchang Chengzhang Jiefu Wenyong Shiming Chonghua Sanfeng Wanyan Dayong 
+			Zhongwen Kexue Yuanjie Rucai Kexi Zhongming Jinxing Yan Yingxiang Zongmin
+		}
+		female_names = {
+			Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+			Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen 
+			Xiao'e Xiaoying Xiaoyuan Xiaoji Xiaolou
+		}
+		dynasty_names = {
+			# CKII
+			"Onggirat" "Naiman" "Kereyid" "Sartaq" "Mengu-Timur" "Uriankhai" "Bujakhin" "Besud" "Noyan" 
+			"Jochid" "Chagatayid" "Borjigin" "Chupanid" "Injuid" "Toluid" "Ganbold" "Bolormaa" "Batbayar" 
+			"Bat-Erdene" "Otgonbayar" "Enkhtuyaa" "Gantulga" "Nergüi" "Lkhagvasüren" "Enkhjargal" 
+			"Ganzorig" "Narantsetseg" "Pürevsüren" "Ganbaatar" "Mönkhtsetseg" "Mönkhbat" "Mönkh-Erdene" 
+			"Jalair" "Sartuul" "Olkhunut" "Khatagin" "Iljigin" "Tsookhor" "Qarakhanid"
+		}
+	}
+
+	abf_sino_burmese_culture = {
+		dynasty_names = {
+			"Duan" "Gao" "Meng"
+		}
+		male_names = { # Same as Bai
+			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
+			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
+			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
+			Cihuan Cican He Ji Da Yuchun
+		}
+		female_names = { # Same as Bai
+			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen
+		}
+	}
+
+	abf_sino_malayan_culture = {
+		male_names = {
+			Zhanji Zhanjun Zhanyong Zhanyin Zhanshan Zhangang Zhan'ao Zhankai Zhanyan Jianrui Jianlin Jianti Jianchun 
+			Jianze Jianjun Jianzhi Jianpei Jianji Youji Youtang Youwan Youlun Youbing Youyun Youheng You'kai Houzhao 
+			Houwei Houxi Houcong Zaiji Zairui Zaihou Yiling Yijun Yiliu Changluo Changxu Changxun Changzhi Changhao 
+			Changrun Changyin Changbo Youxiao Youxue Youmo Youjian Youyi Youshan Ciran Ciyu Cijiong Cilang Ciheng 
+			Cizhao Cihuan Cican Shangbing Shanglie Shangyi Shanghong Zhijun Zhibao Gongxi Gongjian Gongtang Gongming 
+			Jixi Jiye Jihuang Jihuan Jixuan Meigui Meiyuan Zhongxuan Zhongduo Qiyuan Qiying Qirong Youdun Zishi Linmei 
+			Cijue Ciwei Cikai Youhua Linyuan Qisheng Biao Shuang Gang Su Zhen Bo Zi Chun Bo Gui Xuntan Xunquan Ying 
+			Zhanyan Zhi Quan Chenhao Bian Hui Song Mo Yin Jing Dong Nan Shouqian Xiongying Yuntong Yunjian Wengui 
+			Wenkui Gaoxu Gaosui Houyu ZhanYong Zhanshan Yousi Jianchun Jianshu Jianzhi Yourong Houjue Zailun Zaiji 
+			Changfang Changxu Changxun Changzhi Changrun Cilang Cihuan Guan Keqin Fu Dounan Chengzu Zixiang Bingyi Guan 
+			Zongren Yuan Fu Xingui Zonglian Ji Xiang Yu Quan Zhong Ji Xizheng Jian Shao'en Jiusi Song Chun Youxue Zugan 
+			Yingfang Kekuan Mo Juren Qing Qinshun Duan Zhencheng Bao Li Xiao Xian Tang Boyuan Chunyao Xianzhang Liang 
+			Ruoshui Shouyi De Ti Hongxian Shihuai Shixi Yizan Huali Zhide Yuanxi Xixue Weizhen Han Boheng Mian Zongyi 
+			Kai Meng Hong Du Danian Tai Minzheng Mengyang Jingming Zhenqing Gong Shanfu Shen Zhengming Zuo Weiqi 
+			Shenzhong Panlong Youguang Weizhen Shisheng Qichang Hongdao Nanying Shaozong Peng Wenshi Liangxiang Wannian 
+			Zongyan Tingkui Bangzuo Ruxiu Guochang Huanchun Xianming Shengdou Zhaochen Shimei Guoxi Shangzhen Daoxing 
+			Tingbiao Yunrang Wan Jin Ding Wuchang Chengzhang Jiefu Wenyong Shiming Chonghua Sanfeng Wanyan Dayong 
+			Zhongwen Kexue Yuanjie Rucai Kexi Zhongming Jinxing Yan Yingxiang Zongmin
+		}
+		female_names = {
+			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen 
+			Xiao'e Xiaoying Xiaoyuan Xiaoji Xiaolou
+		}
+	}
+	##### ]]]
+
+	manchu_new = {
+		country = { has_banners = yes }
+		province = { local_has_banners = yes }
+		primary = MCH
+		dynasty_names = {
+			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
+			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
+		}
+		male_names = {
+			"Bukuri Yongson" "Sibeoci Fiyanggu" "Dudu Mengtemu" "Huang Taiji" "Hiowan Yei" "In Jen" "Hung Li" "Yong Yan"
+			"Min Ning" Cungsan Tolo Fuman Giocangga Taksi Nurhachi Dorgon Hooge Fulin Fanca Hoogle Yinzhi Yinreng 
+			Yinti Daisan Abatai Ajige Dodo Yinxiang Yinsi Yintang Hongshi Hongzhou Yongqi Akjan Ayan Baohu Chengjun 
+			Dorgide Eje Encehen Fisin Fulu Ganyong Ganzhan Hurong Jabsan Jakdan Leli Liyi Lung Mergen Muduri Mujin Oori 
+			Radi Talman Wehe Yelu Yongyi Zhanhung Zhenghu Zhengrong Zhongcheng Zhongchun Zhongho Zhonghu Zhonghung 
+			Zongqian Zhongxian Zhongyong Zhongyu
+		}
+		female_names = {
+			Fen Jian Wen Hejing Hejia Hexiao Zhuangjing
 		}
 	}
 	vietnamese_new = {
@@ -609,6 +696,62 @@ japanese_g = {
 	
 	country = { has_samurai = yes }
 	province = { local_has_samurai = yes }
+
+	#### ABF JAPANESE [[[
+	abf_japanese_nikkei = { #Nikkei culture
+		province = { local_has_samurai = yes }
+		dynasty_names = {
+			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa
+			Kuni Nashimoto Takeda Yamashina
+		}
+		male_names = {
+			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito
+			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu
+			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru
+			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu
+			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+		}
+		female_names = {
+			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka
+			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru
+			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede
+			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto
+			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio
+			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi
+			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu
+			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa
+			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu
+			Yuuka Yuuki Yuuko Yuuna Yuzuki
+		}
+	}
+	abf_japanese_zainichi = {
+		province = { local_has_samurai = yes }
+		dynasty_names = {
+			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa
+			Kuni Nashimoto Takeda Yamashina
+		}
+		male_names = {
+			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
+			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
+			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
+			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
+			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+		}
+		female_names = {
+			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
+			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
+			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
+			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
+			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
+			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
+			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
+			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
+			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
+			Yuuka Yuuki Yuuko Yuuna Yuzuki
+		}
+	}
+	### ]]]
+
 	japanese_culture = { #Togoku / Eastern Japanese
 		province = { local_has_samurai = yes }
 		primary = JAP
@@ -714,60 +857,6 @@ japanese_g = {
 			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu
 			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa
 			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu
-			Yuuka Yuuki Yuuko Yuuna Yuzuki
-		}
-	}
-	japanese_nikkei = { #Nikkei culture
-		province = { local_has_samurai = yes }
-		primary = OTM
-		dynasty_names = {
-			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa
-			Kuni Nashimoto Takeda Yamashina
-		}
-		male_names = {
-			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito
-			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu
-			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru
-			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu
-			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
-		}
-		female_names = {
-			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka
-			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru
-			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede
-			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto
-			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio
-			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi
-			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu
-			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa
-			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu
-			Yuuka Yuuki Yuuko Yuuna Yuzuki
-		}
-	}
-	japanese_zainichi = {
-		province = { local_has_samurai = yes }
-		primary = OTM
-		dynasty_names = {
-			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa
-			Kuni Nashimoto Takeda Yamashina
-		}
-		male_names = {
-			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
-			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
-			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
-			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
-			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
-		}
-		female_names = {
-			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
-			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
-			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
-			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
-			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
-			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
-			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
-			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
-			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
 			Yuuka Yuuki Yuuko Yuuna Yuzuki
 		}
 	}
@@ -1160,6 +1249,276 @@ altaic = {
 
 tartar	= {
 	graphical_culture = muslimgfx
+
+	### ABF TATAR CULTURES [[[
+	abf_tartar_lipka_culture = {
+		province = { local_has_banners = yes}
+		dynasty_names = {
+			Altan Asanin Bekmambet Ziyaeddin Sarigöl Bektöre Celebicihan  Cobanzade Dägci Gaspirali Giraybay Hablemitoglu Hilmi 
+			Inalcik Ipci Kirimal Seydahmet Ihsan Kubay Qirimoglu Mamut Mansiz Mehdi Neyazi Ortayli Semizade Soysal Zihni Tarhan 
+			Fazil Uralgiray Kosay Agah Mangitli Tögay Kemal
+		}
+		male_names = {
+			Alp Arslan Adil Amin Bahadir Devlet Fetih Ghazi Haji Halim Haspulad Hayder Inayet Islam Janay Janibek 
+			Maqsud Mehmed Mengli Mubarek Murad Nur Devlet Otemesh Qaplan Qirim Saadet Safa Sahib Satilghan Shahin 
+			Shardan Selamet Selim Toqtamish
+		}
+		female_names = {
+			Khalida Mariam Sabah "Fatima" "Ibtisam" "Jalila" "Janan" "Layla" "Sakina" "Sharifa" Ibtisam Jalila Janan Layla 
+			Sakina Sharifa Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
+		}
+	}
+	abf_tartar_qipchaq_culture = {
+		dynasty_names = {
+			Kimak Askarid Adirlu Olas Kuman Kimek Varzas Ochak Itil Tana Laktan Balna Ravna Aven Arin Altan Tarhan
+		}
+		male_names = {
+			Aepak Aibak Alpra Altunopa Arbuz Asalup Asep Atrak Ayepa Bachman Baytursun Begluk Beka Blush Bonyak
+			Chemgura Chilbuk Ele Eltut Etrek Girgen Gzak Gzi Itlar Ituk Kobyak Kolo Kopti Kopulch Kotyan Koza Kozel Kubasar Kuntuvdi Kutan Kutesk Kutlu Kza
+			Manj Menk Otrok Ovlur Pulad Saru Sharaga Sharukan Sugr Suthoi Sokal Tapar Tart Tetr Togli Togortok Toks Tolun Tugor Vlur Uzluk Uzur Zeyhan
+		}
+		female_names = {
+			Ilkay Ipek Ipekel Irge Jiajak Karacik Mala Mutlu Peksen Samur Sarica Sati Sevilay Sevindik Sibel Sirin Sirma Songul
+			Gulay Gunduz Gundes Gunes Guranduk Ozgul Ozlem Ayasun Ayten Esin Dilek Tura Umay Yeldem Yildiz
+		}
+	}
+	abf_tartar_mongol_culture = {
+		male_names = {
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi Darayisung Tümen
+		}
+		female_names = {
+			Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+			Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+		}
+		dynasty_names = {
+			# CKII
+			"Onggirat" "Naiman" "Kereyid" "Sartaq" "Mengu-Timur" "Uriankhai" "Bujakhin" "Besud" "Noyan" 
+			"Jochid" "Chagatayid" "Borjigin" "Chupanid" "Injuid" "Toluid" "Ganbold" "Bolormaa" "Batbayar" 
+			"Bat-Erdene" "Otgonbayar" "Enkhtuyaa" "Gantulga" "Nergüi" "Lkhagvasüren" "Enkhjargal" 
+			"Ganzorig" "Narantsetseg" "Pürevsüren" "Ganbaatar" "Mönkhtsetseg" "Mönkhbat" "Mönkh-Erdene" 
+			"Jalair" "Sartuul" "Olkhunut" "Khatagin" "Iljigin" "Tsookhor" "Qarakhanid"
+		}
+	}
+	abf_tartar_daur_culture = {
+		country = { has_banners = yes }
+		province = { local_has_banners = yes }
+		dynasty_names = {
+			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
+			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
+		}
+		male_names = {
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi Darayisung Tümen
+		}
+		female_names = {
+			Fen Jian Wen Hejing Hejia Hexiao Zhuangjing Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+			Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+		}
+	}
+	abf_tatar_qasiym_culture = {
+		dynasty_names = {
+			"Boke Temur" "Qutlugh Vachir" "Suren Chinua" "Delger Bayar" "Shria Gan" "Bora Chinua" "Qol-Gäli" Cälil Göbäydullina Nasiri Näcmetdin Nigmät Nurgäli Isxaqi Märcani Qamay  Qursawi Tuqay Yusupow  Nasange Temur-chi Chinuagene 
+			Toluilun Qutughqan "Koke Burilgi" Surenchar Bayangge
+		}
+		male_names = {
+			"Ulugh Muhammad" "Muhammad" "Mahmudak" "Khalil" "Ibrahim" "Ilham" "Muhammad Amin" "Abdul-Latif" "Shah Ali" 
+			"Sahib" "Safa" "Jan Ali" "Otemesh" "Shah Ali" "Yadigar Muhammad" "Ahmyetgali" "Airat" "Akhmed" "Alikber" 
+			"Amazat" "Amerhan" "Ansar" "Anvar" "Ahmat" "Aydar" "Ayrat" "Azgar" "Cingi" "Farit" "Ildus" "Ilgiz" "Ilsat" 
+			"Irek" "Nariman" "Radiq" "Gabdulla" "Ramil" "Rasit" "Rawil" "Risat" "Rusan" "Timer" "Toktamish" "Yasher" 
+			"Zagip" "Zamanbyek" "Zaribzyan" "Gabdulla" "Zofar" "Abdul-Karim" "Abdul-Latif" "Abdul-Rahman" "Abdullah" "Agalak" "Ahmad" "Ak Köbek" "Ali Beg" "Arab Shah" 
+			"Arslan" "Baraq" "Bek Bulat" "Bolaq" "Cherkes" "Chokra" "Daniyal" "Darwish" "Darwish Ali" "Devlet Berdi" 
+			"Edigu" "Hajji Muhammad" "Husayn" "Ibak" "Ibrahim" "Ilham" "Ishim" "Jabbar Berdi" "Jalal al-Din" "Jan Ali" 
+			"Janay" "Jani Beg" "Jumaduq" "Karim Berdi" "Kebek" "Khalil" "Khaqan Beg" "Küchük Muhammad" "Kuchum" 
+			"Mahmud" "Mahmudak" "Mamai" "Mamuk" "Mansur" "Muhammad" "Murtaza" "Mustafa Ali" "Nogai" "Pulad" 
+			"Pulad Timur" "Qadir Berdi" "Qasim" "Sain Bulat" "Satilghan" "Sayid Ahmad" "Sayid Burhan" "Sayid Mahmud" 
+			"Shadi Beg" "Shah Ali" "Shaikh Ahmad" "Shaikh Awliar" "Shaikh Haidar" "Shiban" "Taibugha" "Timur" 
+			"Timur Qutlugh" "Toqtamish" "Ulugh Muhammad" "Urus" "Urus Muhammad" "Yadigar Muhammad" "Yamghurchi"
+		}
+		female_names = {
+			"Aibanoo" "Aininoor" "Alfia" "Janan" "Alfira" "Alfiya" "Alia" "Amenya" "Asia" "Assel" "Dinara" 	"Fatima" "Ibtisam" "Jalila" "Janan" "Layla" "Sakina" "Sharifa" Ibtisam Jalila Janan Layla Sakina Sharifa Acenith 
+			Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
+		}
+	}
+	abf_tatar_urus_culture = { #Muscovite 
+        male_names = {
+            Basyl Iban Timir Yurey Andrey Semen Fedor Apanas Akim Aliksandr Alikey Anatley Arkadey 
+            Doropey Peodosiy Peopilakt Gabril Innokent Isip Labrentiy Makarey Matbey Mikhaïl Nazarey 
+            Unisim Pawil Prokop Petr Radomir Sabeliy Sergey Terentey Balerey Yakim Yebgeniy
+            Apanas Apanas Aliksandr Aliksandr Alikey Alikey Andrey Andrey Boris Biryachisla 
+            Britisla Nikipor
+            Danil Danil Dabyd Dabyd Demid Timir Timir Dobrynya Fedot Fedot Fedor Fedor 
+            Gabril Gabril Gleb
+            Grigorey Grigorey Yakov Yakov Igor Iliya Ingwar Ingwar Iban Dzhan Iziyasla Kiril Kiril 
+            Konstantin Konstantin Kozma Kozma Lib Lib Matbey Matbey Mikhaïl Mikhaïl Mitrofan 
+            Mstisla Nikita Oleg Oleg Pawil Pawil Putyata Radosla Rodisla Rogbolod Roman 
+            Rostisla Rurik 
+            Rurik Ruslan Simen Simen Stanisla Stanisla Stepan Stepan Sudisla
+            Sbetozar Sbyatopolk Sbatopluk Sbyatosla Sbyatosla Terentey Tripon Basyl Basil Basylko 
+            Byachesla Bolodymyr Vladisla Vladisla Boisla Bolodar Bsesla
+            Bsebolod Byshata Byshesla Yaropolk Yarosla Yarosla Yepimley Yelisey Yemelyan Emil Yeremey 
+            Yebstapley Yurey Yurey
+        }
+        female_names = {
+            Agapya Agata Agrapina Aliksandria Nastasiya Nastasiya Anna Anna Bolesla Darya Dobraba 
+            Dobronega Dobrosla Yepimiya Yepimiya Yeprosinya Yeprosinya Yekaterina Katrina
+            Yelizabeta Liza Yebdoka Yebdoka Yebpraksiya Fedora Fedora Peodosiya Peodosiya 
+            Pebroniya Gorisla Gradisla Gremisla Irina Irina Kseniya Lyubaba
+            Lyudmila Malprida Malusha Mariya Mariya Marina Olena Elena Olga Pereyasla Paraskoba Praksida 
+            Prebrana Predsla Premysla Sbetlana Yuliya
+            Pribisla Rogneda Rostisla Sbysla Sobiya Sobiya Sbyatosla Tatyana Ulita Ulyana
+            Barbara Basylisa Belesla Berkhosla Bsesla Byachesla Yarosla Zabauba Zbenisla
+        }
+        dynasty_names = {
+            Rurikogly Godun-bey Shuy-bek Romanogly Sheremet-bay Galitsa-bek Narysh-bek Khilkogly Gorchak-bay
+            Belosel-bek Chelyad-bay Potem-bek Poloch Izbor Twer-bek Lukis-bek Pleskow Toropets-bek Dukhov-bay
+            Korob-ogly Woland Tybert-bek Buzhan-bay Slutsk-bek Pinesk-bek Zhytomyr-bek Vynnyts-bek Polan Ulich Drevl 
+            Lyubech Roslav-bek Turob
+            Dolgoruk-bay Gagarin Galitsa-bek Massal-bek Shuy-bek Gantimur-bek Sibir-bek
+            # CKII
+            Demid-ogly Lopukha-bay Tolstoy "Loban-Rostosla" Menshik-bay Obolen-bek
+        }
+    }
+	abf_tatar_yomyshly_urus_culture = { #Novgorodian 
+        male_names = {
+            Basyl Iban Timir Yurey Andrey Semen Fedor Apanas Akim Aliksandr Alikey Anatley Arkadey 
+            Doropey Peodosiy Peopilakt Gabril Innokent Isip Labrentiy Makarey Matbey Mikhaïl Nazarey 
+            Unisim Pawil Prokop Petr Radomir Sabeliy Sergey Terentey Balerey Yakim Yebgeniy
+            Apanas Apanas Aliksandr Aliksandr Alikey Alikey Andrey Andrey Boris Biryachisla 
+            Britisla Nikipor
+            Danil Danil Dabyd Dabyd Demid Timir Timir Dobrynya Fedot Fedot Fedor Fedor 
+            Gabril Gabril Gleb
+            Grigorey Grigorey Yakov Yakov Igor Iliya Ingwar Ingwar Iban Dzhan Iziyasla Kiril Kiril 
+            Konstantin Konstantin Kozma Kozma Lib Lib Matbey Matbey Mikhaïl Mikhaïl Mitrofan 
+            Mstisla Nikita Oleg Oleg Pawil Pawil Putyata Radosla Rodisla Rogbolod Roman 
+            Rostisla Rurik 
+            Rurik Ruslan Simen Simen Stanisla Stanisla Stepan Stepan Sudisla
+            Sbetozar Sbyatopolk Sbatopluk Sbyatosla Sbyatosla Terentey Tripon Basyl Basil Basylko 
+            Byachesla Bolodymyr Vladisla Vladisla Boisla Bolodar Bsesla
+            Bsebolod Byshata Byshesla Yaropolk Yarosla Yarosla Yepimley Yelisey Yemelyan Emil Yeremey 
+            Yebstapley Yurey Yurey
+        }
+        female_names = {
+            Agapya Agata Agrapina Aliksandria Nastasiya Nastasiya Anna Anna Bolesla Darya Dobraba 
+            Dobronega Dobrosla Yepimiya Yepimiya Yeprosinya Yeprosinya Yekaterina Katrina
+            Yelizabeta Liza Yebdoka Yebdoka Yebpraksiya Fedora Fedora Peodosiya Peodosiya 
+            Pebroniya Gorisla Gradisla Gremisla Irina Irina Kseniya Lyubaba
+            Lyudmila Malprida Malusha Mariya Mariya Marina Olena Elena Olga Pereyasla Paraskoba Praksida 
+            Prebrana Predsla Premysla Sbetlana Yuliya
+            Pribisla Rogneda Rostisla Sbysla Sobiya Sobiya Sbyatosla Tatyana Ulita Ulyana
+            Barbara Basylisa Belesla Berkhosla Bsesla Byachesla Yarosla Zabauba Zbenisla
+        }
+        dynasty_names = {
+            Rurikogly Godun-bey Shuy-bek Romanogly Sheremet-bay Galitsa-bek Narysh-bek Khilkogly Gorchak-bay
+            Belosel-bek Chelyad-bay Potem-bek Poloch Izbor Twer-bek Lukis-bek Pleskow Toropets-bek Dukhov-bay
+            Korob-ogly Woland Tybert-bek Buzhan-bay Slutsk-bek Pinesk-bek Zhytomyr-bek Vynnyts-bek Polan Ulich Drevl 
+            Lyubech Roslav-bek Turob
+            Dolgoruk-bay Gagarin Galitsa-bek Massal-bek Shuy-bek Gantimur-bek Sibir-bek
+            # CKII
+            Demid-ogly Lopukha-bay Tolstoy "Loban-Rostosla" Menshik-bay Obolen-bek
+        }
+    }
+	abf_tatar_cherkasy_urus_culture = { #Ruthenian 
+        male_names = {
+            Basyl Iban Timir Yurey Andrey Semen Fedor Apanas Akim Aliksandr Alikey Anatley Arkadey 
+            Doropey Peodosiy Peopilakt Gabril Innokent Isip Labrentiy Makarey Matbey Mikhaïl Nazarey 
+            Unisim Pawil Prokop Petr Radomir Sabeliy Sergey Terentey Balerey Yakim Yebgeniy
+            Apanas Apanas Aliksandr Aliksandr Alikey Alikey Andrey Andrey Boris Biryachisla 
+            Britisla Nikipor
+            Danil Danil Dabyd Dabyd Demid Timir Timir Dobrynya Fedot Fedot Fedor Fedor 
+            Gabril Gabril Gleb
+            Grigorey Grigorey Yakov Yakov Igor Iliya Ingwar Ingwar Iban Dzhan Iziyasla Kiril Kiril 
+            Konstantin Konstantin Kozma Kozma Lib Lib Matbey Matbey Mikhaïl Mikhaïl Mitrofan 
+            Mstisla Nikita Oleg Oleg Pawil Pawil Putyata Radosla Rodisla Rogbolod Roman 
+            Rostisla Rurik 
+            Rurik Ruslan Simen Simen Stanisla Stanisla Stepan Stepan Sudisla
+            Sbetozar Sbyatopolk Sbatopluk Sbyatosla Sbyatosla Terentey Tripon Basyl Basil Basylko 
+            Byachesla Bolodymyr Vladisla Vladisla Boisla Bolodar Bsesla
+            Bsebolod Byshata Byshesla Yaropolk Yarosla Yarosla Yepimley Yelisey Yemelyan Emil Yeremey 
+            Yebstapley Yurey Yurey
+        }
+        female_names = {
+            Agapya Agata Agrapina Aliksandria Nastasiya Nastasiya Anna Anna Bolesla Darya Dobraba 
+            Dobronega Dobrosla Yepimiya Yepimiya Yeprosinya Yeprosinya Yekaterina Katrina
+            Yelizabeta Liza Yebdoka Yebdoka Yebpraksiya Fedora Fedora Peodosiya Peodosiya 
+            Pebroniya Gorisla Gradisla Gremisla Irina Irina Kseniya Lyubaba
+            Lyudmila Malprida Malusha Mariya Mariya Marina Olena Elena Olga Pereyasla Paraskoba Praksida 
+            Prebrana Predsla Premysla Sbetlana Yuliya
+            Pribisla Rogneda Rostisla Sbysla Sobiya Sobiya Sbyatosla Tatyana Ulita Ulyana
+            Barbara Basylisa Belesla Berkhosla Bsesla Byachesla Yarosla Zabauba Zbenisla
+        }
+        dynasty_names = {
+            Rurikogly Godun-bey Shuy-bek Romanogly Sheremet-bay Galitsa-bek Narysh-bek Khilkogly Gorchak-bay
+            Belosel-bek Chelyad-bay Potem-bek Poloch Izbor Twer-bek Lukis-bek Pleskow Toropets-bek Dukhov-bay
+            Korob-ogly Woland Tybert-bek Buzhan-bay Slutsk-bek Pinesk-bek Zhytomyr-bek Vynnyts-bek Polan Ulich Drevl 
+            Lyubech Roslav-bek Turob
+            Dolgoruk-bay Gagarin Galitsa-bek Massal-bek Shuy-bek Gantimur-bek Sibir-bek
+            # CKII
+            Demid-ogly Lopukha-bay Tolstoy "Loban-Rostosla" Menshik-bay Obolen-bek
+        }
+    }
+	abf_glh_tatar_qaraylar_culture = {
+		dynasty_names = {
+			Altan Asanin Bekmambet Ziyaeddin Sarigöl Bektöre Celebicihan  Cobanzade Dägci Gaspirali Giraybay Hablemitoglu Hilmi 
+			Inalcik Ipci Kirimal Seydahmet Ihsan Kubay Qirimoglu Mamut Mansiz Mehdi Neyazi Ortayli Semizade Soysal Zihni Tarhan 
+			Fazil Uralgiray Kosay Agah Mangitli Tögay Kemal Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
+		}
+		male_names = {
+			Alp Arslan Adil Amin Bahadir Devlet Fetih Ghazi Haji Halim Haspulad Hayder Inayet Islam Janay Janibek 
+			Maqsud Mehmed Mengli Mubarek Murad Nur Devlet Otemesh Qaplan Qirim Saadet Safa Sahib Satilghan Shahin 
+			Shardan Selamet Selim Toqtamish August Wladyslaw Stanislaw Kazimierz Aleksander Henryk Albert Kazimierz Michal Stefan 
+			August Aleksander Karol Kazimierz Krzysztof Fryderyk Olbracht Jan Karol Patryk
+			Ferdynand Olbracht Albert Aleksy Andrzej Bartlomiej Bogumil Bronislaw Dawid Dominik Emil Eugeniusz 
+			Ferdynand Gustaw Igor Iwan Krystian Lech Lucjusz Ludwik Lukasz Maksym Mariusz Mieszko Miroslaw 
+			Rafal Sylwester Szymon Zygfryd Oskar
+			Aleksander Alexander Andrzej Andrew Bartosz Bartolomeus Bezprym Boguchwal Bogumil Boleslaw 
+			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
+			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
+			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
+			Izbor Józef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
+			Christian Krzeslaw Lambert Lambert Leszek Ctibor
+			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
+			Nicholas Milobrat Milosz Milosz Miroslaw Miroslav Msciwoj Mszczuj Nadbor Niezamysl Odon 
+			Pawel Paul Pelka Piotr Peter Piskla Prendota Przemyslaw Premysl Przybor Sambor Sedziej 
+			Sieciech Siemomysl Siemowit Skarbimir Snowid Spytko Stanislaw Stanislav
+			Stefan Stephen Stoigniew Strasz Sulislaw Sulistryj Swietopelk Svatopluk Swietoslaw 
+			Szczesny Felix Tomasz Thomas Trojden Twardomir Usciech Waclaw Vaclav Wanko Vaclav 
+			Laurence Wielislaw Wieslaw Wincenty Vincent Wit Guy Witosz Wladyslaw Vladislav Wojciech 
+			Wojuta Wszebor Vsebor Zbigniew Zbynek Zbyszko Zbynek Zegota Ignatius Zelibrat
+			Zygmunt Sigmund Albert Wawrzyniec Sviatoslav Sedzimir Otto Krystyn Janko Imram
+		}
+		female_names = {
+			Khalida Mariam Sabah "Fatima" "Ibtisam" "Jalila" "Janan" "Layla" "Sakina" "Sharifa" Ibtisam Jalila Janan Layla 
+			Sakina Sharifa Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima Adelajda Adleta Agnieszka Agnes Aldona Anastazja Anastasia Anna Anna Beata Bozena Danuta 
+		}
+	}
+	abf_glh_tatar_onoghur_culture = {
+		dynasty_names = {
+			Aba Acsád Agmánd Ajtony Ákos Apor Árpád Baksa Baracska Barcz Bána Bár-Kalán Bél Borsa Böszörmény 
+			Bõ Csanád Csák Csolt Dorozsma Jákó Kaján Kaplyony Katapán Káta Kölcse Kölpény Miskolc Monoszló 	
+			Oslu Örsúr Rosd Szaonok Szemere Tardos Tomaj Turul Záh Zsombor
+		}
+		male_names = {
+			Ajtony Ampud Attila Ákos Álmos Apor Árpád Ártánd Árvád Balog Bátor Bekõ Bél Béla Bors Botos Bódog 
+			Böngér Bõd Bõs Csaba Csaha Csanád Cenk Cenke Csonta Elõd Ete Fajsz Farkas Fiacs Finta Geregen Gyeücsa 
+			Gyécs Hetény Huba Jenõ Kadicsa Kaba Karuly Keménd Kese Ketel Ketüd Keve Kölked Könd Kurszán Küsid Lél 
+			Liüntika Mágócs Miskolc Mohar Mokud Négye Opos Ösöd Ötény Õrs Õze Pósa Somogy Súr Szalók Szaonok Szend 	
+			Taja Tar Tarcsa Tarkacsu Tas Tege Tetemeh Torda Tormacsu Turul Tühütüm Vajk Vata Ula Yelegh Zoárd
+			Koppány Zerind Taksony Zolta Géza Levedi Elöd Ugyek
+		}
+		female_names = {
+			Angyalka Anikó Aranka Askam Borbála Csilla Csillag Czenzi Emõke Emese Eperjes Etel Gilvád Gyöngyös 
+			Hajnal Ibolya Ildikó Józsa Kinga Ilona Leáncs Luca Magó Nyeste Odola Orsolya Panni Piroska Sarolt 
+			Sáfely Sebe Szentõ Szépa Szinta Szüga Tündér Virág Zoltána Zsuzsa Zsanett
+		}
+	}
+	### ]]]
+	
 	tatar_culture = {
 		primary = GLH
 		dynasty_names = {

@@ -1385,22 +1385,7 @@ ab_china_third = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = china_integrate_manchu
-				duration = -1
-			}
-			custom_tooltip = abf_manchu_culture_convert_tt
-			hidden_effect = {
-				hidden_effect = {
-				every_province = {
-					limit = {
-						culture_group = evenks
-						owned_by = ROOT
-					}
-					change_culture = manchu_new
-				}
-			}
-			}
+			### ABF - new culture spread reward and reformatting [[[
 			if = {
 				limit = {
 					accepted_culture = manchu_new
@@ -1422,6 +1407,23 @@ ab_china_third = {
 					cost_multiplier = 0.5
 				}
 			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = china_integrate_manchu
+				duration = -1
+			}
+			custom_tooltip = ABF_MANCHU_CULTURE_CONVERT_SINO_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = evenks
+						region = manchuria_region
+					}
+					change_original_culture = manchu_new
+					change_culture = manchu_new
+				}
+			}
+			### ]]]
 		}
 	}
 	
@@ -2265,28 +2267,27 @@ ab_china_fourth = {
 					}
 				}
 				custom_tooltip = AB_MNG_CONQUEST_JAPAN
-				custom_tooltip = abf_chi_japan_culture_convert_tt
 				tooltip = {
 					add_mil_power = 200
 					add_country_modifier = {
 						name = cn_dawning_sun
 						duration = -1 
 					}
+					custom_tooltip = ABF_SINO_JAPAN_CULTURE_SINO_SPREAD_TT
 				}
 			}
 			else = {
 				custom_tooltip = AB_MNG_CONQUEST_JAPAN_NO
-				custom_tooltip = abf_chi_japan_culture_convert_tt
 				tooltip = {
 					add_mil_power = 200
 					add_country_modifier = {
 						name = cn_dawning_sun
 						duration = -1 
 					}
+					custom_tooltip = ABF_SINO_JAPAN_CULTURE_SINO_SPREAD_TT
 				}
 			}
 			hidden_effect = {
-				set_country_flag = sinicized_japanese_culture_spread
 				if = {
 					limit = {
 						japan_region = {
@@ -2306,6 +2307,7 @@ ab_china_fourth = {
 						name = cn_dawning_sun
 						duration = -1 
 					}
+					set_country_flag = abf_sinicized_japanese_culture_spread
 				}
 			}
 		}
@@ -2630,10 +2632,7 @@ ab_china_fifth = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = china_integrate_mongol
-				duration = -1
-			}
+			### ABF - new culture shift reward and reformatting [[[
 			define_advisor = {
 				type = commandant
 				skill = 3
@@ -2641,6 +2640,22 @@ ab_china_fifth = {
 				culture = mongol
 				cost_multiplier = 0.5
 			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = china_integrate_mongol
+				duration = -1
+			}
+			custom_tooltip = ABF_CHINESE_MONGOL_SHIFT_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = mongolia_region
+						culture_group = Mongolian
+					}
+					change_culture = abf_sino_mengguzu_culture
+				}
+			}
+			### ]]]
 		}
 	}
 	

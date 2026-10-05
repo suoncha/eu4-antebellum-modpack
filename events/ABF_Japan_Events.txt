@@ -1,0 +1,137 @@
+namespace = abf_japan_events
+normal_or_historical_nations = yes
+
+#Siniczed Japanese 
+country_event = {
+	id = abf_japan_events.1
+	title = abf_japan_events.1.t
+	desc = abf_japan_events.1.d
+	picture = NANBAN_INCIDENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = abf_japan_events.1.a
+		hidden_effect = {
+			ROOT = {
+				set_country_flag = abf_japan_embraced_chinese_culture
+				set_country_flag = abf_sinicized_japanese_culture_spread
+				set_country_flag = abf_sinicized_korean_culture_spread
+				clr_country_flag = abf_zainichi_culture_spread
+			}
+		}
+		add_stability = -3
+		custom_tooltip = AB_EMPTY
+		change_primary_culture = abf_sinico_japanese
+		change_religion = confucianism
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_JAP_CONVERT_SINIFICATION_SPREAD_TT
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_JAP_SJ_UNREST_TT
+		hidden_effect = {
+			set_ruler_culture = abf_sinico_japanese
+			set_ruler_religion = confucianism
+			set_heir_culture = abf_sinico_japanese
+			set_heir_religion = confucianism
+			capital_scope = {
+				change_culture = abf_sinico_japanese
+				change_religion = confucianism
+			}
+			every_province = {
+				limit = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				add_unrest = 10
+			}
+			random_province = {
+				limit = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				particularist_rebels = 20
+			}
+			random_province = {
+				limit = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				particularist_rebels = 20
+			}
+			random_province = {
+				limit = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				shinto_rebels = 20
+			}
+			random_province = {
+				limit = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				shinto_rebels = 20
+			}
+	  	}
+	}
+
+	option = {
+		name = abf_japan_events.1.b
+		custom_tooltip = ABF_JAP_SJ_DECLINE_TT
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owned_by = ROOT
+					region = south_china_region
+					region = north_china_region
+				}
+				add_unrest = 10
+			}
+			random_province = {
+				limit = {
+				owned_by = ROOT
+				OR = {
+					region = north_china_region
+					region = south_china_region
+				}
+				NOT = { area = taiwan_area }
+				}
+				particularist_rebels = 20
+			}
+			random_province = {
+				limit = {
+				owned_by = ROOT
+				OR = {
+					region = north_china_region
+					region = south_china_region
+				}
+				NOT = { area = taiwan_area }
+				}
+				particularist_rebels = 20
+			}
+			random_province = {
+				limit = {
+				owned_by = ROOT
+				OR = {
+					region = north_china_region
+					region = south_china_region
+				}
+				NOT = { area = taiwan_area }
+				}
+				confucianism_rebels = 30
+			}
+			random_province = {
+				limit = {
+				owned_by = ROOT
+				OR = {
+					region = north_china_region
+					region = south_china_region
+				}
+				NOT = { area = taiwan_area }
+				}
+				confucianism_rebels = 30
+			}
+	   	}
+	}
+}
+

@@ -896,7 +896,7 @@ ned_first_branching_british = {
 		position = 6
 		
 		trigger = {
-            ab_not_in_mission_preview_mode = { key = AB_NED }
+			ab_not_in_mission_preview_mode = { key = AB_NED }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
 				OR = {
@@ -1913,9 +1913,9 @@ ned_second_branching_dutch = {
 				NOT = {
 					num_of_buildings_in_province = 4	
 				}
-                AND = {
-                    NOT = { development = 35 }
-                    NOT = { province_has_center_of_trade_of_level = 3 }
+				AND = {
+					NOT = { development = 35 }
+					NOT = { province_has_center_of_trade_of_level = 3 }
 				}
 			}
 		} 
@@ -2893,12 +2893,19 @@ ned_second_branching_baltic = {
 		}
 		
 		effect = {
+			### ABF - modified mission reward and formatting [[[
 			add_country_modifier = {
 				name = ned_mare_nostrum
 				duration = -1
 			}
-			custom_tooltip = ABA_NED_BALTIC_SETTLEMENT_TT
-			set_country_flag = aba_ned_baltic_settlement
+			set_country_flag = abf_ned_olender_culture_spread
+			custom_tooltip = ABF_NED_BALTIC_SETTLEMENT_TT
+			hidden_effect = { #Done to override AB's Dutch settlement on_action reward without modifying the base AB file
+				baltic_region = {
+					set_province_flag = ned_converted_baltic_province
+				}
+			}
+			### ]]]
 		}
 	}
 }
@@ -3190,7 +3197,7 @@ ned_second_branching_british = {
 			}
 		} 
 
-		trigger = {
+		trigger = {  
 			ab_not_in_mission_preview_mode = { key = AB_NED }
 			british_isles_region = {
 				type = all
@@ -4051,10 +4058,10 @@ ned_third = {
 		required_missions = { NED_cloth_trading }
 		
 		provinces_to_highlight = {
-            region = low_countries_region
-            OR = {
-                NOT = { country_or_non_sovereign_subject_holds = root }
-                NOT = { num_of_times_improved = 3 }
+			region = low_countries_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = { num_of_times_improved = 3 }
 			}
 		}
 	
@@ -5555,10 +5562,10 @@ ned_fifth = {
 		required_missions = { NED_military_reforms }
 
 		provinces_to_highlight = {
-            owned_by = ROOT
-            region = low_countries_region
-            province_has_current_tech_fort_trigger = no
-        }
+			owned_by = ROOT
+			region = low_countries_region
+			province_has_current_tech_fort_trigger = no
+		}
 
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -5773,20 +5780,20 @@ ned_fifth = {
 			province_id = 1177
 		} 
 
-        trigger = {
-            1177 = {
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-            1177 = {
-                development = 20
-            }
-            1177 = {
-                has_fort_building_trigger = yes
-            }
-            1177 = {
-                has_trade_building_trigger = yes
-            }
-        }
+		trigger = {  
+			1177 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1177 = {
+				development = 20
+			}
+			1177 = {
+				has_fort_building_trigger = yes
+			}
+			1177 = {
+				has_trade_building_trigger = yes
+			}
+		} 
 
 		effect = {  
 			1177 = {

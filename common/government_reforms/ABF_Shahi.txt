@@ -1,0 +1,103 @@
+#### ABF Shahi T1 [[[
+#----Formal Monarchy Diwan Reform: Assimilation for Indian and Persian cultures only, buffed bonsues----#
+abf_shahi_diwan = {
+	icon = "indian_crown"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_shahi_diwan 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	fixed_rank = 3
+	modifiers = {
+		legitimacy = 1
+		governing_capacity_modifier = 0.25
+		global_unrest = -1
+	}
+	
+	assimilation_cultures = {
+		central_indic = {
+			land_attrition = -0.10
+			supply_limit_modifier = 0.10
+		}
+		dravidian = {
+			artillery_power = 0.10
+			fire_damage = 0.10
+
+		}
+		eastern_aryan = {
+			trade_efficiency = 0.10
+			global_trade_power = 0.10
+		}
+		hindusthani = {
+			core_creation = -0.1
+			administrative_efficiency = 0.05
+		}
+		iranian = {
+			build_cost = -0.10
+		}
+		western_aryan = {
+			production_efficiency = 0.05
+			global_allowed_num_of_buildings = 1
+		}
+	}
+}	
+#------------------------------#
+
+#---Tribal Monarchy Diwan Reform: Assimilation for Indian and Persian cultures only, buffed bonsues----#
+abf_shahi_diwan_tribal = {
+	icon = "indian_crown"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = tribal_kingdom_legacy
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_shahi_diwan_tribal 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	fixed_rank = 3
+	modifiers = {
+		legitimacy = 1
+		governing_capacity_modifier = 0.25
+		global_unrest = -1
+	}
+	
+	assimilation_cultures = {
+		central_indic = {
+			land_attrition = -0.10
+			supply_limit_modifier = 0.10
+		}
+		dravidian = {
+			artillery_power = 0.10
+			fire_damage = 0.10
+
+		}
+		eastern_aryan = {
+			trade_efficiency = 0.10
+			global_trade_power = 0.10
+		}
+		hindusthani = {
+			core_creation = -0.1
+			administrative_efficiency = 0.05
+		}
+		iranian = {
+			build_cost = -0.10
+		}
+		western_aryan = {
+			production_efficiency = 0.05
+			global_allowed_num_of_buildings = 1
+		}
+	}
+}
+#------------------------------#
+#### ]]]

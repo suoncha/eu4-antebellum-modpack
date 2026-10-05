@@ -1,0 +1,84 @@
+
+####################### ABF Tocharia [[[
+
+	###---Tamil Trade Guids/India Path---###
+		estate_jains_abf_tcr_tamil_trade_guilds = {
+			icon = estate_burghers_reliance_on_republics
+			max_absolutism = -5
+			influence = 0.15
+			loyalty = 0.10
+			is_valid = {
+				has_unlocked_estate_privilege = { estate_privilege = estate_jains_abf_tcr_tamil_trade_guilds }
+			}
+
+			can_select = {
+				custom_trigger_tooltip = {
+					tooltip = unlocked_estate_jains_abf_tcr_tamil_trade_guilds_tt
+					has_unlocked_estate_privilege = { estate_privilege = estate_jains_abf_tcr_tamil_trade_guilds }
+				}
+				num_of_owned_provinces_with = {
+					value = 1
+					culture_group = dravidian
+				}
+			}
+
+			on_granted = {
+				custom_tooltip = estate_jains_abf_tcr_tamil_trade_guilds_gt
+			}
+
+			on_granted_province = {
+				if = {
+					limit = {
+						culture_group = dravidian
+						OR = {
+							has_river_estuary_trigger = yes
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					add_province_modifier = {
+						name = estate_jains_abf_tcr_tamil_trade_guilds_mod
+						duration = -1
+					}
+				}
+			}
+
+			on_revoked = {
+				custom_tooltip = estate_jains_abf_tcr_tamil_trade_guilds_revoke
+			}
+
+			on_revoked_province = {
+				if = {
+					limit = {
+						has_province_modifier = estate_jains_abf_tcr_tamil_trade_guilds_mod
+					}
+					remove_province_modifier = estate_jains_abf_tcr_tamil_trade_guilds_mod
+				}
+			}
+
+			on_invalid = {
+			}
+
+			on_invalid_province = {
+				if = {
+					limit = {
+						has_province_modifier = estate_jains_abf_tcr_tamil_trade_guilds_mod
+					}
+					remove_province_modifier = estate_jains_abf_tcr_tamil_trade_guilds_mod
+				}
+			}
+
+			penalties = {
+			}
+
+			benefits = {
+				merchants = 1
+				trade_range_modifier = 0.15
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	###---------------------###
+
+###################################### ]]]

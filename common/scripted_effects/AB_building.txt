@@ -116,6 +116,21 @@ ab_building_trade_effect = {
 		}
 	}
 	# ]]]
+	### ABF Trade Building Applied Effect [[[
+	## TCR [[
+	if = { # 1.) Trade buildings give additional provinical trade power
+		limit = { 
+			FROM = {
+				has_country_flag = abf_tcr_trade_building_tp_buff_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_tcr_trade_building_power_buff_mod
+			duration = -1
+		}
+	}
+	## ]]
+	### ]]]
 }
 
 ab_removing_trade_effect = {
@@ -141,6 +156,16 @@ ab_removing_trade_effect = {
 		remove_province_modifier = len_additional_slot
 	}
 	# ]]]
+	### ABF Trade Building Removed Effect [[[
+	## TCR [[
+	if = {# 1.) Remove Trade buildings give additional provinical trade power
+		limit = {
+			has_province_modifier = abf_tcr_trade_building_power_buff_mod
+		}
+		remove_province_modifier = abf_tcr_trade_building_power_buff_mod
+	}
+	## ]]
+	### ]]]
 }
 
 ab_building_tax_effect = {
@@ -171,17 +196,17 @@ ab_building_tax_effect = {
 			duration = -1
 		}
 	}
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = sel_tax_buff
-            }
-        }
-        add_province_modifier = {
-            name = sel_mosque_renovation
-            duration = -1
-        }
-    }
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = sel_tax_buff
+			}
+		}
+		add_province_modifier = {
+			name = sel_mosque_renovation
+			duration = -1
+		}
+	}
 	if = {
 		limit = {
 			FROM = {
@@ -268,20 +293,49 @@ ab_building_tax_effect = {
 		}
 	}
     # ]]]
-	# ABF [[[
-	if = {
-		limit = {
+	### ABF Tax Building Applied Effect [[[
+	## TCR [[
+	if = { # 1.) Building Tax buildings in Provinces of True Faith now grants -1 unrest, add mod
+		limit = { 
 			FROM = {
-				has_country_flag = ABA_TCR_temple_buff
+				has_country_flag = abf_temple_unrest_buff_flag
 			}
 			religion = ROOT
 		}
 		add_province_modifier = {
-			name = ABA_tcr_temple_expansion
+			name = ABF_tcr_temple_unrest_mod
 			duration = -1
 		}
 	}
-	# ]]]
+	if = { # 2.) Building Tax Buildings grants base trade goods size 
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_temples_prod_buff_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_tcr_taxation_prod_buff_mod
+			duration = -1
+		}
+	}
+	## ]]
+	## ZNN (ROB/ZUN) [[
+	if = { # 1.) Building Tax buildings in now grants radiance, add radiance 
+		limit = { 
+			FROM = {
+				has_country_flag = abf_znn_tax_building_radiance
+			}
+		}
+		FROM = {
+			add_government_power = { 
+				mechanic_type = zunist_radiance_mechanic
+				power_type = zunist_radiance
+				value = 0.10
+			}
+		}
+	}
+	## ]]
+	### ]]]
 }
 
 ab_removing_tax_effect = {
@@ -303,12 +357,12 @@ ab_removing_tax_effect = {
 		}
 		remove_province_modifier = pol_slavic_holy_grounds
 	}
-    if = {
-        limit = {
-            has_province_modifier = sel_mosque_renovation
-        }
-        remove_province_modifier = sel_mosque_renovation
-    }
+	if = {
+		limit = {
+			has_province_modifier = sel_mosque_renovation
+		}
+		remove_province_modifier = sel_mosque_renovation
+	}
 	if = {
 		limit = {
 			FROM = {
@@ -340,14 +394,38 @@ ab_removing_tax_effect = {
 		remove_province_modifier = wallachia_basilica_buff
 	}
     # ]]]
-	# ABF [[[
-	if = {
+	### ABF Tax Building Removed Effect [[[
+	## TCR [[
+	if = { # 1.) Building Tax buildings in Provinces of True Faith now grants -1 unrest, remove mod
 		limit = {
-			has_province_modifier = ABA_tcr_temple_expansion
+			has_province_modifier = ABF_tcr_temple_unrest_mod
 		}
-		remove_province_modifier = ABA_tcr_temple_expansion
+		remove_province_modifier = ABF_tcr_temple_unrest_mod
 	}
-	# ]]]
+	if = { # 2.) Building Tax Buildings grants base trade goods size, remove this modifier 
+		limit = {
+			has_province_modifier = abf_tcr_taxation_prod_buff_mod
+		}
+		remove_province_modifier = abf_tcr_taxation_prod_buff_mod
+	}
+	## ]]
+	## ZNN (ROB/ZUN) [[
+	if = { # 1.) Building Tax buildings in now grants radiance, remove radiance 
+		limit = {
+			FROM = {
+				has_country_flag = abf_znn_tax_building_radiance
+			}
+		}
+		FROM = {
+			add_government_power = { 
+				mechanic_type = zunist_radiance_mechanic
+				power_type = zunist_radiance
+				value = -0.10
+			}
+		}
+	}
+	## ]]
+	### ]]]
 }
 
 ab_building_production_effect = {
@@ -359,39 +437,39 @@ ab_building_production_effect = {
 		}
 		add_base_production = 1
 	}
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = sel_build_production
-            }
-        }
-        add_province_modifier = {
-            name = sel_production_build_prov
-            duration = -1
-        }
-    }
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = nnv_building_production
-            }
-        }
-        add_province_modifier = {
-            name = nnv_building_prod_mod
-            duration = -1
-        }
-    }
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = arb_ybr_building_production
-            }
-        }
-        add_province_modifier = {
-            name = arb_ybr_prod_mod
-            duration = -1
-        }
-    }
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = sel_build_production
+			}
+		}
+		add_province_modifier = {
+			name = sel_production_build_prov
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = nnv_building_production
+			}
+		}
+		add_province_modifier = {
+			name = nnv_building_prod_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = arb_ybr_building_production
+			}
+		}
+		add_province_modifier = {
+			name = arb_ybr_prod_mod
+			duration = -1
+		}
+	}
 }
 
 ab_removing_production_effect = {
@@ -406,24 +484,24 @@ ab_removing_production_effect = {
 		}
 		add_base_production = -1
 	}
-    if = {
-        limit = {
-            has_province_modifier = sel_production_build_prov
-        }
-        remove_province_modifier = sel_production_build_prov
-    }
-    if = {
-        limit = {
-            has_province_modifier = nnv_building_prod_mod
-        }
-        remove_province_modifier = nnv_building_prod_mod
-    }
-    if = {
-        limit = {
-            has_province_modifier = arb_ybr_prod_mod
-        }
-        remove_province_modifier = arb_ybr_prod_mod
-    }
+	if = {
+		limit = {
+			has_province_modifier = sel_production_build_prov
+		}
+		remove_province_modifier = sel_production_build_prov
+	}
+	if = {
+		limit = {
+			has_province_modifier = nnv_building_prod_mod
+		}
+		remove_province_modifier = nnv_building_prod_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = arb_ybr_prod_mod
+		}
+		remove_province_modifier = arb_ybr_prod_mod
+	}
 }
 
 ab_building_courthouse_effect = {
@@ -446,26 +524,26 @@ ab_building_courthouse_effect = {
 		}
 		add_nationalism = -2
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = pap_courthouse_bonus
-			}
-		}
-		add_base_tax = 1
-	}
     if = {
         limit = {
             FROM = {
-                has_country_flag = arb_building_courthouse
+                has_country_flag = pap_courthouse_bonus
             }
         }
-        add_province_modifier = {
-            name = arb_egyptian_adm_mod
-            duration = -1
-        }
+        add_base_tax = 1
     }
-    if = {
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = arb_building_courthouse
+			}
+		}
+		add_province_modifier = {
+			name = arb_egyptian_adm_mod
+			duration = -1
+		}
+	}
+	if = {
         limit = {
             FROM = {
                 has_country_flag = ab_france_absolutism_courthouse
@@ -514,25 +592,21 @@ ab_removing_courthouse_effect = {
 		}
 		add_nationalism = 2
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = pap_courthouse_bonus
-			}
-		}
-		add_base_tax = -1
-	}
     if = {
         limit = {
             FROM = {
                 has_country_flag = pap_courthouse_bonus
             }
-            has_province_modifier = arb_egyptian_adm_mod
         }
         add_base_tax = -1
-        remove_province_modifier = arb_egyptian_adm_mod
     }
-    if = {
+	if = {
+		limit = {
+			has_province_modifier = arb_egyptian_adm_mod
+		}
+		remove_province_modifier = arb_egyptian_adm_mod
+	}
+	if = {
         limit = {
             FROM = {
                 has_country_flag = ab_france_absolutism_courthouse
@@ -610,27 +684,31 @@ ab_building_manpower_effect = {
 		}
 	}
 	# ]]]
-	# ABF [[[
-	if = {
+	### ABF Manpower Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Building Manpower buildings now grants -10% dev cost, add mod  
 		limit = {
 			FROM = {
-				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+				has_country_flag = abf_htm_barrack_dev_cost_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_htm_military_housing_mod
+			duration = -1
+		}
+	}
+	## ]]
+	## Tocharia (TCR/SHL/KUC, etc.) [[
+	if = { # 1.) Building Manpower buildings now grants 0.25 Army Tradition  
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_tradition_from_manpower_buildings
 			}
 		}
 		add_army_tradition = 0.25
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = aba_htm_barrack_dev_cost_flag
-			}
-		}
-		add_province_modifier = {
-			name = aba_htm_military_housing
-			duration = -1
-		}
-	}
-	# ]]]
+	## ]]
+	### ]]]
 }
 
 ab_removing_manpower_effect = {
@@ -662,85 +740,93 @@ ab_removing_manpower_effect = {
 		remove_province_modifier = punic_iscine_mod
 	}
 	# ]]]
-	# ABF [[[
-	if = {
+	### ABF Manpower Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Building Manpower buildings now grants -10% dev cost, remove mod   
+		limit = {
+			has_province_modifier = abf_htm_military_housing_mod
+		}
+		remove_province_modifier = abf_htm_military_housing_mod
+	}
+	## ]]
+	## Tocharia (TCR/SHL/KUC, etc.) [[
+	if = { # 1.) Building Manpower buildings now grants 0.25 Army Tradition, remove AT 
 		limit = {
 			FROM = {
-				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+				has_country_flag = abf_tcr_tradition_from_manpower_buildings
 			}
 		}
 		add_army_tradition = -0.25
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = aba_htm_barrack_dev_cost_flag
-			}
-		}
-		remove_province_modifier = aba_htm_military_housing
-	}
-	# ]]]
+	## ]]
+	### ]]]
 }
 
 ab_building_forcelimit_effect = {
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = jap_building_manpower
-            }
-        }
-        add_army_professionalism = 0.001
-    }
-	# ABF [[[
 	if = {
 		limit = {
 			FROM = {
-				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = 0.001
+	}
+	### ABF Forcelimit Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Building Manpower buildings now grants -0.025 autonomy, add mod  
+		limit = {
+			FROM = {
+				has_country_flag = abf_htm_forcelimit_autonomy_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_htm_military_presence_mod
+			duration = -1
+		}
+	}
+	## ]]
+	## Tocharia (TCR/SHL/KUC, etc.) [[
+	if = { # 1.) Building Forcelimit buildings now grants 0.25 Army Tradition, add AT 
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_tradition_from_manpower_buildings
 			}
 		}
 		add_army_tradition = 0.25
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = aba_htm_forcelimit_autonomy_flag
-			}
-		}
-		add_province_modifier = {
-			name = aba_htm_military_presence
-			duration = -1
-		}
-	}
-	# ]]]
+	## ]]
+	### ]]]
 }
 
 ab_removing_forcelimit_effect = {
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = jap_building_manpower
-            }
-        }
-        add_army_professionalism = -0.001
-    }
-	# ABF [[[
 	if = {
 		limit = {
 			FROM = {
-				has_country_flag = ABA_tcr_tradition_from_manpower_buildings
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = -0.001
+	}
+	### ABF Forcelimit Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Building Forcelimit buildings now grants -0.025 autonomy, remove mod  
+		limit = {
+			has_province_modifier = abf_htm_military_presence_mod
+		}
+		remove_province_modifier = abf_htm_military_presence_mod
+	}
+	## ]]
+	## Tocharia (TCR/SHL/KUC, etc.) [[
+	if = { # 1.) Building Forcelimit buildings now grants 0.25 Army Tradition, remove AT 
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_tradition_from_manpower_buildings
 			}
 		}
 		add_army_tradition = -0.25
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_flag = aba_htm_forcelimit_autonomy_flag
-			}
-		}
-		remove_province_modifier = aba_htm_military_presence		
-	}
-	# ]]]
+	## ]]
+	### ]]]
 }
 
 ab_building_shipyard_effect = {
@@ -1071,25 +1157,14 @@ ab_building_road_effect = {
 			duration = -1
 		}
 	}
-    if = {
-        limit = {
-            FROM = {
-                has_country_flag = nnv_building_roads
-            }
-        }
-        add_province_modifier = {
-            name = nnv_assimilating_population
-            duration = -1
-        }
-    }
 	if = {
 		limit = {
 			FROM = {
-				has_country_flag = aba_htm_road_building_bonus
+				has_country_flag = nnv_building_roads
 			}
 		}
 		add_province_modifier = {
-			name = aba_htm_wagon_trade
+			name = nnv_assimilating_population
 			duration = -1
 		}
 	}
@@ -1169,6 +1244,50 @@ ab_building_road_effect = {
 		}
 	}
     # ]]]
+	### ABF Road Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Add road building modifier
+		limit = {
+			FROM = {
+				has_country_flag = abf_htm_road_building_bonus_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_htm_wagon_trade_mod
+			duration = -1
+		}
+	}	
+	## ]]
+	## Tocharia (TCR) [[
+	if = { # 1.) Add road building modifier
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_road_dev_bonus_flag
+			}
+		}
+		add_province_modifier = {
+			name = abf_tcr_road_dev_cost_mod
+			duration = -1
+		}
+	}
+	if = { # 2.) Great Trunk Road
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_great_trunk_road_mechanic_flag
+			}
+			OR = {
+				region = hindusthan_region
+				region = bengal_region
+			}
+			development = 10
+		}
+		add_province_modifier = {
+			name = abf_great_trunk_road_mod
+			duration = -1
+		}
+	}		
+	## ]]
+	### ]]]
 }
 
 ab_removing_road_effect = {
@@ -1178,17 +1297,11 @@ ab_removing_road_effect = {
 		}
 		remove_province_modifier = swa_imperial_builders_province
 	}
-    if = {
-        limit = {
-            has_province_modifier = nnv_assimilating_population
-        }
-        remove_province_modifier = nnv_assimilating_population
-    }
 	if = {
 		limit = {
-			has_province_modifier = aba_htm_wagon_trade
+			has_province_modifier = nnv_assimilating_population
 		}
-		remove_province_modifier = aba_htm_wagon_trade
+		remove_province_modifier = nnv_assimilating_population
 	}
 	# TLW [[[
 	if = {
@@ -1206,6 +1319,30 @@ ab_removing_road_effect = {
 	# ]]]
 	# ABMP
 	wallachia_remove_road_bonus = yes
+	### ABF Road Buildings Effects [[[
+	## Hetmanate (ZAZ/HTM) [[
+	if = { # 1.) Remove road building modifier
+		limit = {
+			has_province_modifier = abf_htm_wagon_trade_mod
+		}
+		remove_province_modifier = abf_htm_wagon_trade_mod
+	}	
+	## ]]
+		## Tocharia (TCR) [[
+	if = { # 1.) Remove road building modifier
+		limit = {
+			has_province_modifier = abf_tcr_road_dev_cost_mod
+		}
+		remove_province_modifier = abf_tcr_road_dev_cost_mod
+	}	
+	if = { # 2.) Remove great trunk road building modifier
+		limit = {
+			has_province_modifier = abf_great_trunk_road_mod
+		}
+		remove_province_modifier = abf_great_trunk_road_mod
+	}	
+	## ]]
+	### ]]]
 }
 
 ab_building_dock_effect = {

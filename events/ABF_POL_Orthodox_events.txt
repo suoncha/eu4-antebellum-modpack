@@ -1,0 +1,746 @@
+namespace = abf_poland_orthodox_event
+
+#The Question of Serfdom
+country_event = {
+	id = abf_poland_orthodox_event.1
+	title = abf_poland_orthodox_event.1.t
+	desc = abf_poland_orthodox_event.1.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	option = { #Free the serfs
+		name = abf_poland_orthodox_event.1.a
+		custom_tooltip = ABF_POL_UNLOCK_SERFDOM_ABOLISHED_ESTATE_PRIVILEGE
+		hidden_effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_nobles_abf_pol_serdom_abolished
+			}
+			set_estate_privilege = estate_nobles_abf_pol_serdom_abolished
+		} 
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_POL_SERFDOM_NOBLE_REBELS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = russia_region
+					development = 10
+				}
+				add_unrest = 5
+			}
+			every_owned_province = {
+				limit = {
+					region = ruthenia_region
+					development = 10
+				}
+				add_unrest = 5
+			}
+			every_owned_province = {
+				limit = {
+					region = poland_region
+					development = 10
+				}
+				add_unrest = 5
+			}
+			for = {
+				amount = 3
+				effect = "
+				random_owned_province = {
+				limit = {
+					development = 10
+					OR = {
+						region = russia_region
+						region = ruthenia_region
+						region = poland_region
+					}
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = 10
+					}
+				}
+			"
+			}
+	    }
+	}
+
+	option = { #Enforce Serfdom
+		name = abf_poland_orthodox_event.1.b
+		set_country_flag = abf_pol_serfdom_enforced
+		custom_tooltip = ABF_POL_UNLOCK_SERFDOM_ENFORCED_ESTATE_PRIVILEGE
+		hidden_effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_nobles_abf_pol_enforced_serfdom
+			}
+			set_estate_privilege = estate_nobles_abf_pol_enforced_serfdom
+		} 
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_POL_SERFDOM_PEASANT_REBBELS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = russia_region
+				}
+				add_unrest = 5
+			}
+			every_owned_province = {
+				limit = {
+					region = ruthenia_region
+				}
+				add_unrest = 5
+			}
+			every_owned_province = {
+				limit = {
+					region = poland_region
+				}
+				add_unrest = 5
+			}
+			for = {
+				amount = 3
+				effect = "
+				random_owned_province = {
+				limit = {
+					OR = {
+						region = russia_region
+						region = ruthenia_region
+						region = poland_region
+					}
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 10
+					}
+				}
+		 	"
+		    }
+	    }
+    }
+}
+
+#Engineering School Event
+country_event = {
+	id = abf_poland_orthodox_event.2
+	title = abf_poland_orthodox_event.2.t
+	desc = abf_poland_orthodox_event.2.d
+	picture = GREAT_BUILDING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = abf_poland_orthodox_event.2.a
+		add_country_modifier = {
+			name = abf_pol_engineering_school
+			duration = -1
+		}
+		if = { 
+			limit = { 
+				295 = { 
+					NOT = { has_building = university } 
+				}
+			}
+			295 = { add_building = university } 
+		}
+		else_if = {
+			limit = { has_dlc = "Rights of Man" } 
+			add_ruler_personality = scholar_personality
+		}
+		else = { 
+			295 = { add_base_tax = 1 } 
+		}
+		hidden_effect = {
+			country_event = {
+				id = abf_poland_orthodox_event.10
+				days = 30
+			}
+		}
+	}
+}
+
+#Embellish Krolewiec
+country_event = {
+	id = abf_poland_orthodox_event.3
+	title = abf_poland_orthodox_event.3.t
+	desc = abf_poland_orthodox_event.3.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = abf_poland_orthodox_event.3.a
+		41 = {
+			add_province_modifier = {
+				name = abf_pol_thriving_center_of_krolewiec
+				duration = -1 
+			}
+			change_culture = ROOT
+			custom_tooltip = AB_EMPTY
+			add_base_production = 1 
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" }
+				add_prosperity = 100 
+			}
+			else = { add_base_tax = 1 }
+		}
+	}
+}
+
+#Role of the Streltsy
+country_event = {
+	id = abf_poland_orthodox_event.4
+	title = abf_poland_orthodox_event.4.t
+	desc = abf_poland_orthodox_event.4.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	is_triggered_only = yes
+
+	option = { #Elite Force
+		name = abf_poland_orthodox_event.4.a
+		add_country_modifier = {
+			name = abf_pol_orthodox_streltsy_elite_force
+			duration = -1
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = abf_pol_orthodox_streltsy_elite_force_limit
+				hidden = yes
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Enmasse force 
+		name = abf_poland_orthodox_event.4.b
+		add_country_modifier = {
+			name = abf_pol_orthodox_streltsy_mass_force
+			duration = -1
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = abf_pol_orthodox_streltsy_mass_force_limit
+				hidden = yes
+				duration = -1
+			}
+		}
+	}
+}
+
+#Assimilation of Silesians
+country_event = {
+	id = abf_poland_orthodox_event.5
+	title = abf_poland_orthodox_event.5.t
+	desc = abf_poland_orthodox_event.5.d
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	trigger = {
+		has_country_flag = abf_pol_orthodox_embraced_east
+		OR = {
+			tag = POL
+			was_tag = POL
+		}
+		primary_culture = abf_polish_eastern
+		owns_all_provinces = {
+			culture = schlesian
+		}
+		is_year = 1500
+		silesia_area = {
+			type = all
+			owned_by = ROOT
+		}
+		silesia_area = {
+			type = all
+			religion = ROOT
+		}
+		silesia_area = {
+			type = all
+			NOT = {
+				local_autonomy = 1
+			}
+		}
+		silesia_area = {
+			type = all
+			NOT = {
+				nationalism = 1
+			}
+		}
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.5.a
+		every_owned_province = {
+			limit = {
+				culture = schlesian
+			}
+			change_culture = abf_polish_eastern
+		}
+	}
+}
+
+#Assimilation of Pomeranians
+country_event = {
+	id = abf_poland_orthodox_event.6
+	title = abf_poland_orthodox_event.6.t
+	desc = abf_poland_orthodox_event.6.d
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	trigger = {
+		has_country_flag = abf_pol_orthodox_embraced_east
+		OR = {
+			tag = POL
+			was_tag = POL
+		}
+		primary_culture = abf_polish_eastern
+		owns_all_provinces = {
+			culture = pommeranian
+		}
+		is_year = 1500
+		neumark_area = {
+			type = all
+			owned_by = ROOT
+		}
+		neumark_area = {
+			type = all
+			religion = ROOT
+		}
+		neumark_area = {
+			type = all
+			NOT = {
+				local_autonomy = 1
+			}
+		}
+		neumark_area = {
+			type = all
+			NOT = {
+				nationalism = 1
+			}
+		}
+		hinter_pommern_area = {
+			type = all
+			owned_by = ROOT
+		}
+		hinter_pommern_area = {
+			type = all
+			religion = ROOT
+		}
+		hinter_pommern_area = {
+			type = all
+			NOT = {
+				local_autonomy = 1
+			}
+		}
+		hinter_pommern_area = {
+			type = all
+			NOT = {
+				nationalism = 1
+			}
+		}
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.6.a
+		every_owned_province = {
+			limit = {
+				culture = pommeranian
+			}
+			change_culture = abf_polish_eastern
+		}
+	}
+}
+
+#The Birth of Lendia
+country_event = {
+	id = abf_poland_orthodox_event.7
+	title = abf_poland_orthodox_event.7.t
+	desc = abf_poland_orthodox_event.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 0 } 
+		name = abf_poland_orthodox_event.7.a
+		set_country_flag = pol_unlocked_lendia_rename
+		custom_tooltip = POL_UNLOCK_LENDIA
+		custom_tooltip = AB_EMPTY
+		poland_region = {
+			add_nationalism = -20
+		}
+		unify_polish_cultures_effect = yes
+		add_ruler_modifier = {
+			name = "pol_father_of_lendia"
+			duration = -1
+		}
+		custom_tooltip = ABF_POL_ORTHODOX_NO_RUS_TT
+
+	}
+
+	option = {
+		name = abf_poland_orthodox_event.7.b
+		ai_chance = { factor = 100 } 
+		set_country_flag = abf_pol_orthodox_embraced_east
+		set_country_flag = ABF_pol_orthodox_rus_culture_spread
+		tooltip = {
+			change_tag = LCT
+		}
+		custom_tooltip = ABF_POL_ORTHODOX_NO_INTERMARIUM_TT
+		if = {
+ 			limit = { has_custom_ideas = no }
+ 			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = ABF_POL_UNIFY_POLISH_EAST_SLAVIC_TT
+		poland_region = {
+			add_nationalism = -20
+		}
+		tooltip = {
+			add_ruler_modifier = {
+				name = "pol_father_of_lendia"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			change_primary_culture = abf_polish_eastern
+			set_ruler_culture = abf_polish_eastern
+			set_heir_culture = abf_polish_eastern
+			every_province = {
+					limit = {
+						culture = polish
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Vistulan
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Lendian
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Polan
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Mazovian
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				add_ruler_modifier = {
+					name = "pol_father_of_lendia"
+					duration = -1
+				}
+				change_tag = LCT
+			}
+		}
+	}
+
+
+#Move Capital
+country_event = {
+	id = abf_poland_orthodox_event.8
+	title = abf_poland_orthodox_event.8.t
+	desc = abf_poland_orthodox_event.8.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	
+	option = { #Keep Capital
+		name = abf_poland_orthodox_event.8.a
+		capital_scope = {
+			add_province_modifier = {
+				name = abf_pol_orthodox_new_capital_modifier
+				duration = -1 
+			}
+			add_base_production = 2
+			add_base_tax = 2
+			add_base_manpower = 2
+		}
+		set_country_flag = abf_pol_orthodox_new_capital_decision_relocated
+	}
+
+	option = { #Kyiv
+		name = abf_poland_orthodox_event.8.b
+
+		trigger = {
+			owns = 280
+			280 = {
+				is_capital = no
+			}
+			has_country_flag = pol_moved_capital # Block Vanilla/AB Move capital to Kyiv Decision
+		}
+
+		set_capital = 280
+		280 = {
+			change_culture = ROOT
+			add_base_production = 1
+			add_base_tax = 1
+			add_base_manpower = 1
+		}
+		set_country_flag = abf_pol_orthodox_new_capital_decision_relocated
+		clr_country_flag = pol_moved_capital # Block Vanilla/AB Move capital to Kyiv Decision
+		
+	}
+
+	option = { #Novgorod 
+		name = abf_poland_orthodox_event.8.c
+
+		trigger = {
+			owns = 310
+			310 = {
+				is_capital = no
+			}
+		}
+		set_capital = 310
+		310 = {
+			change_culture = ROOT
+			add_base_production = 1
+			add_base_tax = 1
+			add_base_manpower = 1
+		}
+		set_country_flag = abf_pol_orthodox_new_capital_decision_relocated
+		
+	}
+
+	option = { #Moscow
+		name = abf_poland_orthodox_event.8.e
+
+		trigger = {
+			owns = 295
+			295 = {
+				is_capital = no
+			}
+		}
+		set_capital = 295
+		295 = {
+			change_culture = ROOT
+			add_base_production = 1
+			add_base_tax = 1
+			add_base_manpower = 1
+		}
+		set_country_flag = abf_pol_orthodox_new_capital_decision_relocated
+		
+	}
+
+	option = { #Warsaw
+		name = abf_poland_orthodox_event.8.f
+
+		trigger = {
+			owns = 257
+			257 = {
+				is_capital = no
+			}
+		}
+
+		set_capital = 257
+		257 = {
+			add_province_modifier = {
+				name = abf_pol_orthodox_new_capital_modifier
+				duration = -1 
+			}
+			change_culture = ROOT
+			custom_tooltip = AB_EMPTY
+			add_base_production = 2
+			add_base_tax = 2
+			add_base_manpower = 2
+		}
+		set_country_flag = abf_pol_orthodox_new_capital_decision_relocated
+	}
+}
+
+#Nakazy system
+country_event = {
+	id = abf_poland_orthodox_event.9
+	title = abf_poland_orthodox_event.9.t
+	desc = abf_poland_orthodox_event.9.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = abf_poland_orthodox_event.9.a
+		add_stability = 1
+		custom_tooltip = AB_EMPTY
+		change_government_reform_progress = 50
+	}
+}
+
+#Mikhail Lomonosov
+country_event = {
+	id = abf_poland_orthodox_event.10
+	title = abf_poland_orthodox_event.10.t
+	desc = abf_poland_orthodox_event.10.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = abf_poland_orthodox_event.10.a
+		define_advisor = {
+			type = natural_scientist
+			name = "Mikhail Lomonosov"
+			culture = abf_polish_eastern
+			religion = orthodox
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+#Bogdan Khmelnitskiy
+country_event = {
+	id = abf_poland_orthodox_event.11
+	title = abf_poland_orthodox_event.11.t
+	desc = abf_poland_orthodox_event.11.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		ai = no
+		ROOT = {
+			owns = 283
+		}
+		OR = {
+			tag = LUD
+			was_tag = LUD
+			tag = PLN
+			was_tag = PLN
+		}
+		NOT = {
+			has_country_flag = abf_pol_orthodox_bogdan_unlocked
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.11.a
+		define_general = {
+			name = "Bogdan Khmelnitskiy"
+			fire = 2
+			shock = 3
+			manuever = 3
+			siege = 1
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = abf_pol_orthodox_bogdan_unlocked
+		capital_scope = {
+			for = {
+				amount = 5
+				effect = "
+					cossack_cavalry = ROOT
+				"
+			}
+		}
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.11.b
+		define_advisor = {
+			type = grand_captain
+			name = "Bogdan Khmelnitskiy"
+			skill = 2
+			religion = ROOT
+			culture = ROOT
+			cost_multiplier = 0.5
+		}
+		custom_tooltip = AB_EMPTY
+		capital_scope = {
+			for = {
+				amount = 5
+				effect = "
+					cossack_cavalry = ROOT
+				"
+			}
+		}
+		set_country_flag = abf_pol_orthodox_bogdan_unlocked
+	}
+}
+
+#Jan III Sobieski
+country_event = {
+	id = abf_poland_orthodox_event.12
+	title = abf_poland_orthodox_event.12.t
+	desc = abf_poland_orthodox_event.12.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		ai = no
+		ROOT = {
+			owns = 2961
+		}
+		OR = {
+			tag = LUD
+			was_tag = LUD
+			tag = PLN
+			was_tag = PLN
+		}
+		NOT = {
+			has_country_flag = abf_pol_orthodox_sobieski_unlocked
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.12.a
+		define_general = {
+			name = "Jan III Sobieski"
+			fire = 2
+			shock = 3
+			manuever = 3
+			siege = 2
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = abf_pol_orthodox_sobieski_unlocked
+		capital_scope = {
+			for = {
+				amount = 5
+				effect = "
+					hussars_cavalry = ROOT
+				"
+			}
+		}
+	}
+	
+	option = {
+		name = abf_poland_orthodox_event.12.b
+		define_advisor = {
+			type = commandant
+			name = "Jan III Sobieski"
+			skill = 2
+			religion = ROOT
+			culture = ROOT
+			cost_multiplier = 0.5
+		}
+		custom_tooltip = AB_EMPTY
+		capital_scope = {
+			for = {
+				amount = 5
+				effect = "
+					hussars_cavalry = ROOT
+				"
+			}
+		}
+		set_country_flag = abf_pol_orthodox_sobieski_unlocked
+	}
+}
+
+

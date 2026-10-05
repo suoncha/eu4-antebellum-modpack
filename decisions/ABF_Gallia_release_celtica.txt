@@ -1,0 +1,51 @@
+ country_decisions = {
+	
+	abf_gal_release_celt_decision = {
+ 		major = yes
+		potential = {
+			ai = no
+			has_country_flag = abf_gal_release_celt_dec
+			NOT = { exists = CLT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = british_isles_region
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		allow = {
+		}
+		effect = {
+			clr_country_flag = abf_gal_release_celt_dec
+			custom_tooltip = ABF_RELEASE_CELTICA_DECISION_TT
+			hidden_effect = {
+				british_isles_region = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_core = CLT
+					remove_core = ROOT
+				}
+				release = CLT
+				create_union = CLT
+				CLT = {
+					set_capital = 234
+					set_government_rank = 2
+					add_government_reform = feudalism_reform
+					add_manpower = 10
+ 					add_treasury = 100
+					add_liberty_desire = -50
+					change_religion = ROOT
+					change_primary_culture = briton
+					set_country_flag = abf_brittonic_culture_spread
+					capital_scope = {
+						change_religion = ROOT
+					}
+				}
+			}
+ 		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

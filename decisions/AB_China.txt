@@ -53,19 +53,21 @@ country_decisions = {
 				mission_completed = jsn_industry
 				mission_completed = jsn_koreana
 			}
+			### ABF modified potential block [[[
 			else_if = {
 				limit = {
 					OR = {
-					tag = SLH
-					tag = KRR
-					tag = KUC
-					was_tag = SLH
-					was_tag = KRR
-					was_tag = KUC
+						tag = SLH
+						tag = KRR
+						tag = KUC
+						was_tag = SLH
+						was_tag = KRR
+						was_tag = KUC
 					}
 				}
 				mission_completed = tcr_workshop_of_world
 			}
+			### ]]]
 			else = {
 				mission_completed = china_dragon
 				mission_completed = china_tiger

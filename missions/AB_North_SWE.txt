@@ -814,8 +814,8 @@ ab_sweden_slot1 = {
 		
 		effect = {
 			4163 = {
-				change_province_name = "Gï¿½teborg"
-				rename_capital = "Gï¿½teborg"
+				change_province_name = "Göteborg"
+				rename_capital = "Göteborg"
 			}
 			4163 = {
 				add_province_modifier = {
@@ -1318,10 +1318,12 @@ ab_sweden_slot2 = {
 		effect = {
 			set_country_flag = swe_release_teuton
 			set_country_flag = swe_release_livonia
-			set_country_flag = aba_swe_aibofolke_culture_spread
 			custom_tooltip = SWE_RELEASE_ORDERS
+			### ABF [[[
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = aba_swe_swe_aibofolke_culture_spread_tt
+			set_country_flag = abf_swe_aibofolke_culture_spread
+			custom_tooltip = ABF_AIBOFOLKE_CULTURE_SPREAD_TT
+			# ]]]
 		}
 	}
 	
@@ -2519,8 +2521,8 @@ ab_sweden_slot4_second = {
 		
 		effect = {
 			33 = {
-				change_province_name = "Nï¿½teborg"
-				rename_capital = "Nï¿½teborg"
+				change_province_name = "Nöteborg"
+				rename_capital = "Nöteborg"
 			}
 			33 = {
 				add_base_tax = 2
@@ -2578,10 +2580,14 @@ ab_sweden_slot4_second = {
 			}
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = novgorodian dip_reward = yes }
+			### ABF - changed mission rewards and presentation [[[
 			310 = {
 				change_province_name = "Holmgard"
 				rename_capital = "Holmgard"
+				custom_tooltip = AB_EMPTY
+				change_culture = abf_varangians_culture
+				change_religion = ROOT
+				custom_tooltip = AB_EMPTY
 				if = {
 					limit = {
 						NOT = { province_has_center_of_trade_of_level = 2 }
@@ -2591,8 +2597,11 @@ ab_sweden_slot4_second = {
 				else = {
 					custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
 				}
-				change_religion = ROOT
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_varangians_culture
+			custom_tooltip = ABF_VARANGIAN_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -2878,23 +2887,23 @@ ab_sweden_slot5 = {
 		}
 		
 		effect = {
-			custom_tooltip = SWE_ORDER
+			### ABF - Modified Mission reward and presentation of previous rewards [[[
+			add_country_modifier = {
+				name = "swe_orders"
+				duration = -1
+			}
+			custom_tooltip = ABF_SWE_PALADINS_TT
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = aba_SWE_carolean_paladins_tooltip
-			add_country_modifier = {
-				name = swe_orders
-				duration = -1
-			}
-			add_country_modifier = {
-				name = aba_swe_caroleans
-				hidden = yes
-				duration = -1
-			}
-
+			custom_tooltip = SWE_ORDER
             hidden_effect = {
+				add_country_modifier = { 
+					name = abf_swe_caroleans_mod
+					hidden = yes
+					duration = -1
+				}
 				capital_scope = {
 					add_province_modifier = {
-						name = aba_swe_caroleans_prov
+						name = abf_swe_caroleans_prov
 						hidden = yes
 						duration = -1
 					}
@@ -2911,6 +2920,7 @@ ab_sweden_slot5 = {
                     "
                 }
             }
+			### ]]]
 		}
 	}
 
@@ -3001,7 +3011,7 @@ ab_sweden_slot5 = {
 		}
 		
 		effect = {
-			add_adm_power = 100
+			### ABF - modified rewards and presentation [[[
 			custom_tooltip = SWE_GRAND_DUCHY
 			tooltip = {
 				add_province_modifier = {
@@ -3016,8 +3026,8 @@ ab_sweden_slot5 = {
 					duration = 5475
 				}
 			}
-			custom_tooltip = aba_swe_move_finnish_culture_tooltip
-			set_country_flag = aba_swe_finnish_culture_spread
+			set_country_flag = abf_finnish_culture_spread
+			custom_tooltip = ABF_FINNISH_SCAN_CULTURE_SPREAD_TT
 			custom_tooltip = AB_EMPTY
 			karelia_area = {
 				limit = {
@@ -3031,12 +3041,11 @@ ab_sweden_slot5 = {
 					limit = {
 						culture = finnish
 					}
+					change_culture = abf_finnish_new_culture
 					add_province_modifier = {
 						name = swe_pagans
 						duration = 5475
 					}
-					change_culture = finnish_new_culture
-					
 				}
 				finland_area = {
 					limit = { owned_by = ROOT }
@@ -3053,6 +3062,7 @@ ab_sweden_slot5 = {
 					}
 				}
 			}
+			### ]]]
 		}
 	}
 	
@@ -3072,15 +3082,26 @@ ab_sweden_slot5 = {
 				which = discipline
 				value = 0.1
 			}
-			num_of_owned_provinces_with = {
-				culture = finnish
-				has_manpower_building_trigger = yes
-				value = 5
+			### ABF - modified mission trigger conditions [[[
+			custom_trigger_tooltip = {
+				tooltip = ABF_SWE_FIN_MERC_COMPANY_TRIGGER
+				num_of_owned_provinces_with = {
+					OR = {
+						culture = finnish
+						culture = abf_finnish_new_culture
+					}
+					has_manpower_building_trigger = yes
+					value = 5
+				}
 			}
+			### ]]]
 		}
 		effect = {
 			add_army_professionalism = 0.05
+			### ABF - modified presentation [[[
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = LIT_FIN_COMPANY
+			### ]]]
 		}
 	}
 	
