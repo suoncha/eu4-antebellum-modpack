@@ -281,9 +281,11 @@ ab_brandenburg_first = {
 					desc = litc_crown_poland
 				}
 			}
-			set_country_flag = aba_ger_weichseldeutsche_spread
-			custom_tooltip = GER_weichseldeutsche_tooltip_2
+			### ABF - new culture spread reward [[[
+			set_country_flag = abf_ger_weichseldeutsche_spread
+			custom_tooltip = ABF_GER_WEICHSELDEUTSCHE_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			ruthenia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -325,15 +327,20 @@ ab_prussia_first = {
 		}
 		
 		effect = {
+			### ABF - new culture spread reward and reformatting [[[
 			add_army_professionalism = 0.1
+			custom_tooltip = AB_EMPTY
 			set_country_flag = bra_expansionist_zealotry_buff
 			custom_tooltip = SWA_HOLY_WAR_ESTATE_BUFF
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = GER_ruthenian_germanic_cultures_tooltip
-			set_country_flag = wolgadeutsche_culture_spread
-			set_country_flag = schwarzmeerdeutsche_culture_spread
-			set_country_flag = aba_ger_russlanddeutsche_spread
-			set_country_flag = aba_ger_wolhynien_spread
+			set_country_flag = abf_ger_russlanddeutsche_spread
+			set_country_flag = abf_ger_wolhynien_spread
+			custom_tooltip = ABF_GER_GEN_RUTHENIAN_CULTURES_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_wolgadeutsche_culture_spread
+			set_country_flag = abf_schwarzmeerdeutsche_culture_spread
+			custom_tooltip = ABF_GER_GEN_STEPPE_CULTURES_SPREAD_TT
+			custom_tooltip = AB_EMPTY
 			ruthenia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -341,6 +348,7 @@ ab_prussia_first = {
 				}
 				add_permanent_claim = ROOT
 			}
+			### ]]]
 		}
 	}	
 }
@@ -774,12 +782,15 @@ ab_prussia_second = {
 		}
 		
 		effect = {
-			set_country_flag = pru_baltic_spread
-			custom_tooltip = PRU_BALTEN_CULTURE_SPREAD
+			### ABF - reformatting [[[
 			add_country_modifier = {
 				name = "pru_sustain_ostsiedlung"
 				duration = 5475
 			}
+			set_country_flag = pru_baltic_spread
+			custom_tooltip = PRU_BALTEN_CULTURE_SPREAD
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					NOT = {

@@ -202,17 +202,38 @@ monarchy = {
 				# France
 				fraelective
 				# ]]]
-				# [[[ ABA governments
-				aba_shahi_diwan
-				aba_GLH_golden_tsardom
-				ABA_danubian_federation
-				ABA_kushan_confederacy
-				ABA_tcr_persianempire
-				ABA_tcr_yuezhi_warlord
-				ABA_tcr_celestial_empire
-				aba_pol_catholic_commonwealth_of_crowns
-				aba_crownpoland
-				# ]]]
+				### ABF Monarchist T1 [[[
+				#---SHH---#
+					# Shahi Diwan - Monarchist Verison
+				abf_shahi_diwan
+				#---------#
+				#---PLN:POL:PLC_Catholic----#
+					# ABF Crown of Poland + Mechanic Reform
+				abf_crownpoland
+					# Commonwealth of Crowns
+				abf_pol_catholic_commonwealth_of_crowns
+				#-----------------#
+				#---ZNN (ROB/ZUN)----#
+					# Persianate Radiant State - Radiance + Ottoman gov reforms
+				abf_znn_persinate_radiant_state_reform
+				#-----------------#
+				#---TCR----#
+				#-Indian Path/Kushans-#
+					# Kushan confederacy reform
+				ABF_tcr_kushan_confederacy
+				#-#
+				#-Persian Path/Bactrian-#
+					# Persianate Empire
+				ABF_tcr_persianempire
+				###
+				#-Chinese Path/Yuezhi-#
+					#Warlord State, starting reform + Chinese assimilation mechanic
+				ABF_tcr_yuezhi_warlord 
+					# Celestial Empire final reform 
+				ABF_tcr_celestial_empire 
+				###
+				#-----------------#
+				### ]]]
 			}
 		}
 		hereditary_vs_nobility = {
@@ -340,13 +361,21 @@ monarchy = {
 				bav_council_of_eight
 				mgygyula
 				# ]]]
+				### ABF Monarchist T2 [[[
+				#---ROB/ZUN----#
+					# Tribal loyalties - similar to GHU
+				abf_znn_tribal_loyalties_reform
+				#-----------------#
+				#---Tocharia/TCR----#
+				# China/Yuezhi
+					# Ordu reform
+				abf_tcr_ordu_reform
+				#-----------------#
+                ### ]]]
 			}
 		}
 		bureaucracy = {
 			reforms = {
-				### ABA ### [[
-				aba_pol_catholic_henrician_articles
-				#]]
 				centralize_reform
 				centralize_empire_reform
 				decentralize_reform
@@ -481,6 +510,18 @@ monarchy = {
 				ger_state_captains_reform
 				holy_imperial_monarchy_reform
 				# ]]]
+				### ABF Monarchist T3 [[[
+				#---PLN:POL:PLC_Catholic----#
+					# Henrician Articles
+                abf_pol_catholic_henrician_articles
+                #-----------------#
+				#---Tocharia:TCR:SLH:KUC:KRR/Shared Path----#
+					# Syncretic Bureaucracy 
+                abf_tcr_syncretic_bureacracy_reform
+					# India Path - Buffed Syncretic Bureaucracy
+				abf_kushan_syncretic_adminstration_reform
+                #-----------------#
+				### ]]]
 			}
 		}
 		military_doctrines = {
@@ -648,9 +689,20 @@ monarchy = {
 				blt_forest_warfare
 				blt_pulka_system
 				# ]]]
-				#ABA 
-				aba_pol_catholic_husaria_buffed
-				# ]]]
+				### ABF Mil T4 [[[
+				#---PLN:POL:PLC_Catholic----#
+					# Husaria Buffed
+				abf_pol_catholic_husaria_buffed
+				#-----------------#
+				#---ZUN/ROB----#
+					# Indo-Afghan Rajputs
+				abf_znn_governmental_indo_afghan_rajputs
+				#-----------------#
+				#---Tocharia/TCR----#
+					# Yuezhi Eight Banners
+				abf_tcr_china_eight_banners_reform
+				#-----------------#
+				### ]]]
 			}
 		}
 		state_and_religion = {
@@ -711,6 +763,22 @@ monarchy = {
 				# Baltic
 				est_harmony
 				# ]]]
+				### ABF Religious Monarchist T5 [[[
+				#---ZUN/ROB----#
+					# Zunist-Syncretism
+				abf_znn_religious_syncretism_reform
+				#-----------------#
+				#---Tocharia/TCR----#
+				 #--Shared--#
+					# Tolerance
+				abf_tcr_all_religious_tolerance_reform
+				abf_tcr_all_religious_tolerance_buffed_reform
+					# One Faith
+				abf_tcr_one_faith_reform
+				abf_tcr_one_faith_buffed_reform
+				 #---------#
+				#-----------------#
+				### ]]]
 			}
 		}
 		growth_of_administration = {
@@ -781,6 +849,17 @@ monarchy = {
 				# Blood and Iron
 				reformed_landstande_reform
 				# ]]]
+				### ABF T6 [[[
+				#---Tocharia (TCR)----#
+				#---India Path---#
+					# Maratha Bureaucrats
+				abf_tcr_kushan_maratha_confederacy_reform
+				#-----------------#
+				#---Persia Path---#
+					# Turkic Legacy
+				abf_tcr_persia_turkic_legacy_reform
+				#-----------------#
+				### ]]]
 			}
 		}
 		deliberative_assembly = {
@@ -841,6 +920,14 @@ monarchy = {
 				# pol
 				polestablishsejm
 				# ]]]
+				### ABF Assembly Monarchist T7 [[[
+				#---Tocharia/TCR----#
+				 #--Persia/Bactria--#
+					# Divine Authority
+				abf_tcr_per_divine_authority_reform
+				 #---------#
+				#-----------------#
+				### ]]]
 			}
 		}
 		economical_matters = {
@@ -893,6 +980,14 @@ monarchy = {
 				# AB 1.9
 				slv_princes_stone_ceremony
 				# ]]]
+				### ABF T9 Monarchist Reform [[[
+				#---Tocharia (TCR)----#
+				#---Persian Path----#
+					# Macedonian Heritage 
+				abf_tcr_per_macedonian_heritage_reform
+				#-----------------#
+				#-----------------#
+				### ]]]
 			}
 		}
 		absolute_rule_vs_constitutional = {
@@ -983,9 +1078,20 @@ monarchy = {
 				polthirdrome
 				polonenationunderthegods
 				# ]]]
-				# ABA
-				aba_pol_catholic_republic_of_three_nations_reform
-				# ]]]
+				### ABF Monarchist T11 [[[
+				#---PLN:POL:PLC_Catholic----#
+					# Prometheism
+				abf_pol_catholic_republic_of_three_nations_reform
+				#-----------------#
+				#---Tocharia/TCR: China Path----#
+					# Sino-Yuezhi Spirit
+				abf_tcr_sino_yuezhi_spirit_reform
+					# Greco-Iranian Spirit
+				abf_tcr_per_greco_iranian_spirit_reform
+					# Aryan Spirit
+				abf_tcr_kushan_aryan_spirit_reform
+				#-----------------#
+				### ]]]
 			}
 		}
 	}
@@ -1237,9 +1343,12 @@ republic = {
 				fragrandrepublic
 				fradictatorialconsulship
 				# ]]]
-				# ABA ]]]
-				aba_hetmanate_buffed
-				# ]]]
+				### ABF Republican T1 [[[
+				#---ZAZ/Hetmanate---#
+					# ABF Hetmanate + Mechanic
+				abf_hetmanate_buffed
+				#---------#
+				### ]]]
 			}
 		}
 		republican_virtues = {
@@ -1292,9 +1401,12 @@ republic = {
 				# Blood and Iron
 				bav_council_of_eight
 				# ]]]
-				# ABA ]]]
-				aba_htm_refuge_buffed
-				# ]]]
+				### ABF Republican T2 [[[
+				#---ZAZ/Hetmanate---#
+					# Refuge buffed
+				abf_htm_refuge_buffed
+				#---------#
+				### ]]]
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -1468,9 +1580,12 @@ republic = {
 				ab_condottiero_reform
 				rhl_imperial_guards
 				# ]]]
-				# ABA ]]]
-				aba_htm_cossacks_registry_reform
-				# ]]]
+				### ABF Republican T4 [[[
+				#---ZAZ/Hetmanate---#
+					# ABF Cossack Regis. Reform
+				abf_htm_cossacks_registry_reform
+				#---------#
+				### ]]]
 			}
 		}
 		republic_and_religion = {
@@ -1543,9 +1658,12 @@ republic = {
 				enforced_autocracy_reform
 				#1.37
 				seven_provinces_reform
-				## ABA ]]]]
-				aba_htm_regimental_rule
-				### ]]]]
+				### ABF Republican T6 [[[
+				#---ZAZ/Hetmanate---#
+					# Regimental Rule + Orders reform
+				abf_htm_regimental_rule
+				#---------#
+				### ]]]
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -1565,9 +1683,12 @@ republic = {
 				htm_kurin
 				ab_roman_provinces
 				# ]]]
-				# ABA ]]]
-				aba_htm_kurin_buffed
-				# ]]]
+				### ABF Republican T7 [[[
+				#---ZAZ/Hetmanate---#
+					# Kurin Buffed
+				abf_htm_kurin_buffed
+				#---------#
+				### ]]]
 			}
 		}
 		economical_matters_republic = {
@@ -1604,11 +1725,16 @@ republic = {
 				# Baltic
 				blt_amber_trade_charter
 				# ]]]
-				# ABA ]]]
-				aba_htm_urbanization
-				aba_htm_agrarianism
-				aba_htm_mixed_economy
-				#]]]
+				### ABF Republican T8 [[[
+				#---ZAZ/Hetmanate---#
+					# Urbanization
+				abf_htm_urbanization
+					# Agrarianism
+				abf_htm_agrarianism
+					# Mixed Eco
+				abf_htm_mixed_economy
+				#---------#
+				### ]]]
 			}
 		}
 		consolidation_of_power_category = {
@@ -1662,9 +1788,12 @@ republic = {
 				hansacolonial
 				htm_council
 				# ]]]
-				# ABA [[[
-				aba_htm_council_buffed
-				# [[[
+				### ABF Republican T11 [[[
+				#---ZAZ/Hetmanate---#
+					# Council Buffed
+				abf_htm_council_buffed
+				#---------#
+				### ]]]
 			}
 		}
 		office_selection = {
@@ -1675,11 +1804,15 @@ republic = {
 				pirate_representation_reform
 				# AB [[[
 				ottoman_lodge
-				# ]]]
-				# ABA [[[
-				aba_htm_cossack_meritocracy 
-				aba_htm_starshyna_oligarchy
-				# ]]] 
+				# ]]]	
+				### ABF Republican T12 [[[
+				#---ZAZ/Hetmanate---#
+					# Cossack Meritocracy
+				abf_htm_cossack_meritocracy 
+					# Starshyna Oligarchy
+				abf_htm_starshyna_oligarchy
+				#---------#
+				### ]]]
 			}
 		}
 		question_of_dictatorship = {
@@ -1781,7 +1914,6 @@ tribal = {
 	reform_levels = {
 		tribal_administration = {
 			reforms = {
-				aba_shahi_diwan_tribal
 				steppe_horde
 				tribal_federation
 				tribal_despotism
@@ -1806,6 +1938,12 @@ tribal = {
 				grh_ashen_horde_reform
 				magyar_tribal_union
 				# ]]]
+				### ABF Tribal T1 [[[
+				#---SHH---#
+					# Shahi Diwan - Tribal Version
+				abf_shahi_diwan_tribal
+				#------#
+				### ]]]
 			}
 		}
 		tribal_cultural_values = {

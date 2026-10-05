@@ -285,11 +285,24 @@ ger_first_group = {
 		}
 		
 		effect = {
-			custom_tooltip = AB_GER_ADM_OST
+			### ABF - new culture spread reward and formatting modification [[[
 			add_country_modifier = {
 				name = "ger_die_ostsiedlung"
 				duration = -1
 			}
+			# Set new culture spread [[[
+			set_country_flag = abf_wolgadeutsche_culture_spread
+			set_country_flag = abf_schwarzmeerdeutsche_culture_spread
+			set_country_flag = abf_donauschwaben_culture_spread
+			set_country_flag = abf_mantaken_culture_spread
+			set_country_flag = abf_ger_weichseldeutsche_spread
+			set_country_flag = abf_ger_russlanddeutsche_spread
+			set_country_flag = abf_ger_wolhynien_spread
+			set_country_flag = abf_ger_jugoslawienschwaben_spread
+			custom_tooltip = ABF_GERMANIZE_SLAVS_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			# ]]] 
+			custom_tooltip = AB_GER_ADM_OST
 			hidden_effect = {
 				for = {
 					amount = 10
@@ -317,6 +330,7 @@ ger_first_group = {
 					id = ab_achiev.90
 				}
 			}
+			### ]]]
 		}
 	}
 	
@@ -777,6 +791,9 @@ ger_second_group = {
 		effect = {
 			custom_tooltip = GER_WENDIA_CONVERT
 			set_country_flag = ger_convert_wendia
+			### ABF - formatting modification [[[
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			west_prussia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -848,6 +865,28 @@ ger_second_group = {
 			country_event = { id = ab_brapru.8 }
 			custom_tooltip = AB_EMPTY
 			give_claims = { region = poland_region }
+			### ABF - conditional [[[
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							has_country_flag = bra_ostsiedlung_flag
+						}
+						NOT = {
+							has_country_flag = hansa_germanization_wendia_flag
+						}
+					}
+				}
+				custom_tooltip = ABF_GER_UNLOCKED_CULTURE_SPREAD_YES
+				set_country_flag = bra_ostsiedlung_flag
+				custom_tooltip = ABF_GER_OSTSIEDLUNG
+			}
+			else = {
+				custom_tooltip = ABF_GER_UNLOCKED_CULTURE_SPREAD_NO
+				custom_tooltip = ABF_GER_OSTSIEDLUNG
+			}
+			### ]]]
 		}
 	}
 	
@@ -988,6 +1027,31 @@ ger_second_group = {
 					id = ab_achiev.90
 				}
 			}
+			### ABF - conditional [[[
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							has_country_flag = pru_baltic_spread
+						}
+						NOT = {
+							has_country_flag = hansa_germanization_baltic_flag
+						}
+						NOT = {
+							has_country_flag = ab_teu_christianize_baltic
+						}
+					}
+				}
+				custom_tooltip = ABF_GER_UNLOCKED_CULTURE_SPREAD_YES
+				set_country_flag = pru_baltic_spread
+				custom_tooltip = PRU_BALTEN_CULTURE_SPREAD
+			}
+			else = {
+				custom_tooltip = ABF_GER_UNLOCKED_CULTURE_SPREAD_NO
+				custom_tooltip = PRU_BALTEN_CULTURE_SPREAD
+			}
+			### ]]]
 		}
 	}
 	
@@ -1438,10 +1502,6 @@ ger_third_group = {
                     culture_group = united_germanic
                 }
                 custom_tooltip = GER_CONVERT_CZECHS_NEW
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = aba_GER_hungarian_cultures
-			    set_country_flag = donauschwaben_culture_spread
-			    set_country_flag = mantaken_culture_spread
                 hidden_effect = {
                     every_owned_province = {
                         limit = {
@@ -1453,10 +1513,6 @@ ger_third_group = {
             }
             else = {
                 custom_tooltip = GER_CONVERT_CZECHS
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = aba_GER_hungarian_cultures
-			    set_country_flag = donauschwaben_culture_spread
-			    set_country_flag = mantaken_culture_spread
                 hidden_effect = {
                     every_owned_province = {
                         limit = {
@@ -1529,8 +1585,8 @@ ger_third_group = {
 				}
 			}
 			41 = {
-				change_province_name = "Kï¿½nigsberg"
-				rename_capital = "Kï¿½nigsberg"
+				change_province_name = "Königsberg"
+				rename_capital = "Königsberg"
 			}
 			custom_tooltip = AB_EMPTY
 			41 = {
@@ -2358,39 +2414,6 @@ ger_fourth_group = {
 				replace_culture_with_effect = {
 					new_culture = Outremer_united_germanic
 					old_culture_1 = Outremer_germanic
-				}
-				#ABF New Cultures switch
-				replace_culture_with_effect = {
-					new_culture = schwarzmeerdeutsche_culture_new
-					old_culture_1 = schwarzmeerdeutsche_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = donauschwaben_culture_new
-					old_culture_1 = donauschwaben_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = mantaken_culture_new
-					old_culture_1 = mantaken_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = olender_culture_new
-					old_culture_1 = olender_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = jugoslawienschwaben_culture_new
-					old_culture_1 = jugoslawienschwaben_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = wolhynien_culture_new
-					old_culture_1 = wolhynien_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = weichseldeutsche_culture_new
-					old_culture_1 = weichseldeutsche_culture
-				}
-				replace_culture_with_effect = {
-					new_culture = russlanddeutsche_culture_new
-					old_culture_1 = russlanddeutsche_culture
 				}
 			}
 			hidden_effect = {
@@ -4080,6 +4103,11 @@ ger_fifth_group_styria = {
 					}
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
+			}
 		} 
 	}
 }
@@ -4212,6 +4240,11 @@ ger_fifth_group_tirol = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = jap_gain_access_to_naval_hegemon_tt
 			set_country_flag = jap_halve_naval_hegemony_requirements
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
+			}
 		}
 	}
 }
@@ -4327,6 +4360,11 @@ ger_fifth_group_saxony = {
 			add_country_modifier = {
 				name = sax_germanization
 				duration = -1
+			}
+			hidden_effect = {
+				country_event = {
+					id = ab_achiev.90
+				}
 			}
 		}
 	}
@@ -4700,6 +4738,7 @@ ger_fifth_group = {
 				name = "eng_scramble"
 				duration = 9125
 			}
+			set_country_flag = ab_inland_africa_colonizable
 			custom_tooltip = ENG_ALLOW_INLAND
 		}
 	}

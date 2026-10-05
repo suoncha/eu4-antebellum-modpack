@@ -6,7 +6,9 @@ estate_cossacks_land_rights = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -33,12 +35,14 @@ estate_cossacks_land_rights = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.01 }
 	}
-	conditional_modifier = {
-		trigger = { has_country_flag = aba_htm_cossack_land_right_buff }
+	#### ABF Conditional Mod [[[
+	conditional_modifier = { #HTM/ZAZ
+		trigger = { has_country_flag = abf_htm_cossack_land_right_buff }
 		modifier = {
 			allowed_cossack_fraction = 0.15
 		}
 	}
+	#### ]]]
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -219,11 +223,15 @@ estate_cossacks_exploration_expedition = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism  #HTM/ZAZ
+				#### ]]]
 			} 
+			#### ABF Conditional Mod - check to see if they don't have the other privilege upgrade [[[
 			NOT = {
-				has_country_flag = aba_htm_exploration_expeditions_upgrade
+				has_country_flag = abf_htm_exploration_expeditions_upgrade #HTM/ZAZ
 			}
+			#### ]]]
 		} 
 		modifier = { max_absolutism = 1 } 
 	}
@@ -312,14 +320,16 @@ estate_cossacks_exploration_expedition = {
 		trigger = { has_country_flag = hun_upgrade_cossack_priv }
 		modifier = { max_absolutism = 5 }
 	}
+	#### ABF Conditional Mod [[[
 	conditional_modifier = {
-		trigger = { has_country_flag = aba_htm_exploration_expeditions_upgrade }
+		trigger = { has_country_flag = abf_htm_exploration_expeditions_upgrade } #HTM/ZAZ
 		modifier = { 
 			max_absolutism = 5
 			global_colonial_growth = 20
 			range = 0.20
 		}
 	}
+	#### ]]]
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -354,7 +364,9 @@ estate_cossacks_cossack_self_governance = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism  #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 2 } 
@@ -413,7 +425,9 @@ estate_cossacks_establish_the_cossack_regiments = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[ 
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -471,7 +485,9 @@ estate_cossacks_expand_the_cossack_regiments = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[ 
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -568,7 +584,9 @@ estate_cossacks_recruit_cossack_generals = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[ 
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -593,80 +611,6 @@ estate_cossacks_recruit_cossack_generals = {
 	}
 }
 
-### ABA ####
-ABA_estate_cossacks_pln_cossack_szlachta = {
-	icon = estate_nobles_ITA_military_governors
-	max_absolutism = -10
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.1
-	loyalty = 0.20
-	is_valid = {
-		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_pln_cossack_szlachta }
-	}
-	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = unlocked_privilege_estate_cossacks_pln_cossack_szlachta_tt
-			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_pln_cossack_szlachta }
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-		army_tradition = 0.25
-		army_tradition_decay = -0.01
-		allowed_cossack_fraction = 0.10
-		nobles_influence_modifier = -0.10
-	}
-	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			is_absolutism_active = yes
-		}
-	}
-}
-
-ABA_estate_cossacks_htm_starshyna_council = {
-	icon = estate_nobles_ITA_military_governors
-	max_absolutism = -15
-	conditional_modifier = { 
-		trigger = { 
-			OR = {
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
-				has_absolutism_reduction_for_estate_privileges = yes
-			}  
-		}
-		modifier = { max_absolutism = 1 } 
-	}
-	influence = 0.1
-	loyalty = 0.15
-	is_valid = {
-		has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_htm_starshyna_council }
-	}
-	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = unlocked_privilege_estate_cossacks_htm_starshyna_council_tt
-			has_unlocked_estate_privilege = { estate_privilege = ABA_estate_cossacks_htm_starshyna_council }
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-		mil_advisor_cost = -0.05
-		army_tradition_decay = -0.005
-		free_leader_pool = 1
-	}
-	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			is_absolutism_active = yes
-		}
-	}
-}
-
-######
-
 #DLC Privileges
 estate_cossacks_prime_herding_rights = {
 	icon = privilege_monopoly_of_goods_livestock
@@ -675,11 +619,15 @@ estate_cossacks_prime_herding_rights = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[ 
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
+			#### ABF Conditional Mod Check - do not grant if you have unlocked the other estate privilege buff [[[
 			NOT = {
-				has_country_flag = aba_htm_upgrade_prime_herding_rights_flag
+				has_country_flag = abf_htm_upgrade_prime_herding_rights_flag
 			}
+			#### ]]]
 		} 
 		modifier = { max_absolutism = 1 } 
 	}
@@ -703,20 +651,25 @@ estate_cossacks_prime_herding_rights = {
 				}
 			}
 		}
-		if = {
-			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
-			custom_tooltip = aba_htm_upgrade_prime_herding_rights_gt
+		#### ABF HTM/ZAZ Conditional Granted Tooltip [[[
+		if = { 
+			limit = { has_country_flag = abf_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = abf_htm_upgrade_prime_herding_rights_gt
 			tooltip = {
 				add_province_modifier = {
-					name = aba_htm_upgrade_prime_herding_rights_mod
+					name = abf_htm_upgrade_prime_herding_rights_mod
 					duration = -1
 				}
 			}
 		}
+		#### ]]]
 	}
 	on_granted_province = {
 		if = {
-			limit = { has_terrain = steppe }
+			limit = { 
+				has_terrain = steppe
+			}
 			add_province_modifier = {
 				name = estate_cossacks_prime_herding_rights_mod
 				duration = -1
@@ -728,13 +681,15 @@ estate_cossacks_prime_herding_rights = {
 					duration = -1
 				}
 			}
+			#### ABF HTM/ZAZ Conditional Granted Prov Mod [[[
 			if = {
-				limit = { owner = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag } }
+				limit = { owner = { has_country_flag = abf_htm_upgrade_prime_herding_rights_flag } }
 				add_province_modifier = {
-					name = aba_htm_upgrade_prime_herding_rights_mod
+					name = abf_htm_upgrade_prime_herding_rights_mod
 					duration = -1
 				}
 			}
+			#### ]]]
 		}
 		else_if = {
 			limit = { has_province_modifier = estate_cossacks_prime_herding_rights_mod }
@@ -743,10 +698,12 @@ estate_cossacks_prime_herding_rights = {
 				limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 				remove_province_modifier = feo_upgrade_prime_herding_rights_mod
 			}
-			if = {
-				limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
-				remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
+			#### ABF HTM/ZAZ Conditional Remove Prov Mod [[[
+			if = { 
+				limit = { has_province_modifier = abf_htm_upgrade_prime_herding_rights_mod }
+				remove_province_modifier = abf_htm_upgrade_prime_herding_rights_mod
 			}
+			#### ]]]
 		}
 	}
 	on_revoked = {
@@ -755,10 +712,13 @@ estate_cossacks_prime_herding_rights = {
 			limit = { has_country_flag = feo_upgrade_prime_herding_rights_flag }
 			custom_tooltip = feo_upgrade_prime_herding_rights_rt
 		}
+		#### ABF HTM/ZAZ Conditional Revoke Tooltip [[[
 		if = {
-			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
-			custom_tooltip = aba_htm_upgrade_prime_herding_rights_rt
+			limit = { has_country_flag = abf_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = abf_htm_upgrade_prime_herding_rights_rt
 		}
+		#### ]]]
 	}
 	on_revoked_province = {
 		if = {
@@ -769,10 +729,12 @@ estate_cossacks_prime_herding_rights = {
 			limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 			remove_province_modifier = feo_upgrade_prime_herding_rights_mod
 		}
+		#### ABF HTM/ZAZ Conditional On Revoked Prov  [[[
 		if = {
-			limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
-			remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
+			limit = { has_province_modifier = abf_htm_upgrade_prime_herding_rights_mod }
+			remove_province_modifier = abf_htm_upgrade_prime_herding_rights_mod
 		}
+		#### ]]]
 	}
 	on_invalid = {
 		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
@@ -780,10 +742,13 @@ estate_cossacks_prime_herding_rights = {
 			limit = { has_country_flag = feo_upgrade_prime_herding_rights_flag }
 			custom_tooltip = feo_upgrade_prime_herding_rights_rt
 		}
+		#### ABF HTM/ZAZ Conditional On Invalid Privilege Tooltip  [[[
 		if = {
-			limit = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
-			custom_tooltip = aba_htm_upgrade_prime_herding_rights_rt
+			limit = { has_country_flag = abf_htm_upgrade_prime_herding_rights_flag }
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = abf_htm_upgrade_prime_herding_rights_rt
 		}
+		#### ]]]
 	}
 	on_invalid_province = {
 		if = {
@@ -794,10 +759,12 @@ estate_cossacks_prime_herding_rights = {
 			limit = { has_province_modifier = feo_upgrade_prime_herding_rights_mod }
 			remove_province_modifier = feo_upgrade_prime_herding_rights_mod
 		}
+		#### ABF HTM/ZAZ Conditional On Invalid Prov Remove Mod  [[[
 		if = {
-			limit = { has_province_modifier = aba_htm_upgrade_prime_herding_rights_mod }
-			remove_province_modifier = aba_htm_upgrade_prime_herding_rights_mod
+			limit = { has_province_modifier = abf_htm_upgrade_prime_herding_rights_mod }
+			remove_province_modifier = abf_htm_upgrade_prime_herding_rights_mod
 		}
+		#### ]]]
 	}
 	penalties = {
 	}
@@ -815,14 +782,16 @@ estate_cossacks_prime_herding_rights = {
 		trigger = { has_country_flag = feo_upgrade_prime_herding_rights_flag has_absolutism_reduction_for_estate_privileges = yes }
 		modifier = { max_absolutism = 4 }
 	}
-	conditional_modifier = {
-		trigger = { has_country_flag = aba_htm_upgrade_prime_herding_rights_flag }
+	#### ABF Conditional Mod [[[
+	conditional_modifier = { #HTM/ZAZ
+		trigger = { has_country_flag = abf_htm_upgrade_prime_herding_rights_flag } 
 		modifier = { 
 			max_absolutism = 5
 			cavalry_cost = -0.20
 			global_regiment_recruit_speed = -0.10 
 		}
 	}
+	#### ]]]
 	ai_will_do = {
 		factor = 0
 	}
@@ -838,7 +807,9 @@ estate_cossacks_freedom_of_the_steppes = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[ 
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -850,10 +821,11 @@ estate_cossacks_freedom_of_the_steppes = {
 		}
 	}
 	on_granted = {
+		#### ABF Conditional Mod Check - See if HTM/ZAZ doesn't have flag, grant regular privilege effects tooltip [[[
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade
+					has_country_flag = abf_htm_hosts_of_the_steppe_estate_upgrade
 				}
 			}
 			custom_tooltip = estate_cossacks_freedom_of_the_steppes_gt
@@ -864,16 +836,19 @@ estate_cossacks_freedom_of_the_steppes = {
 				}
 			}
 		}
+		#### ]]]
+		#### ABF HTM/ZAZ Conditional Effect Tooltip - if has upgrade unlocked [[[
 		if = {
-			limit = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade }
+			limit = { has_country_flag = abf_htm_hosts_of_the_steppe_estate_upgrade }
 			custom_tooltip = estate_cossacks_freedom_of_the_steppes_gt
 			tooltip = {
 				add_province_modifier = {
-					name = aba_htm_hosts_of_steppe_mod
+					name = abf_htm_hosts_of_steppe_mod
 					duration = -1
 				}
 			}
 		}
+		#### ]]]
 		if = {
 			limit = { has_country_flag = feo_buffed_freedom_of_steppes_flag }
 			custom_tooltip = feo_buffed_freedom_of_steppes_gt
@@ -892,15 +867,17 @@ estate_cossacks_freedom_of_the_steppes = {
 			custom_tooltip = feo_buffed_freedom_of_steppes_rt
 		}
 		if = {
-			limit = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade }
-			custom_tooltip = estate_cossacks_aba_htm_hosts_of_steppe_mod_rt
+			limit = { has_country_flag = abf_htm_hosts_of_the_steppe_estate_upgrade }
+			custom_tooltip = estate_cossacks_abf_htm_hosts_of_steppe_mod_rt
 		}
 	}
 	on_granted_province = {
 		if = {
 			limit = {
 				has_terrain = steppe
-				NOT = { owner = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade } }
+				#### ABF HTM/ZAZ Conditional Grant Prov Mod Check - grant regular mod if doesn't have upgrade [[[
+				NOT = { owner = { has_country_flag = abf_htm_hosts_of_the_steppe_estate_upgrade } }
+				#### ]]]
 			}
 			add_province_modifier = {
 				name = estate_cossacks_freedom_of_the_steppes_mod
@@ -914,16 +891,18 @@ estate_cossacks_freedom_of_the_steppes = {
 				}
 			}
 		}
-		else_if = {
+		#### ABF HTM/ZAZ Conditional Grant Prov Mod Check - grant new mod if they have upgrade [[[
+		if = {
 			limit = {
 				has_terrain = steppe
-				owner = { has_country_flag = aba_htm_hosts_of_the_steppe_estate_upgrade } 
+				owner = { has_country_flag = abf_htm_hosts_of_the_steppe_estate_upgrade } 
 			}
 			add_province_modifier = {
-				name = aba_htm_hosts_of_steppe_mod
+				name = abf_htm_hosts_of_steppe_mod
 				duration = -1
 			}
 		}
+		#### ]]]
 	}
 	on_invalid_province = {
 		if = {
@@ -934,10 +913,12 @@ estate_cossacks_freedom_of_the_steppes = {
 			limit = { has_province_modifier = feo_buffed_freedom_of_steppes_mod }
 			remove_province_modifier = feo_buffed_freedom_of_steppes_mod
 		}
+		#### ABF HTM/ZAZ Conditional On Invalid Prov Effect [[[
 		if = {
-			limit = { has_province_modifier = aba_htm_hosts_of_steppe_mod }
-			remove_province_modifier = aba_htm_hosts_of_steppe_mod
+			limit = { has_province_modifier = abf_htm_hosts_of_steppe_mod }
+			remove_province_modifier = abf_htm_hosts_of_steppe_mod
 		}
+		#### ]]]
 	}
 	on_revoked_province = {
 		if = {
@@ -948,10 +929,12 @@ estate_cossacks_freedom_of_the_steppes = {
 			limit = { has_province_modifier = feo_buffed_freedom_of_steppes_mod }
 			remove_province_modifier = feo_buffed_freedom_of_steppes_mod
 		}
+		#### ABF HTM/ZAZ Conditional On Revoked Privilege Effect [[[
 		if = {
-			limit = { has_province_modifier = aba_htm_hosts_of_steppe_mod }
-			remove_province_modifier = aba_htm_hosts_of_steppe_mod
+			limit = { has_province_modifier = abf_htm_hosts_of_steppe_mod }
+			remove_province_modifier = abf_htm_hosts_of_steppe_mod
 		}
+		#### ]]]
 	}
 
 	mechanics = {
@@ -974,7 +957,9 @@ estate_cossacks_grant_military_leadership = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism #HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -1016,7 +1001,9 @@ estate_cossacks_exempt_from_bureaucracy = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism  # HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -1107,7 +1094,9 @@ estate_cossacks_military_service = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism  # HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 
@@ -1149,7 +1138,9 @@ estate_cossacks_expand_cossacks_raiders = {
 		trigger = { 
 			OR = { 
 				has_absolutism_reduction_for_estate_privileges = yes
-				has_government_attribute = enables_aba_htm_reduce_cossack_absolutism 
+				#### ABF Conditional Mod [[[
+				has_government_attribute = enables_abf_htm_reduce_cossack_absolutism  # HTM/ZAZ
+				#### ]]]
 			} 
 		} 
 		modifier = { max_absolutism = 1 } 

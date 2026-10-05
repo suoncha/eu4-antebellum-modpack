@@ -81,6 +81,11 @@ ab_yuan_china_first = {
 		}
 		
 		effect = {
+			### ABF - new culture shift reward and reformatting [[[
+			add_country_modifier = {
+				name = yua_banners
+				duration = 9125
+			}
 			custom_tooltip = YUA_TEN_BANNERS
 			hidden_effect = {
 				for = {
@@ -90,10 +95,19 @@ ab_yuan_china_first = {
 					"
 				}
 			}
-			add_country_modifier = {
-				name = yua_banners
-				duration = 9125
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABF_MANCHU_CULTURE_CONVERT_SINO_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = evenks
+						region = manchuria_region
+					}
+					change_original_culture = manchu_new
+					change_culture = manchu_new
+				}
 			}
+			custom_tooltip = AB_EMPTY
 			mongolia_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -102,6 +116,7 @@ ab_yuan_china_first = {
 				add_permanent_claim = ROOT
 			}
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					OR = {
@@ -1194,8 +1209,11 @@ ab_yuan_china_third = {
 		}
 		effect = {
 			country_event = { id = ab_yuan.9 }
-			set_country_flag = sinicized_japanese_culture_spread
-			custom_tooltip = abf_chi_japan_culture_convert_tt
+			custom_tooltip = AB_EMPTY
+			### ABF - new culture spread reward [[[
+			set_country_flag = abf_sinicized_japanese_culture_spread
+			custom_tooltip = ABF_SINO_JAPAN_CULTURE_SINO_SPREAD_TT
+			### ]]]
 		}
 	}
 	

@@ -2,7 +2,7 @@
 
 graphical_culture = muslimgfx
 
-color = { 50 18 122 }
+color = { 50 18 122 } # ABF leaves default color as purple instead of white
 historical_score = 600
 revolutionary_colors = { 10  0  5 }
 

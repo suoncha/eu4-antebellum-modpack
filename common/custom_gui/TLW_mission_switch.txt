@@ -15,7 +15,7 @@ custom_button = {
 				}
 			}
 			country_event = {
-				id = aba_zun_event.4
+				id = abf_zun_event.4
 			}
 		}
     }

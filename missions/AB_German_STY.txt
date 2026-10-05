@@ -1630,19 +1630,20 @@ ab_austria_3 = {
 		effect = {  
 			set_country_flag = teu_can_utilize_bran_castle
 			custom_tooltip = HAB_UNLOCK_BRAN_CASTLE_GREAT_PROJECT
-			
 			custom_tooltip = AB_EMPTY
-			
 			add_army_tradition_or_mil_power = { amount = 10 }
-			
 			custom_tooltip = AB_EMPTY
-			
 			4128 = {
 				add_great_project_tier = {
 					type = bran_castle
 					tier = 1
 				}
 			}
+			### ABF - culture spread reward [[[
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_mantaken_culture_spread
+			custom_tooltip = ABF_GER_MANTAKEN_SPREAD_TT
+			### ]]]
 		} 
 	}
 }
@@ -2307,9 +2308,10 @@ ab_austria_4 = {
 					duration = 7300
 				}
 			}
-			custom_tooltip = aba_GER_hungarian_cultures
-			set_country_flag = donauschwaben_culture_spread
-			set_country_flag = mantaken_culture_spread
+			### ABF - culture spread reward [[[
+			set_country_flag = abf_donauschwaben_culture_spread
+			custom_tooltip = ABF_GER_DONAUSCHWABEN_SPREAD_TT
+			### ]]]
 		} 
 	}
 
@@ -2836,15 +2838,17 @@ ab_austria_5 = {
 			add_country_modifier = {
 				name = hab_conquest_of_poland
 				duration = 7300
-			}	
+			}
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = 10
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = aba_ger_weichseldeutsche_spread
-			custom_tooltip = GER_weichseldeutsche_tooltip_2
+			### ABF - culture spread reward [[[
+			set_country_flag = abf_ger_weichseldeutsche_spread
+			custom_tooltip = ABF_GER_WEICHSELDEUTSCHE_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					257 = {

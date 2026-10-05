@@ -132,22 +132,22 @@ ab_danish_first = {
 		}
 		
 		effect = {
+			### ABF - modified mission rewards and presentation [[[
 			245 = {
 				change_culture = anglodanish
 				change_original_culture = anglodanish
 			}
-			add_accepted_culture_or_dip_power = {
-				culture = anglodanish
-				dip_reward = yes
-			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = "dan_union_cultural"
 				duration = -1
 			}
-			custom_tooltip = DAN_CULTURE
+			add_accepted_culture_or_dip_power = {
+				culture = anglodanish
+			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = aba_nor_norsegaelic_spread_tooltip
-			set_country_flag = aba_nor_norsegaelic_spread
+			custom_tooltip = DAN_CULTURE
+			### ]]]
 		}
 	}
 	
@@ -628,6 +628,9 @@ ab_danish_second = {
 		
 		effect = {
 			add_prestige = 25
+			### ABF- presentation change [[[
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			custom_tooltip = DAN_BRITAIN
 			tooltip = {
 				add_province_modifier = {
@@ -656,6 +659,11 @@ ab_danish_second = {
 					}
 				}
 			}
+			### ABF - culture spread reward added [[[
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_nor_norsegaelic_spread
+			custom_tooltip = ABF_NORSEGAELIC_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -2395,9 +2403,6 @@ ab_danish_fifth5 = {
 				name = "dan_wends"
 				duration = 7300
 			}
-			set_country_flag = abf_varangians_culture_spread
-			custom_tooltip = abf_varangians_culture_spread_tt
-			custom_tooltip = AB_EMPTY
 			43 = {
 				if = {
 					limit = {
@@ -2598,6 +2603,12 @@ ab_danish_fifth5 = {
 					add_center_of_trade_level = 1
 				}
 			}
+			### ABF - reward and presentation change [[[
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_varangians_culture
+			custom_tooltip = ABF_VARANGIAN_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			arkhangelsk_area  = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}

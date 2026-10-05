@@ -1,0 +1,300 @@
+﻿l_english:
+
+################################## Culture Spread [[[
+
+### EAST ASIA ###
+#----Japan---#
+ ABF_JAP_CONVERT_SINIFICATION_SPREAD_TT: "§YFusau§! and §YSino-Korean§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YJapan§! and §YKorea§! regions."
+ ABF_JAP_PH_CULTURE: "§YNikkei§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPhillipines§! areas."
+ ABF_JAP_KR_CULTURE: "§YZainichi§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YKorea§! region."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Chinese Formables/Warlords---#
+ ABF_MANCHU_CULTURE_CONVERT_SINO_TT: "Every owned province of §YJurchen§! will be moved to the §YChinese§! culture group."
+ ABF_SINO_JAPAN_CULTURE_SINO_SPREAD_TT: "§YFusau§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YJapan§! region."
+ ABF_SINO_KOREAN_SPREAD_TT: "§YSino-Korean§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YKorea§! region."
+ ABF_SINO_KOREAN_SPREAD_FASTER_TT: "§YSino-Korean§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YKorea§! region §G30.0%§! faster."
+ ABF_CHINESE_MONGOL_SHIFT_TT: "The §YMongolian§! culture group will be §YSinicized§! and renamed to §YMengguzu§!."
+ ABF_SINO_TIBETAN_CULTURE_SPREAD_TT: "§YSino-Tibetan§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YTibetan§! culture group."
+ ABF_TCR_SINO_VIETNAMESE_SHIFT_TT: "§YVietnamese§! will be moved to the §YChinese§! culture group."
+ ABF_TCR_SINO_BURMESE_SPREAD_TT: "§YMian§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces in the §YBurma§! region."
+ ABF_TCR_CHINA_SINO_MALAYAN_SPREAD_TT: "§YHokkien§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! or §YHarmonized§! provinces of §YMalayan§! culture."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Tocharia---#
+ ABF_TCR_YUEZHI_SINO_SPREAD_TT: "§YSinicized§! cultures will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YChina§!, §YEast Indies§!, and §YFar East§! Superregions."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Tatar---#
+ ABF_GLH_LIPKA_BALTIC_SPREAD_TT: "§YLipka§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region."
+ ABF_GLH_TATAR_CENTRAL_ASIA_SPREAD_TT: "§YSiberian§!, §YNogai§!, and §YQipchaq§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of §YAltaic§! and §YIranian§! culture in the §YTartary§! Continent." 
+ ABF_GLH_DAUR_EVENKI_SPREAD_TT: "§YDaur§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YEvenki§! culture group."
+ ABF_GLH_TATAR_QARAYLAR_SPREAD_TT: "§YLeh-Qaraylar§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPoland§! region."
+ ABF_GLH_ONOGHUR_CULTURE_SPREAD_TT: "§YOnoghur§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YCarpathia§! region."
+#--------------------------------------------------------------------------------------------------------------------#
+
+### EASTERN EUROPE ###
+
+#----Ruthenian/Russian Generic---#
+ ABF_UKR_COSSACK_CULTURE_SPREAD_TT: "§YRuthenian Cossack§! cultures will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPontic Steppe§! and §YUral§! regions."
+ ABF_KHARBINSKIYE_COSSACK_CULTURE_TT: "§YKharbinskiye§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YManchuria§! region."
+ ABF_NAGAYBAK_CULTURE_SPREAD_TT: "§YNagaybak§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of  §YKazakh§! and §YKyrgzy§! culture."
+ ABF_MALORUSSIAN_COSSACK_CULTURE_SPREAD_TT: "§YMalorossian§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region."
+ ABF_BUDJAK_CULTURE_SPREAD_TT: "§YBudjak§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YCarpathia§! region."
+ #--------------------------------------------------------------------------------------------------------------------#
+
+ #----HTM----#
+ ABF_HTM_POVOLZYHE_COSSACK_SPREAD_TT: "§YPovolzhye§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YAstrakhan§!, §YSaratov§!, §YSamara§!, §YVolga§!, §YKazan§!, and §YTambov§! areas."
+ ABF_HTM_CHERNOMORIYA_COSSACK_CULTURE_SPREAD_TT: "§YChernomoriya§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YCrimea§!, §YOchakov§!, and §YZaporizhzia§! areas."
+ ABF_HTM_DON_COSSACK_CULTURE_SPREAD_TT: "§YDontsi§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YAzov§! and §YLower Don§! areas."
+ ABF_HTM_URALSKYIE_CULTURE_SPREAD_TT: "§YUralskyie§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YUral§! region."
+ ABF_HTM_NAGAYBAK_CULTURE_EXPANDED_SPREAD_TT: "§YNagaybak§! will now §Gnaturally spread§! throughout all our §Y[Root.Religion.GetName]§! provinces in the §YCentral Asia§! region."
+ ABF_HTM_TEREK_CULTURE_SPREAD_TT: "§YTerek§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YAlania§! and §YCumania§! areas."
+ #--------------------------------------------------------------------------------------------------------------------#
+
+ #----NOV----#
+ ABF_NOV_POMOR_CULTURE_SPREAD: "§YPomorian§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of §YFinnic§! culture in the §YScandinavia§! and §YRussia§! regions."
+ #--------------------------------------------------------------------------------------------------------------------#
+
+ #----Slavicized Tatars----#
+ ABF_GLH_KALMYK_CULTURE_SPREAD_TT: "§YKalmyk§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YMongolia§! region."
+ #--------------------------------------------------------------------------------------------------------------------#
+
+### WESTERN SLAVS ###
+
+#----Poland/Catholic---#
+ ABF_POL_POLONIZE_RUS_SPREAD_TT: "New §YPolonized§! cultures will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! §YEast Slavic§!, §YTartar§!, §YAltatic§!, and §YEvenki§! provinces."
+ ABF_LITVIN_CULTURE_SPREAD_TT: "§YLitvin§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Wendia---#
+ ABF_WENDISH_GER_CULTURE_SPREAD_TT: "§YWendish§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YNorth Germany§! and §YSouth Germany§! regions."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Baltic---#
+ ABF_BALTO_FINNIC_CULTURE_SPREAD_TT: "§YBalto-Finnic§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! and reconcilied §YPagan§! §YFinnic§! provinces."
+ ABF_BALTIC_MILOGRAD_CULTURE_SPREAD_TT: "§YMilograd§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YRuthenia§! region."
+ ABF_BALTIC_DNEPRDVINA_CULTURE_SPREAD_TT: "§YDnepr-Dvina§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YRussia§! region."
+ ABF_BALTIC_KRIEVZEME_CULTURE_SPREAD_TT: "All provinces in the §YBaltic§! culture group within the §YBaltic§! region will be shifted to §YKrievi§!.\n\n§YKrievi§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPontic Steppe§! and §YUral§! regions."
+#--------------------------------------------------------------------------------------------------------------------#
+
+### SOUTHERN SLAVS ###
+
+### WESTERN EUROPE ###
+
+#----EAST GERMANIC---#
+ ABF_GER_WOLGADEUTSCHE_SPREAD_TT: "§YWolga§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YAstrakhan§!, §YLower Don§!, and §YSaratov§! areas."
+ ABF_GER_DONAUSCHWABEN_SPREAD_TT: "§YDonauschwaben§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YTransdanubia§!, §YCentral Hungary§!, and §YAföld§! areas."
+ ABF_GER_MANTAKEN_SPREAD_TT: "§YMantaken§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YNorth Transylvania§! and §YSouth Transylvania§! areas."
+ ABF_GER_WEICHSELDEUTSCHE_SPREAD_TT: "§YWeichseldeutsche§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPoland§! region."
+ ABF_GER_JUGOSLAWIENSCHWABEN_SPREAD_TT: "§YJugoslawienschwaben§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBalkan§! region."
+ ABF_GER_GEN_RUTHENIAN_CULTURES_SPREAD_TT: "§YWolhynian§! and §YRusslanddeutsch§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YRuthenia§! and §YRussia§! regions respectively." 
+ ABF_GER_GEN_STEPPE_CULTURES_SPREAD_TT: "§YSchwarzmeerdeutsch§! and §YWolgadeutsch§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YPontic Steppe§! and §YUral§! regions respectively.""
+ ABF_GER_CARPATHIAN_COMBINED_SPREAD_TT: "§YDonauschwaben§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YTransdanubia§!, §YCentral Hungary§!, and §YAföld§! areas.\n\nAdditionally, §YMantaken§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YNorth Transylvania§! and §YSouth Transylvania§! areas."
+ ABF_GER_OSTSIEDLUNG: "§YMarkish§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YWendia§! region.\n\n§YPrussian§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in §YPomerelia§! and §YPruthenia§! areas."
+ ABF_GERMANIZE_SLAVS_CULTURE_SPREAD_TT: "§YEast Germanic§! settler cultures will will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YCarpathia§!, §YBalkan§!, §YPoland§!, §YRuthenia§!, §YRussia§!, §YPontic Steppe§!, and §YUral§! regions."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#---WEST GERMANIC---#
+ ABF_ALBION_CULTURE_SPREAD_TT: "§YAlban§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of §YÆnglish§!, §YAnglois§!, and §YScottish§! culture in the §YBritish Isles§! region."
+ ABF_NED_BALTIC_SETTLEMENT_TT: "§YOlender§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region.\n\nDeveloping §YCoastal Baltic§! provinces with a §YCenter of Trade§! now has a §G10.0%§! chance to swap their culture to §YOlender§!, their religion to §Y[Root.Religion.GetName]§!, and also grant §G3§! bonus £dip£ development."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Scand/Nordic---#
+ ABF_ANGLONORSE_CULTURE_SPREAD_TT: "§YAnglo-Norse§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of §YÆnglish§! and §YAnglois§! culture in the §YBritish Isles§! region."
+ ABF_NORSEGAELIC_CULTURE_SPREAD_TT: "§YNorse-Gaelic§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces of §YIrish§! culture in the §YBritish Isles§! region."
+ ABF_FINNISH_SCAN_CULTURE_SPREAD_TT: "Moves §YFinnish§! to the §YNordic§! culture group.\n\n§YNordic Finnish§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YKarelia§! and §YPomorye§! areas."
+ ABF_AIBOFOLKE_CULTURE_SPREAD_TT: "§YAibofolke§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBaltic§! region."
+ ABF_VARANGIAN_CULTURE_SPREAD_TT: "§YVarangian§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YRussia§! and §YRuthenia§! regions."
+ ABF_NORMAN_SCAN_CULTURE_MOVE_TT: "Moves §YNorman§! to the §YNordic§! culture group."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Gaellic---#
+ ABF_GALLIC_CULTURE_SPREAD_TT: "§YGallic§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YFrance§! region."
+ ABF_GLL_BRITTONIC_SPREAD_TT: "§YBrittonic§! will §Gnaturally spread§! throughout our §Y[Root.Religion.GetName]§! provinces in the §YBritish Isles§! region.\n\nThis does §RNOT§! affect provinces that already belong to the §YCeltic§! culture group."
+#--------------------------------------------------------------------------------------------------------------------#
+ 
+################################## ]]]]
+
+################################## Mission Tooltips ##################################
+
+### EASTERN EUROPE ###
+
+#----Ruthenian/Russian---#
+ ABF_ACCESS_MAG_STABLES_TT: "§GAllows§! us use to and upgrade the §YGreat Stables of Szeged§! Great Project"
+ ABF_10_COSSACKS_TT: "10 §OCossack§! regiments will spawn in our capital!"
+ ABF_COSSACK_GENERAL_LOYALTY_TT: "Recruiting a §YGeneral§! now grants §G+2.50%§! §Y[Root.GetCossacksName]§! loyalty."
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Poles---#
+ ABF_POL_UNIFY_POLISH_EAST_SLAVIC_TT: "Unifies §YPolan§!, §YLendian§!, §YVistulan§!, and §YMazovian§! into the §YEast Slavic Lendish§! culture\n"
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Moravia---#
+ ABF_CARPATHIAN_SHIFT_GMA_YES: "£yes£ If we complete this mission as @GMA §Y[GMA.GetName]§! and control the entire §YCarpathian Basin§!, we will also receive:"
+ ABF_CARPATHIAN_SHIFT_GMA_NO: "£no£ If we complete this mission as @GMA §Y[GMA.GetName]§! and control the entire §YCarpathian Basin§!, we will also receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Wendia---#
+ ABF_CARPATHIAN_SHIFT_YES: "£yes£ If we complete this mission while we control the entire §YCarpathian Basin§!, we will also receive:"
+ ABF_CARPATHIAN_SHIFT_NO: "£no£ If we complete this mission while we control the entire §YCarpathian Basin§!, we will also receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+#----Lithuania/Litvinia---#
+ ABF_EAST_SLAV_PRIMARY_YES: "£yes£ If we complete this mission while our Primary Culture is part of the §YEast Slavic§! culture group, we will receive:"
+ ABF_EAST_SLAV_PRIMARY_NO: "£no£ If we complete this mission while our Primary Culture is part of the §YEast Slavic§! culture group, we will receive:"
+ ABF_OTHER_THAN_EAST_SLAV_PRIMARY_YES: "£yes£ If we complete this mission while our Primary Culture is §RNOT§! part of the §YEast Slavic§! culture group, we will receive:"
+ ABF_OTHER_THAN_EAST_SLAV_PRIMARY_NO: "£no£ If we complete this mission while our Primary Culture is §RNOT§! part of the §YEast Slavic§! culture group, we will receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+### Western Europe ###
+
+#----Scand/Nordic---#
+ ABF_SWE_PALADINS_TT: "§GAllows§! the recruitment of §TPaladin§! regiments.\nYou can have up to §Y10§! §TPaladins§! at the same time."
+ ABF_SWE_FIN_MERC_COMPANY_TRIGGER: "Owns at least §Y5§! provinces of §YFinnish§! culture with a §YManpower§! or §YForcelimit§! building"
+#--------------------------------------------------------------------------------------------------------------------#
+
+ #----Poland/Catholic---#
+ ABF_POL_262_INSTITUTION_GROW_TT: "§YInsitutions§! will §Gnaturally grow§! in §Y[262.GetName]§!"
+#--------------------------------------------------------------------------------------------------------------------#
+
+ #----Wales/Prydain---#
+ ABF_BRN_BRITTONIC_REVIVAL_YES: "£yes£ If we have completed the '§YBrittonic Revival§!' mission, we will also receive:"
+ ABF_BRN_BRITTONIC_REVIVAL_NO: "£no£ If we have completed the '§YBrittonic Revival§!' mission, we will also receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+ #----Scotland/Albion/Gaeldom---#
+ ABF_SCO_ALBION_YES: "£yes£ If we complete this mission as @ABO §Y[ABO.GetName]§!, we will receive:"
+ ABF_SCO_ALBION_NO: "£no£ If we complete this mission as @ABO §Y[ABO.GetName]§!, we will receive:"
+ ABF_SCO_GDL_GALLIC_YES: "£yes£ If we complete this mission as @GDL §Y[GDL.GetName]§! and own all the provinces in the §YFrench§! region, we will also receive:"
+ ABF_SCO_GDL_GALLIC_NO: "£no£ If we complete this mission as @GDL §Y[GDL.GetName]§! and own all the provinces in the §YFrench§! region, we will also receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+ #----Germany---#
+ ABF_GER_UNLOCKED_CULTURE_SPREAD_YES: "£yes£ If we complete this mission while we have §RNOT§! begun the §Gnatural conversion§! of the region to an §YEast Germanic§! settler culture, we will also receive:"
+ ABF_GER_UNLOCKED_CULTURE_SPREAD_NO: "£no£ If we complete this mission while we have §RNOT§! begun the §Gnatural conversion§! of the region to an §YEast Germanic§! settler culture, we will also receive:"
+#--------------------------------------------------------------------------------------------------------------------#
+
+################################## ]]]]
+
+################################## Events Tooltips ##################################
+
+### EAST ASIA ###
+
+#----Japan---#
+ ABF_JAP_SJ_UNREST_TT: "Our Japanese provinces won't take §Rkindly§! to this..."
+ ABF_JAP_SJ_DECLINE_TT: "§RWe will reject Chinese influence, much to the Ire of our Chinese subjects...§!"
+ ABF_JAPAN_SINIFICATION_YES: "£yes£ If we complete this mission while we have embraced @CLE §YSinification§!, we will also receive:"
+ ABF_JAPAN_SINIFICATION_NO: "£no£ If we complete this mission while we have embraced @CLE §YSinification§!, we will also receive:"
+ ABF_JAPAN_HERITAGE_YES: "£yes£ If we complete this mission while we have embraced our @JAP §YHeritage§!, we will also receive:"
+ ABF_JAPAN_HERITAGE_NO: "£no£ If we complete this mission while we have embraced our @JAP §YHeritage§!, we will also receive:"
+#----------#
+#----Chinese---#
+ ABF_UNLOCK_SINO_JAP_MONUMENTS_TT: "The culture is §YFusau§! or the owner has completed the '§YLegend of Fusau§!' mission"
+#----------#
+################################## Decision Tooltips ##################################
+
+### Western Europe ###
+
+#----Gaelic Cultures---#
+ ABF_RELEASE_CELTICA_DECISION_UNLOCK_TT: "§GUnlocks§! a decision allowing us to release @CLT §YCeltica§! as a junior partner in the personal union."
+ ABF_RELEASE_CELTICA_DECISION_TT: "Release @CLT §Y[CLT.GetName]§! as a junior partner in a personal union.\n\nThey will receive our owned provinces in the §YBritish Isles§! region and §YBrittonic§! culture will §Gnaturally spread§! throughout their §Y[Root.Religion.GetName]§! provinces in the region."
+#----------#
+
+################################## General/Misc ##################################
+
+#####--TOOLTIPS--##### [[[
+
+#----GENERIC---#
+ABF_GRANTED_CLERGY_LAND_RIGHTS_REWARD_YES: "£yes£ If we have granted the '§Y[Root.GetClergyName] Land Rights§!' Estate Privilege, we will gain:"
+ABF_GRANTED_CLERGY_LAND_RIGHTS_REWARD_NO: "£no£ If we have granted the '§Y[Root.GetClergyName] Land Rights§!' Estate Privilege, we will gain:"
+ABF_5_COSSACKS: "Five §OCossack Regiments§! will spawn in §Y[Root.Capital.GetName]§!."
+ABF_FROM_LIVESTOCK: "from §YLivestock§! provinces"
+ABF_IRON_PROVINCES: "Every owned and conquered province producing §YIron§! will receive:"
+ABF_COPPER_PROVINCES: "Every owned and conquered province producing §YCopper§! will receive:"
+ABF_CLOTH_PROVINCES: "Every owned and conquered province producing §YCloth§! will receive:"
+ABF_SALT_PROVINCES: "Every owned and conquered province producing §YSalt§! will receive:"
+ABF_WOOL_PROVINCES: "Every owned and conquered province producing §YWool§! will receive:"
+ABF_HAS_150_REFORM_PROGRESS_YES: "£yes£ If we complete this mission while having §Y150§! Reform Progress, we will receive:"
+ABF_HAS_150_REFORM_PROGRESS_NO: "£no£ If we complete this mission while having §Y150§! Reform Progress, we will receive:"
+ABF_INCOME_FROM_LIVESTOCK_PRODUCTION: "from Tax and Production buildings in provinces producing §YLivestock§!."
+ABF_CHRISTIAN_YES: "£yes£ If we complete this mission while we are in the §YChristian§! Religious Group, we will also receive:"
+ABF_CHRISTIAN_NO: "£no£ If we complete this mission while we are in the §YChristian§! Religious Group, we will also receive:"
+ABF_SCALING_ADM_ADVISOR_BUFF_TT: "§YAdministrative§! advisors gain the following scaling modifier: §G-2.0%§! Development Cost"
+ABF_PATRAONGE_ARTS_SPLENDOR_BUFF_TT: "The §YPatronage of the Arts§! [Root.GetBurghersName] Estate Privilege no longer grants §R-5.0%§! National Tax Modifier and now also grants us an additional §G+1.0§! Monthly Splendor."
+ABF_EURO_TECH_YES: "£yes£ If we complete this mission while allied to any country in the §YWestern§! or §YEastern§! Technology Groups, we will receive:"
+ABF_EURO_TECH_NO: "£no£ If we complete this mission while allied to any country in the §YWestern§! or §YEastern§! Technology Groups, we will receive:"
+ABF_CHINESE_TECH_YES: "£yes£ If we complete this mission while allied to any country in the §YChinese§! Technology Groups, we will receive:"
+ABF_CHINESE_TECH_NO: "£no£ If we complete this mission while allied to any country in the §YChinese§! Technology Groups, we will receive:"
+ABF_MUSLIM_TECH_YES: "£yes£ If we complete this mission while allied to any country in the §YMuslim§! or §YAnatolian§! Technology Groups, we will receive:"
+ABF_MUSLIM_TECH_NO: "£no£ If we complete this mission while allied to any country in the §YMuslim§! or §YAnatolian§! Technology Groups, we will receive:"
+ABF_MNG_DEV_PER_ADM_ADVISOR_TT: "§YAdministrative§! advisors gain the following scaling modifier: §G-2.0%§! Development Cost"
+ABF_35_INNO_YES: "£yes£ If we complete this mission while we have at least §G35§! Innovativeness, we will also receive:"
+ABF_35_INNO_NO: "£no£ If we complete this mission while we have at least §G35§! Innovativeness, we will also receive:"
+ABF_WIN_BATTLE_FIRE_DAMAGE_RECEIVED_BUFF_TT: "Winning battles grants §G-10.0%§! Fire Damaged Received for §Y1§! month"
+ABF_SIBERIAN_FRONTIER_BOOST_TT: "§YSiberian Frontiers§! now gain §G1§! bonus £adm£, £dip£, and £mil£ development when finished."
+ABF_INSTIUTION_EMBRACE_APC_INNO_TT: "Embracing a new institution grants §G-2.0%§! All Powers Cost and §G+0.25§! Yearly Innovatiness Gain for §Y5§! years."
+#----------#
+
+#----GEN. INDIA---#
+ABF_RAJPUT_REGIMENTS_PRIVILEGE_BUFF_TT: "The '§YEstablish the Rajput Regiments§!' [Root.GetRajputsName] Estate Privilege no longer grants §R-5§! Max Absolutism and now also grants an additional §G+15.0%§! Rajput Force Limit Fraction."
+#----------#
+
+#----On Actions---#
+ABF_GENERALS_GIVE_LOYALTY_TT: "Recruiting a General now grants §G+2.50%§! §YNoblility§! Loyalty."
+ABF_WIN_BARRAGE_10_TT: "Ordering an artillery barrage has a §G10.0%§! chance to instantly win a siege."
+#----------#
+
+#----MERCS---#
+ABF_CATHOLIC_MERC_ORDERS_UNLOCK_TT: "§GUnlocks§! the @TEU §YTeutonic§! and @LIV §YLivonian§! Knights Mercenary Companies\n\nThey will §RNOT§! contribute to our maximium force limit."
+#----------#
+##### [[[
+
+#####--ESTATE PRIVILEGES--##### [[[
+#--Tupchi Regiments and Artillery--#
+ABF_UNLOCK_TUPCHI_REG_ARTILLERY_TT: "§GUnlocks§! the '§YTofangchi Regiments§!' and '§YTupchi Artillery Corps§!' [Root.GetNobilityName] Estate Privileges granting §G+10.0%§! Infantry Combat Ability and §G+5.0%§! Artillery Combat Ability respectively"
+#-------------------#
+##### [[[
+
+#####--MONUMENTS--##### [[[
+
+#---Zun---#
+ABF_ZUN_sahar_bahar: "Sah Bahar - Temple of the King"
+ABF_ZUN_mulasthana: "Mulasthana - The City Of Gold"
+#-----------------#
+
+#--Tocharia--#
+ABF_ahin_posh: "Ahin Posh Tape"
+ABF_chashma_i_shir: "Chashma-i-Shir"
+ABF_temple_of_mathura_buddhist_hindu: "The Great Temple of Mathura"
+ABF_temple_of_mathura_christian: "The Great Cathedral of Mathura"
+ABF_temple_of_mathura_zoroastrianism: "The Great Fire Temple of Mathura"
+ABF_kizil_caves: "Kizil Caves - The Thousand Red Houses"
+#----------#
+
+#--HTM--#
+ABF_nova_sich: "Nova Sich - Seat of The Council"
+ABF_HETMANATE_GP_TRIGGER_TT: "Has enacted Government Reform §YCossack Hetmanate§!"
+#----------#
+
+#--General--#
+ABF_UNLOCK_NIDAROS_GP_TT: "§GAllows§! us to upgrade and the use the §YShipyard of Nidaros§! Great Project"
+#----------#
+##### [[[
+    
+#####--Government Mechanics/Attributes--#####
+
+#--No Chinese culture debuff--#
+mechanic_abf_chinese_culture_assimilation_yes: "Every owned or conquered province in the §YChinese§! culture group that folllows the §YState§! religion or any §YHarmonized§! faith will have their §Runaccepted§! culture modifiers §Gnegated§!"
+#-------------------#
+
+#--Halved Banner Corruption Malus--#
+mechanic_abf_banners_corrupt_halved_yes: "The Corruption §Rmalus§! from raising §YBanners§! is now §Ghalved§!"
+#-------------------#
+
+#--Thriving Cities--#
+mechanic_thriving_cities_modifier_yes: "Every owned province with §Y25§! or more development gets the following bonuses:\nLocal Prosperity Growth: §G+0.25§!\nLocal Production Efficiency: §G+25.0%§!\nLocal Tax Modifier: §G+25.0%§!\nLocal Province Governing Cost: §G-25.0%§!"
+#-------------------#
+##### [[[
+
+################################## ]]]]

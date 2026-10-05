@@ -451,10 +451,7 @@ indep_daimyo = {
 					# }}}
 				}
 				capital_scope = { region = japan_region }
-				OR = {
 				culture_group = japanese_g
-				culture = sinico_japanese
-				}
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -502,6 +499,13 @@ celestial_empire = {
 			}
 		}
 		NOT = { has_global_flag = empire_of_china_dismantled }
+		### ABF Modified Potential [[[
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = ABF_tcr_celestial_empire
+			}
+		}
+		### ]]]
 	}
 	legacy_equivalent = celestial_empire_legacy
 	maintain_dynasty = yes
@@ -5106,11 +5110,19 @@ enforce_trader_privileges_reform = {
 bengali_reform = {
 	icon = "merchant_ship"
 	allow_normal_conversion = yes
+	### ABF Modified Potential [[[
 	potential = {
 		has_dlc = "Dharma"
-		primary_culture = bengali
-		religion_group = muslim
+		OR = {
+			AND = {
+				primary_culture = bengali
+				religion_group = muslim
+			}
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_unlock_indian_gov_reforms_flag
+		}
 	}
+	### ]]]
 	modifiers = {
 		merchants = 1
 		trade_efficiency = 0.1
@@ -5140,15 +5152,23 @@ sufi_syncretism_reform = {
 poligar_reform = {
 	icon = "indian_crown"
 	allow_normal_conversion = yes
+	### ABF Modified Potential [[[
 	potential = {
 		has_dlc = "Dharma"
-		technology_group = indian
 		OR = {
-			culture_group = dravidian
-			primary_culture = oriya
-			primary_culture = sinhala
+			AND = {
+				technology_group = indian
+				OR = {
+					culture_group = dravidian
+					primary_culture = oriya
+					primary_culture = sinhala
+				}
+			}
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_unlock_indian_gov_reforms_flag
 		}
 	}
+	### ]]]
 	modifiers = {
 		infantry_power = 0.1
 		development_cost = -0.05
@@ -5178,16 +5198,24 @@ khalsa_reform = {
 deccani_society_reform = {
 	icon = "noble_indian"
 	allow_normal_conversion = yes
+	### ABF Modified Potential [[[
 	potential = {
 		has_dlc = "Dharma"
 		is_revolutionary = no
-		technology_group = indian
-		religion_group = muslim
 		OR = {
-			culture_group = dravidian
-			primary_culture = marathi
+			AND = {
+				technology_group = indian
+				religion_group = muslim
+				OR = {
+					culture_group = dravidian
+					primary_culture = marathi
+				}
+			}
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_unlock_indian_gov_reforms_flag
 		}
 	}
+	### ]]]
 	modifiers = {
 		free_dip_policy = 1
 	}
@@ -5802,15 +5830,23 @@ representation_of_the_crown_reform = {
 sidhi_recruitment = {
 	icon = "siddhi_recruitment"
 	allow_normal_conversion = yes
+	### ABF Modified Potential [[[
 	potential = {
 		has_dlc = "Dharma"
-		technology_group = indian
-		religion_group = muslim
 		OR = {
-			culture_group = dravidian
-			primary_culture = marathi
+			AND = {
+				technology_group = indian
+				religion_group = muslim
+				OR = {
+					culture_group = dravidian
+					primary_culture = marathi
+				}
+			}
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_unlock_indian_gov_reforms_flag
 		}
 	}
+	### ]]]
 	modifiers = {
 		fort_maintenance_modifier = -0.1
 		governing_capacity = 100
@@ -6173,15 +6209,23 @@ meritocratic_focus_reform = {
 dakhni_culture_reform = {
 	icon = "indian_crown"
 	allow_normal_conversion = yes
+	### ABF Modified Potential [[[
 	potential = {
 		has_dlc = "Dharma"
-		technology_group = indian
-		religion_group = muslim
 		OR = {
-			culture_group = dravidian
-			primary_culture = marathi
+			AND = {
+				technology_group = indian
+				religion_group = muslim
+				OR = {
+					culture_group = dravidian
+					primary_culture = marathi
+				}
+			}
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_unlock_indian_gov_reforms_flag
 		}
 	}
+	### ]]]
 	modifiers = {
 		state_maintenance_modifier = -0.2
 	}

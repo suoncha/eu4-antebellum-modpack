@@ -19,24 +19,28 @@ country_event = {
 	option = {
 		name = ab_brittany.1.a
 		add_prestige = 25
+		### ABF [[[
+		custom_tooltip = AB_EMPTY
+		### ]]]
 		change_tag = GLL
 		swap_non_generic_missions = yes
 		swap_free_idea_group = yes
-		custom_tooltip = AB_EMPTY
 		custom_tooltip = BRETON_BECOMES_GALLIC
-		change_primary_culture = Gallic
-		set_country_flag = aba_gallic_culture_spread # Used to spread Gallic culture in cores
-		custom_tooltip = aba_breton_gallic_culture_spread_tt
-		replace_culture_with_effect = {
-			new_culture = Gallic
-			old_culture_1 = breton
+		### ABF [[[
+		hidden_effect = {
+			change_primary_culture = Gallic
+			replace_culture_with_effect = {
+				new_culture = Gallic
+				old_culture_1 = breton
+			}
 		}
 		custom_tooltip = AB_EMPTY
+		set_country_flag = abf_gallic_culture_spread
+		custom_tooltip = ABF_GALLIC_CULTURE_SPREAD_TT
+		custom_tooltip = AB_EMPTY
+		### ]]]
 		hidden_effect = {
 			complete_mission = bri_restoration
-			ROOT = {
-				country_event = { id = ab_brittany.3 }
-			}
 			169 = {
 				change_original_culture = Gallic
 			}
@@ -171,6 +175,8 @@ country_event = {
 	}
 }
 
+#### ABF - New Events [[[
+
 #Embrace Gallic Faith 
 country_event = {
 	id = ab_brittany.3
@@ -182,24 +188,52 @@ country_event = {
 	
 	major = yes
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = GLL
+		OR = {
+			current_age = age_of_reformation
+			is_religion_enabled = gaelic_ab
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		 modifier = {
+            factor = 0.25
+            is_religion_enabled = gaelic_ab
+        }
+
+		modifier = {
+            factor = 0.50
+            current_age = age_of_reformation
+			NOT = {
+				is_religion_enabled = gaelic_ab
+			}
+        }
+	}
 
 	
 	option = {
 		name = ab_brittany.3.a
-			change_religion = gaelic_ab
+		change_religion = gaelic_ab
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 3650
+		}
+		hidden_effect = {
 			set_ruler_religion = gaelic_ab
 			set_heir_religion = gaelic_ab
 			capital_scope = {
-			change_religion = gaelic_ab
+				change_religion = gaelic_ab
 			}
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}
+		}
 	}
 
 	option = {
 		name = ab_brittany.3.b
 	}
 }
+
+#### ]]]]

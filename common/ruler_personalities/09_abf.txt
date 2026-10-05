@@ -1,4 +1,6 @@
-abf_mieszko_descendant_personality = {
+
+### ABF Poland (All Faiths) [[[
+abf_mieszko_descendant_personality = { #Catholic Poland (PLN/POL/PLC)
 	allow = {
 	}
 	core_creation = -0.1
@@ -19,7 +21,7 @@ abf_mieszko_descendant_personality = {
 	}
 }
 
-abf_heir_of_rus_personality = {
+abf_heir_of_rus_personality = { #Orthodox Poland (LUD/LCT)
 	allow = {
 	}
 	core_creation = -0.1
@@ -39,13 +41,15 @@ abf_heir_of_rus_personality = {
 		}
 	}
 }
+### ]]]
 
-abf_legacy_of_simeon_personality = {
+###ABF Livonia [[[
+abf_lva_vanquisher_of_slavs = {
 	allow = {
 	}
 	idea_cost = -0.05
 	governing_capacity_modifier = 0.1
-	yearly_patriarch_authority = 0.05
+	manpower_in_own_culture_provinces = 0.15
 	nation_designer_cost = 1000
 	
 	easy_war_chance_multiplier = 1000
@@ -61,25 +65,5 @@ abf_legacy_of_simeon_personality = {
 	}
 }
 
-	abf_lva_vanquisher_of_slavs = {
-	allow = {
-	}
-	idea_cost = -0.05
-	governing_capacity_modifier = 0.1
-	manpower_in_own_culture_provinces = 0.10
-	culture_conversion_cost = -0.25
-	culture_conversion_time = -0.1
-	nation_designer_cost = 1000
-	
-	easy_war_chance_multiplier = 1000
-	war_chance_multiplier = 1000
-	enemy_strength_multiplier = 0.5
-	building_budget_multiplier = 2
-	wants_land = yes
-	
-	chance = {
-		modifier = {
-			factor = -2
-		}
-	}
-}
+### ]]]
+

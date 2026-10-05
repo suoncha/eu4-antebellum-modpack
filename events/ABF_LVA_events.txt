@@ -1,0 +1,122 @@
+namespace = abf_lva_event
+normal_or_historical_nations = yes
+
+
+# Fate of Visby
+country_event = {
+	id = abf_lva_event.1
+	title = abf_lva_event.1.t
+	desc = abf_lva_event.1.d
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+
+	# Trade City
+	option = {
+		name = abf_lva_event.1.a
+		set_country_flag = abf_lva_visby_trade_city_buff_flag
+		custom_tooltip = ABF_LVA_VISBY_GP_TRADE_BUFF_TT
+		set_country_flag = enable_special_trader_flag
+		custom_tooltip = POL_TRADER_SCALING
+	}
+
+	# Naval Base 
+	option = {
+		name = abf_lva_event.1.b
+		set_country_flag = abf_lva_visby_naval_base_buff_flag
+		custom_tooltip = ABF_LVA_VISBY_GP_NAVAL_BUFF_TT
+		custom_tooltip = AB_EMPTY
+		set_country_flag = scaling_dockmaster_gbr
+		custom_tooltip = GBR_ADVISOR_SCALING
+	}
+}
+
+# Rise of KRZ
+country_event = {
+	id = abf_lva_event.2
+	title = abf_lva_event.2.t
+	desc = abf_lva_event.2.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = abf_lva_event.2.a
+		set_country_flag = abf_baltic_krievi_culture_spread_flag
+		custom_tooltip = ABF_BALTIC_KRIEVZEME_CULTURE_SPREAD_TT
+		hidden_effect = {
+			change_primary_culture = abf_baltic_krievi_culture
+			set_ruler_culture = abf_baltic_krievi_culture
+			set_heir_culture = abf_baltic_krievi_culture
+			baltic_region = {
+				limit = {
+					culture_group = baltic
+				}
+				change_original_culture = abf_baltic_krievi_culture
+				change_culture = abf_baltic_krievi_culture
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = ABF_lva_conquerer_of_slavs
+		custom_tooltip = ABF_LVA_RULER_TRAIT_TT
+		custom_tooltip = KRZ_EVOLVING_IDEA_1
+		hidden_effect = {
+			set_country_flag = krz_evolved_ideas1
+			swap_free_idea_group = yes
+		}
+		ural_region = {
+			limit = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		crimea_region = {
+			limit = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		poland_region = {
+			limit = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = NORWAY_SWEDEN_CLAIM
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owned_by = SWE
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+
+
+

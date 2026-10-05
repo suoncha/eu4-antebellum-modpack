@@ -10,8 +10,10 @@ country_decisions = {
 			NOT = { tag = ZAZ }
 			NOT = { exists = UKR }
 			NOT = { was_tag = UKR }
-			NOT = { tag = LUD}
+			### ABF - prevent LUD/LCT from forming RUS/UKR [[[
+			NOT = { tag = LUD }
 			NOT = { was_tag = LUD }
+			### ]]]
 		}
 		provinces_to_highlight = {
 			OR = {	
@@ -121,5 +123,5 @@ country_decisions = {
 		}
 		ai_importance = 500		
 	}
-	
+
 }

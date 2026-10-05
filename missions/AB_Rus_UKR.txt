@@ -262,9 +262,14 @@ ab_russia_first = {
 		effect = {
 			country_event = { id = ab_rus.7 }
 			custom_tooltip = AB_EMPTY
-			set_country_flag = abf_ukr_cossack_culture_spread
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			### ABF - new culture spread reward  [[[
+			set_country_flag = abf_htm_povolzyhe_cossack_culture_spread
+			custom_tooltip = ABF_HTM_POVOLZYHE_COSSACK_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_htm_don_cossack_culture_spread
+			custom_tooltip = ABF_HTM_DON_COSSACK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			tambov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -853,6 +858,11 @@ ab_russia_second = {
 				name = rus_black_sea_fleet
 				duration = 7300
 			}
+			### ABF - new culture spread reward  [[[
+			set_country_flag = abf_htm_chernomoriya_cossack_culture_spread
+			custom_tooltip = ABF_HTM_CHERNOMORIYA_COSSACK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			azov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1697,6 +1707,11 @@ ab_russia_third_formable = {
 					duration = -1
 				}
 			}
+			### ABF - new culture spread reward [[[
+			set_country_flag = abf_htm_terek_culture_spread
+			custom_tooltip = ABF_HTM_TEREK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			caucasia_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2139,13 +2154,7 @@ ab_russia_fourth_formable = {
 		}
 		
 		effect = {
-			add_adm_power = 150
-			baltic_region = {
-				add_province_modifier = {
-					name = rus_baltic_convert
-					duration = 9125
-				}
-			}
+			### ABF - new culture spread reward and reformatting [[[
 			define_advisor = {
 				type = inquisitor
 				skill = 2
@@ -2153,12 +2162,17 @@ ab_russia_fourth_formable = {
 				culture = ROOT
 				cost_multiplier = 0.5
 			}
-			custom_tooltip = LTV_CULTURE_SPREAD
-			set_country_flag = rus_litvin_culture_spread
-			272 = {
-				change_culture = Litvin
-				change_original_culture = Litvin
+			custom_tooltip = AB_EMPTY
+			baltic_region = {
+				add_province_modifier = {
+					name = rus_baltic_convert
+					duration = 9125
+				}
 			}
+			#ABF culture spread
+			set_country_flag = abf_litvin_culture_spread
+			custom_tooltip = ABF_LITVIN_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -2388,13 +2402,18 @@ ab_russia_fourth_formable = {
 			}
 		}
 		effect = {
-			custom_tooltip = lit_every_overlord_owned_or_subject_prov_1_random_dev
+			### ABF - new culture spread reward and reformatting [[[
 			tooltip = {
 				add_province_modifier = {
 					name = lit_harnessed_steppes_modifier
 					duration = 7300 
 				}
 			}
+			custom_tooltip = lit_every_overlord_owned_or_subject_prov_1_random_dev
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_htm_uralskyie_culture_spread
+			custom_tooltip = ABF_HTM_URALSKYIE_CULTURE_SPREAD_TT
+			### ]]]
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -2950,11 +2969,46 @@ ab_russia_fifth_formable = {
 		}
 		
 		effect = {
-			unify_polish_cultures_effect = yes
-			add_accepted_culture_or_dip_power = {
-				culture = polish
-				dip_reward = yes
+			### ABF - new culture reward [[[
+			custom_tooltip = ABF_POL_UNIFY_POLISH_EAST_SLAVIC_TT
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = polish
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Vistulan
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Lendian
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Polan
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
+				every_province = {
+					limit = {
+						culture = Mazovian
+					}
+					change_culture = abf_polish_eastern
+					change_original_culture = abf_polish_eastern
+				}
 			}
+			### ]]]
 			eastslovakia_area = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -3059,7 +3113,9 @@ ab_russia_fifth_formable = {
 		}
 		
 		effect = {
+			### ABF - new culture spread reward and reformatting [[[
 			custom_tooltip = RUS_CENTRAL_ASIA
+			custom_tooltip = AB_EMPTY
 			central_asia_region = {
 				limit = {
 					owned_by = ROOT
@@ -3070,8 +3126,9 @@ ab_russia_fifth_formable = {
 				}
 			}
 			set_country_flag = abf_nagaybak_culture_spread
-			custom_tooltip = aba_nagaybak_culture_spread_tt
+			custom_tooltip = ABF_NAGAYBAK_CULTURE_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			central_asia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -3118,21 +3175,25 @@ ab_russia_fifth_formable = {
 		}
 		
 		effect = {
+			### ABF - new culture spread reward and reformatting [[[
 			2106 = {
 				rename_capital = "Vladivostok"
 				change_religion = ROOT
-				change_culture = ROOT
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
+				change_culture = abf_kharbinskiye_cossack_culture
+				custom_tooltip = AB_EMPTY
 				add_province_modifier = {
 					name = "russian_pacific_port"
 					duration = -1
 				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
-			set_country_flag = aba_kharbinskiye_cossack_culture_spread
-			custom_tooltip = aba_kharbinskiye_cossack_culture_tt
 			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_kharbinskiye_cossack_culture_spread
+			custom_tooltip = ABF_KHARBINSKIYE_COSSACK_CULTURE_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			manchuria_region = {
 				limit = {
 					NOT = { is_core = ROOT}

@@ -38,7 +38,9 @@ estate_church = {
 		church_power_modifier = 0.1
 		monthly_fervor_increase = 1
 		stability_cost_modifier = -0.1
+		### ABF Commonwealth Mechanic [[[
 		monthly_commonwealth_popular_sovereignity = 0.03
+		### ]]]
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
@@ -51,7 +53,9 @@ estate_church = {
 		monthly_fervor_increase = -1
 		stability_cost_modifier = 0.1
 		global_unrest = 2
+		### ABF Commonwealth Mechanic [[[
 		monthly_commonwealth_popular_sovereignity = -0.03
+		### ]]]
 	}
 
 	land_ownership_modifier = {
@@ -248,6 +252,9 @@ estate_church = {
 					culture_group = east_slavic
 					culture_group = south_slavic
 					culture_group = west_slavic
+					### ABF LUD if Orthodox -  use East Slavic Clergy Name [[[
+					primary_culture = abf_polish_eastern
+					### ]]]
 				}
 			}
 		}
@@ -293,6 +300,9 @@ estate_church = {
 		desc = estate_asronan
 		trigger = {
 			OR = {
+				### ABF TCR Persia use Clergy name [[[
+				has_country_flag = abf_tcr_persia_path
+				### ]]]
 				ab_is_persia_trigger = yes
 				has_reform = persianprince
 				has_reform = persianprincet
@@ -324,6 +334,10 @@ estate_church = {
 		desc = estate_gentry
 		trigger = {
 			OR = {
+				### ABF TCR/JAP Sinicized Use Name [[[
+				has_country_flag = abf_tcr_china_path
+				primary_culture = abf_sinico_japanese
+				### ]]]
 				has_reform = celestial_empire
 				has_reform = MIN_celestial_empire
 				culture_group = east_asian
@@ -399,6 +413,11 @@ estate_church = {
 		estate_church_pagan_reconciliation
 		estate_church_interfaith_unity
 		# ]]]
+		### ABF [[[
+		#---ZUN/ROB--#
+		estate_church_abf_znn_sun_pilgrims
+		#------------------------#
+		### ]]]
 	}
 
 	agendas = {

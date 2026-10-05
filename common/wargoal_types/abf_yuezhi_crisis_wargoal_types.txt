@@ -1,0 +1,43 @@
+abf_take_yuezhi_imperial_capital = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.50
+		peace_cost_factor = 1.0
+
+		allowed_provinces = {
+			always = no
+		}
+
+		peace_options = {
+			abf_yuezhi_crisis_claim_chinese_hegemony
+		}
+
+		required_treaty_to_take_provinces = {
+			abf_yuezhi_crisis_claim_chinese_hegemony
+		}
+
+		deny_annex = yes
+	}
+
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0
+
+		allowed_provinces = {
+			always = no
+		}
+		
+		peace_options = {
+			abf_yuezhi_crisis_maintain_hegemony
+		}
+
+		required_treaty_to_take_provinces = {
+			abf_yuezhi_crisis_maintain_hegemony
+		}
+	}
+
+	war_name = ABF_YUEZHI_CHINESE_CRISIS
+}

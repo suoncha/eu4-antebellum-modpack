@@ -815,7 +815,8 @@ NUKR3_ideas = {
 	}
 }
 
-HTM_ideas = {
+### ABF modified HTM ideas - check other file for upgraded ideas [[[
+HTM_ideas = { # No buffed ideas at all
 	start = {
 		global_manpower_modifier = 0.25
 		loot_amount = 0.25
@@ -832,12 +833,11 @@ HTM_ideas = {
 				has_country_flag = htm_evolved_ideas1
 			}
 			NOT = {
-				has_country_flag = ABA_HTM_EVOLVING_IDEA2
+				has_country_flag = abf_htm_evolving_idea_cossack_radas
 			}
 			NOT = {
-				has_country_flag = ABA_HTM_EVOLVING_IDEA3
+				has_country_flag = abf_htm_evoling_idea_hetman_authority
 			}
-			NOT = { has_country_flag = aba_htm_starshyna_idea_buff }
 		}
 	}
 	free = yes		
@@ -866,7 +866,7 @@ HTM_ideas = {
 	}
 }
 
-HTM2_ideas = {
+HTM2_ideas = { # Buffed Roam wild fields only 
 	start = {
 		global_manpower_modifier = 0.25
 		loot_amount = 0.25
@@ -879,201 +879,19 @@ HTM2_ideas = {
 	trigger = {
 		tag = HTM
 		has_country_flag = htm_evolved_ideas1
-		NOT = {
-			has_country_flag = ABA_HTM_EVOLVING_IDEA2
-		}
-		NOT = {
-			has_country_flag = ABA_HTM_EVOLVING_IDEA3
-		}
-		NOT = { has_country_flag = aba_htm_starshyna_idea_buff }
-	}
-	free = yes		
-	
-	htm_first = {
-		governing_capacity_modifier = 0.1
-	}
-	htm_second2 = {
-		movement_speed = 0.3
-		leader_land_manuever = 1
-	}
-	htm_third = {
-		discipline = 0.05
-	}
-	htm_fourth = {
-		monarch_military_power = 1
-	}
-	htm_fifth = {
-		development_cost = -0.1
-	}
-	htm_sixth = {
-		mil_advisor_cost = -0.25
-	}
-	htm_seventh = {
-		shock_damage = 0.2
-	}
-}
-
-#ABA ]]]
-HTM3_ideas = {
-	start = {
-		global_manpower_modifier = 0.25
-		loot_amount = 0.25
-	}
-
-	bonus = {
-		cavalry_shock = 0.5
-	}
-	
-	trigger = {
-		tag = HTM
-		has_country_flag = ABA_HTM_EVOLVING_IDEA2
-		NOT = { has_country_flag = htm_evolved_ideas1 }
-		NOT = { has_country_flag = aba_htm_starshyna_idea_buff }
-	}
-	free = yes		
-	
-	htm_first = {
-		governing_capacity_modifier = 0.1
-	}
-	htm_second = {
-		movement_speed = 0.2
-		leader_land_manuever = 1
-	}
-	htm_third = {
-		discipline = 0.05
-	}
-	htm_fourth2 = {
-		monarch_military_power = 1
-		max_absolutism_effect = 0.15
-	}
-	htm_fifth = {
-		development_cost = -0.1
-	}
-	htm_sixth = {
-		mil_advisor_cost = -0.25
-	}
-	htm_seventh = {
-		shock_damage = 0.2
-	}
-}
-
-HTM4_ideas = {
-	start = {
-		global_manpower_modifier = 0.25
-		loot_amount = 0.25
-	}
-
-	bonus = {
-		cavalry_shock = 0.5
-	}
-	
-	trigger = {
-		tag = HTM
-		has_country_flag = ABA_HTM_EVOLVING_IDEA2
-		has_country_flag = htm_evolved_ideas1
-		NOT = {
-			has_country_flag = ABA_HTM_EVOLVING_IDEA3
-		}
-		NOT = { has_country_flag = aba_htm_starshyna_idea_buff }
-	}
-	free = yes		
-	
-	htm_first = {
-		governing_capacity_modifier = 0.1
-	}
-	htm_second2 = {
-		movement_speed = 0.3
-		leader_land_manuever = 1
-	}
-	htm_third = {
-		discipline = 0.05
-	}
-	htm_fourth2 = {
-		monarch_military_power = 1
-		max_absolutism_effect = 0.15
-	}
-	htm_fifth = {
-		development_cost = -0.1
-	}
-	htm_sixth = {
-		mil_advisor_cost = -0.25
-	}
-	htm_seventh = {
-		shock_damage = 0.2
-	}
-}
-
-HTM5_ideas = {
-	start = {
-		global_manpower_modifier = 0.25
-		loot_amount = 0.25
-	}
-
-	bonus = {
-		cavalry_shock = 0.5
-	}
-	
-	trigger = {
-		tag = HTM
-		has_country_flag = ABA_HTM_EVOLVING_IDEA3
 		AND = {
 			NOT = {
-				has_country_flag = htm_evolved_ideas1
+				has_country_flag = abf_htm_evolving_idea_cossack_radas
 			}
 			NOT = {
-				has_country_flag = ABA_HTM_EVOLVING_IDEA2
+				has_country_flag = abf_htm_evoling_idea_hetman_authority
 			}
-			NOT = { has_country_flag = aba_htm_starshyna_idea_buff }
 		}
 	}
 	free = yes		
 	
-	htm_first2 = {
-		governing_capacity_modifier = 0.25
-	}
-	htm_second = {
-		movement_speed = 0.2
-		leader_land_manuever = 1
-	}
-	htm_third = {
-		discipline = 0.05
-	}
-	htm_fourth = {
-		monarch_military_power = 1
-	}
-	htm_fifth = {
-		development_cost = -0.1
-	}
-	htm_sixth = {
-		mil_advisor_cost = -0.25
-	}
-	htm_seventh = {
-		shock_damage = 0.2
-	}
-}
-
-HTM6_ideas = {
-	start = {
-		global_manpower_modifier = 0.25
-		loot_amount = 0.25
-	}
-
-	bonus = {
-		cavalry_shock = 0.5
-	}
-	
-	trigger = {
-		tag = HTM
-		has_country_flag = ABA_HTM_EVOLVING_IDEA3
-		has_country_flag = htm_evolved_ideas1
-		NOT = {
-			has_country_flag = ABA_HTM_EVOLVING_IDEA2
-		}
-	}
-	free = yes		
-	
-	htm_first2 = {
-		governing_capacity_modifier = 0.25
+	htm_first = {
+		governing_capacity_modifier = 0.1
 	}
 	htm_second2 = {
 		movement_speed = 0.3
@@ -1095,8 +913,7 @@ HTM6_ideas = {
 		shock_damage = 0.2
 	}
 }
-
-# ]]]]
+### ]]]
 
 GLH2_ideas = {
 	start = {

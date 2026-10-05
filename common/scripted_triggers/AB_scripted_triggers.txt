@@ -82,10 +82,14 @@ ab_is_not_free_mercenary_company = {
 		NOT = { mercenary_company = ab_merc_ghilman }
 		NOT = { mercenary_company = ab_merc_haka }
 		NOT = { mercenary_company = ab_merc_skanderbeg }
-		NOT = { mercenary_company = aba_merc_chernomoriya_host }
-		NOT = { mercenary_company = aba_merc_don_kuban_host }
-		NOT = { mercenary_company = aba_merc_malorossian_host }
-		NOT = { mercenary_company = aba_merc_terek_host }
+		### ABF Free Mercs [[[
+		NOT = { mercenary_company = abf_merc_chernomoriya_host }
+		NOT = { mercenary_company = abf_merc_don_kuban_host }
+		NOT = { mercenary_company = abf_merc_malorossian_host }
+		NOT = { mercenary_company = abf_merc_terek_host }
+		NOT = { mercenary_company = abf_merc_gorhkas_1 }
+		NOT = { mercenary_company = abf_merc_gorhkas_2 }
+		### ]]]
 	}
 }
 

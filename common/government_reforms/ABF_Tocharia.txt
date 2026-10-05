@@ -1,0 +1,1030 @@
+#### ABF Tocharia T1 [[[
+#----ABF TCR India Path: Kushan Confederation----#
+ABF_tcr_kushan_confederacy = {
+	icon = "asian_scripture"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+    maintain_dynasty = yes
+	fixed_rank = 3
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = ABF_tcr_kushan_confederacy
+        }
+	}
+	
+	modifiers = {
+		legitimacy = 0.5
+		governing_capacity_modifier = 0.10
+		state_governing_cost = -0.1
+		max_absolutism = -20
+	}
+
+	custom_attributes = {
+		can_royal_marry_heathens = yes
+	}
+	
+	assimilation_cultures = {
+		Finnic = {
+			cav_to_inf_ratio = 0.25
+		}
+		romanian_culture_group = {
+			available_province_loot = 0.25
+		}
+		Mongolian = {
+			leader_land_manuever = 1
+		}
+		altaic = {
+			mercenary_discipline = 0.05
+		}
+		baltic = {
+			global_missionary_strength = 0.02
+		}
+		west_germanic = {
+			ship_durability = 0.05
+		}
+		burman = {
+			free_leader_pool = 1
+		}
+		byzantine = {
+			monarch_admin_power = 1
+		}
+		carpathian = {
+			leader_land_shock = 1
+		}
+		caucasian = {
+			defensiveness = 0.10
+		}
+		gaelic = {
+			fire_damage_received = -0.10
+		}
+		central_indic = {
+			land_attrition = -0.1
+		}
+		east_asian = {
+			state_governing_cost = -0.1
+		}
+		kongo_group = {
+			heir_chance = 0.5
+		}
+		cushitic = {
+			missionaries = 1
+		}
+		dravidian = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		african = {
+			global_tax_income = 10
+		}
+		east_slavic = {
+			global_manpower_modifier = 0.20
+		}
+		eastern_aryan = {
+			production_efficiency = 0.05
+		}
+		evenks = {
+			trade_range_modifier = 0.10
+		}
+		french = {
+			improve_relation_modifier = 0.15
+		}
+		germanic = {
+			global_institution_spread = 0.15
+		}
+		united_germanic = {
+			global_institution_spread = 0.15
+		}
+		great_lakes_group = {
+			loot_amount = 0.5
+		}
+		hindusthani = {
+			core_creation = -0.1
+		}
+		iberian = {
+			global_colonial_growth = 20
+		}
+		iranian = {
+			build_cost = -0.10
+		}
+		japanese_g = {
+			land_morale = 0.1
+		}
+		kamchatkan_g = {
+			hostile_attrition = 1
+		}
+		korean_g = {
+			idea_cost = -0.05
+		}
+		latin = {
+			embracement_cost = -0.1
+		}
+		lost_cultures_group = {
+			discipline = 0.05
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
+		}
+		maghrebi = {
+			privateer_efficiency = 0.25
+		}
+		malay = {
+			merchants = 1
+		}
+		mande = {
+			tolerance_heretic = 1
+		}
+		pacific = {
+			global_sailors_modifier = 0.1
+		}
+		sahelian = {
+			movement_speed = 0.1
+		}
+		scandinavian = {
+			may_perform_slave_raid = yes
+		}
+		southeastasian_group = {
+			development_cost = -0.05
+		}
+		south_slavic = {
+			infantry_power = 0.1
+		}
+		southern_african = {
+			inflation_reduction = 0.05
+		}
+		sudanese = {
+			caravan_power = 0.1
+		}
+		tartar = {
+			cavalry_cost = -0.15
+		}
+		thai_group = {
+			build_cost = -0.05
+		}
+		tibetan_group = {
+			prestige_per_development_from_conversion = 0.5
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
+		west_african = {
+			global_autonomy = -0.01
+		}
+		west_slavic = {
+			leader_land_fire = 1
+		}
+		western_aryan = {
+			trade_efficiency = 0.05
+		}
+	}
+}
+#------------------------------#
+
+#----ABF TCR Persia Path: Persianate Empire----#
+ABF_tcr_persianempire = {
+	icon = "persianempire"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	maintain_dynasty = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = ABF_tcr_persianempire
+        }
+	}
+
+	modifiers = {
+		legitimacy = 0.5
+		province_warscore_cost = -0.1
+		governing_capacity_modifier = 0.1
+	}
+
+	custom_attributes = {
+		ab_has_satrapies = yes
+	}
+
+	assimilation_cultures = {
+		Finnic = {
+			cav_to_inf_ratio = 0.25
+		}
+		romanian_culture_group = {
+			available_province_loot = 0.25
+		}
+		Mongolian = {
+			leader_land_manuever = 1
+		}
+		altaic = {
+			mercenary_discipline = 0.05
+		}
+		baltic = {
+			global_missionary_strength = 0.02
+		}
+		west_germanic = {
+			ship_durability = 0.05
+		}
+		burman = {
+			free_leader_pool = 1
+		}
+		byzantine = {
+			monarch_admin_power = 1
+		}
+		carpathian = {
+			leader_land_shock = 1
+		}
+		caucasian = {
+			defensiveness = 0.10
+		}
+		gaelic = {
+			fire_damage_received = -0.10
+		}
+		central_indic = {
+			land_attrition = -0.1
+		}
+		east_asian = {
+			state_governing_cost = -0.1
+		}
+		kongo_group = {
+			heir_chance = 0.5
+		}
+		cushitic = {
+			missionaries = 1
+		}
+		dravidian = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		african = {
+			global_tax_income = 10
+		}
+		east_slavic = {
+			global_manpower_modifier = 0.20
+		}
+		eastern_aryan = {
+			production_efficiency = 0.05
+		}
+		evenks = {
+			trade_range_modifier = 0.10
+		}
+		french = {
+			improve_relation_modifier = 0.15
+		}
+		germanic = {
+			global_institution_spread = 0.15
+		}
+		united_germanic = {
+			global_institution_spread = 0.15
+		}
+		great_lakes_group = {
+			loot_amount = 0.5
+		}
+		hindusthani = {
+			core_creation = -0.1
+		}
+		iberian = {
+			global_colonial_growth = 20
+		}
+		iranian = {
+			build_cost = -0.10
+		}
+		japanese_g = {
+			land_morale = 0.1
+		}
+		kamchatkan_g = {
+			hostile_attrition = 1
+		}
+		korean_g = {
+			idea_cost = -0.05
+		}
+		latin = {
+			embracement_cost = -0.1
+		}
+		lost_cultures_group = {
+			discipline = 0.05
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
+		}
+		maghrebi = {
+			privateer_efficiency = 0.25
+		}
+		malay = {
+			merchants = 1
+		}
+		mande = {
+			tolerance_heretic = 1
+		}
+		pacific = {
+			global_sailors_modifier = 0.1
+		}
+		sahelian = {
+			movement_speed = 0.1
+		}
+		scandinavian = {
+			may_perform_slave_raid = yes
+		}
+		southeastasian_group = {
+			development_cost = -0.05
+		}
+		south_slavic = {
+			infantry_power = 0.1
+		}
+		southern_african = {
+			inflation_reduction = 0.05
+		}
+		sudanese = {
+			caravan_power = 0.1
+		}
+		tartar = {
+			cavalry_cost = -0.15
+		}
+		thai_group = {
+			build_cost = -0.05
+		}
+		tibetan_group = {
+			prestige_per_development_from_conversion = 0.5
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
+		west_african = {
+			global_autonomy = -0.01
+		}
+		west_slavic = {
+			leader_land_fire = 1
+		}
+		western_aryan = {
+			trade_efficiency = 0.05
+		}
+	}
+}
+#------------------------------#
+
+## ABF TCR CHINESE PATH [[
+#----ABF TCR China Path: Warlord State, lesser T1 reform----#
+ABF_tcr_yuezhi_warlord = {
+	icon = "chinawarlord"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = ABF_tcr_yuezhi_warlord
+        }
+        NOT = {
+            has_unlocked_government_reform = {
+                government_reform = ABF_tcr_celestial_empire
+            }
+        }
+		is_colonial_nation = no
+		is_emperor_of_china = no
+	}
+	
+	modifiers = {
+		legitimacy = 0.5
+		province_warscore_cost = -0.15
+		governing_capacity_modifier = 0.1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			unification_of_china_cb = yes
+		}
+	}
+
+    custom_attributes = {
+		abf_chinese_culture_assimilation = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = east_asian
+					NOT = {
+						has_province_modifier = abf_chinese_culture_assimilation_mod
+					}
+					NOT = {
+						has_owner_accepted_culture = yes
+					}
+					OR = {
+						religion = owner
+						has_owner_harmonized_religion = yes
+					}
+				}
+				add_province_modifier = {
+					name = abf_chinese_culture_assimilation_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = abf_chinese_culture_assimilation_mod
+				}
+				remove_province_modifier = abf_chinese_culture_assimilation_mod
+			}
+		}
+	}
+}
+
+#----ABF TCR China Path: Celestial Empire (NON-EOC), Greater T1 reform----#
+ABF_tcr_celestial_empire = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+    lock_level_when_selected = yes
+    legacy_equivalent = celestial_empire_legacy
+    fixed_rank = 3
+    maintain_dynasty = yes
+	allow_force_tributary = no
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = ABF_tcr_celestial_empire
+        }
+		is_colonial_nation = no
+		is_emperor_of_china = no
+	}	
+
+	factions = {
+		temples
+		enuchs
+		bureaucrats
+	}
+	start_territory_to_estates = 0.9
+
+	modifiers = {
+		discipline = 0.05
+		administrative_efficiency = 0.025
+		max_absolutism = 15
+		governing_capacity = 500 
+	}
+
+	custom_attributes = { 
+		# TODO 
+		locked_government_type = yes
+		claim_states = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {}
+	}
+
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+#-----------------------------------------------------------#
+## ]]
+
+#### ABF Tocharia T2 [[[
+
+#----ABF TCR China Path: Ordu Reform---#
+abf_tcr_ordu_reform = {
+	icon = "feudal_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_ordu_reform
+		}
+	}
+	modifiers = {
+		leader_land_shock = 2
+		shock_damage = 0.05
+		army_tradition = 0.25
+	}
+
+	custom_attributes = {
+		recruiting_generals_increases_nobles_loyalty = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
+#-----------------------------------------------------------#
+## ]]
+
+#### ABF Tocharia T3 [[[
+#----ABF TCR Shared Path: Syncretic Bureaucracy----#
+abf_tcr_syncretic_bureacracy_reform = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_syncretic_bureacracy_reform
+		}
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = abf_kushan_syncretic_adminstration_reform
+			}
+		}
+	}
+
+	modifiers = {
+		manpower_in_accepted_culture_provinces = 0.15
+		monthly_reform_progress_modifier = 0.10
+		min_autonomy_in_territories = -0.05
+	}
+}
+
+#----ABF TCR India Path: Syncretic Greco-Persian-Indian Adminstration----# Buffed Base Bureacracy
+abf_kushan_syncretic_adminstration_reform = {
+	icon = "court_of_art_and_culture_reform"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_kushan_syncretic_adminstration_reform
+		}
+	}
+
+	modifiers = {
+		monarch_diplomatic_power = 1
+		years_of_nationalism = -5
+		manpower_in_accepted_culture_provinces = 0.15
+		monthly_reform_progress_modifier = 0.10
+	}
+
+	custom_attributes = {
+		unlock_indian_monuments = yes
+	}
+}
+#-----------------------------------------------------------#
+#-----------------------------------------------------------#
+#### ]]]
+
+#### ABF Tocharia T4 [[[
+#----ABF TCR China: Eight Banners----#
+abf_tcr_china_eight_banners_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_china_eight_banners_reform
+		}
+	}
+	
+	modifiers = {
+		army_tradition_decay = -0.005
+		morale_damage_received = -0.05
+		amount_of_banners = 0.25
+		has_banners = yes
+	}
+
+	custom_attributes = {
+		eight_banners_buff = yes
+		abf_banners_corrupt_halved = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = eight_banners_reform_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			remove_country_modifier = eight_banners_reform_modifier
+		}
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+#-----------------------------------------------------------#
+#### ]]]
+
+#### ABF Tocharia T5 [[[
+#----ABF TCR Shared Path: One Faith (weaker)---#
+abf_tcr_one_faith_reform = {
+	icon = "monks"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_one_faith_reform
+        }
+		NOT = {
+            has_unlocked_government_reform = {
+                government_reform = abf_tcr_one_faith_buffed_reform
+            }
+        }
+        NOT = {
+            has_unlocked_government_reform = {
+                government_reform = abf_tcr_all_religious_tolerance_reform
+            }
+        }
+	}
+	
+	modifiers = {
+		missionaries = 1
+		harmonization_speed = 0.25
+		missionary_maintenance_cost = -0.10
+		global_missionary_strength = 0.02
+	}
+
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		on_church_built_clergy_loyalty = yes
+	}
+
+}
+#-----------------------------------------------------------#
+
+#----ABF TCR Shared Path: One Faith (buffed)---#
+abf_tcr_one_faith_buffed_reform = {
+	icon = "monks"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_one_faith_buffed_reform
+        }
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_one_faith_reform
+        }
+        NOT = {
+            has_unlocked_government_reform = {
+                government_reform = abf_tcr_all_religious_tolerance_reform
+            }
+        }
+	}
+	
+	modifiers = {
+		missionaries = 1
+		harmonization_speed = 0.30
+		warscore_cost_vs_other_religion = -0.15
+		global_missionary_strength = 0.03
+	}
+
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		on_church_built_clergy_loyalty = yes
+	}
+
+}
+#-----------------------------------------------------------#
+
+#----ABF TCR Shared Path: Tolerance (Weaker)---#
+abf_tcr_all_religious_tolerance_reform = {
+	icon = "mandala_system"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_all_religious_tolerance_reform
+        }
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = abf_tcr_all_religious_tolerance_buffed_reform
+			}
+		}
+        NOT = {
+            has_unlocked_government_reform = {
+                government_reform = abf_tcr_one_faith_reform
+            }
+        }
+	}
+	
+	modifiers = {
+		tolerance_heretic = 3
+		tolerance_heathen = 3
+		religious_unity = 0.25
+	}
+
+    custom_attributes = {
+		temples_modifier = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+}
+
+#-----------------------------------------------------------#
+
+#----ABF TCR Shared Path: Tolerance (Buffed)---#
+abf_tcr_all_religious_tolerance_buffed_reform = {
+	icon = "mandala_system"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_all_religious_tolerance_buffed_reform
+		}
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_all_religious_tolerance_reform
+        }
+        NOT = {
+            has_unlocked_government_reform = {
+                government_reform = abf_tcr_one_faith_reform
+            }
+        }
+	}
+	
+	modifiers = {
+		global_unrest = -1
+		tolerance_heretic = 3
+		tolerance_heathen = 3
+		no_religion_penalty = yes
+	}
+
+    custom_attributes = {
+		temples_modifier = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+}
+
+#-----------------------------------------------------------#
+#### [[[
+
+#### ABF Tocharia T6 [[[
+#----ABF TCR India Path: Maratha Caste----# 
+abf_tcr_kushan_maratha_confederacy_reform = {
+	icon = "maratha_rider"
+	allow_normal_conversion = yes
+ 
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_kushan_maratha_confederacy_reform
+		}
+		has_estate = estate_maratha
+	}
+
+	modifiers = {
+		maratha_loyalty_modifier = 0.1
+		maratha_privilege_slots = 1
+		monarch_military_power = 1
+		reinforce_speed = 0.25
+	}
+
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_maratha = yes
+	}
+}
+#-----------------------------------------------------------#
+
+#----ABF TCR Greco-Persian Path: Turco-Iranian Bureaucracy----# 
+abf_tcr_persia_turkic_legacy_reform = {
+	lock_level_when_selected = no
+	allow_normal_conversion = yes
+	
+	icon = "seljuk_government"
+	
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_persia_turkic_legacy_reform
+		}	
+	}
+	
+	modifiers = {
+		state_governing_cost = -0.15
+		unjustified_demands = -0.10
+		cavalry_power = 0.10
+		max_absolutism = 5
+	}
+
+	conditional = {
+        allow = { has_dlc = "Domination" }
+        has_pashas = yes
+        custom_attributes = {
+            pasha_extra_bonuses = yes
+        }
+    }
+}
+#-----------------------------------------------------------#
+#### ]]]
+
+#### ABF Tocharia T7 [[[
+#----ABF TCR Persia Path: Divine Authority ----# 
+abf_tcr_per_divine_authority_reform = {
+	icon = "zoroastrian_persian_government_reform"
+	allow_normal_conversion = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_per_divine_authority_reform
+		}
+	}
+
+	modifiers = {
+		governing_capacity = 150
+		warscore_cost_vs_other_religion = -0.10
+		manpower_in_true_faith_provinces = 0.15
+	}
+
+	custom_attributes = {
+		improved_defender_of_faith = yes
+	}
+}
+#-----------------------------------------------------------#
+#### ]]]
+
+#### ABF Tocharia T9 [[[
+#----ABF TCR Persia: Macedonian Heritage----# 
+abf_tcr_per_macedonian_heritage_reform = {
+	lock_level_when_selected = no
+	allow_normal_conversion = yes
+	
+	icon = "nicene_stratocracy"
+	
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_per_macedonian_heritage_reform
+		}	
+	}
+	
+	modifiers = {
+		governing_capacity_modifier = 0.10
+		free_mil_policy = 1
+		monarch_military_power = 1
+		max_absolutism = 10
+	}
+}
+
+abf_tcr_kushan_right_conquest_reform = {
+	lock_level_when_selected = no
+	allow_normal_conversion = yes
+	
+	icon = "peacock_throne"
+	
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = abf_tcr_kushan_right_conquest_reform
+		}	
+	}
+	
+	modifiers = {
+		free_mil_policy = 1
+		province_warscore_cost = -0.15
+		governing_capacity_modifier = 0.10
+		max_absolutism_effect = 0.10
+	}
+
+	custom_attributes = {
+		manpower_from_defeating_armies = yes
+	}
+
+}
+#-----------------------------------------------------------#
+#### ]]]
+
+#### ABF Tocharia T11 [[[
+#----ABF TCR China Path: Sino_Yuezhi Spirit
+abf_tcr_sino_yuezhi_spirit_reform = {
+	icon = "legacy_of_timur_reform"
+	allow_normal_conversion = no
+    lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_sino_yuezhi_spirit_reform
+        }
+	}	
+
+	modifiers = {
+		discipline = 0.05
+		years_of_nationalism = -5
+		administrative_efficiency = 0.025
+		max_absolutism = 15
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = { 
+		battles_on_own_territory_bonus_tradition = yes
+	}
+}
+#-----------------------------------------------------------#
+
+#----ABF TCR Persia Path: Greco-Iranian Spirit
+abf_tcr_per_greco_iranian_spirit_reform = {
+	icon = "sparapet_office"
+	allow_normal_conversion = no
+    lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_per_greco_iranian_spirit_reform
+        }
+	}	
+
+	modifiers = {
+		military_tactics = 0.10
+		idea_cost = -0.05
+		administrative_efficiency = 0.05
+		governing_capacity_modifier = 0.10
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = { 
+		battles_on_own_territory_bonus_tradition = yes
+	}
+}
+#-----------------------------------------------------------#
+
+#----ABF TCR Persia Path: Aryan Spirit
+abf_tcr_kushan_aryan_spirit_reform = {
+	icon = "legacy_of_eranshahr_reform"
+	allow_normal_conversion = no
+    lock_level_when_selected = yes
+
+	potential = {
+		has_unlocked_government_reform = {
+            government_reform = abf_tcr_kushan_aryan_spirit_reform
+        }
+	}	
+
+	modifiers = {
+		land_morale = 0.10
+		technology_cost = -0.05
+		administrative_efficiency = 0.05
+		governing_capacity_modifier = 0.10
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = { 
+		battles_on_own_territory_bonus_tradition = yes
+	}
+}
+#-----------------------------------------------------------#
+### ]]]

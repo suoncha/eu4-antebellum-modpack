@@ -43,15 +43,16 @@ estate_burghers_land_rights = {
 			max_absolutism = 5
 		}
 	}
-
-	conditional_modifier = {
-		trigger = { has_country_flag = aba_htm_burgher_land_right_buff }
+	# ]]]
+	### ABF Conditional Modifiers  [[[
+	conditional_modifier = { #HTM/ZAZ
+		trigger = { has_country_flag = abf_htm_burgher_land_right_buff }
 		modifier = {
 			global_own_trade_power = 0.10
 			max_absolutism = 5
 		}
 	}
-	# ]]]
+	### ]]]
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -242,15 +243,16 @@ estate_burghers_enforced_interfaith_dialogue = {
 		}
 	}
 	# ]]]
-	# ABA [[[
+	### ABF [[[
+	# HTM 
 	conditional_modifier = {
-		trigger = { has_country_flag = htm_interfaith_buff }
+		trigger = { has_country_flag = abf_htm_interfaith_buff_flag }
 		modifier = {
 			global_manpower_modifier = 0.10
 			max_absolutism = 5
 		}
 	}
-	# ]]]
+	### ]]]
 	ai_will_do = {
 		factor = 0
 	}
@@ -291,6 +293,26 @@ estate_burghers_land_of_commerce = {
 		}
 	}
 	# ]]]
+	### ABF [[[
+	#TCR
+	# India/Kushan
+	conditional_modifier = {
+		trigger = { has_country_flag = abf_tcr_land_of_commerce_buff }
+		modifier = {
+			build_cost = -0.10
+			build_time = -0.10
+			max_absolutism = 5
+		}
+	}
+	#China/Yuezhi
+	conditional_modifier = {
+		trigger = { has_country_flag = abf_tcr_china_loc_buff_flag }
+		modifier = {
+			global_trade_goods_size_modifier = 0.05
+			max_absolutism = 5
+		}
+	}
+	### ]]]
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -728,6 +750,17 @@ estate_burghers_patronage_of_the_arts = {
 		modifier = { prestige = 1 }
 	}
 	# ]]]
+	### ABF [[[
+	# TCR
+	conditional_modifier = {
+		trigger = { has_country_flag = abf_tcr_patronage_splendor_buff_flag  }
+		modifier = { 
+			max_absolutism = -5 
+			global_tax_modifier = 0.05
+			monthly_splendor = 1
+		}
+	}
+	### ]]]
 	cooldown_years = 10
 	on_granted = {
 		if = {
@@ -1987,6 +2020,20 @@ estate_burghers_autonomous_trade_companies = {
 		placed_merchant_power = 5 
 		center_of_trade_upgrade_cost = -0.1 
 	}
+
+	### ABF Conditional Modifier [[[
+	#LVA
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = abf_lva_aut_trade_ger_buff_flag
+		}
+		modifier = {
+			max_absolutism = 5
+			global_own_trade_power = 0.1
+		}
+	}
+	### ]]]
+
 	penalties = {
 	}
 	cooldown_years = 15
@@ -2012,17 +2059,39 @@ estate_burghers_development_of_cities = {
 			}
 			custom_tooltip = ITA_doing_estate_burghers_agendas
 		}
-		custom_tooltip = estate_burghers_development_of_cities_gt
-		tooltip = {
-			add_province_modifier = {
-				name = estate_burghers_development_of_cities_mod
-				duration = -1
+		### ABF [[[
+		#TCR
+		if = {
+			limit = {
+				NOT = { has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag }
+			}
+			custom_tooltip = estate_burghers_development_of_cities_gt
+			tooltip = {
+				add_province_modifier = {
+					name = estate_burghers_development_of_cities_mod
+					duration = -1
+				}
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+			}
+			custom_tooltip = estate_burghers_development_of_cities_gt
+			tooltip = {
+				add_province_modifier = {
+					name = abf_tcr_city_expansion_irrigation_mod
+					duration = -1
+				}
+			}
+		}
+		#### ]]]
+	
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_development_of_cities_rt
 	}
+	### ABF - Modified for Conditional Reward [[[
 	on_granted_province = {
 		if = {
 			limit = {
@@ -2030,9 +2099,29 @@ estate_burghers_development_of_cities = {
 					province_has_center_of_trade_of_level = 1
 					has_river_estuary_trigger = yes
 				}
+				owner = {
+					NOT = {
+						has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+					}
+				}
 			}
 			add_province_modifier = {
 				name = estate_burghers_development_of_cities_mod
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					has_river_estuary_trigger = yes
+				}
+				owner = {
+					has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+				}
+			}
+			add_province_modifier = {
+				name = abf_tcr_city_expansion_irrigation_mod
 				duration = -1
 			}
 		}
@@ -2042,23 +2131,60 @@ estate_burghers_development_of_cities = {
 			limit = { has_province_modifier = estate_burghers_development_of_cities_mod }
 			remove_province_modifier = estate_burghers_development_of_cities_mod
 		}
+		#TCR 
+		if = {
+			limit = { 
+				has_province_modifier = abf_tcr_city_expansion_irrigation_mod 
+				owner = {
+					has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+				}
+			}
+			remove_province_modifier = abf_tcr_city_expansion_irrigation_mod
+		}
 	}
 	on_revoked_province = {
 		if = {
 			limit = { has_province_modifier = estate_burghers_development_of_cities_mod }
 			remove_province_modifier = estate_burghers_development_of_cities_mod
 		}
+		#TCR
+		if = {
+			limit = { 
+				has_province_modifier = abf_tcr_city_expansion_irrigation_mod 
+				owner = {
+					has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+				}
+			}
+			remove_province_modifier = abf_tcr_city_expansion_irrigation_mod
+		}
 	}
+	### ]]]
 	# AB [[[
 	conditional_modifier = {
 		trigger = {
-			has_country_flag = ITA_upgrade_city_expansion_privileges_flag
+			### Modified by ABF [[[
+			OR = {
+				has_country_flag = ITA_upgrade_city_expansion_privileges_flag
+				has_country_flag = abf_tcr_irrigation_city_expansion_privileges_buff_flag
+			}
+			### ]]]
 		}
 		modifier = {
 			max_absolutism = 5
 		}
 	}
 	# ]]]
+	### ABF Conditional Modifiers [[[
+	conditional_modifier = { #ZNN/ROB
+		trigger = {
+			has_country_flag = abf_znn_great_trunk_road_privilege_flag
+		}
+		modifier = {
+			max_absolutism = 5
+			center_of_trade_upgrade_cost = -0.33
+		}
+	}
+	### ]]]
 	mechanics = {
 		no_estate_crownland_loss_from_developing
 	}
@@ -2077,19 +2203,6 @@ estate_burghers_control_over_the_coinage = {
 	}
 	can_select = {
 	}
-
-	conditional_modifier = {
-		trigger = {
-			has_country_flag = aba_htm_control_coinage_buff
-		}
-		modifier = {
-			max_absolutism = 5
-			inflation_reduction = 0.25
-			interest = -0.25
-			global_tax_modifier = 0.05
-		}
-	}
-
 	on_granted = {
 		enable_estate_action = {
 			estate_action = RECRUIT_MINISTER_BURGHERS
@@ -2105,6 +2218,33 @@ estate_burghers_control_over_the_coinage = {
 			estate_action = RECRUIT_MINISTER_BURGHERS
 		}
 	}
+	
+	### ABF [[[
+	conditional_modifier = { #HTM/ZAZ
+		trigger = {
+			has_country_flag = abf_htm_control_coinage_buff
+		}
+		modifier = {
+			max_absolutism = 5
+			inflation_reduction = 0.25
+			interest = -0.25
+			global_tax_modifier = 0.05
+		}
+	}
+
+	conditional_modifier = { #TCR
+		trigger = {
+			has_country_flag = abf_tcr_control_coinage_buff
+		}
+		modifier = {
+			max_absolutism = 5
+			inflation_reduction = 0.15
+			inflation_action_cost = -0.33
+			prestige = 1
+		}
+	}
+	### ]]]
+
 	ai_will_do = {
 		factor = 0
 	}
@@ -2181,6 +2321,19 @@ estate_burghers_economical_boost = {
 			global_prov_trade_power_modifier = 0.5
 		}
 	}
+
+	### ABF [[[
+	conditional_modifier = { #TCR
+		trigger = {
+			has_country_flag = abf_tcr_burghers_economic_freedom_buff
+		}
+		modifier = {
+			build_cost = -0.10
+			build_time = -0.10
+			max_absolutism = 5
+		}
+	}
+	### ]]]
 	ai_will_do = {
 		factor = 0
 	}

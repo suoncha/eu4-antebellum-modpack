@@ -2,26 +2,25 @@ country_decisions = {
 
 	form_macedonia = {
 		major = yes
+		### ABF TCR Modified Potential [[[
 		potential = {
 			OR = {
 				AND = {
 					tag = HLE
-					mission_completed = nicene_bactria
+					mission_completed = nicene_macedonian_restoration
 				}
-				mission_completed = nicene_macedonian_restoration
-				has_country_flag = ABA_TCR_BACTRIA_MACEDONIA
-			}
-			NOT = {
-				exists = MAC
+				has_country_flag = abf_tcr_macedona_rename_flag
 			}
 		}
-		
+		# ]]]
 		allow = {
 		}
-
 		effect = {
 			add_prestige = 25
 			change_tag = MAC
+			### ABF TCR Modified Effect/Prevent decision again [[[
+			clr_country_flag = abf_tcr_macedona_rename_flag
+			# ]]]
 			set_country_flag = formed_macedonian_empire_flag
 			if = {
 				limit = {
@@ -31,7 +30,6 @@ country_decisions = {
 			}
 			custom_tooltip = cosmetic_tag_info
 		}
-
 		ai_will_do = {
 			factor = 1
 		}

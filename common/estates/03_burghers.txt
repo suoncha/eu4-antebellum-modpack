@@ -27,8 +27,9 @@ estate_burghers = {
 	country_modifier_happy = {
 		trade_efficiency = 0.2
 		development_cost = -0.1
-		monthly_commonwealth_popular_sovereignity = 0.03
-		
+		### ABF Commonwealth Mechanic [[[
+        monthly_commonwealth_popular_sovereignity = 0.03
+        ### ]]]
 	}
 	country_modifier_neutral = {
 		trade_efficiency = 0.2
@@ -37,7 +38,9 @@ estate_burghers = {
 		trade_efficiency = -0.1
 		development_cost = 0.1
 		global_unrest = 2
-		monthly_commonwealth_popular_sovereignity = -0.03
+		### ABF Commonwealth Mechanic [[[
+        monthly_commonwealth_popular_sovereignity = -0.03
+        ### ]]]
 	}
 	land_ownership_modifier = {
 		burghers_loyalty_modifier = 0.2
@@ -217,6 +220,9 @@ estate_burghers = {
 		desc = estate_hutukhshan
 		trigger = {
 			OR = {
+				### ABF TCR add name for Persian path  [[[
+				has_country_flag = abf_tcr_persia_path
+				### ]]]
 				ab_is_persia_trigger = yes
 				has_reform = persianprince
 				has_reform = persianprincet
@@ -353,10 +359,21 @@ estate_burghers = {
 		estate_burghers_saxon_woods_expansion
 		estate_burghers_german_woods_expansion
 		# ]]]
-		# ABA ]]]
-		ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
-		ABA_estate_burghers_htm_belyana_trade
-		# ]]]
+		### ABF [[[
+		#---PLN/Catholic--#
+		estate_burghers_abf_pol_freedom_of_religion_privilege
+		#------------------------#
+		#---HTM/ZAZ--#
+		estate_burghers_abf_htm_belyana_trade
+		#------------------------#
+		#---ZUN/ROB--#
+		estate_burghers_abf_jains_special_privilege
+		#------------------------#
+		#---Tocharia/TCR--#
+		# Yuezhi/China
+		estate_burghers_abf_yangtze_trade
+		#------------------------#
+		### ]]]
 	}
 
 	agendas = {

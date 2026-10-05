@@ -1,0 +1,291 @@
+
+####################### ABF Poland AND Lendia [[[
+
+	###---Serfdom Abolished---###
+		estate_nobles_abf_pol_serdom_abolished = {
+			icon = privilege_unifying
+			max_absolutism = -15
+			influence = -0.1
+			loyalty = -0.10
+			is_valid = {
+				has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_serdom_abolished }
+			}
+
+			can_select = {
+				custom_trigger_tooltip = {
+					tooltip = unlocked_privilege_estate_nobles_abf_pol_serdom_abolished_tt
+					has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_serdom_abolished }
+				}
+			}
+			
+			can_revoke = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_POL_QUESTION_OF_SERFDOM_SETTLED_TT
+					NOT = {
+						has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_serdom_abolished }
+					}
+				}
+			}
+
+			on_granted = {
+				custom_tooltip = estate_nobles_abf_pol_abolished_serfdom_gt
+			}
+
+			on_granted_province = {
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+							}
+							OR = {
+								region = ruthenia_region
+								region = russia_region
+								region = baltic_region
+								region = poland_region
+							}
+						}
+						add_province_modifier = {
+							name = estate_nobles_abf_pol_serfdom_abolished_enlightenment_mod
+							duration = -1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									trade_goods = grain
+									trade_goods = livestock
+								}
+							}
+							OR = {
+								region = ruthenia_region
+								region = russia_region
+								region = baltic_region
+								region = poland_region
+							}
+						}
+						add_province_modifier = {
+							name = estate_nobles_abf_pol_serfdom_abolished_artisans_mod
+							duration = -1
+						}
+					}
+				}
+			}
+
+			on_revoked = {
+				custom_tooltip = estate_nobles_pln_abolished_serfdom_revoke
+			}
+			
+			on_revoked_province = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_province_modifier = estate_nobles_abf_pol_serfdom_abolished_enlightenment_mod
+						}
+						remove_province_modifier = estate_nobles_abf_pol_serfdom_abolished_enlightenment_mod
+					}
+					if = {
+						limit = {
+							has_province_modifier = estate_nobles_abf_pol_serfdom_abolished_artisans_mod
+						}
+						remove_province_modifier = estate_nobles_abf_pol_serfdom_abolished_artisans_mod
+					}
+				}
+			}
+
+			on_invalid = {
+			}
+
+			on_invalid_province = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_province_modifier = estate_nobles_abf_pol_serfdom_abolished_enlightenment_mod
+						}
+						remove_province_modifier = estate_nobles_abf_pol_serfdom_abolished_enlightenment_mod
+					}
+					if = {
+						limit = {
+							has_province_modifier = estate_nobles_abf_pol_serfdom_abolished_artisans_mod
+						}
+						remove_province_modifier = estate_nobles_abf_pol_serfdom_abolished_artisans_mod
+					}
+				}
+			}
+
+			benefits = {
+				technology_cost = -0.025
+				idea_cost = -0.025
+				yearly_innovativeness = 0.10
+			}
+
+			penalties = {
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	###---------------------###
+
+	###---Serfdom Enforced---###
+		estate_nobles_abf_pol_enforced_serfdom = {
+			icon = privilege_serf
+			max_absolutism = 30
+			influence = 0.1
+			loyalty = 0.15
+			is_valid = {
+				has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_enforced_serfdom }
+			}
+
+			can_select = {
+				custom_trigger_tooltip = {
+					tooltip = unlocked_privilege_estate_nobles_abf_pol_enforced_serfdom_tt
+					has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_enforced_serfdom }
+				}
+			}
+
+			can_revoke = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_POL_QUESTION_OF_SERFDOM_SETTLED_TT
+					NOT = {
+						has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_pol_enforced_serfdom }
+					}
+				}
+			}
+
+			penalties = {
+				technology_cost = 0.05
+				idea_cost = 0.05
+
+			}
+
+			on_granted = {
+				custom_tooltip = estate_nobles_abf_pol_enforced_serfdom_gt
+			}
+
+			on_granted_province = {
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+							}
+							OR = {
+								region = ruthenia_region
+								region = russia_region
+								region = poland_region
+								region = baltic_region
+							}
+						}
+						add_province_modifier = {
+							name = estate_nobles_abf_pol_enforced_serfdom_mod
+							duration = -1
+						}
+					}
+				}
+			}
+
+			on_revoked = {
+				custom_tooltip = estate_nobles_abf_pol_enforced_serfdom_revoke
+			}
+
+			on_revoked_province = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_province_modifier = estate_nobles_abf_pol_enforced_serfdom_mod
+							OR = {
+								region = ruthenia_region
+								region = russia_region
+								region = poland_region
+								region = baltic_region
+							}
+						}
+						remove_province_modifier = estate_nobles_abf_pol_enforced_serfdom_mod
+					}
+				}
+			}
+
+			on_invalid = {
+			}
+
+			on_invalid_province = {
+				if = {
+					limit = {
+						has_province_modifier = estate_nobles_abf_pol_enforced_serfdom_mod
+						NOT = {
+							OR = {
+								region = ruthenia_region
+								region = russia_region
+								region = poland_region
+								region = baltic_region
+							}
+						}
+					}
+					remove_province_modifier = estate_nobles_abf_pol_enforced_serfdom_mod
+				}
+			}
+
+			benefits = {
+				yearly_absolutism = 1
+				global_autonomy = -0.05
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	###---------------------###
+
+###################################### ]]]
+
+####################### ABF Rob/ZUN [[[
+
+	###---Maratha Military Leadership---###
+		estate_nobles_abf_znn_maratha_special_privilege = {
+			icon = privilege_promote_maratha_nobility
+			max_absolutism = -10
+			conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+			loyalty = 0.05
+			influence = 0.10
+			is_valid = {
+				has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_znn_maratha_special_privilege }
+			}
+
+			can_select = {
+				custom_trigger_tooltip = {
+					tooltip = unlocked_privilege_estate_nobles_abf_znn_maratha_special_privilege_tt
+					has_unlocked_estate_privilege = { estate_privilege = estate_nobles_abf_znn_maratha_special_privilege }
+				}
+			}
+
+			modifier_by_land_ownership = {
+				discipline = 0.05
+				global_tax_modifier = -0.10
+			}
+
+			penalties = {
+			}
+
+			benefits = {
+			}
+
+			mechanics = {
+				exempt_from_seize_land
+			}
+			
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					is_absolutism_active = yes
+				}
+			}
+		}
+	###---------------------###
+
+###################################### ]]]

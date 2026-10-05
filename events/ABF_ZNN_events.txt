@@ -1,0 +1,318 @@
+namespace = abf_zun_event
+
+#Choose a path
+country_event = {
+	id = abf_zun_event.1
+	title = abf_zun_event.1.t
+	desc = abf_zun_event.1.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = abf_zun_event.1.a
+		set_country_flag = abf_znn_india_path
+		custom_tooltip = ABF_ZNN_INDIA_CHOICE_TT
+		swap_non_generic_missions = yes
+		custom_tooltip = AB_EMPTY
+		set_country_flag = ab_unlock_mission_switch
+		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
+		custom_tooltip = AB_EMPTY
+		multan_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		sindh_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		northern_sindh_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = {
+			country_event = { id = abf_zun_event.5 } #Trigger color choice event
+		}
+	}
+
+	option = {
+		name = abf_zun_event.1.b
+		set_country_flag = abf_znn_persia_path
+		custom_tooltip = ABF_ZNN_PERSIA_CHOICE_TT
+		swap_non_generic_missions = yes
+		custom_tooltip = AB_EMPTY
+		set_country_flag = ab_unlock_mission_switch
+		custom_tooltip = AB_UNLOCK_MISSION_SWITCH
+		custom_tooltip = AB_EMPTY
+		sistan_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		birjand_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		kerman_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		merv_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT	}
+				NOT = { is_core = ROOT	}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = {
+			country_event = { id = abf_zun_event.5 } #Trigger color choice event
+		}
+	}
+}
+
+#Embracing India
+country_event = {
+	id = abf_zun_event.2
+	title = abf_zun_event.2.t
+	desc = abf_zun_event.2.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = abf_zun_event.2.a
+		set_country_flag = abf_unlock_indian_gov_reforms_flag
+		custom_tooltip = ABF_ZNN_UNLOCK_INDO_GOVS_TT
+	}
+
+	option = {
+		name = abf_zun_event.2.b
+		set_country_flag = abf_unlock_persio_afghan_gov_reforms_flag
+		custom_tooltip = ABF_ZNN_UNLOCK_PERSIO_GOVS_TT
+	}
+}
+
+#Global Purification 
+country_event = {
+	id = abf_zun_event.3
+	title = abf_zun_event.3.t
+	desc = abf_zun_event.3.d
+	picture = AB_ECLIPSE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = abf_zun_event.3.a
+		custom_tooltip = ABF_ZNN_GLOBAL_PURIFICATION_CB_TT
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT } 
+					NOT = {
+						religion = zunist
+					}
+				}
+				ROOT = {
+					add_casus_belli = {
+						type = cb_abf_zun_crusade 
+						months = 300                
+						target = PREV              
+					}
+				}
+			}
+		}
+	}
+}
+
+#Mission Switch
+country_event = {
+	id = abf_zun_event.4
+	title = abf_zun_event.4.t
+	desc = abf_zun_event.4.d
+	picture = AB_ECLIPSE_eventPicture
+	
+  is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = abf_znn_persia_path
+            clr_country_flag = abf_znn_india_path
+        }
+    }
+
+	option = {
+		name = abf_zun_event.4.a
+		clr_country_flag = abf_znn_persia_path
+		set_country_flag = abf_znn_india_path
+		swap_non_generic_missions = yes
+	}
+
+	option = { #Persia Path
+		name = abf_zun_event.4.b
+		clr_country_flag = abf_znn_india_path
+		set_country_flag = abf_znn_persia_path
+		swap_non_generic_missions = yes
+	}
+}
+
+#Choose Color
+country_event = {
+	id = abf_zun_event.5
+	title = abf_zun_event.5.t
+	desc = abf_zun_event.5.d
+	picture = AB_ECLIPSE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Keep Rob Purple
+		name = abf_zun_event.5.a
+	}
+
+	option = { #Zun Pearl White
+		name = abf_zun_event.5.b
+		change_country_color = { 
+			color = { 255 255 255 }
+		}
+	}
+}
+
+#Jains
+country_event = {
+	id = abf_zun_event.6
+	title = abf_zun_event.6.t
+	desc = abf_zun_event.6.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Integrate the Jains
+		name = abf_zun_event.6.a
+		hidden_effect = {
+			enable_estate_effect = {
+				estate = estate_burghers
+			}
+		}
+		enable_estate_effect = {
+			estate = estate_jains
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = MUG_gujarat_privilege_flag
+		custom_tooltip = MUG_gujarat_privilege
+		custom_tooltip = AB_EMPTY
+		set_country_flag = MUG_unlock_industrial_privilege_flag
+		custom_tooltip = MUG_unlock_industrial_privilege 
+	}
+
+	option = { #Let the traditional arbiters of the Silk Road take contorl
+		name = abf_zun_event.6.b
+		custom_tooltip = ABF_ZNN_UNLOCK_BURGHERS_JAINS_PRIVILEGE_TT
+		hidden_effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_abf_jains_special_privilege
+			}
+		}
+	}
+}
+
+#Marathas
+country_event = {
+	id = abf_zun_event.7
+	title = abf_zun_event.7.t
+	desc = abf_zun_event.7.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Integrate the Marathas
+		name = abf_zun_event.7.a
+		custom_tooltip = ABF_ZNN_UNLOCK_MARATHAS_PRIVILEGE_TT
+		hidden_effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_nobles_abf_znn_maratha_special_privilege
+			}
+		}
+	}
+
+	option = { #Our current class of warrior-nobility is enough
+		name = abf_zun_event.7.b
+		custom_tooltip = AB_SHH_improved_nobles_privilege_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_estate_privilege = estate_nobles_command_of_the_military
+				}
+				remove_estate_privilege = estate_nobles_command_of_the_military
+				set_country_flag = AB_SHH_improved_nobles_privilege
+				set_estate_privilege = AB_estate_nobles_command_of_the_military_improved
+			}
+			else = {
+				set_country_flag = AB_improved_command_military_privilege
+			}
+		}
+	}
+}
+
+#Persinate Empire
+country_event = {
+	id = abf_zun_event.9
+	title = abf_zun_event.9.t
+	desc = abf_zun_event.9.d
+	picture = AFRICAN_INDIAN_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Rise warriors of the desert!
+		name = abf_zun_event.9.a
+		unlock_government_reform = {
+			government_reform = abf_znn_persinate_radiant_state_reform
+		}
+		hidden_effect = {
+			add_government_reform = abf_znn_persinate_radiant_state_reform
+		}
+	}	
+}
+
+# Warrior Caste event 
+country_event = {
+	id = abf_zun_event.10
+	title = abf_zun_event.10.t
+	desc = abf_zun_event.10.d
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	
+	is_triggered_only = yes
+
+	# Elite Force
+	option = {
+		name = abf_zun_event.10.a
+		add_country_modifier = {
+			name = abf_znn_elite_rajputs_mod
+			duration = -1
+		}
+	}
+
+	# Mass Force
+	option = {
+		name = abf_zun_event.10.b
+		add_country_modifier = {
+			name = abf_znn_mass_rajputs_mod
+			duration = -1
+		}
+	}
+}
