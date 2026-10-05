@@ -21,6 +21,15 @@ estate_jains_land_rights = {
 			governing_capacity = 20
 		}
 	}
+	### ABF Conditional Modifiers  [[[
+	conditional_modifier = { #HTM/ZAZ
+		trigger = { has_country_flag = abf_htm_burgher_land_right_buff }
+		modifier = {
+			global_own_trade_power = 0.10
+			max_absolutism = 5
+		}
+	}
+	### ]]]
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -449,15 +458,17 @@ estate_jains_land_trade_rights = {
 	benefits = {
 		trade_range_modifier = 0.1
 	}
-	# ABF 
-	conditional_modifier = {
-		trigger = { has_country_flag = ABA_TCR_JAIN_C_PRIVILEGE_BUFF }
+	
+	#### ABF Conditional Mod [[[
+	conditional_modifier = { #TCR-Kushan
+		trigger = { has_country_flag = abf_tcr_jain_c_privilege }
 		modifier = {
 			max_absolutism = 5
 			trade_efficiency = 0.1
 			mercantilism_cost = -0.33
 		}
 	}
+	#### ]]]
 	mechanics = {
 		exempt_from_seize_land
 	}
@@ -1271,6 +1282,18 @@ estate_jains_economical_boost = {
 			global_prov_trade_power_modifier = 0.5
 		}
 	}
+	### ABF [[[
+	conditional_modifier = { #TCR
+		trigger = {
+			has_country_flag = abf_tcr_burghers_economic_freedom_buff
+		}
+		modifier = {
+			build_cost = -0.10
+			build_time = -0.10
+			max_absolutism = 5
+		}
+	}
+	### ]]]
 	ai_will_do = {
 		factor = 0
 	}

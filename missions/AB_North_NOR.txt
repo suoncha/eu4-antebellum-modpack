@@ -113,9 +113,11 @@ nor_1_group = {
 		
 		effect = {
 			country_event = { id = ab_norway.8 }
+			### ABF - culture spread reward [[[
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = aba_nor_norsegaelic_spread_tooltip
-			set_country_flag = aba_nor_norsegaelic_spread
+			set_country_flag = abf_nor_norsegaelic_spread
+			custom_tooltip = ABF_NORSEGAELIC_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -158,7 +160,6 @@ nor_1_group = {
 			}
 		}
 	}
-
 }
 
 nor_2_group = {
@@ -361,9 +362,11 @@ nor_2_group = {
 				name = norway_kings
 				duration = -1
 			}
-			set_country_flag = aba_nor_anglonorse_spread
-			custom_tooltip = aba_anglonorse_spread_tooltip
+			### ABF - new mission reward [[[
+			set_country_flag = abf_nor_anglonorse_spread
+			custom_tooltip = ABF_ANGLONORSE_CULTURE_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			normandy_area  = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -371,24 +374,24 @@ nor_2_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			### ABF - formatting modification [[[
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					accepted_culture = english
 				}
 				custom_tooltip = NOR_ENG_ACCEPTED_YES
-				change_monarch_points_or_power = {
-					power = dip
-					points = 1
-				}
+				### ABF - new mission reward [[[
+				set_country_flag = nci_speed_up_cultures
+				custom_tooltip = NCI_SPEED_UP
+				### ]]]
 			}
 			else = {
 				custom_tooltip = NOR_ENG_ACCEPTED_NO
-				tooltip = {
-					change_monarch_points_or_power = {
-						power = dip
-						points = 1
-					}
-				}
+				### ABF - new tooltip [[[
+				custom_tooltip = NCI_SPEED_UP
+				### ]]]
 			}
 		}
 	}
@@ -411,17 +414,21 @@ nor_2_group = {
 		}
 		
 		effect = {
-			add_dip_power = 75
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = ABA_NOR_norman_nordic_tt
-			hidden_effect = {
-				every_province = {
-					limit = {
-						culture = normand
-					}
-					change_culture = aba_norman_nordic_culture
+			### ABF - reward and formatting modification [[[
+			add_country_modifier = {
+				name = nrm_legacy
+				duration = 7300
+			}
+			1269 = {
+				add_trade_modifier = {
+					who = root
+					duration = 7300
+					power = 25
+					key = nor_channel
 				}
 			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = ABF_NORMAN_SCAN_CULTURE_MOVE_TT
 			custom_tooltip = AB_EMPTY
 			183 = {
 				if = {
@@ -432,14 +439,15 @@ nor_2_group = {
 					add_claim = ROOT
 				}
 			}
-			1269 = {
-				add_trade_modifier = {
-					who = root
-					duration = 7300
-					power = 25
-					key = nor_channel
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = normand
+					}
+					change_culture = abf_norman_nordic_culture
 				}
 			}
+			### ]]]
 		}
 	}
 	
@@ -501,9 +509,6 @@ nor_2_group = {
 				name = "norway_wealth"
 				duration = 9125
 			}
-			set_country_flag = abf_varangians_culture_spread
-			custom_tooltip = abf_varangians_culture_spread_tt
-			custom_tooltip = AB_EMPTY
 			pskov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -564,6 +569,12 @@ nor_2_group = {
 		effect = {
 			set_country_flag = bul_released_ruthenia
 			custom_tooltip = BUL_RELEASE_RUTHENIA
+			### ABF - culture spread reward [[[
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_varangians_culture
+			custom_tooltip = ABF_VARANGIAN_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			crimea_area = {
 				limit = {
 					NOT = { is_core = ROOT }

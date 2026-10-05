@@ -52,6 +52,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
+			### ABF - Unlock unique Crown of Poland for Polans/Catholic Poland [[[
 			if = {
 				limit = {
 					government = monarchy
@@ -60,15 +61,16 @@ country_decisions = {
 						OR = {
 							was_tag = PLN
 							tag = PLN
-						}	
+						}
 					}
 				}
 				add_government_reform = crownpoland
 			}
-			else = {
-				set_country_flag = aba_pln_crownpoland_popular
-				add_government_reform = aba_crownpoland
+			else = { #Only set flag and add unique government mechanic for Polans forming Poland
+				set_country_flag = abf_pln_crownpoland_popular
+				add_government_reform = abf_crownpoland
 			}
+			### ]]]
 			add_prestige = 25
 			if = {
 				limit = { has_custom_ideas = no }

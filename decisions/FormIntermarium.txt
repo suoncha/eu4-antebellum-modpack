@@ -53,23 +53,31 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			### ABF - Preserve/Unlock unique Crown of Poland Government Reform and Mechanic for Polans/Catholic Poland if they form Intermarium [[[
 			if = {
 				limit = {
 					government = monarchy
-					is_revolutionary = no
+					NOT = {
+						has_country_flag = abf_pln_crownpoland_popular
+					}
+					NOT = {
+						has_reform = abf_crownpoland
+					}
 					NOT = {
 						OR = {
 							was_tag = PLN
 							tag = PLN
-						}	
+						}
 					}
+					is_revolutionary = no
 				}
 				add_government_reform = crownpoland
 			}
-			else = {
-				set_country_flag = aba_pln_crownpoland_popular
-				add_government_reform = aba_crownpoland
+			else = { #Add Gov Mechanic for Polans being the unifier of Poland and founder of the Intermarium -- This is just a double check to ensure they retain this mechanic and reform
+				set_country_flag = abf_pln_crownpoland_popular
+				add_government_reform = abf_crownpoland
 			}
+			### ]]]
 		}
 		ai_will_do = {
 			factor = 1

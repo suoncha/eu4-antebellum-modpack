@@ -1,13 +1,14 @@
 
+####### SET UP ACTION - START [[[
 on_startup = {
 	if = {
 		limit = {
 			ai = no
 		}
 		country_event = {
-			id = ABA_start.0
+			id = ABF_start.0
 		}
-		#HTM
+		#HTM - sets up event targets and variables 
 		if = {
 			limit = {
 				OR = {
@@ -16,470 +17,261 @@ on_startup = {
 				}
 			}
 			country_event = {
-				id = ABA_start.1
+				id = ABF_start.1
 			}
 		}
 	}
 }
+####### Start up - END ]]]
 
+
+####### RULER - START [[[
 on_new_monarch = {
-	### POL/LCT/LUD
+	### PLN/POL/PLC  - Catholic Poland [[[
 	if = {
-		limit = {
-			has_country_flag = abf_legacy_of_mieszko_personality
+		limit = { # ruler trait 
+			has_country_flag = abf_legacy_of_mieszko_personality_unlocked_flag
 		}
 		add_ruler_personality = abf_mieszko_descendant_personality
 	}
 	if = {
+		limit = { # Golden Liberity Mechanic
+			has_country_flag = ABF_pol_catholic_golden_liberty_ruler
+		}
+		country_event = {
+			id = abf_pol_events.5
+		}
+	}
+	# COMMONWEALTH GOVERNMENT MECHANIC [
+	if = {
 		limit = {
+			has_country_flag = abf_pol_commonwealth_appointed_grand_chancellor
+		}
+		clr_country_flag = abf_pol_commonwealth_appointed_grand_chancellor
+	}
+	if = {
+		limit = {
+			has_country_flag = abf_pol_commonwealth_cooperated_with_magnates
+		}
+		clr_country_flag = abf_pol_commonwealth_cooperated_with_magnates
+	}
+	if = {
+		limit = {
+			has_country_flag = abf_pol_commonwealth_appointed_hetman
+		}
+		clr_country_flag = abf_pol_commonwealth_appointed_hetman
+	}
+	# ]
+	### ]]]
+	### LUD/LCT - Orthodox Poland  [[[
+	if = {
+		limit = { 
 			has_country_flag = abf_heirs_of_rus_personality
 		}
 		add_ruler_personality = abf_heir_of_rus_personality
 	}
+	### ]]]
+	#### LVA [[[
 	if = {
 		limit = {
-			has_country_flag = ABA_pol_catholic_golden_liberty_ruler
-		}
-		country_event = {
-			id = aba_pol_events.5
-		}
-	}
-	### COMMONWEALTH GOVERNMENT MECHANIC
-	if = {
-		limit = {
-			has_country_flag = aba_pol_commonwealth_appointed_grand_chancellor
-		}
-		clr_country_flag = aba_pol_commonwealth_appointed_grand_chancellor
-	}
-	if = {
-		limit = {
-			has_country_flag = aba_pol_commonwealth_cooperated_with_magnates
-		}
-		clr_country_flag = aba_pol_commonwealth_cooperated_with_magnates
-	}
-	if = {
-		limit = {
-			has_country_flag = aba_pol_commonwealth_appointed_hetman
-		}
-		clr_country_flag = aba_pol_commonwealth_appointed_hetman
-	}
-	### BUL
-	if = {
-		limit = {
-			has_country_flag = ABA_bul_simeon_trait
-		}
-		add_ruler_personality = abf_legacy_of_simeon_personality
-	}
-	#### LVA
-	if = {
-		limit = {
-			has_country_flag = ABA_lva_conquerer_of_slavs
+			has_country_flag = ABF_lva_conquerer_of_slavs
 		}
 		add_ruler_personality = abf_lva_vanquisher_of_slavs
 	}
+	### ]]]
+}
+####### RULER - END ]]]
+
+####### ADM/GOV BASED - START [[[
+
+on_reform_enacted = {
+	### Hetmanate (ZAZ/HTM) [[[
+	if = { # Government reform refund 
+		limit = {
+			owner = {
+				has_country_flag = abf_htm_goverment_reform
+			}
+		}
+		change_government_reform_progress = 25
+	}
+	### ]]]
+	### General [[[
+
+	### ]]]
+}
+
+####### ADM/GOV BASED - END ]]]
+
+####### MIL BASED - START [[[
+
+on_war_won = {
+	### Yuezhi Crisis (TCR) [[[
+	if = {
+		limit = {
+			# Check if we are inside the war
+			has_global_flag = abf_yuezhi_crisis_in_war
+			# And that the war was not decisive
+			NOT = { has_global_flag = abf_yuezhi_crisis_decisive_war }
+			# And that the war isn't still ongoing
+			NOT = {
+				is_in_war = {
+					casus_belli = cb_abf_yuezhi_crisis
+				}
+			}
+			# And that the emperor and the FRC are the leaders
+			OR = {
+				AND = {
+					tag = event_target:abf_tcr_yuezhi_crisis_invader
+					FROM = {
+						tag = event_target:abf_tcr_yuezhi_crisis_target
+					}
+				}
+				AND = {
+					tag = event_target:abf_tcr_yuezhi_crisis_target
+					FROM = {
+						tag = event_target:abf_tcr_yuezhi_crisis_invader
+					}
+				}
+			}
+		}
+		random_list = {
+			50 = {
+				event_target:abf_tcr_yuezhi_crisis_target = {
+					capital_scope = {
+						save_event_target_as = ABFYuezhiCrisisPeaceTreatyCity
+					}
+				}
+			}
+			50 = {
+				event_target:abf_tcr_yuezhi_crisis_invader = {
+					capital_scope = {
+						save_event_target_as = ABFYuezhiCrisisPeaceTreatyCity
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = event_target:abf_tcr_yuezhi_crisis_invader 
+				}
+				OR = {
+					tag = event_target:abf_tcr_yuezhi_crisis_target 
+					has_discovered = event_target:abf_tcr_yuezhi_crisis_invader
+					has_discovered = event_target:abf_tcr_yuezhi_crisis_target 
+				}
+			}
+			country_event = {
+				id = abf_tcr_yuezhi_crisis.7
+			}
+		}
+		event_target:abf_tcr_yuezhi_crisis_invader = {
+			country_event = {
+				id = abf_tcr_yuezhi_crisis.8
+			}
+		} 
+	}
+	### ]]]
 }
 
 on_general_recruited = {
-	#POL/LUD
+	#Generals now grant noble loyalty
 	if = {
 		limit = {
-			has_country_flag = abf_pol_tribal_leaders_loyalty
+			has_country_flag = abf_recruiting_generals_grant_noble_loyalty_flag
 		}
-		add_estate_loyalty = { estate = estate_nobles loyalty = 2.5 }
+		add_estate_loyalty = { estate = estate_nobles loyalty = 2.50 }
 	}
-	#HTM 
+	#Generals now grant Cossack loyalty
 	if = {
 		limit = {
-			has_country_modifier = aba_htm_expand_military_council
-		}
-		change_government_reform_progress = 10
-	}
-	if = {
-		limit = {
-			has_country_flag = aba_htm_cossack_general_loyalty_gain
+			has_country_flag = abf_generals_grant_cossack_loyalty
 		}
 		add_estate_loyalty = { estate = estate_cossacks loyalty = 2.50 }
 	}
-}
-
-on_barrage = { #ROOT - barraging country, FROM - barraged province 
-	ROOT = {
-		if = {
-			limit = {
-				has_country_flag = ABA_tcr_barrage_buff
-			}
-			add_mil_power = 15
+	# Generals now grant 1 army tradition
+	if = {
+		limit = {
+			has_country_flag = abf_generals_grant_tradition
 		}
+		add_army_tradition = 1
 	}
+	### Hetmanate (ZAZ/HTM) [[[
+	if = {
+		limit = {
+			has_country_modifier = abf_htm_expand_military_council
+		}
+		change_government_reform_progress = 10
+	}
+	### ]]]
 }
 
 on_cossack_raised = {
-	#HTM
+	### Hetmanate (ZAZ/HTM) [[[
+	# Recruiting Cossacks gives loyalty
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = aba_htm_cossack_raised_loyalty
+				has_country_flag = abf_htm_cossack_raised_loyalty
 			}
 		}
 		add_estate_loyalty = { estate = estate_cossacks loyalty = 0.25 }
 	}
+	# Recruiting Cossacks refunds manpower 
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = aba_htm_cossack_refund
+				has_country_flag = abf_htm_cossack_refund
 			}
 		}
 		owner = {
 			add_manpower = 0.25
 		}
 	}
+	# Recruiting Cossacks gives AP Gov Attribute
 	if = {
 		limit = {
 			owner = {
-				has_government_attribute = enables_aba_htm_cossack_professionalism 
+				has_government_attribute = enables_abf_htm_cossack_professionalism 
 			}
 		}
 		owner = {
 			add_army_professionalism = 0.001
 		}
 	}
+	### ]]]
 }
 
-on_holy_order_established = {
+on_regiment_recruited = {
+	# 1.) Refund 250 manpower for any regiment (TCR currently)
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = aba_htm_regiment_district_buff_flag
-			}
-			OR = {
-				holy_order = aba_htm_chyhyryn_order
-				holy_order = aba_htm_poltava_order
-				holy_order = aba_htm_nizhyn_order
-				holy_order = aba_htm_lubny_order
-				holy_order = aba_htm_starodub_order
-				holy_order = aba_htm_chernihiv_order
-			}
-			NOT = {
-				has_province_modifier = aba_htm_efficient_colonels
+				has_country_flag = abf_250_man_regiment_refund_flag
 			}
 		}
-		add_province_modifier = {
-            name = aba_htm_efficient_colonels
-            duration = -1
-        }
+		owner = {
+			add_manpower = 250
+		}
 	}
-}
-
-on_province_culture_converted = {
-	#POL/LUD
+	# 2.) Grant 0.01 AT for any regiment (TCR currently)
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = ABA_pol_orthodox_culture_convert
+				has_country_flag = abf_001_at_grant_regiment_flag
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_province_flag = ABA_pol_orthodox_converted_culture_bonus
-				}
-				culture = aba_polish_eastern
-			}
-			set_province_flag = ABA_pol_orthodox_converted_culture_bonus
-			add_base_tax = 1
-			add_base_production = 1
-			add_base_manpower = 1
-		}
-	}
-	#BUL
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = ABA_bul_culture_convert_bonus
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_province_flag = ABA_bul_culture_convert_prov_bonus
-				}
-				culture = bulgarian
-			}
-			set_province_flag = ABA_pol_orthodox_converted_culture_prov_bonus
-			add_base_tax = 1
-			add_base_production = 1
-			add_base_manpower = 1
-		}
-	}
-}
-
-on_province_owner_change = {
-	#POL
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
-			}
-			NOT = {
-				culture_group = west_slavic
-			}
-			has_owner_accepted_culture = no
-		}
-		add_province_modifier = {
-			name = aba_pol_culture_modifier
-			duration = -1
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_htm_tolerate_tatars_malus_buff
-			}
-			culture_group = tartar
-			has_owner_accepted_culture = no
-		}
-		add_province_modifier = {
-			name = aba_pol_culture_modifier
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = thriving_cities_modifier	
-			}
-			development = 25
-		}
-		add_province_modifier = { 
-			name = aba_thriving_cities_gov_mod
-			duration = -1
-			hidden = yes
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				NOT = {
-					has_government_attribute = thriving_cities_modifier	
-				}
-			}
-			has_province_modifier = aba_thriving_cities_gov_mod 
-		}
-		remove_province_modifier = aba_thriving_cities_gov_mod 
-	}
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_htm_regiment_district_buff_flag
-			}
-		}
-		aba_check_buff_regiment_effect = yes
-	}
-	if = {
-		limit = {
-			owner = {
-				NOT = {
-					has_country_flag = aba_htm_regiment_district_buff_flag
-				}
-			}
-			has_province_modifier = aba_htm_efficient_colonels
-		}
-		remove_province_modifier = aba_htm_efficient_colonels
-	}
-}
-
-on_province_culture_changed = {
-	# POL
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
-			}
-		}
-		if = {
-			limit = {
-				NOT = { culture_group = west_slavic }
-				NOT = { has_owner_accepted_culture = yes }
-				NOT = { has_province_modifier = aba_pol_culture_modifier }
-			}
-			add_province_modifier = {
-				name = aba_pol_culture_modifier
-				duration = -1
-			}
-		}
-		if = {
-			limit = {
-				has_province_modifier = aba_pol_culture_modifier
-				OR = {
-					culture_group = west_slavic
-					has_owner_accepted_culture = yes
-				}
-			}
-			remove_province_modifier = aba_pol_culture_modifier
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_htm_tolerate_tatars_malus_buff
-			}
-		}
-		if = {
-			limit = {
-				culture_group = tartar
-				NOT = { has_owner_accepted_culture = yes }
-				NOT = { has_province_modifier = aba_pol_culture_modifier }
-			}
-			add_province_modifier = {
-				name = aba_pol_culture_modifier
-				duration = -1
-			}
-		}
-		if = {
-			limit = {
-				has_province_modifier = aba_pol_culture_modifier
-				NOT = { culture_group = tartar }	
-			}
-			remove_province_modifier = aba_pol_culture_modifier
-		}
-	}
-}
-
-on_culture_promoted = {
-	# POL
-	if = {
-        limit = {
-            has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
-        }
-        every_owned_province = {
-            limit = {
-				NOT = { culture_group = west_slavic }
-				has_owner_accepted_culture = yes
-                has_province_modifier = aba_pol_culture_modifier
-            }
-            remove_province_modifier = aba_pol_culture_modifier
-        }
-    }
-	#HTM
-	if = {
-        limit = {
-            has_country_flag = aba_htm_tolerate_tatars_malus_buff
-        }
-        every_owned_province = {
-            limit = {
-				culture_group = tartar 
-				has_owner_accepted_culture = yes
-                has_province_modifier = aba_pol_culture_modifier
-            }
-            remove_province_modifier = aba_pol_culture_modifier
-        }
-    }
-
-}
-
-on_culture_demoted = {
-	#POL
-	if = {
-		limit = {
-			has_country_flag = aba_pol_embrace_diversity_culture_debuff_flag
-		}
-		every_owned_province = {
-			limit = {
-				NOT = { culture_group = west_slavic }
-				has_owner_accepted_culture = no
-				NOT = { has_province_modifier = aba_pol_culture_modifier }
-			}
-			add_province_modifier = {
-				name = aba_pol_culture_modifier
-				duration = -1
-			}
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			has_country_flag = aba_htm_tolerate_tatars_malus_buff
-		}
-		every_owned_province = {
-			limit = {
-				culture_group = tartar 
-				has_owner_accepted_culture = no
-				NOT = { has_province_modifier = aba_pol_culture_modifier }
-			}
-			add_province_modifier = {
-				name = aba_pol_culture_modifier
-				duration = -1
-			}
-		}
-	}
-}
-
-on_reform_enacted = {
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_htm_goverment_reform
-			}
-		}
-		change_government_reform_progress = 25
-	}
-	if = {
-		limit = {
-			has_government_attribute = thriving_cities_modifier
-		}
-		every_owned_province = {
-			limit = {
-				development = 25
-			}
-			add_province_modifier = { 
-				name = aba_thriving_cities_gov_mod
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-}
-
-on_reform_changed = {
-	#HTM
-	if = {
-		limit = {
-			has_government_attribute = thriving_cities_modifier
-		}
-		every_owned_province = {
-			limit = {
-				development = 25
-			}
-			add_province_modifier = { 
-				name = aba_thriving_cities_gov_mod
-				duration = -1
-				hidden = yes
-			}
-		}
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_government_attribute = thriving_cities_modifier
-			}
-		}
-		every_owned_province = {
-			limit = {
-				has_province_modifier = aba_thriving_cities_gov_mod
-			}
-			remove_province_modifier = aba_thriving_cities_gov_mod
+		owner = {
+			add_army_tradition = 0.01
 		}
 	}
 }
 
 on_battle_won_country = {
-	#POL
-	if = {
+	### Catholic Poland (PLN/POL/PLC) [[[
+	if = { # 1.) Winning battles with # of Cossacks employed grants loyalty
 		limit = {
-			has_country_flag = ABF_pol_cossack_loyalty_bonus
+			has_country_flag = abf_pol_cossack_loyalty_bonus_flag
 			num_of_cossacks = 20
 		}
 		add_estate_loyalty = {
@@ -488,8 +280,8 @@ on_battle_won_country = {
 		}
 	}
 	if = {
-		limit = {
-			has_country_flag = ABF_pol_cossack_battle_win_bonus
+		limit = { # 2.) Cossack Nobility mission reward mechanic 
+			has_country_flag = abf_pol_cossack_battle_win_bonus_flag
 		}
 		remove_country_modifier = ABF_pol_cossack_battle
 		add_country_modifier = {
@@ -497,34 +289,23 @@ on_battle_won_country = {
 			duration = 60
 		}
 	}
-	if = {
+	if = { # 3.) Buffed Husaria gov mechanic modifier application 
 		limit = {
 			has_country_flag = abf_pol_winged_hussars_battle_bonus
 		}
-		remove_country_modifier = ABF_pol_cossack_battle
+		remove_country_modifier = ABF_pol_hussars_reinforce
 		add_country_modifier = {
 			name = ABF_pol_hussars_reinforce
 			duration = 30
 		}
 	}
-	if = {
+	if = { # 4. ) Military mission reward 
 		limit = {
-			has_country_flag = aba_pol_winning_battles_warx_reduce
+			has_country_flag = abf_pol_winning_battles_warx_reduce
 		}
 		add_war_exhaustion = -0.05
 	}
-	#TCR
-	if = {
-		limit = {
-			has_country_flag = ABA_TCR_winning_battles_movement
-		}
-		remove_country_modifier = rmg_winning_battle
-		add_country_modifier = {
-			name = rmg_winning_battle
-			duration = 30
-		}
-	}
-	#LVA
+	### Livonia/Russian formable (LVA/KRZ) [[[
 	if = {
 		limit = {
 			OR = {
@@ -537,376 +318,188 @@ on_battle_won_country = {
 		}
 		change_variable = { which = ABF_num_of_won_battles_against_christians value = 1 }
 	}
-	#HTM
-	if = {
+	### ]]]
+	### Hetmanate (ZAZ/HTM) [[[
+	if = { # 1. ) Win manpower from battles agaisnst tribals
 		limit = {
-			has_country_flag = aba_htm_free_slaves_battles
-			FROM = {
+			has_country_flag = abf_htm_free_slaves_battles
+			FROM = {	
 				government = tribal
 			}
 		}
 		add_yearly_manpower = 0.1
 	}
-	if = {
+	if = { # 1B.) Winning RT from battles 
 		limit = {
-			has_country_flag = aba_htm_winning_battles_monarchies_rtradition
+			has_country_flag = abf_htm_winning_battles_monarchies_rtradition
 			FROM = {
 				government = monarchy
 			}
 		}
 		add_republican_tradition = 0.05
 	}
-}
-
-on_battle_lost_country = {
-	#HTM
-	if = {
+	### ]]]
+	### Tocharia (TCR) [[[
+	if = { # 1. ) Win additional AT from battles 
 		limit = {
+			has_country_flag = abf_tcr_winning_battles_against_india_tech_flag
 			FROM = {
-				has_country_flag = aba_htm_battles_cossack_fury
+				technology_group = indian
 			}
 		}
-		remove_country_modifier = aba_htm_cossack_fury_debuff
+		add_army_tradition = 0.10
+	}
+	if = { # 2. ) China Xanadu Shock Damage win
+		limit = {
+			has_country_flag = abf_tcr_china_xanadu_win_battles_flag
+		}
+		remove_country_modifier = abf_tcr_china_xanadu_win_battles_mod
 		add_country_modifier = {
-			name = aba_htm_cossack_fury_debuff
+			name = abf_tcr_china_xanadu_win_battles_mod
 			duration = 30
 		}
 	}
+	if = { # 3. ) Combined Arms Doctirne Persia
+		limit = {
+			has_country_flag = abf_tcr_per_combined_arms_battle_bonus_flag
+		}
+		remove_country_modifier = abf_tcr_per_combined_arms_battle_mod
+		add_country_modifier = {
+			name = abf_tcr_per_combined_arms_battle_mod
+			duration = 30
+		}
+	}
+	### ]]]
+	### General [[[
+	if = { # 1.) Wining battles grants movement speed flag version
+		limit = {
+			has_country_flag = abf_winning_battles_movement_flag
+		}
+		remove_country_modifier = rmg_winning_battle
+		add_country_modifier = {
+			name = rmg_winning_battle
+			duration = 30
+		}
+	}
+	if = { # 2.) Wining battles grants fire damaged reduction
+		limit = {
+			has_country_flag = abf_winning_battles_fire_damage_received_flag
+		}
+		remove_country_modifier = abf_win_battle_fire_damage_reduce_mod
+		add_country_modifier = {
+			name = abf_win_battle_fire_damage_reduce_mod
+			duration = 30
+		}
+	}
+	### ]]]
 }
 
-on_tech_taken = {
-	#POL
-	if = {
+on_battle_lost_country = {
+	### Hetmanate (ZAZ/HTM) [[[
+	if = { # 1.) Mil mission reward, this grants the enemy (losing country) the negative modifier outlined as a reward
 		limit = {
-			has_country_flag = ABF_pol_patronage
-		}
-		add_adm_power = 25
-		add_dip_power = 25
-		add_mil_power = 25
-	}
-}
-
-on_dip_development = {
-	#POL/LUD
-	if = {
-		limit = {
-			owner = {
-				has_country_modifier = ABA_pol_orthodox_blood_and_iron
-			}
-			trade_goods = iron
-		}
-		random_list = { 
-			25 = { add_base_production = 1 } 
-			75 = { } 
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_developing_food_bonus
-			}
-			OR = {
-				trade_goods = grain
-				trade_goods = livestock
-			}
-		}
-		random_list = { 
-			10 = { add_base_production = 1 } 
-			90 = { } 
-		}
-	}
-	#BUL
-	if = {
-		limit = {
-			culture_group = south_slavic
-			owner = { 
-				has_country_flag = ABA_bul_developing_south_slavic
-			}
-		}
-		random_list = { 
-			10 = { add_base_production = 1 } 
-			90 = { } 
-		}
-	}
-	#TCR
-	if = {
-		limit = {
-			has_terrain = farmlands
-			owner = { 
-				has_country_flag = ABF_tcr_china_farmlands_buff
-			}
-		}
-		random_list = { 
-			10 = { add_base_production = 1 } 
-			90 = { } 
-		}
-	}
-	#ZUN
-	if = {
-		limit = {
-			culture_group = western_aryan
-			owner = { 
-				has_country_flag = ABA_ZUN_rajput_accomodated
-			}
-		}
-		random_list = { 
-			10 = { add_base_production = 1 } 
-			90 = { } 
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = thriving_cities_modifier	
-			}
-		}
-		aba_check_urbanization_effect = yes
-	}
-}
-
-on_adm_development = {
-	#BUL
-	if = {
-		limit = {
-			culture_group = south_slavic
-			owner = { 
-				has_country_flag = ABA_bul_developing_south_slavic
-			}
-		}
-		random_list = { 
-			10 = { add_base_tax = 1 } 
-			90 = { } 
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_developing_food_bonus
-			}
-			OR = {
-				trade_goods = grain
-				trade_goods = livestock
-			}
-		}
-		random_list = { 
-			10 = { add_base_tax = 1 } 
-			90 = { } 
-		}
-	}
-	#ZUN
-	if = {
-		limit = {
-			culture_group = western_aryan
-			owner = { 
-				has_country_flag = ABA_ZUN_rajput_accomodated
-			}
-		}
-		random_list = { 
-			10 = { add_base_tax = 1 } 
-			90 = { } 
-		}
-	}
-	#TCR
-	if = {
-		limit = {
-			has_terrain = farmlands
-			owner = { 
-				has_country_flag = ABF_tcr_china_farmlands_buff
-			}
-		}
-		random_list = { 
-			10 = { add_base_tax = 1 } 
-			90 = { } 
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = thriving_cities_modifier	
-			}
-		}
-		aba_check_urbanization_effect = yes
-	}
-}
-
-on_mil_development = {
-	#BUL
-	if = {
-		limit = {
-			culture_group = south_slavic
-			owner = { 
-				has_country_flag = ABA_bul_developing_south_slavic
-			}
-		}
-		random_list = { 
-			10 = { add_base_manpower = 1 } 
-			90 = { } 
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = aba_developing_food_bonus
-			}
-			OR = {
-				trade_goods = grain
-				trade_goods = livestock
-			}
-		}
-		random_list = { 
-			10 = { add_base_manpower = 1 } 
-			90 = { } 
-		}
-	}
-	#ZUN
-	if = {
-		limit = {
-			culture_group = western_aryan
-			owner = { 
-				has_country_flag = ABA_ZUN_rajput_accomodated
-			}
-		}
-		random_list = { 
-			10 = { add_base_manpower = 1 } 
-			90 = { } 
-		}
-	}
-	#TCR
-	if = {
-		limit = {
-			has_terrain = farmlands
-			owner = { 
-				has_country_flag = ABF_tcr_china_farmlands_buff
-			}
-		}
-		random_list = { 
-			10 = { add_base_manpower = 1 } 
-			90 = { } 
-		}
-	}
-	#HTM
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = thriving_cities_modifier	
-			}
-		}
-		aba_check_urbanization_effect = yes
-	}
-}
-
-on_new_monarch = {
-	#POL
-	if = {
-		limit = {
-			has_estate_privilege = estate_nobles_golden_liberty
-		}
-		country_event = {
-			id = aba_pol_events.5
-		}
-	}
-}
-
-on_alliance_broken = {
-	#POL
-	if = {
-		limit = {
-			has_country_modifier = ab_pol_baltic_peace
 			FROM = {
-				OR = {
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = SCA
-					tag = NSE
+				has_country_flag = abf_htm_battles_cossack_fury
+			}
+		}
+		remove_country_modifier = abf_htm_cossack_fury_debuff
+		add_country_modifier = {
+			name = abf_htm_cossack_fury_debuff
+			duration = 30
+		}
+	}
+	### ]]]
+}
+
+on_barrage = {
+	### General [[[
+	if = { # 1. ) 10% Chance to win an artillery barrage instantly
+		limit = {
+			has_country_flag = abf_on_barrage_10_chance_flag
+		}
+		random_list = {
+			10 = {
+				FROM = {
+					change_controller = ROOT
 				}
 			}
+			90 = {
+
+			}
 		}
-		remove_country_modifier = ab_pol_baltic_peace
 	}
-	if = {
+	### ]]]
+}
+
+on_siege_lost_province = {
+	### Zun (ROB/ZUN) [[[
+	if = { #1.) Winning sieges has percentage to switch province to Zunist religion 
 		limit = {
 			FROM = {
-				has_country_modifier = ab_pol_baltic_peace
+				has_country_modifier = abf_znn_fury_of_zun
 			}
-			OR = {
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = SCA
-				tag = NSE
+		}
+		random_list = {
+			25 = {
+				change_religion = zunist
+			}
+			75 = {
+				
+			}
+		}
+	}
+	### ]]]
+	### Tocharia (TCR) [[[
+	if = { #1.) Winning sieges in Perisa grants cores modifier mechanic 
+		limit = {
+			FROM = {
+				has_country_modifier = tcr_persia_fall
+			}
+			region = persia_region 
+		}
+		add_territorial_core = FROM 
+	}
+	if = { #2.) Winning sieges in territoral cores (5% chance)
+		limit = {
+			FROM = {
+				has_country_flag = abf_tcr_kushan_core_capture_5_flag
+			}
+		}
+		random_list = {
+			5 = {
+				add_territorial_core = FROM
+			}
+			95 = {
+				
+			}
+		}
+	}
+	### ]]]
+}
+
+on_scorch_earth = {
+	### Zun (ROB/ZUN) [[[
+	if = {
+		limit = {
+			ROOT = {
+				has_country_flag = abf_znn_scorch_earth_ex
 			}
 		}
 		FROM = {
-			remove_country_modifier = ab_pol_baltic_peace
-		}
-	}
-	if = {
-		limit = {
-			has_country_modifier = ab_pol_shared_sea
-			FROM = {
-				OR = {
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = SCA
-					tag = NSE
-				}
+			owner = {
+				add_war_exhaustion = 0.10
 			}
 		}
-		remove_country_modifier = ab_pol_shared_sea
 	}
-	if = {
-		limit = {
-			FROM = {
-				has_country_modifier = ab_pol_shared_sea
-			}
-			OR = {
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = SCA
-				tag = NSE
-			}
-		}
-		FROM = {
-			remove_country_modifier = ab_pol_shared_sea
-		}
-	}
+	### ]]]
 }
 
-on_culture_promoted = {
-	#POL COMMONWEALTH MECHANIC
-	if = {
-		limit = {
-			has_government_mechanic = commonwealth_mechanic
-		}
-		add_government_power = {
-			mechanic_type = commonwealth_mechanic
-			power_type = commonwealth_popular_sovereignity
-			value = 3
-		}
-	}
-}
+####### MIL END ]]]
 
-on_culture_demoted = {
-	#POL COMMONWEALTH MECHANIC
-	if = {
-		limit = {
-			has_government_mechanic = commonwealth_mechanic
-		}
-		add_government_power = {
-			mechanic_type = commonwealth_mechanic
-			power_type = commonwealth_popular_sovereignity
-			value = -3
-		}
-	}
-}
-
+####### PULSES - START [[[
 on_monthly_pulse = {
-    #HTM/COSSACK MECHANIC --- FIRST MECHANIC: FLEEING SERFS TARGETING ---
+	### Hetmanate (ZAZ/HTM) [[[
+    # HTM/COSSACK MECHANIC --- FIRST MECHANIC: FLEEING SERFS TARGETING ---
     if = {
         limit = {
             OR = {
@@ -936,7 +529,7 @@ on_monthly_pulse = {
     #HTM/COSSACK MECHANIC --- SECOND MECHANIC: RAIDING TARGETING ---
     if = {
         limit = {
-            has_country_flag = aba_htm_raiding_parties_interaction_buff 
+            has_country_flag = ABF_htm_raiding_parties_interaction_buff 
             OR = {
                 has_government_mechanic = cossacks_mechanic
                 has_government_mechanic = cossack_militarization_abilities_mechanic 
@@ -992,5 +585,1280 @@ on_monthly_pulse = {
             }
         }
     }
+	### ]]]
+}
+####### PULSES - END ]]]
+
+####### TECH/DEV BASED - START [[[
+
+on_tech_taken = {
+	### General [[[
+	if = {
+		limit = { # 1.) Grant 25 power across all categories when advancing tech
+			has_country_flag = abf_monarch_on_tech_flag
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+	### ]]]
 }
 
+on_mil_tech_taken = {
+	### Tocharia [[[
+	if = {
+		limit = {
+			has_country_flag = abf_tcr_military_thought_buff_flag
+		}
+		remove_country_modifier = abf_tcr_military_thought_schools
+		add_country_modifier = {
+			name = abf_tcr_military_thought_schools
+			hidden = yes
+			duration = 1825
+		}
+	}
+	if = {
+		limit = { # 3.) Shared Eco/Poli, Selective Borrowing 
+			has_country_flag = abf_tcr_muslim_mil_tech_buff_flag
+		}
+		remove_country_modifier = abf_tcr_muslim_mil_tech_buff_mod
+		add_country_modifier = {
+			name = abf_tcr_muslim_mil_tech_buff_mod
+			hidden = yes
+			duration = 3650
+		}
+	}
+	### ]]]
+}
+
+on_adm_tech_taken = {
+	### Tocharia [[[
+	if = {
+		limit = { # 1.) Shared Eco/Poli, Selective Borrowing 
+			has_country_flag = abf_tcr_euro_adm_tech_buff_flag
+		}
+		remove_country_modifier = abf_tcr_euro_adm_tech_buff_mod
+		add_country_modifier = {
+			name = abf_tcr_euro_adm_tech_buff_mod
+			hidden = yes
+			duration = 3650
+		}
+	}
+	### ]]]
+}
+
+on_dip_tech_taken = {
+	### Tocharia [[[
+	if = {
+		limit = { # 1.) Shared Eco/Poli, Selective Borrowing 
+			has_country_flag = abf_tcr_chinese_dip_tech_buff_flag
+		}
+		remove_country_modifier = abf_tcr_chinese_dip_tech_buff_mod
+		add_country_modifier = {
+			name = abf_tcr_chinese_dip_tech_buff_mod
+			hidden = yes
+			duration = 3650
+		}
+	}
+	### ]]]
+}
+
+on_institution_embracement = {
+	### General [[[
+	if = { # 1.) Embrace institution = apc + inno
+		limit = {
+			has_country_flag = abf_institution_embrace_apc_inno_flag
+		}
+		remove_country_modifier = abf_institution_embrace_buff_mod
+		add_country_modifier = {
+			name = abf_institution_embrace_buff_mod
+			duration = 1825
+		}
+	}
+	### ]]]
+}
+
+on_adm_development = {
+	### Zun (ROB/ZNN) [[[
+	if = {
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = abf_znn_rajput_development_bonus_flag
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### NED [[[
+    if = { # 1.) Adapt Vanilla AB reward to ABF 
+        limit = {
+            owner = {
+                mission_completed = ned_baltic_colonies
+            }
+            NOT = {
+                culture_group = owner
+            }
+            NOT = {
+                religion = owner
+            }
+            region = baltic_region
+            has_port = yes
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                has_province_flag = abf_ned_converted_baltic_province
+            }
+        }
+        random_list = {
+            10 = {
+                set_province_flag = abf_ned_converted_baltic_province
+                if = {
+					limit = {
+						owner = {
+							culture_group = united_germanic
+						}
+					}
+					change_culture = abf_olender_culture_new
+				}
+				else = {
+					change_culture = abf_olender_culture
+				}
+                change_religion = owner
+                add_base_production = 3
+            }
+            90 = { }
+        }
+    }
+	### ]]]
+	### TCR [[[
+	if = { # Developing Farmlands buff 
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}
+	if = { # Change Trade Goods to Luxuries
+		limit = {
+			AND = {
+				OR = {
+					trade_goods = livestock
+					trade_goods = wool
+					trade_goods = grain
+				}
+				OR = {
+					culture = Tocharian
+					culture = persian 
+				}
+			}
+			NOT = {
+				has_province_flag = abf_tcr_tarmin_luxury_developed_flag
+			}
+			owner = { 
+				has_country_flag = abf_tcr_tarmin_luxuries_dev_buff_flag
+			}
+		}
+		random_list = { 
+			10 = {
+				if = {
+					limit = {
+						trade_goods = wool
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = cloth
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = grain
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = livestock
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+			} 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### General [[[
+	if = {
+		limit = { # 1.) Additional dev from developing livestock and grain provicnces 
+			owner = {
+				has_country_flag = abf_developing_food_bonus_flag
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
+		}
+		random_list = { 
+			10 = { add_base_tax = 1 } 
+			90 = { } 
+		}
+	}	
+	if = { # 2.) Thriving cities mechanic 
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		abf_check_urbanization_effect = yes
+	}
+	### ]]]
+}
+
+on_dip_development = {
+	### Zun (ROB/ZNN) [[[
+	if = { # 1.) Rajput culture group dev bonus 
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = abf_znn_rajput_development_bonus_flag
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### Orthodox Poland (LUD/LCT)  [[[
+	if = {
+		limit = {
+			owner = {
+				has_country_modifier = ABF_pol_orthodox_blood_and_iron
+			}
+			trade_goods = iron
+		}
+		random_list = { 
+			25 = { add_base_production = 1 } 
+			75 = { } 
+		}
+	}
+	### ]]]
+	### TCR [[[
+	if = { # Developing Farmlands buff 
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}
+	if = { # Change Trade Goods to Luxuries
+		limit = {
+			AND = {
+				OR = {
+					trade_goods = livestock
+					trade_goods = wool
+					trade_goods = grain
+				}
+				OR = {
+					culture = Tocharian
+					culture = persian 
+				}
+			}
+			NOT = {
+				has_province_flag = abf_tcr_tarmin_luxury_developed_flag
+			}
+			owner = { 
+				has_country_flag = abf_tcr_tarmin_luxuries_dev_buff_flag
+			}
+		}
+		random_list = { 
+			10 = {
+				if = {
+					limit = {
+						trade_goods = wool
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = cloth
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = grain
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = livestock
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+			} 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### NED [[[
+    if = {
+        limit = {
+            owner = {
+                mission_completed = ned_baltic_colonies
+            }
+            NOT = {
+                culture_group = owner
+            }
+            NOT = {
+                religion = owner
+            }
+            region = baltic_region
+            has_port = yes
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                has_province_flag = abf_ned_converted_baltic_province
+            }
+        }
+        random_list = {
+            10 = {
+                set_province_flag = abf_ned_converted_baltic_province
+                if = {
+					limit = {
+						owner = {
+							culture_group = united_germanic
+						}
+					}
+					change_culture = abf_olender_culture_new
+				}
+				else = {
+					change_culture = abf_olender_culture
+				}
+                change_religion = owner
+                add_base_production = 3
+            }
+            90 = { }
+        }
+    }
+	### ]]]
+	### General [[[
+	if = {
+		limit = { # 1.) Additional dev from developing livestock and grain provicnces 
+			owner = {
+				has_country_flag = abf_developing_food_bonus_flag
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
+		}
+		random_list = { 
+			10 = { add_base_production = 1 } 
+			90 = { } 
+		}
+	}	
+	if = { # 2.) Thriving cities mechanic 
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		abf_check_urbanization_effect = yes
+	}
+	### ]]]
+}
+
+on_mil_development = {
+	### Zun (ROB/ZNN) [[[
+	if = { # 1.) Rajput culture group dev bonus 
+		limit = {
+			culture_group = western_aryan
+			owner = { 
+				has_country_flag = abf_znn_rajput_development_bonus_flag
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### TCR [[[
+	if = { # Developing Farmlands buff 
+		limit = {
+			has_terrain = farmlands
+			owner = { 
+				has_country_flag = ABF_tcr_china_farmlands_buff
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}
+	if = { # Change Trade Goods to Luxuries
+		limit = {
+			AND = {
+				OR = {
+					trade_goods = livestock
+					trade_goods = wool
+					trade_goods = grain
+				}
+				OR = {
+					culture = Tocharian
+					culture = persian 
+				}
+			}
+			NOT = {
+				has_province_flag = abf_tcr_tarmin_luxury_developed_flag
+			}
+			owner = { 
+				has_country_flag = abf_tcr_tarmin_luxuries_dev_buff_flag
+			}
+		}
+		random_list = { 
+			10 = {
+				if = {
+					limit = {
+						trade_goods = wool
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = cloth
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = grain
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						trade_goods = livestock
+					}
+					random_list = {
+						50 = {
+							change_trade_goods = gems
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+						50 = {
+							change_trade_goods = silk
+							set_province_flag = abf_tcr_tarmin_luxury_developed_flag
+						}
+					}
+				}
+			} 
+			90 = { } 
+		}
+	}
+	### ]]]
+	### NED [[[
+	if = {
+		limit = {
+			owner = {
+				mission_completed = ned_baltic_colonies
+			}
+			NOT = {
+				culture_group = owner
+			}
+			NOT = {
+				religion = owner
+			}
+			region = baltic_region
+			has_port = yes
+			province_has_center_of_trade_of_level = 1
+			NOT = {
+				has_province_flag = abf_ned_converted_baltic_province
+			}
+		}
+		random_list = {
+			10 = {
+				set_province_flag = abf_ned_converted_baltic_province
+				if = {
+					limit = {
+						owner = {
+							culture_group = united_germanic
+						}
+					}
+					change_culture = abf_olender_culture_new
+				}
+				else = {
+					change_culture = abf_olender_culture
+				}
+				change_religion = owner
+				add_base_production = 3
+			}
+			90 = { }
+		}
+	}
+	### ]]]
+	### General [[[
+	if = {
+		limit = { # 1.) Additional dev from developing livestock and grain provicnces 
+			owner = {
+				has_country_flag = abf_developing_food_bonus_flag
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
+		}
+		random_list = { 
+			10 = { add_base_manpower = 1 } 
+			90 = { } 
+		}
+	}	
+	if = { # 2.) Thriving cities mechanic 
+		limit = {
+			owner = {
+				has_government_attribute = thriving_cities_modifier	
+			}
+		}
+		abf_check_urbanization_effect = yes
+	}
+	### ]]]
+}
+
+####### DEV END ]]]
+
+####### DIPLO - START [[[
+on_alliance_broken = {
+	### Catholic Poland (PLN/POL/PLC) [[[
+	if = {
+		limit = { # 1. ) First Diplo Reward regarding North 
+			has_country_modifier = abf_pol_baltic_peace
+			FROM = {
+				OR = {
+					tag = SWE
+					tag = DAN
+					tag = NOR
+					tag = SCA
+					tag = NSE
+				}
+			}
+		}
+		remove_country_modifier = abf_pol_baltic_peace
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_modifier = abf_pol_baltic_peace
+			}
+			OR = {
+				tag = SWE
+				tag = DAN
+				tag = NOR
+				tag = SCA
+				tag = NSE
+			}
+		}
+		FROM = {
+			remove_country_modifier = abf_pol_baltic_peace
+		}
+	}
+	if = {
+		limit = { # 2. ) Second Diplo Reward regarding North
+			has_country_modifier = abf_pol_shared_sea
+			FROM = {
+				OR = {
+					tag = SWE
+					tag = DAN
+					tag = NOR
+					tag = SCA
+					tag = NSE
+				}
+			}
+		}
+		remove_country_modifier = abf_pol_shared_sea
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_modifier = abf_pol_shared_sea
+			}
+			OR = {
+				tag = SWE
+				tag = DAN
+				tag = NOR
+				tag = SCA
+				tag = NSE
+			}
+		}
+		FROM = {
+			remove_country_modifier = abf_pol_shared_sea
+		}
+	}
+	### ]]]
+}
+####### DIPLO - END ]]]
+
+####### Culutral - START [[[
+on_culture_promoted = {
+	### Catholic Poland (PLN/POL/PLC)
+	if = { #1.) Embraced diversity 
+        limit = {
+            has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
+        }
+        every_owned_province = {
+            limit = {
+				NOT = { culture_group = west_slavic }
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_pol_culture_modifier
+            }
+            remove_province_modifier = abf_pol_culture_modifier
+        }
+    }
+	if = { # 2.) Commonwealth Government Mehcanic 
+		limit = {
+			has_government_mechanic = commonwealth_mechanic
+		}
+		add_government_power = {
+			mechanic_type = commonwealth_mechanic
+			power_type = commonwealth_popular_sovereignity
+			value = 3
+		}
+	}
+	### ]]]
+	### Hetmanate (ZAZ/HTM) [[[
+	if = { # 1.) Tatar tolerance 
+        limit = {
+            has_country_flag = abf_htm_tolerate_tatars_malus_buff
+        }
+        every_owned_province = {
+            limit = {
+				culture_group = tartar 
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_pol_culture_modifier
+            }
+            remove_province_modifier = abf_pol_culture_modifier
+        }
+    }
+	### ]]]
+	### Zun (ROB/ZUN) [[[
+	if = { # 1.) Burmese integration 
+        limit = {
+            has_country_flag = abf_znn_burmese_integration
+        }
+        every_owned_province = {
+            limit = {
+				culture_group = burman
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_pol_culture_modifier
+            }
+            remove_province_modifier = abf_pol_culture_modifier
+        }
+    }
+	### ]]]
+	### Tocharia (TCR)
+	if = { #1.) Turkish Culture malus halved 
+        limit = {
+            has_country_flag = abf_turkish_culture_malus_halved_flag
+        }
+        every_owned_province = {
+            limit = {
+				culture = turkish 
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_pol_culture_modifier
+            }
+            remove_province_modifier = abf_pol_culture_modifier
+        }
+    }
+	if = { #2.) Tibet Culture malus halved
+        limit = {
+            has_country_flag = abf_tcr_china_tibetan_cg_accpetance_flag
+        }
+        every_owned_province = {
+            limit = {
+				culture_group = tibetan_group
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_pol_culture_modifier
+            }
+            remove_province_modifier = abf_pol_culture_modifier
+        }
+    }
+	### ]]]
+	### General [[[
+	if = { #1.) Chinese culture group assimilation mechanic - full negation
+        limit = {
+            has_government_attribute = abf_chinese_culture_assimilation
+        }
+        every_owned_province = {
+            limit = {
+				culture_group = east_asian
+				OR = {
+					religion = owner
+					has_owner_harmonized_religion = yes
+				}
+				has_owner_accepted_culture = yes
+                has_province_modifier = abf_chinese_culture_assimilation_mod
+            }
+            remove_province_modifier = abf_chinese_culture_assimilation_mod
+        }
+    }
+	### ]]]
+}
+
+on_culture_demoted = {
+	### Catholic Poland (PLN/POL/PLC)
+	if = { #1.) Embraced diversity 
+		limit = {
+			has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
+		}
+		every_owned_province = {
+			limit = {
+				NOT = { culture_group = west_slavic }
+				has_owner_accepted_culture = no
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+	}
+	if = { # 2.) Commonwealth Gov Mechanic 
+		limit = {
+			has_government_mechanic = commonwealth_mechanic
+		}
+		add_government_power = {
+			mechanic_type = commonwealth_mechanic
+			power_type = commonwealth_popular_sovereignity
+			value = -3
+		}
+	}
+	### ]]]
+	### Hetmanate (ZAZ/HTM) [[[
+	if = {
+		limit = { # 1.) Tatar tolerance 
+			has_country_flag = abf_htm_tolerate_tatars_malus_buff
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = tartar 
+				has_owner_accepted_culture = no
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+	}
+	### ]]]
+	### Zun (ROB/ZUN) [[[
+	if = {
+		limit = { # 1.) Burmese integration
+			has_country_flag = abf_znn_burmese_integration
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = burman 
+				has_owner_accepted_culture = no
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+	}
+	### ]]]
+	### Tocharia (TCR)
+    if = { #1.) Turkish Culture malus halved 
+        limit = {
+            has_country_flag = abf_turkish_culture_malus_halved_flag
+        }
+        every_owned_province = {
+            limit = {
+                culture = turkish 
+                has_owner_accepted_culture = no
+               	NOT = { has_province_modifier = abf_pol_culture_modifier }
+            }
+           	add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+        }
+    }
+	if = { #2.) Tibetan Culture halved  
+        limit = {
+            has_country_flag = abf_tcr_china_tibetan_cg_accpetance_flag
+        }
+        every_owned_province = {
+            limit = {
+                culture_group = tibetan_group
+                has_owner_accepted_culture = no
+               	NOT = { has_province_modifier = abf_pol_culture_modifier }
+            }
+           	add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+        }
+    }
+    ### ]]]
+	### General [[[
+	if = { #1.) Chinese culture group assimilation mechanic - full negation
+        limit = {
+            has_government_attribute = abf_chinese_culture_assimilation
+        }
+        every_owned_province = {
+            limit = {
+				culture_group = east_asian
+				OR = {
+					religion = owner
+					has_owner_harmonized_religion = yes
+				}
+				has_owner_accepted_culture = no
+                NOT = { has_province_modifier = abf_chinese_culture_assimilation_mod }
+            }
+            add_province_modifier = {
+				name = abf_chinese_culture_assimilation_mod
+				duration = -1
+			}
+        }
+    }
+	### ]]]
+}
+####### Cultural END ]]]
+
+####### Provinical - START [[[
+on_holy_order_established = {
+	### HTM/ZAZ [[[
+	if = { # RD prov mod buff 
+		limit = {
+			owner = {
+				has_country_flag = abf_htm_regiment_district_buff_flag
+			}
+			OR = {
+				holy_order = abf_htm_chyhyryn_order
+				holy_order = abf_htm_poltava_order
+				holy_order = abf_htm_nizhyn_order
+				holy_order = abf_htm_lubny_order
+				holy_order = abf_htm_starodub_order
+				holy_order = abf_htm_chernihiv_order
+			}
+			NOT = {
+				has_province_modifier = abf_htm_efficient_colonels_mod
+			}
+		}
+		abf_check_buff_regiment_effect = yes
+	}
+	### ]]]
+}
+
+on_province_culture_converted = {
+	### Orthodox Poland (LUD/LCT) [[[
+	if = { # 1.) bonus if convert to Lendish
+		limit = {
+			owner = {
+				has_country_flag = ABF_pol_orthodox_culture_convert
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = ABF_pol_orthodox_converted_culture_bonus
+				}
+				culture = abf_polish_eastern
+			}
+			set_province_flag = ABF_pol_orthodox_converted_culture_bonus
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	### ]]]
+	### Catholic Poland (PLN/POL/PLC) [[[
+	### ]]]
+}
+
+on_province_owner_change = {
+	### Catholic Poland (PLN/POL/PLC) [[[
+	# 1.) Culture malus halving mod control
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
+			}
+			NOT = {
+				culture_group = west_slavic
+			}
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = abf_pol_culture_modifier
+			duration = -1
+		}
+	}
+	### ]]]
+	### Hetmanate (ZAZ/HTM) [[[
+	if = { # 1.) Tatar culture unaccepted modifier halved 
+		limit = {
+			owner = {
+				has_country_flag = abf_htm_tolerate_tatars_malus_buff
+			}
+			culture_group = tartar
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = abf_pol_culture_modifier
+			duration = -1
+		}
+	}
+	if = { # 2A.) check to see if RD's already have buff if unlocked, run scripted effect 
+		limit = { 
+			has_province_modifier = abf_htm_efficient_colonels_mod
+		}
+		abf_check_buff_regiment_effect = yes
+	}
+	### ]]]
+	### Tocharia (TCR) [[[
+	if = { #1.) Turkish Culture malus halved 
+		limit = {
+			owner = {
+				has_country_flag = abf_turkish_culture_malus_halved_flag
+			}
+			culture = turkish
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = abf_pol_culture_modifier
+			duration = -1
+		}
+	}
+	if = { #2.) Tibetan Culture group malus halved  
+		limit = {
+			owner = {
+				has_country_flag = abf_tcr_china_tibetan_cg_accpetance_flag
+			}
+			culture_group = tibetan_group
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = abf_pol_culture_modifier
+			duration = -1
+		}
+	}
+	### ]]]
+	### General [[[
+	if = { # 1.) Thriving Cities Custom Gov Attribute  
+		limit = {
+			has_province_modifier = abf_thriving_cities_gov_mod
+		}
+		abf_check_urbanization_effect = yes
+	}
+	if = { #2.) Chinese culture group assimilation mechanic - full negation add
+        limit = {
+			owner = {
+				 has_government_attribute = abf_chinese_culture_assimilation
+			}
+			culture_group = east_asian
+			OR = {
+				religion = owner
+				has_owner_harmonized_religion = yes
+			}
+			has_owner_accepted_culture = no
+        }
+		add_province_modifier = {
+			name = abf_chinese_culture_assimilation_mod
+			duration = -1
+		}
+	}
+	### ]]]
+	### Zun (ROB/ZUN) [[[
+	if = {
+		limit = { # 1.) Burmese culture malus halved 
+			owner = {
+				has_country_flag = abf_znn_burmese_integration
+			}
+			culture_group = burman
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = abf_pol_culture_modifier
+			duration = -1
+		}
+	}
+	### ]]]
+}
+
+on_colony_finished = {
+	### General [[[
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_siberian_frontier_boost_flag
+			}
+			OR = {
+				region = west_siberia_region
+				region = east_siberia_region 
+			}
+		}
+		add_base_production = 1
+		add_base_tax = 1
+		add_base_manpower = 1
+	}
+	### ]]]
+}
+
+
+on_province_culture_changed = {
+	### Catholic Poland (PLN/POL/PLC) [[[
+	# 1.) Unaccepted Culture Malus Halved 
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_pol_embrace_diversity_culture_halved_malus_flag
+			}
+		}
+		if = {
+			limit = {
+				NOT = { culture_group = west_slavic }
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = abf_pol_culture_modifier
+				OR = {
+					culture_group = west_slavic
+					has_owner_accepted_culture = yes
+				}
+			}
+			remove_province_modifier = abf_pol_culture_modifier
+		}
+	}
+	### ]]]
+	### Hetmanate (ZAZ/HTM) [[[
+	# 1.) Unaccepted Tatar Culture Malus Halved 
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_htm_tolerate_tatars_malus_buff
+			}
+		}
+		if = {
+			limit = {
+				culture_group = tartar
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = abf_pol_culture_modifier
+				NOT = { culture_group = tartar }	
+			}
+			remove_province_modifier = abf_pol_culture_modifier
+		}
+	}
+	### ]]]
+	### Zun (Rob/ZUN) [[[
+	# 1.) Unaccepted Burmese Culture Malus Halved 
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_znn_burmese_integration
+			}
+		}
+		if = {
+			limit = {
+				culture_group = burman
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = abf_pol_culture_modifier
+				NOT = { culture_group = burman }	
+			}
+			remove_province_modifier = abf_pol_culture_modifier
+		}
+	}
+	### ]]]
+	### Tocharia (TCR) [[[
+	#1.) Turkish Culture malus halved 
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_turkish_culture_malus_halved_flag
+			}
+		}
+		if = {
+			limit = {
+				culture = turkish
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = abf_pol_culture_modifier
+				NOT = { culture = turkish }	
+			}
+			remove_province_modifier = abf_pol_culture_modifier
+		}
+	}
+	#2.) Tibetan Culture group, halved 
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = abf_tcr_china_tibetan_cg_accpetance_flag
+			}
+		}
+		if = {
+			limit = {
+				culture_group = tibetan_group
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_pol_culture_modifier }
+			}
+			add_province_modifier = {
+				name = abf_pol_culture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = abf_pol_culture_modifier
+				NOT = { culture_group = tibetan_group }	
+			}
+			remove_province_modifier = abf_pol_culture_modifier
+		}
+	}
+	### ]]]
+	### General [[[
+	if = { #1.) Chinese culture group assimilation mechanic - full negation add/remove
+        limit = {
+			owner = {
+				 has_government_attribute = abf_chinese_culture_assimilation
+			}
+		}
+		if = {
+			limit = {
+				culture_group = east_asian
+				OR = {
+					religion = owner
+					has_owner_harmonized_religion = yes
+				}
+				NOT = { has_owner_accepted_culture = yes }
+				NOT = { has_province_modifier = abf_chinese_culture_assimilation_mod }
+			}
+			add_province_modifier = {
+				name = abf_chinese_culture_assimilation_mod
+				duration = -1
+			}
+		}	
+		if = {
+			limit = {
+				has_province_modifier = abf_chinese_culture_assimilation_mod
+				OR = {
+					NOT = { culture_group = east_asian }
+					has_owner_accepted_culture = yes
+				}
+				NOT = {
+					OR = {
+						religion = owner
+						has_owner_harmonized_religion = yes
+					}
+				}
+			}
+			remove_province_modifier = abf_chinese_culture_assimilation_mod
+		}
+	}
+	### ]]]
+}
+
+####### Provinical  END ]]]

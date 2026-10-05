@@ -290,6 +290,93 @@ wendia_first_group = {
 						}
 				add_permanent_claim = ROOT
 			}
+			# ABF conditional reward 
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					transdanubia_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					centralhungary_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					alfold_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					southern_transylvania_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					transylvania_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					eastslovakia_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = ABF_CARPATHIAN_SHIFT_YES
+				custom_tooltip = PNN_CULTURE
+				replace_culture_with_effect = {
+					new_culture = slavichungarian
+					old_culture_1 = hungarian
+					old_culture_2 = Szekler
+					old_culture_3 = alfoldian_culture
+					old_culture_4 = dunavian_culture
+					old_culture_5 = karpataljai_culture
+					old_culture_6 = magyar_culture
+				}
+				hidden_effect = {
+					4126 = {
+						change_original_culture = slavichungarian
+					}
+					1954 = {
+						change_original_culture = slavichungarian
+					}
+					156 = {
+						change_original_culture = slavichungarian
+					}
+					4955 = {
+						change_original_culture = slavichungarian
+					}
+					155 = {
+						change_original_culture = slavichungarian
+					}
+					4950 = {
+						change_original_culture = slavichungarian
+					}
+					153 = {
+						change_original_culture = slavichungarian
+					}
+					4125 = {
+						change_original_culture = slavichungarian
+					}
+					1953 = {
+						change_original_culture = slavichungarian
+					}
+					157 = {
+						change_original_culture = slavichungarian
+					}
+					4954 = {
+						change_original_culture = slavichungarian
+					}
+					162 = {
+						change_original_culture = slavichungarian
+					}
+					1952 = {
+						change_original_culture = slavichungarian
+					}
+					4953 = {
+						change_original_culture = slavichungarian
+					}
+					158 = {
+						change_original_culture = slavichungarian
+					}
+				}
+			}
+			else = {
+				custom_tooltip = ABF_CARPATHIAN_SHIFT_NO
+				custom_tooltip = PNN_CULTURE
+			}
+			### ]]]
 		}
 	}
 	
@@ -1471,8 +1558,10 @@ wendia_fourth_group = {
 				}
 			}
 			set_country_flag = wee_slavicization_flag
-			custom_tooltip = aba_wendish_culture_spread_tt
+			### ABF - culture spread reward [[[
 			set_country_flag = abf_wendish_culture_spread
+			custom_tooltip = ABF_WENDISH_GER_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	

@@ -498,7 +498,9 @@ polish_names = {
 			primary_culture = Polan
 			primary_culture = Lendian
 			primary_culture = pommeranian
-			primary_culture = aba_polish_eastern
+			### ABF - LUD/LCT will use Polish titles when changing to Lendish culture
+			primary_culture = abf_polish_eastern
+			## ]]]
 		}
 		government = monarchy
 	}
@@ -787,7 +789,10 @@ tochariam = {
 	}
 
 	trigger = {
-		primary_culture = Tocharian
+		OR = {
+			primary_culture = abf_sino_tocharian_culture
+			primary_culture = Tocharian
+		}
 	}
 }
 
@@ -3461,6 +3466,16 @@ persian_monarchy = {
 					mission_completed = grg_iranzamin
 				}
 			}
+			### ABF modified trigger [[[
+			AND = {
+				OR = {
+					was_tag = KUC
+					was_tag = KRR
+					was_tag = SLH
+				}
+				has_country_flag = abf_tcr_persia_path
+			}
+			### ]]]
 		}
 	}
 }
@@ -6812,6 +6827,10 @@ zaporozhian_republic = {
 		# AB [[[
 		OR = {
 			has_reform = cossacks_reform
+			### ABF modified trigger [[
+			has_reform = abf_hetmanate_buffed
+			has_reform = hetmanate
+			### ]]]
 			tag = HTM
 		}
 		# ]]]

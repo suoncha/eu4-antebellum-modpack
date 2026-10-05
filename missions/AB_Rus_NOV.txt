@@ -108,6 +108,7 @@ ab_novgorod_first = {
 		}
 		
 		effect = {
+			### ABF - new culture spread reward and reformatting [[[
 			define_conquistador = {
 				name = "Yermak Timofeyevich"
 				shock = 6
@@ -115,10 +116,14 @@ ab_novgorod_first = {
 				manuever = 5
 				siege = 0
 			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = rus_explore_siberia
 				duration = 7300
 			}
+			set_country_flag = abf_htm_uralskyie_culture_spread
+			custom_tooltip = ABF_HTM_URALSKYIE_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -667,6 +672,14 @@ ab_novgorod_second = {
 				name = rus_black_sea_fleet
 				duration = 7300
 			}
+			### ABF - new culture spread reward [[[
+			set_country_flag = abf_htm_chernomoriya_cossack_culture_spread
+			custom_tooltip = ABF_HTM_CHERNOMORIYA_COSSACK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_htm_terek_culture_spread
+			custom_tooltip = ABF_HTM_TEREK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					284 = {
@@ -1098,13 +1111,26 @@ ab_novgorod_third = {
 		}
 		
 		effect = {
-			custom_tooltip = RUS_COTS_BALTIC
-			set_country_flag = rus_litvin_culture_spread
-			custom_tooltip = LTV_CULTURE_SPREAD
-			272 = {
-				change_culture = Litvin
-				change_original_culture = Litvin
+			### ABF - new culture spread reward and reformatting [[[
+			custom_tooltip = RUS_ALL_ROMUVA
+			tooltip = {
+				add_province_modifier = {
+					name = "rus_convert_baltics"
+					duration = 5475
+				}
 			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						religion = baltic_pagan
+					}
+					add_province_modifier = {
+						name = "rus_convert_baltics"
+						duration = 5475
+					}
+				}
+			}
+			custom_tooltip = RUS_COTS_BALTIC
 			hidden_effect = {
 				43 = {
 					if = {
@@ -1135,24 +1161,11 @@ ab_novgorod_third = {
 					}
 				}
 			}
-			custom_tooltip = RUS_ALL_ROMUVA
-			tooltip = {
-				add_province_modifier = {
-					name = "rus_convert_baltics"
-					duration = 5475
-				}
-			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						religion = baltic_pagan
-					}
-					add_province_modifier = {
-						name = "rus_convert_baltics"
-						duration = 5475
-					}
-				}
-			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_litvin_culture_spread
+			custom_tooltip = ABF_LITVIN_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			wendia_region = {
 				limit = {
 					NOT = { is_core = ROOT}
@@ -1182,9 +1195,14 @@ ab_novgorod_third = {
 		
 		effect = {
 			country_event = { id = ab_novgorod.6 }
+			### ABF - new culture spread reward [[[
 			custom_tooltip = AB_EMPTY
-			set_country_flag = abf_ukr_cossack_culture_spread
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			set_country_flag = abf_htm_povolzyhe_cossack_culture_spread
+			custom_tooltip = ABF_HTM_POVOLZYHE_COSSACK_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_htm_don_cossack_culture_spread
+			custom_tooltip = ABF_HTM_DON_COSSACK_CULTURE_SPREAD_TT
+			### ]]]
 		}
 	}
 	
@@ -1780,9 +1798,11 @@ ab_novgorod_fifth = {
 					}
 				}
 			}
+			### ABF - new culture spread reward [[[
 			set_country_flag = abf_nov_pomor_culture_spread
-			custom_tooltip = abf_nov_pomor_culture_spread_tt
+			custom_tooltip = ABF_NOV_POMOR_CULTURE_SPREAD
 			custom_tooltip = AB_EMPTY
+			### ]]]
 			custom_tooltip = RUS_SWEDISH
 			hidden_effect = {
 				every_province = {

@@ -1,0 +1,224 @@
+### ABF Wszechrus (LUD/LCT)
+LCT_ideas = { 
+	start = {
+		global_autonomy = -0.1
+		global_manpower_modifier = 0.33
+	}
+	
+	bonus = {
+		governing_capacity_modifier = 0.1
+	}	
+
+	trigger = {
+		tag = LCT
+	}
+	free = yes
+	
+	LCT_first = {
+		extra_manpower_at_religious_war = yes
+		yearly_patriarch_authority = 0.01
+	}
+	LCT_second = {
+		production_efficiency = 0.10
+	}
+	LCT_third = {
+		core_creation = -0.05
+		ae_impact = -0.1
+		infantry_power = 0.025
+		discipline = 0.05
+	}
+	LCT_fourth = {
+		idea_cost = -0.10
+		global_institution_spread = 0.1
+	}
+	winged_hussars = {
+		cavalry_power = 0.20
+		can_recruit_hussars = yes
+	}
+	life_long_conscription  = {
+		land_forcelimit_modifier = 0.33
+	}
+	LCT_seventh = {
+		global_tax_modifier = 0.10
+		development_cost = -0.1
+		great_project_upgrade_cost = -0.25
+		global_allowed_num_of_buildings = 1
+	}
+}
+### ]]]
+
+### ABF Hetmanate Evolving Ideas [[[
+
+HTM3_ideas = { # Only empowered "Hetman's Authority", no others 
+	start = {
+		global_manpower_modifier = 0.25
+		loot_amount = 0.25
+	}
+
+	bonus = {
+		cavalry_shock = 0.5
+	}
+	
+	trigger = {
+		tag = HTM
+		has_country_flag = abf_htm_evoling_idea_hetman_authority
+		NOT = { has_country_flag = htm_evolved_ideas1 }
+		NOT = { has_country_flag = abf_htm_evolving_idea_cossack_radas }
+	}
+	free = yes		
+	
+	htm_first = {
+		governing_capacity_modifier = 0.1
+	}
+	htm_second = {
+		movement_speed = 0.2
+		leader_land_manuever = 1
+	}
+	htm_third = {
+		discipline = 0.05
+	}
+	htm_fourth2 = {
+		monarch_military_power = 1
+		max_absolutism_effect = 0.15
+	}
+	htm_fifth = {
+		development_cost = -0.1
+	}
+	htm_sixth = {
+		mil_advisor_cost = -0.25
+	}
+	htm_seventh = {
+		shock_damage = 0.2
+	}
+}
+
+HTM4_ideas = { # Has empowered "Hetman's Authority" and "Roam the Wild Fields", chosen not to empower the "Radas"
+	start = {
+		global_manpower_modifier = 0.25
+		loot_amount = 0.25
+	}
+
+	bonus = {
+		cavalry_shock = 0.5
+	}
+	
+	trigger = {
+		tag = HTM
+		has_country_flag = abf_htm_evoling_idea_hetman_authority
+		has_country_flag = htm_evolved_ideas1
+		NOT = { has_country_flag = abf_htm_evolving_idea_cossack_radas }
+	}
+	free = yes		
+	
+	htm_first = {
+		governing_capacity_modifier = 0.1
+	}
+	htm_second2 = {
+		movement_speed = 0.3
+		leader_land_manuever = 1
+	}
+	htm_third = {
+		discipline = 0.05
+	}
+	htm_fourth2 = {
+		monarch_military_power = 1
+		max_absolutism_effect = 0.15
+	}
+	htm_fifth = {
+		development_cost = -0.1
+	}
+	htm_sixth = {
+		mil_advisor_cost = -0.25
+	}
+	htm_seventh = {
+		shock_damage = 0.2
+	}
+}
+
+HTM5_ideas = { # Only empowered "Cossack Radas"
+	start = {
+		global_manpower_modifier = 0.25
+		loot_amount = 0.25
+	}
+
+	bonus = {
+		cavalry_shock = 0.5
+	}
+	
+	trigger = {
+		tag = HTM
+		has_country_flag = abf_htm_evolving_idea_cossack_radas
+		NOT = { has_country_flag = abf_htm_evoling_idea_hetman_authority }
+		NOT = { has_country_flag = htm_evolved_ideas1 }
+	}
+	free = yes		
+	
+	htm_first2 = {
+		governing_capacity_modifier = 0.25
+	}
+	htm_second = {
+		movement_speed = 0.2
+		leader_land_manuever = 1
+	}
+	htm_third = {
+		discipline = 0.05
+	}
+	htm_fourth = {
+		monarch_military_power = 1
+	}
+	htm_fifth = {
+		development_cost = -0.1
+	}
+	htm_sixth = {
+		mil_advisor_cost = -0.25
+	}
+	htm_seventh = {
+		shock_damage = 0.2
+	}
+}
+
+# Empowered "Cossack Radas" and "Roam the Wild Fields" ideas, not "Hetman's authority"
+HTM6_ideas = {
+	start = {
+		global_manpower_modifier = 0.25
+		loot_amount = 0.25
+	}
+
+	bonus = {
+		cavalry_shock = 0.5
+	}
+	
+	trigger = {
+		tag = HTM
+		has_country_flag = abf_htm_evolving_idea_cossack_radas
+		has_country_flag = htm_evolved_ideas1
+		NOT = { has_country_flag = abf_htm_evoling_idea_hetman_authority }
+	}
+	free = yes		
+	
+	htm_first2 = {
+		governing_capacity_modifier = 0.25
+	}
+	htm_second2 = {
+		movement_speed = 0.3
+		leader_land_manuever = 1
+	}
+	htm_third = {
+		discipline = 0.05
+	}
+	htm_fourth = {
+		monarch_military_power = 1
+	}
+	htm_fifth = {
+		development_cost = -0.1
+	}
+	htm_sixth = {
+		mil_advisor_cost = -0.25
+	}
+	htm_seventh = {
+		shock_damage = 0.2
+	}
+}
+
+
+### ]]]

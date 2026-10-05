@@ -1137,6 +1137,10 @@ forbidden_city = {
 			OR = {
 				has_reform = MIN_celestial_empire
 				has_reform = celestial_empire
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = abf_tcr_forbidden_city_gp_unlock_buff_flag 
+				}
 			}
 		}
 	}
@@ -1157,6 +1161,10 @@ forbidden_city = {
 			OR = {
 				has_reform = MIN_celestial_empire
 				has_reform = celestial_empire
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = abf_tcr_forbidden_city_gp_unlock_buff_flag 
+				}
 			}
 		}
 	}
@@ -1167,6 +1175,10 @@ forbidden_city = {
 			OR = {
 				has_reform = MIN_celestial_empire
 				has_reform = celestial_empire
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = abf_tcr_forbidden_city_gp_unlock_buff_flag 
+				}
 			}
 		}
 	}
@@ -1290,6 +1302,29 @@ forbidden_city = {
 			imperial_mandate = 0.05
 			prestige_decay = -0.02
 		}
+
+		# ABF Conditional Mod [[[
+		#TCR
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_tcr_forbidden_city_gp_unlock_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_tcr_forbidden_city_gp_unlock_buff_flag 
+					}
+				}
+			}
+			modifier = {
+				great_project_upgrade_time = -0.25
+				great_project_upgrade_cost = -0.25
+			}
+		}
+		# ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -3113,53 +3148,72 @@ mount_fuji = {
 
 	#can we build it?
 	build_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = mount_fuji_tt
-			OR = {		
-				AND = {
-					religion = shinto
-					has_owner_religion = yes
+		### ABF modified trigger [[[
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
 				}
-				AND = {
-					religion = mahayana
-					has_owner_religion = yes
-				}
-				AND = {
-					OR = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = mount_fuji_tt
+				OR = {		
+					AND = {
 						religion = shinto
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = shinto }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = shinto
-					}
-					OR = {
-						religion = shinto
-						has_owner_religion = yes
-					}
-				}
-				AND = {
-					OR = {
+					AND = {
 						religion = mahayana
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = mahayana }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = mahayana
+					AND = {
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = shinto }
 					}
-					OR = {
-						religion = mahayana
-						has_owner_religion = yes
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = shinto
+						}
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+					}
+					AND = {
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = mahayana }
+					}
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = mahayana
+						}
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
 					}
 				}
 			}
 		}
+		### ]]]
 	}
 
 	#what to do when it's built
@@ -3174,104 +3228,142 @@ mount_fuji = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = mount_fuji_tt
-			OR = {		
-				AND = {
-					religion = shinto
-					has_owner_religion = yes
+		### ABF modified trigger [[[
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
 				}
-				AND = {
-					religion = mahayana
-					has_owner_religion = yes
-				}
-				AND = {
-					OR = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = mount_fuji_tt
+				OR = {		
+					AND = {
 						religion = shinto
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = shinto }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = shinto
-					}
-					OR = {
-						religion = shinto
-						has_owner_religion = yes
-					}
-				}
-				AND = {
-					OR = {
+					AND = {
 						religion = mahayana
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = mahayana }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = mahayana
+					AND = {
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = shinto }
 					}
-					OR = {
-						religion = mahayana
-						has_owner_religion = yes
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = shinto
+						}
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+					}
+					AND = {
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = mahayana }
+					}
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = mahayana
+						}
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
 					}
 				}
 			}
 		}
+		### ]]]
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = mount_fuji_tt
-			OR = {		
-				AND = {
-					religion = shinto
-					has_owner_religion = yes
+		### ABF modified trigger [[[
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
 				}
-				AND = {
-					religion = mahayana
-					has_owner_religion = yes
-				}
-				AND = {
-					OR = {
+			}
+			custom_trigger_tooltip = {
+				tooltip = mount_fuji_tt
+				OR = {		
+					AND = {
 						religion = shinto
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = shinto }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = shinto
-					}
-					OR = {
-						religion = shinto
-						has_owner_religion = yes
-					}
-				}
-				AND = {
-					OR = {
+					AND = {
 						religion = mahayana
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = mahayana }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = mahayana
+					AND = {
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = shinto }
 					}
-					OR = {
-						religion = mahayana
-						has_owner_religion = yes
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = shinto
+						}
+						OR = {
+							religion = shinto
+							has_owner_religion = yes
+						}
+					}
+					AND = {
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = mahayana }
+					}
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = mahayana
+						}
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
 					}
 				}
 			}
 		}
+		### ]]]
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -4571,6 +4663,9 @@ taj_mahal = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -4602,6 +4697,9 @@ taj_mahal = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -4623,6 +4721,9 @@ taj_mahal = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -4755,6 +4856,28 @@ taj_mahal = {
 			monthly_splendor = 2
 			power_projection_from_insults = 1
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				great_project_upgrade_time = -0.25
+				great_project_upgrade_cost = -0.25
+			}
+		}
+		# ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
@@ -5703,6 +5826,9 @@ golden_temple = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -5734,6 +5860,9 @@ golden_temple = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -5755,6 +5884,9 @@ golden_temple = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -5884,6 +6016,28 @@ golden_temple = {
 			min_autonomy_in_territories = -0.15
 			
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				min_autonomy_in_territories = -0.05
+				global_autonomy = -0.025
+			}
+		}
+		### ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
@@ -7851,11 +8005,24 @@ fire_temple_of_ateshgah = {
 	type = monument
 
 	#can we build it?
+	### ABF Modified Build Trigger [[[
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
+		# province_is_or_accepts_religion = { # Modified by ABF
+		# 	religion = zoroastrian
+		# }
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = zoroastrian
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
 		}
 	}
+	### ]]]
 
 	#what to do when it's built
 	on_built = {
@@ -7868,18 +8035,44 @@ fire_temple_of_ateshgah = {
 	}
 
 	#can our country use it?
+	### ABF Modified Effects Trigger [[[
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
+		# province_is_or_accepts_religion = { # Modified by ABF
+		# 	religion = zoroastrian
+		# }
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = zoroastrian
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
 		}
 	}
+	### ]]]
 
 	#can our country upgrade it?
+	### ABF Modified Upgrade Trigger [[[
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
+		# province_is_or_accepts_religion = { # Modified by ABF
+		# 	religion = zoroastrian
+		# }
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = zoroastrian
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
 		}
 	}
+	### ]]]
 
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -7939,6 +8132,28 @@ fire_temple_of_ateshgah = {
 			culture_conversion_cost = -0.05
 		}
 
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_znn_baku_sun_temple_reward
+					}
+				}
+			}
+			modifier = {
+				fire_damage_received = 0.025
+				culture_conversion_cost = 0.025
+			}
+		}
+		### ]]]
+
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
@@ -7969,6 +8184,29 @@ fire_temple_of_ateshgah = {
 			fire_damage_received = -0.05
 			culture_conversion_cost = -0.05
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_znn_baku_sun_temple_reward
+					}
+				}
+			}
+			modifier = {
+				discipline = -0.01
+				fire_damage_received = 0.025
+				culture_conversion_cost = 0.025
+			}
+		}
+		### ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -8001,6 +8239,30 @@ fire_temple_of_ateshgah = {
 			fire_damage = 0.05			
 			culture_conversion_cost = -0.1
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_baku_sun_temple_reward
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_znn_baku_sun_temple_reward
+					}
+				}
+			}
+			modifier = {
+				discipline = -0.025
+				fire_damage_received = 0.05
+				fire_damage = -0.025
+				culture_conversion_cost = 0.05
+			}
+		}
+		### ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
@@ -8043,15 +8305,6 @@ kiev_pechersk_lavra = {
 				mission_completed = litc_mother
 			}
 			owner = {
-				AND = {
-					OR = {
-						tag = PLN
-						was_tag = PLN
-					}
-					mission_completed = pol_catholic_mother_of_cities
-				}
-			}
-			owner = {
 				tag = UKR
 				religion = catholic
 			}
@@ -8060,6 +8313,14 @@ kiev_pechersk_lavra = {
 				religion = nestorian
 				mission_completed = glh_restore_kiev
 			}
+			### ABF Modiifed Build Trigger [[[
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_enabled_lavra_flag
+				}
+			}
+			### ]]]
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
@@ -8092,15 +8353,14 @@ kiev_pechersk_lavra = {
 				religion = nestorian
 				mission_completed = glh_restore_kiev
 			}
+			### ABF Modiifed Effects Trigger [[[
 			owner = {
-				AND = {
-					OR = {
-						tag = PLN
-						was_tag = PLN
-					}
-					mission_completed = pol_catholic_mother_of_cities
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_enabled_lavra_flag
 				}
 			}
+			### ]]]
 			province_is_or_accepts_religion = {
 				religion = orthodox
 			}
@@ -8123,17 +8383,16 @@ kiev_pechersk_lavra = {
 				religion = nestorian
 				mission_completed = glh_restore_kiev
 			}
+			### ABF Modiifed Upgrade Trigger [[[
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt 
+					has_country_flag = abf_enabled_lavra_flag
+				}
+			}
+			### ]]]
 			province_is_or_accepts_religion = {
 				religion = orthodox
-			}
-			owner = {
-				AND = {
-					OR = {
-						tag = PLN
-						was_tag = PLN
-					}
-					mission_completed = pol_catholic_mother_of_cities
-				}
 			}
 		}
 	}
@@ -8261,6 +8520,30 @@ kiev_pechersk_lavra = {
 			papal_influence = 1.5
 			papal_influence_from_cardinals = 1.0
 		}
+
+		# ABF Conditional Mod [[[
+		#LVA
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_reformed_romuva_lavra_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_reformed_romuva_lavra_flag 
+					}
+				}
+			}
+			modifier = {
+				church_power_modifier = 0.15
+				global_missionary_strength = 0.02
+				manpower_in_true_faith_provinces = 0.10
+			}
+		}
+		# ]]]
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
@@ -8485,8 +8768,29 @@ sankin_kotai_palaces = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	#what to do when it's built
@@ -8501,14 +8805,56 @@ sankin_kotai_palaces = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -9708,6 +10054,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.05
@@ -9750,6 +10099,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.075
@@ -9793,6 +10145,9 @@ kaaba = {
 				}
 			}
 			trigger = {
+				owner = {
+					has_country_flag = BYZ_may_use_kaaba
+				}
 			}
 			modifier = {
 				religious_unity = -0.1
@@ -10709,6 +11064,9 @@ bara_katra = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 		}
@@ -10735,6 +11093,9 @@ bara_katra = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 		}
@@ -10755,6 +11116,9 @@ bara_katra = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 		}
@@ -11914,6 +12278,9 @@ ellora_caves = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -11941,6 +12308,9 @@ ellora_caves = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -11962,6 +12332,9 @@ ellora_caves = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12051,6 +12424,30 @@ ellora_caves = {
 			tolerance_heathen = 1
 			brahmins_hindu_loyalty_modifier = 0.15
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				tolerance_own = 1
+				tolerance_heretic = 1
+				tolerance_heathen = 1
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -12437,6 +12834,9 @@ gomateshwara_statue = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12463,6 +12863,9 @@ gomateshwara_statue = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12483,6 +12886,9 @@ gomateshwara_statue = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12580,6 +12986,30 @@ gomateshwara_statue = {
 			tolerance_of_heathens_capacity = 1
 			diplomatic_reputation = 2
 		}
+
+		# ABF [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				tolerance_of_heretics_capacity = 1
+				tolerance_of_heathens_capacity = 1
+				envoy_travel_time = -0.10
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -12606,6 +13036,9 @@ chola_temples = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12632,6 +13065,9 @@ chola_temples = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12652,6 +13088,9 @@ chola_temples = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12736,6 +13175,50 @@ chola_temples = {
 			culture_conversion_cost = -0.1
 			brahmins_hindu_loyalty_modifier = 0.15
 		}
+
+		# ABF [[[
+		# ZNN
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				global_missionary_strength = 0.01
+				culture_conversion_cost = -0.15
+			}
+		}
+		# TCR
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_tcr_kush_chola_temples_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_tcr_kush_chola_temples_buff_flag 
+					}
+				}
+			}
+			modifier = {
+				all_power_cost = -0.025
+				governing_capacity_modifier = 0.10
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -12909,6 +13392,27 @@ gyeongbok_palace = {
 			monarch_admin_power = 2
 			global_autonomy = -0.1	
 		}
+		# ABF [[[
+		# TCR
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_tcr_china_gyeongbok_buff_unlock_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_tcr_china_gyeongbok_buff_unlock_flag 
+					}
+				}
+			}
+			modifier = {
+				state_governing_cost = -0.10
+			}
+		}
+		# ]]]
 		on_upgraded = {
 		}
 	}
@@ -12935,6 +13439,9 @@ hampi = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12962,6 +13469,9 @@ hampi = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -12983,6 +13493,9 @@ hampi = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13072,6 +13585,29 @@ hampi = {
 			religious_unity = 0.25
 			all_estate_loyalty_equilibrium = 0.15
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				prestige = 0.5
+				religious_unity = 0.10
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -13448,6 +13984,9 @@ kashi_vishwanath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13474,6 +14013,9 @@ kashi_vishwanath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13494,6 +14036,9 @@ kashi_vishwanath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13578,6 +14123,28 @@ kashi_vishwanath = {
 			ae_impact = -0.1
 			brahmins_hindu_loyalty_modifier = 0.15
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				overextension_impact_modifier = -0.10
+			}
+		}
+		# ]]]
+
 		on_upgraded = {			
 		}
 	}
@@ -13604,6 +14171,9 @@ khajuraho = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13630,6 +14200,9 @@ khajuraho = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13650,6 +14223,9 @@ khajuraho = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -13734,6 +14310,28 @@ khajuraho = {
 			monthly_heir_claim_increase = 0.3
 			heir_chance = 0.5
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				legitimacy = 1
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -14330,6 +14928,42 @@ mehrangarh_fort = {
 			advisor_cost = -0.2
 			special_unit_forcelimit = 0.1
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				OR = {
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff
+					}
+					owner = {
+						has_country_flag = abf_tcr_rajput_fort_buff_flag
+					}
+				}
+			}
+			trigger = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+						owner = {
+							has_country_flag = abf_znn_great_project_india_buff 
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = enable_korean_palace_tt
+						owner = {
+							has_country_flag = abf_tcr_rajput_fort_buff_flag 
+						}
+					}
+				}
+			}
+			modifier = {
+				special_unit_forcelimit = 0.1
+				special_unit_cost_modifier = -0.1
+			}
+		}
+		### ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -15671,6 +16305,9 @@ sun_temple_konarak = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -15697,6 +16334,9 @@ sun_temple_konarak = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -15717,6 +16357,9 @@ sun_temple_konarak = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_or_accepts_religion_group = {
@@ -15801,6 +16444,47 @@ sun_temple_konarak = {
 			prestige_decay = -0.01
 			religious_unity = 0.25
 		}
+
+		# ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_znn_great_project_india_buff
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ABF_INDIA_EXTENDED_PATRONAGE_TT
+					owner = {
+						has_country_flag = abf_znn_great_project_india_buff 
+					}
+				}
+			}
+			modifier = {
+				monthly_church_power = 0.05
+			}
+		}
+		#TCR [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_tcr_sun_temple_upgrade_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_tcr_sun_temple_upgrade_flag 
+					}
+				}
+			}
+			modifier = {
+				build_cost = -0.10
+			}
+		}
+		# ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -15827,6 +16511,9 @@ swayambhunath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
@@ -15851,6 +16538,9 @@ swayambhunath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
@@ -15869,6 +16559,9 @@ swayambhunath = {
 					}
 					mission_completed = zun_integrate
 					has_reform = shhdharmic
+					### ABF [[[
+					has_government_attribute = unlock_indian_monuments
+					### ]]]
 				}
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
@@ -17223,6 +17916,51 @@ visby_city = {
 		}
 		on_upgraded = {
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_trade_city_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_trade_city_buff_flag
+					}
+				}
+			}
+			modifier = {
+				mercantilism_cost = -0.05
+				global_own_trade_power = 0.05
+				privateer_efficiency = -0.2	
+			}
+		}
+		### ]]]
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_naval_base_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_naval_base_buff_flag
+					}
+				}
+			}
+			modifier = {
+				navy_tradition = 0.25
+				number_of_cannons_modifier = 0.05
+			}
+		}
+		### ]]]
 	}
 
 	tier_2 = {
@@ -17242,6 +17980,54 @@ visby_city = {
 			privateer_efficiency = 0.33
 			global_own_trade_power = 0.15
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_trade_city_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_trade_city_buff_flag
+					}
+				}
+			}
+			modifier = {
+				mercantilism_cost = -0.10
+				global_own_trade_power = 0.05
+				global_ship_trade_power = 0.10
+				privateer_efficiency = -0.33	
+			}
+		}
+		### ]]]
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_naval_base_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_naval_base_buff_flag
+					}
+				}
+			}
+			modifier = {
+				navy_tradition = 0.5
+				global_own_trade_power = -0.05
+				number_of_cannons_modifier = 0.10
+			}
+		}
+		### ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -17263,6 +18049,55 @@ visby_city = {
 			privateer_efficiency = 0.5
 			global_own_trade_power = 0.25
 		}
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_trade_city_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_trade_city_buff_flag
+					}
+				}
+			}
+			modifier = {
+				mercantilism_cost = -0.15
+				global_ship_trade_power = 0.15
+				global_own_trade_power = 0.05
+				privateer_efficiency = -0.5	
+			}
+		}
+		### ]]]
+
+		### ABF Conditional Mod [[[
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = abf_lva_visby_naval_base_buff_flag
+				}
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					owner = {
+						has_country_flag = abf_lva_visby_naval_base_buff_flag
+					}
+				}
+			}
+			modifier = {
+				navy_tradition = 1
+				global_own_trade_power = -0.10
+				own_coast_naval_combat_bonus = 1
+				number_of_cannons_modifier = 0.15
+			}
+		}
+		### ]]]
+
 		on_upgraded = {
 		}
 	}
@@ -18226,16 +19061,18 @@ st_basil_cathedral = {
 	starting_tier = 0
 	type = monument
 
+	### ABF Modified Build Trigger [[[
 	build_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
 				religion_group = christian
 			}
 			owner = {
-				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+				has_estate_privilege = estate_burghers_abf_pol_freedom_of_religion_privilege
 			}
 		}
 	}
+	### ]]]
 
 	on_built = {
 	}
@@ -18243,27 +19080,31 @@ st_basil_cathedral = {
 	on_destroyed = {
 	}
 
+	### ABF Modified Can Use Modifiers Trigger [[[
 	can_use_modifiers_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
 				religion_group = christian
 			}
 			owner = {
-				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+				has_estate_privilege = estate_burghers_abf_pol_freedom_of_religion_privilege
 			}
 		}
 	}
+	### ]]]
 
+	### ABF Modified Can Upgrade Trigger [[[
 	can_upgrade_trigger = {
 		OR = {
 			province_is_or_accepts_religion_group = {
 				religion_group = christian
 			}
 			owner = {
-				has_estate_privilege = ABA_estate_burghers_PLN_FREEDDOM_OF_RELIGION
+				has_estate_privilege = estate_burghers_abf_pol_freedom_of_religion_privilege
 			}
 		}
 	}
+	### ]]]
 
 	keep_trigger = {
 	}
@@ -18373,8 +19214,29 @@ imperial_city_kyoto = {
 	type = monument
 
 	build_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	on_built = {
@@ -18384,13 +19246,55 @@ imperial_city_kyoto = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	can_upgrade_trigger = {
-		culture_group = japanese_g
-		province_is_or_accepts_culture = yes
+		### ABF modified trigger [[[
+		OR = {
+			AND = {
+				culture_group = japanese_g
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ABF_UNLOCK_SINO_JAP_MONUMENTS_TT
+				OR = {
+					culture = abf_sinico_japanese
+					owner = {
+						has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+					}
+					AND = {
+						owner = {
+							has_country_flag = abf_tcr_china_japan_culture_unlock_flag
+						}
+						culture_group = east_asian
+					}
+				}
+			}
+		}
+		### ]]]
 	}
 
 	keep_trigger = {
@@ -18946,22 +19850,40 @@ shah_rukn_e_alam_tomb = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
+	### ABF Modified Built Trigger - can be destroyed [[[
 	build_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = abf_znn_destroyed_shah }
+		}
 	}
+	### ]]]
 	on_built = {
 	}
 	on_destroyed = {
 	}
+	### ABF Modified Trigger - can use modifiers [[[
 	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = abf_znn_destroyed_shah }
+		}
 		province_is_or_accepts_religion_group = {
 			religion_group = muslim
 		}
 	}
+	### ]]]
+	### ABF Modified Trigger - can upgrade [[[
 	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = abf_znn_destroyed_shah }
+		}
 		province_is_or_accepts_religion_group = {
 			religion_group = muslim
 		}
 	}
+	### ]]]
 	keep_trigger = {
 		
 	}
@@ -19997,10 +20919,18 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
-				# AB [[[
-				has_reform = hetmanate
-				has_reform = aba_hetmanate_buffed
+				# AB [[[ Changed by ABF 
+				# has_reform = hetmanate
 				# ]]]
+				### ABF Modified Build Trigger - check both htm govs [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
 			}
 		}
 	}
@@ -20014,9 +20944,17 @@ city_of_sarai = {
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
 				# AB [[[
-				has_reform = hetmanate
-				has_reform = aba_hetmanate_buffed
+				# has_reform = hetmanate
 				# ]]]
+				### ABF Modified Effects Trigger - check both htm govs [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
 			}
 		}
 	}
@@ -20028,9 +20966,17 @@ city_of_sarai = {
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
 				# AB [[[
-				has_reform = hetmanate
-				has_reform = aba_hetmanate_buffed
+				#has_reform = hetmanate
 				# ]]]
+				### ABF Modified Can Upgrade Trigger [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
 			}
 		}
 	}

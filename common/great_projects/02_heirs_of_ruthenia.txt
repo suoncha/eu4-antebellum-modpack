@@ -2838,10 +2838,16 @@ sich = {
 		owner = {
 			OR = {
 				has_reform = cossacks_reform
-				has_reform = hetmanate
-				### ABA
-				has_reform = aba_hetmanate_buffed
-				###
+				### ABF Modified Build Trigger - check both htm govs [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
+				# has_reform = hetmanate # Modified by ABF
 			}
 		}
 	}
@@ -2859,10 +2865,16 @@ sich = {
 		owner = {
 			OR = {
 				has_reform = cossacks_reform
-				has_reform = hetmanate
-				### ABA
-				has_reform = aba_hetmanate_buffed
-				###
+				### ABF Modified Build Trigger - check both htm govs [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
+				# has_reform = hetmanate # Modified by ABF
 			}
 		}
 	}
@@ -2872,10 +2884,16 @@ sich = {
 		owner = {
 			OR = {
 				has_reform = cossacks_reform
-				has_reform = hetmanate
-				### ABA
-				has_reform = aba_hetmanate_buffed
-				###
+				### ABF Modified Build Trigger - check both htm govs [[[
+				custom_trigger_tooltip = {
+					tooltip = ABF_HETMANATE_GP_TRIGGER_TT
+					OR = {
+						has_reform = hetmanate
+						has_reform = abf_hetmanate_buffed
+					}
+				}
+				### ]]]
+				# has_reform = hetmanate # Modified by ABF
 			}
 		}
 	}

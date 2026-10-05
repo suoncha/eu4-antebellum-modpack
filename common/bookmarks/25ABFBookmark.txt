@@ -1,0 +1,20 @@
+bookmark = {
+	name = "BOOK_ABF_FLAVOR"
+	desc = "BOOK_ABF_FLAVOR_DESC"
+	date = 1444.11.11
+	
+	center = 134
+	
+	country = PLN
+	country = LUD
+	country = ZAZ
+	country = GLH
+	country = LVA
+	country = NRD
+	country = SWE
+	country = ODA
+	country = SHH
+	country = ZNN
+	country = GHU
+	country = SLH
+}

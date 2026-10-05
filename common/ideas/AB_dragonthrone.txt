@@ -1615,13 +1615,18 @@ KUS_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	
+	### Modified ABF Trigger Block for Tocharian Formables - stand alone unevolved ideas [[[
 	trigger = {
-			OR = {
-			has_country_flag = ABA_TCR_China
-			has_country_flag = ABA_TCR_India
-			has_country_flag = ABA_TCR_Persia
-			}
+		tag = TCR
+		OR = {
+			# tag = KUS Removed by ABF 
+			has_country_flag = abf_tcr_china_path
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_tcr_persia_path
+		}
+		NOT = { has_country_flag = kus_evolved_ideas }
 	}
+	### ]]]
 	free = yes		
 	
 	kus_first = {
@@ -2545,10 +2550,18 @@ KUS2_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	
+	### ABF - Modified Trigger to be reusable in new TCR mission tree [[[
 	trigger = {
-		tag = KUS
+		tag = TCR
+		OR = {
+			# tag = KUS Removed by ABF 
+			has_country_flag = abf_tcr_china_path
+			has_country_flag = abf_tcr_india_path
+			has_country_flag = abf_tcr_persia_path
+		}
 		has_country_flag = kus_evolved_ideas
 	}
+	### ]]]
 	free = yes		
 	
 	kus_first = {

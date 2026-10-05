@@ -244,6 +244,13 @@ governmental_purbias_register_reform = {
 		has_dlc = "Dharma"
 		has_estate = estate_rajput
 		technology_group = indian
+		### ABF Modified Potential [[[
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = abf_znn_governmental_indo_afghan_rajputs
+			}
+		}
+		### ]]]
 	}
 	modifiers = {
 		recover_army_morale_speed = 0.05
@@ -445,25 +452,11 @@ vodka_of_the_crown_reform = {
 			has_mission = pol_orthodox_invent_vodka
 			#culture_group = slavic
 		}
-		NOT = {
-			OR = {
-				tag = ZAZ
-				was_tag = ZAZ
-			}
-		}
 	}
 	trigger = {
 		if = {
 			limit = { culture_group = east_slavic }
 			hidden_trigger = { always = yes }
-		}
-		if = {
-			limit = { was_tag = LUD }
-			custom_trigger_tooltip = {
-				tooltip = AB_invented_vodka_tt
-				was_tag = LUD
-				has_country_flag = pol_unlock_vodka_reform
-			}
 		}
 		else = {
 			custom_trigger_tooltip = {
@@ -2502,10 +2495,7 @@ ashigaru_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Domination"
-		OR = {
 		culture_group = japanese_g
-		culture = sinico_japanese
-		}
 	}
 	trigger = {
 		if = {
@@ -2531,10 +2521,7 @@ early_bushido_code_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Domination"
-		OR = {
 		culture_group = japanese_g
-		culture = sinico_japanese
-		}
 	}
 	trigger = {
 		if = {
@@ -2663,6 +2650,13 @@ rajput_military_leadership_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_estate = estate_rajput
+		### ABF Modified Potential [[[
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = abf_znn_governmental_indo_afghan_rajputs
+			}
+		}
+		### ]]]
 	}
 	trigger = {
 		if = {
@@ -2692,6 +2686,13 @@ the_maratha_army_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_estate = estate_maratha
+		### ABF Modified Potential [[[
+		NOT = {
+			has_unlocked_government_reform = {
+				government_reform = abf_znn_governmental_indo_afghan_rajputs
+			}
+		}
+		### ]]]
 	}
 	trigger = {
 		if = {
@@ -3732,12 +3733,6 @@ boyars_army_reform = {
 			culture_group = east_slavic
 			#culture_group = slavic
 		}
-		NOT = {
-			OR = {
-				tag = ZAZ
-				was_tag = ZAZ
-			}
-		}
 	}
 	trigger = {
 		has_estate = estate_nobles
@@ -4210,10 +4205,7 @@ jap_gokaido_reform = {
 	icon = "jap_gokaido_reform"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
 		culture_group = japanese_g
-		culture = sinico_japanese
-		}
 	}
 	trigger = {
 		OR = {
@@ -4257,10 +4249,7 @@ reform_the_samurai_reform = {
 	icon = "reform_the_samurai_reform"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-		culture_group = japanese_g
-		culture = sinico_japanese 
-		}
+		culture_group = japanese_g 
 		# AB [[[
 		OR = {
 			tag = JAP

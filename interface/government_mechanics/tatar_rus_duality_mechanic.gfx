@@ -1,0 +1,130 @@
+spriteTypes = {
+
+	#DUALITY MECHANIC
+
+	#BG
+
+	spriteType = {
+		name = "GFX_tatar_rus_duality_frame"
+		texturefile = "gfx/interface/government_mechanics/tatar_rus_duality/tatar_rus_duality_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_tatar_rus_duality_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/tatar_rus_duality/tatar_rus_duality_progressbar_empty.dds"
+		textureFile2 = "gfx/interface/government_mechanics/tatar_rus_duality/tatar_rus_duality_progressbar.dds"
+		size = { x = 232 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	#### INTERACTIONS
+	### RUSSOMONGOLIAN ###
+
+	progressbartype = {
+		name = "GFX_russomongolian_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_government_power_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_government_power_bar_empty.dds"
+		size = { x = 57 y = 12 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_gov_power_frame"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_government_power_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_gov_power_circle_frame"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_government_power_bar_circle_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+
+	#BG TO be used in first mechanic
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_bg"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_left_bg"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_left_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_middle_bg"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_middle_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_right_bg"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_right_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_ADM"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_ability_adm.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_DIP"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_ability_dip.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_MIL"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolian_mechanic_ability_mil.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_icon_ADM"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolia_mechanic_adm_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_icon_DIP"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolia_mechanic_dip_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_icon_DIP_second"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolia_mechanic_dip_icon_second.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_russomongolian_mechanic_ability_icon_MIL"
+		texturefile = "gfx/interface/government_mechanics/russomongolian_mechanic/russomongolia_mechanic_mil_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+}
