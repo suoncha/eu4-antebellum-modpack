@@ -190,158 +190,7 @@ ab_russia_first = {
 				name = rus_cossack_threat
 				duration = 5475
 			}
-			define_advisor = {
-				type = dragoon
-				skill = 3
-				religion = ROOT
-				culture = ROOT
-				cost_multiplier = 0.5
-			}
-			hidden_effect = {
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-				capital_scope = {
-					cossack_cavalry = ROOT
-				}
-			}
-		}
-	}
-	
-	ab_russia_dismantle = {
-		icon = mission_non-western_cavalry_raid
-		required_missions = { ab_russia_crimea }
-		position = 5
-		
-		provinces_to_highlight = {
-			OR = {
-				area = astrakhan_area
-				area = lower_don_area
-				area = azov_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			astrakhan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			lower_don_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			azov_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-		}
-		
-		effect = {
-			country_event = { id = ab_rus.7 }
-			custom_tooltip = AB_EMPTY
-			### ABF - new culture spread reward  [[[
-			set_country_flag = abf_htm_povolzyhe_cossack_culture_spread
-			custom_tooltip = ABF_HTM_POVOLZYHE_COSSACK_SPREAD_TT
-			custom_tooltip = AB_EMPTY
-			set_country_flag = abf_htm_don_cossack_culture_spread
-			custom_tooltip = ABF_HTM_DON_COSSACK_CULTURE_SPREAD_TT
-			custom_tooltip = AB_EMPTY
-			### ]]]
-			tambov_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			saratov_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_yik_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			samara_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kazan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			custom_tooltip = AB_EMPTY
-			if = {
-				limit = {
-					NOT = { exists = GLH }
-				}
-				custom_tooltip = RUS_NO_GLH
-			}
-			else = {
-				custom_tooltip = RUS_NO_GLH_NO
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { exists = GLH }
-					}
-					add_prestige = 25
-					# Set the province flag in our provinces for the
-					# AB_Rus.7, where you can pick an option to grant
-					# modifier to all cores of GLH in your owned
-					# provinces, this needs to be come before the
-					# removal for obvious reasons
-					every_owned_province = {
-						limit = {
-							is_core = GLH
-						}
-						set_province_flag = was_golden_horde_core
-					}
-					every_province = {
-						limit = {
-							is_core = GLH
-						}
-						remove_core = GLH
-					}
-				}
-			}
+			custom_tooltip = RUS_UNLOCK_SICH
 		}
 	}
 }
@@ -845,37 +694,6 @@ ab_russia_second = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-	}
-	
-	ab_russia_crimea = {
-		icon = mission_invade_island
-		required_missions = { ab_russia_fields }
-		position = 4
-		
-		provinces_to_highlight = {
-			area = crimea_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			crimea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-		}
-		
-		effect = {
-			add_sailors = 500
-			add_country_modifier = {
-				name = rus_black_sea_fleet
-				duration = 7300
-			}
-			### ABF - new culture spread reward  [[[
-			set_country_flag = abf_htm_chernomoriya_cossack_culture_spread
-			custom_tooltip = ABF_HTM_CHERNOMORIYA_COSSACK_CULTURE_SPREAD_TT
-			custom_tooltip = AB_EMPTY
-			### ]]]
 			azov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -923,10 +741,11 @@ ab_russia_second = {
 				name = rus_black_sea_fleet
 				duration = 7300
 			}
-			crimea_area = {
-				change_culture = ruthenian
-				change_religion = ROOT
-			}
+			### ABF - new culture spread reward  [[[
+			set_country_flag = abf_htm_chernomoriya_cossack_culture_spread
+			custom_tooltip = ABF_HTM_CHERNOMORIYA_COSSACK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			if = {
 				limit = {
 					284 = {
@@ -1582,9 +1401,14 @@ ab_russia_third = {
 				id = ab_rus.7
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = abf_ukr_cossack_culture_spread
-			custom_tooltip = abf_ukr_cossack_culture_spread_tt
+			### ABF - new culture spread reward  [[[
+			set_country_flag = abf_htm_povolzyhe_cossack_culture_spread
+			custom_tooltip = ABF_HTM_POVOLZYHE_COSSACK_SPREAD_TT
 			custom_tooltip = AB_EMPTY
+			set_country_flag = abf_htm_don_cossack_culture_spread
+			custom_tooltip = ABF_HTM_DON_COSSACK_CULTURE_SPREAD_TT
+			custom_tooltip = AB_EMPTY
+			### ]]]
 			tambov_area = {
 				limit = {
 					NOT = { is_core = ROOT }
